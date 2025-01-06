@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git",
+  "commit": "f8680f4f40af1832b99b0acf5b700eb904ff3d71",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "github_org_name": "monarch-initiative",
+      "project_name": "mic-ingest",
+      "project_description": "Ingest for Micronutrient Information Center using OntoGPT",
+      "__repo_name": "mic-ingest",
+      "__project_slug": "mic_ingest",
+      "__project_url": "https://github.com/monarch-initiative/mic-ingest",
+      "ingest_source": "lpi",
+      "ingest_type": "chemical_to_pathway",
+      "__ingest_name": "lpi_chemical_to_pathway",
+      "min_python_version": "3.10",
+      "full_name": "Corey Cox",
+      "email": "corey@tislab.org",
+      "__author": "Corey Cox <corey@tislab.org>",
+      "license": "BSD-3",
+      "_template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git",
+      "_commit": "f8680f4f40af1832b99b0acf5b700eb904ff3d71"
+    }
+  },
+  "directory": null
+}

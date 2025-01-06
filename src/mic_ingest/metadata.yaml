@@ -1,0 +1,14 @@
+# Metadata for the project
+# Uncomment and edit the fields you want to include in the metadata
+# See metadata properties at https://koza.monarchinitiative.org/Ingests/source_config/
+
+id:  'CURIE for the project'
+name: 'lpi_chemical_to_pathway'
+ingest_title: 'mic_ingest'
+ingest_url: 'https://github.com/monarch-initiative/mic-ingest'
+description: 'Ingest for Micronutrient Information Center using OntoGPT'
+# source: 'Possibly replaced by provided_by'
+provided_by: 'lpi'
+# One of license and rights is possibly redundant
+license: 'Link to license'
+rights: 'Link to rights' 

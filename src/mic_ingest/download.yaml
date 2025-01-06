@@ -1,0 +1,7 @@
+### This file is a YAML configuration that specifies
+### the data to be downloaded and ingested for this project.
+### The configuration is used by `kghub-downloader`.
+### For more information, see https://github.com/monarch-initiative/kghub-downloader
+---
+- url: https://raw.githubusercontent.com/monarch-initiative/cookiecutter-monarch-ingest/main/data/example_data.tsv
+  local_name: data/example_data.tsv
