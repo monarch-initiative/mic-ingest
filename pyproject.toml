@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.10"
 importlib-metadata = ">=4.8.0"
 koza = ">=0.6.0"
-kghub-downloader = ">=0.3.11"
+kghub-downloader = ">=0.3.8"
 kgx = ">=2.4.0"
 biolink-model = "^4.2.0"
 duckdb = ">=0.10.2"
@@ -22,7 +22,6 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 pytest = ">=8.1.1"
 mkdocs = ">=1.4"
-mkdocstrings = { extras=["python"], version=">=0.26.2" }
 mkdocs-material = ">=9.5"
 mkdocs-macros-plugin = "*"
 black = "*"
