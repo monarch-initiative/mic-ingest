@@ -8,8 +8,10 @@ Ingest for Micronutrient Information Center using OntoGPT
 
 - Python >= 3.10
 - [Poetry](https://python-poetry.org/docs/#installation)
+- [Cruft](https://cruft.github.io/cruft/#installation) (optional)
 
-## Setting Up a New Project
+
+# Setting Up a New Project -- Delete this section when completed
 
 Upon creating a new project from the `cookiecutter-monarch-ingest` template, you can install and test the project:
 
@@ -51,19 +53,44 @@ There are a few additional steps to complete before the project is ready for use
 > **Note:** After the GitHub Actions for deploying documentation runs, the documentation will be automatically deployed to GitHub Pages.  
 > However, you will need to go to the repository settings and set the GitHub Pages source to the `gh-pages` branch, using the `/docs` directory.
 
+Once you have completed these steps, you can remove the [Setting Up a New Project](#setting-up-a-new-project) section from this `README.md` file.
+
+## Data Sources
+Update this section to describe the source of the data for the ingest. Include information about the projects and groups that create or curate the data, which data files are used, and the specific sources and/or versions of those files. It is also valuable to document what model is used for the ingest (generally the Biolink Model) and what types of nodes and edges are created. Here is an example of how you might document this:
+
+Data files for YOUR_SOURCE_DATA_TYPE are available from GROUP_OR_PROJECT through there portal at (include links where possible).
+
+### Source Files
+This ingest relies on N data files from GROUP_OR_PROJECT and one additional data file for FILE_USAGE (often mapping) from OTHER_GROUP_OR_PROJECT.
+  - FILENAME_1 - Describe the data in the file and give a basic description of how it's used. It's nice to include the URL's here as well as having them in the downloads.yaml later
+
+### Nodes and Edges
+Use this section describe the nodes and edges generated from the ingest for instance
+ - Gene Nodes - Description of which nodes are created and what data may be excluded from the ingest.
+ - Gene → Disease - Similar description of the edges and which edges are created or how the data may be filtered.
+
+## Transform Code and Configuration
+Metadata for the infest is in the `metadata.yaml` file and may require some adjustment depending on your configuration. Data files and locations are listed in the `download.yaml` file which is used to download all of the data sources before the transform. The `transform.yaml` file and python file `transform.py` contain the configuration and transformation code, respectively. 
+
+For more information, see the [Koza documentation](https://koza.monarchinitiative.org) and [kghub-downloader](https://github.com/monarch-initiative/kghub-downloader).
+
+Dependencies are listed in `pyproject.toml` file. This project uses pytest for development testing located in the `tests` directory to test the functionality of your transform.
+
+## Documentation
+The documentation for this ingest is in this `README.md` file and additional documentation is in the `docs` directory.
+
+> **Note:** After the GitHub Actions for deploying documentation runs, the documentation will be automatically deployed to GitHub Pages.  
+
 #### GitHub Actions
 
-This project is set up with several GitHub Actions workflows.  
-You should not need to modify these workflows unless you want to change the behavior.  
+This project is set up with several GitHub Actions workflows.
+You should not need to modify these workflows unless you want to change the behavior.
 The workflows are located in the `.github/workflows` directory:
 
 - `test.yaml`: Run the pytest suite.
 - `create-release.yaml`: Create a new release once a week, or manually.
 - `deploy-docs.yaml`: Deploy the documentation to GitHub Pages (on pushes to main).
 - `update-docs.yaml`: After a release, update the documentation with node/edge reports.
-
-
-Once you have completed these steps, you can remove the [Setting Up a New Project](#setting-up-a-new-project) section from this `README.md` file.
 
 ## Installation
 

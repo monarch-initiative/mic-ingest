@@ -1,7 +1,7 @@
 {
   "template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git",
-  "commit": "f8680f4f40af1832b99b0acf5b700eb904ff3d71",
-  "checkout": null,
+  "commit": "277bb477c11a06e8192b6b5f3101b95861a4bb16",
+  "checkout": "improve_readme",
   "context": {
     "cookiecutter": {
       "github_org_name": "monarch-initiative",
@@ -19,7 +19,7 @@
       "__author": "Corey Cox <corey@tislab.org>",
       "license": "BSD-3",
       "_template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git",
-      "_commit": "f8680f4f40af1832b99b0acf5b700eb904ff3d71"
+      "_commit": "277bb477c11a06e8192b6b5f3101b95861a4bb16"
     }
   },
   "directory": null
