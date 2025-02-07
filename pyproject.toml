@@ -7,7 +7,7 @@ license = "BSD-3"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.13"
 importlib-metadata = ">=4.8.0"
 koza = ">=0.6.0"
 kghub-downloader = ">=0.3.8"
@@ -15,6 +15,7 @@ kgx = ">=2.4.0"
 biolink-model = "^4.2.0"
 duckdb = ">=0.10.2"
 loguru = "*"
+ontogpt = "^1.0.10"
 
 [tool.poetry.group.dev]
 optional = true
