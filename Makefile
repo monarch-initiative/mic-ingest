@@ -64,6 +64,39 @@ docs:
 test: 
 	$(RUN) pytest tests
 
+### Download and Preprocess
+
+DOWNLOAD_DIR ?= data
+OUTPUT_DIR ?= output
+URI_BASE := https://lpi.oregonstate.edu/mic
+
+CATEGORIES ?= vitamins \
+	     minerals \
+	     dietary-factors \
+		 food-beverages \
+		 health-disease
+
+GREP_PATTERNS = $(foreach category,$(CATEGORIES),-e '$(category)/.*')
+TARGET_RESOURCES = $(shell grep -o $(GREP_PATTERNS) mic_pages.txt)
+HTML_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(DOWNLOAD_DIR)/$(resource).html)
+JSON_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(OUTPUT_DIR)/$(resource).json)
+
+.PHONY: create_output
+create_output: $(JSON_OUTPUT)
+
+# .PRECIOUS: $(DOWNLOAD_DIR)/%.html:
+# $(DOWNLOAD_DIR)/%.html:
+# 	mkdir -p $(dir $@)
+# 	wget $(URI_BASE)/$* -O $@
+
+# Note: $* is the name of the category, $@ is the name of the json file, $< is
+# the name of the downloaded HTML file
+$(OUTPUT_DIR)/%.json: 
+	mkdir -p $(dir $@)
+	ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@
+	jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp
+	mv $@.tmp $@
+
 
 ### Running ###
 
