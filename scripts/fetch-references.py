@@ -8,6 +8,23 @@ import sys
 
 
 def fetch_references(url: str, output_file: str = None):
+    """
+    Fetch references from a given URL and write them to an output file or stdout.
+
+    Args:
+        url (str): The URL of the webpage to fetch references from.
+        output_file (str, optional): The path to the output file. If not provided, the output will be written to stdout.
+
+    Raises:
+        requests.exceptions.RequestException: If the HTTP request to the URL fails.
+        re.error: If there is an error in the regular expression used to parse the references.
+
+    The output is a tab-separated values (TSV) format with the following columns:
+        - url: The URL of the webpage.
+        - reference: The reference number.
+        - pubmed_id: The PubMed ID of the reference, prefixed with 'PMID:'.
+        - reference_text: The text of the reference without the reference number and PubMed ID.
+    """
     # Fetch the HTML content from the URL
     response = requests.get(url)
     response.raise_for_status()  # Ensure the request was successful
