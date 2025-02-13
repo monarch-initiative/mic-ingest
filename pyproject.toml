@@ -15,6 +15,7 @@ kgx = ">=2.4.0"
 biolink-model = "^4.2.0"
 duckdb = ">=0.10.2"
 loguru = "*"
+beautifulsoup4 = "^4.13.3"
 ontogpt = "^1.0.10"
 
 [tool.poetry.group.dev]
