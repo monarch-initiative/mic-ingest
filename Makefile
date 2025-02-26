@@ -80,9 +80,10 @@ GREP_PATTERNS = $(foreach category,$(CATEGORIES),-e '$(category)/.*')
 TARGET_RESOURCES = $(shell grep -o $(GREP_PATTERNS) mic_pages.txt)
 HTML_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(DOWNLOAD_DIR)/$(resource).html)
 JSON_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(OUTPUT_DIR)/$(resource).json)
+REFERENCE_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(OUTPUT_DIR)/references/$(resource).tsv)
 
 .PHONY: create_output
-create_output: $(JSON_OUTPUT)
+create_output: $(JSON_OUTPUT) $(OUTPUT_DIR)/references.tsv
 
 # .PRECIOUS: $(DOWNLOAD_DIR)/%.html:
 # $(DOWNLOAD_DIR)/%.html:
@@ -96,6 +97,17 @@ $(OUTPUT_DIR)/%.json:
 	ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@
 	jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp
 	mv $@.tmp $@
+
+$(OUTPUT_DIR)/references/%.tsv: 
+	mkdir -p $(dir $@)
+	$(RUN) python scripts/fetch-references.py $(URI_BASE)/$* > $@
+
+# Merge all the references into a single tsv file
+$(OUTPUT_DIR)/references.tsv: $(REFERENCE_OUTPUT)
+	mkdir -p $(dir $@)
+	@echo appending header from $(firstword $^)
+	head -n 1 $(firstword $^) > $@  # Add header from the first file
+	tail -n +2 -q $^ >> $@  # Append the rest of the files without their headers
 
 
 ### Running ###
