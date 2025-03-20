@@ -35,8 +35,11 @@ def fetch_references(url: str, output_file: str = None):
     references_anchor = soup.find('a', id='references')
 
     if references_anchor:
-        next_element = references_anchor.parent.find_next_sibling()
+        next_element = references_anchor.parent.find_next_sibling() or references_anchor.parent.parent.find_next_sibling()
+        if next_element is None:
+            raise ValueError("No references anchor found on the page: " + url)
         references = []
+        # Iterate over the next sibling elements until the next element is not a paragraph or does not start with a number
         while next_element and next_element.name == 'p' and re.match(r'^\d+\..*', next_element.get_text(strip=True)):
             # Extract reference number from the beginning of the reference text
             reference_text = next_element.get_text(strip=True)
@@ -49,7 +52,7 @@ def fetch_references(url: str, output_file: str = None):
             # Extract PubMed ID from the link
             pubmed_link = next_element.find('a', href=True, string='(PubMed)')
             if pubmed_link:
-                pubmed_id_match = re.search(r'/(\d{6,})$', pubmed_link['href'])
+                pubmed_id_match = re.search(r'/(\d{5,9})', pubmed_link['href'])
                 pubmed_id = pubmed_id_match.group(1) if pubmed_id_match else None
             else:
                 pubmed_id = None
@@ -62,6 +65,13 @@ def fetch_references(url: str, output_file: str = None):
                 reference_text = reference_text.replace(f'{reference_number}.', '', 1).strip()
             if pubmed_id is not None and reference_text.endswith(f'(PubMed)'):
                 reference_text = reference_text.replace(f'(PubMed)', '')
+
+            # if the reference text contains "(PubMed)" case insensitive, but pubmed_id is None, then raise an error
+            if pubmed_id is None and pubmed_link is not None and re.search(r'\(pubmed\)', reference_text, re.IGNORECASE):
+                pubmed_url = pubmed_link['href'] if pubmed_link else "No link available"
+                # if its a books url, its not a pubmed ID that we can use as a pubmed ID
+                if not re.search(r'/books/', pubmed_url):
+                    raise ValueError(f"Reference text contains '(PubMed)' but no PubMed ID found: {reference_text}. Link: {pubmed_url}")
 
             references.append([url, reference_number, pubmed_id, reference_text])
             next_element = next_element.find_next_sibling()
