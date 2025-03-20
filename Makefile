@@ -90,13 +90,6 @@ create_output: $(JSON_OUTPUT) $(OUTPUT_DIR)/references.tsv
 # 	mkdir -p $(dir $@)
 # 	wget $(URI_BASE)/$* -O $@
 
-# Note: $* is the name of the category, $@ is the name of the json file, $< is
-# the name of the downloaded HTML file
-$(OUTPUT_DIR)/%.json: 
-	mkdir -p $(dir $@)
-	ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@
-	jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp
-	mv $@.tmp $@
 
 $(OUTPUT_DIR)/references/%.tsv: 
 	mkdir -p $(dir $@)
@@ -109,6 +102,16 @@ $(OUTPUT_DIR)/references.tsv: $(REFERENCE_OUTPUT)
 	head -n 1 $(firstword $^) > $@  # Add header from the first file
 	tail -n +2 -q $^ >> $@  # Append the rest of the files without their headers
 
+# Note: $* is the name of the category, $@ is the name of the json file, $< is
+# the name of the downloaded HTML file
+$(OUTPUT_DIR)/%.json: $(OUTPUT_DIR)/references/%.tsv 
+	mkdir -p $(dir $@)
+	ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@
+	jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp
+	mv $@.tmp $@
+
+$(OUTPUT_DIR)/tsv/raw_associations.tsv: $(OUTPUT_DIR)/references.tsv	
+	$(RUN) python scripts/json-extract.py 
 
 ### Running ###
 
