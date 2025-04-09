@@ -16,7 +16,7 @@ biolink-model = "^4.2.0"
 duckdb = ">=0.10.2"
 loguru = "*"
 beautifulsoup4 = "^4.13.3"
-ontogpt = "^1.0.10"
+ontogpt = "^1.0.11"
 
 [tool.poetry.group.dev]
 optional = true
