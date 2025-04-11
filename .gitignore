@@ -141,3 +141,7 @@ test-output/
 
 # Transform logs
 logs/
+
+# LLM Cache
+.litellm_cache/
+
