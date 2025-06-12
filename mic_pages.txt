@@ -35,7 +35,6 @@
     https://lpi.oregonstate.edu/mic/dietary-factors/coenzyme-Q10
     https://lpi.oregonstate.edu/mic/dietary-factors/L-carnitine
     https://lpi.oregonstate.edu/mic/dietary-factors/lipoic-acid
-    https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/carotenoids
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/chlorophyll-metallo-chlorophyll-derivatives
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/curcumin
