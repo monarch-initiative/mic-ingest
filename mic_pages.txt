@@ -1,9 +1,3 @@
-    https://lpi.oregonstate.edu/mic/
-    https://lpi.oregonstate.edu/mic/about
-    https://lpi.oregonstate.edu/mic/staff
-    https://lpi.oregonstate.edu/mic/contact-us
-    https://lpi.oregonstate.edu/mic/articles
-    https://lpi.oregonstate.edu/mic/vitamins
     https://lpi.oregonstate.edu/mic/vitamins/biotin
     https://lpi.oregonstate.edu/mic/vitamins/folate
     https://lpi.oregonstate.edu/mic/vitamins/pantothenic-acid
@@ -19,7 +13,6 @@
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-D
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-E
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-K
-    https://lpi.oregonstate.edu/mic/minerals
     https://lpi.oregonstate.edu/mic/minerals/calcium
     https://lpi.oregonstate.edu/mic/minerals/chromium
     https://lpi.oregonstate.edu/mic/minerals/copper
@@ -57,7 +50,6 @@
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/phytosterols
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol
     https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/soy-isoflavones
-    https://lpi.oregonstate.edu/mic/food-beverages
     https://lpi.oregonstate.edu/mic/food-beverages/cruciferous-vegetables
     https://lpi.oregonstate.edu/mic/food-beverages/garlic
     https://lpi.oregonstate.edu/mic/food-beverages/fruit-vegetables
@@ -69,20 +61,11 @@
     https://lpi.oregonstate.edu/mic/food-beverages/tea
     https://lpi.oregonstate.edu/mic/micronutrients-health
     https://lpi.oregonstate.edu/mic/food-beverages/alcoholic-beverages
-    https://lpi.oregonstate.edu/mic/life-stages
     https://lpi.oregonstate.edu/mic/life-stages/children
     https://lpi.oregonstate.edu/mic/life-stages/adolescents
     https://lpi.oregonstate.edu/mic/life-stages/older-adults
     https://lpi.oregonstate.edu/mic/life-stages/pregnancy-lactation
-    https://lpi.oregonstate.edu/mic/resources
-    https://lpi.oregonstate.edu/mic/nutrient-index
-    https://lpi.oregonstate.edu/mic/glossary
     https://lpi.oregonstate.edu/mic/drug-nutrient-interactions
-    https://lpi.oregonstate.edu/mic/disease-index
-    https://lpi.oregonstate.edu/mic/relevant-links
-    https://lpi.oregonstate.edu/mic/continuing-education
-    https://lpi.oregonstate.edu/mic/health-disease
-    https://lpi.oregonstate.edu/mic/giving
     https://lpi.oregonstate.edu/mic/health-disease/gut-health-in-brief
     https://lpi.oregonstate.edu/mic/health-disease/gut-health
     https://lpi.oregonstate.edu/mic/health-disease/cardiovascular-disease
