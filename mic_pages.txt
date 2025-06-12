@@ -8,8 +8,6 @@
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-B6
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-B12
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-C
-    https://lpi.oregonstate.edu/mic/vitamins/vitamin-C/supplemental-forms
-    https://lpi.oregonstate.edu/mic/vitamins/vitamin-C/pauling-recommendation
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-D
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-E
     https://lpi.oregonstate.edu/mic/vitamins/vitamin-K
@@ -32,9 +30,7 @@
     https://lpi.oregonstate.edu/mic/micronutrient-inadequacies/subpopulations-at-risk
     https://lpi.oregonstate.edu/mic/micronutrient-inadequacies/remedy
     https://lpi.oregonstate.edu/mic/other-nutrients/choline
-    https://lpi.oregonstate.edu/mic/other-nutrients
     https://lpi.oregonstate.edu/mic/other-nutrients/essential-fatty-acids
-    https://lpi.oregonstate.edu/mic/dietary-factors
     https://lpi.oregonstate.edu/mic/other-nutrients/fiber
     https://lpi.oregonstate.edu/mic/dietary-factors/coenzyme-Q10
     https://lpi.oregonstate.edu/mic/dietary-factors/L-carnitine
