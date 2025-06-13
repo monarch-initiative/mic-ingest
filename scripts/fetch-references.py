@@ -21,7 +21,8 @@ def fetch_references(url: str, output_file: str = None):
     reference_anchors = soup.find_all("a", attrs={"name": re.compile(r"^reference\d+$")})
 
     if not reference_anchors:
-        raise ValueError("No references anchor found on the page: " + url)
+        print(f"No references found on the page: {url}")
+
 
     for anchor in reference_anchors:
         # Get the parent <li> element containing the full reference
