@@ -1,4 +1,6 @@
 import re
+import time
+
 import requests
 import typer
 from bs4 import BeautifulSoup
@@ -96,6 +98,8 @@ def fetch_references(url: str, output_file: str = None):
             with open(output_file, "w", newline="", encoding="utf-8") as f:
                 writer = csv.writer(f, delimiter="\t")
                 writer.writerow(["url", "reference", "pubmed_id", "reference_text"])
+
+    time.sleep(1)
 
 if __name__ == '__main__':
     typer.run(fetch_references)
