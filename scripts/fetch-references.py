@@ -88,5 +88,10 @@ def fetch_references(url: str, output_file: str = None):
         if output_file and output_stream:
             output_stream.close()
 
+    # Fail if no references found
+    if not references_data:
+        print(f"NO_REFERENCES\t{url}", file=sys.stderr)
+        raise typer.Exit(code=1)
+
 if __name__ == '__main__':
     typer.run(fetch_references)
