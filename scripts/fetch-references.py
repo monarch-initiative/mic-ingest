@@ -68,15 +68,25 @@ def fetch_references(url: str, output_file: str = None):
             cleaned_reference_text
         ])
 
-    if output_file:
-        try:
-            output = open(output_file, 'w', newline='', encoding='utf-8')
-            writer = csv.writer(output, delimiter='\t')
-            writer.writerow(['url', 'reference', 'pubmed_id', 'reference_text'])
-            writer.writerows(references_data)
-            output.close()
-        except IOError as e:
-            raise e
+    output_stream = None
+    writer = None
+
+    try:
+        if output_file:
+            output_stream = open(output_file, 'w', newline='', encoding='utf-8')
+        else:
+            output_stream = sys.stdout  # <- stdout important for Makefile!
+
+        writer = csv.writer(output_stream, delimiter='\t')
+        writer.writerow(['url', 'reference', 'pubmed_id', 'reference_text'])
+        writer.writerows(references_data)
+
+    except IOError as e:
+        raise e
+
+    finally:
+        if output_file and output_stream:
+            output_stream.close()
 
 if __name__ == '__main__':
     typer.run(fetch_references)
