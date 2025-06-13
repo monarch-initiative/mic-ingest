@@ -2,6 +2,11 @@ ROOTDIR = $(shell pwd)
 RUN = poetry run
 VERSION = $(shell poetry -C src/mic_ingest version -s)
 
+# logs if parsing errors or no references for debugging (cleans up with each new run)
+QUALITY_DIR := quality_control
+QC_REFERENCES := $(QUALITY_DIR)/missing_references.txt
+QC_ONTOGPT := $(QUALITY_DIR)/ontogpt_failures.txt
+
 ### Help ###
 
 define HELP
@@ -83,17 +88,27 @@ JSON_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(OUTPUT_DIR)/$(resource).j
 REFERENCE_OUTPUT = $(foreach resource,$(TARGET_RESOURCES),$(OUTPUT_DIR)/references/$(resource).tsv)
 
 .PHONY: create_output
-create_output: $(JSON_OUTPUT) $(OUTPUT_DIR)/references.tsv
+create_output: clean_qc $(QUALITY_DIR) $(JSON_OUTPUT) $(OUTPUT_DIR)/references.tsv
 
 # .PRECIOUS: $(DOWNLOAD_DIR)/%.html:
 # $(DOWNLOAD_DIR)/%.html:
 # 	mkdir -p $(dir $@)
 # 	wget $(URI_BASE)/$* -O $@
 
+.PHONY: clean_qc
+clean_qc:
+	rm -rf $(QUALITY_DIR)
 
-$(OUTPUT_DIR)/references/%.tsv: 
+$(QUALITY_DIR):
+	mkdir -p $(QUALITY_DIR)
+
+$(OUTPUT_DIR)/references/%.tsv: | $(QUALITY_DIR)
 	mkdir -p $(dir $@)
-	$(RUN) python scripts/fetch-references.py $(URI_BASE)/$* > $@
+	@if ! $(RUN) python scripts/fetch-references.py $(URI_BASE)/$* > $@ 2>> $(QC_REFERENCES); then \
+		echo "$(URI_BASE)/$*" >> $(QC_REFERENCES); \
+	elif [ $$(wc -l < $@) -le 1 ]; then \
+		echo "$(URI_BASE)/$*" >> $(QC_REFERENCES); \
+	fi
 
 # Merge all the references into a single tsv file
 $(OUTPUT_DIR)/references.tsv: $(REFERENCE_OUTPUT)
@@ -104,11 +119,20 @@ $(OUTPUT_DIR)/references.tsv: $(REFERENCE_OUTPUT)
 
 # Note: $* is the name of the category, $@ is the name of the json file, $< is
 # the name of the downloaded HTML file
-$(OUTPUT_DIR)/%.json: $(OUTPUT_DIR)/references/%.tsv 
+# anytime we face ERROR: we capture and write to QC_ONTOGPT
+$(OUTPUT_DIR)/%.json: $(OUTPUT_DIR)/references/%.tsv | $(QUALITY_DIR)
 	mkdir -p $(dir $@)
-	ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@
-	jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp
-	mv $@.tmp $@
+	@ontogpt web-extract -O json -t mic $(URI_BASE)/$* -o $@ 2> .ontogpt_tmp_log || \
+		( echo "$(URI_BASE)/$*" >> $(QC_ONTOGPT); exit 0 )
+	@if grep -q 'ERROR:' .ontogpt_tmp_log; then \
+		echo "$(URI_BASE)/$*" >> $(QC_ONTOGPT); \
+	else \
+		if ! grep -q '"extracted_object"' $@; then \
+			echo "$(URI_BASE)/$*" >> $(QC_ONTOGPT); \
+		fi \
+	fi
+	@jq '. += {"source_url": "$(URI_BASE)/$*"}' $@ > $@.tmp && mv $@.tmp $@
+	@rm -f .ontogpt_tmp_log
 
 $(OUTPUT_DIR)/tsv/raw_associations.tsv: $(OUTPUT_DIR)/references.tsv	
 	$(RUN) python scripts/json-extract.py 
