@@ -2,16 +2,14 @@ import json
 import csv
 import os
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 input_dir = 'output/'
 output_dir = 'output/tsv'
 references_file = 'output/references.tsv'
 
-# Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
 
-# A pydantic model for category, subject, predicate, object, references (list), source_url
 class Association(BaseModel):
     category: str
     subject: Optional[str]
@@ -27,10 +25,8 @@ class Association(BaseModel):
         str_min_length = 1
         str_strip_whitespace = True
 
-# A dictionary to hold a map from category to a list of associations matching that category
 associations = {}
 
-# load references.tsv as a dict[dict[str,List[str]]] of page_url to page_reference to pubmed id
 references = {}
 with open(references_file, 'r') as f:
     reader = csv.DictReader(f, delimiter='\t')
@@ -40,40 +36,48 @@ with open(references_file, 'r') as f:
         if row['pubmed_id'].strip():
             references[row['url']][row['reference']] = row['pubmed_id']
 
-# Process each JSON file in the input directory and its subdirectories
+
+manual_schema_map: Dict[str, dict] = {
+              'nutrient_to_disease_relationships': {'subject':'nutrient', 'object':'disease'},
+              'nutrient_to_phenotype_relationships':  {'subject':'nutrient', 'object':'phenotype'},
+              'nutrient_to_biological_process_relationships': {'subject':'nutrient', 'object':'process'},
+              'nutrient_to_health_status_relationships':  {'subject':'nutrient', 'object':'anatomy'},
+              'nutrient_to_source_relationships':  {'subject':'nutrient', 'object':'source'},
+              'nutrient_to_nutrient_relationships':  {'subject':'nutrient', 'object':'nutrient'}
+              }
+
+subject_label = None
+object_label = None
+subject_key = None
+object_key = None
+required = None
+
+
 for root, _, files in os.walk(input_dir):
     for filename in files:
         if filename.endswith('.json'):
             input_file = os.path.join(root, filename)
             print(f'Processing {input_file}')
-            # Read the JSON file
             with open(input_file, 'r') as f:
                 data = json.load(f)
-
-            # Extract the source_url
             source_url = data.get('source_url', '')
-
-
-            # make an entity lookup table from the named_entities section
             entity_labels = {}
             if 'named_entities' in data:
                 for entity in data["named_entities"]:
                     entity_labels[entity['id']] = entity.get('label', None)
-
-            # Prepare the data for TSV
             for key, relationships in data["extracted_object"].items():
+                if key in manual_schema_map:
+                    schema = manual_schema_map[key]
+                    # here we check if e.g nutrient_to_disease_relationships and get the subject and object(which should be nutrient and object should be disease)
+                    subject_key = schema['subject'] #nutrient
+                    object_key = schema['object'] # disease
+                    required = {'relationship', subject_key, object_key}
                 if key.endswith('relationships'):
                     category = key.replace('_relationships', '')
+
                     for relationship in relationships:
-                        # remove reference, relationship and original text keys if they exist to find the subject and object keys
-                        keys = list(relationship.keys())
-                        keys.remove('references') if 'references' in keys else None
-                        keys.remove('relationship') if 'relationship' in keys else None
-                        keys.remove('original_text') if 'original_text' in keys else None
-                        try:
-                            subject, object = keys
-                        except ValueError:
-                            print(f'Error: extracted too many keys from {relationship.keys()}')
+                        # only process if SPO is complete
+                        if not required.issubset(relationship):
                             continue
 
                         pubmed_ids = []
@@ -81,26 +85,20 @@ for root, _, files in os.walk(input_dir):
                             if source_url in references and reference in references[source_url]:
                                 pubmed_ids.append(references[source_url][reference])
 
-                        subject = relationship.get(subject, None)
-                        subject_label = entity_labels.get(subject, None)
-                        # if the subject comes back as a name rather than curie, then it is a label and we don't have a subject
-                        if ':' not in subject and subject_label is None:
-                            subject_label = subject
+                        if ':' not in relationship[subject_key] and subject_label is None:
+                            subject_label = relationship[subject_key]
                             subject = None
 
-                        object = relationship.get(object, None)
-                        object_label = entity_labels.get(object, None)
-                        # same for object
-                        if ':' not in object and object_label is None:
-                            object_label = object
+                        if ':' not in relationship[object_key] and object_label is None:
+                            object_label = relationship[object_key]
                             object = None
 
                         association = Association(
                             category=category,
-                            subject=subject,
+                            subject=relationship[subject_key],
                             subject_label=subject_label,
                             predicate=relationship['relationship'],
-                            object=object,
+                            object=relationship[object_key],
                             object_label=object_label,
                             publications=pubmed_ids,
                             references=relationship.get('references', []),
@@ -119,16 +117,15 @@ def write_tsv_file(output_file, associations_list):
 
         for association in associations_list:
             row = association.model_dump()
-            row['publications'] = '|'.join(row['publications'])  # Convert list to '|' joined string
-            row['references'] = '|'.join(row['references'])  # Convert list to '|' joined string
+            row['publications'] = '|'.join(row['publications']) 
+            row['references'] = '|'.join(row['references']) 
             writer.writerow(row.values())
 
-# Write the TSV files for each category
 for category, associations_list in associations.items():
     output_file = os.path.join(output_dir, f'{category}.tsv')
     write_tsv_file(output_file, associations_list)
+    print(f"Output written to {output_file}")
 
-# Write the TSV file for all categories
 all_associations = [association for associations_list in associations.values() for association in associations_list]
 output_file = os.path.join(output_dir, 'raw_associations.tsv')
 write_tsv_file(output_file, all_associations)
