@@ -88,10 +88,14 @@ def fetch_references(url: str, output_file: str = None):
         if output_file and output_stream:
             output_stream.close()
 
-    # Fail if no references found
+    # Fail if no references found but dont error out
     if not references_data:
         print(f"NO_REFERENCES\t{url}", file=sys.stderr)
-        raise typer.Exit(code=1)
+        # still write header-only TSV if output_file is given
+        if output_file:
+            with open(output_file, "w", newline="", encoding="utf-8") as f:
+                writer = csv.writer(f, delimiter="\t")
+                writer.writerow(["url", "reference", "pubmed_id", "reference_text"])
 
 if __name__ == '__main__':
     typer.run(fetch_references)
