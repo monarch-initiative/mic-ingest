@@ -46,8 +46,6 @@ manual_schema_map: Dict[str, dict] = {
               'nutrient_to_nutrient_relationships':  {'subject':'nutrient', 'object':'nutrient'}
               }
 
-subject_label = None
-object_label = None
 subject_key = None
 object_key = None
 required = None
@@ -85,21 +83,27 @@ for root, _, files in os.walk(input_dir):
                             if source_url in references and reference in references[source_url]:
                                 pubmed_ids.append(references[source_url][reference])
 
-                        if ':' not in relationship[subject_key] and subject_label is None:
-                            subject_label = relationship[subject_key]
-                            subject = None
+                        # Reset labels for each relationship
+                        current_subject_label = None
+                        current_object_label = None
+                        
+                        if ':' not in relationship[subject_key]:
+                            current_subject_label = relationship[subject_key]
+                        else:
+                            current_subject_label = entity_labels.get(relationship[subject_key], None)
 
-                        if ':' not in relationship[object_key] and object_label is None:
-                            object_label = relationship[object_key]
-                            object = None
+                        if ':' not in relationship[object_key]:
+                            current_object_label = relationship[object_key]
+                        else:
+                            current_object_label = entity_labels.get(relationship[object_key], None)
 
                         association = Association(
                             category=category,
                             subject=relationship[subject_key],
-                            subject_label=subject_label,
+                            subject_label=current_subject_label,
                             predicate=relationship['relationship'],
                             object=relationship[object_key],
-                            object_label=object_label,
+                            object_label=current_object_label,
                             publications=pubmed_ids,
                             references=relationship.get('references', []),
                             source_url=source_url
