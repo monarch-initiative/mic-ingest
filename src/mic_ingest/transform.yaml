@@ -1,11 +1,11 @@
 # Config file for transforming data from a source
 # See additional/optional config parameters at https://koza.monarchinitiative.org/Ingests/source_config/
 
-name: "lpi_chemical_to_pathway"
+name: "mic_ingest"
 metadata: "./src/mic_ingest/metadata.yaml"
 format: "csv" # Format of the data files (csv or json)
 files:
-  - "./data/example_data.tsv"
+  - "./output/tsv/raw_associations.tsv"
 #################################################################################################
 ### file_archive is typically optional, but required if:                                      ###
 ###    1. files is not provided                                                               ###
@@ -29,16 +29,14 @@ edge_properties:
   - subject
   - predicate
   - object
-  - subject_category
-  - object_category
-  - category
   - knowledge_level
   - agent_type
+  - publications
 
 ### Optional parameters - uncomment to use, or remove to ignore
 
-min_node_count: 10
-min_edge_count: 5
+#min_node_count: 1
+#min_edge_count: 5
 # sssom_config: List of SSSOM config options
 # field_type_map: Dict of field names and their type (using the FieldType enum)
 # filters: List of filters to apply
