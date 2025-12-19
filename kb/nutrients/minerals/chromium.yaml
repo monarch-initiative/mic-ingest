@@ -1,0 +1,372 @@
+name: Chromium
+nutrient_term:
+  preferred_term: chromium
+  term:
+    id: CHEBI:28073
+    label: chromium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/chromium
+alternate_names:
+  - Cr
+  - Trivalent chromium
+  - Chromium(III)
+description: |
+  Chromium is a trace metal found in all organisms. The predominant form in the body is
+  trivalent chromium (Cr3+), which has been proposed to potentiate insulin function when
+  provided at pharmacological doses. However, the nutritional essentiality of chromium has
+  been questioned in recent years, as dietary deficiency has not been clearly described in
+  humans. While the US Institute of Medicine set an adequate intake (AI) for chromium in
+  2001, the European Food Safety Authority concluded in 2014 that requirements could not
+  be established. The evidence for chromium supplementation benefits in diabetes prevention
+  or treatment remains mixed.
+
+functions:
+  - name: Potential Insulin Potentiator
+    description: |
+      Trivalent chromium has been proposed to be a cofactor for a biologically active
+      molecule that could enhance the effects of insulin on target tissues. Chromium may
+      potentiate insulin signaling, though the molecular mechanisms remain unclear and
+      the essentiality of chromium for this function is debated. Some studies suggest
+      chromium may act at pharmacological rather than nutritional doses.
+    biological_processes:
+      - preferred_term: insulin receptor signaling pathway
+        term:
+          id: GO:0008286
+          label: insulin receptor signaling pathway
+    mic_references:
+      - 8
+      - 10
+      - 11
+      - 12
+    evidence:
+      - reference: PMID:22423897
+        supports: PARTIAL
+        snippet: "chromium, which has been shown to reduce insulin resistance in some, but not all, studies"
+        explanation: Evidence for chromium's effects on insulin resistance is mixed
+
+deficiency:
+  name: Chromium Deficiency
+  description: |
+    Dietary chromium deficiency has not been clearly observed in humans. Potential cases
+    were thought to have occurred in patients on long-term parenteral nutrition without
+    supplemental chromium, who developed abnormal glucose utilization. However, because
+    intravenous solutions provide chromium at doses well above dietary levels, it has been
+    suggested that chromium might produce biological effects only at pharmacological doses,
+    not nutritional ones. The absence of animal models for chromium deficiency makes it
+    difficult to study biochemical abnormalities associated with inadequate intakes.
+  phenotypes:
+    - name: Impaired glucose tolerance
+      phenotype_term:
+        preferred_term: impaired glucose tolerance
+      frequency: OCCASIONAL
+      context: Reported in parenteral nutrition patients; causality unclear
+      mic_references:
+        - 18
+        - 19
+
+  at_risk_groups:
+    - name: Patients on parenteral nutrition
+      description: |
+        Patients receiving long-term intravenous feeding without supplemental chromium
+        may theoretically be at risk, though evidence is limited
+      mic_references:
+        - 18
+
+    - name: Endurance athletes
+      description: |
+        Urinary chromium loss reportedly increased by endurance exercise, though chromium
+        absorption may also increase to compensate
+      mic_references:
+        - 20
+        - 21
+
+  mic_references:
+    - 3
+    - 14
+    - 18
+    - 19
+
+toxicity:
+  name: Chromium Toxicity
+  description: |
+    Hexavalent chromium (Cr6+) is a recognized carcinogen causing lung, nasal, and sinus
+    cancers when inhaled. However, trivalent chromium (Cr3+) has low toxicity from oral
+    intake because it is poorly absorbed and rapidly excreted. The Food and Nutrition Board
+    did not set a tolerable upper intake level (UL) for trivalent chromium due to lack of
+    convincing evidence of adverse effects. Chromium picolinate has raised some safety
+    concerns based on cell culture studies suggesting potential DNA damage, though a human
+    study found no evidence of increased oxidative DNA damage. Isolated case reports of
+    kidney failure have occurred with high-dose chromium picolinate supplementation.
+  adverse_effects:
+    - name: Kidney failure
+      description: |
+        Isolated case reports of kidney failure with high-dose chromium picolinate
+        (600-2,400 mcg/day). Individuals with pre-existing kidney or liver disease
+        may be at increased risk.
+      severity: severe
+  mic_references:
+    - 5
+    - 75
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+    - 83
+    - 84
+    - 85
+
+food_sources:
+  - name: Broccoli
+    food_term:
+      preferred_term: broccoli
+    amount: "11 mcg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 72
+
+  - name: Turkey ham (processed)
+    food_term:
+      preferred_term: turkey ham
+    amount: "10.4 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 72
+
+  - name: Grape juice
+    food_term:
+      preferred_term: grape juice
+    amount: "7.5 mcg"
+    serving_size: "8 fl. ounces"
+    mic_references:
+      - 72
+
+  - name: Waffle
+    food_term:
+      preferred_term: waffle
+    amount: "6.7 mcg"
+    serving_size: "1 waffle (~2.5 ounces)"
+    mic_references:
+      - 72
+
+  - name: English muffin
+    food_term:
+      preferred_term: english muffin
+    amount: "3.6 mcg"
+    serving_size: "1 muffin"
+    mic_references:
+      - 72
+
+  - name: Potatoes, mashed
+    food_term:
+      preferred_term: mashed potatoes
+    amount: "2.7 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 72
+
+drug_interactions:
+  - name: Antacids and Chromium
+    description: |
+      Antacids may decrease chromium absorption. Chromium supplements should be taken
+      at a different time than antacids.
+    drug_term:
+      preferred_term: antacid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: LOW
+    mic_references:
+      - 73
+
+  - name: Insulin and Chromium
+    description: |
+      Because chromium may enhance the effects of insulin, individuals taking insulin
+      or oral medications for diabetes should consult their healthcare provider before
+      taking chromium supplements to avoid hypoglycemia.
+    drug_term:
+      preferred_term: insulin
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    mic_references:
+      - 74
+
+nutrient_interactions:
+  - name: Vitamin C and Chromium
+    description: |
+      Vitamin C may increase chromium absorption. Taking vitamin C along with chromium
+      supplements may enhance chromium uptake.
+    nutrient_term:
+      preferred_term: vitamin C
+    interaction_type: INCREASES_ABSORPTION
+    mic_references:
+      - 68
+
+  - name: Simple Sugars and Chromium
+    description: |
+      Foods high in simple sugars (sucrose, fructose) are usually low in chromium and
+      may promote chromium excretion.
+    nutrient_term:
+      preferred_term: simple sugars
+    interaction_type: INCREASES_EXCRETION
+    mic_references:
+      - 6
+      - 71
+
+disease_associations:
+  - name: Type 2 Diabetes Prevention
+    description: |
+      Chromium has been proposed to help prevent or treat impaired glucose tolerance and
+      type 2 diabetes by enhancing insulin action. However, randomized controlled trials
+      have produced mixed results. A meta-analysis of nine trials found no effect of
+      chromium (200-1,000 mcg/day) on fasting glucose in people without diabetes. The
+      evidence does not support chromium supplementation for diabetes prevention in the
+      general population.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: THERAPEUTIC
+    population_context: Evidence is mixed; most trials show no significant benefit
+    mic_references:
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+    evidence:
+      - reference: PMID:29021369
+        supports: NO_EVIDENCE
+        snippet: "beneficial effects in humans have not been unequivocally established"
+        explanation: Recent review concludes human benefits are not established
+
+  - name: Metabolic Syndrome
+    description: |
+      Evidence that supplemental chromium can help treat metabolic syndrome is largely
+      lacking. While some studies suggest modest effects on lipid profiles or glucose
+      metabolism, results are inconsistent.
+    disease_term:
+      preferred_term: metabolic syndrome
+      term:
+        id: MONDO:0005154
+        label: metabolic syndrome
+    relationship_type: THERAPEUTIC
+    population_context: Evidence is largely lacking
+    mic_references:
+      - 58
+      - 59
+      - 60
+
+  - name: Polycystic Ovary Syndrome
+    description: |
+      Some studies have investigated chromium supplementation for polycystic ovary
+      syndrome (PCOS), which is associated with insulin resistance. However, evidence
+      of benefit is limited and inconsistent.
+    disease_term:
+      preferred_term: polycystic ovary syndrome
+      term:
+        id: MONDO:0008315
+        label: polycystic ovary syndrome
+    relationship_type: THERAPEUTIC
+    population_context: Limited evidence of benefit
+    mic_references:
+      - 61
+      - 62
+      - 63
+      - 64
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.2 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "5.5 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "11 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 4-8 years
+      amount: "15 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 9-13 years
+      amount: "25 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 9-13 years
+      amount: "21 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 14-50 years
+      amount: "35 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 14-18 years
+      amount: "24 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 19-50 years
+      amount: "25 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 51+ years
+      amount: "30 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 51+ years
+      amount: "20 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy 19+ years
+      amount: "30 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding 19+ years
+      amount: "45 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    The nutritional essentiality of chromium is debated. In 2001 the US Institute of Medicine
+    set adequate intake (AI) values based on chromium content in healthy diets. However, in
+    2014 the European Food Safety Authority concluded that requirements for chromium could
+    not be established. A well-balanced diet including fruits, vegetables, meat, fish, and
+    grains should easily cover dietary needs. No Tolerable Upper Intake Level (UL) has been
+    set due to lack of convincing adverse effects data.
+
+bioavailability:
+  description: |
+    Chromium absorption from the gastrointestinal tract is low, typically less than 2.5%
+    of ingested chromium. Absorption may be enhanced by vitamin C. Most absorbed chromium
+    is rapidly excreted in the urine. The amount of chromium in food is variable and has
+    been measured accurately in relatively few foods.
+  mic_references:
+    - 6
+    - 68
+
+references:
+  - reference: PMID:29021369
+    title: New Evidence against Chromium as an Essential Trace Element
+    findings:
+      - statement: Chromium is not an essential element
+        supporting_text: "chromium currently can only be considered pharmacologically active and not an essential element"
+  - reference: PMID:22423897
+    title: Molecular mechanisms of chromium in alleviating insulin resistance
+    findings:
+      - statement: Chromium effects on insulin resistance are inconsistent
+        supporting_text: "chromium, which has been shown to reduce insulin resistance in some, but not all, studies"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Chromium. The essentiality of chromium as a nutrient is
+  debated. Evidence items include exact quotes from PubMed abstracts. The MIC reference
+  numbers (mic_references) correspond to the numbered citations on the source page.
+  The page contains 85 references.
+
+  Key controversy: While chromium was historically considered essential, recent evidence
+  suggests it may only have pharmacological effects at supraphysiological doses rather
+  than being nutritionally essential.

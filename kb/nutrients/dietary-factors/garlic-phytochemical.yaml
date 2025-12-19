@@ -1,0 +1,168 @@
+name: Garlic (Organosulfur Compounds)
+nutrient_term:
+  preferred_term: allicin
+  term:
+    id: CHEBI:28411
+    label: allicin
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/garlic
+alternate_names:
+  - Alliin
+  - S-allylcysteine
+  - Diallyl sulfide
+  - Diallyl disulfide
+  - Diallyl trisulfide
+description: |
+  Garlic contains organosulfur compounds that are responsible for its characteristic
+  odor and many of its biological effects. The main classes are L-cysteine sulfoxides
+  (including alliin) and gamma-glutamyl-L-cysteine peptides. When garlic is crushed,
+  the enzyme alliinase converts alliin to allicin, which rapidly degrades into various
+  sulfur-containing compounds. Garlic has been used medicinally for thousands of years.
+
+functions:
+  - name: Antioxidant activity
+    description: |
+      Garlic organosulfur compounds upregulate glutathione production and activate
+      the Nrf2-dependent antioxidant pathway, enhancing cellular detoxification
+      enzyme expression.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 19
+      - 20
+      - 26
+
+  - name: Anti-inflammatory activity
+    description: |
+      Organosulfur compounds inhibit mediators of the inflammatory response,
+      including cytokines, chemokines, and adhesion molecules.
+    mic_references:
+      - 34
+
+  - name: Cardiovascular effects
+    description: |
+      Garlic compounds inhibit cholesterol synthesis, reduce platelet aggregation,
+      and promote vasodilation through multiple mechanisms including hydrogen
+      sulfide signaling.
+    mic_references:
+      - 38
+      - 54
+
+deficiency:
+  name: Garlic organosulfur compound deficiency
+  description: |
+    Garlic organosulfur compounds are not essential nutrients, and no deficiency
+    syndrome has been identified.
+  notes: Garlic is a food/flavoring agent, not an essential nutrient.
+
+toxicity:
+  name: Garlic toxicity
+  description: |
+    Common adverse effects include breath and body odor and gastrointestinal
+    symptoms (heartburn, nausea, flatulence). Several cases of postoperative
+    or spontaneous bleeding associated with garlic supplementation have been
+    reported. Contact dermatitis and occupational asthma from garlic dust
+    have also been documented.
+  mic_references:
+    - 90
+    - 106
+    - 147
+    - 148
+    - 149
+    - 150
+    - 151
+    - 152
+
+food_sources:
+  - name: Fresh garlic
+    food_term:
+      preferred_term: garlic
+    amount: "2-6 mg/g alliin; 6-14 mg/g gamma-glutamyl-S-allyl-L-cysteine"
+    serving_size: "1 clove"
+    notes: "Crushing releases allicin; cooking inactivates alliinase unless garlic is crushed 10 minutes before heating"
+    mic_references:
+      - 5
+      - 135
+
+disease_associations:
+  - name: Hypertension
+    disease_term:
+      preferred_term: hypertension
+    relationship_type: THERAPEUTIC
+    description: |
+      Meta-analyses indicate garlic supplementation produces modest reductions
+      in blood pressure: approximately 9 mm Hg systolic and 4-6 mm Hg diastolic
+      in hypertensive patients.
+    mic_references:
+      - 102
+      - 106
+      - 107
+    notes: "Modest benefit; not a replacement for antihypertensive medications"
+
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Garlic supplementation shows modest benefits on serum lipid profiles,
+      though long-lasting lipid-lowering effects remain questionable.
+    mic_references:
+      - 90
+    notes: "Evidence for clinical cardiovascular outcomes is limited"
+
+  - name: Gastric cancer
+    disease_term:
+      preferred_term: gastric cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      A major randomized trial found aged garlic extract supplementation did
+      not reduce the prevalence of precancerous gastric lesions or incidence
+      of gastric cancer.
+    mic_references:
+      - 85
+    notes: "Current evidence does not support garlic for cancer prevention"
+
+drug_interactions:
+  - name: Anticoagulants
+    drug_term:
+      preferred_term: warfarin
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Case reports document increased INR with warfarin use, though a recent
+      study found aged garlic extract did not increase hemorrhagic risk.
+      Caution is advised.
+    mic_references:
+      - 155
+      - 156
+
+  - name: HIV protease inhibitors
+    drug_term:
+      preferred_term: saquinavir
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: HIGH
+    description: |
+      Garlic supplementation decreased saquinavir bioavailability by
+      approximately 50%, potentially through effects on CYP3A4 enzyme
+      activity and drug transporters.
+    mic_references:
+      - 158
+      - 162
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for garlic organosulfur compounds.
+    Patients on anticoagulation or antiretroviral therapy should consult
+    healthcare providers before using garlic supplements. Crushing garlic
+    and allowing it to stand for 10 minutes prior to cooking preserves
+    some bioactive compounds.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Garlic. The page focuses on organosulfur compounds
+  rather than garlic as a food item (covered separately under Food and Beverages).

@@ -1,0 +1,634 @@
+name: Riboflavin
+nutrient_term:
+  preferred_term: riboflavin
+  term:
+    id: CHEBI:17015
+    label: riboflavin
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/riboflavin
+alternate_names:
+  - Vitamin B2
+description: |
+  Riboflavin is a water-soluble B vitamin that serves as the precursor of the coenzymes
+  flavin adenine dinucleotide (FAD) and flavin mononucleotide (FMN). These flavocoenzymes
+  act as electron carriers in numerous oxidation-reduction (redox) reactions involved in
+  energy production, cellular antioxidant function, and metabolic pathways. Riboflavin is
+  required for the metabolism of iron and vitamin B6, the synthesis of niacin from
+  tryptophan, and plays an essential role in folate and one-carbon metabolism where FAD
+  serves as a cofactor for methylenetetrahydrofolate reductase (MTHFR).
+
+functions:
+  - name: Oxidation-Reduction Reactions
+    description: |
+      Flavocoenzymes (FAD and FMN) participate in redox reactions in numerous metabolic
+      pathways. They are critical for the metabolism of carbohydrates, lipids, and proteins.
+      FAD is part of the electron transport (respiratory) chain, which is central to energy
+      production. In conjunction with cytochrome P-450, flavocoenzymes also participate in
+      the metabolism of drugs and toxins.
+    biological_processes:
+      - preferred_term: electron transport chain
+        term:
+          id: GO:0022900
+          label: electron transport chain
+    mic_references:
+      - 3
+      - 4
+
+  - name: Antioxidant Function
+    description: |
+      Glutathione reductase is a FAD-dependent enzyme that participates in the redox cycle
+      of glutathione. The glutathione redox cycle plays a major role in protecting organisms
+      from reactive oxygen species, such as hydroperoxides. Glutathione reductase requires
+      FAD to regenerate two molecules of reduced glutathione from oxidized glutathione.
+      Riboflavin deficiency has been associated with increased oxidative stress.
+    genes:
+      - preferred_term: GSR
+        description: Glutathione-disulfide reductase
+        term:
+          id: HGNC:4623
+          label: GSR
+    mic_references:
+      - 4
+      - 5
+
+  - name: Uric Acid Production
+    description: |
+      Xanthine oxidase, another FAD-dependent enzyme, catalyzes the oxidation of hypoxanthine
+      and xanthine to uric acid. Uric acid is one of the most effective water-soluble
+      antioxidants in the blood. Riboflavin deficiency can result in decreased xanthine
+      oxidase activity, reducing blood uric acid levels.
+    genes:
+      - preferred_term: XDH
+        description: Xanthine dehydrogenase
+        term:
+          id: HGNC:12805
+          label: XDH
+    mic_references:
+      - 6
+
+  - name: Cofactor for MTHFR
+    description: |
+      FAD is required as a cofactor for methylenetetrahydrofolate reductase (MTHFR), a key
+      folate-metabolizing enzyme. MTHFR converts 5,10-methylenetetrahydrofolate to
+      5-methyltetrahydrofolate, the cofactor form necessary for the re-methylation of
+      homocysteine to methionine. Low riboflavin status can impair MTHFR function,
+      particularly in individuals with the MTHFR C677T polymorphism.
+    genes:
+      - preferred_term: MTHFR
+        description: Methylenetetrahydrofolate reductase
+        term:
+          id: HGNC:7436
+          label: MTHFR
+    mic_references:
+      - 14
+      - 15
+    evidence:
+      - reference: PMID:16380544
+        supports: SUPPORT
+        snippet: "Riboflavin lowers homocysteine in individuals homozygous for the MTHFR 677C->T polymorphism"
+        explanation: Demonstrates riboflavin's role as MTHFR cofactor and ability to lower homocysteine in TT genotype
+
+deficiency:
+  name: Riboflavin Deficiency (Ariboflavinosis)
+  description: |
+    Ariboflavinosis is the medical name for clinical riboflavin deficiency, which occurs
+    commonly in low- and middle-income countries. Riboflavin deficiency is rarely found
+    in isolation; it typically occurs in combination with deficiencies of other
+    water-soluble vitamins. Subclinical deficiency (low status) without clinical signs
+    may be widespread, including in high-income countries, but usually goes undetected
+    because riboflavin biomarkers are rarely measured in human studies.
+  phenotypes:
+    - name: Angular Stomatitis
+      phenotype_term:
+        preferred_term: angular cheilitis
+        term:
+          id: HP:0030318
+          label: Angular cheilitis
+      frequency: FREQUENT
+      context: Cracks or sores at the corners of the mouth
+      mic_references:
+        - 1
+        - 3
+
+    - name: Cheilosis
+      phenotype_term:
+        preferred_term: cheilitis
+        term:
+          id: HP:0100825
+          label: Cheilitis
+      frequency: FREQUENT
+      context: Cracks or sores on the outsides of the lips
+      mic_references:
+        - 1
+        - 3
+
+    - name: Glossitis
+      phenotype_term:
+        preferred_term: glossitis
+        term:
+          id: HP:0000206
+          label: Glossitis
+      frequency: FREQUENT
+      context: Inflammation and redness of the tongue (magenta tongue)
+      mic_references:
+        - 1
+        - 3
+
+    - name: Seborrheic Dermatitis
+      phenotype_term:
+        preferred_term: seborrheic dermatitis
+        term:
+          id: HP:0001051
+          label: Seborrheic dermatitis
+      frequency: FREQUENT
+      context: Moist, scaly skin inflammation
+      mic_references:
+        - 1
+        - 3
+
+    - name: Corneal Neovascularization
+      phenotype_term:
+        preferred_term: corneal neovascularization
+        term:
+          id: HP:0011496
+          label: Corneal neovascularization
+      frequency: OCCASIONAL
+      context: Formation of blood vessels in the clear covering of the eye
+      mic_references:
+        - 1
+        - 3
+
+    - name: Normochromic Normocytic Anemia
+      phenotype_term:
+        preferred_term: normocytic anemia
+        term:
+          id: HP:0001897
+          label: Normocytic anemia
+      frequency: OCCASIONAL
+      context: Decreased red blood cell count with normal hemoglobin levels and cell size
+      mic_references:
+        - 1
+        - 3
+
+  at_risk_groups:
+    - name: Pregnant women
+      description: |
+        Low riboflavin status is associated with preeclampsia in pregnant women. A study
+        found that women who were riboflavin deficient were 4.7 times more likely to
+        develop preeclampsia than those with adequate riboflavin status.
+      mic_references:
+        - 25
+        - 26
+
+    - name: Individuals with MTHFR 677TT genotype
+      description: |
+        The reduction in MTHFR activity observed in individuals with the variant MTHFR
+        677TT genotype leads to increased plasma homocysteine. Riboflavin supplementation
+        can help normalize MTHFR function in these individuals.
+      mic_references:
+        - 14
+        - 27
+
+    - name: Chronic alcohol consumers
+      description: |
+        Chronic alcohol consumption has been associated with riboflavin deficiency. In
+        rats chronically fed alcohol, inhibition of riboflavin transporters caused
+        impairment in intestinal absorption and renal re-uptake of the vitamin.
+      mic_references:
+        - 30
+        - 114
+
+    - name: Athletes
+      description: |
+        Exercise may increase riboflavin requirements. Some evidence suggests that
+        riboflavin status may be compromised in athletes, particularly young women.
+      mic_references:
+        - 31
+        - 32
+
+    - name: Elderly individuals
+      description: |
+        Older adults may have increased riboflavin requirements or decreased absorption.
+        Studies have shown suboptimal riboflavin status in free-living elderly people.
+      mic_references:
+        - 8
+        - 115
+        - 116
+        - 117
+
+  mic_references:
+    - 1
+    - 3
+
+toxicity:
+  name: Riboflavin Safety
+  description: |
+    No toxic or adverse effects of high riboflavin intake in humans are known. High-dose
+    riboflavin therapy has been found to intensify urine color to a bright yellow
+    (flavinuria), but this is a harmless side effect. The Food and Nutrition Board did
+    not establish a tolerable upper intake level (UL) when the RDA was revised in 1998.
+  adverse_effects:
+    - name: Flavinuria
+      description: |
+        Bright yellow urine coloration from excess riboflavin excretion. This is a harmless
+        side effect with no clinical significance.
+      severity: mild
+  mic_references:
+    - 1
+    - 113
+
+food_sources:
+  - name: Milk (low-fat, 1%)
+    food_term:
+      preferred_term: cow milk beverage
+      term:
+        id: FOODON:00001123
+        label: cow milk beverage
+    amount: "0.42 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 107
+
+  - name: Egg (cooked, hard-boiled)
+    food_term:
+      preferred_term: egg
+    amount: "0.26 mg"
+    serving_size: "1 large"
+    mic_references:
+      - 107
+
+  - name: Almonds, unsalted
+    food_term:
+      preferred_term: almonds
+    amount: "0.33 mg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 107
+
+  - name: Spinach (boiled)
+    food_term:
+      preferred_term: spinach
+    amount: "0.21 mg"
+    serving_size: "0.5 cup"
+    mic_references:
+      - 107
+
+  - name: Beef (ground, cooked)
+    food_term:
+      preferred_term: beef
+    amount: "0.16 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 107
+
+  - name: Fortified breakfast cereal
+    food_term:
+      preferred_term: breakfast cereal
+    amount: "0.22 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 107
+
+drug_interactions:
+  - name: Phenothiazine Derivatives
+    description: |
+      Phenothiazine derivatives like the anti-psychotic medication chlorpromazine (Thorazine)
+      inhibit the conversion of riboflavin to FAD and FMN.
+    drug_term:
+      preferred_term: chlorpromazine
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 4
+
+  - name: Tricyclic Antidepressants
+    description: |
+      Tricyclic antidepressants inhibit the conversion of riboflavin to FAD and FMN.
+    drug_term:
+      preferred_term: tricyclic antidepressant
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 4
+
+  - name: Anticonvulsants
+    description: |
+      Long-term use of the anticonvulsant phenobarbital may increase destruction of
+      riboflavin by liver enzymes, increasing the risk of deficiency.
+    drug_term:
+      preferred_term: phenobarbital
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 3
+
+  - name: Quinacrine
+    description: |
+      The anti-malarial medication quinacrine inhibits the conversion of riboflavin
+      to FAD and FMN.
+    drug_term:
+      preferred_term: quinacrine
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 4
+
+  - name: Adriamycin
+    description: |
+      The cancer chemotherapy agent adriamycin (doxorubicin) inhibits the conversion of
+      riboflavin to FAD and FMN.
+    drug_term:
+      preferred_term: doxorubicin
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 4
+
+nutrient_interactions:
+  - name: Iron Interaction
+    description: |
+      Riboflavin deficiency may impair iron metabolism. Riboflavin is required for the
+      mobilization of stored iron. Studies have shown that correcting marginal riboflavin
+      deficiency improves hematologic status in young women.
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 16
+      - 17
+      - 18
+      - 19
+    evidence:
+      - reference: PMID:21525198
+        supports: SUPPORT
+        snippet: "Moderately poor riboflavin status can affect iron status: the lower the riboflavin status, the greater the hematologic benefits of improving status"
+        explanation: Demonstrates riboflavin's role in iron metabolism and hematologic status
+
+  - name: Vitamin B6 Interaction
+    description: |
+      Riboflavin (as FMN) is required for the conversion of vitamin B6 to its active
+      coenzyme form (PLP). Riboflavin deficiency may result in decreased conversion
+      of vitamin B6.
+    nutrient_term:
+      preferred_term: vitamin B6
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 7
+      - 8
+      - 9
+      - 10
+
+  - name: Folate and Homocysteine
+    description: |
+      Riboflavin (as FAD) is required for MTHFR, a key enzyme in folate metabolism. Low
+      riboflavin status impairs MTHFR function and can lead to elevated homocysteine,
+      particularly in individuals with the MTHFR C677T polymorphism.
+    nutrient_term:
+      preferred_term: folate
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+
+disease_associations:
+  - name: Migraine Prevention
+    description: |
+      Some evidence indicates that impaired mitochondrial oxygen metabolism in the brain
+      may play a role in migraine pathology. Since riboflavin is the precursor of FAD and
+      FMN required by mitochondrial electron transport chain flavoproteins, supplemental
+      riboflavin has been investigated for migraine prophylaxis. Multiple trials have
+      shown that high-dose riboflavin (400 mg/day) may reduce migraine frequency and
+      headache days in adults, though results in children are more conflicting.
+    disease_term:
+      preferred_term: migraine disorder
+      term:
+        id: MONDO:0005277
+        label: migraine disorder
+    relationship_type: THERAPEUTIC
+    population_context: Adults with recurrent migraines; 400 mg/day for prophylaxis
+    mic_references:
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+    evidence:
+      - reference: PMID:9484373
+        supports: SUPPORT
+        snippet: "riboflavin was superior to placebo in reducing attack frequency (p = 0.005) and headache days (p = 0.012)"
+        explanation: Randomized controlled trial demonstrating efficacy of high-dose riboflavin for migraine prophylaxis
+
+  - name: Hypertension in MTHFR 677TT Genotype
+    description: |
+      The MTHFR C677T polymorphism is associated with increased risk of hypertension.
+      Intervention studies have shown that supplementation with riboflavin (the MTHFR
+      cofactor) effectively lowers blood pressure specifically in individuals with
+      the variant MTHFR 677TT genotype. Riboflavin intervention reduced mean blood
+      pressure from 144/87 to 131/80 mmHg in those with the TT genotype.
+    disease_term:
+      preferred_term: essential hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: THERAPEUTIC
+    population_context: Individuals with MTHFR 677TT genotype
+    mic_references:
+      - 90
+      - 91
+      - 92
+      - 94
+      - 95
+    evidence:
+      - reference: PMID:19952781
+        supports: SUPPORT
+        snippet: "Riboflavin intervention reduced mean blood pressure specifically in those with the TT genotype (from 144/87 to 131/80 mmHg; P < 0.05 systolic; P < 0.05 diastolic)"
+        explanation: Demonstrates riboflavin's genotype-specific blood pressure lowering effect
+
+  - name: Cataract Prevention
+    description: |
+      Age-related cataracts are the leading cause of visual disability in developed
+      countries. Several observational studies have found associations between higher
+      riboflavin intake or status and reduced risk of cataracts, though randomized
+      controlled trial evidence is limited.
+    disease_term:
+      preferred_term: cataract
+      term:
+        id: MONDO:0005129
+        label: cataract
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Older adults; observational evidence primarily
+    mic_references:
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+    evidence:
+      - reference: PMID:7840110
+        supports: SUPPORT
+        snippet: "intakes of numerous nutrients in the highest versus lowest quintile were associated with 40-50 percent reduced odds of more severe nuclear sclerosis"
+        explanation: Observational study showing inverse association between riboflavin intake and nuclear cataracts
+
+  - name: Colorectal Cancer
+    description: |
+      Meta-analyses have found inverse associations between riboflavin intake and risk
+      of colorectal cancer. A dose-response meta-analysis found that higher intakes of
+      riboflavin were associated with a significantly lower risk of colorectal cancer
+      (RR=0.87), with CRC risk reduced by 10% when riboflavin intake increased to 5 mg/day.
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population; dose-response relationship observed
+    mic_references:
+      - 45
+      - 46
+      - 47
+      - 48
+    evidence:
+      - reference: PMID:29744609
+        supports: SUPPORT
+        snippet: "Vitamin B2 intake was inversely associated with CRC risk (RR = 0.87; 95% CI 0.81-0.93)"
+        explanation: Meta-analysis demonstrating inverse association between riboflavin intake and colorectal cancer risk
+
+  - name: Multiple Acyl-CoA Dehydrogenase Deficiency (MADD)
+    description: |
+      Multiple acyl-CoA dehydrogenase deficiency is an inherited disorder of fatty acid
+      and amino acid oxidation. Many patients with MADD respond to riboflavin
+      supplementation, with improvements in clinical symptoms and biochemical markers.
+    disease_term:
+      preferred_term: multiple acyl-CoA dehydrogenase deficiency
+    relationship_type: THERAPEUTIC
+    population_context: Patients with riboflavin-responsive MADD
+    mic_references:
+      - 68
+      - 69
+      - 70
+      - 71
+      - 72
+
+  - name: Riboflavin Transporter Deficiency
+    description: |
+      Riboflavin transporter deficiency (formerly Brown-Vialetto-Van Laere syndrome) is
+      a rare genetic disorder affecting riboflavin transport. Affected patients may
+      benefit from high-dose riboflavin supplementation.
+    disease_term:
+      preferred_term: riboflavin transporter deficiency
+    relationship_type: THERAPEUTIC
+    population_context: Patients with inherited riboflavin transporter defects
+    mic_references:
+      - 81
+      - 82
+      - 83
+      - 84
+
+  - name: Trimethylaminuria
+    description: |
+      Trimethylaminuria is a metabolic condition characterized by accumulation of
+      trimethylamine, causing a fish-like body odor. Riboflavin supplementation may
+      help by supporting flavin-containing monooxygenase 3 (FMO3) activity.
+    disease_term:
+      preferred_term: trimethylaminuria
+    relationship_type: THERAPEUTIC
+    population_context: Some patients with trimethylaminuria may respond to riboflavin
+    mic_references:
+      - 85
+      - 86
+      - 87
+      - 88
+      - 89
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.3 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.4 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "0.5 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "0.6 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "0.9 mg/day"
+      source: Institute of Medicine
+    - population: Males 14-18 years
+      amount: "1.3 mg/day"
+      source: Institute of Medicine
+    - population: Females 14-18 years
+      amount: "1.0 mg/day"
+      source: Institute of Medicine
+    - population: Males 19+ years
+      amount: "1.3 mg/day"
+      source: Institute of Medicine
+    - population: Females 19+ years
+      amount: "1.1 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "1.4 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding
+      amount: "1.6 mg/day"
+      source: Institute of Medicine
+  notes: |
+    Clinical signs of deficiency in humans appear at intakes of less than 0.5 to 0.6 mg/day,
+    and urinary excretion of riboflavin is seen at intake levels of approximately 1 mg/day.
+    No UL has been established due to lack of adverse event reports. The Linus Pauling
+    Institute recommends that adults should ensure adequate riboflavin intake by taking a
+    multivitamin/mineral supplement containing 100% of the Daily Value for riboflavin,
+    which will provide at least 1.3 mg/day.
+
+bioavailability:
+  description: |
+    The bioavailability of riboflavin from food is reported to be very high, nearly 95%.
+    Limited data exist for the relative bioavailability of riboflavin from different food
+    sources, however a cross-over study in healthy women using stable isotopes and kinetic
+    modeling did not find significant differences in riboflavin absorption from milk and
+    spinach. Riboflavin is heat-stable, but it is easily destroyed upon exposure to light.
+    Up to 50% of the riboflavin in milk contained in a clear glass bottle can be destroyed
+    after two hours of exposure to bright sunlight.
+  mic_references:
+    - 6
+    - 108
+    - 111
+
+references:
+  - reference: PMID:9484373
+    title: Effectiveness of high-dose riboflavin in migraine prophylaxis
+    findings:
+      - statement: High-dose riboflavin (400 mg/day) is effective for migraine prophylaxis
+        supporting_text: "riboflavin was superior to placebo in reducing attack frequency (p = 0.005) and headache days (p = 0.012)"
+  - reference: PMID:19952781
+    title: Riboflavin lowers blood pressure in cardiovascular disease patients homozygous for the 677C-->T polymorphism in MTHFR
+    findings:
+      - statement: Riboflavin specifically lowers blood pressure in MTHFR 677TT genotype
+        supporting_text: "Riboflavin intervention reduced mean blood pressure specifically in those with the TT genotype (from 144/87 to 131/80 mmHg)"
+  - reference: PMID:21525198
+    title: Correcting a marginal riboflavin deficiency improves hematologic status in young women
+    findings:
+      - statement: Riboflavin status affects iron status and hemoglobin levels
+        supporting_text: "Moderately poor riboflavin status can affect iron status: the lower the riboflavin status, the greater the hematologic benefits of improving status"
+  - reference: PMID:29744609
+    title: Vitamin B2 intake reduces the risk for colorectal cancer
+    findings:
+      - statement: Higher riboflavin intake associated with lower colorectal cancer risk
+        supporting_text: "Vitamin B2 intake was inversely associated with CRC risk (RR = 0.87; 95% CI 0.81-0.93)"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Riboflavin. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains 119 references.

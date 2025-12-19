@@ -1,0 +1,231 @@
+name: Flavonoids
+nutrient_term:
+  preferred_term: flavonoid
+  term:
+    id: CHEBI:47916
+    label: flavonoid
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/flavonoids
+alternate_names:
+  - Bioflavonoids
+  - Anthocyanidins
+  - Flavan-3-ols
+  - Flavonols
+  - Flavones
+  - Flavanones
+description: |
+  Flavonoids are a large family of over 5,000 hydroxylated polyphenolic compounds
+  found in plants. They perform important functions in plants including UV
+  protection, pigmentation, and signaling. Six major dietary flavonoid subclasses
+  include anthocyanidins, flavan-3-ols (catechins), flavanones, flavonols,
+  flavones, and isoflavones. Scientific interest in flavonoids has grown due to
+  their potential contribution to the health benefits associated with fruit and
+  vegetable consumption.
+
+functions:
+  - name: Antioxidant activity
+    description: |
+      Flavonoids can scavenge reactive oxygen species and chelate metal ions
+      in vitro. However, the relatively low bioavailability and extensive
+      metabolism of flavonoids means that direct antioxidant effects in vivo
+      are likely limited.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 26
+      - 27
+
+  - name: Anti-inflammatory activity
+    description: |
+      Flavonoids modulate inflammatory pathways by suppressing pro-inflammatory
+      mediators. Cell culture and animal studies have demonstrated anti-inflammatory
+      effects, though human evidence is limited.
+    mic_references:
+      - 27
+
+  - name: Cardiovascular effects
+    description: |
+      Flavonoids may benefit cardiovascular health through enhancement of
+      nitric oxide production, improvement of endothelial function, and
+      modulation of blood pressure and lipid profiles.
+    mic_references:
+      - 27
+      - 55
+
+  - name: Antidiabetic effects
+    description: |
+      Flavonoids affect carbohydrate metabolism through inhibition of
+      alpha-glucosidase and other enzymes involved in glucose homeostasis.
+    mic_references:
+      - 3
+
+deficiency:
+  name: Flavonoid deficiency
+  description: |
+    Flavonoids are not considered essential nutrients, and no deficiency
+    syndrome has been identified. Low flavonoid intake has been associated
+    with increased risk of certain chronic diseases in observational studies,
+    but causality has not been established.
+  notes: |
+    Average US adult intake is estimated at 200-250 mg/day, primarily from tea.
+
+toxicity:
+  name: Flavonoid toxicity
+  description: |
+    High intakes of dietary flavonoids from food are generally regarded as safe.
+    However, safety of high-dose flavonoid supplements has not been established,
+    particularly during pregnancy and lactation. Potential concerns include
+    interactions with drug-metabolizing enzymes and transporters.
+  mic_references:
+    - 153
+
+food_sources:
+  - name: Tea
+    food_term:
+      preferred_term: tea
+    notes: "Major source of flavan-3-ols; accounts for ~80% of total US flavonoid intake"
+    mic_references:
+      - 151
+      - 152
+
+  - name: Citrus fruits
+    food_term:
+      preferred_term: citrus fruit
+    notes: "Rich source of flavanones including hesperidin and naringenin"
+
+  - name: Berries
+    food_term:
+      preferred_term: berries
+    notes: "Rich source of anthocyanidins and flavonols"
+
+  - name: Onions
+    food_term:
+      preferred_term: onion
+    notes: "Rich source of flavonols, particularly quercetin"
+
+  - name: Red wine
+    food_term:
+      preferred_term: red wine
+    notes: "Contains anthocyanidins and flavan-3-ols"
+
+disease_associations:
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of observational studies show approximately 10% reduction
+      in cardiovascular disease risk with higher flavonoid intake. Effects may
+      be mediated through improvements in endothelial function and blood pressure.
+    mic_references:
+      - 55
+    evidence:
+      - reference: PMID:15113710
+        supports: SUPPORT
+        snippet: "evidence for their role in the prevention of degenerative diseases such as cancer and cardiovascular diseases is emerging"
+        explanation: Supports emerging evidence for cardiovascular benefits
+
+  - name: Type 2 diabetes mellitus
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies suggest that individuals in the highest quintile
+      of flavonoid intake have approximately 10% lower risk of type 2 diabetes
+      compared to those in the lowest quintile.
+    mic_references:
+      - 98
+    notes: "Association may be partly explained by dietary patterns"
+
+  - name: Cognitive decline
+    disease_term:
+      preferred_term: dementia
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Lower flavonoid intake has been associated with approximately 50% higher
+      risk of dementia in prospective cohort studies. Flavonoids may exert
+      neuroprotective effects through antioxidant and anti-inflammatory mechanisms.
+    mic_references:
+      - 137
+
+drug_interactions:
+  - name: CYP3A4 substrates
+    drug_term:
+      preferred_term: CYP3A4 substrate
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      Flavonoids inhibit CYP3A4 and ABC transporters, potentially increasing
+      plasma concentrations and toxicity of drugs metabolized by these pathways.
+    mic_references:
+      - 163
+      - 164
+
+  - name: Anticoagulants and antiplatelet drugs
+    drug_term:
+      preferred_term: anticoagulant
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Flavonoids may increase bleeding risk when taken with warfarin, aspirin,
+      or other anticoagulant/antiplatelet medications.
+    mic_references:
+      - 170
+
+nutrient_interactions:
+  - name: Iron absorption
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: REDUCES_ABSORPTION
+    description: |
+      Tea and cocoa consumption can reduce nonheme iron absorption by
+      approximately 70% due to flavonoid binding of iron in the gut.
+    mic_references:
+      - 174
+
+bioavailability:
+  description: |
+    Flavonoid bioavailability varies greatly between subclasses and individual
+    compounds. Most dietary flavonoids are glycosylated and must be hydrolyzed
+    before absorption. Extensive first-pass metabolism results in low plasma
+    concentrations of parent compounds. The most abundant dietary flavonoids
+    are not necessarily those with the best bioavailability.
+  mic_references:
+    - 2
+    - 6
+    - 7
+    - 8
+  evidence:
+    - reference: PMID:15113710
+      supports: SUPPORT
+      snippet: "bioavailability appears to differ greatly between the various polyphenols, and the most abundant polyphenols in our diet are not necessarily those that have the best bioavailability profile"
+      explanation: Directly describes variability in flavonoid bioavailability
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for flavonoids. The National Cancer
+    Institute and other health organizations recommend consuming a variety of
+    fruits, vegetables, and other plant foods to increase flavonoid intake.
+    High-dose flavonoid supplements are not recommended due to potential drug
+    interactions and uncertain safety profile.
+
+references:
+  - reference: PMID:15113710
+    title: Polyphenols - food sources and bioavailability
+    findings:
+      - statement: Polyphenol bioavailability differs greatly between compounds
+        supporting_text: "bioavailability appears to differ greatly between the various polyphenols"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Flavonoids. The page covers six major dietary
+  flavonoid subclasses. Isoflavones are covered in a separate dedicated page.

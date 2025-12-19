@@ -1,0 +1,476 @@
+name: Zinc
+nutrient_term:
+  preferred_term: zinc
+  term:
+    id: CHEBI:27363
+    label: zinc atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/zinc
+alternate_names:
+  - Zn
+description: |
+  Zinc is a nutritionally essential mineral needed for catalytic, structural, and regulatory
+  functions in the body. Over 3,000 proteins in humans have functional zinc-binding sites.
+  Zinc plays important roles in growth and development, immune function, neurotransmission,
+  vision, reproduction, and intestinal ion transport. Severe zinc deficiency is rare and
+  caused by an inherited condition called acrodermatitis enteropathica. Dietary zinc
+  deficiency is quite common in the developing world, affecting an estimated 2 billion
+  people, primarily due to consumption of phytate-rich diets lacking animal-source foods.
+
+functions:
+  - name: Catalytic Role
+    description: |
+      Over 50 different enzymes depend on zinc for their ability to catalyze vital chemical
+      reactions. Zinc-dependent enzymes can be found in all six classes of enzymes. During
+      enzymatic reactions, zinc may have either a direct catalytic role or a structural role
+      (stabilizing the structure of catalytic enzymes).
+    biological_processes:
+      - preferred_term: enzyme activity
+        term:
+          id: GO:0003824
+          label: catalytic activity
+    mic_references:
+      - 7
+      - 8
+      - 9
+
+  - name: Structural Role
+    description: |
+      Zinc plays an essential role in the folding of some proteins. A finger-like structure,
+      known as a zinc finger motif, stabilizes the structure of several proteins including
+      nuclear receptors that bind steroids, thyroid hormones, vitamin D, and vitamin A.
+      Zinc finger motifs allow nuclear receptors to bind to DNA and act as transcription
+      factors. Metallothioneins are proteins with a zinc-binding motif that regulate free
+      zinc concentrations and provide defense against oxidative stress.
+    biological_processes:
+      - preferred_term: protein folding
+        term:
+          id: GO:0006457
+          label: protein folding
+    mic_references:
+      - 6
+      - 10
+      - 11
+      - 12
+
+  - name: Regulatory Role
+    description: |
+      Zinc finger proteins regulate gene expression by acting as transcription factors.
+      Zinc also plays a role in cell signaling via the metal-response element (MRE)-binding
+      transcription factor 1 (MTF1). Extracellular zinc can stimulate a zinc-sensing receptor
+      that triggers the release of intracellular calcium. Zinc has been found to influence
+      hormone release and nerve impulse transmission.
+    biological_processes:
+      - preferred_term: regulation of gene expression
+        term:
+          id: GO:0010468
+          label: regulation of gene expression
+    mic_references:
+      - 6
+      - 14
+      - 15
+      - 16
+
+deficiency:
+  name: Zinc Deficiency
+  description: |
+    Severe zinc deficiency was first characterized through the study of individuals with
+    acrodermatitis enteropathica, a genetic disorder of impaired zinc uptake and transport.
+    Symptoms include growth retardation, delayed sexual maturation, skin rashes, chronic
+    diarrhea, immune deficiencies, impaired wound healing, diminished appetite, impaired
+    taste, night blindness, and behavioral disturbances. Acquired zinc deficiency affects
+    an estimated 2 billion people worldwide, primarily in developing countries due to
+    phytate-rich diets lacking animal-source foods. Even milder zinc deficiency contributes
+    to impaired growth and development and increased susceptibility to infections.
+  phenotypes:
+    - name: Growth retardation
+      phenotype_term:
+        preferred_term: growth retardation
+        term:
+          id: HP:0001510
+          label: Growth delay
+      frequency: FREQUENT
+      context: Common feature of mild zinc deficiency in children
+      mic_references:
+        - 46
+        - 47
+
+    - name: Skin rash (dermatitis)
+      phenotype_term:
+        preferred_term: dermatitis
+        term:
+          id: HP:0000964
+          label: Eczema
+      frequency: FREQUENT
+      context: Characteristic feature of severe zinc deficiency
+      mic_references:
+        - 33
+
+    - name: Diarrhea
+      phenotype_term:
+        preferred_term: chronic diarrhea
+        term:
+          id: HP:0002028
+          label: Chronic diarrhea
+      frequency: FREQUENT
+      context: Severe zinc deficiency
+      mic_references:
+        - 33
+        - 66
+
+    - name: Immune dysfunction
+      phenotype_term:
+        preferred_term: increased susceptibility to infections
+        term:
+          id: HP:0002719
+          label: Recurrent infections
+      frequency: FREQUENT
+      context: Zinc-deficient individuals experience increased susceptibility to infections
+      mic_references:
+        - 63
+        - 66
+
+  at_risk_groups:
+    - name: Children in developing countries
+      description: |
+        Estimated 2 billion people worldwide affected by dietary zinc deficiency, primarily
+        due to diets high in phytate and lacking animal-source foods
+      mic_references:
+        - 3
+        - 35
+
+    - name: Individuals with acrodermatitis enteropathica
+      description: |
+        Genetic disorder resulting from impaired uptake and transport of zinc; requires
+        lifelong oral zinc therapy
+      mic_references:
+        - 33
+        - 34
+
+    - name: Individuals with malabsorption syndromes
+      description: |
+        Conditions affecting nutrient absorption can lead to acquired zinc deficiency
+      mic_references:
+        - 36
+
+    - name: Chronic alcoholics
+      description: |
+        At risk for severe zinc deficiency
+      mic_references:
+        - 36
+
+  mic_references:
+    - 3
+    - 33
+    - 34
+    - 35
+    - 36
+
+toxicity:
+  name: Zinc Toxicity
+  description: |
+    Acute zinc toxicity can occur from consumption of food or beverages contaminated with
+    zinc from galvanized containers. Single doses of 225-450 mg usually induce vomiting.
+    The major consequence of long-term excessive zinc intake is copper deficiency; total
+    zinc intakes of 60 mg/day for up to 10 weeks have resulted in signs of copper deficiency.
+    The Tolerable Upper Intake Level (UL) for adults is 40 mg/day. Intranasal zinc is known
+    to cause anosmia (loss of smell) which may be irreversible.
+  adverse_effects:
+    - name: Copper deficiency
+      description: |
+        Major consequence of long-term excessive zinc consumption; can occur at intakes
+        of 50-60 mg/day
+      severity: moderate
+    - name: Gastrointestinal distress
+      description: |
+        Nausea, vomiting, abdominal pain, and diarrhea with acute toxicity
+      severity: mild
+    - name: Anosmia
+      description: |
+        Loss of sense of smell from intranasal zinc; may be irreversible
+      severity: moderate
+  mic_references:
+    - 6
+    - 29
+    - 127
+    - 177
+    - 178
+
+food_sources:
+  - name: Oysters, cooked
+    food_term:
+      preferred_term: oysters
+    amount: "27-50 mg"
+    serving_size: "6 medium"
+    mic_references:
+      - 176
+
+  - name: Beef, chuck, blade roast, cooked
+    food_term:
+      preferred_term: beef
+    amount: "8.7 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 176
+
+  - name: Beef, ground, 90% lean, cooked
+    food_term:
+      preferred_term: ground beef
+    amount: "5.4 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 176
+
+  - name: Crab, Dungeness, cooked
+    food_term:
+      preferred_term: crab
+    amount: "4.7 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 176
+
+  - name: Turkey, dark meat, cooked
+    food_term:
+      preferred_term: turkey
+    amount: "3.0 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 176
+
+  - name: Cashews
+    food_term:
+      preferred_term: cashews
+    amount: "1.6 mg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 176
+
+drug_interactions:
+  - name: Penicillamine and Zinc
+    description: |
+      Zinc supplements decrease the absorption of penicillamine (Cuprimine, Depen), a
+      metal-chelating agent used to treat copper overload in Wilson's disease. Therapeutic
+      use of penicillamine has also resulted in severe zinc deficiency.
+    drug_term:
+      preferred_term: penicillamine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: HIGH
+    mic_references:
+      - 179
+
+  - name: Tetracycline and Quinolone Antibiotics and Zinc
+    description: |
+      Concomitant administration of zinc supplements with tetracycline and quinolone
+      antibiotics may decrease the absorption of both zinc and the medications. Taking
+      zinc supplements and these medications at least two hours apart should prevent
+      this interaction.
+    drug_term:
+      preferred_term: tetracycline antibiotic
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 179
+
+  - name: Anticonvulsants and Zinc
+    description: |
+      Anticonvulsant drugs, especially sodium valproate, may precipitate zinc deficiency.
+    drug_term:
+      preferred_term: anticonvulsant
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 179
+
+  - name: Diuretics and Zinc
+    description: |
+      Prolonged use of diuretics may increase urinary zinc excretion, resulting in
+      increased loss of zinc.
+    drug_term:
+      preferred_term: diuretic
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 179
+
+nutrient_interactions:
+  - name: Copper and Zinc
+    description: |
+      Taking large quantities of zinc (50 mg/day or more) over weeks can interfere with
+      copper bioavailability. High zinc intake induces intestinal synthesis of metallothionein,
+      which traps copper within intestinal cells and prevents its systemic absorption.
+    nutrient_term:
+      preferred_term: copper
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 17
+
+  - name: Iron and Zinc
+    description: |
+      Iron and zinc compete for absorptive pathways. Supplemental (38-65 mg/day of elemental
+      iron) but not dietary levels of iron may decrease zinc absorption. This interaction
+      has led some experts to recommend zinc supplementation for pregnant and lactating
+      women taking iron supplements.
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 18
+      - 19
+      - 20
+      - 21
+
+  - name: Calcium and Zinc
+    description: |
+      High levels of dietary calcium may impair zinc absorption, though results in humans
+      are inconsistent. Calcium in combination with phytate might affect zinc absorption.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 17
+      - 26
+      - 27
+      - 28
+
+disease_associations:
+  - name: Infectious Diseases in Children
+    description: |
+      Zinc deficiency increases susceptibility to infectious diseases. Diarrheal diseases,
+      pneumonia, and malaria are major causes of childhood mortality in developing countries
+      where zinc deficiency is prevalent. Zinc supplementation reduces the duration and
+      severity of acute and persistent childhood diarrhea. WHO and UNICEF recommend zinc
+      supplementation (10-20 mg/day) as part of treatment for acute diarrheal episodes.
+    disease_term:
+      preferred_term: infectious disease
+      term:
+        id: MONDO:0005550
+        label: infectious disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Children with zinc deficiency, especially in developing countries
+    mic_references:
+      - 66
+      - 70
+      - 71
+      - 72
+
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      Zinc is involved in insulin synthesis, storage, and release from pancreatic beta-cells.
+      Zinc also stimulates glucose uptake by insulin-sensitive tissues. Some prospective
+      studies have found lower risk of type 2 diabetes with higher dietary zinc intake.
+      Short-term trials suggest zinc supplementation may improve glucose handling in
+      subjects with prediabetes.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population; evidence mixed across studies
+    mic_references:
+      - 15
+      - 94
+      - 97
+      - 98
+      - 104
+      - 105
+
+  - name: Age-Related Macular Degeneration
+    description: |
+      Zinc supplementation, often in combination with antioxidants, has been studied for
+      the management of age-related macular degeneration (AMD). The AREDS trials showed
+      benefit of zinc-containing supplements in reducing progression to advanced AMD.
+    disease_term:
+      preferred_term: age-related macular degeneration
+      term:
+        id: MONDO:0008138
+        label: age-related macular degeneration
+    relationship_type: THERAPEUTIC
+    population_context: Individuals with intermediate AMD
+    mic_references:
+      - 1
+
+  - name: Common Cold
+    description: |
+      Supplementation with doses of zinc in excess of the UL has been shown effective
+      in reducing the duration of common cold symptoms. The use of zinc at daily doses
+      of 50-180 mg for one to two weeks has not resulted in serious side effects.
+    disease_term:
+      preferred_term: common cold
+      term:
+        id: MONDO:0005917
+        label: common cold
+    relationship_type: THERAPEUTIC
+    population_context: General population with cold symptoms
+    mic_references:
+      - 1
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "2 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "3 mg/day"
+      source: Institute of Medicine
+    - population: Children 1-3 years
+      amount: "3 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "5 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "8 mg/day"
+      source: Institute of Medicine
+    - population: Males 14-18 years
+      amount: "11 mg/day"
+      source: Institute of Medicine
+    - population: Females 14-18 years
+      amount: "9 mg/day"
+      source: Institute of Medicine
+    - population: Males 19+ years
+      amount: "11 mg/day"
+      source: Institute of Medicine
+    - population: Females 19+ years
+      amount: "8 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (18 and younger)
+      amount: "12 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (19+)
+      amount: "11 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (18 and younger)
+      amount: "13 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (19+)
+      amount: "12 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The RDA is based on a number of different indicators of zinc nutritional status. The
+    Tolerable Upper Intake Level (UL) for adults is 40 mg/day, established to prevent
+    copper deficiency. Average dietary zinc intake in US adults is about 12.3 mg/day,
+    with about 12% of the adult population at risk for inadequate intake.
+
+bioavailability:
+  description: |
+    Zinc bioavailability is relatively high in meat, eggs, and seafood due to the relative
+    absence of compounds that inhibit zinc absorption and the presence of sulfur-containing
+    amino acids (cysteine and methionine) that improve zinc absorption. Zinc in whole-grain
+    products and plant proteins is less bioavailable due to their high phytate content,
+    which inhibits zinc absorption. Leavened breads have more bioavailable zinc than
+    unleavened breads because yeast reduces phytate levels.
+  mic_references:
+    - 174
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Zinc. Zinc is essential for over 3,000 proteins in humans.
+  Dietary zinc deficiency is common in developing countries, affecting an estimated
+  2 billion people. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains approximately 180 references.

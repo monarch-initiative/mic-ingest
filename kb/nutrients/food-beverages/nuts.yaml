@@ -1,0 +1,79 @@
+name: Nuts
+nutrient_term:
+  preferred_term: nuts
+  description: Tree nuts and peanuts, good sources of unsaturated fatty acids, protein, fiber, and phytochemicals
+  term:
+    id: FOODON:00001172
+    label: nut food product
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/nuts
+alternate_names:
+  - Tree nuts
+description: |
+  Nuts are good sources of several micronutrients, as well as unsaturated fatty acids,
+  protein, fiber, and phytochemicals. Common nuts include almonds, cashews, hazelnuts,
+  macadamia nuts, pecans, pine nuts, pistachios, and walnuts. Peanuts, while botanically
+  legumes, are commonly grouped with tree nuts for nutritional purposes.
+
+disease_associations:
+  - name: Nuts and Coronary Heart Disease
+    disease_term:
+      preferred_term: coronary heart disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Results from large prospective cohort studies show an association between regular
+      nut consumption (≥5 ounces/week) and lower risk of coronary heart disease. There
+      is strong evidence from randomized controlled trials that nut consumption lowers
+      blood cholesterol concentrations.
+    population_context: general adult population
+    mic_references:
+      - 3
+      - 4
+      - 5
+
+  - name: Nuts and All-Cause Mortality
+    disease_term:
+      preferred_term: mortality
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of prospective cohort studies show that nut consumption is associated
+      with a reduced risk of all-cause mortality and mortality due to chronic conditions.
+    population_context: general adult population
+    mic_references:
+      - 32
+      - 33
+
+toxicity:
+  name: Nut Allergies
+  description: |
+    Peanuts and tree nuts can cause life-threatening allergy reactions. Current guidelines
+    for the primary prevention of allergy set by the National Institute of Allergy and
+    Infectious Diseases discourage nut avoidance by non-allergic women during pregnancy
+    and encourage the early introduction to peanuts in age-appropriate foods in infants
+    with no peanut allergy.
+  mic_references:
+    - 36
+    - 37
+    - 38
+
+recommendations:
+  notes: |
+    Substituting nuts for unhealthy snacks is a good strategy to avoid weight gain and
+    improve the nutritional quality of one's diet. Current epidemiological data indicate
+    that higher nut consumption does not result in greater weight gain; rather, incorporating
+    nuts into the diet may benefit weight control.
+  ai:
+    - population: Adults
+      amount: ≥5 ounces/week
+      source: MIC recommendation for cardiovascular benefits
+
+notes: |
+  There is little evidence to support an association between regular nut consumption
+  and a lower risk of developing type 2 diabetes mellitus. However, there is some
+  evidence suggesting that nut consumption can improve glycemic control in individuals
+  with type 2 diabetes mellitus.

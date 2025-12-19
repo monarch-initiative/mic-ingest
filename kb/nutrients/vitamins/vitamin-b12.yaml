@@ -1,0 +1,361 @@
+name: Vitamin B12
+nutrient_term:
+  preferred_term: cobalamin
+  term:
+    id: CHEBI:30411
+    label: cobalamin
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/vitamin-B12
+alternate_names:
+  - Cobalamin
+  - Cyanocobalamin
+  - Methylcobalamin
+description: |
+  Vitamin B12 (cobalamin) is a water-soluble vitamin essential for folate
+  metabolism and for the synthesis of the citric acid cycle intermediate
+  succinyl-CoA. It is required for DNA synthesis, maintenance of the myelin
+  sheath around neurons, and red blood cell formation. Vitamin B12 deficiency
+  can cause megaloblastic anemia and irreversible neurological damage. Products
+  of animal origin are the primary dietary source of vitamin B12.
+
+functions:
+  - name: Methionine Synthase Cofactor
+    description: |
+      Methylcobalamin is required for the function of methionine synthase, which
+      converts homocysteine to methionine. This reaction also regenerates
+      tetrahydrofolate from 5-methyltetrahydrofolate, making it available for
+      DNA synthesis.
+    mic_references:
+      - 3
+      - 5
+    evidence:
+      - reference: PMID:28660890
+        supports: SUPPORT
+        snippet: "Vitamin B12 (B12; also known as cobalamin) is a B vitamin that has an important role in cellular metabolism, especially in DNA synthesis, methylation and mitochondrial metabolism"
+        explanation: Confirms vitamin B12's role in DNA synthesis and methylation
+
+  - name: Methylmalonyl-CoA Mutase Cofactor
+    description: |
+      5'-deoxyadenosylcobalamin is required for the mitochondrial enzyme
+      L-methylmalonyl-CoA mutase, which converts methylmalonyl-CoA to
+      succinyl-CoA for the citric acid cycle. Elevated methylmalonic acid
+      (MMA) is a specific marker of vitamin B12 deficiency.
+    mic_references:
+      - 3
+      - 5
+
+deficiency:
+  name: Vitamin B12 Deficiency
+  description: |
+    Vitamin B12 deficiency causes impairment of both methionine synthase and
+    methylmalonyl-CoA mutase, leading to elevated homocysteine and methylmalonic
+    acid. Deficiency is commonly associated with chronic stomach inflammation,
+    pernicious anemia, and food-bound malabsorption syndrome. Normal digestive
+    function required for absorption is commonly impaired in individuals over
+    60 years of age.
+  phenotypes:
+    - name: Megaloblastic Anemia
+      phenotype_term:
+        preferred_term: megaloblastic anemia
+        term:
+          id: HP:0001889
+          label: Megaloblastic anemia
+      frequency: FREQUENT
+      context: Large immature hemoglobin-poor red blood cells due to impaired DNA synthesis
+      mic_references:
+        - 3
+        - 20
+
+    - name: Peripheral Neuropathy
+      phenotype_term:
+        preferred_term: peripheral neuropathy
+        term:
+          id: HP:0009830
+          label: Peripheral neuropathy
+      frequency: FREQUENT
+      context: Numbness and tingling of hands and feet
+      mic_references:
+        - 13
+        - 21
+
+    - name: Ataxia
+      phenotype_term:
+        preferred_term: ataxia
+        term:
+          id: HP:0001251
+          label: Ataxia
+      frequency: OCCASIONAL
+      context: Difficulty walking (gait ataxia)
+      mic_references:
+        - 13
+
+    - name: Cognitive Impairment
+      phenotype_term:
+        preferred_term: cognitive impairment
+        term:
+          id: HP:0100543
+          label: Cognitive impairment
+      frequency: OCCASIONAL
+      context: Memory loss and dementia-like symptoms
+      mic_references:
+        - 13
+        - 21
+
+    - name: Glossitis
+      phenotype_term:
+        preferred_term: glossitis
+        term:
+          id: HP:0000206
+          label: Glossitis
+      frequency: OCCASIONAL
+      context: Tongue soreness associated with deficiency
+      mic_references:
+        - 21
+
+  at_risk_groups:
+    - name: Elderly Adults (Over 60 Years)
+      description: |
+        Normal digestive function required for food-bound vitamin B12 absorption
+        is commonly impaired in older adults due to atrophic gastritis. Adults
+        over 50 should get most vitamin B12 from supplements or fortified foods.
+      mic_references:
+        - 7
+        - 21
+
+    - name: Strict Vegetarians and Vegans
+      description: |
+        Vitamin B12 is found only in animal products. Strict vegetarians who
+        eat no animal products need supplemental vitamin B12 to meet their
+        requirements.
+      mic_references:
+        - 125
+        - 127
+        - 128
+
+    - name: Individuals with Pernicious Anemia
+      description: |
+        Autoimmune destruction of gastric parietal cells leads to lack of
+        intrinsic factor required for vitamin B12 absorption.
+      mic_references:
+        - 10
+        - 21
+
+    - name: Patients with Atrophic Gastritis
+      description: |
+        Chronic inflammation of the stomach decreases gastric acid secretion
+        needed to release vitamin B12 from food.
+      mic_references:
+        - 7
+        - 8
+
+  mic_references:
+    - 5
+    - 13
+    - 18
+    - 19
+
+disease_associations:
+  - name: Pernicious Anemia
+    disease_term:
+      preferred_term: pernicious anemia
+      term:
+        id: MONDO:0008228
+        label: pernicious anemia
+    relationship_type: DEFICIENCY_CAUSES
+    description: |
+      Autoimmune vitamin B12 malabsorption syndrome caused by destruction of
+      gastric parietal cells and lack of intrinsic factor. Treatment requires
+      lifelong vitamin B12 supplementation, typically by injection.
+    mic_references:
+      - 10
+      - 21
+
+  - name: Neural Tube Defects
+    disease_term:
+      preferred_term: neural tube defect
+      term:
+        id: MONDO:0005343
+        label: neural tube defect
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Pregnant women
+    description: |
+      Low maternal vitamin B12 status has been associated with increased risk
+      of neural tube defects, but it is not known whether supplementation
+      reduces risk independent of folate.
+    mic_references:
+      - 41
+      - 42
+
+  - name: Cardiovascular Disease (Homocysteine)
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Vitamin B12 and folate are important for homocysteine metabolism.
+      B-vitamin supplementation reduces homocysteine levels but has generally
+      not reduced cardiovascular events in intervention trials. May slightly
+      reduce stroke risk.
+    mic_references:
+      - 24
+      - 25
+      - 26
+
+food_sources:
+  - name: Clams (steamed)
+    food_term:
+      preferred_term: clams
+    amount: "84.1 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 126
+
+  - name: Mussels (steamed)
+    food_term:
+      preferred_term: mussels
+    amount: "20.4 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 126
+
+  - name: Mackerel (cooked)
+    food_term:
+      preferred_term: mackerel
+    amount: "16.2 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 126
+
+  - name: Beef (lean, cooked)
+    food_term:
+      preferred_term: beef
+    amount: "7.0 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 126
+
+  - name: Salmon (cooked)
+    food_term:
+      preferred_term: salmon
+    amount: "2.4 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 126
+
+  - name: Milk (2%)
+    food_term:
+      preferred_term: milk
+    amount: "1.3 mcg"
+    serving_size: "8 fluid ounces"
+    mic_references:
+      - 126
+
+drug_interactions:
+  - name: Proton-Pump Inhibitors
+    drug_term:
+      preferred_term: omeprazole
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: |
+      Proton-pump inhibitors decrease stomach acid secretion required for
+      release of vitamin B12 from food (but not from supplements). Long-term
+      use can decrease blood vitamin B12 concentrations.
+    mic_references:
+      - 137
+      - 138
+      - 139
+      - 140
+
+  - name: Metformin
+    drug_term:
+      preferred_term: metformin
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: |
+      Metformin may decrease vitamin B12 absorption by affecting calcium-dependent
+      uptake of the intrinsic factor-B12 complex. Long-term use can reduce
+      serum cobalamin concentrations.
+    mic_references:
+      - 143
+      - 144
+      - 146
+
+  - name: H2-Receptor Antagonists
+    drug_term:
+      preferred_term: cimetidine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: LOW
+    description: |
+      H2-receptor antagonists decrease absorption of vitamin B12 from food
+      by reducing gastric acid secretion.
+    mic_references:
+      - 141
+      - 142
+
+  - name: Nitrous Oxide
+    drug_term:
+      preferred_term: nitrous oxide
+    interaction_type: ANTAGONISTIC
+    clinical_significance: HIGH
+    description: |
+      Nitrous oxide oxidizes and inactivates vitamin B12, inhibiting both
+      vitamin B12-dependent enzymes. Can produce megaloblastic anemia and
+      neuropathy, particularly in chronic recreational users.
+    mic_references:
+      - 7
+      - 18
+
+toxicity:
+  name: Vitamin B12 Toxicity
+  description: |
+    No toxic effects have been associated with large intakes of vitamin B12
+    from food or supplements in healthy individuals. The Food and Nutrition
+    Board did not establish a tolerable upper intake level (UL) for vitamin B12
+    because of its low potential for toxicity.
+  mic_references:
+    - 21
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.4 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.5 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "0.9 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "1.2 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "1.8 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "2.4 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adults 19+ years
+      amount: "2.4 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adults over 50 should get vitamin B12 from supplements or fortified foods
+    - population: Pregnancy
+      amount: "2.6 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation
+      amount: "2.8 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+
+notes: |
+  Only bacteria and archaea can synthesize vitamin B12. Animal products are the
+  primary dietary source. The average dietary intake in the US is 5.9 mcg/day
+  for adult men and 3.8 mcg/day for adult women. Older adults and vegans should
+  use vitamin B12 fortified foods and supplements. Folic acid supplementation
+  can mask vitamin B12 deficiency by correcting anemia while neurological
+  damage progresses.

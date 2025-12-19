@@ -1,0 +1,97 @@
+name: Whole Grains
+nutrient_term:
+  preferred_term: whole grains
+  description: Grains that contain all three parts of the kernel - the bran, germ, and endosperm
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/whole-grains
+alternate_names:
+  - Whole grain foods
+  - Unrefined grains
+description: |
+  Whole grains are grains that contain all three parts of the kernel: the fiber-rich
+  outer layer (bran), the nutrient-packed inner germ, and the starchy endosperm.
+  Common whole grains include whole wheat, brown rice, oats, barley, rye, corn,
+  and less common grains like quinoa, amaranth, and millet. Whole grains are rich
+  in fiber, vitamins, minerals, and phytochemicals.
+
+disease_associations:
+  - name: Whole Grains and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Prospective cohort studies have consistently found that higher intakes of
+      whole grains are associated with reduced risk of type 2 diabetes. Meta-analyses
+      suggest a dose-response relationship with significant risk reductions at
+      higher intake levels.
+    population_context: general adult population
+    mic_references:
+      - 7
+      - 8
+      - 9
+
+  - name: Whole Grains and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher whole grain intake is associated with reduced risk of cardiovascular
+      disease. Whole grains may improve cardiometabolic markers including blood
+      lipids, blood pressure, and markers of inflammation.
+    population_context: general adult population
+    mic_references:
+      - 16
+      - 17
+
+  - name: Whole Grains and Colorectal Cancer
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Evidence from observational studies supports an association between whole
+      grain consumption and reduced risk of colorectal cancer. The fiber content
+      of whole grains may contribute to this protective effect.
+    population_context: general adult population
+    mic_references:
+      - 25
+      - 26
+
+  - name: Whole Grains and All-Cause Mortality
+    disease_term:
+      preferred_term: mortality
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Prospective cohort studies have found that higher whole grain intake is
+      associated with reduced risk of all-cause mortality.
+    population_context: general adult population
+    mic_references:
+      - 32
+
+recommendations:
+  notes: |
+    The Dietary Guidelines for Americans recommend that at least half of all grains
+    consumed should be whole grains. For a 2,000-calorie diet, this translates to
+    at least 3 ounce-equivalents of whole grains per day.
+  ai:
+    - population: Adults (2,000 calorie diet)
+      amount: ≥3 ounce-equivalents/day
+      source: Dietary Guidelines for Americans
+
+notes: |
+  Whole grains provide fiber, vitamins (especially B vitamins), minerals (including
+  iron, magnesium, and selenium), and various phytochemicals. The health benefits
+  of whole grains are attributed to the synergistic effects of these components
+  rather than any single nutrient.

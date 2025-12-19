@@ -1,0 +1,401 @@
+name: Manganese
+nutrient_term:
+  preferred_term: manganese
+  term:
+    id: CHEBI:18291
+    label: manganese atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/manganese
+alternate_names:
+  - Mn
+description: |
+  Manganese is a mineral element that is both nutritionally essential and potentially
+  toxic. It plays an important role in a number of physiologic processes as a constituent
+  of multiple enzymes and an activator of other enzymes. Manganese deficiency is rare in
+  humans, and there is more concern for toxicity related to manganese overexposure,
+  particularly from inhaled manganese in occupational settings.
+
+functions:
+  - name: Antioxidant Function
+    description: |
+      Manganese superoxide dismutase (MnSOD) is the principal antioxidant enzyme in
+      the mitochondria. Because mitochondria consume over 90% of the oxygen used by
+      cells, they are especially vulnerable to oxidative stress. MnSOD catalyzes the
+      conversion of superoxide radicals to hydrogen peroxide, which can be reduced
+      to water by other antioxidant enzymes.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 3
+
+  - name: Metabolism
+    description: |
+      A number of manganese-activated enzymes play important roles in the metabolism
+      of carbohydrates, amino acids, and cholesterol. Pyruvate carboxylase (manganese-
+      containing) and phosphoenolpyruvate carboxykinase (manganese-activated) are
+      critical in gluconeogenesis. Arginase, another manganese-containing enzyme, is
+      required by the liver for the urea cycle. In the brain, glutamine synthetase
+      converts the amino acid glutamate to glutamine.
+    biological_processes:
+      - preferred_term: gluconeogenesis
+        term:
+          id: GO:0006094
+          label: gluconeogenesis
+    mic_references:
+      - 3
+      - 4
+      - 5
+      - 6
+
+  - name: Bone and Cartilage Formation
+    description: |
+      Manganese deficiency results in abnormal skeletal development in many animal
+      species. Manganese is the preferred cofactor of enzymes called glycosyltransferases,
+      which are required for the synthesis of proteoglycans needed for the formation
+      of healthy cartilage and bone.
+    biological_processes:
+      - preferred_term: proteoglycan biosynthesis
+        term:
+          id: GO:0030166
+          label: proteoglycan biosynthetic process
+    mic_references:
+      - 7
+
+  - name: Wound Healing
+    description: |
+      Wound healing is a complex process that requires increased production of collagen.
+      Manganese is required for the activation of prolidase, an enzyme that functions
+      to provide the amino acid proline for collagen formation in human skin cells.
+      Glycosaminoglycan synthesis, which requires manganese-activated glycosyltransferases,
+      may also play an important role in wound healing.
+    biological_processes:
+      - preferred_term: wound healing
+        term:
+          id: GO:0042060
+          label: wound healing
+    mic_references:
+      - 7
+      - 8
+      - 9
+
+deficiency:
+  name: Manganese Deficiency
+  description: |
+    Manganese deficiency is quite rare in humans. Signs of manganese deficiency vary
+    among animal species and may include impaired growth, impaired reproductive function,
+    skeletal abnormalities, impaired glucose tolerance, and altered carbohydrate and
+    lipid metabolism. In humans, a child on long-term total parenteral nutrition lacking
+    manganese developed bone demineralization and impaired growth that were corrected
+    by manganese supplementation. Young men fed a low-manganese diet developed decreased
+    serum cholesterol and transient skin rash. Young women fed a manganese-poor diet
+    developed mildly abnormal glucose tolerance.
+  phenotypes:
+    - name: Impaired glucose tolerance
+      phenotype_term:
+        preferred_term: impaired glucose tolerance
+        term:
+          id: HP:0004904
+          label: Maturity-onset diabetes of the young
+      frequency: OCCASIONAL
+      context: Observed in young women fed manganese-poor diet
+      mic_references:
+        - 19
+
+    - name: Skeletal abnormalities
+      phenotype_term:
+        preferred_term: skeletal abnormalities
+        term:
+          id: HP:0000924
+          label: Abnormality of the skeletal system
+      frequency: OCCASIONAL
+      context: Bone demineralization observed in TPN patient lacking manganese
+      mic_references:
+        - 23
+
+  at_risk_groups:
+    - name: Patients on total parenteral nutrition
+      description: |
+        Long-term TPN lacking manganese can lead to bone demineralization and
+        impaired growth
+      mic_references:
+        - 23
+
+  mic_references:
+    - 2
+    - 7
+    - 19
+    - 23
+    - 24
+
+toxicity:
+  name: Manganese Toxicity
+  description: |
+    Manganese toxicity may result in multiple neurologic problems and is a well-recognized
+    health hazard for people who inhale manganese dust (welders, miners, smelters).
+    Unlike ingested manganese, inhaled manganese is transported directly to the brain
+    before it can be metabolized in the liver. In its worst form, manganese toxicity can
+    result in a permanent neurological disorder with symptoms similar to Parkinson's
+    disease (manganism), including tremors, difficulty walking, and facial muscle spasms.
+    This syndrome is sometimes preceded by psychiatric symptoms. Limited evidence suggests
+    high manganese in drinking water may also be associated with neurological symptoms.
+    The Tolerable Upper Intake Level (UL) for adults is 11 mg/day. Manganese toxicity
+    from food alone has not been reported in humans.
+  adverse_effects:
+    - name: Manganism
+      description: |
+        Permanent neurological disorder with Parkinson-like symptoms including tremors,
+        difficulty walking, facial muscle spasms; associated with inhaled manganese
+      severity: severe
+    - name: Psychiatric symptoms
+      description: |
+        Irritability, aggressiveness, hallucinations may precede neurological symptoms
+      severity: moderate
+    - name: Respiratory effects
+      description: |
+        Inhalation can cause inflammatory response in lungs, cough, acute bronchitis,
+        and decreased lung function
+      severity: moderate
+  mic_references:
+    - 1
+    - 4
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+
+food_sources:
+  - name: Pecans
+    food_term:
+      preferred_term: pecans
+    amount: "1.28 mg"
+    serving_size: "1 ounce (19 halves)"
+    mic_references:
+      - 50
+
+  - name: Brown rice, cooked
+    food_term:
+      preferred_term: brown rice
+    amount: "0.99 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 50
+
+  - name: Instant oatmeal
+    food_term:
+      preferred_term: oatmeal
+    amount: "0.99 mg"
+    serving_size: "1 packet"
+    mic_references:
+      - 50
+
+  - name: Spinach, cooked
+    food_term:
+      preferred_term: spinach
+    amount: "0.84 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 50
+
+  - name: Pineapple, raw
+    food_term:
+      preferred_term: pineapple
+    amount: "0.77 mg"
+    serving_size: "1/2 cup chunks"
+    mic_references:
+      - 50
+
+  - name: Whole-wheat bread
+    food_term:
+      preferred_term: whole wheat bread
+    amount: "0.70 mg"
+    serving_size: "1 slice"
+    mic_references:
+      - 50
+
+  - name: Almonds
+    food_term:
+      preferred_term: almonds
+    amount: "0.62 mg"
+    serving_size: "1 ounce (23 kernels)"
+    mic_references:
+      - 50
+
+drug_interactions:
+  - name: Magnesium-Containing Antacids and Manganese
+    description: |
+      Magnesium-containing antacids and laxatives may decrease the absorption of
+      manganese if taken together with manganese-containing foods or supplements.
+    drug_term:
+      preferred_term: magnesium antacid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: LOW
+    mic_references:
+      - 53
+
+  - name: Tetracycline and Manganese
+    description: |
+      The antibiotic medication tetracycline may decrease the absorption of manganese
+      if taken together with manganese-containing foods or supplements.
+    drug_term:
+      preferred_term: tetracycline
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: LOW
+    mic_references:
+      - 53
+
+nutrient_interactions:
+  - name: Iron and Manganese
+    description: |
+      Iron and manganese share common absorption and transport proteins. Absorption
+      of manganese from a meal decreases as the meal's iron content increases. Iron
+      supplementation (60 mg/day for four months) has been associated with decreased
+      blood manganese concentrations. Intestinal absorption of manganese is increased
+      during iron deficiency and decreased when iron stores are elevated.
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 7
+      - 10
+      - 11
+      - 12
+
+  - name: Calcium and Manganese
+    description: |
+      Calcium intake has been found to limit retention of manganese.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 4
+
+  - name: Magnesium and Manganese
+    description: |
+      Magnesium intake may affect manganese retention.
+    nutrient_term:
+      preferred_term: magnesium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 4
+
+disease_associations:
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      In animal models, manganese deficiency results in impaired insulin secretion
+      and glucose intolerance similar to diabetes mellitus. Several prospective cohort
+      studies have found higher dietary intakes of manganese to be associated with
+      lower risk of type 2 diabetes. However, studies using blood or urinary manganese
+      as biomarkers have reported mixed results. Although manganese appears to play
+      a role in glucose metabolism, it is not clear whether higher manganese status
+      improves glucose tolerance.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Observational data; mechanism unclear
+    mic_references:
+      - 30
+      - 31
+      - 32
+      - 33
+
+  - name: Manganese Overload Disorders
+    description: |
+      Autosomal recessive mutations in the SLC30A10 gene cause a manganese overload
+      syndrome with hypermanganesemia, dystonia parkinsonism, and hepatic dysfunction.
+      Mutations in SLC39A14 cause similar neurological phenotype without liver disease.
+      Chelation therapy is important to treat these inherited disorders.
+    disease_term:
+      preferred_term: manganese overload
+    relationship_type: MARKER
+    population_context: Inherited disorders of manganese metabolism
+    mic_references:
+      - 56
+      - 57
+      - 58
+      - 59
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.003 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.6 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "1.2 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 4-8 years
+      amount: "1.5 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 9-13 years
+      amount: "1.9 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 9-13 years
+      amount: "1.6 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 14-18 years
+      amount: "2.2 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 14-18 years
+      amount: "1.6 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 19+ years
+      amount: "2.3 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 19+ years
+      amount: "1.8 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy
+      amount: "2.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding
+      amount: "2.6 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    Manganese recommendations are expressed as Adequate Intake (AI) rather than RDA
+    because there was insufficient information on manganese requirements. The AI values
+    are based on average dietary intakes. The Tolerable Upper Intake Level (UL) for
+    adults is 11 mg/day. US estimated average intakes range from 2.1-2.3 mg/day for
+    men and 1.6-1.8 mg/day for women. Vegetarians may have intakes up to 7.0 mg/day.
+
+bioavailability:
+  description: |
+    Manganese absorption can vary based on iron status and dietary factors. Foods high
+    in phytic acid (beans, seeds, nuts, whole grains) or oxalic acid (cabbage, spinach,
+    sweet potatoes) may slightly inhibit manganese absorption. Tannins in tea may
+    moderately reduce absorption. Intakes of other minerals including iron, calcium,
+    and phosphorus have been found to limit retention of manganese.
+  mic_references:
+    - 4
+    - 18
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Manganese. Manganese is both nutritionally essential
+  and potentially toxic. The MIC reference numbers (mic_references) correspond to
+  the numbered citations on the source page. The page contains approximately 80
+  references.

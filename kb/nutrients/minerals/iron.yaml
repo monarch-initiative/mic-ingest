@@ -1,0 +1,427 @@
+name: Iron
+nutrient_term:
+  preferred_term: iron
+  term:
+    id: CHEBI:18248
+    label: iron atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/iron
+alternate_names:
+  - Fe
+description: |
+  Iron is an essential component of hundreds of proteins and enzymes that support
+  essential biological functions, including oxygen transport, energy production, and
+  DNA synthesis. Hemoglobin, myoglobin, cytochromes, and peroxidases require
+  iron-containing heme as a prosthetic group. Iron deficiency is the most common
+  nutritional deficiency worldwide, affecting primarily children, women of
+  childbearing age, pregnant women, and individuals with certain medical conditions.
+  Body iron is tightly regulated by the hormone hepcidin.
+
+functions:
+  - name: Oxygen Transport
+    description: |
+      Iron is essential for oxygen transport in the blood. Hemoglobin in red blood
+      cells binds oxygen in the lungs and delivers it to tissues throughout the body.
+      Myoglobin stores oxygen in muscle cells. About two-thirds of body iron is
+      found in hemoglobin.
+    biological_processes:
+      - preferred_term: oxygen transport
+        term:
+          id: GO:0015671
+          label: oxygen transport
+    mic_references:
+      - 1
+      - 2
+
+  - name: Energy Production
+    description: |
+      Iron-containing enzymes in the mitochondrial electron transport chain (cytochromes)
+      are essential for ATP production. Iron-sulfur clusters are required for electron
+      transfer in cellular respiration.
+    biological_processes:
+      - preferred_term: electron transport chain
+        term:
+          id: GO:0022900
+          label: electron transport chain
+    mic_references:
+      - 3
+      - 4
+
+  - name: DNA Synthesis
+    description: |
+      Ribonucleotide reductase is an iron-dependent enzyme essential for DNA synthesis.
+      Iron is required for the activity of this enzyme, which catalyzes the formation
+      of deoxyribonucleotides from ribonucleotides.
+    biological_processes:
+      - preferred_term: DNA replication
+        term:
+          id: GO:0006260
+          label: DNA replication
+    mic_references:
+      - 5
+
+deficiency:
+  name: Iron Deficiency
+  description: |
+    Iron deficiency is the most common nutritional deficiency worldwide. It results
+    from inadequate iron intake, poor absorption, or increased losses. Stages include
+    storage iron depletion, early functional iron deficiency (reduced transferrin
+    saturation), and iron deficiency anemia (microcytic hypochromic anemia). Symptoms
+    include fatigue, weakness, decreased work capacity, and impaired cognitive function.
+  phenotypes:
+    - name: Iron deficiency anemia
+      phenotype_term:
+        preferred_term: iron deficiency anemia
+        term:
+          id: HP:0001891
+          label: Iron deficiency anemia
+      frequency: FREQUENT
+      context: Microcytic hypochromic anemia from severe iron deficiency
+      mic_references:
+        - 14
+
+    - name: Fatigue
+      phenotype_term:
+        preferred_term: fatigue
+        term:
+          id: HP:0012378
+          label: Fatigue
+      frequency: FREQUENT
+      context: Common symptom even before anemia develops
+      mic_references:
+        - 14
+
+    - name: Cognitive impairment
+      phenotype_term:
+        preferred_term: cognitive impairment
+        term:
+          id: HP:0100543
+          label: Cognitive impairment
+      frequency: OCCASIONAL
+      context: Especially affects children's development
+      mic_references:
+        - 38
+
+  at_risk_groups:
+    - name: Women of childbearing age
+      description: |
+        Menstrual blood loss increases iron requirements; RDA is 18 mg/day vs
+        8 mg/day for men
+      mic_references:
+        - 25
+
+    - name: Pregnant women
+      description: |
+        Expanded blood volume and fetal development increase requirements to
+        27 mg/day; many women enter pregnancy with inadequate iron stores
+      mic_references:
+        - 25
+
+    - name: Infants and young children
+      description: |
+        Rapid growth increases requirements; infants born with low stores or
+        exclusively breastfed beyond 6 months are at risk
+      mic_references:
+        - 26
+
+    - name: Frequent blood donors
+      description: |
+        Each donation removes about 200-250 mg of iron; may lead to depletion
+        without supplementation
+      mic_references:
+        - 27
+
+    - name: Vegetarians
+      description: |
+        Plant-based diets contain only nonheme iron, which is less bioavailable
+        than heme iron from animal sources
+      mic_references:
+        - 28
+
+  mic_references:
+    - 14
+    - 15
+    - 16
+
+toxicity:
+  name: Iron Toxicity
+  description: |
+    Acute iron poisoning is rare but can be fatal, especially in children who
+    accidentally ingest iron supplements. Chronic iron overload occurs in hereditary
+    hemochromatosis and can cause liver damage, heart failure, and diabetes. The
+    Tolerable Upper Intake Level (UL) for adults is 45 mg/day based on gastrointestinal
+    side effects. Iron supplements commonly cause GI side effects including nausea,
+    constipation, and dark stools.
+  adverse_effects:
+    - name: Gastrointestinal distress
+      description: |
+        Nausea, vomiting, constipation, diarrhea, and dark stools are common
+        with iron supplementation
+      severity: mild
+    - name: Iron overload (hemochromatosis)
+      description: |
+        Toxic iron deposition in liver, heart, and pancreas in hereditary
+        hemochromatosis or from excessive supplementation
+      severity: severe
+  mic_references:
+    - 62
+    - 63
+    - 64
+
+food_sources:
+  - name: Oysters
+    food_term:
+      preferred_term: oysters
+    amount: "8 mg"
+    serving_size: "6 medium"
+    notes: Excellent source of heme iron
+    mic_references:
+      - 56
+
+  - name: Beef liver
+    food_term:
+      preferred_term: beef liver
+    amount: "5 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 56
+
+  - name: Beef
+    food_term:
+      preferred_term: beef
+    amount: "2.1 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 56
+
+  - name: Fortified cereals
+    food_term:
+      preferred_term: fortified cereal
+    amount: "18 mg"
+    serving_size: "1 serving"
+    notes: Content varies by brand
+    mic_references:
+      - 56
+
+  - name: White beans
+    food_term:
+      preferred_term: white beans
+    amount: "3.9 mg"
+    serving_size: "1/2 cup"
+    notes: Nonheme iron
+    mic_references:
+      - 56
+
+  - name: Spinach, cooked
+    food_term:
+      preferred_term: spinach
+    amount: "3.2 mg"
+    serving_size: "1/2 cup"
+    notes: Nonheme iron; absorption reduced by oxalates
+    mic_references:
+      - 56
+
+drug_interactions:
+  - name: Tetracyclines and Iron
+    description: |
+      Iron supplements reduce the absorption of tetracycline antibiotics. Doses
+      should be separated by at least two hours.
+    drug_term:
+      preferred_term: tetracycline
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: HIGH
+    mic_references:
+      - 65
+
+  - name: Bisphosphonates and Iron
+    description: |
+      Iron reduces the absorption of bisphosphonates used for osteoporosis.
+      Doses should be separated by at least two hours.
+    drug_term:
+      preferred_term: bisphosphonate
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 66
+
+  - name: Levothyroxine and Iron
+    description: |
+      Iron supplements may reduce the absorption of thyroid hormone replacement.
+      Doses should be separated by at least four hours.
+    drug_term:
+      preferred_term: levothyroxine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 67
+
+  - name: Levodopa and Iron
+    description: |
+      Iron may reduce the absorption of levodopa used for Parkinson's disease.
+    drug_term:
+      preferred_term: levodopa
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 68
+
+nutrient_interactions:
+  - name: Vitamin C and Iron
+    description: |
+      Vitamin C (ascorbic acid) enhances nonheme iron absorption by reducing
+      ferric iron (Fe3+) to ferrous iron (Fe2+) and preventing formation of
+      poorly soluble iron compounds.
+    nutrient_term:
+      preferred_term: vitamin C
+    interaction_type: INCREASES_ABSORPTION
+    mic_references:
+      - 51
+      - 52
+
+  - name: Calcium and Iron
+    description: |
+      Calcium can inhibit both heme and nonheme iron absorption when consumed
+      together, though the effect may be transient and not affect overall iron
+      status in people with adequate iron intake.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 53
+
+  - name: Phytates and Iron
+    description: |
+      Phytic acid in whole grains, legumes, and nuts inhibits nonheme iron
+      absorption by forming insoluble complexes.
+    nutrient_term:
+      preferred_term: phytate
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 54
+
+  - name: Polyphenols and Iron
+    description: |
+      Polyphenols in tea, coffee, wine, and some fruits and vegetables can
+      inhibit nonheme iron absorption.
+    nutrient_term:
+      preferred_term: polyphenols
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 55
+
+disease_associations:
+  - name: Iron Deficiency Anemia
+    description: |
+      Iron deficiency anemia is the most common form of anemia worldwide.
+      It is characterized by small, pale red blood cells (microcytic hypochromic
+      anemia) and reduced hemoglobin. Treatment involves iron supplementation
+      and addressing underlying causes of iron loss.
+    disease_term:
+      preferred_term: iron deficiency anemia
+      term:
+        id: MONDO:0004827
+        label: iron deficiency anemia
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Global public health concern
+    mic_references:
+      - 14
+      - 15
+
+  - name: Cognitive Development in Children
+    description: |
+      Iron deficiency, with or without anemia, in children has been associated
+      with poor cognitive development, poor school achievement, and abnormal
+      behavior patterns. Early iron deficiency may have lasting effects on
+      brain development.
+    disease_term:
+      preferred_term: developmental delay
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Children, especially during first years of life
+    mic_references:
+      - 38
+      - 39
+
+  - name: Hereditary Hemochromatosis
+    description: |
+      Genetic disorder causing excessive iron absorption and toxic iron
+      deposition in organs. Associated with liver disease, heart failure,
+      diabetes, and arthritis. Treatment involves regular phlebotomy.
+    disease_term:
+      preferred_term: hereditary hemochromatosis
+      term:
+        id: MONDO:0019337
+        label: hereditary hemochromatosis
+    relationship_type: MARKER
+    population_context: Individuals with HFE gene mutations
+    mic_references:
+      - 62
+      - 63
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.27 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "11 mg/day"
+      source: Institute of Medicine
+    - population: Children 1-3 years
+      amount: "7 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "10 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "8 mg/day"
+      source: Institute of Medicine
+    - population: Males 14-18 years
+      amount: "11 mg/day"
+      source: Institute of Medicine
+    - population: Females 14-18 years
+      amount: "15 mg/day"
+      source: Institute of Medicine
+    - population: Males 19+ years
+      amount: "8 mg/day"
+      source: Institute of Medicine
+    - population: Females 19-50 years
+      amount: "18 mg/day"
+      source: Institute of Medicine
+    - population: Females 51+ years
+      amount: "8 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "27 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (under 18)
+      amount: "10 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (19+)
+      amount: "9 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The Tolerable Upper Intake Level (UL) for adults is 45 mg/day based on
+    gastrointestinal side effects. Much of iron requirement is met through
+    recycling iron from senescent red blood cells. Vegetarians may require
+    1.8 times more iron due to lower bioavailability of nonheme iron.
+
+bioavailability:
+  description: |
+    Iron absorption varies significantly based on iron status and dietary factors.
+    Heme iron (from meat, poultry, fish) is absorbed 2-3 times more efficiently
+    than nonheme iron (from plants and fortified foods). Heme iron contributes
+    10-15% of dietary intake but up to 40% of absorbed iron. Absorption of nonheme
+    iron is enhanced by vitamin C and meat/fish/poultry factors, and inhibited
+    by phytates, polyphenols, and calcium.
+  mic_references:
+    - 49
+    - 50
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Iron. Iron deficiency is the most common nutritional
+  deficiency worldwide. The MIC reference numbers (mic_references) correspond to
+  the numbered citations on the source page.

@@ -1,0 +1,367 @@
+name: Vitamin A
+nutrient_term:
+  preferred_term: vitamin A
+  term:
+    id: CHEBI:12777
+    label: vitamin A
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/vitamin-A
+alternate_names:
+  - Retinol
+  - Retinal
+  - Retinoic acid
+description: |
+  Vitamin A is a generic term that refers to fat-soluble compounds found as
+  preformed vitamin A (retinol) in animal products and as provitamin A carotenoids
+  in fruits and vegetables. The three active forms in the body are retinol, retinal,
+  and retinoic acid. Vitamin A is involved in regulating the growth and
+  differentiation of virtually all cells in the human body. It plays important
+  roles in embryonic development, organ formation during fetal development, normal
+  immune functions, and eye development and vision. Vitamin A deficiency is a major
+  cause of preventable blindness in the world.
+
+functions:
+  - name: Visual System and Eyesight
+    description: |
+      Vitamin A is essential for the normal functioning of the retina. 11-cis-retinal
+      binds to opsin proteins to form rhodopsin in rod cells for low-light vision
+      and color-specific opsins in cone cells for color vision. The visual cycle
+      involves photoisomerization of 11-cis-retinal to all-trans-retinal upon light
+      absorption, generating nerve impulses for visual perception.
+    biological_processes:
+      - preferred_term: visual perception
+        term:
+          id: GO:0007601
+          label: visual perception
+    mic_references:
+      - 2
+      - 5
+      - 6
+    evidence:
+      - reference: PMID:18955041
+        supports: SUPPORT
+        snippet: "Mammalian eye development requires vitamin A (retinol, ROL)"
+        explanation: Confirms vitamin A is essential for eye development
+
+  - name: Regulation of Gene Expression
+    description: |
+      Retinoic acid and its isomers act as hormones that bind to nuclear receptors
+      (RARs and RXRs) to regulate the expression of target genes involved in cell
+      differentiation, proliferation, and apoptosis. This mechanism underlies
+      vitamin A's role in embryonic development and tissue maintenance.
+    mic_references:
+      - 7
+      - 8
+      - 9
+
+  - name: Immune Function
+    description: |
+      Vitamin A was historically called "the anti-infective vitamin" due to its
+      importance in normal immune function. Retinoic acid regulates differentiation
+      of antigen-presenting cells and T-lymphocytes. It maintains mucosal integrity
+      and is critical for both innate and adaptive immune responses.
+    mic_references:
+      - 23
+      - 24
+      - 25
+
+  - name: Prenatal and Postnatal Development
+    description: |
+      Vitamin A is essential for embryonic development and organogenesis. Retinoic
+      acid signaling is required for the development of the heart, eyes, ears,
+      limbs, and other organs during fetal development.
+    mic_references:
+      - 6
+      - 27
+
+deficiency:
+  name: Vitamin A Deficiency
+  description: |
+    Vitamin A deficiency usually results from inadequate intakes of vitamin A from
+    animal products and fruits/vegetables. It predominantly affects children and
+    women of reproductive age in developing countries. Vitamin A deficiency is
+    the leading preventable cause of blindness in low- and middle-income nations,
+    with an estimated 250,000 to 500,000 children becoming blind annually.
+  phenotypes:
+    - name: Night Blindness (Nyctalopia)
+      phenotype_term:
+        preferred_term: night blindness
+        term:
+          id: HP:0000662
+          label: Nyctalopia
+      frequency: FREQUENT
+      context: Earliest symptom of vitamin A deficiency; impaired dark adaptation
+      mic_references:
+        - 39
+        - 40
+
+    - name: Xerophthalmia
+      phenotype_term:
+        preferred_term: xerophthalmia
+        term:
+          id: HP:0001097
+          label: Keratoconjunctivitis sicca
+      frequency: OCCASIONAL
+      context: Dry eye condition with changes in cornea leading to ulcers, scarring, and blindness in severe cases
+      mic_references:
+        - 39
+        - 40
+
+    - name: Bitot's Spots
+      phenotype_term:
+        preferred_term: Bitot spots
+        term:
+          id: HP:0031609
+          label: Bitot spots
+      frequency: OCCASIONAL
+      context: Abnormal changes in the conjunctiva indicating moderate vitamin A deficiency
+      mic_references:
+        - 40
+
+  at_risk_groups:
+    - name: Children in Developing Countries
+      description: |
+        Approximately 190 million preschool-age children have low serum retinol
+        concentrations, with 5.2 million suffering from night blindness. Half of
+        children with blinding xerophthalmia die within a year of becoming blind.
+      mic_references:
+        - 41
+        - 43
+
+    - name: Pregnant Women
+      description: |
+        An estimated 19.1 million pregnant women worldwide have vitamin A deficiency,
+        especially in Sub-Saharan Africa, Southeast Asia, and Central America.
+        Prevalence is especially high during the third trimester due to fetal growth.
+      mic_references:
+        - 41
+        - 42
+
+    - name: Individuals with Fat Malabsorption
+      description: |
+        People with impaired pancreatic or biliary secretion and those with
+        inflammatory bowel diseases (Crohn's disease, celiac disease) are at
+        increased risk due to poor absorption of fat-soluble vitamins.
+      mic_references:
+        - 2
+
+  mic_references:
+    - 37
+    - 38
+    - 39
+    - 40
+
+disease_associations:
+  - name: Childhood Mortality
+    disease_term:
+      preferred_term: infectious disease susceptibility
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Children in vitamin A deficient regions
+    description: |
+      Vitamin A prophylaxis significantly reduces childhood mortality, especially
+      from diarrheal illnesses, in regions at high risk of vitamin A deficiency.
+      WHO and UNICEF promote vitamin A supplementation to reduce child mortality.
+    mic_references:
+      - 43
+
+  - name: Measles Complications
+    disease_term:
+      preferred_term: measles
+    relationship_type: THERAPEUTIC
+    population_context: Malnourished or immunodeficient children with measles
+    description: |
+      High-dose vitamin A supplementation is widely recommended for children over
+      six months of age when infected with measles while malnourished,
+      immunodeficient, or at risk of measles complications.
+    mic_references:
+      - 43
+
+  - name: Acute Promyelocytic Leukemia
+    disease_term:
+      preferred_term: acute promyelocytic leukemia
+      term:
+        id: MONDO:0009986
+        label: acute promyelocytic leukemia
+    relationship_type: THERAPEUTIC
+    description: |
+      All-trans-retinoic acid (ATRA) is used at pharmacological doses for treatment
+      of acute promyelocytic leukemia, inducing differentiation of leukemic cells.
+    mic_references:
+      - 2
+
+nutrient_interactions:
+  - name: Iron Metabolism
+    description: |
+      Vitamin A deficiency can lead to an anemia that responds to vitamin A
+      supplementation. Vitamin A appears to be involved in the mobilization
+      of iron from stores.
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: SYNERGISTIC
+    mic_references:
+      - 28
+      - 29
+
+  - name: Zinc Interaction
+    description: |
+      Zinc is required for the synthesis of retinol-binding protein (RBP), which
+      transports retinol. Zinc deficiency may impair vitamin A metabolism.
+    nutrient_term:
+      preferred_term: zinc
+    interaction_type: SYNERGISTIC
+    mic_references:
+      - 2
+
+food_sources:
+  - name: Beef Liver (cooked)
+    food_term:
+      preferred_term: liver
+    amount: "6,420 mcg RAE"
+    serving_size: "1 slice (68 g)"
+    mic_references:
+      - 2
+
+  - name: Cod Liver Oil
+    food_term:
+      preferred_term: fish oil
+    amount: "1,350 mcg RAE"
+    serving_size: "1 teaspoon"
+    mic_references:
+      - 2
+
+  - name: Sweet Potato (baked)
+    food_term:
+      preferred_term: sweet potato
+    amount: "960 mcg RAE"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+  - name: Pumpkin (canned)
+    food_term:
+      preferred_term: pumpkin
+    amount: "955 mcg RAE"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+  - name: Carrot (raw)
+    food_term:
+      preferred_term: carrot
+    amount: "534 mcg RAE"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+  - name: Spinach (cooked)
+    food_term:
+      preferred_term: spinach
+    amount: "472 mcg RAE"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+drug_interactions:
+  - name: Oral Contraceptives
+    drug_term:
+      preferred_term: oral contraceptive
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: LOW
+    description: |
+      Oral contraceptives containing estrogen and progestin increase retinol
+      binding protein synthesis by the liver, increasing export of retinol
+      to circulation.
+    mic_references:
+      - 98
+
+  - name: Cholesterol-Lowering Medications
+    drug_term:
+      preferred_term: cholestyramine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: |
+      Cholestyramine, colestipol, orlistat, and mineral oil interfere with
+      fat absorption and may reduce absorption of fat-soluble vitamins
+      including vitamin A.
+    mic_references:
+      - 98
+
+  - name: Retinoid Medications
+    drug_term:
+      preferred_term: isotretinoin
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    description: |
+      Retinoids and retinoid analogs (acitretin, isotretinoin, etretinate,
+      bexarotene) should not be combined with vitamin A supplements due to
+      increased risk of vitamin A toxicity.
+    mic_references:
+      - 98
+
+toxicity:
+  name: Hypervitaminosis A
+  description: |
+    Vitamin A toxicity is caused by overconsumption of preformed vitamin A, not
+    carotenoids. Acute toxicity symptoms include nausea, headache, fatigue, dry
+    skin, and cerebral edema. Chronic toxicity includes dry itchy skin, anorexia,
+    weight loss, enlarged liver and spleen, anemia, and bone pain. Toxicity is
+    especially contraindicated during pregnancy due to severe birth defects.
+    The tolerable upper intake level (UL) for adults is 3,000 mcg RAE/day.
+  adverse_effects:
+    - name: Teratogenicity
+      description: |
+        High doses of preformed vitamin A during pregnancy can cause severe birth
+        defects. Pregnant women should not exceed 3,000 mcg RAE/day.
+      severity: severe
+  mic_references:
+    - 60
+    - 99
+    - 100
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "400 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "500 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "300 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "400 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "600 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 14+ years
+      amount: "900 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 14+ years
+      amount: "700 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy 14-18 years
+      amount: "750 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy 19+ years
+      amount: "770 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation 14-18 years
+      amount: "1,200 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation 19+ years
+      amount: "1,300 mcg RAE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+
+notes: |
+  Vitamin A is measured in micrograms of Retinol Activity Equivalents (mcg RAE)
+  to account for different bioavailabilities of preformed vitamin A versus
+  provitamin A carotenoids. 1 mcg RAE = 1 mcg retinol = 12 mcg beta-carotene =
+  24 mcg alpha-carotene or beta-cryptoxanthin. Provitamin A carotenoids do not
+  cause vitamin A toxicity. Animal food sources rich in preformed vitamin A
+  include dairy products, fortified cereals, liver, and fish oils. Rich sources
+  of provitamin A carotenoids include orange and green vegetables.

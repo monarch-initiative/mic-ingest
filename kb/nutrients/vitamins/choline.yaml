@@ -1,0 +1,288 @@
+name: Choline
+nutrient_term:
+  preferred_term: choline
+  term:
+    id: CHEBI:15354
+    label: choline
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/other-nutrients/choline
+alternate_names:
+  - Trimethylethanolamine
+description: |
+  Choline is an essential nutrient that can also be synthesized de novo via the
+  phosphatidylethanolamine N-methyltransferase (PEMT) pathway. Choline and its
+  derivatives serve as components of structural lipoproteins, blood and membrane
+  lipids, and as a precursor of the neurotransmitter acetylcholine. Choline is
+  oxidized to betaine, which serves as an osmoregulator and methyl donor in the
+  betaine-homocysteine methyltransferase reaction, linking choline to folate-dependent
+  one-carbon metabolism. Most Americans consume less than the adequate intake for choline.
+
+functions:
+  - name: Structural Integrity of Cell Membranes
+    description: |
+      Choline is required for the synthesis of phosphatidylcholine and sphingomyelin,
+      two major phospholipids vital for cell membrane integrity. Phosphatidylcholine
+      accounts for greater than 50% of the phospholipid species in eukaryotic membranes.
+    biological_processes:
+      - preferred_term: phosphatidylcholine biosynthetic process
+        term:
+          id: GO:0006656
+          label: phosphatidylcholine biosynthetic process
+    genes:
+      - preferred_term: PEMT
+        description: Phosphatidylethanolamine N-methyltransferase
+        term:
+          id: HGNC:8830
+          label: PEMT
+    mic_references:
+      - 3
+      - 4
+    evidence:
+      - reference: PMID:20503434
+        supports: SUPPORT
+        snippet: "The glycerophospholipids phosphatidylcholine (PC) and phosphatidylethanolamine (PE) account for greater than 50% of the total phospholipid species in eukaryotic membranes and thus play major roles in the structure and function of those membranes"
+        explanation: Confirms phosphatidylcholine's role in membrane structure
+
+  - name: Neurotransmitter Precursor
+    description: |
+      Choline is a precursor for the synthesis of acetylcholine, a neurotransmitter
+      involved in memory, muscle control, and other nervous system functions.
+    biological_processes:
+      - preferred_term: acetylcholine biosynthetic process
+        term:
+          id: GO:0008292
+          label: acetylcholine biosynthetic process
+    mic_references:
+      - 2
+    evidence:
+      - reference: PMID:20446114
+        supports: SUPPORT
+        snippet: "Choline and its derivatives serve as components of structural lipoproteins, blood and membrane lipids, and as a precursor of the neurotransmitter acetylcholine"
+        explanation: Directly confirms choline as acetylcholine precursor
+
+  - name: Methyl Group Donor
+    description: |
+      Choline is oxidized to betaine, which serves as a methyl donor in the
+      betaine-homocysteine methyltransferase (BHMT) reaction. This links choline
+      to the folate-dependent one-carbon metabolism and homocysteine regulation.
+    biological_processes:
+      - preferred_term: one-carbon metabolic process
+        term:
+          id: GO:0006730
+          label: one-carbon metabolic process
+    mic_references:
+      - 2
+      - 10
+    evidence:
+      - reference: PMID:20446114
+        supports: SUPPORT
+        snippet: "Choline and betaine are important sources of one-carbon units, in particular, during folate deficiency"
+        explanation: Confirms choline's role as methyl donor via betaine
+
+  - name: Lipid Transport and Metabolism
+    description: |
+      Choline is required for the synthesis of phosphatidylcholine, which is
+      essential for the assembly and secretion of very low density lipoproteins (VLDL).
+      Deficiency leads to hepatic fat accumulation due to impaired lipid export.
+    mic_references:
+      - 7
+      - 8
+    evidence:
+      - reference: PMID:17490963
+        supports: SUPPORT
+        snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver or muscle damage"
+        explanation: Demonstrates choline's role in preventing hepatic fat accumulation
+
+deficiency:
+  name: Choline Deficiency
+  description: |
+    Choline deficiency leads to nonalcoholic fatty liver disease (NAFLD) and
+    signs of liver damage. In controlled studies, 77% of men and 80% of
+    postmenopausal women developed organ dysfunction when consuming choline-deficient
+    diets, while only 44% of premenopausal women were affected, likely due to
+    estrogen-induced upregulation of PEMT.
+  phenotypes:
+    - name: Hepatic steatosis
+      phenotype_term:
+        preferred_term: fatty liver
+        term:
+          id: HP:0001397
+          label: Hepatic steatosis
+      frequency: VERY_FREQUENT
+      mic_references:
+        - 13
+        - 17
+      evidence:
+        - reference: PMID:17490963
+          supports: SUPPORT
+          snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver or muscle damage, whereas only 44% of premenopausal women developed such signs of organ dysfunction"
+          explanation: Directly demonstrates fatty liver as primary deficiency sign
+    - name: Muscle damage
+      phenotype_term:
+        preferred_term: myopathy
+        term:
+          id: HP:0003198
+          label: Myopathy
+      frequency: FREQUENT
+      mic_references:
+        - 17
+      evidence:
+        - reference: PMID:17490963
+          supports: SUPPORT
+          snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver or muscle damage"
+          explanation: Muscle damage is a documented consequence of choline deficiency
+  at_risk_groups:
+    - name: Postmenopausal women
+      description: |
+        Postmenopausal women are at higher risk because they lack estrogen-mediated
+        upregulation of PEMT, which provides an alternative pathway for
+        phosphatidylcholine synthesis.
+      mic_references:
+        - 17
+        - 18
+    - name: Pregnant and lactating women
+      description: |
+        Pregnancy and lactation increase choline demands for fetal and infant
+        development, particularly for brain development.
+      mic_references:
+        - 25
+    - name: Individuals with certain genetic polymorphisms
+      description: |
+        Common polymorphisms in genes involved in choline and folate metabolism
+        (PEMT, MTHFD1) increase susceptibility to choline deficiency.
+      mic_references:
+        - 9
+        - 20
+        - 21
+
+toxicity:
+  name: Choline Toxicity
+  description: |
+    The tolerable upper intake level (UL) for choline is 3,500 mg/day for adults.
+    Very high intakes (7,500 mg or more) can cause fishy body odor, sweating,
+    hypotension, and gastrointestinal side effects.
+  adverse_effects:
+    - name: Fishy body odor
+      description: Due to excessive trimethylamine production
+    - name: Hypotension
+      description: Blood pressure lowering at high doses
+    - name: Gastrointestinal effects
+      description: Nausea, vomiting, diarrhea at high doses
+
+food_sources:
+  - name: Eggs
+    food_term:
+      preferred_term: chicken egg
+      term:
+        id: FOODON:00001275
+        label: chicken egg food product
+    notes: One of the richest dietary sources of choline
+    mic_references:
+      - 26
+  - name: Liver
+    food_term:
+      preferred_term: liver
+      term:
+        id: FOODON:03411116
+        label: liver (meat cut)
+    notes: Beef liver contains approximately 350 mg per 3 oz serving
+  - name: Cruciferous vegetables
+    food_term:
+      preferred_term: cruciferous vegetables
+    notes: Brussels sprouts and broccoli are good plant sources
+  - name: Peanuts
+    food_term:
+      preferred_term: peanut
+      term:
+        id: FOODON:00003521
+        label: peanut (whole, raw)
+    notes: Legumes including peanuts provide dietary choline
+
+disease_associations:
+  - name: Neural Tube Defects
+    disease_term:
+      preferred_term: neural tube defect
+      term:
+        id: MONDO:0018075
+        label: neural tube defect
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Low maternal choline intake during pregnancy is associated with increased
+      risk of neural tube defects in offspring. A meta-analysis found that lower
+      dietary choline intakes were associated with a 36% higher risk of NTDs.
+    population_context: pregnant women
+    mic_references:
+      - 2
+    evidence:
+      - reference: PMID:20446114
+        supports: SUPPORT
+        snippet: "High intake and plasma level of choline in the mother seems to afford reduced risk of neural tube defects"
+        explanation: Meta-analysis supports reduced NTD risk with higher maternal choline
+
+  - name: Nonalcoholic Fatty Liver Disease
+    disease_term:
+      preferred_term: fatty liver disease
+      term:
+        id: MONDO:0004790
+        label: fatty liver disease
+    relationship_type: DEFICIENCY_CAUSES
+    direction: DECREASED
+    description: |
+      Higher dietary choline intake is associated with reduced risk of
+      fatty liver disease, particularly in normal-weight women. Choline
+      deficiency directly causes fatty liver due to impaired VLDL secretion.
+    mic_references:
+      - 13
+    evidence:
+      - reference: PMID:17490963
+        supports: SUPPORT
+        snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver"
+        explanation: Demonstrates causal relationship between choline deficiency and fatty liver
+
+nutrient_interactions:
+  - name: Folate and Choline Interrelationship
+    nutrient_term:
+      preferred_term: folate
+      term:
+        id: CHEBI:27470
+        label: folate
+    interaction_type: SYNERGISTIC
+    description: |
+      Choline and folate metabolism are interrelated through one-carbon metabolism.
+      Folate deficiency increases choline requirements, and choline can partially
+      compensate for folate deficiency in methyl group donation.
+    mic_references:
+      - 30
+      - 31
+    evidence:
+      - reference: PMID:20446114
+        supports: SUPPORT
+        snippet: "Choline and betaine are important sources of one-carbon units, in particular, during folate deficiency"
+        explanation: Confirms metabolic interrelationship between choline and folate
+
+recommendations:
+  ai:
+    - population: adult men
+      amount: "550 mg/day"
+    - population: adult women
+      amount: "425 mg/day"
+    - population: pregnancy
+      amount: "450 mg/day"
+    - population: lactation
+      amount: "550 mg/day"
+  ul:
+    - population: adults
+      amount: "3500 mg/day"
+  notes: |
+    The vast majority of people in the United States consume less than the AI
+    for choline. Mean intakes from NHANES 2015-2018 were 284 mg/day for women
+    and 390 mg/day for men.
+
+references:
+  - reference: PMID:20446114
+    title: "Choline and betaine in health and disease"
+  - reference: PMID:20503434
+    title: "The Kennedy pathway--De novo synthesis of phosphatidylethanolamine and phosphatidylcholine"
+  - reference: PMID:17490963
+    title: "Sex and menopausal status influence human dietary requirements for the nutrient choline"

@@ -1,0 +1,181 @@
+name: Phytosterols
+nutrient_term:
+  preferred_term: sitosterol
+  term:
+    id: CHEBI:27693
+    label: sitosterol
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/phytosterols
+alternate_names:
+  - Plant sterols
+  - Plant stanols
+  - Beta-sitosterol
+  - Campesterol
+  - Stigmasterol
+description: |
+  Phytosterols are plant-derived compounds structurally similar to cholesterol.
+  They include plant sterols (β-sitosterol, campesterol, stigmasterol) with a
+  double bond and plant stanols without. They interfere with cholesterol
+  absorption and facilitate fecal cholesterol excretion. Unlike cholesterol,
+  humans cannot synthesize phytosterols and absorb less than 5% of dietary intake.
+
+functions:
+  - name: Cholesterol absorption inhibition
+    description: |
+      Phytosterols displace cholesterol from intestinal micelles and promote
+      fecal excretion of biliary cholesterol, reducing serum LDL-cholesterol.
+      Daily consumption of 2 g/day lowers LDL-cholesterol by 8-10%.
+    mic_references:
+      - 4
+      - 5
+      - 6
+
+  - name: ABCG5/G8 transporter interaction
+    description: |
+      The ABCG5/G8 heterodimer actively excretes absorbed phytosterols back
+      into the intestinal lumen, maintaining low blood concentrations. Less
+      than 5% of plant sterols and 0.5% of plant stanols are absorbed.
+    mic_references:
+      - 11
+      - 12
+
+deficiency:
+  name: Phytosterol deficiency
+  description: |
+    Phytosterols are not essential nutrients, and no deficiency syndrome
+    has been identified.
+  notes: Early human diets may have provided up to 1 g/day; modern Western diets provide 150-450 mg/day.
+
+toxicity:
+  name: Phytosterol toxicity
+  description: |
+    Phytosterols added to food products are generally recognized as safe
+    (GRAS) by the FDA. No significant adverse effects have been observed
+    at intakes up to 8.6 g/day for 3-4 weeks or 1.6-2.6 g/day for one year.
+    However, individuals with sitosterolemia (rare ABCG5/G8 mutations)
+    must avoid phytosterol-enriched foods.
+  mic_references:
+    - 67
+    - 68
+
+food_sources:
+  - name: Soybeans
+    food_term:
+      preferred_term: soybean
+    amount: "149 mg"
+    serving_size: "1/2 cup raw"
+    mic_references:
+      - 1
+
+  - name: Green peas
+    food_term:
+      preferred_term: green pea
+    amount: "133 mg"
+    serving_size: "1/2 cup raw"
+    mic_references:
+      - 1
+
+  - name: Sesame oil
+    food_term:
+      preferred_term: sesame oil
+    amount: "118 mg"
+    serving_size: "1 tablespoon"
+    mic_references:
+      - 1
+
+  - name: Pistachio nuts
+    food_term:
+      preferred_term: pistachio
+    amount: "61 mg"
+    serving_size: "1 oz"
+    mic_references:
+      - 1
+
+  - name: Almonds
+    food_term:
+      preferred_term: almond
+    amount: "32 mg"
+    serving_size: "1 oz"
+    mic_references:
+      - 1
+
+nutrient_interactions:
+  - name: Carotenoid absorption
+    nutrient_term:
+      preferred_term: carotenoid
+    interaction_type: REDUCES_ABSORPTION
+    description: |
+      Phytosterol consumption reduces plasma hydrocarbon carotenoid levels
+      by 5-20%. Consuming 5+ servings of carotenoid-rich fruits and
+      vegetables daily can counteract this effect.
+    mic_references:
+      - 74
+      - 75
+      - 76
+
+disease_associations:
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Phytosterols reliably reduce LDL-cholesterol by 8-10% at 2 g/day,
+      with dose-dependent responses up to 12.4% reduction at 3.3 g/day.
+      However, the effect of long-term use on cardiovascular events
+      has not been established in clinical endpoint trials.
+    mic_references:
+      - 22
+      - 23
+      - 32
+    notes: "LDL reduction established; clinical event reduction unproven"
+
+  - name: Benign prostatic hyperplasia
+    disease_term:
+      preferred_term: benign prostatic hyperplasia
+    relationship_type: THERAPEUTIC
+    description: |
+      Clinical trials suggest β-sitosterol supplementation at 60-130 mg/day
+      can improve urinary tract symptoms related to BPH, including peak
+      urinary flow and post-void residual urine volume.
+    mic_references:
+      - 58
+      - 59
+    notes: "Further research needed to confirm efficacy"
+
+drug_interactions:
+  - name: Statins
+    drug_term:
+      preferred_term: statin
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Phytosterols demonstrate additive LDL-lowering effects with statins.
+      A meta-analysis found 2-3 g/day plant sterols/stanols with statin
+      therapy lowered LDL an additional 0.30 mmol/L (11.6 mg/dL).
+    mic_references:
+      - 36
+
+  - name: Ezetimibe
+    drug_term:
+      preferred_term: ezetimibe
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      Ezetimibe may interfere with phytosterol absorption, significantly
+      reducing blood phytosterol concentrations.
+    mic_references:
+      - 82
+
+recommendations:
+  notes: |
+    FDA authorizes health claims for foods providing ≥1.3 g plant sterol
+    esters or ≥3.4 g stanol esters daily in two servings as part of a
+    low-saturated-fat diet. The European Committee recommends intake not
+    exceed 3 g/day. Phytosterol-enriched foods are not recommended for
+    pregnant or breastfeeding women due to lack of safety data.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Phytosterols. While LDL-cholesterol reduction is
+  well established, clinical cardiovascular event reduction remains unproven.

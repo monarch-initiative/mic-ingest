@@ -1,0 +1,186 @@
+name: Cruciferous Vegetables
+nutrient_term:
+  preferred_term: cruciferous vegetables
+  description: Vegetables from the Brassicaceae family including broccoli, Brussels sprouts, cabbage, cauliflower, and kale
+  term:
+    id: FOODON:00001169
+    label: cruciferous food product
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/cruciferous-vegetables
+alternate_names:
+  - Brassica vegetables
+  - Cole vegetables
+description: |
+  Cruciferous or Brassica vegetables come from plants in the family known as Cruciferae
+  or Brassicaceae. Many commonly consumed cruciferous vegetables come from the Brassica
+  genus including broccoli, Brussels sprouts, cabbage, cauliflower, collard greens, kale,
+  kohlrabi, mustard, rutabaga, turnips, bok choy, and Chinese cabbage. Other edible
+  crucifers include radish, horseradish, watercress, and wasabi.
+
+  Cruciferous vegetables are unique in that they are a rich source of sulfur-containing
+  compounds called glucosinolates that impart a pungent aroma and spicy taste. Glucosinolates
+  and their breakdown derivatives, especially isothiocyanates and indole-3-carbinol, exert
+  a variety of biological activities that may be relevant to health promotion and disease
+  prevention in humans.
+
+disease_associations:
+  - name: Cruciferous Vegetables and Cardiovascular Disease Mortality
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      In the Shanghai Women's Health Study and the Shanghai Men's Health Study,
+      participants in the highest versus lowest quintile of cruciferous vegetable
+      intakes had a 22% reduced risk of all-cause mortality and a 31% reduced risk
+      of CVD-related mortality. However, other studies have shown inconsistent results.
+    population_context: Chinese adults
+    mic_references:
+      - 26
+    evidence:
+      - reference: PMID:21593509
+        supports: SUPPORT
+        snippet: "The pooled multivariate hazard ratios (95% CIs) for total mortality across increasing quintiles of intake were 1 (reference), 0.91 (0.84, 0.98), 0.88 (0.77, 1.00), 0.85 (0.76, 0.96), and 0.78 (0.71, 0.85) for cruciferous vegetables (P < 0.0001 for trend)"
+        explanation: Shows dose-response relationship between cruciferous vegetable intake and reduced mortality, particularly CVD mortality
+
+  - name: Cruciferous Vegetables and Cancer Risk
+    disease_term:
+      preferred_term: cancer
+      term:
+        id: MONDO:0004992
+        label: cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      High intakes of cruciferous vegetables have been associated with lower risk of
+      bladder, breast, colorectal, endometrial, gastric, lung, ovarian, pancreatic,
+      prostate, and renal cancer. Meta-analyses have found inverse associations,
+      though evidence is stronger from case-control studies than prospective cohort
+      studies. The biological activities of glucosinolate derivatives including
+      isothiocyanates and indole-3-carbinol likely contribute to potential
+      anticancer benefits.
+    population_context: general adult population
+    mic_references:
+      - 13
+      - 23
+      - 30
+      - 35
+      - 44
+    evidence:
+      - reference: PMID:17317210
+        supports: SUPPORT
+        snippet: "high intake of cruciferous vegetables has been associated with lower risk of lung and colorectal cancer in some epidemiological studies"
+        explanation: Review confirms epidemiological evidence linking cruciferous vegetables to reduced cancer risk
+
+  - name: Cruciferous Vegetables and Bladder Cancer
+    disease_term:
+      preferred_term: bladder cancer
+      term:
+        id: MONDO:0001187
+        label: urinary bladder cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of observational studies have found inverse associations between
+      cruciferous vegetable intake and bladder cancer risk, with relative risks
+      ranging from 0.80 to 0.97 depending on study type.
+    population_context: general adult population
+    mic_references:
+      - 30
+      - 31
+      - 32
+      - 33
+
+  - name: Cruciferous Vegetables and Colorectal Cancer
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses found an 18% reduced risk of colorectal cancer with high cruciferous
+      vegetable intake. Subgroup analyses showed stronger associations for cabbage intake
+      and for colon cancer specifically.
+    population_context: general adult population
+    mic_references:
+      - 35
+      - 36
+
+  - name: Cruciferous Vegetables and Lung Cancer
+    disease_term:
+      preferred_term: lung cancer
+      term:
+        id: MONDO:0008903
+        label: lung cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of case-control studies have found a 23-25% reduced risk of lung
+      cancer with high cruciferous vegetable intake, though associations were not
+      significant in pooled analyses of cohort studies alone.
+    population_context: general adult population
+    mic_references:
+      - 39
+      - 40
+    evidence:
+      - reference: PMID:17317210
+        supports: SUPPORT
+        snippet: "high intake of cruciferous vegetables has been associated with lower risk of lung and colorectal cancer in some epidemiological studies"
+        explanation: Confirms epidemiological evidence for lung cancer risk reduction
+
+  - name: Cruciferous Vegetables and Prostate Cancer
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analysis of 13 studies found a 10% reduced risk of prostate cancer with
+      high cruciferous vegetable intake. Higher post-diagnosis intake has also been
+      associated with reduced risk of prostate cancer progression.
+    population_context: adult men
+    mic_references:
+      - 44
+      - 51
+      - 52
+
+bioavailability:
+  description: |
+    Chopping or chewing raw cruciferous vegetables results in the formation of bioactive
+    glucosinolate hydrolysis products, such as isothiocyanates and indole-3-carbinol.
+    These metabolites are also generated by colonic bacteria following the ingestion
+    of cooked cruciferous vegetables. The method of cooking strongly affects the
+    bioavailability of isothiocyanates - boiling causes significant loss of glucosinolates
+    into the cooking water, while steaming, microwaving, and stir-frying retain more.
+  mic_references:
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+
+recommendations:
+  notes: |
+    The Dietary Guidelines for Americans recommend for adults to consume 1½-2½ cup-equivalents
+    of dark-green vegetables per week, including cruciferous vegetables, as part of healthy
+    meals. Organizations such as the National Cancer Institute recommend the consumption of
+    five to nine servings of fruits and vegetables daily, but separate recommendations for
+    cruciferous vegetables have not been established.
+  ai:
+    - population: Adults
+      amount: 1½-2½ cup-equivalents dark-green vegetables/week
+      source: Dietary Guidelines for Americans
+
+notes: |
+  Variations in the sequence of genes coding for Phase II detoxification enzymes,
+  glutathione S-transferases (GSTs), may influence the potential health benefits
+  of consuming cruciferous vegetables. Studies suggest that GSTM1 +/+ individuals
+  may gain greater cancer protection from cruciferous vegetable consumption compared
+  to GSTM1 -/- variant carriers.

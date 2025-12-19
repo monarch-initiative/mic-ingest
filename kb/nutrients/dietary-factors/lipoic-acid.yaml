@@ -1,0 +1,227 @@
+name: Lipoic Acid
+nutrient_term:
+  preferred_term: lipoic acid
+  term:
+    id: CHEBI:16494
+    label: lipoic acid
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/lipoic-acid
+alternate_names:
+  - Alpha-lipoic acid
+  - ALA
+  - Thioctic acid
+  - R-lipoic acid
+description: |
+  Lipoic acid (alpha-lipoic acid) is a naturally occurring dithiol compound that
+  serves as an essential cofactor for mitochondrial enzyme complexes involved in
+  energy production. In its reduced form (dihydrolipoic acid), it acts as a potent
+  antioxidant capable of regenerating other antioxidants including glutathione,
+  vitamin C, and vitamin E. Unlike dietary lipoic acid (which is protein-bound),
+  supplemental free lipoic acid is rapidly absorbed and has pharmacological effects
+  beyond its enzymatic role.
+
+functions:
+  - name: Mitochondrial Enzyme Cofactor
+    description: |
+      Lipoic acid serves as a covalently bound cofactor for several mitochondrial
+      enzyme complexes including pyruvate dehydrogenase, alpha-ketoglutarate
+      dehydrogenase, and branched-chain alpha-ketoacid dehydrogenase. These enzymes
+      are essential for energy metabolism and amino acid catabolism.
+    biological_processes:
+      - preferred_term: pyruvate metabolic process
+        term:
+          id: GO:0006090
+          label: pyruvate metabolic process
+    mic_references:
+      - 14
+      - 15
+
+  - name: Antioxidant Activity
+    description: |
+      Dihydrolipoic acid (the reduced form) is a potent antioxidant that can
+      directly scavenge free radicals and regenerate other antioxidants including
+      glutathione, vitamin C, and vitamin E (via ubiquinol). Both water and
+      lipid-soluble, it provides broad antioxidant protection.
+    mic_references:
+      - 3
+      - 16
+      - 17
+    evidence:
+      - reference: PMID:15134511
+        supports: SUPPORT
+        snippet: "As an antioxidant, LA directly terminates free radicals, chelates transition metal ions (e.g. iron and copper), increases cytosolic glutathione and vitamin C levels and prevents toxicities associated with their loss"
+        explanation: Confirms multiple antioxidant mechanisms of lipoic acid
+
+  - name: Glutathione Synthesis Enhancement
+    description: |
+      Lipoic acid increases intracellular glutathione levels by multiple mechanisms:
+      reducing cystine to cysteine (improving cysteine availability for glutathione
+      synthesis), activating Nrf2-dependent gene expression, and regenerating
+      glutathione from its oxidized form.
+    mic_references:
+      - 29
+      - 31
+      - 32
+
+  - name: Metal Chelation
+    description: |
+      Lipoic acid and dihydrolipoic acid can chelate transition metals such as
+      iron, copper, and mercury, potentially reducing metal-catalyzed oxidative
+      damage and facilitating metal excretion.
+    mic_references:
+      - 20
+      - 22
+      - 26
+
+deficiency:
+  name: Lipoic Acid Deficiency
+  description: |
+    Lipoic acid deficiency only occurs in rare inherited disorders affecting
+    biosynthesis genes (LIAS, LIPT1, LIPT2). These genetic defects cause severe
+    mitochondrial dysfunction and cannot be remedied by supplementation alone.
+    Healthy individuals synthesize adequate amounts endogenously.
+  phenotypes:
+    - name: Epileptic encephalopathy
+      phenotype_term:
+        preferred_term: epileptic encephalopathy
+        term:
+          id: HP:0200134
+          label: Epileptic encephalopathy
+      frequency: VERY_FREQUENT
+      context: In inherited lipoic acid biosynthesis defects
+      mic_references:
+        - 5
+    - name: Metabolic acidosis
+      phenotype_term:
+        preferred_term: metabolic acidosis
+        term:
+          id: HP:0001942
+          label: Metabolic acidosis
+      frequency: VERY_FREQUENT
+      context: In inherited lipoic acid biosynthesis defects
+      mic_references:
+        - 5
+  at_risk_groups:
+    - name: Genetic lipoic acid biosynthesis defects
+      description: |
+        Rare autosomal recessive disorders caused by mutations in LIAS, LIPT1,
+        or LIPT2. Presents in infancy with severe neurological and metabolic
+        dysfunction.
+      mic_references:
+        - 5
+
+disease_associations:
+  - name: Diabetic Peripheral Neuropathy
+    disease_term:
+      preferred_term: diabetic neuropathy
+      term:
+        id: MONDO:0006626
+        label: diabetic neuropathy
+    relationship_type: THERAPEUTIC
+    description: |
+      Intravenous and oral lipoic acid supplementation has been shown to reduce
+      symptoms of diabetic peripheral neuropathy in multiple clinical trials.
+      Meta-analyses suggest 300-600 mg/day for 2-4 weeks significantly reduces
+      symptoms including pain, burning, and numbness.
+    mic_references:
+      - 53
+      - 54
+    evidence:
+      - reference: PMID:15134511
+        supports: SUPPORT
+        snippet: "Pharmacologically, LA improves glycemic control, polyneuropathies associated with diabetes mellitus"
+        explanation: Review confirms therapeutic effect on diabetic neuropathy
+
+  - name: Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: THERAPEUTIC
+    description: |
+      Some studies suggest high-dose lipoic acid supplementation may improve
+      insulin sensitivity and glycemic control in patients with type 2 diabetes,
+      though evidence is not conclusive.
+    mic_references:
+      - 63
+      - 64
+    evidence:
+      - reference: PMID:15134511
+        supports: SUPPORT
+        snippet: "Pharmacologically, LA improves glycemic control"
+        explanation: Supports effect on glucose metabolism
+
+  - name: Multiple Sclerosis
+    disease_term:
+      preferred_term: multiple sclerosis
+      term:
+        id: MONDO:0005301
+        label: multiple sclerosis
+    relationship_type: THERAPEUTIC
+    description: |
+      Preliminary evidence from animal studies and small human trials suggests
+      lipoic acid may have neuroprotective effects in multiple sclerosis.
+      Clinical trials are ongoing.
+    mic_references:
+      - 77
+      - 78
+
+food_sources:
+  - name: Organ meats
+    food_term:
+      preferred_term: organ meat
+    notes: Kidney, heart, and liver are among the richest sources
+  - name: Spinach
+    food_term:
+      preferred_term: spinach
+      term:
+        id: FOODON:03306936
+        label: spinach
+    notes: One of the better vegetable sources
+  - name: Broccoli
+    food_term:
+      preferred_term: broccoli
+      term:
+        id: FOODON:00001240
+        label: broccoli
+    notes: Contains modest amounts
+
+recommendations:
+  notes: |
+    No dietary reference intake has been established for lipoic acid because it
+    is synthesized endogenously. Dietary intake from food is relatively low and
+    poorly characterized. Therapeutic doses in clinical studies typically range
+    from 300-600 mg/day orally or intravenously, with the R-enantiomer being the
+    naturally occurring and more bioactive form.
+
+toxicity:
+  name: Lipoic Acid Safety
+  description: |
+    Oral lipoic acid supplementation appears generally well-tolerated at doses
+    up to 1,800 mg/day. Gastrointestinal symptoms and skin reactions are the
+    most commonly reported adverse effects. Safety during pregnancy and
+    lactation has not been established.
+  adverse_effects:
+    - name: Gastrointestinal symptoms
+      description: Nausea, vomiting, and stomach discomfort
+    - name: Skin reactions
+      description: Allergic skin reactions in some individuals
+    - name: Hypoglycemia risk
+      description: May potentiate blood glucose lowering effects of diabetes medications
+
+drug_interactions:
+  - name: Diabetes Medications
+    drug_term:
+      preferred_term: antidiabetic agent
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Lipoic acid may enhance the blood glucose lowering effects of insulin
+      and oral hypoglycemic agents, potentially causing hypoglycemia.
+    mic_references:
+      - 100
+
+references:
+  - reference: PMID:15134511
+    title: "Lipoic acid as a potential therapy for chronic diseases associated with oxidative stress"

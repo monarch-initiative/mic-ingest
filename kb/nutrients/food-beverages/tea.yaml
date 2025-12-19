@@ -1,0 +1,104 @@
+name: Tea
+nutrient_term:
+  preferred_term: tea
+  description: An infusion of the leaves of the Camellia sinensis plant containing flavonoids, caffeine, and other bioactive compounds
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/tea
+alternate_names:
+  - Camellia sinensis
+  - Green tea
+  - Black tea
+  - White tea
+  - Oolong tea
+description: |
+  Tea is an infusion of the leaves of the Camellia sinensis plant. All the tea types,
+  including white, green, oolong, black, and Pu-erh tea, are produced from the leaves
+  of the Camellia sinensis plant. Different processing methods yield the various types
+  of tea. Biologically active chemicals in tea include flavonoids, caffeine, fluoride,
+  and theanine. Green teas are especially rich in catechins, while black teas contain
+  more complex chemicals (theaflavins and thearubigins) derived from catechins.
+
+disease_associations:
+  - name: Tea and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies in humans suggest that daily consumption of tea may be
+      associated with a reduced risk of cardiovascular disease. Intervention studies
+      showed that tea exhibited cholesterol-lowering, anti-inflammatory, antioxidant,
+      and anti-hypertensive properties, which might be beneficial in the prevention
+      of CVD.
+    population_context: general adult population
+    mic_references:
+      - 37
+      - 38
+      - 39
+
+  - name: Tea and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Tea consumption has been associated with reduced risk of developing type 2
+      diabetes mellitus in large prospective cohort studies. The mechanisms behind
+      this association are complex, possibly involving a role for tea bioactive
+      compounds in the regulation of energy balance, lipid and glucose metabolism,
+      insulin sensitivity, body composition, and/or body temperature.
+    population_context: general adult population
+    mic_references:
+      - 53
+      - 54
+
+  - name: Tea and Parkinson's Disease
+    disease_term:
+      preferred_term: Parkinson's disease
+      term:
+        id: MONDO:0005180
+        label: Parkinson disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Some observational evidence suggests tea consumption may be associated with
+      reduced risk of Parkinson's disease, possibly due to caffeine content.
+    population_context: general adult population
+    mic_references:
+      - 83
+      - 84
+
+toxicity:
+  name: Tea Safety
+  description: |
+    The use of green tea extracts in clinical trials was found to cause gastrointestinal
+    disorders and liver toxicity. Tea consumption may also potentially interfere with
+    certain medications, including the anticoagulant warfarin and some cardiovascular drugs.
+  mic_references:
+    - 102
+    - 103
+
+drug_interactions:
+  - name: Tea and Warfarin
+    drug_term:
+      preferred_term: warfarin
+    description: |
+      Tea consumption may potentially interfere with the anticoagulant warfarin.
+      Patients taking warfarin should maintain consistent tea consumption.
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 107
+
+notes: |
+  Despite promising results from animal studies, current evidence does not support a role
+  for tea consumption in the prevention of most cancers in humans. It is still unclear
+  whether tea consumption is associated with increased bone mineral density and/or reduced
+  risk of osteoporotic fractures. Limited research suggests an inverse association between
+  tea consumption and risk of tooth cavities.

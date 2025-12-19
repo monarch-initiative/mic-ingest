@@ -1,0 +1,117 @@
+name: Lignans
+nutrient_term:
+  preferred_term: lignan
+  term:
+    id: CHEBI:25036
+    label: lignan
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/lignans
+alternate_names:
+  - Secoisolariciresinol
+  - Matairesinol
+  - Enterolactone
+  - Enterodiol
+description: |
+  Lignans are polyphenolic compounds found in plants that are converted by
+  intestinal bacteria into enterolignans (enterodiol and enterolactone). The
+  primary dietary lignan precursors include secoisolariciresinol, matairesinol,
+  pinoresinol, and lariciresinol. Flaxseeds are the richest dietary source.
+  Enterolignans have weak estrogenic activity and may also function through
+  estrogen-independent pathways.
+
+functions:
+  - name: Weak estrogenic activity
+    description: |
+      Enterolignans demonstrate weak estrogenic activity and may bind to
+      estrogen receptors. They may also alter enzyme activity involved in
+      hormone metabolism.
+    mic_references:
+      - 9
+
+  - name: Antioxidant and anti-inflammatory effects
+    description: |
+      Lignans and their metabolites display antioxidant properties and
+      exhibit anti-inflammatory effects that may be unrelated to estrogen
+      signaling.
+    mic_references:
+      - 10
+      - 15
+
+deficiency:
+  name: Lignan deficiency
+  description: |
+    Lignans are not essential nutrients, and no deficiency syndrome has
+    been identified.
+  notes: Lignan intake depends on consumption of plant foods, especially flaxseed.
+
+toxicity:
+  name: Lignan toxicity
+  description: |
+    Flaxseeds at high doses (45-50 g/day) may increase stool frequency or
+    cause diarrhea. Lignan supplements lack safety data for pregnant or
+    nursing women.
+  mic_references:
+    - 24
+    - 88
+    - 89
+
+food_sources:
+  - name: Flaxseed
+    food_term:
+      preferred_term: flaxseed
+    amount: "85.5 mg"
+    serving_size: "1 ounce"
+    notes: "Richest dietary source of lignans"
+    mic_references:
+      - 82
+
+  - name: Sesame seeds
+    food_term:
+      preferred_term: sesame seed
+    amount: "11.2 mg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 82
+
+disease_associations:
+  - name: Breast cancer
+    disease_term:
+      preferred_term: breast cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Evidence is mixed. A meta-analysis of postmenopausal women suggested
+      a 15% reduction in risk of breast cancer with high lignan intake,
+      though overall associations remain inconsistent across studies.
+    mic_references:
+      - 39
+      - 44
+      - 45
+    notes: "Evidence inconsistent; more research needed"
+
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      A Spanish cohort demonstrated that highest dietary lignan intake
+      correlated with 49% lower risk of incident cardiovascular disease.
+      However, isolated lignan supplementation showed minimal
+      cholesterol-lowering effects.
+    mic_references:
+      - 17
+      - 36
+      - 37
+    notes: "Observational association; supplementation showed minimal effects"
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for lignans. Consuming
+    flaxseed and other lignan-rich foods as part of a balanced diet
+    is the safest approach. Lignan supplements should be avoided
+    during pregnancy and lactation due to lack of safety data.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Lignans. Flaxseed is the richest dietary source.

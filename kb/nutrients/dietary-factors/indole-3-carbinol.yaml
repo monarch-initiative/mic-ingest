@@ -1,0 +1,112 @@
+name: Indole-3-Carbinol
+nutrient_term:
+  preferred_term: indole-3-carbinol
+  term:
+    id: CHEBI:24814
+    label: indole-3-methanol
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/indole-3-carbinol
+alternate_names:
+  - I3C
+  - 3,3'-diindolylmethane
+  - DIM
+description: |
+  Indole-3-carbinol (I3C) is derived from the breakdown of glucobrassicin, a
+  glucosinolate found in cruciferous vegetables. In the stomach's acidic environment,
+  I3C molecules condense to form active derivatives, primarily 3,3'-diindolylmethane
+  (DIM). Both I3C and DIM have been studied for their effects on estrogen metabolism
+  and potential cancer prevention properties.
+
+functions:
+  - name: Estrogen metabolism modulation
+    description: |
+      I3C and DIM upregulate enzymes involved in estrogen processing, potentially
+      shifting metabolism toward less estrogenic pathways. Studies show supplementation
+      increases urinary 2-hydroxyestrone ratios in women.
+    mic_references:
+      - 33
+      - 39
+
+  - name: Aryl hydrocarbon receptor activation
+    description: |
+      I3C and DIM activate the aryl hydrocarbon receptor (AhR), modulating
+      multiple cell-signaling pathways involved in cell cycle regulation,
+      apoptosis, and detoxification enzyme expression.
+    mic_references:
+      - 27
+
+  - name: Anticancer mechanisms
+    description: |
+      These compounds modulate multiple cell-signaling pathways through
+      induction of cell cycle arrest and apoptosis, inhibition of cell
+      migration and invasion, and suppression of angiogenesis. However,
+      the effects on human cancer risk are not established.
+    mic_references:
+      - 30
+      - 31
+
+deficiency:
+  name: Indole-3-carbinol deficiency
+  description: |
+    I3C is not considered an essential nutrient, and no deficiency
+    syndrome has been identified.
+  notes: I3C is derived from cruciferous vegetable consumption.
+
+toxicity:
+  name: Indole-3-carbinol toxicity
+  description: |
+    Gastrointestinal symptoms have occurred at doses of 600 mg or higher.
+    High doses (800 mg/day) have caused tremor and disequilibrium. The timing
+    of I3C exposure in animal models seems to determine whether I3C inhibits
+    or promotes tumors. Experts caution against widespread supplementation
+    pending further safety clarification.
+  mic_references:
+    - 6
+    - 85
+    - 99
+    - 109
+    - 110
+
+food_sources:
+  - name: Cruciferous vegetables
+    food_term:
+      preferred_term: cruciferous vegetables
+    notes: "Glucobrassicin (I3C precursor) represents approximately 8-12% of total glucosinolates; raw consumption facilitates maximum I3C formation"
+    mic_references:
+      - 93
+
+disease_associations:
+  - name: HPV-related conditions
+    disease_term:
+      preferred_term: cervical intraepithelial neoplasia
+    relationship_type: THERAPEUTIC
+    description: |
+      Preliminary trials suggest I3C may help cervical intraepithelial neoplasia
+      (CIN) and recurrent respiratory papillomatosis, though results remain
+      inconclusive.
+    mic_references:
+      - 75
+      - 87
+    notes: "Preliminary evidence; larger trials needed"
+
+  - name: Breast cancer
+    disease_term:
+      preferred_term: breast cancer
+    relationship_type: PROTECTIVE
+    description: |
+      The effects of I3C and DIM on breast cancer risk are not known in humans.
+      The timing of exposure in animal models determines whether the compounds
+      inhibit or promote tumors.
+    notes: "Caution advised; evidence inconclusive"
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for I3C. Due to uncertainties about
+    safety and potential tumor-promoting effects under certain conditions, experts
+    caution against widespread I3C supplementation. Consuming cruciferous vegetables
+    as part of a balanced diet is the safest approach.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Indole-3-Carbinol. Important safety concerns exist
+  regarding potential tumor-promoting effects depending on timing of exposure.

@@ -1,0 +1,329 @@
+name: Iodine
+nutrient_term:
+  preferred_term: iodide
+  term:
+    id: CHEBI:16382
+    label: iodide
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/iodine
+alternate_names:
+  - I
+  - Iodide
+description: |
+  Iodine is a key component of thyroid hormones (T3 and T4), which are required
+  throughout life for normal growth, neurological development, and metabolism.
+  Insufficient iodine intake impairs thyroid hormone production, leading to
+  hypothyroidism. Iodine deficiency is recognized as the most common cause of
+  preventable brain damage in the world. Major international efforts using iodized
+  salt have dramatically improved iodine status globally, with an estimated 89%
+  of households worldwide now having access to iodized salt.
+
+functions:
+  - name: Thyroid Hormone Synthesis
+    description: |
+      Iodine is an essential component of the thyroid hormones thyroxine (T4) and
+      triiodothyronine (T3). The thyroid gland concentrates iodine from the blood
+      and uses it to synthesize these hormones, which regulate metabolism, growth,
+      and development throughout the body.
+    biological_processes:
+      - preferred_term: thyroid hormone generation
+        term:
+          id: GO:0006590
+          label: thyroid hormone generation
+    mic_references:
+      - 1
+      - 2
+      - 3
+
+deficiency:
+  name: Iodine Deficiency
+  description: |
+    Iodine deficiency disorders include goiter (thyroid enlargement), hypothyroidism,
+    intellectual impairment, and cretinism. Nearly 30% of the world's population has
+    insufficient iodine intake. Iodine deficiency is the most common cause of
+    preventable brain damage. Maternal iodine deficiency during pregnancy can result
+    in miscarriage, preterm birth, and neurological impairments in offspring.
+  phenotypes:
+    - name: Goiter
+      phenotype_term:
+        preferred_term: goiter
+        term:
+          id: HP:0000853
+          label: Goiter
+      frequency: FREQUENT
+      context: Thyroid enlargement due to increased TSH stimulation
+      mic_references:
+        - 4
+
+    - name: Hypothyroidism
+      phenotype_term:
+        preferred_term: hypothyroidism
+        term:
+          id: HP:0000821
+          label: Hypothyroidism
+      frequency: FREQUENT
+      context: Result of impaired thyroid hormone synthesis
+      mic_references:
+        - 4
+
+    - name: Intellectual disability
+      phenotype_term:
+        preferred_term: intellectual disability
+        term:
+          id: HP:0001249
+          label: Intellectual disability
+      frequency: OCCASIONAL
+      context: Cretinism in severe deficiency during development
+      mic_references:
+        - 4
+        - 11
+
+  at_risk_groups:
+    - name: Pregnant women
+      description: |
+        Increased iodine requirements during pregnancy; fetus depends on maternal
+        iodine for thyroid hormone synthesis
+      mic_references:
+        - 10
+        - 22
+
+    - name: Breastfeeding women
+      description: |
+        Infants rely entirely on iodine in breast milk for thyroid hormone production
+      mic_references:
+        - 10
+
+    - name: People in iodine-deficient regions
+      description: |
+        Areas without iodized salt or with iodine-poor soil; about 30% of world
+        population has insufficient intake
+      mic_references:
+        - 5
+        - 9
+
+  mic_references:
+    - 4
+    - 5
+    - 6
+    - 7
+
+toxicity:
+  name: Iodine Toxicity
+  description: |
+    In iodine-deficient populations, rapid increases in iodine intake may precipitate
+    iodine-induced hyperthyroidism, especially in older people with multinodular goiter.
+    In iodine-sufficient adults, long-term intake above the UL of 1,100 mcg/day may
+    increase the risk of thyroid disorders including goiter and hypothyroidism. Most
+    people tolerate excess iodine well due to thyroid autoregulation, but susceptible
+    individuals may develop thyroid dysfunction.
+  adverse_effects:
+    - name: Iodine-induced hyperthyroidism
+      description: |
+        Can occur in iodine-deficient individuals suddenly exposed to high iodine;
+        more common in elderly with nodular goiter
+      severity: moderate
+    - name: Iodine-induced hypothyroidism
+      description: |
+        Chronic high iodine intake can cause hypothyroidism in susceptible individuals,
+        including those with autoimmune thyroid disease
+      severity: moderate
+  mic_references:
+    - 55
+    - 56
+    - 57
+
+food_sources:
+  - name: Seaweed (kelp)
+    food_term:
+      preferred_term: seaweed
+    amount: "variable (16-2,984 mcg)"
+    serving_size: "1 gram"
+    notes: Content varies widely by type
+    mic_references:
+      - 45
+
+  - name: Cod
+    food_term:
+      preferred_term: cod
+    amount: "99 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 45
+
+  - name: Iodized salt
+    food_term:
+      preferred_term: iodized salt
+    amount: "71 mcg"
+    serving_size: "1/4 teaspoon"
+    mic_references:
+      - 45
+
+  - name: Yogurt
+    food_term:
+      preferred_term: yogurt
+    amount: "75 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 45
+
+  - name: Milk
+    food_term:
+      preferred_term: milk
+    amount: "56 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 45
+
+  - name: Shrimp
+    food_term:
+      preferred_term: shrimp
+    amount: "35 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 45
+
+drug_interactions:
+  - name: Amiodarone and Iodine
+    description: |
+      Amiodarone is an iodine-rich antiarrhythmic drug that can cause thyroid
+      dysfunction (both hypo- and hyperthyroidism) due to its high iodine content.
+    drug_term:
+      preferred_term: amiodarone
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: HIGH
+    mic_references:
+      - 53
+
+  - name: Lithium and Iodine
+    description: |
+      Lithium can inhibit thyroid hormone release. Combined with iodine excess,
+      it may increase the risk of hypothyroidism.
+    drug_term:
+      preferred_term: lithium
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    mic_references:
+      - 54
+
+nutrient_interactions:
+  - name: Selenium and Iodine
+    description: |
+      Selenium is required for the activity of deiodinases that convert T4 to active
+      T3, and for glutathione peroxidases that protect the thyroid from oxidative
+      damage. Combined deficiency of iodine and selenium may worsen thyroid function
+      more than iodine deficiency alone.
+    nutrient_term:
+      preferred_term: selenium
+    interaction_type: SYNERGISTIC
+    mic_references:
+      - 49
+      - 50
+
+  - name: Goitrogens and Iodine
+    description: |
+      Goitrogens in cruciferous vegetables, soy, and cassava can interfere with
+      thyroid hormone production, but this is only clinically significant in the
+      context of iodine deficiency.
+    nutrient_term:
+      preferred_term: goitrogens
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 51
+      - 52
+
+disease_associations:
+  - name: Iodine Deficiency Disorders
+    description: |
+      Iodine deficiency causes a spectrum of disorders including goiter,
+      hypothyroidism, developmental abnormalities, and cretinism. Nearly 30% of
+      the world's population has insufficient iodine intake. Universal salt
+      iodization has dramatically reduced these disorders globally.
+    disease_term:
+      preferred_term: iodine deficiency disorder
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Global public health concern, especially in developing countries
+    mic_references:
+      - 4
+      - 5
+      - 6
+
+  - name: Thyroid Cancer Prevention
+    description: |
+      Thyroid accumulation of radioactive iodine (I-131) increases thyroid cancer
+      risk, especially in children. In radiation emergencies, potassium iodide
+      can saturate the thyroid and reduce uptake of radioactive iodine.
+    disease_term:
+      preferred_term: thyroid cancer
+      term:
+        id: MONDO:0015075
+        label: thyroid carcinoma
+    relationship_type: PROTECTIVE
+    population_context: In radiation emergencies; potassium iodide prophylaxis
+    mic_references:
+      - 30
+      - 31
+
+  - name: Cognitive Development
+    description: |
+      Adequate maternal iodine status during pregnancy and lactation is critical
+      for fetal and infant brain development. Even mild-to-moderate iodine
+      deficiency during pregnancy may impair offspring cognitive development.
+    disease_term:
+      preferred_term: developmental delay
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Pregnant and breastfeeding women; their offspring
+    mic_references:
+      - 11
+      - 12
+      - 13
+      - 14
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "110 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "130 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-8 years
+      amount: "90 mcg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "120 mcg/day"
+      source: Institute of Medicine
+    - population: Adolescents and Adults 14+ years
+      amount: "150 mcg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "220 mcg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding
+      amount: "290 mcg/day"
+      source: Institute of Medicine
+  notes: |
+    The Tolerable Upper Intake Level (UL) for adults is 1,100 mcg/day. The WHO,
+    UNICEF, and Iodine Global Network recommend 250 mcg/day for pregnant and
+    breastfeeding women. Iodized salt (1/4 teaspoon) provides approximately 71 mcg
+    iodine. Seafood and dairy are also good sources.
+
+bioavailability:
+  description: |
+    Iodine is efficiently absorbed from the gastrointestinal tract. The thyroid gland
+    concentrates iodine from the blood via the sodium-iodide symporter. The thyroid
+    of a healthy adult contains 70-80% of total body iodine (15-20 mg) and uses about
+    80 mcg daily for hormone synthesis.
+  mic_references:
+    - 1
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Iodine. Iodine deficiency remains a major global
+  public health concern despite widespread salt iodization programs. The MIC
+  reference numbers (mic_references) correspond to the numbered citations on
+  the source page.

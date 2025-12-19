@@ -1,0 +1,991 @@
+id: https://w3id.org/monarch-initiative/mic
+name: mic
+title: Micronutrient Information Center Knowledge Base Schema
+description: >-
+  LinkML schema for the Micronutrient Information Center (MIC) knowledge base.
+  Defines nutrient entities with nested structures for functions, deficiency,
+  disease associations, food sources, and more. Based on content from the
+  Linus Pauling Institute at Oregon State University.
+license: BSD-3-Clause
+see_also:
+  - https://lpi.oregonstate.edu/mic
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  mic: https://w3id.org/monarch-initiative/mic/
+  HP: http://purl.obolibrary.org/obo/HP_
+  GO: http://purl.obolibrary.org/obo/GO_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  CL: http://purl.obolibrary.org/obo/CL_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  FOODON: http://purl.obolibrary.org/obo/FOODON_
+  PMID: http://www.ncbi.nlm.nih.gov/pubmed/
+  HGNC: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  RO: http://purl.obolibrary.org/obo/RO_
+
+default_prefix: mic
+
+# =============================================================================
+# TYPES
+# =============================================================================
+
+types:
+  PMID:
+    typeof: string
+    description: A PubMed identifier
+  Amount:
+    typeof: string
+    description: A quantity with units (e.g., "30 mcg/day", "10 mg")
+
+# =============================================================================
+# ENUMS
+# =============================================================================
+
+enums:
+  EvidenceSupportEnum:
+    description: Classification of how evidence supports a claim
+    permissible_values:
+      SUPPORT:
+        description: Evidence directly supports the statement
+      REFUTE:
+        description: Evidence contradicts the statement
+      PARTIAL:
+        description: Evidence partially supports with caveats
+      NO_EVIDENCE:
+        description: Citation exists but doesn't address the claim
+      WRONG_STATEMENT:
+        description: The statement itself is incorrect
+
+  ModifierEnum:
+    description: Directional or qualitative modifiers for descriptors
+    permissible_values:
+      INCREASED:
+        description: Upregulated, elevated, or excessive
+      DECREASED:
+        description: Downregulated, reduced, or deficient
+      ABNORMAL:
+        description: Qualitatively abnormal
+      DYSREGULATED:
+        description: Regulation is impaired
+      ABSENT:
+        description: Not occurring or not present
+
+  NutrientCategoryEnum:
+    description: Category of nutrient in the MIC
+    permissible_values:
+      vitamin:
+        description: Water-soluble or fat-soluble vitamin
+      mineral:
+        description: Essential mineral element
+      dietary_factor:
+        description: Other dietary factors (e.g., fiber, flavonoids)
+      food_beverage:
+        description: Specific foods or beverages with health effects
+
+  RelationshipTypeEnum:
+    description: Type of relationship between nutrient and disease
+    permissible_values:
+      RISK_FACTOR:
+        description: Nutrient status affects disease risk
+      PROTECTIVE:
+        description: Higher nutrient status reduces risk
+      THERAPEUTIC:
+        description: Supplementation may treat condition
+      MARKER:
+        description: Nutrient level indicates disease state
+      DEFICIENCY_CAUSES:
+        description: Deficiency of nutrient causes the condition
+
+  InteractionTypeEnum:
+    description: Type of drug-nutrient or nutrient-nutrient interaction
+    permissible_values:
+      REDUCES_ABSORPTION:
+        description: Reduces absorption of the nutrient
+      INCREASES_ABSORPTION:
+        description: Increases absorption of the nutrient
+      REDUCES_EXCRETION:
+        description: Reduces excretion of the nutrient
+      INCREASES_EXCRETION:
+        description: Increases excretion of the nutrient
+      COMPETES_FOR_TRANSPORT:
+        description: Competes for same transport mechanism
+      SYNERGISTIC:
+        description: Enhances effect of the other
+      ANTAGONISTIC:
+        description: Reduces effect of the other
+      AFFECTS_METABOLISM:
+        description: Affects metabolism of the nutrient
+
+  ClinicalSignificanceEnum:
+    description: Clinical significance of an interaction
+    permissible_values:
+      HIGH:
+        description: Clinically significant, requires monitoring
+      MODERATE:
+        description: May be clinically relevant
+      LOW:
+        description: Minor clinical relevance
+      THEORETICAL:
+        description: Theoretical concern, limited clinical data
+
+  FrequencyEnum:
+    description: Frequency of occurrence
+    permissible_values:
+      OBLIGATE:
+        description: Always present
+        meaning: HP:0040280
+      VERY_FREQUENT:
+        description: Present in >80% of cases
+        meaning: HP:0040281
+      FREQUENT:
+        description: Present in 30-80% of cases
+        meaning: HP:0040282
+      OCCASIONAL:
+        description: Present in 5-30% of cases
+        meaning: HP:0040283
+      VERY_RARE:
+        description: Present in <5% of cases
+        meaning: HP:0040284
+
+  # Dynamic enums for ontology term validation
+  NutrientTerm:
+    description: A chemical entity from CHEBI
+    reachable_from:
+      source_nodes:
+        - CHEBI:24431  # chemical entity
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  DiseaseTerm:
+    description: A disease from MONDO
+    reachable_from:
+      source_nodes:
+        - MONDO:0000001  # disease
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  PhenotypeTerm:
+    description: A phenotype from HPO
+    reachable_from:
+      source_nodes:
+        - HP:0000118  # phenotypic abnormality
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  BiologicalProcessTerm:
+    description: A biological process from GO
+    reachable_from:
+      source_nodes:
+        - GO:0008150  # biological_process
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  CellularComponentTerm:
+    description: A cellular component from GO
+    reachable_from:
+      source_nodes:
+        - GO:0005575  # cellular_component
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  AnatomicalEntityTerm:
+    description: An anatomical entity from UBERON
+    reachable_from:
+      source_nodes:
+        - UBERON:0001062  # anatomical entity
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  FoodTerm:
+    description: A food product from FOODON
+    reachable_from:
+      source_nodes:
+        - FOODON:00002403  # food product
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  GeneTerm:
+    description: A gene from HGNC
+
+# =============================================================================
+# SLOTS (shared across classes)
+# =============================================================================
+
+slots:
+  name:
+    description: Human-readable name
+    range: string
+    identifier: true
+
+  description:
+    description: Free-text description
+    range: string
+
+  preferred_term:
+    description: The preferred human-readable term for this descriptor
+    range: string
+    required: true
+
+  term:
+    description: Optional structured ontology term reference
+    range: Term
+    inlined: true
+    recommended: true
+
+  modifier:
+    description: Directional or qualitative modifier
+    range: ModifierEnum
+
+  id:
+    description: Ontology term identifier (CURIE)
+    range: uriorcurie
+    identifier: true
+
+  label:
+    description: Human-readable label for the ontology term
+    range: string
+    comments:
+      - This is validated by linkml-term-validator
+
+  evidence:
+    description: Supporting evidence items
+    multivalued: true
+    range: EvidenceItem
+    inlined_as_list: true
+    recommended: true
+
+  reference:
+    description: The publication reference (PMID)
+    range: PMID
+    implements:
+      - linkml:authoritative_reference
+
+  supports:
+    description: How this evidence supports the claim
+    range: EvidenceSupportEnum
+
+  snippet:
+    description: Exact excerpt/quote from the referenced publication
+    range: string
+    implements:
+      - linkml:excerpt
+
+  explanation:
+    description: Why this evidence supports/refutes the claim
+    range: string
+
+  notes:
+    description: Additional notes
+    range: string
+
+  mic_references:
+    description: >-
+      Reference numbers from the MIC source page that support this claim.
+      These correspond to the numbered citations in the MIC text (e.g., "(1)", "(18)").
+      Use the extracted reference mapping to find corresponding PMIDs.
+    multivalued: true
+    range: integer
+    comments:
+      - Maps to PMIDs via the extracted reference TSV files in cache/mic-refs/
+
+  # Nutrient-specific slots
+  source_url:
+    description: URL of the MIC page for this nutrient
+    range: uri
+
+  category:
+    description: Category of nutrient
+    range: NutrientCategoryEnum
+
+  alternate_names:
+    description: Alternative names for this nutrient
+    multivalued: true
+    range: string
+
+  # Relationship slots
+  target:
+    description: Name of target element in causal relationship
+    range: string
+    required: true
+
+  downstream:
+    description: Downstream causal effects
+    multivalued: true
+    range: CausalEdge
+    inlined_as_list: true
+
+  # Reference slots
+  references:
+    description: Top-level publication references
+    multivalued: true
+    range: PublicationReference
+    inlined_as_list: true
+
+  findings:
+    description: Key findings from a publication
+    multivalued: true
+    range: Finding
+    inlined_as_list: true
+
+  statement:
+    description: A key finding or claim
+    range: string
+    required: true
+
+  supporting_text:
+    description: Exact excerpt supporting the statement
+    range: string
+
+  title:
+    description: Title of publication
+    range: string
+
+  # Nested structure slots
+  functions:
+    description: Biological functions of the nutrient
+    multivalued: true
+    range: Function
+    inlined_as_list: true
+
+  deficiency:
+    description: Deficiency information
+    range: Deficiency
+    inlined: true
+
+  toxicity:
+    description: Toxicity and safety information
+    range: Toxicity
+    inlined: true
+
+  food_sources:
+    description: Dietary sources of the nutrient
+    multivalued: true
+    range: FoodSource
+    inlined_as_list: true
+
+  drug_interactions:
+    description: Interactions with drugs
+    multivalued: true
+    range: DrugInteraction
+    inlined_as_list: true
+
+  nutrient_interactions:
+    description: Interactions with other nutrients
+    multivalued: true
+    range: NutrientInteraction
+    inlined_as_list: true
+
+  disease_associations:
+    description: Associations with diseases
+    multivalued: true
+    range: DiseaseAssociation
+    inlined_as_list: true
+
+  recommendations:
+    description: Dietary recommendations
+    range: DietaryRecommendations
+    inlined: true
+
+  bioavailability:
+    description: Bioavailability information
+    range: Bioavailability
+    inlined: true
+
+  metabolism:
+    description: Metabolism information
+    range: Metabolism
+    inlined: true
+
+  # Function-specific slots
+  biological_processes:
+    description: Biological processes involved
+    multivalued: true
+    range: BiologicalProcessDescriptor
+    inlined_as_list: true
+
+  cellular_components:
+    description: Cellular components involved
+    multivalued: true
+    range: CellularComponentDescriptor
+    inlined_as_list: true
+
+  genes:
+    description: Genes/enzymes involved
+    multivalued: true
+    range: GeneDescriptor
+    inlined_as_list: true
+
+  # Deficiency slots
+  phenotypes:
+    description: Phenotypes/symptoms
+    multivalued: true
+    range: Phenotype
+    inlined_as_list: true
+
+  at_risk_groups:
+    description: Groups at risk
+    multivalued: true
+    range: AtRiskGroup
+    inlined_as_list: true
+
+  causes:
+    description: Causes of deficiency
+    multivalued: true
+    range: Cause
+    inlined_as_list: true
+
+  # Disease association slots
+  relationship_type:
+    description: Type of nutrient-disease relationship
+    range: RelationshipTypeEnum
+
+  direction:
+    description: Direction of effect
+    range: ModifierEnum
+
+  population_context:
+    description: Population context for the association
+    range: string
+
+  mechanism:
+    description: Mechanism(s) of action
+    multivalued: true
+    range: Mechanism
+    inlined_as_list: true
+
+  # Interaction slots
+  interaction_type:
+    description: Type of interaction
+    range: InteractionTypeEnum
+
+  clinical_significance:
+    description: Clinical significance
+    range: ClinicalSignificanceEnum
+
+  # Food source slots
+  amount:
+    description: Amount per serving
+    range: Amount
+
+  serving_size:
+    description: Serving size
+    range: string
+
+  bioavailability_notes:
+    description: Notes on bioavailability
+    range: string
+
+  # Recommendation slots
+  rda:
+    description: Recommended Dietary Allowance values
+    multivalued: true
+    range: RecommendationValue
+    inlined_as_list: true
+
+  ai:
+    description: Adequate Intake values
+    multivalued: true
+    range: RecommendationValue
+    inlined_as_list: true
+
+  ul:
+    description: Tolerable Upper Intake Level values
+    multivalued: true
+    range: RecommendationValue
+    inlined_as_list: true
+
+  population:
+    description: Population group
+    range: string
+
+  source:
+    description: Source organization
+    range: string
+
+  # Phenotype slots
+  frequency:
+    description: Frequency of occurrence
+    range: FrequencyEnum
+
+  severity:
+    description: Severity level
+    range: string
+
+  context:
+    description: Context in which this occurs
+    range: string
+
+  locations:
+    description: Anatomical locations
+    multivalued: true
+    range: AnatomicalEntityDescriptor
+    inlined_as_list: true
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+
+classes:
+  # ---------------------------------------------------------------------------
+  # Core term reference class
+  # ---------------------------------------------------------------------------
+  Term:
+    description: A structured reference to an ontology term
+    slots:
+      - id
+      - label
+
+  # ---------------------------------------------------------------------------
+  # Base descriptor class (abstract)
+  # ---------------------------------------------------------------------------
+  Descriptor:
+    abstract: true
+    description: >-
+      Base class for structured descriptors with preferred term,
+      optional ontology binding, and optional modifier.
+    slots:
+      - preferred_term
+      - description
+      - term
+      - modifier
+
+  # ---------------------------------------------------------------------------
+  # Specialized Descriptor classes
+  # ---------------------------------------------------------------------------
+  NutrientDescriptor:
+    is_a: Descriptor
+    description: A descriptor for nutrients, bindable to CHEBI
+    slot_usage:
+      term:
+        description: CHEBI term reference
+        bindings:
+          - binds_value_of: id
+            range: NutrientTerm
+            obligation_level: RECOMMENDED
+
+  DiseaseDescriptor:
+    is_a: Descriptor
+    description: A descriptor for diseases, bindable to MONDO
+    slot_usage:
+      term:
+        description: MONDO term reference
+        bindings:
+          - binds_value_of: id
+            range: DiseaseTerm
+            obligation_level: RECOMMENDED
+
+  PhenotypeDescriptor:
+    is_a: Descriptor
+    description: A descriptor for phenotypes, bindable to HP
+    slot_usage:
+      term:
+        description: HP term reference
+        bindings:
+          - binds_value_of: id
+            range: PhenotypeTerm
+            obligation_level: RECOMMENDED
+
+  BiologicalProcessDescriptor:
+    is_a: Descriptor
+    description: A descriptor for biological processes, bindable to GO
+    slot_usage:
+      term:
+        description: GO biological process term reference
+        bindings:
+          - binds_value_of: id
+            range: BiologicalProcessTerm
+            obligation_level: RECOMMENDED
+
+  CellularComponentDescriptor:
+    is_a: Descriptor
+    description: A descriptor for cellular components, bindable to GO
+    slot_usage:
+      term:
+        description: GO cellular component term reference
+        bindings:
+          - binds_value_of: id
+            range: CellularComponentTerm
+            obligation_level: RECOMMENDED
+
+  AnatomicalEntityDescriptor:
+    is_a: Descriptor
+    description: A descriptor for anatomical entities, bindable to UBERON
+    slot_usage:
+      term:
+        description: UBERON term reference
+        bindings:
+          - binds_value_of: id
+            range: AnatomicalEntityTerm
+            obligation_level: RECOMMENDED
+
+  FoodDescriptor:
+    is_a: Descriptor
+    description: A descriptor for foods, bindable to FOODON
+    slot_usage:
+      term:
+        description: FOODON term reference
+        bindings:
+          - binds_value_of: id
+            range: FoodTerm
+            obligation_level: RECOMMENDED
+
+  GeneDescriptor:
+    is_a: Descriptor
+    description: A descriptor for genes, bindable to HGNC
+    slot_usage:
+      term:
+        description: HGNC term reference
+        bindings:
+          - binds_value_of: id
+            range: GeneTerm
+            obligation_level: RECOMMENDED
+
+  DrugDescriptor:
+    is_a: Descriptor
+    description: A descriptor for drugs
+    slot_usage:
+      term:
+        description: Drug term reference (CHEBI or other)
+
+  # ---------------------------------------------------------------------------
+  # Evidence and reference classes
+  # ---------------------------------------------------------------------------
+  EvidenceItem:
+    description: An evidence item supporting a claim
+    slots:
+      - reference
+      - supports
+      - snippet
+      - explanation
+    slot_usage:
+      reference:
+        implements:
+          - linkml:authoritative_reference
+      snippet:
+        implements:
+          - linkml:excerpt
+
+  PublicationReference:
+    description: A publication with associated findings
+    slots:
+      - reference
+      - title
+      - findings
+    slot_usage:
+      reference:
+        identifier: true
+        required: true
+
+  Finding:
+    description: A key finding from a publication
+    slots:
+      - statement
+      - supporting_text
+
+  CausalEdge:
+    description: A causal relationship to a downstream effect
+    slots:
+      - target
+      - description
+      - evidence
+
+  # ---------------------------------------------------------------------------
+  # Function class
+  # ---------------------------------------------------------------------------
+  Function:
+    description: A biological function of the nutrient
+    slots:
+      - name
+      - description
+      - biological_processes
+      - cellular_components
+      - genes
+      - locations
+      - downstream
+      - mic_references
+      - evidence
+      - notes
+
+  # ---------------------------------------------------------------------------
+  # Deficiency class
+  # ---------------------------------------------------------------------------
+  Deficiency:
+    description: Information about nutrient deficiency
+    slots:
+      - name
+      - description
+      - phenotypes
+      - at_risk_groups
+      - causes
+      - mic_references
+      - evidence
+      - notes
+
+  Phenotype:
+    description: A phenotype or symptom
+    slots:
+      - name
+      - description
+      - frequency
+      - severity
+      - context
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      phenotype_term:
+        description: HP term for this phenotype
+        range: PhenotypeDescriptor
+        inlined: true
+
+  AtRiskGroup:
+    description: A population group at risk for deficiency
+    slots:
+      - name
+      - description
+      - mic_references
+      - evidence
+      - notes
+
+  Cause:
+    description: A cause of deficiency
+    slots:
+      - name
+      - description
+      - mic_references
+      - evidence
+      - notes
+
+  # ---------------------------------------------------------------------------
+  # Toxicity class
+  # ---------------------------------------------------------------------------
+  Toxicity:
+    description: Toxicity and safety information
+    slots:
+      - name
+      - description
+      - phenotypes
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      adverse_effects:
+        description: Adverse effects of excess intake
+        multivalued: true
+        range: AdverseEffect
+        inlined_as_list: true
+
+  AdverseEffect:
+    description: An adverse effect of excess nutrient intake
+    slots:
+      - name
+      - description
+      - severity
+      - mic_references
+      - evidence
+      - notes
+
+  # ---------------------------------------------------------------------------
+  # Food source class
+  # ---------------------------------------------------------------------------
+  FoodSource:
+    description: A dietary source of the nutrient
+    slots:
+      - name
+      - amount
+      - serving_size
+      - bioavailability_notes
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      food_term:
+        description: FOODON term for this food
+        range: FoodDescriptor
+        inlined: true
+
+  # ---------------------------------------------------------------------------
+  # Interaction classes
+  # ---------------------------------------------------------------------------
+  DrugInteraction:
+    description: An interaction between the nutrient and a drug
+    slots:
+      - name
+      - description
+      - interaction_type
+      - clinical_significance
+      - mechanism
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      drug_term:
+        description: Descriptor for the drug
+        range: DrugDescriptor
+        inlined: true
+
+  NutrientInteraction:
+    description: An interaction between two nutrients
+    slots:
+      - name
+      - description
+      - interaction_type
+      - clinical_significance
+      - mechanism
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      nutrient_term:
+        description: Descriptor for the other nutrient
+        range: NutrientDescriptor
+        inlined: true
+
+  Mechanism:
+    description: A mechanism of action
+    slots:
+      - name
+      - description
+      - biological_processes
+      - genes
+      - evidence
+      - notes
+
+  # ---------------------------------------------------------------------------
+  # Disease association class
+  # ---------------------------------------------------------------------------
+  DiseaseAssociation:
+    description: An association between the nutrient and a disease
+    slots:
+      - name
+      - description
+      - relationship_type
+      - direction
+      - population_context
+      - mechanism
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      disease_term:
+        description: MONDO term for the disease
+        range: DiseaseDescriptor
+        inlined: true
+
+  # ---------------------------------------------------------------------------
+  # Recommendations class
+  # ---------------------------------------------------------------------------
+  DietaryRecommendations:
+    description: Dietary intake recommendations
+    slots:
+      - rda
+      - ai
+      - ul
+      - notes
+      - evidence
+
+  RecommendationValue:
+    description: A recommendation value for a population group
+    slots:
+      - population
+      - amount
+      - source
+      - notes
+      - evidence
+
+  # ---------------------------------------------------------------------------
+  # Bioavailability and metabolism classes
+  # ---------------------------------------------------------------------------
+  Bioavailability:
+    description: Information about nutrient bioavailability
+    slots:
+      - description
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      factors:
+        description: Factors affecting bioavailability
+        multivalued: true
+        range: BioavailabilityFactor
+        inlined_as_list: true
+
+  BioavailabilityFactor:
+    description: A factor affecting bioavailability
+    slots:
+      - name
+      - description
+      - mic_references
+      - evidence
+      - notes
+    attributes:
+      effect:
+        description: Effect on bioavailability (increases/decreases)
+        range: ModifierEnum
+
+  Metabolism:
+    description: Information about nutrient metabolism
+    slots:
+      - description
+      - biological_processes
+      - genes
+      - locations
+      - mic_references
+      - evidence
+      - notes
+
+  # ---------------------------------------------------------------------------
+  # Root Nutrient class
+  # ---------------------------------------------------------------------------
+  Nutrient:
+    description: >-
+      A nutrient entry from the Micronutrient Information Center.
+      This is the root class for the knowledge base.
+    tree_root: true
+    slots:
+      - name
+      - description
+      - category
+      - alternate_names
+      - source_url
+      - functions
+      - deficiency
+      - toxicity
+      - food_sources
+      - drug_interactions
+      - nutrient_interactions
+      - disease_associations
+      - recommendations
+      - bioavailability
+      - metabolism
+      - references
+      - notes
+    attributes:
+      nutrient_term:
+        description: CHEBI term for this nutrient
+        range: NutrientDescriptor
+        inlined: true
+        required: true
+
+  # ---------------------------------------------------------------------------
+  # Collection class for batch operations
+  # ---------------------------------------------------------------------------
+  NutrientCollection:
+    description: A collection of nutrients
+    attributes:
+      nutrients:
+        multivalued: true
+        range: Nutrient
+        inlined_as_list: true

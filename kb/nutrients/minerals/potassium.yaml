@@ -1,0 +1,429 @@
+name: Potassium
+nutrient_term:
+  preferred_term: potassium
+  term:
+    id: CHEBI:26216
+    label: potassium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/potassium
+alternate_names:
+  - K
+description: |
+  Potassium is considered a "nutrient of public health concern" because its underconsumption
+  in the US population is associated with adverse health effects, particularly hypertension
+  and cardiovascular disease. Normal body function depends on tight regulation of potassium
+  concentrations both inside and outside cells. Potassium is the principal cation inside
+  cells, and the concentration gradient with sodium creates the membrane potential essential
+  for nerve impulse transmission, muscle contraction, and heart function.
+
+functions:
+  - name: Membrane Potential Maintenance
+    description: |
+      Potassium is the principal positively charged ion (cation) in the fluid inside cells,
+      while sodium is the principal cation in extracellular fluid. Potassium concentrations
+      are about 30 times higher inside than outside cells. The concentration differences
+      across cell membranes create an electrochemical gradient known as the membrane
+      potential, maintained by Na+/K+-ATPase pumps. This activity accounts for 20-40%
+      of resting energy expenditure and is critical for nerve impulse transmission,
+      muscle contraction, and heart function.
+    biological_processes:
+      - preferred_term: ion transport
+        term:
+          id: GO:0006811
+          label: monoatomic ion transport
+    mic_references:
+      - 2
+      - 3
+      - 4
+
+  - name: Cofactor for Enzymes
+    description: |
+      A limited number of enzymes require the presence of potassium for their activity.
+      The activation of Na+/K+-ATPase requires the presence of sodium and potassium.
+      Potassium is also required for the activity of pyruvate kinase, an important
+      enzyme in carbohydrate metabolism.
+    biological_processes:
+      - preferred_term: carbohydrate metabolism
+        term:
+          id: GO:0005975
+          label: carbohydrate metabolic process
+    mic_references:
+      - 5
+
+deficiency:
+  name: Potassium Deficiency (Hypokalemia)
+  description: |
+    Abnormally low plasma potassium concentration (hypokalemia) is most commonly a result
+    of excessive loss of potassium from prolonged vomiting or diarrhea, use of diuretics,
+    kidney disease, or metabolic disturbances. Symptoms include fatigue, muscle weakness
+    and cramps, intestinal paralysis leading to bloating and constipation, and abdominal
+    pain. Severe hypokalemia may result in muscular paralysis or abnormal heart rhythms
+    (cardiac arrhythmias) that can be fatal. Low dietary potassium alone does not generally
+    result in hypokalemia but can precipitate it in patients at risk.
+  phenotypes:
+    - name: Muscle weakness
+      phenotype_term:
+        preferred_term: muscle weakness
+        term:
+          id: HP:0001324
+          label: Muscle weakness
+      frequency: FREQUENT
+      context: Related to alterations in membrane potential and cellular metabolism
+      mic_references:
+        - 1
+        - 6
+
+    - name: Cardiac arrhythmia
+      phenotype_term:
+        preferred_term: cardiac arrhythmia
+        term:
+          id: HP:0011675
+          label: Arrhythmia
+      frequency: OCCASIONAL
+      context: Severe hypokalemia; can be fatal
+      mic_references:
+        - 1
+        - 6
+
+    - name: Constipation
+      phenotype_term:
+        preferred_term: constipation
+        term:
+          id: HP:0002019
+          label: Constipation
+      frequency: FREQUENT
+      context: Intestinal paralysis from hypokalemia
+      mic_references:
+        - 1
+
+  at_risk_groups:
+    - name: Users of potassium-wasting diuretics
+      description: |
+        Thiazide diuretics and furosemide increase urinary potassium excretion
+      mic_references:
+        - 1
+
+    - name: Individuals with prolonged vomiting or diarrhea
+      description: |
+        Excessive loss of potassium through GI tract
+      mic_references:
+        - 1
+
+    - name: People with kidney disease
+      description: |
+        Nephropathies can cause excessive potassium loss
+      mic_references:
+        - 1
+
+    - name: People with magnesium depletion
+      description: |
+        Magnesium depletion increases risk of hypokalemia
+      mic_references:
+        - 1
+
+  mic_references:
+    - 1
+    - 6
+
+toxicity:
+  name: Potassium Toxicity (Hyperkalemia)
+  description: |
+    Abnormally elevated serum potassium concentrations (hyperkalemia) occur when potassium
+    intake exceeds the kidneys' capacity to eliminate it. Causes include kidney failure,
+    use of potassium-sparing diuretics, insufficient aldosterone secretion, or oral doses
+    of potassium >18 g at one time. Hyperkalemia may also result from hemolysis or tissue
+    damage. Symptoms include tingling of hands and feet, muscular weakness, and temporary
+    paralysis. The most serious complication is cardiac arrhythmia, which can lead to
+    cardiac arrest. In healthy people, the kidneys efficiently adjust urinary potassium
+    excretion to intake.
+  adverse_effects:
+    - name: Cardiac arrhythmia
+      description: |
+        Most serious complication of hyperkalemia; can lead to cardiac arrest
+      severity: severe
+    - name: Muscular weakness
+      description: |
+        Can progress to temporary paralysis with severe hyperkalemia
+      severity: moderate
+  mic_references:
+    - 6
+    - 50
+    - 51
+
+food_sources:
+  - name: Potato, baked with skin
+    food_term:
+      preferred_term: potato
+    amount: "926 mg"
+    serving_size: "1 medium"
+    mic_references:
+      - 49
+
+  - name: Apricots, dried
+    food_term:
+      preferred_term: dried apricots
+    amount: "755 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 49
+
+  - name: Beet greens, cooked
+    food_term:
+      preferred_term: beet greens
+    amount: "654 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 49
+
+  - name: Prunes (dried plums)
+    food_term:
+      preferred_term: prunes
+    amount: "637 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 49
+
+  - name: Yogurt, plain, low-fat
+    food_term:
+      preferred_term: yogurt
+    amount: "531 mg"
+    serving_size: "8 ounces"
+    mic_references:
+      - 49
+
+  - name: Banana
+    food_term:
+      preferred_term: banana
+    amount: "422 mg"
+    serving_size: "1 medium"
+    mic_references:
+      - 49
+
+  - name: Spinach, cooked
+    food_term:
+      preferred_term: spinach
+    amount: "419 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 49
+
+drug_interactions:
+  - name: ACE Inhibitors and Potassium
+    description: |
+      ACE inhibitors (e.g., captopril, enalapril) can increase the risk of hyperkalemia
+      when used with potassium supplements.
+    drug_term:
+      preferred_term: ACE inhibitor
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 50
+      - 51
+      - 54
+
+  - name: Potassium-Sparing Diuretics and Potassium
+    description: |
+      Potassium-sparing diuretics (e.g., spironolactone, triamterene, amiloride)
+      decrease urinary potassium excretion and can cause hyperkalemia.
+    drug_term:
+      preferred_term: potassium-sparing diuretic
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 50
+      - 51
+      - 54
+
+  - name: Loop and Thiazide Diuretics and Potassium
+    description: |
+      Loop diuretics (furosemide) and thiazide diuretics increase urinary potassium
+      excretion and can cause hypokalemia.
+    drug_term:
+      preferred_term: diuretic
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: HIGH
+    mic_references:
+      - 55
+
+  - name: Angiotensin Receptor Blockers and Potassium
+    description: |
+      ARBs (e.g., losartan, valsartan) can increase the risk of hyperkalemia when
+      used with potassium supplements.
+    drug_term:
+      preferred_term: angiotensin receptor blocker
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 50
+      - 51
+      - 54
+
+nutrient_interactions:
+  - name: Sodium and Potassium
+    description: |
+      Potassium and sodium have opposing effects on blood pressure. Modern diets high
+      in sodium and low in potassium contribute to the high prevalence of hypertension.
+      The sodium-to-potassium ratio is an important determinant of cardiovascular risk.
+    nutrient_term:
+      preferred_term: sodium
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 12
+      - 14
+      - 15
+      - 37
+
+  - name: Magnesium and Potassium
+    description: |
+      Magnesium depletion can increase the risk of hypokalemia.
+    nutrient_term:
+      preferred_term: magnesium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 1
+
+disease_associations:
+  - name: Stroke
+    description: |
+      Several prospective cohort studies have found an inverse association between
+      potassium intake and risk of stroke. A meta-analysis showed that daily potassium
+      intakes of 3,510-4,680 mg were associated with 30% reduced risk of stroke.
+      The lowest risk corresponds to intakes around 3,500 mg/day. The effect appears
+      to be on ischemic stroke rather than hemorrhagic stroke.
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population
+    mic_references:
+      - 12
+      - 16
+      - 17
+
+  - name: Hypertension
+    description: |
+      Chronic hypertension damages the heart, blood vessels, and kidneys. Increasing
+      dietary potassium may help lower blood pressure in both normotensive and
+      hypertensive individuals. The DASH diet, high in potassium (4,100 mg/day),
+      lowered blood pressure significantly. Meta-analyses show supplemental potassium
+      (2,340-2,535 mg/day) reduces systolic BP by 4.7 mm Hg and diastolic BP by 3.5 mm Hg,
+      with greater effects in hypertensive individuals.
+    disease_term:
+      preferred_term: hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: THERAPEUTIC
+    population_context: General population, especially those with hypertension
+    mic_references:
+      - 33
+      - 34
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+
+  - name: Kidney Stones
+    description: |
+      Chronic hypokalemia is associated with kidney stone formation. Higher dietary
+      potassium intakes have been associated with lower risk of kidney stones in
+      observational studies.
+    disease_term:
+      preferred_term: kidney stones
+      term:
+        id: MONDO:0001248
+        label: nephrolithiasis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population
+    mic_references:
+      - 1
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "400 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "860 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "2,000 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 4-8 years
+      amount: "2,300 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 9-13 years
+      amount: "2,500 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 9-13 years
+      amount: "2,300 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 14-18 years
+      amount: "3,000 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 14-18 years
+      amount: "2,300 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Males 19+ years
+      amount: "3,400 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Females 19+ years
+      amount: "2,600 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy (14-18 years)
+      amount: "2,600 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy (19-50 years)
+      amount: "2,900 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding (14-18 years)
+      amount: "2,500 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding (19-50 years)
+      amount: "2,800 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    The AI values are based on median intakes in generally healthy populations. No
+    Tolerable Upper Intake Level (UL) has been established because healthy kidneys
+    efficiently excrete excess potassium. Average dietary intakes in the US are
+    2,408 mg/day for women and 3,172 mg/day for men, below the AI. Because underconsumption
+    is linked to adverse health effects, potassium is recognized as a "nutrient of
+    public health concern."
+
+bioavailability:
+  description: |
+    Potassium is efficiently absorbed from the gastrointestinal tract. In healthy
+    individuals, the kidneys adjust urinary potassium excretion to match intake,
+    maintaining potassium homeostasis. This regulatory mechanism can be overwhelmed
+    in kidney disease or with certain medications.
+  mic_references:
+    - 9
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Potassium. Potassium is recognized as a "nutrient of
+  public health concern" due to underconsumption and its association with hypertension
+  and cardiovascular disease. The MIC reference numbers (mic_references) correspond
+  to the numbered citations on the source page. The page contains approximately 55
+  references.

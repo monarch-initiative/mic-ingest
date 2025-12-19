@@ -1,0 +1,170 @@
+name: Fruit and Vegetables
+nutrient_term:
+  preferred_term: fruit and vegetables
+  description: A dietary category encompassing both plant fruit food products and vegetable food products
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/fruit-vegetables
+alternate_names:
+  - Fruits and Vegetables
+  - F&V
+description: |
+  Plant-based foods including fruit, vegetables, legumes, whole grains, and nuts are
+  prominent features of healthy dietary patterns. Despite disagreements regarding the
+  optimal components of a healthy diet, the importance of fruit and vegetables is
+  rather undisputed. The results of numerous epidemiological studies provide consistent
+  evidence suggesting associations between diets rich in fruit and vegetables and lower
+  risks of chronic disease. Fruit and vegetables are rich in antioxidants, which help
+  protect the body from oxidative damage. They also supply essential micronutrients,
+  dietary fiber, and a wide range of biologically active phytochemicals that contribute
+  to the health benefits of plant foods.
+
+disease_associations:
+  - name: Fruit and Vegetables and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Prospective cohort studies have consistently reported inverse associations between
+      high intakes of fruit and vegetables and risk of cardiovascular disease (CVD),
+      including coronary heart disease and stroke. A 2017 meta-analysis found a 16% lower
+      risk of CVD with high versus low fruit and vegetable intake and an 8% lower risk
+      with every 200 g/day increment in daily intake.
+    population_context: general adult population
+    mic_references:
+      - 2
+      - 3
+      - 4
+    evidence:
+      - reference: PMID:28338764
+        supports: SUPPORT
+        snippet: "For fruits and vegetables combined, the summary RR per 200 g/day was 0.92 [95% confidence interval (CI): 0.90-0.94, I 2  = 0%, n  = 15] for coronary heart disease, 0.84 (95% CI: 0.76-0.92, I 2  = 73%, n  = 10) for stroke, 0.92 (95% CI: 0.90-0.95, I 2  = 31%, n  = 13) for cardiovascular disease"
+        explanation: Meta-analysis confirms dose-response reduction in CVD risk with increased fruit and vegetable intake
+
+  - name: Fruit and Vegetables and Stroke
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher fruit and vegetable intake is associated with reduced stroke risk.
+      Meta-analysis data show a 16% lower risk of stroke with each 200 g/day
+      increment in fruit and vegetable consumption.
+    population_context: general adult population
+    mic_references:
+      - 2
+    evidence:
+      - reference: PMID:28338764
+        supports: SUPPORT
+        snippet: "0.84 (95% CI: 0.76-0.92, I 2  = 73%, n  = 10) for stroke"
+        explanation: Demonstrates significant protective association between fruit and vegetable intake and stroke
+
+  - name: Fruit and Vegetables and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Adherence to Mediterranean-style or DASH diets rich in vegetables, legumes,
+      fruit, and nuts has been associated with lower risk of developing type 2 diabetes.
+      Greater quantity of vegetable intake and greater variety of both fruit and vegetable
+      intake are associated with reduced diabetes risk.
+    population_context: general adult population
+    mic_references:
+      - 14
+      - 17
+      - 18
+    evidence:
+      - reference: PMID:22474042
+        supports: SUPPORT
+        snippet: "A greater quantity of combined F&V intake was associated with 21% lower hazard of T2D (HR 0.79 [95% CI 0.62-1.00]) comparing extreme tertiles, in adjusted analyses including variety"
+        explanation: Prospective study shows inverse association between fruit and vegetable intake and type 2 diabetes incidence
+      - reference: PMID:28424256
+        supports: SUPPORT
+        snippet: "patterns characterized by vegetables, legumes, fruits, poultry, and fish (\"mainly healthy\") were inversely associated with diabetes (RR: 0.84; 95% CI: 0.77, 0.91)"
+        explanation: Meta-analysis confirms that dietary patterns including vegetables and fruits are associated with reduced diabetes risk
+
+  - name: Fruit and Vegetables and Cancer Risk
+    disease_term:
+      preferred_term: cancer
+      term:
+        id: MONDO:0004992
+        label: cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Prospective cohort studies provide weak support for an association between total
+      fruit and vegetable consumption and overall cancer risk, but provide stronger
+      evidence that high intakes of certain classes of fruit or vegetables are associated
+      with reduced risk of individual cancers. Higher fruit intake is associated with
+      lower risk of oropharyngeal, laryngeal, esophageal, and lung cancers.
+    population_context: general adult population
+    mic_references:
+      - 2
+      - 20
+      - 40
+    evidence:
+      - reference: PMID:28338764
+        supports: SUPPORT
+        snippet: "0.97 (95% CI: 0.95-0.99, I 2  = 49%, n  = 12) for total cancer"
+        explanation: Meta-analysis shows modest but significant reduction in total cancer risk with fruit and vegetable intake
+
+  - name: Fruit and Vegetables and Osteoporosis
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies suggest a positive relationship between diets rich in fruit
+      and vegetables and bone health during aging. Fruit and vegetables are rich in
+      precursors of bicarbonate ions, which serve to buffer acids in the body and may
+      help preserve calcium in bones. However, randomized controlled trials have shown
+      mixed results on bone turnover markers and bone mineral density.
+    population_context: older adults
+    mic_references:
+      - 42
+      - 47
+      - 52
+    evidence:
+      - reference: PMID:27061845
+        supports: SUPPORT
+        snippet: "Intake of ≤1 serving/day of fruit and vegetables combined was associated with 39% higher hip fracture risk (pooled adjusted HR, 1.39; 95% confidence interval [CI], 1.20 to 1.58) in comparison with moderate intake (>3 and ≤5 servings/day)"
+        explanation: Pooled analysis from multiple cohorts shows low fruit and vegetable intake associated with increased hip fracture risk
+
+recommendations:
+  notes: |
+    The 2015-2020 Dietary Guidelines for Americans recommend consuming a healthy diet
+    which includes a variety of vegetables from all of the subgroups and fruit, especially
+    whole fruit. At the 2,000-calorie per day level, recommendations include 2.5 cup-equivalents
+    of vegetables per day and 2 cup-equivalents of fruit per day. The World Health Organization
+    recommends daily consumption of more than 400 g of fruit and vegetables as part of a
+    healthy diet to minimize the risk of certain non-communicable diseases.
+  ai:
+    - population: Adults (2,000 calorie diet)
+      amount: 2.5 cup-equivalents vegetables/day
+      source: 2015-2020 Dietary Guidelines for Americans
+    - population: Adults (2,000 calorie diet)
+      amount: 2 cup-equivalents fruit/day
+      source: 2015-2020 Dietary Guidelines for Americans
+    - population: General population
+      amount: ">400 g/day fruit and vegetables"
+      source: World Health Organization
+
+notes: |
+  The best way to take advantage of the complex interactions between micronutrients
+  and phytochemicals found in fruit and vegetables is to eat a variety of different
+  types. Vegetables and fruit supply vitamins, minerals, dietary fiber, and a wide
+  range of biologically active phytochemicals including organosulfur compounds,
+  carotenoids, flavonoids, lignans, stilbenes, and phenolic acids.

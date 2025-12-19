@@ -1,0 +1,225 @@
+name: Dietary Fiber
+nutrient_term:
+  preferred_term: dietary fiber
+  term:
+    id: CHEBI:18154
+    label: polysaccharide
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/other-nutrients/fiber
+alternate_names:
+  - Roughage
+  - Bulk
+  - Dietary fibre
+description: |
+  Dietary fiber consists of nondigestible carbohydrates and lignin that are
+  intrinsic and intact in plants. It resists digestion in the small intestine
+  and passes to the large intestine where it may be fermented by gut microbiota.
+  Fiber is classified by solubility, viscosity, and fermentability, with different
+  types providing distinct health benefits. The average American consumes only
+  about 17 g/day, well below the recommended Adequate Intake of 25-38 g/day.
+
+functions:
+  - name: Cholesterol Lowering
+    description: |
+      Viscous soluble fibers (psyllium, beta-glucans) form gels in the intestine
+      that trap bile acids, increasing their fecal excretion and reducing serum
+      LDL cholesterol levels. This is the mechanism behind FDA-approved health
+      claims for soluble fiber and coronary heart disease risk reduction.
+    mic_references:
+      - 16
+      - 17
+      - 18
+      - 20
+      - 21
+
+  - name: Glycemic Control
+    description: |
+      Viscous soluble fibers slow gastric emptying and glucose absorption,
+      reducing postprandial blood glucose and insulin responses. This effect
+      is proportional to the viscosity of the fiber in the gastrointestinal tract.
+    mic_references:
+      - 25
+      - 26
+      - 32
+
+  - name: Laxation
+    description: |
+      Certain fibers promote regular bowel movements through different mechanisms.
+      Insoluble fibers (wheat bran) increase stool bulk and accelerate transit,
+      while psyllium holds water throughout the large intestine to soften stool.
+    mic_references:
+      - 36
+      - 37
+
+  - name: Gut Microbiota Modulation
+    description: |
+      Fermentable fibers serve as prebiotics, promoting the growth of beneficial
+      gut bacteria. Fermentation produces short-chain fatty acids (SCFAs) including
+      acetate, propionate, and butyrate, which have various metabolic effects.
+    biological_processes:
+      - preferred_term: fermentation
+        term:
+          id: GO:0006113
+          label: fermentation
+    mic_references:
+      - 13
+      - 14
+
+disease_associations:
+  - name: Coronary Heart Disease
+    disease_term:
+      preferred_term: coronary artery disease
+      term:
+        id: MONDO:0005010
+        label: coronary artery disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Prospective cohort studies consistently show inverse associations between
+      dietary fiber intake and coronary heart disease risk. Higher fiber intake
+      (especially cereal fiber) is associated with 16-33% lower CHD risk.
+    mic_references:
+      - 38
+      - 39
+      - 40
+    evidence:
+      - reference: PMID:10359388
+        supports: SUPPORT
+        snippet: "Our findings in women support the hypothesis that higher fiber intake, particularly from cereal sources, reduces the risk of CHD"
+        explanation: Large prospective study demonstrating fiber-CHD risk reduction
+      - reference: PMID:26514720
+        supports: SUPPORT
+        snippet: "Higher intakes of dietary fiber reduce the risk of developing several chronic diseases, including cardiovascular disease"
+        explanation: Position statement confirming fiber reduces CVD risk
+
+  - name: Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher fiber intake is associated with reduced risk of developing type 2
+      diabetes. Cereal fiber shows the strongest inverse association. Fiber
+      improves glycemic control through effects on glucose absorption and
+      insulin sensitivity.
+    mic_references:
+      - 25
+    evidence:
+      - reference: PMID:26514720
+        supports: SUPPORT
+        snippet: "Higher intakes of dietary fiber reduce the risk of developing several chronic diseases, including cardiovascular disease, type 2 diabetes, and some cancers"
+        explanation: Academy position statement confirming diabetes risk reduction
+
+  - name: Colorectal Cancer
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses suggest an inverse association between fiber intake and
+      colorectal cancer risk, possibly through effects on gut transit time,
+      dilution of carcinogens, and production of protective SCFAs.
+    mic_references:
+      - 14
+
+  - name: Constipation
+    disease_term:
+      preferred_term: constipation
+      term:
+        id: MONDO:0002261
+        label: constipation
+    relationship_type: THERAPEUTIC
+    description: |
+      Certain fibers are effective for treating chronic idiopathic constipation.
+      Psyllium and coarse wheat bran increase stool frequency and improve
+      consistency. Fermented fibers (inulin) show no laxative benefit.
+    mic_references:
+      - 36
+      - 37
+
+food_sources:
+  - name: Navy beans
+    food_term:
+      preferred_term: navy bean
+      term:
+        id: FOODON:00002055
+        label: navy bean food product
+    amount: "9.6 g"
+    serving_size: "1/2 cup cooked"
+    notes: Excellent source of both soluble and insoluble fiber
+  - name: Oat bran
+    food_term:
+      preferred_term: oat
+      term:
+        id: FOODON:00003429
+        label: oat
+    amount: "7.2 g"
+    serving_size: "1/2 cup dry"
+    notes: Rich in beta-glucan soluble fiber
+  - name: All-bran cereal
+    food_term:
+      preferred_term: bran cereal
+    amount: "19.5 g"
+    serving_size: "1/2 cup"
+    notes: One of the most concentrated fiber sources
+  - name: Almonds
+    food_term:
+      preferred_term: almond
+      term:
+        id: FOODON:00003523
+        label: almond (whole)
+    amount: "3.5 g"
+    serving_size: "1 oz"
+  - name: Prunes
+    food_term:
+      preferred_term: prune
+      term:
+        id: FOODON:00003205
+        label: prune
+    amount: "6.2 g"
+    serving_size: "1/2 cup"
+    notes: Also contains sorbitol which adds to laxative effect
+
+recommendations:
+  ai:
+    - population: men 19-50 years
+      amount: "38 g/day"
+    - population: women 19-50 years
+      amount: "25 g/day"
+    - population: men 51+ years
+      amount: "30 g/day"
+    - population: women 51+ years
+      amount: "21 g/day"
+    - population: pregnancy
+      amount: "28 g/day"
+    - population: lactation
+      amount: "29 g/day"
+  notes: |
+    The Adequate Intake is based on 14 g fiber per 1,000 kcal, derived from
+    research demonstrating protection against coronary heart disease. The mean
+    intake in the United States is only 17 g/day, with only 5% of the population
+    meeting the AI.
+
+toxicity:
+  name: Fiber Safety
+  description: |
+    Dietary fiber from food sources is generally safe. Abrupt increases in fiber
+    intake may cause gastrointestinal symptoms including cramping, bloating, and
+    gas. Gradual increases with adequate fluid intake are recommended.
+  adverse_effects:
+    - name: Gastrointestinal discomfort
+      description: Bloating, cramping, and gas with rapid fiber increases
+    - name: Intestinal obstruction
+      description: Rare cases with very high wheat bran intake, mainly in those with impaired motility
+
+references:
+  - reference: PMID:26514720
+    title: "Position of the Academy of Nutrition and Dietetics: Health Implications of Dietary Fiber"
+  - reference: PMID:10359388
+    title: "Long-term intake of dietary fiber and decreased risk of coronary heart disease among women"

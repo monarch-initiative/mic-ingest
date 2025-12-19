@@ -1,0 +1,138 @@
+name: Garlic
+nutrient_term:
+  preferred_term: garlic
+  description: Allium sativum L., a culinary and medicinal plant rich in organosulfur compounds
+  term:
+    id: FOODON:00001895
+    label: garlic food product
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/garlic
+alternate_names:
+  - Allium sativum
+description: |
+  Garlic (Allium sativum L.) is a particularly rich source of organosulfur compounds,
+  which are currently under investigation for their potential to prevent and treat
+  disease. The two main classes of organosulfur compounds found in whole garlic cloves
+  are L-cysteine sulfoxides and γ-glutamyl-L-cysteine peptides. Crushing or chopping
+  garlic releases an enzyme called alliinase that catalyzes the formation of allicin
+  from S-allyl-L-cysteine sulfoxide (Alliin). Allicin rapidly breaks down to form a
+  variety of organosulfur compounds.
+
+functions:
+  - name: Antioxidant Activity
+    description: |
+      Garlic-derived organosulfur compounds can enhance the activity of antioxidant
+      enzymes through activation of the Nrf2-dependent pathway, which upregulates
+      glutathione synthesis and other Phase II detoxification enzymes.
+    mic_references:
+      - 19
+      - 22
+
+  - name: Anti-inflammatory Activity
+    description: |
+      Preclinical studies have shown that garlic organosulfur compounds can inhibit
+      NF-kB-mediated inflammatory pathways and reduce production of pro-inflammatory
+      cytokines.
+    mic_references:
+      - 30
+      - 31
+
+  - name: Cardiovascular Protection
+    description: |
+      Garlic compounds may protect against cardiovascular disease through multiple
+      mechanisms including antioxidant effects, anti-inflammatory activity, inhibition
+      of platelet aggregation, and reduction of serum lipids.
+    mic_references:
+      - 12
+      - 33
+      - 34
+
+disease_associations:
+  - name: Garlic and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Randomized controlled trials suggest that garlic supplementation modestly improves
+      serum lipid profiles in individuals with elevated serum cholesterol and reduces
+      blood pressure in hypertensive subjects, at least in the short term. However, it
+      is not known whether garlic supplementation can help prevent cardiovascular disease.
+    population_context: adults with elevated cholesterol or hypertension
+    mic_references:
+      - 47
+      - 48
+      - 54
+      - 57
+
+  - name: Garlic and Gastric Cancer
+    disease_term:
+      preferred_term: gastric cancer
+      term:
+        id: MONDO:0001056
+        label: gastric cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Early epidemiological studies suggested an inverse association between garlic
+      consumption and gastric cancer risk. However, more recent prospective cohort
+      studies and meta-analyses have not confirmed this association. The evidence
+      does not currently support an association between high garlic intake and
+      prevention of gastric cancer.
+    population_context: general adult population
+    mic_references:
+      - 69
+      - 70
+      - 71
+
+  - name: Garlic and Colorectal Cancer
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Current evidence from observational studies does not support an association
+      between high intakes of garlic and prevention of colorectal cancer. Meta-analyses
+      of prospective cohort studies have shown inconsistent results.
+    population_context: general adult population
+    mic_references:
+      - 76
+      - 77
+      - 78
+
+drug_interactions:
+  - name: Garlic and Anticoagulants
+    drug_term:
+      preferred_term: anticoagulant
+    description: |
+      Garlic may have antiplatelet properties that could increase bleeding risk when
+      combined with anticoagulant medications. Patients taking warfarin or other
+      anticoagulants should use caution with garlic supplements.
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    mic_references:
+      - 97
+      - 98
+
+toxicity:
+  name: Garlic Safety
+  description: |
+    Garlic is generally recognized as safe when consumed in amounts typically found
+    in foods. Higher doses from supplements may cause adverse effects including
+    gastrointestinal discomfort, body odor, and breath odor. Topical application
+    of raw garlic may cause skin irritation or burns.
+  mic_references:
+    - 89
+    - 90
+
+notes: |
+  Several different types of garlic supplements are available commercially, and each
+  type provides a different profile of organosulfur compounds depending on how it was
+  processed. Aged garlic extract, garlic oil, and garlic powder supplements have
+  different compositions and may have different biological effects.

@@ -1,0 +1,70 @@
+name: Glycemic Index and Glycemic Load
+nutrient_term:
+  preferred_term: glycemic index and glycemic load
+  description: Measures of the blood glucose-raising potential of carbohydrate-containing foods
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/glycemic-index-glycemic-load
+alternate_names:
+  - GI
+  - GL
+  - Glycemic Index
+  - Glycemic Load
+description: |
+  The glycemic index (GI) is a measure of the blood glucose-raising potential of the
+  carbohydrate content of a food compared to a reference food (generally pure glucose).
+  Carbohydrate-containing foods can be classified as high- (≥70), moderate- (56-69),
+  or low-GI (≤55) relative to pure glucose (GI=100). The glycemic load (GL) is obtained
+  by multiplying the quality of carbohydrate in a given food (GI) by the amount of
+  carbohydrate in a serving of that food.
+
+disease_associations:
+  - name: Glycemic Index/Load and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Prospective cohort studies found high-GI or -GL diets to be associated with
+      a higher risk of type 2 diabetes mellitus. Lowering the GL of the diet may
+      be an effective method to improve glycemic control in individuals with type 2
+      diabetes mellitus.
+    population_context: general adult population
+    mic_references:
+      - 12
+      - 13
+      - 14
+
+  - name: Glycemic Index/Load and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Prospective cohort studies found high-GI or -GL diets to be associated with
+      a higher risk of cardiovascular disease. Low-GI/GL diets result in beneficial
+      effects on metabolic markers associated with CVD risk.
+    population_context: general adult population
+    mic_references:
+      - 18
+      - 19
+
+recommendations:
+  notes: |
+    Lowering dietary GL can be achieved by increasing the consumption of whole grains,
+    nuts, legumes, fruit, and non-starchy vegetables, and decreasing intakes of moderate-
+    and high-GI foods like potatoes, white rice, white bread, and sugary foods.
+    Several dietary intervention studies found that low-GI/GL diets were as effective
+    as conventional, low-fat diets in reducing body weight.
+
+notes: |
+  Consumption of high-GI foods causes a sharp increase in postprandial blood glucose
+  concentration that declines rapidly, whereas consumption of low-GI foods results in
+  a lower blood glucose concentration that declines gradually. Meta-analyses of
+  observational studies have found little-to-no evidence of an association between
+  high dietary GI and GL and risk of cancer.

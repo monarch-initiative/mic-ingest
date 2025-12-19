@@ -1,0 +1,224 @@
+name: Coenzyme Q10
+nutrient_term:
+  preferred_term: coenzyme Q10
+  term:
+    id: CHEBI:46245
+    label: coenzyme Q10
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/coenzyme-Q10
+alternate_names:
+  - CoQ10
+  - Ubiquinone
+  - Ubiquinol
+  - Ubidecarenone
+description: |
+  Coenzyme Q10 (CoQ10) is a lipid-soluble compound synthesized in all cells that
+  plays a central role in mitochondrial oxidative phosphorylation and ATP production.
+  It also functions as an important lipid-soluble antioxidant in cell membranes and
+  lipoproteins. Tissue levels of CoQ10 decline with age. The average dietary intake
+  is about 3-6 mg/day from meat, poultry, fish, and oils.
+
+functions:
+  - name: Mitochondrial Electron Transport
+    description: |
+      Coenzyme Q10 is an essential component of the mitochondrial electron transport
+      chain, where it transfers electrons from Complex I and II to Complex III.
+      This process is coupled to ATP synthesis through oxidative phosphorylation.
+    biological_processes:
+      - preferred_term: ATP biosynthetic process
+        term:
+          id: GO:0006754
+          label: ATP biosynthetic process
+      - preferred_term: oxidative phosphorylation
+        term:
+          id: GO:0006119
+          label: oxidative phosphorylation
+    mic_references:
+      - 2
+    evidence:
+      - reference: PMID:11771674
+        supports: SUPPORT
+        snippet: "Coenzyme Q is well defined as a crucial component of the oxidative phosphorylation process in mitochondria which converts the energy in carbohydrates and fatty acids into ATP to drive cellular machinery and synthesis"
+        explanation: Directly confirms CoQ10's role in oxidative phosphorylation and ATP production
+
+  - name: Antioxidant Function
+    description: |
+      In its reduced form (ubiquinol), CoQ10 acts as a potent lipid-soluble antioxidant,
+      protecting cell membranes and lipoproteins from oxidative damage. It can also
+      regenerate other antioxidants such as vitamin E (tocopherol) and vitamin C.
+    mic_references:
+      - 5
+      - 6
+      - 8
+    evidence:
+      - reference: PMID:11771674
+        supports: SUPPORT
+        snippet: "The presence of high concentrations of quinol in all membranes provides a basis for antioxidant action either by direct reaction with radicals or by regeneration of tocopherol and ascorbate"
+        explanation: Confirms antioxidant function and vitamin E regeneration
+
+  - name: Lysosomal Function
+    description: |
+      CoQ10 participates in proton transfer reactions in lysosomal membranes,
+      contributing to lysosomal acidification and function.
+    mic_references:
+      - 3
+
+deficiency:
+  name: Coenzyme Q10 Deficiency
+  description: |
+    Primary CoQ10 deficiency is a rare autosomal recessive disorder caused by
+    mutations in genes involved in CoQ10 biosynthesis. Secondary deficiency may
+    occur with aging, statin therapy (which inhibits the mevalonate pathway used
+    in CoQ10 synthesis), and certain mitochondrial disorders.
+  phenotypes:
+    - name: Cerebellar ataxia
+      phenotype_term:
+        preferred_term: ataxia
+        term:
+          id: HP:0001251
+          label: Ataxia
+      frequency: FREQUENT
+      context: In primary CoQ10 deficiency
+      mic_references:
+        - 26
+        - 28
+    - name: Myopathy
+      phenotype_term:
+        preferred_term: myopathy
+        term:
+          id: HP:0003198
+          label: Myopathy
+      frequency: FREQUENT
+      context: In primary CoQ10 deficiency
+      mic_references:
+        - 27
+    - name: Nephrotic syndrome
+      phenotype_term:
+        preferred_term: nephrotic syndrome
+        term:
+          id: HP:0000100
+          label: Nephrotic syndrome
+      frequency: OCCASIONAL
+      context: In primary CoQ10 deficiency
+      mic_references:
+        - 26
+  at_risk_groups:
+    - name: Primary CoQ10 deficiency
+      description: |
+        Rare genetic disorder caused by mutations in COQ genes affecting
+        CoQ10 biosynthesis. Responds to high-dose CoQ10 supplementation.
+      mic_references:
+        - 26
+        - 30
+    - name: Statin users
+      description: |
+        HMG-CoA reductase inhibitors (statins) may reduce CoQ10 synthesis
+        by inhibiting the mevalonate pathway. Whether this contributes to
+        statin-associated muscle symptoms is debated.
+      mic_references:
+        - 29
+    - name: Elderly individuals
+      description: |
+        Tissue CoQ10 levels decline with age, particularly in heart muscle.
+      mic_references:
+        - 12
+        - 13
+
+disease_associations:
+  - name: Congestive Heart Failure
+    disease_term:
+      preferred_term: congestive heart failure
+      term:
+        id: MONDO:0005009
+        label: congestive heart failure
+    relationship_type: THERAPEUTIC
+    description: |
+      CoQ10 supplementation may be a useful adjunct to conventional therapy for
+      heart failure. Meta-analyses suggest modest improvements in ejection fraction
+      and symptoms, though evidence is mixed.
+    mic_references:
+      - 33
+      - 34
+
+  - name: Statin-Associated Myopathy
+    disease_term:
+      preferred_term: myopathy
+      term:
+        id: MONDO:0005336
+        label: myopathy
+    relationship_type: THERAPEUTIC
+    description: |
+      CoQ10 supplementation has been proposed to prevent or treat statin-associated
+      muscle symptoms, though meta-analyses of randomized trials have not consistently
+      demonstrated benefit.
+    mic_references:
+      - 29
+
+  - name: Primary CoQ10 Deficiency
+    disease_term:
+      preferred_term: coenzyme Q10 deficiency
+      term:
+        id: MONDO:0015559
+        label: primary coenzyme Q10 deficiency
+    relationship_type: THERAPEUTIC
+    description: |
+      High-dose CoQ10 supplementation (5-50 mg/kg/day) is the treatment of choice
+      for primary CoQ10 deficiency and can dramatically improve symptoms if
+      started early.
+    mic_references:
+      - 26
+      - 28
+      - 30
+
+food_sources:
+  - name: Beef
+    food_term:
+      preferred_term: beef
+      term:
+        id: FOODON:00001041
+        label: beef (ground, raw)
+    notes: One of the richest dietary sources
+  - name: Chicken
+    food_term:
+      preferred_term: chicken
+      term:
+        id: FOODON:00001082
+        label: chicken food product
+    notes: Good source of CoQ10
+  - name: Soybean oil
+    food_term:
+      preferred_term: soybean oil
+      term:
+        id: FOODON:03301410
+        label: soybean oil
+    notes: Plant-based source
+  - name: Peanuts
+    food_term:
+      preferred_term: peanut
+      term:
+        id: FOODON:00003521
+        label: peanut (whole, raw)
+    notes: Contains modest amounts
+
+recommendations:
+  notes: |
+    No dietary reference intake has been established for CoQ10 because it is
+    synthesized endogenously. Average dietary intake is 3-6 mg/day. Supplemental
+    doses in clinical studies typically range from 100-300 mg/day for general use,
+    and higher doses (5-50 mg/kg/day) for primary CoQ10 deficiency.
+
+toxicity:
+  name: Coenzyme Q10 Safety
+  description: |
+    CoQ10 appears to be very safe with no significant adverse effects reported
+    at doses up to 3,000 mg/day. Gastrointestinal symptoms may occur at doses
+    above 200 mg/day. CoQ10 may reduce the effectiveness of warfarin.
+  adverse_effects:
+    - name: Gastrointestinal symptoms
+      description: Nausea, diarrhea, and appetite suppression with high doses
+    - name: Drug interaction with warfarin
+      description: May reduce anticoagulant effect due to structural similarity to vitamin K
+
+references:
+  - reference: PMID:11771674
+    title: "Biochemical functions of coenzyme Q10"

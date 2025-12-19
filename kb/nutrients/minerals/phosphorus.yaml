@@ -1,0 +1,423 @@
+name: Phosphorus
+nutrient_term:
+  preferred_term: phosphorus
+  term:
+    id: CHEBI:28659
+    label: phosphorus atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/phosphorus
+alternate_names:
+  - P
+  - Phosphate
+description: |
+  Phosphorus is an essential structural component of cell membranes and nucleic acids
+  and is involved in several biological processes, including bone mineralization, energy
+  production, cell signaling through phosphorylation reactions, and regulation of acid-base
+  homeostasis. Dietary phosphorus deficiency is uncommon because phosphorus is widespread
+  in food. High serum phosphorus concentrations have been associated with increased
+  cardiovascular disease risk, particularly in individuals with kidney disease.
+
+functions:
+  - name: Bone Mineralization
+    description: |
+      Phosphorus is a major structural component of bone in the form of a calcium
+      phosphate salt called hydroxyapatite. Along with calcium, phosphorus provides
+      the structural framework of the skeleton.
+    biological_processes:
+      - preferred_term: bone mineralization
+        term:
+          id: GO:0030282
+          label: bone mineralization
+    mic_references:
+      - 1
+
+  - name: Energy Production and Storage
+    description: |
+      All energy production and storage are dependent on phosphorylated compounds,
+      such as adenosine triphosphate (ATP) and creatine phosphate. Phosphorus-containing
+      molecules are essential for capturing, storing, and transferring metabolic energy.
+    biological_processes:
+      - preferred_term: ATP metabolism
+        term:
+          id: GO:0046034
+          label: ATP metabolic process
+    mic_references:
+      - 1
+
+  - name: Cell Membrane Structure
+    description: |
+      Phospholipids (e.g., phosphatidylcholine) are major structural components of
+      cell membranes. These phosphorus-containing molecules form the lipid bilayer
+      that defines cell boundaries and organelles.
+    biological_processes:
+      - preferred_term: phospholipid biosynthesis
+        term:
+          id: GO:0008654
+          label: phospholipid biosynthetic process
+    mic_references:
+      - 1
+
+  - name: Nucleic Acid Structure
+    description: |
+      Nucleic acids (DNA and RNA), which are responsible for the storage and transmission
+      of genetic information, are long chains of phosphate-containing molecules. The
+      phosphate backbone is essential for nucleic acid structure and function.
+    mic_references:
+      - 1
+
+  - name: Cell Signaling
+    description: |
+      A number of enzymes, hormones, and cell-signaling molecules depend on phosphorylation
+      for their activation. Protein phosphorylation is a fundamental regulatory mechanism
+      in cells.
+    biological_processes:
+      - preferred_term: protein phosphorylation
+        term:
+          id: GO:0006468
+          label: protein phosphorylation
+    mic_references:
+      - 1
+
+  - name: Oxygen Delivery Regulation
+    description: |
+      The phosphorus-containing molecule 2,3-diphosphoglycerate (2,3-DPG) binds to
+      hemoglobin in red blood cells and regulates oxygen delivery to the tissues
+      of the body.
+    mic_references:
+      - 1
+
+deficiency:
+  name: Phosphorus Deficiency
+  description: |
+    Inadequate phosphorus intake rarely results in abnormally low serum phosphorus
+    levels (hypophosphatemia) because renal reabsorption of phosphorus increases to
+    compensate for decreased intake. Dietary phosphorus deficiency is usually seen
+    only in cases of near-total starvation. Effects of hypophosphatemia include loss
+    of appetite, anemia, muscle weakness, bone pain, rickets (in children), osteomalacia
+    (in adults), increased susceptibility to infection, numbness and tingling of
+    extremities, difficulty walking, and respiratory failure. Severe hypophosphatemia
+    may be life threatening.
+  phenotypes:
+    - name: Muscle weakness
+      phenotype_term:
+        preferred_term: muscle weakness
+        term:
+          id: HP:0001324
+          label: Muscle weakness
+      frequency: FREQUENT
+      context: Moderate to severe hypophosphatemia
+      mic_references:
+        - 4
+
+    - name: Rickets
+      phenotype_term:
+        preferred_term: rickets
+        term:
+          id: HP:0002748
+          label: Rickets
+      frequency: OCCASIONAL
+      context: In children with phosphorus deficiency
+      mic_references:
+        - 4
+
+    - name: Osteomalacia
+      phenotype_term:
+        preferred_term: osteomalacia
+        term:
+          id: HP:0002749
+          label: Osteomalacia
+      frequency: OCCASIONAL
+      context: In adults with phosphorus deficiency
+      mic_references:
+        - 4
+
+  at_risk_groups:
+    - name: Patients with near-total starvation
+      description: |
+        Dietary phosphorus deficiency is usually seen only in cases of near-total
+        starvation or anorexia
+      mic_references:
+        - 4
+
+    - name: Recovering diabetic ketoacidosis patients
+      description: |
+        Diabetics recovering from an episode of diabetic ketoacidosis are at risk
+      mic_references:
+        - 4
+
+    - name: Chronic alcoholics
+      description: |
+        Alcoholics are at risk for hypophosphatemia
+      mic_references:
+        - 4
+
+    - name: Patients on refeeding regimens
+      description: |
+        Starving or anorexic patients on refeeding regimens that are high in calories
+        but too low in phosphorus
+      mic_references:
+        - 4
+
+    - name: Inherited phosphorus wasting disorders
+      description: |
+        Hypophosphatemia caused by inherited disorders of phosphorus homeostasis linked
+        to elevated urinary excretion or impaired renal reabsorption
+      mic_references:
+        - 5
+
+  mic_references:
+    - 4
+    - 5
+
+toxicity:
+  name: Phosphorus Toxicity
+  description: |
+    Hyperphosphatemia (elevated serum phosphorus) is most often associated with
+    excretion failure in patients with chronic kidney disease. When kidney function
+    is only 20% of normal, even normal phosphorus intakes may lead to hyperphosphatemia.
+    High serum phosphorus concentrations have been associated with increased rates
+    of cardiovascular disease and mortality in subjects with or without kidney disease.
+    Abnormal deposition of calcium phosphate in soft tissues may predispose individuals
+    to vascular dysfunction. The Tolerable Upper Intake Level (UL) for adults is
+    4,000 mg/day, though daily intakes above the RDA have been linked to increased
+    all-cause mortality risk.
+  adverse_effects:
+    - name: Vascular calcification
+      description: |
+        Abnormal deposition of calcium phosphate in soft tissues may predispose
+        to vascular dysfunction and cardiovascular disease
+      severity: moderate
+    - name: Cardiovascular disease risk
+      description: |
+        High serum phosphorus within the normal range has been associated with
+        increased cardiovascular disease risk
+      severity: moderate
+  mic_references:
+    - 1
+    - 9
+    - 14
+    - 15
+
+food_sources:
+  - name: Dairy foods
+    food_term:
+      preferred_term: dairy products
+    amount: "variable"
+    serving_size: "varies"
+    notes: Particularly rich source
+    mic_references:
+      - 7
+
+  - name: Meat
+    food_term:
+      preferred_term: meat
+    amount: "variable"
+    serving_size: "varies"
+    notes: Particularly rich source
+    mic_references:
+      - 7
+
+  - name: Fish
+    food_term:
+      preferred_term: fish
+    amount: "variable"
+    serving_size: "varies"
+    notes: Particularly rich source
+    mic_references:
+      - 7
+
+  - name: Cereal products
+    food_term:
+      preferred_term: cereal
+    amount: "variable"
+    serving_size: "varies"
+    notes: Particularly rich source
+    mic_references:
+      - 7
+
+  - name: Cola soft drinks
+    food_term:
+      preferred_term: cola
+    amount: "variable"
+    serving_size: "varies"
+    notes: Contains phosphoric acid
+    mic_references:
+      - 8
+
+drug_interactions:
+  - name: Aluminum-Containing Antacids and Phosphorus
+    description: |
+      Aluminum-containing antacids reduce the absorption of dietary phosphorus by
+      forming aluminum phosphate, which is unabsorbable. When consumed in high doses,
+      they can produce hypophosphatemia and aggravate phosphorus deficiency.
+    drug_term:
+      preferred_term: aluminum antacid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 37
+
+  - name: Potassium Supplements and Phosphorus
+    description: |
+      Potassium supplements or potassium-sparing diuretics taken together with
+      phosphorus supplements may result in high blood levels of potassium
+      (hyperkalemia), which can cause life-threatening heart rhythm abnormalities.
+    drug_term:
+      preferred_term: potassium supplement
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 37
+
+  - name: Vitamin D and Phosphorus
+    description: |
+      Excessively high doses of 1,25-dihydroxyvitamin D, the active form of vitamin D,
+      or its analogs, may result in hyperphosphatemia.
+    drug_term:
+      preferred_term: vitamin D analog
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 6
+
+nutrient_interactions:
+  - name: Calcium and Phosphorus
+    description: |
+      A low calcium-to-phosphorus intake ratio may be detrimental to bone health.
+      High serum phosphorus can impair synthesis of active vitamin D, reduce blood
+      calcium, and lead to increased PTH release. When dietary calcium is adequate,
+      phosphorus-rich diets do not appear to adversely affect bone.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 8
+      - 33
+      - 34
+
+disease_associations:
+  - name: Cardiovascular Disease
+    description: |
+      High serum phosphorus within the normal range (2.5-4.5 mg/dL) has been associated
+      with increased incidence of cardiovascular disease in individuals with normal
+      kidney function. High-normal serum phosphorus (3.5 mg/dL or above) has been
+      linked to greater cardiovascular risk, heart failure, and left ventricular
+      hypertrophy. Vascular calcification is thought to contribute to this association.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Both general population and those with kidney disease
+    mic_references:
+      - 16
+      - 17
+      - 19
+      - 20
+      - 21
+
+  - name: Chronic Kidney Disease Progression
+    description: |
+      Serum phosphorus concentrations equal to or above 4 mg/dL were associated with
+      doubling of risk of developing incident CKD and end-stage renal disease in
+      individuals free of renal disease at study inception. Hyperphosphatemia is
+      common in individuals with impaired kidney function.
+    disease_term:
+      preferred_term: chronic kidney disease
+      term:
+        id: MONDO:0005300
+        label: chronic kidney disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: General population; accelerated progression in those with CKD
+    mic_references:
+      - 9
+      - 15
+      - 18
+      - 23
+
+  - name: Osteoporosis
+    description: |
+      A low calcium-to-phosphorus intake ratio may be detrimental to bone health,
+      especially in women at increased risk for osteoporosis. Substitution of
+      phosphate-containing soft drinks for milk and calcium-rich foods may represent
+      a serious risk to bone health.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: When calcium-to-phosphorus ratio is low
+    mic_references:
+      - 33
+      - 35
+      - 36
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "100 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "275 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "460 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "500 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "1,250 mg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "1,250 mg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "700 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (18 and younger)
+      amount: "1,250 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (19+)
+      amount: "700 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (18 and younger)
+      amount: "1,250 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (19+)
+      amount: "700 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The RDA for phosphorus is meant to sustain serum phosphorus concentrations within
+    the physiologic range of 2.5 to 4.5 mg/dL. The Tolerable Upper Intake Level (UL)
+    for adults is 4,000 mg/day. Average daily intakes in the US are 1,602 mg in men
+    and 1,128 mg in women, well above the RDA. Dietary phosphorus from food additives
+    is not always included in databases, so total intake may be underestimated by
+    more than 20%.
+
+bioavailability:
+  description: |
+    The bioavailability of phosphorus from food is usually very high, with the exception
+    of phytate phosphorus in plant sources such as grains, legumes, and seeds, which
+    is poorly digested. Phosphorus from animal sources is more bioavailable than from
+    plant sources. Phosphorus from food additives is highly bioavailable.
+  mic_references:
+    - 7
+    - 8
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Phosphorus. Phosphorus is found in most foods and
+  deficiency is rare. High serum phosphorus is associated with cardiovascular
+  disease risk. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains approximately 40
+  references.

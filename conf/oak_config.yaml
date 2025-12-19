@@ -1,0 +1,50 @@
+# OAK Configuration for MIC Knowledge Base
+# Maps ontology prefixes to OAK adapters for term validation
+
+adapters:
+  # Nutrients and chemicals
+  CHEBI:
+    adapter: sqlite:obo:chebi
+
+  # Foods
+  FOODON:
+    adapter: sqlite:obo:foodon
+
+  # Phenotypes
+  HP:
+    adapter: sqlite:obo:hp
+
+  # Biological processes and cellular components
+  GO:
+    adapter: sqlite:obo:go
+
+  # Diseases
+  MONDO:
+    adapter: sqlite:obo:mondo
+
+  # Anatomy
+  UBERON:
+    adapter: sqlite:obo:uberon
+
+  # Cell types
+  CL:
+    adapter: sqlite:obo:cl
+
+  # Genes
+  HGNC:
+    adapter: sqlite:obo:hgnc
+
+  # Taxonomy
+  NCBITaxon:
+    adapter: sqlite:obo:ncbitaxon
+
+# Validation settings
+validation:
+  # Check that labels match canonical ontology labels
+  check_labels: true
+
+  # Allow missing terms (report but don't fail)
+  allow_missing: false
+
+  # Case-sensitive label matching
+  case_sensitive: false

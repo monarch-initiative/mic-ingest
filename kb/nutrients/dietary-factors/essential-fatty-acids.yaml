@@ -1,0 +1,275 @@
+name: Essential Fatty Acids
+nutrient_term:
+  preferred_term: essential fatty acid
+  term:
+    id: CHEBI:59549
+    label: essential fatty acid
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/other-nutrients/essential-fatty-acids
+alternate_names:
+  - EFAs
+  - Polyunsaturated fatty acids
+  - PUFAs
+description: |
+  Essential fatty acids are polyunsaturated fatty acids that cannot be synthesized
+  de novo by humans and must be obtained from the diet. The two essential fatty acids
+  are linoleic acid (LA, an omega-6 fatty acid) and alpha-linolenic acid (ALA, an
+  omega-3 fatty acid). These serve as precursors for longer-chain polyunsaturated
+  fatty acids including arachidonic acid (AA), eicosapentaenoic acid (EPA), and
+  docosahexaenoic acid (DHA), which have important roles in inflammation,
+  cell membrane structure, and neural function.
+
+functions:
+  - name: Cell Membrane Structure
+    description: |
+      Essential fatty acids and their long-chain derivatives are important structural
+      components of cell membranes. DHA is particularly concentrated in retinal and
+      brain tissue, where it affects membrane fluidity and function.
+    mic_references:
+      - 15
+      - 20
+      - 21
+
+  - name: Eicosanoid Precursors
+    description: |
+      Omega-6 and omega-3 fatty acids serve as precursors for eicosanoids, which
+      are bioactive lipid mediators including prostaglandins, thromboxanes, and
+      leukotrienes. These regulate inflammation, blood clotting, and immune responses.
+    biological_processes:
+      - preferred_term: inflammatory response
+        term:
+          id: GO:0006954
+          label: inflammatory response
+    mic_references:
+      - 16
+      - 17
+    evidence:
+      - reference: PMID:23668691
+        supports: SUPPORT
+        snippet: "Fatty acid-induced modifications in membrane order and in the availability of substrates for eicosanoid synthesis are long-standing mechanisms that are considered important in explaining the effects observed"
+        explanation: Confirms role of fatty acids as eicosanoid precursors
+
+  - name: Resolution of Inflammation
+    description: |
+      EPA and DHA serve as precursors for specialized pro-resolving lipid mediators
+      (SPMs) including resolvins and protectins, which actively promote the resolution
+      of inflammation.
+    biological_processes:
+      - preferred_term: resolution of inflammation
+        term:
+          id: GO:0050727
+          label: regulation of inflammatory response
+    mic_references:
+      - 28
+      - 29
+    evidence:
+      - reference: PMID:23668691
+        supports: SUPPORT
+        snippet: "the description of an entirely new family of lipid mediators, resolvins and protectins that have anti-inflammatory actions and are critical to the resolution of inflammation"
+        explanation: Confirms EPA and DHA as precursors for pro-resolving mediators
+
+  - name: Neural Development and Function
+    description: |
+      DHA is essential for normal brain and retinal development. It accumulates
+      in the brain during fetal development and early infancy and is critical for
+      neurodevelopment and visual function.
+    biological_processes:
+      - preferred_term: neuron development
+        term:
+          id: GO:0048666
+          label: neuron development
+    mic_references:
+      - 22
+      - 24
+
+  - name: Gene Expression Regulation
+    description: |
+      Omega-3 fatty acids regulate gene expression through effects on transcription
+      factors, including sterol regulatory element binding proteins (SREBPs) and
+      peroxisome proliferator-activated receptors (PPARs).
+    mic_references:
+      - 14
+      - 31
+      - 33
+
+deficiency:
+  name: Essential Fatty Acid Deficiency
+  description: |
+    Essential fatty acid deficiency is rare in healthy individuals but can occur
+    in patients receiving fat-free parenteral nutrition, those with severe fat
+    malabsorption, or in cases of malnutrition. A plasma triene:tetraene ratio
+    (eicosatrienoic acid to arachidonic acid) greater than 0.2 indicates deficiency.
+  phenotypes:
+    - name: Dermatitis
+      phenotype_term:
+        preferred_term: eczematoid dermatitis
+        term:
+          id: HP:0000964
+          label: Eczematoid dermatitis
+      frequency: VERY_FREQUENT
+      mic_references:
+        - 35
+      evidence:
+        - reference: PMID:9665106
+          supports: SUPPORT
+          snippet: "Home parenteral nutrition (HPN), initiated in patients with severe malabsorption or decreased oral intake, may exhaust stores of essential fatty acids and cause clinical manifestations, mainly dermatitis"
+          explanation: Confirms dermatitis as primary clinical manifestation of EFA deficiency
+    - name: Growth retardation
+      phenotype_term:
+        preferred_term: growth retardation
+        term:
+          id: HP:0001510
+          label: Growth delay
+      frequency: FREQUENT
+      mic_references:
+        - 36
+    - name: Poor wound healing
+      phenotype_term:
+        preferred_term: impaired wound healing
+        term:
+          id: HP:0001058
+          label: Poor wound healing
+      frequency: FREQUENT
+      mic_references:
+        - 35
+    - name: Increased susceptibility to infection
+      phenotype_term:
+        preferred_term: recurrent infections
+        term:
+          id: HP:0002719
+          label: Recurrent infections
+      frequency: FREQUENT
+      mic_references:
+        - 35
+  at_risk_groups:
+    - name: Patients on parenteral nutrition
+      description: |
+        Patients receiving long-term fat-free parenteral nutrition are at high
+        risk for EFA deficiency.
+      mic_references:
+        - 35
+        - 37
+    - name: Patients with fat malabsorption
+      description: |
+        Conditions causing fat malabsorption (cystic fibrosis, short bowel syndrome,
+        cholestatic liver disease) increase risk of EFA deficiency.
+      mic_references:
+        - 39
+        - 40
+    - name: Infants and children with malnutrition
+      description: |
+        Severely malnourished infants and children may develop EFA deficiency.
+      mic_references:
+        - 36
+
+food_sources:
+  - name: Salmon
+    food_term:
+      preferred_term: salmon
+      term:
+        id: FOODON:00002075
+        label: pacific salmon food product
+    notes: Rich source of EPA and DHA
+  - name: Flaxseed oil
+    food_term:
+      preferred_term: flaxseed oil
+      term:
+        id: FOODON:00001088
+        label: flaxseed oil
+    amount: "7.3 g ALA"
+    serving_size: "1 tablespoon"
+    notes: Richest source of alpha-linolenic acid
+  - name: Walnuts
+    food_term:
+      preferred_term: walnut
+      term:
+        id: FOODON:00003534
+        label: walnut (whole)
+    notes: Good plant source of ALA
+  - name: Safflower oil
+    food_term:
+      preferred_term: safflower oil
+      term:
+        id: FOODON:03306867
+        label: safflower oil
+    amount: "10.1 g LA"
+    serving_size: "1 tablespoon"
+    notes: Rich source of linoleic acid
+
+disease_associations:
+  - name: Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Epidemiological studies have established an inverse relationship between
+      omega-3 fatty acid intake and cardiovascular disease mortality. EPA and DHA
+      have anti-inflammatory, anti-arrhythmic, and hypolipidemic properties that
+      may confer cardioprotection.
+    mic_references:
+      - 5
+    evidence:
+      - reference: PMID:22904344
+        supports: SUPPORT
+        snippet: "Epidemiological studies on Greenland Inuits in the 1970s and subsequent human studies have established an inverse relationship between the ingestion of omega-3 fatty acids, blood levels of C(20-22) omega 3 PUFA, and mortality associated with cardiovascular disease (CVD)"
+        explanation: Confirms inverse relationship between omega-3 intake and CVD mortality
+
+  - name: Preterm Birth
+    disease_term:
+      preferred_term: preterm birth
+      term:
+        id: MONDO:0025530
+        label: premature birth
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      DHA supplementation during pregnancy may reduce the risk of early preterm
+      birth (before 34 weeks gestation) and very low birth weight.
+    population_context: pregnant women
+    mic_references:
+      - 58
+      - 59
+
+nutrient_interactions:
+  - name: Omega-6 to Omega-3 Ratio
+    nutrient_term:
+      preferred_term: linoleic acid
+      term:
+        id: CHEBI:17351
+        label: linoleic acid
+    interaction_type: COMPETES_FOR_TRANSPORT
+    description: |
+      Omega-6 and omega-3 fatty acids compete for the same desaturase and elongase
+      enzymes. High omega-6 intake can reduce conversion of ALA to EPA and DHA.
+      The typical Western diet has a high omega-6 to omega-3 ratio.
+    mic_references:
+      - 4
+      - 10
+
+recommendations:
+  ai:
+    - population: adult men
+      amount: "17 g/day linoleic acid"
+    - population: adult women
+      amount: "12 g/day linoleic acid"
+    - population: adult men
+      amount: "1.6 g/day alpha-linolenic acid"
+    - population: adult women
+      amount: "1.1 g/day alpha-linolenic acid"
+  notes: |
+    No specific dietary reference intakes have been established for EPA and DHA.
+    However, 200-250 mg/day DHA is commonly recommended for pregnant and lactating
+    women. The American Heart Association recommends eating fatty fish at least
+    twice per week for cardiovascular benefits.
+
+references:
+  - reference: PMID:22904344
+    title: "Omega-3 fatty acid supplementation and cardiovascular disease"
+  - reference: PMID:23668691
+    title: "n-3 fatty acids, inflammation and immunity: new mechanisms to explain old actions"
+  - reference: PMID:9665106
+    title: "Essential fatty acid deficiency in patients receiving home parenteral nutrition"

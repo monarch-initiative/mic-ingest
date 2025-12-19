@@ -1,0 +1,321 @@
+name: Molybdenum
+nutrient_term:
+  preferred_term: molybdenum
+  term:
+    id: CHEBI:28685
+    label: molybdenum atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/molybdenum
+alternate_names:
+  - Mo
+description: |
+  Molybdenum is a trace mineral that functions as part of the molybdenum cofactor
+  in the active site of four enzymes in humans: sulfite oxidase, xanthine oxidase,
+  aldehyde oxidase, and mitochondrial amidoxime reducing component. Of these,
+  sulfite oxidase is crucial for human health. Molybdenum deficiency is extremely
+  rare in healthy individuals, but inherited molybdenum cofactor deficiency causes
+  severe neurological dysfunction. The toxicity of molybdenum compounds is relatively
+  low in humans.
+
+functions:
+  - name: Sulfite Oxidase Activity
+    description: |
+      Sulfite oxidase catalyzes the transformation of sulfite to sulfate, a reaction
+      necessary for the metabolism of sulfur-containing amino acids (methionine and
+      cysteine). Sulfite oxidase is crucial for human health. Recent evidence also
+      indicates a role in the reduction of nitrite to nitric oxide.
+    biological_processes:
+      - preferred_term: sulfite oxidation
+        term:
+          id: GO:0019418
+          label: sulfide oxidation
+    mic_references:
+      - 3
+      - 4
+      - 12
+
+  - name: Xanthine Oxidase Activity
+    description: |
+      Xanthine oxidase catalyzes the breakdown of nucleotides (precursors to DNA
+      and RNA) to form uric acid, which contributes to the plasma antioxidant
+      capacity of the blood. Xanthine oxidase also plays a role in the metabolism
+      of drugs and toxins.
+    biological_processes:
+      - preferred_term: purine catabolism
+        term:
+          id: GO:0006145
+          label: purine nucleobase catabolic process
+    mic_references:
+      - 3
+      - 5
+
+  - name: Aldehyde Oxidase Activity
+    description: |
+      Aldehyde oxidase catalyzes hydroxylation reactions involving a number of
+      different molecules with similar chemical structures. It plays a role in
+      the metabolism of drugs and toxins.
+    biological_processes:
+      - preferred_term: drug metabolism
+        term:
+          id: GO:0017144
+          label: drug metabolic process
+    mic_references:
+      - 5
+
+  - name: Mitochondrial Amidoxime Reducing Component
+    description: |
+      mARC forms a three-component enzyme system that catalyzes the detoxification
+      of mutagenic N-hydroxylated bases. It reduces various N-hydroxylated compounds
+      and plays an important role in prodrug metabolism. Recent studies have found
+      a separate function: the reduction of nitrite to nitric oxide.
+    mic_references:
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+
+deficiency:
+  name: Molybdenum Deficiency
+  description: |
+    Acquired molybdenum deficiency is extremely rare. Only one documented case occurred
+    in a patient with Crohn's disease on long-term total parenteral nutrition without
+    molybdenum. The patient developed rapid heart and respiratory rates, headaches,
+    night blindness, and ultimately became comatose. Symptoms resolved with molybdenum
+    supplementation. Inherited molybdenum cofactor deficiency (MocoD) is a rare genetic
+    disorder causing severe neurological dysfunction including cerebral atrophy, mental
+    retardation, intractable seizures, and dislocation of ocular lenses.
+  phenotypes:
+    - name: Seizures
+      phenotype_term:
+        preferred_term: seizures
+        term:
+          id: HP:0001250
+          label: Seizures
+      frequency: FREQUENT
+      context: Intractable seizures in inherited molybdenum cofactor deficiency
+      mic_references:
+        - 28
+
+    - name: Intellectual disability
+      phenotype_term:
+        preferred_term: intellectual disability
+        term:
+          id: HP:0001249
+          label: Intellectual disability
+      frequency: FREQUENT
+      context: Mental retardation in inherited molybdenum cofactor deficiency
+      mic_references:
+        - 28
+
+    - name: Lens dislocation
+      phenotype_term:
+        preferred_term: ectopia lentis
+        term:
+          id: HP:0001083
+          label: Ectopia lentis
+      frequency: FREQUENT
+      context: Dislocation of ocular lenses in MocoD and ISOD
+      mic_references:
+        - 28
+
+  at_risk_groups:
+    - name: Patients on total parenteral nutrition
+      description: |
+        Long-term TPN without molybdenum supplementation can lead to acquired deficiency
+      mic_references:
+        - 27
+
+  mic_references:
+    - 27
+    - 28
+    - 30
+    - 31
+
+toxicity:
+  name: Molybdenum Toxicity
+  description: |
+    The toxicity of molybdenum compounds appears to be relatively low in humans.
+    Increased serum concentrations of uric acid and ceruloplasmin have been reported
+    in occupationally exposed workers. Gout-like symptoms have been reported in a
+    population consuming 10-15 mg of molybdenum from food daily. One case of acute
+    toxicity involved acute psychosis with hallucinations and seizures after taking
+    300-800 mcg/day for 18 days. However, a controlled study found molybdenum intakes
+    up to 1,490 mcg/day for 24 days did not cause serious adverse effects. The
+    Tolerable Upper Intake Level (UL) for adults is 2,000 mcg/day (2 mg/day).
+  adverse_effects:
+    - name: Gout-like symptoms
+      description: |
+        High serum uric acid and gout-like symptoms reported with very high intake
+        (10-15 mg/day from food)
+      severity: mild
+    - name: Neurological symptoms
+      description: |
+        One case report of acute psychosis with hallucinations and seizures after
+        high-dose supplementation
+      severity: moderate
+  mic_references:
+    - 2
+    - 47
+    - 61
+    - 62
+    - 63
+
+food_sources:
+  - name: Legumes
+    food_term:
+      preferred_term: legumes
+    amount: "variable"
+    serving_size: "varies"
+    notes: Richest sources of molybdenum (beans, lentils, peas)
+    mic_references:
+      - 2
+
+  - name: Grain products
+    food_term:
+      preferred_term: grain
+    amount: "variable"
+    serving_size: "varies"
+    notes: Good source
+    mic_references:
+      - 2
+
+  - name: Nuts
+    food_term:
+      preferred_term: nuts
+    amount: "variable"
+    serving_size: "varies"
+    notes: Good source
+    mic_references:
+      - 2
+
+drug_interactions:
+  - name: Acetaminophen and Molybdenum
+    description: |
+      High doses of molybdenum have been found to inhibit the metabolism of
+      acetaminophen in rats; however, it is not known whether this occurs at
+      clinically relevant doses in humans.
+    drug_term:
+      preferred_term: acetaminophen
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: THEORETICAL
+    mic_references:
+      - 64
+
+nutrient_interactions:
+  - name: Copper and Molybdenum
+    description: |
+      An early study reported that molybdenum intakes of 500-1,500 mcg/day increased
+      urinary copper excretion. However, a more recent controlled study found that
+      very high dietary molybdenum intakes (up to 1,500 mcg/day) did not adversely
+      affect copper nutritional status. In ruminants, the interaction of molybdenum
+      with sulfur forms thiomolybdates that can complex with copper and cause fatal
+      copper deficiency.
+    nutrient_term:
+      preferred_term: copper
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 2
+      - 15
+
+disease_associations:
+  - name: Molybdenum Cofactor Deficiency
+    description: |
+      Molybdenum cofactor deficiency (MocoD) is a rare inherited disorder caused by
+      mutations in genes required for Moco biosynthesis. Type A (MOCS1 mutations) and
+      Type B (MOCS2 mutations) result in loss of sulfite oxidase activity and severe
+      neurological dysfunction. A replacement therapy (fosdenopterin) is now available
+      for Type A deficiency. The incidence is estimated at 1 in 100,000 to 200,000
+      live births.
+    disease_term:
+      preferred_term: molybdenum cofactor deficiency
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Inherited autosomal recessive disorder
+    mic_references:
+      - 28
+      - 30
+      - 31
+      - 32
+      - 42
+      - 45
+
+  - name: Esophageal Cancer
+    description: |
+      The soil in regions with high esophageal cancer incidence (e.g., Linxian, China)
+      is low in molybdenum. Studies show hair and nail molybdenum content is lower in
+      inhabitants of high-risk regions. However, a placebo-controlled trial found that
+      supplementation with molybdenum and vitamin C did not decrease esophageal cancer
+      incidence or mortality.
+    disease_term:
+      preferred_term: esophageal cancer
+      term:
+        id: MONDO:0007576
+        label: esophageal carcinoma
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Populations in molybdenum-deficient soil regions; evidence mixed
+    mic_references:
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "2 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "3 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "17 mcg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "22 mcg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "34 mcg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "43 mcg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "45 mcg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "50 mcg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding
+      amount: "50 mcg/day"
+      source: Institute of Medicine
+  notes: |
+    Usual molybdenum intakes are well above the RDA. The Total Diet Study indicates
+    dietary intake averages 76 mcg/day for women and 109 mcg/day for men. The
+    Tolerable Upper Intake Level (UL) for adults is 2,000 mcg/day (2 mg/day).
+    Because molybdenum content of plants depends on soil content and environmental
+    conditions, the molybdenum content of foods can vary considerably.
+
+bioavailability:
+  description: |
+    The biological form of molybdenum is the molybdenum cofactor (Moco), which is
+    present in the active site of molybdoenzymes. Moco is synthesized de novo by
+    a multistep metabolic pathway. The molybdenum content of foods depends on soil
+    molybdenum content and can vary considerably.
+  mic_references:
+    - 2
+    - 51
+    - 57
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Molybdenum. Molybdenum deficiency is extremely rare
+  but inherited molybdenum cofactor deficiency causes severe disease. The MIC
+  reference numbers (mic_references) correspond to the numbered citations on
+  the source page. The page contains approximately 65 references.

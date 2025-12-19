@@ -1,0 +1,137 @@
+name: Alcoholic Beverages
+nutrient_term:
+  preferred_term: alcoholic beverages
+  description: Beverages containing ethanol, including beer, wine, and spirits
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/alcoholic-beverages
+alternate_names:
+  - Alcohol
+  - Wine
+  - Beer
+  - Spirits
+description: |
+  Alcoholic beverages contain ethanol and include beer, wine, and distilled spirits.
+  Moderate alcohol consumption is defined as no more than two alcoholic drinks per day
+  for men and no more than one alcoholic drink per day for women. Heavy alcohol consumption
+  is defined as more than four drinks on any day or 14 drinks per week for men, and more
+  than three drinks on any day or seven drinks per week for women.
+
+disease_associations:
+  - name: Moderate Alcohol and Cardiovascular Disease
+    disease_term:
+      preferred_term: coronary heart disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Moderate alcohol consumption is associated with lowered risks of coronary heart
+      disease and ischemic stroke. This may be partly due to effects on HDL cholesterol,
+      fibrinolysis, and platelet aggregation.
+    population_context: adults with moderate consumption
+    mic_references:
+      - 16
+      - 17
+
+  - name: Moderate Alcohol and All-Cause Mortality
+    disease_term:
+      preferred_term: mortality
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies have consistently found that moderate alcohol consumption
+      is associated with a decreased risk of cardiovascular and all-cause mortality.
+    population_context: adults with moderate consumption
+    mic_references:
+      - 8
+      - 9
+
+  - name: Moderate Alcohol and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Evidence from observational studies suggests that moderate alcohol intake may
+      be associated with reduced risk of type 2 diabetes.
+    population_context: adults with moderate consumption
+    mic_references:
+      - 32
+
+  - name: Heavy Alcohol and Breast Cancer
+    disease_term:
+      preferred_term: breast cancer
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Even moderate alcohol consumption may increase the risk of female breast cancer.
+      Risk increases with higher levels of consumption.
+    population_context: women
+    mic_references:
+      - 41
+      - 42
+
+  - name: Heavy Alcohol and Liver Disease
+    disease_term:
+      preferred_term: alcoholic liver disease
+      term:
+        id: MONDO:0004790
+        label: alcoholic liver disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption causes damage to the liver and can lead to alcoholic
+      liver disease, including fatty liver, alcoholic hepatitis, and cirrhosis.
+    population_context: heavy drinkers
+    mic_references:
+      - 65
+      - 66
+
+  - name: Heavy Alcohol and Oral Cancers
+    disease_term:
+      preferred_term: oral cavity cancer
+      term:
+        id: MONDO:0005515
+        label: oral cavity cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption is associated with increased risk of many cancers,
+      including cancers of the mouth, pharynx, larynx, and esophagus. The combined
+      use of alcohol and tobacco greatly increases the risk.
+    population_context: heavy drinkers
+    mic_references:
+      - 68
+      - 69
+
+toxicity:
+  name: Alcohol Safety Concerns
+  description: |
+    Heavy alcohol consumption is associated with increased risks of hypertension,
+    stroke, heart rhythm disturbances, dementia, accidents, injury, violence, and
+    damage to the heart, liver, and pancreas. People who should abstain include:
+    pregnant women, children/adolescents, those with alcoholism or alcohol-related
+    disease, and anyone taking medications with potential adverse interactions.
+  mic_references:
+    - 1
+    - 2
+
+recommendations:
+  notes: |
+    The health risks of moderate alcohol consumption outweigh the health benefits for
+    some people. Those who consume more than minimal amounts of alcohol should make
+    sure they also consume adequate folate by taking a daily multivitamin that provides
+    400 μg of folic acid. Anyone planning to drive, operate heavy machinery, or perform
+    other potentially hazardous activities should not consume alcohol.
+
+notes: |
+  There is no recommendation to start drinking alcohol for health benefits if one does
+  not already drink. The potential cardiovascular benefits must be weighed against the
+  risks of alcohol dependence, liver disease, and certain cancers.

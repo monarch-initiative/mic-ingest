@@ -1,0 +1,408 @@
+name: Thiamin
+nutrient_term:
+  preferred_term: vitamin B1
+  term:
+    id: CHEBI:26948
+    label: vitamin B1
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/thiamin
+alternate_names:
+  - Vitamin B1
+  - Thiamine
+description: |
+  Thiamin is a water-soluble B vitamin essential for energy metabolism. The
+  active form, thiamin pyrophosphate (TPP), is involved in several enzyme
+  functions associated with the metabolism of carbohydrates, branched-chain
+  amino acids, and fatty acids. Severe thiamin deficiency leads to beriberi,
+  a disease that affects multiple organ systems including the central and
+  peripheral nervous systems and the cardiovascular system. Wernicke's
+  encephalopathy and Korsakoff's psychosis are neurological complications
+  of thiamin deficiency, particularly in individuals who abuse alcohol.
+
+functions:
+  - name: Coenzyme in Carbohydrate Metabolism
+    description: |
+      Thiamin pyrophosphate (TPP) is required as a coenzyme for pyruvate
+      dehydrogenase, alpha-ketoglutarate dehydrogenase, and other enzyme
+      complexes in the citric acid cycle. These enzymes are critical for
+      energy production through glucose metabolism.
+    biological_processes:
+      - preferred_term: carbohydrate metabolic process
+        term:
+          id: GO:0005975
+          label: carbohydrate metabolic process
+    mic_references:
+      - 2
+      - 4
+    evidence:
+      - reference: PMID:30151974
+        supports: SUPPORT
+        snippet: "Thiamine is an essential micronutrient that plays a key role in energy metabolism"
+        explanation: Confirms thiamin's essential role in energy metabolism
+
+  - name: Branched-Chain Amino Acid Metabolism
+    description: |
+      Branched-chain alpha-ketoacid dehydrogenase (BCKDH) requires TPP and
+      catalyzes the metabolism of branched-chain amino acids (leucine, isoleucine,
+      and valine). These amino acids are eventually degraded to acetyl-CoA and
+      succinyl-CoA for the citric acid cycle.
+    mic_references:
+      - 2
+      - 3
+
+  - name: Pentose Phosphate Pathway (Transketolase)
+    description: |
+      Transketolase catalyzes critical reactions in the pentose phosphate pathway,
+      which produces ribose-5-phosphate for nucleotide synthesis and NADPH for
+      biosynthetic reactions. Transketolase activity in red blood cells is used
+      to assess thiamin nutritional status.
+    mic_references:
+      - 1
+      - 4
+      - 5
+      - 6
+
+deficiency:
+  name: Beriberi
+  description: |
+    Beriberi is the disease resulting from severe thiamin deficiency, affecting
+    the cardiovascular, muscular, gastrointestinal, and central and peripheral
+    nervous systems. Beriberi has been subdivided into dry, wet, cerebral, or
+    gastrointestinal forms depending on the systems affected. Thiamin deficiency
+    can result from inadequate intake, increased requirements, excessive loss,
+    or consumption of anti-thiamin factors in food.
+  phenotypes:
+    - name: Peripheral Neuropathy (Dry Beriberi)
+      phenotype_term:
+        preferred_term: peripheral neuropathy
+        term:
+          id: HP:0009830
+          label: Peripheral neuropathy
+      frequency: FREQUENT
+      context: Main feature of dry (paralytic/nervous) beriberi including burning feet syndrome, weakness, and diminished sensation
+      mic_references:
+        - 8
+        - 9
+
+    - name: Ataxia
+      phenotype_term:
+        preferred_term: ataxia
+        term:
+          id: HP:0001251
+          label: Ataxia
+      frequency: FREQUENT
+      context: Stance and gait ataxia in cerebral beriberi (Wernicke's encephalopathy)
+      mic_references:
+        - 11
+        - 12
+
+    - name: Cardiomegaly (Wet Beriberi)
+      phenotype_term:
+        preferred_term: cardiomegaly
+        term:
+          id: HP:0001640
+          label: Cardiomegaly
+      frequency: FREQUENT
+      context: Enlargement of the heart in wet (cardiac) beriberi
+      mic_references:
+        - 10
+
+    - name: Congestive Heart Failure
+      phenotype_term:
+        preferred_term: congestive heart failure
+        term:
+          id: HP:0001635
+          label: Congestive heart failure
+      frequency: OCCASIONAL
+      context: Ultimate consequence of untreated wet beriberi
+      mic_references:
+        - 10
+
+  at_risk_groups:
+    - name: Chronic Alcoholics
+      description: |
+        Alcoholism is the primary cause of thiamin deficiency in industrialized
+        countries. Chronic alcohol abuse impairs intestinal absorption and
+        utilization of thiamin and increases urinary excretion.
+      mic_references:
+        - 1
+        - 11
+        - 132
+        - 133
+
+    - name: Individuals with Malabsorption
+      description: |
+        Patients with bariatric surgery, gastrointestinal malignancies, and
+        malabsorption syndromes are at increased risk of thiamin deficiency.
+      mic_references:
+        - 14
+        - 15
+        - 16
+        - 17
+
+    - name: Patients on Diuretic Therapy
+      description: |
+        Diuretics, especially furosemide, increase urinary excretion of thiamin
+        and may increase the risk of deficiency in patients with marginal intake.
+      mic_references:
+        - 28
+        - 29
+        - 30
+        - 31
+
+    - name: Patients with Hyperemesis Gravidarum
+      description: |
+        Severe nausea and vomiting during pregnancy can lead to Wernicke's
+        encephalopathy due to thiamin deficiency.
+      mic_references:
+        - 20
+        - 21
+
+    - name: Patients on Hemodialysis
+      description: |
+        Individuals with kidney failure requiring hemodialysis lose thiamin
+        at an increased rate and are at risk for deficiency.
+      mic_references:
+        - 32
+
+  causes:
+    - name: Inadequate Dietary Intake
+      description: |
+        Common in low-income populations with diets high in carbohydrate and low
+        in thiamin (e.g., polished rice). Breastfed infants of thiamin-deficient
+        mothers are vulnerable to infantile beriberi.
+      mic_references:
+        - 2
+
+    - name: Chronic Alcohol Abuse
+      description: Impairs intestinal absorption and utilization of thiamin
+      mic_references:
+        - 1
+
+    - name: Anti-Thiamin Factors
+      description: |
+        Certain foods contain thiaminases or other anti-thiamin factors that
+        inactivate thiamin. These include raw fish, shellfish, betel nuts,
+        tea leaves, and fermented fish.
+      mic_references:
+        - 34
+        - 35
+        - 36
+
+  mic_references:
+    - 1
+    - 2
+    - 8
+
+disease_associations:
+  - name: Wernicke-Korsakoff Syndrome
+    disease_term:
+      preferred_term: Wernicke-Korsakoff syndrome
+      term:
+        id: MONDO:0010198
+        label: Wernicke-Korsakoff syndrome
+    relationship_type: DEFICIENCY_CAUSES
+    description: |
+      Thiamin deficiency affecting the central nervous system causes Wernicke's
+      encephalopathy (abnormal eye movements, ataxia, cognitive impairment) and
+      may progress to Korsakoff's psychosis (profound memory disorder with
+      amnesia). Most cases occur in alcoholics but can occur in other conditions
+      of severe malnutrition.
+    mic_references:
+      - 11
+      - 12
+      - 13
+    evidence:
+      - reference: PMID:30151974
+        supports: SUPPORT
+        snippet: "Clinical manifestations of thiamine deficiency are variable"
+        explanation: Supports that thiamin deficiency causes variable clinical manifestations including neurological complications
+
+  - name: Congestive Heart Failure
+    disease_term:
+      preferred_term: congestive heart failure
+      term:
+        id: MONDO:0005009
+        label: congestive heart failure
+    relationship_type: THERAPEUTIC
+    population_context: CHF patients on diuretic therapy
+    description: |
+      Loop diuretics used in CHF treatment increase thiamin excretion, potentially
+      leading to deficiency. A meta-analysis found 2.5 times higher risk of
+      thiamin deficiency in heart failure patients. Some studies suggest thiamin
+      supplementation may improve left ventricular ejection fraction, but results
+      are inconsistent.
+    mic_references:
+      - 76
+      - 77
+      - 78
+      - 80
+      - 82
+      - 83
+
+  - name: Alzheimer's Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    population_context: Patients with mild-to-moderate AD; evidence inconclusive
+    description: |
+      Alzheimer's disease is associated with altered glucose metabolism and
+      reduced activity of thiamin-dependent enzymes in the brain. Clinical trials
+      of thiamin and benfotiamine supplementation have shown limited evidence
+      of benefit. Large-scale randomized controlled trials are needed.
+    mic_references:
+      - 47
+      - 48
+      - 54
+      - 55
+      - 56
+      - 68
+      - 71
+      - 72
+      - 73
+
+food_sources:
+  - name: Pork (lean, roasted)
+    food_term:
+      preferred_term: pork
+    amount: "0.80 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 37
+
+  - name: Wheat Germ Breakfast Cereal
+    food_term:
+      preferred_term: wheat germ
+    amount: "1.88 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 37
+
+  - name: Fortified Breakfast Cereal
+    food_term:
+      preferred_term: fortified cereal
+    amount: "0.31 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 37
+
+  - name: Green Peas (boiled)
+    food_term:
+      preferred_term: peas
+    amount: "0.21 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 37
+
+  - name: Lentils (boiled)
+    food_term:
+      preferred_term: lentils
+    amount: "0.17 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 37
+
+  - name: Brown Rice (cooked)
+    food_term:
+      preferred_term: brown rice
+    amount: "0.18 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 37
+
+drug_interactions:
+  - name: Phenytoin
+    drug_term:
+      preferred_term: phenytoin
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      Reduced blood concentrations of thiamin have been reported in individuals
+      with epilepsy taking phenytoin for long periods of time.
+    mic_references:
+      - 130
+
+  - name: 5-Fluorouracil
+    drug_term:
+      preferred_term: fluorouracil
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      5-Fluorouracil, a cancer chemotherapy agent, inhibits the phosphorylation
+      of thiamin to TPP.
+    mic_references:
+      - 131
+
+  - name: Loop Diuretics (Furosemide)
+    drug_term:
+      preferred_term: furosemide
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    description: |
+      Diuretics, especially furosemide, may increase the risk of thiamin
+      deficiency in individuals with marginal thiamin intake due to increased
+      urinary excretion.
+    mic_references:
+      - 29
+      - 30
+      - 31
+
+toxicity:
+  name: Thiamin Toxicity
+  description: |
+    The Food and Nutrition Board did not set a tolerable upper intake level
+    (UL) for thiamin because there are no well-established toxic effects from
+    consumption of excess thiamin in food or through long-term oral
+    supplementation (up to 200 mg/day). A small number of life-threatening
+    anaphylactic reactions have been observed with large intravenous doses
+    of thiamin.
+  mic_references:
+    - 37
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.2 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.3 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "0.5 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "0.6 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "0.9 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 14-18 years
+      amount: "1.2 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 14-18 years
+      amount: "1.0 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 19+ years
+      amount: "1.2 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 19+ years
+      amount: "1.1 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy
+      amount: "1.4 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation
+      amount: "1.4 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+
+notes: |
+  Whole-grain cereals, legumes, nuts, lean pork, and yeast are rich sources of
+  thiamin. Most thiamin is lost during production of white flour and polished
+  rice, so these foods are often fortified with thiamin in Western countries.
+  In the US, the average dietary thiamin intake is about 2 mg/day for young
+  adult men and 1.2 mg/day for young adult women.

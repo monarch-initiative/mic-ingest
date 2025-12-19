@@ -1,0 +1,488 @@
+name: Magnesium
+nutrient_term:
+  preferred_term: magnesium
+  term:
+    id: CHEBI:25107
+    label: magnesium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/magnesium
+alternate_names:
+  - Mg
+description: |
+  Magnesium is an essential mineral that serves as a cofactor for hundreds of enzymes.
+  It is needed for a wide range of physiologic pathways, including energy production,
+  nucleic acid and protein synthesis, ion transport, cell signaling, and has structural
+  functions in bone and cell membranes. Severe magnesium deficiency can disrupt vitamin D
+  and calcium homeostasis. Over half of US adults have inadequate dietary magnesium intake,
+  though the long-term consequences of this remain unclear.
+
+functions:
+  - name: Energy Production
+    description: |
+      The metabolism of carbohydrates and fats to produce energy requires numerous
+      magnesium-dependent chemical reactions. Magnesium is required for the ATP synthase
+      protein in mitochondria. ATP, the molecule that provides energy for almost all
+      metabolic processes, exists primarily as a complex with magnesium (MgATP).
+    biological_processes:
+      - preferred_term: ATP synthesis
+        term:
+          id: GO:0042776
+          label: proton motive force-driven mitochondrial ATP synthesis
+    mic_references:
+      - 3
+
+  - name: Essential Molecule Synthesis
+    description: |
+      Magnesium is required for a number of steps during synthesis of DNA, RNA, and
+      proteins. Several enzymes participating in the synthesis of carbohydrates and
+      lipids require magnesium for their activity. Glutathione, an important antioxidant,
+      requires magnesium for its synthesis.
+    biological_processes:
+      - preferred_term: nucleic acid synthesis
+        term:
+          id: GO:0090592
+          label: DNA synthesis involved in DNA replication
+    mic_references:
+      - 3
+
+  - name: Structural Roles
+    description: |
+      Magnesium plays a structural role in bone, cell membranes, and chromosomes.
+      Around 60% of total body magnesium is stored in the skeleton and is known to
+      influence both bone matrix and bone mineral metabolism.
+    mic_references:
+      - 3
+
+  - name: Ion Transport
+    description: |
+      Magnesium is required for the active transport of ions like potassium and calcium
+      across cell membranes. This function is necessary for nerve impulse conduction,
+      muscle contraction, and normal heart rhythm.
+    biological_processes:
+      - preferred_term: ion transport
+        term:
+          id: GO:0006811
+          label: monoatomic ion transport
+    mic_references:
+      - 3
+
+  - name: Cell Signaling
+    description: |
+      Cell signaling processes require MgATP for protein phosphorylation and the
+      formation of cyclic adenosine monophosphate (cAMP), an important cell-signaling
+      molecule involved in many physiological processes, including the secretion of
+      parathyroid hormone (PTH) from the parathyroid glands.
+    biological_processes:
+      - preferred_term: cell signaling
+        term:
+          id: GO:0007165
+          label: signal transduction
+    mic_references:
+      - 3
+
+deficiency:
+  name: Magnesium Deficiency
+  description: |
+    Magnesium deficiency is rare in healthy individuals consuming a balanced diet,
+    because magnesium is abundant in both plant and animal foods and kidneys can limit
+    urinary excretion when intake is low. However, certain conditions increase risk:
+    gastrointestinal disorders, renal disorders, endocrine/metabolic disorders,
+    alcoholism, and older age. Severe deficiency causes hypocalcemia despite adequate
+    calcium intake, hypokalemia, sodium retention, neurological and muscular symptoms
+    (tremor, muscle spasms, tetany), loss of appetite, nausea, and personality changes.
+  phenotypes:
+    - name: Hypocalcemia
+      phenotype_term:
+        preferred_term: hypocalcemia
+        term:
+          id: HP:0002901
+          label: Hypocalcemia
+      frequency: FREQUENT
+      context: Serum calcium decreases as magnesium deficiency progresses
+      mic_references:
+        - 3
+
+    - name: Hypokalemia
+      phenotype_term:
+        preferred_term: hypokalemia
+        term:
+          id: HP:0002900
+          label: Hypokalemia
+      frequency: OCCASIONAL
+      context: Low serum potassium concentrations in severe deficiency
+      mic_references:
+        - 3
+
+    - name: Muscle spasm
+      phenotype_term:
+        preferred_term: muscle spasm
+        term:
+          id: HP:0003394
+          label: Muscle spasm
+      frequency: OCCASIONAL
+      context: Neurological and muscular symptoms in severe deficiency
+      mic_references:
+        - 3
+
+  at_risk_groups:
+    - name: Individuals with gastrointestinal disorders
+      description: |
+        Prolonged diarrhea, Crohn's disease, malabsorption syndromes, celiac disease,
+        surgical removal of parts of the small intestine, and radiation-induced
+        intestinal inflammation can lead to magnesium depletion.
+      mic_references:
+        - 7
+
+    - name: Individuals with renal disorders
+      description: |
+        Diabetes mellitus and long-term use of certain diuretics may result in
+        increased urinary loss of magnesium.
+      mic_references:
+        - 3
+
+    - name: Individuals with chronic alcoholism
+      description: |
+        Poor dietary intake, gastrointestinal problems, and increased urinary loss
+        of magnesium may all contribute to magnesium depletion.
+      mic_references:
+        - 7
+
+    - name: Older adults
+      description: |
+        Older individuals (>50 years) have relatively low dietary intakes of magnesium.
+        Intestinal absorption tends to decrease with age, and urinary excretion tends
+        to increase with age.
+      mic_references:
+        - 2
+        - 8
+        - 9
+
+  mic_references:
+    - 1
+    - 3
+    - 7
+
+toxicity:
+  name: Magnesium Toxicity
+  description: |
+    Adverse effects have not been identified from magnesium occurring naturally in food.
+    However, adverse effects from excessive supplemental magnesium have been observed.
+    The initial symptom of excess magnesium supplementation is diarrhea. Individuals with
+    impaired kidney function are at higher risk for adverse effects. Hypermagnesemia may
+    cause hypotension, lethargy, confusion, cardiac rhythm disturbances, muscle weakness,
+    difficulty breathing, and in severe cases cardiac arrest. The Tolerable Upper Intake
+    Level (UL) for supplemental magnesium is 350 mg/day for adults, based on risk of
+    diarrhea and GI disturbance.
+  adverse_effects:
+    - name: Diarrhea
+      description: |
+        Initial symptom of excess magnesium supplementation; well-known side effect
+        used therapeutically as a laxative
+      severity: mild
+    - name: Cardiac disturbances
+      description: |
+        Severe hypermagnesemia can cause disturbances in normal cardiac rhythm
+        and potentially cardiac arrest
+      severity: severe
+  mic_references:
+    - 2
+    - 3
+    - 6
+
+food_sources:
+  - name: Brazil nuts
+    food_term:
+      preferred_term: brazil nuts
+    amount: "107 mg"
+    serving_size: "1 ounce (6 kernels)"
+    mic_references:
+      - 2
+
+  - name: Oat bran cereal
+    food_term:
+      preferred_term: oat bran
+    amount: "96 mg"
+    serving_size: "1/2 cup dry"
+    mic_references:
+      - 2
+
+  - name: Cashews
+    food_term:
+      preferred_term: cashews
+    amount: "83 mg"
+    serving_size: "1 ounce (16 kernels)"
+    mic_references:
+      - 2
+
+  - name: Spinach, frozen, cooked
+    food_term:
+      preferred_term: spinach
+    amount: "78 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+  - name: Almonds
+    food_term:
+      preferred_term: almonds
+    amount: "77 mg"
+    serving_size: "1 ounce (23 kernels)"
+    mic_references:
+      - 2
+
+  - name: Swiss chard, cooked
+    food_term:
+      preferred_term: swiss chard
+    amount: "75 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+drug_interactions:
+  - name: Bisphosphonates and Magnesium
+    description: |
+      Magnesium can inhibit the absorption of bisphosphonates used for osteoporosis.
+      Doses should be separated by at least two hours.
+    drug_term:
+      preferred_term: bisphosphonate
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Tetracycline Antibiotics and Magnesium
+    description: |
+      Magnesium has been found to reduce the efficacy of tetracycline class antibiotics.
+    drug_term:
+      preferred_term: tetracycline
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Quinolone Antibiotics and Magnesium
+    description: |
+      Magnesium has been found to reduce the efficacy of quinolone class antibiotics.
+    drug_term:
+      preferred_term: quinolone
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Proton-Pump Inhibitors and Magnesium
+    description: |
+      Long-term use (three months or longer) of proton-pump inhibitors may increase
+      the risk of hypomagnesemia.
+    drug_term:
+      preferred_term: proton pump inhibitor
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 214
+      - 215
+
+  - name: Loop and Thiazide Diuretics and Magnesium
+    description: |
+      High doses of furosemide (Lasix) and some thiazide diuretics, if taken for
+      extended periods, may interfere with magnesium reabsorption in the kidneys
+      and result in magnesium depletion.
+    drug_term:
+      preferred_term: diuretic
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 213
+
+nutrient_interactions:
+  - name: Zinc and Magnesium
+    description: |
+      High doses of supplemental zinc (142 mg/day, well above the UL of 40 mg/day)
+      may interfere with magnesium absorption and disrupt magnesium balance.
+    nutrient_term:
+      preferred_term: zinc
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 4
+
+  - name: Fiber and Magnesium
+    description: |
+      Large increases in dietary fiber intake have been found to decrease magnesium
+      utilization in experimental studies, though the extent of this effect in
+      individuals with varied diets is unclear.
+    nutrient_term:
+      preferred_term: dietary fiber
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 2
+      - 3
+
+  - name: Calcium and Magnesium
+    description: |
+      Magnesium is needed for calcium homeostasis. Severe magnesium deficiency can
+      disrupt vitamin D and calcium homeostasis, leading to hypocalcemia.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 3
+
+disease_associations:
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      Higher magnesium intakes have been associated with lower risk of type 2 diabetes
+      mellitus in multiple large prospective cohort studies. Meta-analyses show a 17-22%
+      lower risk in those with highest versus lowest magnesium intakes, with 6-8% risk
+      reduction per 100 mg/day increment. Magnesium supplementation has been shown to
+      improve insulin sensitivity in individuals at risk for type 2 diabetes.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults with inadequate dietary magnesium intake
+    mic_references:
+      - 52
+      - 74
+      - 76
+      - 78
+
+  - name: Hypertension
+    description: |
+      Large prospective cohort studies have found that higher dietary magnesium intakes
+      are associated with an 8% lower risk of hypertension. Higher urinary magnesium
+      has been associated with 25% reduction in hypertension risk. Improving diet
+      quality or using magnesium supplements may play a role in prevention.
+    disease_term:
+      preferred_term: hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults with inadequate dietary magnesium intake
+    mic_references:
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+
+  - name: Osteoporosis
+    description: |
+      Around 60% of total body magnesium is stored in the skeleton and influences
+      bone matrix and mineral metabolism. Higher dietary magnesium intakes have been
+      associated with increased bone mineral density in observational studies. However,
+      evidence is not yet sufficient to suggest supplemental magnesium in excess of
+      the RDA is effective for osteoporosis prevention.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Postmenopausal women and older adults
+    mic_references:
+      - 85
+      - 86
+      - 91
+      - 92
+      - 94
+
+  - name: Preeclampsia and Eclampsia
+    description: |
+      Intravenous magnesium sulfate is commonly used in obstetric care for the prevention
+      of seizures in pregnant people with preeclampsia or eclampsia and to protect the
+      brains of premature infants.
+    disease_term:
+      preferred_term: preeclampsia
+    relationship_type: THERAPEUTIC
+    population_context: Pregnant women with preeclampsia or eclampsia
+    mic_references:
+      - 2
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "30 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "75 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "80 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "130 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "240 mg/day"
+      source: Institute of Medicine
+    - population: Males 14-18 years
+      amount: "410 mg/day"
+      source: Institute of Medicine
+    - population: Females 14-18 years
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Males 19-30 years
+      amount: "400 mg/day"
+      source: Institute of Medicine
+    - population: Females 19-30 years
+      amount: "310 mg/day"
+      source: Institute of Medicine
+    - population: Males 31+ years
+      amount: "420 mg/day"
+      source: Institute of Medicine
+    - population: Females 31+ years
+      amount: "320 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (18 and younger)
+      amount: "400 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (19-30 years)
+      amount: "350 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (31+ years)
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (18 and younger)
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (19-30 years)
+      amount: "310 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (31+ years)
+      amount: "320 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The Tolerable Upper Intake Level (UL) for supplemental magnesium is 350 mg/day
+    for adults and adolescents 9 years and older. This UL applies specifically to
+    supplemental magnesium, not magnesium from food. National surveys indicate that
+    over half of US adults have inadequate dietary magnesium intake. Good dietary
+    sources include green leafy vegetables, unrefined grains, legumes, beans, and nuts.
+
+bioavailability:
+  description: |
+    Magnesium is absorbed primarily in the small intestine. Absorption efficiency can
+    vary based on magnesium status and dietary factors. The kidneys can limit urinary
+    excretion when intake is low. Around 60% of total body magnesium is stored in the
+    skeleton and is available for dynamic exchange with blood.
+  mic_references:
+    - 2
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Magnesium. Magnesium is involved in more than 300
+  essential metabolic reactions. The MIC reference numbers (mic_references) correspond
+  to the numbered citations on the source page. The page contains approximately
+  215 references.

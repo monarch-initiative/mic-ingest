@@ -1,0 +1,108 @@
+name: Legumes
+nutrient_term:
+  preferred_term: legumes
+  description: Foods from the legume family including beans, peas, lentils, peanuts, and soybeans
+  term:
+    id: FOODON:00001264
+    label: legume food product
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/legumes
+alternate_names:
+  - Pulses
+  - Beans
+  - Lentils
+description: |
+  Foods from the legume family include beans, peas, lentils, peanuts, and soybeans.
+  Legumes are excellent sources of protein, low-glycemic index carbohydrates, essential
+  micronutrients, and fiber. Substituting legumes for foods that are high in saturated
+  fats or refined carbohydrates is likely to lower the risk of cardiovascular disease
+  and type 2 diabetes mellitus.
+
+disease_associations:
+  - name: Legumes and Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Regular consumption of legumes, both pulses and soy food, may result in favorable
+      effects on blood lipid profiles by lowering LDL-cholesterol. Substituting legumes
+      for foods high in saturated fats or refined carbohydrates is likely to lower the
+      risk of cardiovascular disease.
+    population_context: general adult population
+    mic_references:
+      - 10
+      - 11
+      - 12
+      - 13
+
+  - name: Legumes and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Legumes are low-glycemic index foods that may help improve glycemic control.
+      Substituting legumes for higher glycemic index foods may reduce risk of type 2
+      diabetes mellitus.
+    population_context: general adult population
+    mic_references:
+      - 5
+      - 6
+      - 7
+
+  - name: Legumes and Prostate Cancer
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Several observational studies have found non-soy legume intake to be inversely
+      associated with incidence of prostate cancer.
+    population_context: adult men
+    mic_references:
+      - 24
+      - 25
+
+  - name: Legumes and Breast Cancer
+    disease_term:
+      preferred_term: breast cancer
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Evidence suggests that lifelong exposure to soy food may be needed to lower
+      risk of breast cancer. The protective effects may be strongest when soy
+      consumption begins early in life.
+    population_context: women, particularly with early-life soy exposure
+    mic_references:
+      - 29
+      - 30
+
+recommendations:
+  notes: |
+    The most recent Dietary Guidelines for Americans include legumes in both the protein
+    and vegetable groups, recommending a weekly intake of 1½ to 3 cup-equivalents of
+    legumes for those who consume 2,000 calories/day. This recommended amount depends
+    on the specific dietary pattern followed, and additionally, soy products are
+    recommended for those who follow a vegetarian diet.
+  ai:
+    - population: Adults (2,000 calorie diet)
+      amount: 1½-3 cup-equivalents/week
+      source: Dietary Guidelines for Americans
+
+notes: |
+  Short-term clinical trials have reported pulse consumption increases satiety; however,
+  high-quality trials are needed to determine whether regular consumption of pulses
+  results in weight loss in the long term.

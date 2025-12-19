@@ -1,0 +1,370 @@
+name: Selenium
+nutrient_term:
+  preferred_term: selenium
+  term:
+    id: CHEBI:27568
+    label: selenium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/selenium
+alternate_names:
+  - Se
+description: |
+  Selenium exerts various biological functions mainly as part of the amino acid
+  selenocysteine, which is found in at least 25 selenoproteins in humans. These include
+  five glutathione peroxidases, three thioredoxin reductases, and three iodothyronine
+  deiodinases. Impaired antioxidant protection in selenium-deficient individuals may
+  affect physiological responses to stress. Keshan cardiomyopathy and Kashin-Beck
+  osteoarthropathy are diseases occurring specifically in areas of selenium deficiency
+  in Asia. Most Americans have adequate selenium status.
+
+functions:
+  - name: Glutathione Peroxidase Activity
+    description: |
+      Five selenium-containing glutathione peroxidases (GPx1-4 and GPx6) are antioxidant
+      enzymes that reduce potentially damaging reactive oxygen species, such as hydrogen
+      peroxide and lipid hydroperoxides, to harmless products like water and alcohols.
+      GPx4 is critical for spermatogenesis and male fertility by protecting immature
+      spermatozoa against oxidative stress.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 6
+      - 7
+
+  - name: Thioredoxin Reductase Activity
+    description: |
+      Three selenocysteine-containing thioredoxin reductases (TXNRD1, TXNRD2, TXNRD3)
+      catalyze the reduction of thioredoxin and serve as electron donors for regeneration
+      of small antioxidants, including vitamin C, alpha-lipoic acid, vitamin E, and
+      coenzyme Q10 from their oxidized forms. TXNRD1 is one of the major antioxidant
+      enzymes and redox regulators in mammalian cells.
+    biological_processes:
+      - preferred_term: thioredoxin reduction
+        term:
+          id: GO:0006118
+          label: obsolete electron transport
+    mic_references:
+      - 8
+      - 9
+
+  - name: Thyroid Hormone Activation
+    description: |
+      Three selenium-dependent iodothyronine deiodinases (DIO types 1, 2, and 3) are
+      required for the conversion of thyroxine (T4) to the biologically active thyroid
+      hormone triiodothyronine (T3). DIO type 3 can convert both T3 and T4 to inactive
+      metabolites. DIOs are important for normal development, growth, and metabolism.
+    biological_processes:
+      - preferred_term: thyroid hormone activation
+        term:
+          id: GO:0006590
+          label: thyroid hormone generation
+    mic_references:
+      - 10
+      - 11
+
+deficiency:
+  name: Selenium Deficiency
+  description: |
+    Insufficient selenium intake may negatively affect the activity of several
+    selenium-responsive enzymes. Even when severe, isolated selenium deficiency does not
+    usually result in obvious clinical illness. However, selenium-deficient individuals
+    may be more susceptible to additional physiological stresses. Prolonged selenium
+    deficiency may contribute to Keshan disease (fatal dilated cardiomyopathy) and
+    Kashin-Beck disease (osteoarthropathy), which occur in selenium-deficient regions
+    of Asia. Selenium supplementation can prevent Keshan disease but cannot reverse
+    heart damage once it has occurred.
+  phenotypes:
+    - name: Cardiomyopathy (Keshan disease)
+      phenotype_term:
+        preferred_term: dilated cardiomyopathy
+        term:
+          id: HP:0001644
+          label: Dilated cardiomyopathy
+      frequency: OCCASIONAL
+      context: Fatal form in selenium-deficient regions of China
+      mic_references:
+        - 52
+        - 54
+
+    - name: Kashin-Beck disease
+      phenotype_term:
+        preferred_term: osteoarthropathy
+        term:
+          id: HP:0005743
+          label: Avascular necrosis of the capital femoral epiphysis
+      frequency: OCCASIONAL
+      context: Osteoarthropathy in selenium-deficient regions of Asia
+      mic_references:
+        - 48
+
+  at_risk_groups:
+    - name: Individuals in selenium-deficient regions
+      description: |
+        Areas with low soil selenium content in China and other parts of Asia
+      mic_references:
+        - 48
+        - 52
+
+  mic_references:
+    - 48
+    - 52
+    - 54
+
+toxicity:
+  name: Selenium Toxicity (Selenosis)
+  description: |
+    Acute and fatal toxicities have occurred with accidental or suicidal ingestion
+    of gram quantities of selenium. Chronic selenium toxicity (selenosis) may occur
+    with smaller doses over long periods. The most common symptoms are hair and nail
+    brittleness and loss. Other symptoms include gastrointestinal disturbances, skin
+    rashes, garlic breath odor, fatigue, irritability, and neurological disorders.
+    The Tolerable Upper Intake Level (UL) for adults is 400 mcg/day.
+  adverse_effects:
+    - name: Hair and nail brittleness/loss
+      description: |
+        Most common symptoms of selenosis; basis for establishing the UL
+      severity: mild
+    - name: Neurological disorders
+      description: |
+        Can occur with severe chronic selenosis
+      severity: moderate
+    - name: Gastrointestinal disturbances
+      description: |
+        Nausea, diarrhea, and abdominal pain
+      severity: mild
+  mic_references:
+    - 65
+    - 142
+
+food_sources:
+  - name: Brazil nuts (selenium-rich soil)
+    food_term:
+      preferred_term: brazil nuts
+    amount: "544 mcg"
+    serving_size: "1 ounce (6 kernels)"
+    notes: Above the UL of 400 mcg/day; content varies widely with soil
+    mic_references:
+      - 137
+
+  - name: Oysters, Pacific, steamed
+    food_term:
+      preferred_term: oysters
+    amount: "131 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 65
+
+  - name: Tuna, yellowfin, cooked
+    food_term:
+      preferred_term: tuna
+    amount: "91.8 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 65
+
+  - name: Halibut, cooked
+    food_term:
+      preferred_term: halibut
+    amount: "47.1 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 65
+
+  - name: Shrimp, steamed
+    food_term:
+      preferred_term: shrimp
+    amount: "42.1 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 65
+
+  - name: Chicken, light meat, roasted
+    food_term:
+      preferred_term: chicken
+    amount: "36.1 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 65
+
+drug_interactions:
+  - name: Valproic Acid and Selenium
+    description: |
+      The anticonvulsant drug valproic acid may lower circulating selenium
+      concentrations in treated subjects.
+    drug_term:
+      preferred_term: valproic acid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 156
+
+  - name: Cisplatin and Selenium
+    description: |
+      The chemotherapeutic agent cisplatin may lower circulating selenium
+      concentrations in treated subjects.
+    drug_term:
+      preferred_term: cisplatin
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 157
+
+  - name: Statins with Antioxidants and Selenium
+    description: |
+      A combination of simvastatin and niacin's protective effects on HDL were
+      diminished when taken with an antioxidant combination including selenium.
+      The individual contribution of selenium is unclear.
+    drug_term:
+      preferred_term: statin
+    interaction_type: ANTAGONISTIC
+    clinical_significance: MODERATE
+    mic_references:
+      - 159
+      - 160
+
+nutrient_interactions:
+  - name: Iodine and Selenium
+    description: |
+      Selenium-containing iodothyronine deiodinases are required for conversion of
+      T4 to active T3. The epidemiology of coexisting iodine and selenium deficiencies
+      in central Africa has been linked to myxedematous cretinism. Selenium deficiency
+      may exacerbate the detrimental effects of iodine deficiency.
+    nutrient_term:
+      preferred_term: iodine
+    interaction_type: SYNERGISTIC
+    mic_references:
+      - 10
+      - 46
+      - 47
+
+  - name: Antioxidant Nutrients and Selenium
+    description: |
+      Selenium acts via selenoenzymes in synergy with antioxidant vitamins (vitamin C
+      and vitamin E) by regenerating them from their oxidized forms and promoting
+      maximal antioxidant protection.
+    nutrient_term:
+      preferred_term: vitamin E
+    interaction_type: SYNERGISTIC
+    mic_references:
+      - 43
+      - 44
+      - 45
+
+disease_associations:
+  - name: Keshan Disease
+    description: |
+      A fatal form of dilated cardiomyopathy first described in a selenium-deficient
+      region in China. The incidence is closely associated with very low dietary
+      selenium intakes and poor selenium status. Selenium supplementation can prevent
+      the disease but cannot reverse heart damage. Coxsackie virus B3 may be an
+      additional factor, with selenium deficiency potentially increasing viral
+      virulence.
+    disease_term:
+      preferred_term: Keshan disease
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Selenium-deficient regions of China
+    mic_references:
+      - 52
+      - 54
+      - 55
+      - 56
+      - 57
+
+  - name: Cancer
+    description: |
+      Animal studies show selenium supplementation significantly reduces tumor incidence
+      in many cancer models. Meta-analysis of observational studies found higher
+      selenium status associated with 31% lower risk of cancer at any site and 40%
+      lower risk of cancer-related mortality. Inverse associations found for bladder
+      and prostate cancer. However, most recent evidence from intervention trials in
+      selenium-replete participants does not support a protective effect.
+    disease_term:
+      preferred_term: cancer
+      term:
+        id: MONDO:0004992
+        label: cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Evidence mixed; stronger in selenium-deficient populations
+    mic_references:
+      - 66
+      - 67
+      - 72
+      - 73
+
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      Some evidence suggests high serum selenium concentrations may have adverse
+      effects on glycemic control. Individuals with high selenium status or those
+      at risk for type 2 diabetes should avoid selenium supplements.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Individuals with already high selenium status
+    mic_references:
+      - 65
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "15 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "20 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "20 mcg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "30 mcg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "40 mcg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "55 mcg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "55 mcg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "60 mcg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding
+      amount: "70 mcg/day"
+      source: Institute of Medicine
+  notes: |
+    The RDA is based on the amount needed to maximize plasma glutathione peroxidase
+    activity. The Tolerable Upper Intake Level (UL) for adults is 400 mcg/day. Over
+    99% of US participants in NHANES III had selenium concentrations consistent with
+    requirements being met, suggesting supplementation is not needed for most Americans.
+    Mean dietary intakes in US adults range from 100-158 mcg/day.
+
+bioavailability:
+  description: |
+    The levels and chemical forms of selenium in plant-based foods vary according to
+    soil selenium content. Brazil nuts from selenium-rich soil can provide >100 mcg
+    in one nut, while those from selenium-poor soil provide 10 times less. Various
+    chemical forms include selenate, selenomethionine, selenocysteine, and others.
+    Selenomethionine is predominant in wheat, grains, Brazil nuts, and soy.
+  mic_references:
+    - 137
+    - 138
+
+references: []
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Selenium. Selenium functions primarily through
+  selenoproteins containing selenocysteine. Most Americans have adequate selenium
+  status. The MIC reference numbers (mic_references) correspond to the numbered
+  citations on the source page. The page contains approximately 160 references.

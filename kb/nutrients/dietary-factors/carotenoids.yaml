@@ -1,0 +1,344 @@
+name: Carotenoids
+nutrient_term:
+  preferred_term: carotenoid
+  term:
+    id: CHEBI:23044
+    label: carotenoid
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/carotenoids
+alternate_names:
+  - alpha-carotene
+  - beta-carotene
+  - beta-cryptoxanthin
+  - lutein
+  - zeaxanthin
+  - lycopene
+description: |
+  Carotenoids are a class of more than 750 naturally occurring pigments synthesized
+  by plants, algae, and photosynthetic bacteria. These richly colored molecules are
+  the sources of the yellow, orange, and red colors of many plants. The most common
+  dietary carotenoids are alpha-carotene, beta-carotene, beta-cryptoxanthin, lutein,
+  zeaxanthin, and lycopene. The provitamin A carotenoids (alpha-carotene, beta-carotene,
+  and beta-cryptoxanthin) can be converted by the body to retinol (vitamin A), while
+  lutein, zeaxanthin, and lycopene are nonprovitamin A carotenoids.
+
+functions:
+  - name: Provitamin A activity
+    description: |
+      Alpha-carotene, beta-carotene, and beta-cryptoxanthin serve as sources of
+      vitamin A. The body converts these provitamin A carotenoids to retinol with
+      varying efficiency depending on factors like food matrix, food preparation,
+      and individual digestive capacity.
+    mic_references:
+      - 11
+      - 12
+    evidence:
+      - reference: PMID:30032230
+        supports: SUPPORT
+        snippet: "Some carotenoids contribute to vitamin A requirements"
+        explanation: Confirms provitamin A carotenoids contribute to vitamin A status
+
+  - name: Antioxidant activity
+    description: |
+      Carotenoids can quench singlet oxygen and may inhibit lipid peroxidation.
+      Lycopene is particularly effective at quenching singlet oxygen. Carotenoids
+      may also upregulate antioxidant enzymes via the Nrf2-dependent pathway.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+      - preferred_term: response to singlet oxygen
+        term:
+          id: GO:0000304
+          label: response to singlet oxygen
+    mic_references:
+      - 14
+      - 16
+      - 17
+    evidence:
+      - reference: PMID:2802626
+        supports: SUPPORT
+        snippet: "Lycopene, a biologically occurring carotenoid, exhibits the highest physical quenching rate constant with singlet oxygen"
+        explanation: Demonstrates lycopene's exceptional singlet oxygen quenching ability
+      - reference: PMID:25134454
+        supports: SUPPORT
+        snippet: "Carotenoids can also block oxidative stress by interacting with the nuclear factor erythroid 2-related factor 2 pathway, enhancing its translocation into the nucleus, and activating phase II enzymes and antioxidants"
+        explanation: Supports Nrf2-mediated antioxidant pathway activation by carotenoids
+
+  - name: Blue light filtering (lutein and zeaxanthin)
+    description: |
+      Dietary lutein and zeaxanthin are selectively taken up into the macula of
+      the eye, where they absorb up to 90% of blue light. This may protect
+      underlying visual structures from light-induced oxidative damage.
+    mic_references:
+      - 22
+      - 23
+    evidence:
+      - reference: PMID:12626691
+        supports: SUPPORT
+        snippet: "By absorbing blue-light, the macular pigment protects the underlying photoreceptor cell layer from light damage"
+        explanation: Directly supports blue light filtering function in the eye
+
+  - name: Intercellular communication
+    description: |
+      Carotenoids can upregulate expression of connexin 43, a gene involved in
+      gap junctional communication between cells. Gap junctional communication
+      is often deficient in tumors and its restoration is associated with
+      decreased cell proliferation.
+    biological_processes:
+      - preferred_term: gap junction assembly
+        term:
+          id: GO:0016264
+          label: gap junction assembly
+    mic_references:
+      - 28
+      - 29
+      - 30
+    evidence:
+      - reference: PMID:10439631
+        supports: SUPPORT
+        snippet: "Studies using human and animal cells have identified a gene, connexin 43, whose expression is upregulated by chemopreventive carotenoids and which allows direct intercellular gap junctional communication"
+        explanation: Supports carotenoid role in enhancing gap junctional communication
+
+deficiency:
+  name: Carotenoid deficiency
+  description: |
+    No overt deficiency symptoms have been identified in people consuming
+    low-carotenoid diets if they consume adequate vitamin A. The Food and
+    Nutrition Board concluded that evidence was insufficient to establish
+    an RDA or AI specifically for carotenoids.
+  mic_references:
+    - 11
+  notes: |
+    While provitamin A carotenoids can prevent vitamin A deficiency, carotenoids
+    themselves do not have established deficiency symptoms independent of
+    vitamin A status.
+
+toxicity:
+  name: Carotenoid toxicity
+  description: |
+    Beta-carotene does not cause vitamin A toxicity even at high doses because
+    conversion to vitamin A decreases when body stores are adequate. High doses
+    of beta-carotene (up to 180 mg/day) have been used to treat erythropoietic
+    protoporphyria without toxic side effects. No toxicities have been reported
+    for lycopene, lutein, or zeaxanthin.
+  mic_references:
+    - 11
+    - 182
+
+food_sources:
+  - name: Carrot
+    food_term:
+      preferred_term: carrot
+      term:
+        id: FOODON:00001687
+        label: carrot food product
+    amount: "10.1 mg beta-carotene"
+    serving_size: "1 medium raw carrot"
+    notes: "Rich source of alpha-carotene and beta-carotene"
+
+  - name: Spinach
+    food_term:
+      preferred_term: spinach
+      term:
+        id: FOODON:00002269
+        label: spinach food product
+    amount: "13.8 mg beta-carotene; 29.8 mg lutein+zeaxanthin"
+    serving_size: "1 cup cooked frozen"
+    notes: "Dark green leafy vegetable rich in beta-carotene, lutein and zeaxanthin"
+
+  - name: Tomato
+    food_term:
+      preferred_term: tomato
+      term:
+        id: FOODON:00001164
+        label: tomato food product
+    amount: "3.2 mg lycopene"
+    serving_size: "1 medium raw tomato"
+    notes: "Tomatoes and tomato products provide ~80% of dietary lycopene; cooking in oil increases bioavailability"
+
+disease_associations:
+  - name: Age-related macular degeneration
+    disease_term:
+      preferred_term: age-related macular degeneration
+      term:
+        id: MONDO:0005150
+        label: age-related macular degeneration
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies suggest that diets rich in lutein and zeaxanthin may
+      slow AMD development. The AREDS2 trial found that lutein and zeaxanthin
+      supplementation improved visual acuity and slowed progression to advanced
+      AMD, particularly in those with low baseline dietary intake.
+    mic_references:
+      - 86
+      - 89
+      - 90
+    evidence:
+      - reference: PMID:12626691
+        supports: SUPPORT
+        snippet: "There is ample epidemiological evidence that the amount of macular pigment is inversely associated with the incidence of age-related macular degeneration"
+        explanation: Supports inverse association between macular carotenoids and AMD risk
+
+  - name: Lung cancer (beta-carotene supplementation risk in smokers)
+    disease_term:
+      preferred_term: lung cancer
+      term:
+        id: MONDO:0008903
+        label: lung cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: smokers and former asbestos workers
+    description: |
+      Two randomized controlled trials found that high-dose beta-carotene
+      supplementation (20-30 mg/day) increased the risk of lung cancer in
+      smokers and former asbestos workers. This adverse effect has not been
+      observed with dietary carotenoids from food.
+    mic_references:
+      - 39
+      - 41
+    notes: |
+      This increased risk applies specifically to high-dose beta-carotene
+      supplements in smokers, not to dietary carotenoid intake from foods.
+
+  - name: Prostate cancer
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of observational studies have reported an inverse association
+      between dietary lycopene intake or blood lycopene concentration and risk
+      of prostate cancer. However, most small-scale intervention studies have
+      found little benefit of lycopene supplements.
+    mic_references:
+      - 57
+      - 58
+    notes: "Association stronger for dietary lycopene than supplements"
+
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: atherosclerotic cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher plasma carotenoid concentrations have been associated with reduced
+      risk of cardiovascular disease in some prospective cohort studies. However,
+      randomized controlled trials found no benefit from beta-carotene
+      supplementation, and one meta-analysis found increased cardiovascular
+      mortality with supplementation.
+    mic_references:
+      - 129
+      - 147
+    evidence:
+      - reference: PMID:30032230
+        supports: SUPPORT
+        snippet: "The consumption and blood concentrations of specific carotenoids have been associated with reduced risks of a number of chronic conditions"
+        explanation: Supports observational association between carotenoids and reduced chronic disease risk
+    notes: "Dietary carotenoids from food may be beneficial, but supplements have not shown benefit"
+
+drug_interactions:
+  - name: Cholesterol-lowering medications
+    drug_term:
+      preferred_term: cholesterol-lowering agent
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: |
+      Cholestyramine and colestipol reduce absorption of fat-soluble nutrients
+      including carotenoids. Orlistat may also decrease carotenoid absorption.
+    mic_references:
+      - 185
+      - 186
+
+  - name: Proton pump inhibitors
+    drug_term:
+      preferred_term: proton pump inhibitor
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: LOW
+    description: |
+      Omeprazole has been shown to decrease beta-carotene absorption, possibly
+      by interfering with the release of carotenoids from the food matrix.
+    mic_references:
+      - 189
+
+nutrient_interactions:
+  - name: Fat co-consumption
+    nutrient_term:
+      preferred_term: dietary fat
+    interaction_type: INCREASES_ABSORPTION
+    description: |
+      Carotenoids are best absorbed with fat in a meal. Chopping, pureeing, and
+      cooking carotenoid-containing vegetables in oil generally increase the
+      bioavailability of the carotenoids they contain.
+    mic_references:
+      - 3
+      - 5
+    evidence:
+      - reference: PMID:30032230
+        supports: SUPPORT
+        snippet: "lipid co-consumption...are relevant covariates for interpreting blood serum or plasma carotenoid responses"
+        explanation: Confirms importance of lipid co-consumption for carotenoid bioavailability
+
+  - name: Beta-carotene and lutein interaction
+    nutrient_term:
+      preferred_term: lutein
+      term:
+        id: CHEBI:28838
+        label: lutein
+    interaction_type: COMPETES_FOR_TRANSPORT
+    description: |
+      High doses of beta-carotene supplements may decrease serum lutein and
+      zeaxanthin concentrations, suggesting competition for absorption.
+    mic_references:
+      - 190
+      - 191
+
+recommendations:
+  notes: |
+    No RDA or AI has been established for carotenoids. The National Cancer Institute,
+    American Cancer Society, and American Heart Association recommend consuming a
+    variety of fruits and vegetables daily to increase carotenoid intake. Evidence
+    suggests that consuming about 6 mg/day of lutein and zeaxanthin may decrease
+    risk of advanced AMD. High-dose beta-carotene supplements are not recommended,
+    particularly for smokers, due to potential adverse effects.
+
+references:
+  - reference: PMID:2802626
+    title: Lycopene as the most efficient biological carotenoid singlet oxygen quencher
+    findings:
+      - statement: Lycopene exhibits the highest singlet oxygen quenching rate among carotenoids
+        supporting_text: "Lycopene, a biologically occurring carotenoid, exhibits the highest physical quenching rate constant with singlet oxygen"
+  - reference: PMID:10439631
+    title: Carotenoids and gene regulation
+    findings:
+      - statement: Carotenoids upregulate connexin 43 expression and gap junctional communication
+        supporting_text: "Studies using human and animal cells have identified a gene, connexin 43, whose expression is upregulated by chemopreventive carotenoids"
+  - reference: PMID:12626691
+    title: Biologic mechanisms of the protective role of lutein and zeaxanthin in the eye
+    findings:
+      - statement: Macular pigment is inversely associated with AMD incidence
+        supporting_text: "There is ample epidemiological evidence that the amount of macular pigment is inversely associated with the incidence of age-related macular degeneration"
+  - reference: PMID:25134454
+    title: Carotenoids, inflammation, and oxidative stress
+    findings:
+      - statement: Carotenoids activate antioxidant pathways via Nrf2
+        supporting_text: "Carotenoids can also block oxidative stress by interacting with the nuclear factor erythroid 2-related factor 2 pathway"
+  - reference: PMID:30032230
+    title: Intrinsic and Extrinsic Factors Impacting Absorption, Metabolism, and Health Effects of Dietary Carotenoids
+    findings:
+      - statement: Carotenoid consumption is associated with reduced chronic disease risk
+        supporting_text: "The consumption and blood concentrations of specific carotenoids have been associated with reduced risks of a number of chronic conditions"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Carotenoids. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains 201 references.

@@ -1,0 +1,628 @@
+name: Folate
+nutrient_term:
+  preferred_term: folate
+  term:
+    id: CHEBI:67011
+    label: folates
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/folate
+alternate_names:
+  - Vitamin B9
+  - Folacin
+  - Folic acid
+  - Pteroylglutamic acid
+description: |
+  Folate is a water-soluble B-vitamin, also known as vitamin B9 or folacin. Naturally
+  occurring folates exist in many chemical forms in food and in metabolically active
+  forms in the human body. Folic acid is the major synthetic form found in fortified
+  foods and vitamin supplements. Folate is critical in the metabolism of nucleic acid
+  precursors and several amino acids, as well as in methylation reactions. Folate
+  coenzymes act as acceptors and donors of one-carbon units in a variety of reactions
+  critical to the metabolism of nucleic acids and amino acids.
+
+functions:
+  - name: One-Carbon Metabolism
+    description: |
+      Folate coenzymes mediate the transfer of one-carbon units in a variety of
+      reactions critical to the metabolism of nucleic acids and amino acids.
+      Folate coenzymes act as acceptors and donors of one-carbon units in these
+      metabolic processes.
+    biological_processes:
+      - preferred_term: one-carbon metabolic process
+        term:
+          id: GO:0006730
+          label: one-carbon metabolic process
+    mic_references:
+      - 2
+      - 3
+    evidence:
+      - reference: PMID:10203550
+        supports: SUPPORT
+        snippet: "Folate functions in multiple coenzyme forms in acceptance, redox processing and transfer of one-carbon units, including nucleotides and certain amino acids."
+        explanation: Directly confirms folate's role in one-carbon metabolism
+
+  - name: Nucleic Acid Metabolism
+    description: |
+      Folate coenzymes play a vital role in DNA metabolism through two pathways:
+      (1) The synthesis of DNA from its precursors (thymidine and purines) is
+      dependent on folate coenzymes. (2) A folate coenzyme is required for the
+      synthesis of methionine from homocysteine, and methionine is required for
+      the synthesis of S-adenosylmethionine (SAM). SAM is a methyl group donor
+      used in most biological methylation reactions, including the methylation
+      of sites within DNA, RNA, proteins, and phospholipids.
+    biological_processes:
+      - preferred_term: DNA biosynthetic process
+        term:
+          id: GO:0071897
+          label: DNA biosynthetic process
+      - preferred_term: DNA methylation
+        term:
+          id: GO:0006306
+          label: DNA methylation
+    mic_references:
+      - 2
+      - 3
+    evidence:
+      - reference: PMID:10720158
+        supports: SUPPORT
+        snippet: "Folate plays a major role in the formation of S-adenosylmethionine, the universal methyl donor, as well as in the formation of purine and thymidine synthesis for DNA and RNA."
+        explanation: Confirms folate's critical role in DNA/RNA synthesis and methylation
+
+  - name: Amino Acid Metabolism
+    description: |
+      Folate coenzymes are required for the metabolism of several important amino
+      acids, including methionine, cysteine, serine, glycine, and histidine. The
+      synthesis of methionine from homocysteine is catalyzed by methionine synthase,
+      an enzyme that requires folate (as 5-methyltetrahydrofolate) and vitamin B12.
+      Folate or vitamin B12 deficiency can result in decreased synthesis of
+      methionine and accumulation of homocysteine.
+    biological_processes:
+      - preferred_term: methionine biosynthetic process
+        term:
+          id: GO:0009086
+          label: methionine biosynthetic process
+    mic_references:
+      - 3
+      - 4
+    evidence:
+      - reference: PMID:10203550
+        supports: SUPPORT
+        snippet: "Folate functions in multiple coenzyme forms in acceptance, redox processing and transfer of one-carbon units, including nucleotides and certain amino acids."
+        explanation: Supports folate's role in amino acid metabolism
+
+deficiency:
+  name: Folate Deficiency
+  description: |
+    Clinical folate deficiency leads to megaloblastic anemia, which is reversible
+    with folic acid treatment. Rapidly dividing cells like those derived from bone
+    marrow are most vulnerable to the effects of folate deficiency since DNA
+    synthesis and cell division are dependent on folate coenzymes. When folate
+    supply to the rapidly dividing cells of the bone marrow is inadequate, blood
+    cell division is reduced, resulting in fewer but larger red blood cells.
+    Individuals in the early stages of folate deficiency may not show obvious
+    symptoms, but blood concentrations of homocysteine may increase.
+  phenotypes:
+    - name: Megaloblastic anemia
+      phenotype_term:
+        preferred_term: Megaloblastic anemia
+        term:
+          id: HP:0001889
+          label: Megaloblastic anemia
+      frequency: FREQUENT
+      context: Characteristic manifestation of clinical folate deficiency
+      mic_references:
+        - 1
+        - 19
+      evidence:
+        - reference: PMID:10203550
+          supports: SUPPORT
+          snippet: "Estimates of folate requirements have been based on intakes associated with maintenance of normal plasma and erythrocyte folate concentrations and functional tests that reflect abnormalities in folate-dependent reactions."
+          explanation: References functional abnormalities from folate deficiency
+
+    - name: Fatigue
+      phenotype_term:
+        preferred_term: Fatigue
+        term:
+          id: HP:0012378
+          label: Fatigue
+      frequency: FREQUENT
+      context: Results from decreased oxygen carrying capacity due to anemia
+      mic_references:
+        - 1
+
+    - name: Weakness
+      phenotype_term:
+        preferred_term: Muscle weakness
+        term:
+          id: HP:0001324
+          label: Muscle weakness
+      frequency: FREQUENT
+      context: Accompanies anemia in clinical folate deficiency
+      mic_references:
+        - 1
+
+  at_risk_groups:
+    - name: Pregnant women
+      description: |
+        Pregnancy is a time when the folate requirement is greatly increased to
+        sustain the demand for rapid cell replication and growth of fetal,
+        placental, and maternal tissue.
+      mic_references:
+        - 18
+
+    - name: Chronic alcohol consumers
+      description: |
+        Chronic, heavy alcohol consumption is associated with diminished absorption
+        of folate in addition to low dietary intake, which can lead to folate
+        deficiency.
+      mic_references:
+        - 14
+
+    - name: Smokers
+      description: |
+        Smoking is associated with low folate status. Folate concentrations in
+        blood were about 15% lower in smokers compared to nonsmokers.
+      mic_references:
+        - 15
+        - 16
+
+    - name: Individuals with malabsorptive conditions
+      description: |
+        Folate deficiency can result from malabsorptive conditions including
+        inflammatory bowel diseases (Crohn's disease and ulcerative colitis)
+        and celiac disease.
+      mic_references:
+        - 11
+        - 19
+
+  causes:
+    - name: Inadequate dietary intake
+      description: Most often caused by dietary insufficiency
+      mic_references:
+        - 11
+
+    - name: Chronic alcohol consumption
+      description: Diminishes folate absorption and often accompanies low dietary intake
+      mic_references:
+        - 14
+
+    - name: Malabsorptive conditions
+      description: Inflammatory bowel diseases and celiac disease can impair folate absorption
+      mic_references:
+        - 11
+        - 19
+
+  mic_references:
+    - 1
+    - 11
+    - 14
+    - 18
+    - 19
+
+toxicity:
+  name: Folic Acid Safety
+  description: |
+    No adverse effects have been associated with the consumption of excess folate
+    from food. Concerns regarding safety are limited to synthetic folic acid intake.
+    There is concern that large doses of folic acid given to an individual with an
+    undiagnosed vitamin B12 deficiency could correct megaloblastic anemia without
+    correcting the underlying vitamin B12 deficiency, leaving the individual at
+    risk of developing irreversible neurologic damage. Such cases of neurologic
+    progression in vitamin B12 deficiency have been mostly seen at folic acid
+    doses of 5,000 mcg (5 mg) and above.
+  adverse_effects:
+    - name: Masking of vitamin B12 deficiency
+      description: |
+        High-dose folic acid can correct megaloblastic anemia caused by vitamin B12
+        deficiency without correcting the underlying deficiency, potentially leading
+        to irreversible neurologic damage if vitamin B12 deficiency is not diagnosed
+        and treated.
+      severity: serious
+      mic_references:
+        - 1
+        - 78
+
+  mic_references:
+    - 1
+    - 78
+    - 204
+    - 205
+
+food_sources:
+  - name: Lentils (cooked)
+    food_term:
+      preferred_term: lentil
+      term:
+        id: FOODON:00001997
+        label: lentil food product
+    amount: "179 mcg DFE"
+    serving_size: "1/2 cup"
+
+  - name: Garbanzo beans (chickpeas, boiled)
+    food_term:
+      preferred_term: chickpea
+      term:
+        id: FOODON:00001274
+        label: chickpea food product
+    amount: "141 mcg DFE"
+    serving_size: "1/2 cup"
+
+  - name: Asparagus (boiled)
+    food_term:
+      preferred_term: asparagus
+      term:
+        id: FOODON:00001620
+        label: asparagus vegetable food product
+    amount: "134 mcg DFE"
+    serving_size: "1/2 cup (~6 spears)"
+
+  - name: Spinach (boiled)
+    food_term:
+      preferred_term: spinach
+      term:
+        id: FOODON:00002269
+        label: spinach food product
+    amount: "132 mcg DFE"
+    serving_size: "1/2 cup"
+
+  - name: Lima beans (boiled)
+    food_term:
+      preferred_term: lima bean
+    amount: "78 mcg DFE"
+    serving_size: "1/2 cup"
+
+  - name: Orange juice
+    food_term:
+      preferred_term: orange juice
+      term:
+        id: FOODON:00001001
+        label: orange juice (liquid)
+    amount: "56 mcg DFE"
+    serving_size: "6 fl. oz."
+
+  - name: Enriched bread
+    food_term:
+      preferred_term: enriched bread
+    amount: "50 mcg DFE"
+    serving_size: "1 slice"
+    bioavailability_notes: Fortified with folic acid
+
+  - name: Enriched spaghetti (cooked)
+    food_term:
+      preferred_term: enriched pasta
+    amount: "180 mcg DFE"
+    serving_size: "1 cup"
+    bioavailability_notes: Fortified with folic acid
+
+drug_interactions:
+  - name: NSAIDs (high dose)
+    description: |
+      When nonsteroidal anti-inflammatory drugs (NSAIDs) such as aspirin or
+      ibuprofen are taken in very large therapeutic dosages (i.e., to treat
+      severe arthritis), they may interfere with folate metabolism. Routine
+      use of NSAIDs has not been found to adversely affect folate status.
+    drug_term:
+      preferred_term: NSAID
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 200
+
+  - name: Anticonvulsants
+    description: |
+      Phenytoin has been shown to inhibit the intestinal absorption of folate,
+      and several studies have associated decreased folate status with long-term
+      use of the anticonvulsants phenytoin, phenobarbital, and primidone.
+    drug_term:
+      preferred_term: anticonvulsant
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 214
+
+  - name: Cholestyramine and Colestipol
+    description: |
+      Taking folic acid at the same time as the cholesterol-lowering agents
+      cholestyramine and colestipol may decrease the absorption of folic acid.
+    drug_term:
+      preferred_term: bile acid sequestrant
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 200
+
+  - name: Methotrexate
+    description: |
+      Methotrexate is a folic acid antagonist used to treat cancer, rheumatoid
+      arthritis, and psoriasis. Some of the side effects of methotrexate are
+      similar to those of severe folate deficiency, and supplementation with
+      folic or folinic acid is used to reduce antifolate toxicity.
+    drug_term:
+      preferred_term: methotrexate
+    interaction_type: ANTAGONISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 11
+      - 115
+
+nutrient_interactions:
+  - name: Vitamin B12
+    description: |
+      Folate and vitamin B12 are metabolically interrelated. The synthesis of
+      methionine from homocysteine requires both folate (as 5-methyltetrahydrofolate)
+      and vitamin B12. Deficiency of either vitamin can result in elevated
+      homocysteine. Importantly, high-dose folic acid supplementation can mask
+      vitamin B12 deficiency by correcting the associated anemia while allowing
+      neurological damage to progress.
+    nutrient_term:
+      preferred_term: vitamin B12
+      term:
+        id: CHEBI:30411
+        label: cobalamin
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 3
+      - 4
+
+  - name: Riboflavin (Vitamin B2)
+    description: |
+      Riboflavin is required as a cofactor for MTHFR, the enzyme that converts
+      5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate. Riboflavin
+      deficiency can affect folate metabolism and homocysteine levels,
+      particularly in individuals with the MTHFR 677C>T polymorphism.
+    nutrient_term:
+      preferred_term: riboflavin
+      term:
+        id: CHEBI:17015
+        label: riboflavin
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    mic_references:
+      - 6
+      - 7
+      - 8
+      - 9
+
+disease_associations:
+  - name: Neural Tube Defects
+    description: |
+      Neural tube defects arise from failure of embryonic neural tube closure
+      between the 21st and 28th days after conception. Results of randomized
+      trials have demonstrated 60% to 100% reductions in NTD cases when women
+      consumed folic acid supplements during the periconceptional period (about
+      one month before and at least one month after conception). The US Public
+      Health Service recommends that all persons capable of becoming pregnant
+      consume 400 mcg of folic acid daily to prevent NTDs.
+    disease_term:
+      preferred_term: neural tube defect
+      term:
+        id: MONDO:0018075
+        label: neural tube defect
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: Women of childbearing age, periconceptional period
+    mic_references:
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 35
+    evidence:
+      - reference: PMID:1677062
+        supports: SUPPORT
+        snippet: "A total of 1817 women at high risk of having a pregnancy with a neural tube defect, because of a previous affected pregnancy, were allocated at random to one of four groups--namely, folic acid, other vitamins, both, or neither. 1195 had a completed pregnancy in which the fetus or infant was known to have or not have a neural tube defect; 27 of these had a known neural tube defect, 6 in the folic acid groups and 21 in the two other groups, a 72% protective effect"
+        explanation: MRC Vitamin Study demonstrated 72% reduction in NTD recurrence with folic acid
+      - reference: PMID:1307234
+        supports: SUPPORT
+        snippet: "There were six cases of neural-tube defects in the group receiving the trace-element supplement, as compared with none in the vitamin-supplement group (P = 0.029)."
+        explanation: Czeizel study showed periconceptional vitamin supplementation prevents first occurrence of NTDs
+
+  - name: Cardiovascular Disease and Stroke
+    description: |
+      Elevated concentrations of homocysteine in the blood are associated with
+      increased risk of cardiovascular disease. Although folic acid supplementation
+      has been proven effective to control circulating homocysteine concentrations,
+      homocysteine lowering has not affected the incidence of cardiovascular disease
+      in supplementation trials. However, supplementation with folic acid and other
+      B vitamins does appear to lower the risk of stroke.
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: Individuals with elevated homocysteine; supplementation studies show stroke risk reduction
+    mic_references:
+      - 4
+      - 83
+      - 84
+      - 85
+      - 86
+      - 87
+    evidence:
+      - reference: PMID:10554704
+        supports: SUPPORT
+        snippet: "Elevated plasma total homocysteine is an independent risk factor for atherosclerotic vascular disease. Risk rises continuously across the spectrum of homocysteine concentrations and may become appreciable at levels greater than 10 mumol/l."
+        explanation: Confirms association between homocysteine and cardiovascular disease risk
+
+  - name: Colorectal Cancer
+    description: |
+      A pooled analysis of prospective cohort studies revealed a modest inverse
+      association between dietary and total folate intake and colon cancer risk.
+      A 2% decrease in colon cancer risk was estimated for every 100 mcg/day
+      increase in total folate intake. However, high doses of supplemental folic
+      acid may accelerate tumor growth in cancer patients with pre-existing
+      neoplasms.
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: Protective at adequate dietary levels; high-dose supplements may be harmful in those with pre-existing neoplasms
+    mic_references:
+      - 123
+      - 124
+      - 125
+      - 127
+      - 129
+    evidence:
+      - reference: PMID:10720158
+        supports: SUPPORT
+        snippet: "Collectively, the evidence from epidemiologic, animal and human studies strongly suggests that folate status modulates the risk of developing cancers in selected tissues, the most notable of which is the colorectum. Folate depletion appears to enhance carcinogenesis whereas folate supplementation above what is presently considered to be the basal requirement appears to convey a protective effect."
+        explanation: Supports protective role of adequate folate status against colorectal cancer
+
+  - name: Cognitive Decline and Dementia
+    description: |
+      Folate is essential for brain development and function. Low folate status
+      and/or high homocysteine concentrations are associated with cognitive
+      dysfunction in aging, from mild impairments to dementia. However, whether
+      supplemental folic acid confers long-term benefits in maintaining cognitive
+      health is not yet established.
+    disease_term:
+      preferred_term: dementia
+      term:
+        id: MONDO:0001627
+        label: dementia
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Observational association; intervention trials show mixed results
+    mic_references:
+      - 170
+      - 171
+      - 173
+      - 174
+      - 175
+      - 176
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "65 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "80 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "150 mcg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "200 mcg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "300 mcg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "400 mcg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "400 mcg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (all ages)
+      amount: "600 mcg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (all ages)
+      amount: "500 mcg/day"
+      source: Institute of Medicine
+    - population: Women capable of becoming pregnant
+      amount: "400 mcg/day from supplements"
+      source: US Public Health Service
+      notes: For prevention of neural tube defects
+  ul:
+    - population: Children 1-3 years
+      amount: "300 mcg/day"
+      source: Institute of Medicine
+      notes: Applies to synthetic folic acid only
+    - population: Children 4-8 years
+      amount: "400 mcg/day"
+      source: Institute of Medicine
+      notes: Applies to synthetic folic acid only
+    - population: Children 9-13 years
+      amount: "600 mcg/day"
+      source: Institute of Medicine
+      notes: Applies to synthetic folic acid only
+    - population: Adolescents 14-18 years
+      amount: "800 mcg/day"
+      source: Institute of Medicine
+      notes: Applies to synthetic folic acid only
+    - population: Adults 19+ years
+      amount: "1,000 mcg/day"
+      source: Institute of Medicine
+      notes: Applies to synthetic folic acid only; set to prevent masking of vitamin B12 deficiency
+  notes: |
+    The RDA was based primarily on the adequacy of red blood cell folate
+    concentrations at different levels of folate intake. All values are expressed
+    as dietary folate equivalents (DFEs). The UL applies only to synthetic folic
+    acid from supplements and fortified foods, not to natural folates in food.
+
+bioavailability:
+  description: |
+    Folic acid used in supplements and fortified foods is more bioavailable than
+    naturally occurring food folates. Dietary folate equivalents (DFEs) were
+    developed to account for this difference. Under fasting conditions, folic
+    acid has nearly 100% bioavailability, while food folate is estimated to have
+    only about 50% bioavailability. When folic acid is consumed with food, its
+    bioavailability is approximately 85%.
+  factors:
+    - name: Form of folate
+      description: |
+        Synthetic folic acid is more bioavailable than natural food folates.
+        1 mcg DFE = 1 mcg food folate = 0.6 mcg folic acid from supplements
+        or fortified food consumed with food = 0.5 mcg folic acid from
+        supplements taken on an empty stomach.
+      effect: INCREASED
+    - name: MTHFR polymorphism
+      description: |
+        The MTHFR 677C>T polymorphism results in a thermolabile enzyme with
+        reduced activity. Individuals with the T/T genotype have lower folate
+        status and higher homocysteine levels, particularly when folate intake
+        is inadequate.
+      effect: DECREASED
+  mic_references:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+
+references:
+  - reference: PMID:10203550
+    title: Folate metabolism and requirements
+    findings:
+      - statement: Folate functions as coenzyme in one-carbon transfer reactions
+        supporting_text: "Folate functions in multiple coenzyme forms in acceptance, redox processing and transfer of one-carbon units, including nucleotides and certain amino acids."
+  - reference: PMID:10720158
+    title: Folate and carcinogenesis - an integrated scheme
+    findings:
+      - statement: Folate status modulates cancer risk, particularly colorectal cancer
+        supporting_text: "Collectively, the evidence from epidemiologic, animal and human studies strongly suggests that folate status modulates the risk of developing cancers in selected tissues, the most notable of which is the colorectum."
+  - reference: PMID:1677062
+    title: Prevention of neural tube defects - MRC Vitamin Study
+    findings:
+      - statement: Folic acid supplementation provides 72% protection against NTD recurrence
+        supporting_text: "27 of these had a known neural tube defect, 6 in the folic acid groups and 21 in the two other groups, a 72% protective effect"
+  - reference: PMID:1307234
+    title: Prevention of first occurrence of neural-tube defects by periconceptional vitamin supplementation
+    findings:
+      - statement: Periconceptional vitamin use prevents first occurrence of NTDs
+        supporting_text: "There were six cases of neural-tube defects in the group receiving the trace-element supplement, as compared with none in the vitamin-supplement group"
+  - reference: PMID:10554704
+    title: Homocysteine and atherosclerosis
+    findings:
+      - statement: Elevated homocysteine is an independent risk factor for atherosclerotic vascular disease
+        supporting_text: "Elevated plasma total homocysteine is an independent risk factor for atherosclerotic vascular disease."
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Folate. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. Folate is particularly important for
+  women of childbearing age due to its critical role in preventing neural tube
+  defects during early pregnancy.

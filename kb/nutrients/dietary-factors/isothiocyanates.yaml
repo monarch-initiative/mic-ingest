@@ -1,0 +1,124 @@
+name: Isothiocyanates
+nutrient_term:
+  preferred_term: sulforaphane
+  term:
+    id: CHEBI:47807
+    label: sulforaphane
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/isothiocyanates
+alternate_names:
+  - Sulforaphane
+  - Glucoraphanin
+  - Phenethyl isothiocyanate
+  - PEITC
+description: |
+  Isothiocyanates are biologically active hydrolysis products of glucosinolates
+  found in cruciferous vegetables. Sulforaphane, derived from glucoraphanin,
+  is the most studied isothiocyanate. When cruciferous vegetables are chopped
+  or chewed, the enzyme myrosinase converts glucosinolates to isothiocyanates.
+  These compounds are of interest for cancer prevention due to their effects
+  on detoxification enzymes.
+
+functions:
+  - name: Phase II enzyme induction
+    description: |
+      Isothiocyanates activate the Nrf2 pathway, triggering expression of
+      antioxidant and detoxifying enzymes that protect cells from damage.
+      In human studies, broccoli sprout consumption increased detoxifying
+      enzyme activity.
+    biological_processes:
+      - preferred_term: response to xenobiotic stimulus
+        term:
+          id: GO:0009410
+          label: response to xenobiotic stimulus
+    mic_references:
+      - 9
+      - 26
+      - 27
+      - 28
+
+  - name: Anti-inflammatory effects
+    description: |
+      Sulforaphane significantly reduces nuclear translocation of pro-inflammatory
+      transcription factors, downregulating inflammatory mediators like TNF-alpha
+      and IL-6.
+    mic_references:
+      - 18
+
+  - name: Anticancer mechanisms
+    description: |
+      Laboratory and animal studies show isothiocyanates interfere with cancer
+      development through cell cycle arrest, apoptosis induction, and
+      angiogenesis inhibition. However, clinical evidence in humans is scarce.
+    mic_references:
+      - 20
+      - 30
+      - 31
+
+deficiency:
+  name: Isothiocyanate deficiency
+  description: |
+    Isothiocyanates are not essential nutrients, and no deficiency
+    syndrome has been identified.
+  notes: Isothiocyanates are derived from cruciferous vegetable consumption.
+
+toxicity:
+  name: Isothiocyanate toxicity
+  description: |
+    No serious adverse effects have been reported in humans at typical
+    dietary intakes. Some concerns exist about very high intakes based
+    on animal models, but typical dietary consumption appears safe.
+  mic_references:
+    - 70
+
+food_sources:
+  - name: Brussels sprouts
+    food_term:
+      preferred_term: Brussels sprouts
+    amount: "104 mg total glucosinolates"
+    serving_size: "1/2 cup"
+
+  - name: Broccoli
+    food_term:
+      preferred_term: broccoli
+    amount: "27 mg total glucosinolates"
+    serving_size: "1/2 cup"
+    notes: "Broccoli sprouts contain 10-100 times more glucoraphanin by weight than mature plants"
+    mic_references:
+      - 67
+
+  - name: Watercress
+    food_term:
+      preferred_term: watercress
+    amount: "32 mg total glucosinolates"
+    serving_size: "1 cup"
+
+disease_associations:
+  - name: Cancer prevention
+    disease_term:
+      preferred_term: cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      While animal studies show promise, clinical evidence of a protective
+      effect of isothiocyanates against cancer in humans is scarce. High
+      cruciferous vegetable intake shows associations with lower cancer
+      risk in some observational studies, but causation remains unclear.
+    mic_references:
+      - 59
+      - 60
+    notes: "Association observed with cruciferous vegetables; causation not established"
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for isothiocyanates. Consuming
+    cruciferous vegetables regularly as part of a balanced diet is recommended.
+    Chopping, chewing, or lightly cooking vegetables allows myrosinase to
+    convert glucosinolates to isothiocyanates. Broccoli sprouts are a
+    particularly rich source of glucoraphanin/sulforaphane.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Isothiocyanates. The page emphasizes that while
+  preclinical evidence is promising, clinical evidence for cancer prevention
+  in humans remains limited.
