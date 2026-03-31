@@ -26,9 +26,9 @@ dependencies = [
     # Rendering
     "jinja2>=3.0",
     # KG Integration (existing)
-    "koza>=0.6.0",
+    "koza>=2.2.0",
     "kgx>=2.4.0",
-    "biolink-model>=4.2.0",
+    "biolink-model>=4.3.7",
     # Utilities
     "loguru",
     "importlib-metadata>=4.8.0",

@@ -248,9 +248,10 @@ render-all:
 # EXPORT
 # =============================================================================
 
-# Export to KGX format (nodes and edges TSV)
+# Export to KGX format (nodes and edges JSONL)
 export-kgx:
-    uv run python -m mic_ingest.export.kgx
+    mkdir -p output/kgx
+    uv run koza transform src/mic_ingest/export/kgx_export.py -o output/kgx -f jsonl kb/nutrients/*/*.yaml
 
 # Export to JSON for browser
 export-json:
