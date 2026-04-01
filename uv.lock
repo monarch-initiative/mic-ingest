@@ -1667,8 +1667,11 @@ dependencies = [
     { name = "kgx" },
     { name = "koza" },
     { name = "linkml" },
+    { name = "linkml-data-qc" },
     { name = "linkml-dataops" },
+    { name = "linkml-reference-validator" },
     { name = "linkml-runtime" },
+    { name = "linkml-term-validator" },
     { name = "loguru" },
     { name = "lxml" },
     { name = "markdownify" },
@@ -1687,11 +1690,6 @@ dev = [
     { name = "pytest" },
     { name = "ruff" },
 ]
-validation = [
-    { name = "linkml-data-qc" },
-    { name = "linkml-reference-validator" },
-    { name = "linkml-term-validator" },
-]
 
 [package.metadata]
 requires-dist = [
@@ -1704,11 +1702,11 @@ requires-dist = [
     { name = "kgx", specifier = ">=2.4.0" },
     { name = "koza", specifier = ">=2.2.0" },
     { name = "linkml", specifier = ">=1.9.3" },
-    { name = "linkml-data-qc", marker = "extra == 'validation'" },
+    { name = "linkml-data-qc" },
     { name = "linkml-dataops" },
-    { name = "linkml-reference-validator", marker = "extra == 'validation'" },
+    { name = "linkml-reference-validator" },
     { name = "linkml-runtime", specifier = ">=1.9.4" },
-    { name = "linkml-term-validator", marker = "extra == 'validation'" },
+    { name = "linkml-term-validator" },
     { name = "loguru" },
     { name = "lxml" },
     { name = "markdownify", specifier = ">=1.2.2" },
@@ -1722,7 +1720,7 @@ requires-dist = [
     { name = "requests", specifier = ">=2.31.0" },
     { name = "ruff", marker = "extra == 'dev'" },
 ]
-provides-extras = ["validation", "dev"]
+provides-extras = ["dev"]
 
 [[package]]
 name = "mkdocs"

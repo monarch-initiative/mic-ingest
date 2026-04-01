@@ -60,7 +60,7 @@ def simulate_multi_edit(file_path: Path, edits: list) -> str:
 
 def validate_content(content: str, original_path: Path, project_root: Path) -> tuple[bool, str]:
     """
-    Validate content by writing to temp file and running validation.
+    Validate content by writing to temp file and running schema + term validation.
     Returns (success, output_message).
     """
     # Create temp file with same name in temp directory
@@ -68,18 +68,29 @@ def validate_content(content: str, original_path: Path, project_root: Path) -> t
         temp_path = Path(tmpdir) / original_path.name
         temp_path.write_text(content)
 
-        # Run validation command
-        cmd = ["just", "validate", str(temp_path)]
-
-        result = subprocess.run(
-            cmd,
+        # Step 1: Schema validation
+        schema_result = subprocess.run(
+            ["just", "validate", str(temp_path)],
             capture_output=True,
             text=True,
             cwd=project_root,
         )
 
-        output = result.stdout + result.stderr
-        return result.returncode == 0, output
+        schema_output = schema_result.stdout + schema_result.stderr
+        if schema_result.returncode != 0:
+            return False, schema_output
+
+        # Step 2: Term validation (ontology IDs and labels)
+        term_result = subprocess.run(
+            ["just", "validate-terms-file", str(temp_path)],
+            capture_output=True,
+            text=True,
+            cwd=project_root,
+        )
+
+        term_output = term_result.stdout + term_result.stderr
+        combined_output = schema_output + term_output
+        return term_result.returncode == 0, combined_output
 
 
 def main():

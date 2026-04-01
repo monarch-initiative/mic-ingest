@@ -33,15 +33,13 @@ dependencies = [
     "loguru",
     "importlib-metadata>=4.8.0",
     "markdownify>=1.2.2",
-]
-
-[project.optional-dependencies]
-validation = [
+    # Validation (mandatory)
     "linkml-data-qc",
     "linkml-term-validator",
     "linkml-reference-validator",
 ]
 
+[project.optional-dependencies]
 dev = [
     "pytest>=8.1.1",
     "mkdocs>=1.4",
