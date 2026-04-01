@@ -57,8 +57,8 @@ functions:
     biological_processes:
       - preferred_term: drug metabolism
         term:
-          id: GO:0017144
-          label: drug metabolic process
+          id: GO:0006805
+          label: xenobiotic metabolic process
     mic_references:
       - 5
 
@@ -92,7 +92,7 @@ deficiency:
         preferred_term: seizures
         term:
           id: HP:0001250
-          label: Seizures
+          label: Seizure
       frequency: FREQUENT
       context: Intractable seizures in inherited molybdenum cofactor deficiency
       mic_references:
@@ -251,7 +251,7 @@ disease_associations:
       preferred_term: esophageal cancer
       term:
         id: MONDO:0007576
-        label: esophageal carcinoma
+        label: esophageal cancer
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: Populations in molybdenum-deficient soil regions; evidence mixed

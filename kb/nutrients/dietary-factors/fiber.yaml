@@ -132,8 +132,8 @@ disease_associations:
     disease_term:
       preferred_term: constipation
       term:
-        id: MONDO:0002261
-        label: constipation
+        id: MONDO:0002203
+        label: constipation disorder
     relationship_type: THERAPEUTIC
     description: |
       Certain fibers are effective for treating chronic idiopathic constipation.
@@ -173,15 +173,15 @@ food_sources:
       preferred_term: almond
       term:
         id: FOODON:00003523
-        label: almond (whole)
+        label: almond
     amount: "3.5 g"
     serving_size: "1 oz"
   - name: Prunes
     food_term:
       preferred_term: prune
       term:
-        id: FOODON:00003205
-        label: prune
+        id: FOODON:00002176
+        label: prune food product
     amount: "6.2 g"
     serving_size: "1/2 cup"
     notes: Also contains sorbitol which adds to laxative effect

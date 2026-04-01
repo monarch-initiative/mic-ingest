@@ -56,9 +56,6 @@ functions:
           id: GO:0071897
           label: DNA biosynthetic process
       - preferred_term: DNA methylation
-        term:
-          id: GO:0006306
-          label: DNA methylation
     mic_references:
       - 2
       - 3
@@ -242,7 +239,7 @@ food_sources:
     food_term:
       preferred_term: chickpea
       term:
-        id: FOODON:00001274
+        id: FOODON:00001199
         label: chickpea food product
     amount: "141 mcg DFE"
     serving_size: "1/2 cup"

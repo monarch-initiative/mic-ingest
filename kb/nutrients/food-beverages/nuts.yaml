@@ -2,9 +2,6 @@ name: Nuts
 nutrient_term:
   preferred_term: nuts
   description: Tree nuts and peanuts, good sources of unsaturated fatty acids, protein, fiber, and phytochemicals
-  term:
-    id: FOODON:00001172
-    label: nut food product
 category: food_beverage
 source_url: https://lpi.oregonstate.edu/mic/food-beverages/nuts
 alternate_names:

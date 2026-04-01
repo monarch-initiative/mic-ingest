@@ -2,9 +2,6 @@ name: Legumes
 nutrient_term:
   preferred_term: legumes
   description: Foods from the legume family including beans, peas, lentils, peanuts, and soybeans
-  term:
-    id: FOODON:00001264
-    label: legume food product
 category: food_beverage
 source_url: https://lpi.oregonstate.edu/mic/food-beverages/legumes
 alternate_names:

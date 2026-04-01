@@ -82,8 +82,8 @@ disease_associations:
     disease_term:
       preferred_term: alcoholic liver disease
       term:
-        id: MONDO:0004790
-        label: alcoholic liver disease
+        id: MONDO:0043693
+        label: alcoholic liver diseases
     relationship_type: RISK_FACTOR
     direction: INCREASED
     description: |

@@ -43,9 +43,6 @@ functions:
       enzymes and redox regulators in mammalian cells.
     biological_processes:
       - preferred_term: thioredoxin reduction
-        term:
-          id: GO:0006118
-          label: obsolete electron transport
     mic_references:
       - 8
       - 9

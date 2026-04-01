@@ -294,7 +294,7 @@ disease_associations:
       preferred_term: stroke
       term:
         id: MONDO:0005098
-        label: stroke
+        label: stroke disorder
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: General population
@@ -335,7 +335,7 @@ disease_associations:
     disease_term:
       preferred_term: kidney stones
       term:
-        id: MONDO:0001248
+        id: MONDO:0008171
         label: nephrolithiasis
     relationship_type: RISK_FACTOR
     direction: DECREASED

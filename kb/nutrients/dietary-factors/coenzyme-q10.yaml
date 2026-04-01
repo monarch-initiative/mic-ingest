@@ -158,8 +158,8 @@ disease_associations:
     disease_term:
       preferred_term: coenzyme Q10 deficiency
       term:
-        id: MONDO:0015559
-        label: primary coenzyme Q10 deficiency
+        id: MONDO:0018151
+        label: coenzyme Q10 deficiency
     relationship_type: THERAPEUTIC
     description: |
       High-dose CoQ10 supplementation (5-50 mg/kg/day) is the treatment of choice
@@ -176,28 +176,28 @@ food_sources:
       preferred_term: beef
       term:
         id: FOODON:00001041
-        label: beef (ground, raw)
+        label: cow food product
     notes: One of the richest dietary sources
   - name: Chicken
     food_term:
       preferred_term: chicken
       term:
-        id: FOODON:00001082
-        label: chicken food product
+        id: FOODON:00001040
+        label: chicken meat food product
     notes: Good source of CoQ10
   - name: Soybean oil
     food_term:
       preferred_term: soybean oil
       term:
-        id: FOODON:03301410
+        id: FOODON:03302776
         label: soybean oil
     notes: Plant-based source
   - name: Peanuts
     food_term:
       preferred_term: peanut
       term:
-        id: FOODON:00003521
-        label: peanut (whole, raw)
+        id: FOODON:00003206
+        label: peanut
     notes: Contains modest amounts
 
 recommendations:

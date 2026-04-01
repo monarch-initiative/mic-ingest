@@ -2,9 +2,6 @@ name: Garlic
 nutrient_term:
   preferred_term: garlic
   description: Allium sativum L., a culinary and medicinal plant rich in organosulfur compounds
-  term:
-    id: FOODON:00001895
-    label: garlic food product
 category: food_beverage
 source_url: https://lpi.oregonstate.edu/mic/food-beverages/garlic
 alternate_names:

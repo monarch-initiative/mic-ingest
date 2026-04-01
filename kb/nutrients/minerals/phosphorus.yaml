@@ -307,7 +307,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Both general population and those with kidney disease

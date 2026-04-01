@@ -74,8 +74,8 @@ functions:
     biological_processes:
       - preferred_term: negative regulation of calcification
         term:
-          id: GO:0110155
-          label: negative regulation of tissue mineralization
+          id: GO:0140928
+          label: inhibition of non-skeletal tissue mineralization
     mic_references:
       - 3
       - 17
@@ -231,8 +231,8 @@ food_sources:
     food_term:
       preferred_term: kale
       term:
-        id: FOODON:00002923
-        label: kale
+        id: FOODON:00001981
+        label: kale food product
     amount: "493 mcg"
     serving_size: "1 cup"
     mic_references:
@@ -258,8 +258,8 @@ food_sources:
     food_term:
       preferred_term: broccoli
       term:
-        id: FOODON:00002668
-        label: broccoli
+        id: FOODON:00001666
+        label: broccoli food product
     amount: "220 mcg"
     serving_size: "1 cup"
     mic_references:
@@ -269,8 +269,8 @@ food_sources:
     food_term:
       preferred_term: spinach
       term:
-        id: FOODON:00002255
-        label: spinach
+        id: FOODON:00002269
+        label: spinach food product
     amount: "121 mcg"
     serving_size: "1 cup"
     mic_references:

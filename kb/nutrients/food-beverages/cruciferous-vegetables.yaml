@@ -2,9 +2,6 @@ name: Cruciferous Vegetables
 nutrient_term:
   preferred_term: cruciferous vegetables
   description: Vegetables from the Brassicaceae family including broccoli, Brussels sprouts, cabbage, cauliflower, and kale
-  term:
-    id: FOODON:00001169
-    label: cruciferous food product
 category: food_beverage
 source_url: https://lpi.oregonstate.edu/mic/food-beverages/cruciferous-vegetables
 alternate_names:

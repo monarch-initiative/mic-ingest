@@ -111,8 +111,8 @@ deficiency:
       phenotype_term:
         preferred_term: Bitot spots
         term:
-          id: HP:0031609
-          label: Bitot spots
+          id: HP:0007462
+          label: Bitot spots of the conjunctiva
       frequency: OCCASIONAL
       context: Abnormal changes in the conjunctiva indicating moderate vitamin A deficiency
       mic_references:
@@ -181,7 +181,7 @@ disease_associations:
     disease_term:
       preferred_term: acute promyelocytic leukemia
       term:
-        id: MONDO:0009986
+        id: MONDO:0012883
         label: acute promyelocytic leukemia
     relationship_type: THERAPEUTIC
     description: |

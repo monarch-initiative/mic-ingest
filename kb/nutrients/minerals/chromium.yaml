@@ -249,8 +249,8 @@ disease_associations:
     disease_term:
       preferred_term: metabolic syndrome
       term:
-        id: MONDO:0005154
-        label: metabolic syndrome
+        id: MONDO:0011565
+        label: metabolic syndrome X
     relationship_type: THERAPEUTIC
     population_context: Evidence is largely lacking
     mic_references:
@@ -266,7 +266,7 @@ disease_associations:
     disease_term:
       preferred_term: polycystic ovary syndrome
       term:
-        id: MONDO:0008315
+        id: MONDO:0008487
         label: polycystic ovary syndrome
     relationship_type: THERAPEUTIC
     population_context: Limited evidence of benefit

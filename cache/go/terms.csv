@@ -1,24 +1,76 @@
 curie,label,retrieved_at
-GO:0032964,collagen biosynthetic process,2025-12-17T23:56:23.472855
-GO:0042413,carnitine catabolic process,2025-12-17T23:56:23.472866
-GO:0034599,cellular response to oxidative stress,2025-12-17T23:56:23.472868
-GO:0042423,catecholamine biosynthetic process,2025-12-17T23:56:23.472871
-GO:0045329,carnitine biosynthetic process,2025-12-17T23:56:23.472874
-GO:0016209,antioxidant activity,2025-12-17T23:56:23.472877
-GO:0006633,fatty acid biosynthetic process,2025-12-17T23:56:23.472879
-GO:0006094,gluconeogenesis,2025-12-17T23:56:23.472881
-GO:0055114,obsolete oxidation-reduction process,2025-12-17T23:56:23.472884
-GO:0006281,DNA repair,2025-12-17T23:56:23.472886
-GO:0006091,generation of precursor metabolites and energy,2025-12-17T23:56:23.472888
-GO:0015937,coenzyme A biosynthetic process,2025-12-17T23:56:23.472891
-GO:0006631,fatty acid metabolic process,2025-12-17T23:56:23.472893
-GO:0006099,tricarboxylic acid cycle,2025-12-17T23:56:23.472896
-GO:0006473,protein acetylation,2025-12-17T23:56:23.472898
-GO:0006730,one-carbon metabolic process,2025-12-17T23:56:23.472900
-GO:0071897,DNA biosynthetic process,2025-12-17T23:56:23.472902
-GO:0006306,obsolete DNA methylation,2025-12-17T23:56:23.472905
-GO:0009086,methionine biosynthetic process,2025-12-17T23:56:23.472907
-GO:0009410,response to xenobiotic stimulus,2025-12-17T23:56:23.472910
-GO:0006979,response to oxidative stress,2025-12-17T23:56:23.472912
-GO:0000304,response to singlet oxygen,2025-12-17T23:56:23.472914
-GO:0016264,gap junction assembly,2025-12-17T23:56:23.472917
+GO:0032964,collagen biosynthetic process,2026-04-01T14:34:57.586084
+GO:0042413,carnitine catabolic process,2026-04-01T14:34:57.586094
+GO:0034599,cellular response to oxidative stress,2026-04-01T14:34:57.586097
+GO:0042423,catecholamine biosynthetic process,2026-04-01T14:34:57.586100
+GO:0045329,carnitine biosynthetic process,2026-04-01T14:34:57.586103
+GO:0016209,antioxidant activity,2026-04-01T14:34:57.586105
+GO:0006633,fatty acid biosynthetic process,2026-04-01T14:34:57.586109
+GO:0006094,gluconeogenesis,2026-04-01T14:34:57.586112
+GO:0055114,obsolete oxidation-reduction process,2026-04-01T14:34:57.586115
+GO:0006281,DNA repair,2026-04-01T14:34:57.586118
+GO:0006091,generation of precursor metabolites and energy,2026-04-01T14:34:57.586120
+GO:0015937,coenzyme A biosynthetic process,2026-04-01T14:34:57.586122
+GO:0006631,fatty acid metabolic process,2026-04-01T14:34:57.586125
+GO:0006099,tricarboxylic acid cycle,2026-04-01T14:34:57.586127
+GO:0006473,protein acetylation,2026-04-01T14:34:57.586129
+GO:0006730,one-carbon metabolic process,2026-04-01T14:34:57.586131
+GO:0071897,DNA biosynthetic process,2026-04-01T14:34:57.586134
+GO:0006306,obsolete DNA methylation,2026-04-01T14:34:57.586136
+GO:0009086,methionine biosynthetic process,2026-04-01T14:34:57.586138
+GO:0009410,response to xenobiotic stimulus,2026-04-01T14:34:57.586141
+GO:0006979,response to oxidative stress,2026-04-01T14:34:57.586143
+GO:0000304,response to singlet oxygen,2026-04-01T14:34:57.586146
+GO:0016264,gap junction assembly,2026-04-01T14:34:57.586148
+GO:0006754,ATP biosynthetic process,2026-04-01T14:34:57.586150
+GO:0006119,oxidative phosphorylation,2026-04-01T14:34:57.586153
+GO:0006954,inflammatory response,2026-04-01T14:34:57.586155
+GO:0050727,regulation of inflammatory response,2026-04-01T14:34:57.586157
+GO:0048666,neuron development,2026-04-01T14:34:57.586160
+GO:0006113,fermentation,2026-04-01T14:34:57.586162
+GO:0006635,fatty acid beta-oxidation,2026-04-01T14:34:57.586164
+GO:0006090,pyruvate metabolic process,2026-04-01T14:34:57.586166
+GO:0030282,bone mineralization,2026-04-01T14:34:57.586169
+GO:0055074,calcium ion homeostasis,2026-04-01T14:34:57.586171
+GO:0007165,signal transduction,2026-04-01T14:34:57.586173
+GO:0006936,muscle contraction,2026-04-01T14:34:57.586176
+GO:0008286,insulin receptor signaling pathway,2026-04-01T14:34:57.586178
+GO:0055072,obsolete iron ion homeostasis,2026-04-01T14:34:57.586180
+GO:0030199,collagen fibril organization,2026-04-01T14:34:57.586183
+GO:0042133,obsolete neurotransmitter metabolic process,2026-04-01T14:34:57.586185
+GO:0042438,melanin biosynthetic process,2026-04-01T14:34:57.586187
+GO:0110148,obsolete biomineralization,2026-04-01T14:34:57.586190
+GO:0006590,thyroid hormone generation,2026-04-01T14:34:57.586192
+GO:0015671,oxygen transport,2026-04-01T14:34:57.586195
+GO:0022900,electron transport chain,2026-04-01T14:34:57.586197
+GO:0006260,DNA replication,2026-04-01T14:34:57.586199
+GO:0042776,proton motive force-driven mitochondrial ATP synthesis,2026-04-01T14:34:57.586201
+GO:0090592,DNA synthesis involved in DNA replication,2026-04-01T14:34:57.586204
+GO:0006811,monoatomic ion transport,2026-04-01T14:34:57.586206
+GO:0030166,proteoglycan biosynthetic process,2026-04-01T14:34:57.586208
+GO:0042060,wound healing,2026-04-01T14:34:57.586211
+GO:0019418,sulfide oxidation,2026-04-01T14:34:57.586213
+GO:0006145,purine nucleobase catabolic process,2026-04-01T14:34:57.586215
+GO:0046034,ATP metabolic process,2026-04-01T14:34:57.586218
+GO:0008654,phospholipid biosynthetic process,2026-04-01T14:34:57.586220
+GO:0006468,protein phosphorylation,2026-04-01T14:34:57.586222
+GO:0005975,carbohydrate metabolic process,2026-04-01T14:34:57.586225
+GO:0006118,obsolete electron transport,2026-04-01T14:34:57.586227
+GO:0008217,regulation of blood pressure,2026-04-01T14:34:57.586229
+GO:0003824,catalytic activity,2026-04-01T14:34:57.586232
+GO:0006457,protein folding,2026-04-01T14:34:57.586234
+GO:0010468,regulation of gene expression,2026-04-01T14:34:57.586236
+GO:0006656,phosphatidylcholine biosynthetic process,2026-04-01T14:34:57.586238
+GO:0008292,acetylcholine biosynthetic process,2026-04-01T14:34:57.586241
+GO:0007601,visual perception,2026-04-01T14:34:57.586243
+GO:0055062,phosphate ion homeostasis,2026-04-01T14:34:57.586246
+GO:0002682,regulation of immune system process,2026-04-01T14:34:57.586248
+GO:0034440,lipid oxidation,2026-04-01T14:34:57.586251
+GO:0042157,lipoprotein metabolic process,2026-04-01T14:34:57.586253
+GO:0042110,T cell activation,2026-04-01T14:34:57.586255
+GO:0007596,blood coagulation,2026-04-01T14:34:57.586257
+GO:0110155,NAD-cap decapping,2026-04-01T14:34:57.586259
+GO:0006879,intracellular iron ion homeostasis,2026-04-01T14:34:57.586262
+GO:0034505,tooth mineralization,2026-04-01T14:34:57.586264
+GO:0006805,xenobiotic metabolic process,2026-04-01T14:34:57.586266
+GO:0140928,inhibition of non-skeletal tissue mineralization,2026-04-01T14:34:57.586270

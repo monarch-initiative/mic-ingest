@@ -256,7 +256,7 @@ disease_associations:
       preferred_term: thyroid cancer
       term:
         id: MONDO:0015075
-        label: thyroid carcinoma
+        label: thyroid gland carcinoma
     relationship_type: PROTECTIVE
     population_context: In radiation emergencies; potassium iodide prophylaxis
     mic_references:

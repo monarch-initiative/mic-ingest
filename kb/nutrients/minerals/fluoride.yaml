@@ -27,8 +27,8 @@ functions:
     biological_processes:
       - preferred_term: biomineralization
         term:
-          id: GO:0110148
-          label: biomineralization
+          id: GO:0034505
+          label: tooth mineralization
     mic_references:
       - 1
       - 2
@@ -158,7 +158,7 @@ disease_associations:
     disease_term:
       preferred_term: dental caries
       term:
-        id: MONDO:0004352
+        id: MONDO:0005276
         label: dental caries
     relationship_type: PROTECTIVE
     population_context: All ages

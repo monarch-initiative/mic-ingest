@@ -26,9 +26,6 @@ functions:
       (stabilizing the structure of catalytic enzymes).
     biological_processes:
       - preferred_term: enzyme activity
-        term:
-          id: GO:0003824
-          label: catalytic activity
     mic_references:
       - 7
       - 8
@@ -100,7 +97,7 @@ deficiency:
         preferred_term: dermatitis
         term:
           id: HP:0000964
-          label: Eczema
+          label: Eczematoid dermatitis
       frequency: FREQUENT
       context: Characteristic feature of severe zinc deficiency
       mic_references:
@@ -385,7 +382,7 @@ disease_associations:
     disease_term:
       preferred_term: age-related macular degeneration
       term:
-        id: MONDO:0008138
+        id: MONDO:0005150
         label: age-related macular degeneration
     relationship_type: THERAPEUTIC
     population_context: Individuals with intermediate AMD
@@ -400,7 +397,7 @@ disease_associations:
     disease_term:
       preferred_term: common cold
       term:
-        id: MONDO:0005917
+        id: MONDO:0005709
         label: common cold
     relationship_type: THERAPEUTIC
     population_context: General population with cold symptoms

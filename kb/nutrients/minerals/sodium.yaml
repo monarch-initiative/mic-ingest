@@ -85,7 +85,7 @@ deficiency:
         preferred_term: seizures
         term:
           id: HP:0001250
-          label: Seizures
+          label: Seizure
       frequency: OCCASIONAL
       context: Severe hyponatremia
       mic_references:
@@ -258,7 +258,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Those with excess sodium intake or salt sensitivity
@@ -273,7 +273,7 @@ disease_associations:
       preferred_term: gastric cancer
       term:
         id: MONDO:0001056
-        label: gastric adenocarcinoma
+        label: gastric cancer
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Populations with high salt intake
@@ -301,7 +301,7 @@ disease_associations:
     disease_term:
       preferred_term: kidney stones
       term:
-        id: MONDO:0001248
+        id: MONDO:0008171
         label: nephrolithiasis
     relationship_type: RISK_FACTOR
     direction: INCREASED

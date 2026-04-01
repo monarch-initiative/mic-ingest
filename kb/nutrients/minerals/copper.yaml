@@ -42,8 +42,8 @@ functions:
     biological_processes:
       - preferred_term: iron ion homeostasis
         term:
-          id: GO:0055072
-          label: iron ion homeostasis
+          id: GO:0006879
+          label: intracellular iron ion homeostasis
     mic_references:
       - 4
       - 9
@@ -70,9 +70,6 @@ functions:
       peptidylglycine alpha-amidating monooxygenase is essential for processing neuropeptides.
     biological_processes:
       - preferred_term: neurotransmitter metabolic process
-        term:
-          id: GO:0042133
-          label: neurotransmitter metabolic process
     mic_references:
       - 1
       - 2
@@ -136,7 +133,7 @@ deficiency:
         preferred_term: neutropenia
         term:
           id: HP:0001875
-          label: Neutropenia
+          label: Decreased total neutrophil count
       frequency: FREQUENT
       context: Increases susceptibility to infection
       mic_references:
@@ -335,7 +332,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Both deficiency and excess may increase risk

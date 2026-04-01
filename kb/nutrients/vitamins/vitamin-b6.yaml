@@ -158,7 +158,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: RISK_FACTOR
     direction: DECREASED
     description: |
@@ -188,7 +188,7 @@ disease_associations:
     disease_term:
       preferred_term: pyridoxine-dependent epilepsy
       term:
-        id: MONDO:0011658
+        id: MONDO:0009945
         label: pyridoxine-dependent epilepsy
     relationship_type: THERAPEUTIC
     population_context: Infants with rare inborn errors of vitamin B6 metabolism

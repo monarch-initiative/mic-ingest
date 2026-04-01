@@ -175,9 +175,6 @@ deficiency:
     - name: Musculoskeletal pain
       phenotype_term:
         preferred_term: musculoskeletal pain
-        term:
-          id: HP:0034380
-          label: Musculoskeletal pain
       frequency: FREQUENT
       mic_references:
         - 22
@@ -293,8 +290,8 @@ food_sources:
     food_term:
       preferred_term: salmon
       term:
-        id: FOODON:03411222
-        label: salmon (whole, raw)
+        id: FOODON:00002220
+        label: salmon food product
     amount: "465 IU (11.6 mcg)"
     serving_size: "3 ounces"
     mic_references:
@@ -320,8 +317,8 @@ food_sources:
     food_term:
       preferred_term: milk
       term:
-        id: FOODON:00001564
-        label: milk (whole, fluid)
+        id: FOODON:00001771
+        label: cow milk based food product
     amount: "108 IU (2.7 mcg)"
     serving_size: "8 fluid ounces"
     mic_references:
@@ -339,8 +336,8 @@ food_sources:
     food_term:
       preferred_term: egg yolk
       term:
-        id: FOODON:00002669
-        label: egg yolk
+        id: FOODON:02020157
+        label: chicken egg yolk
     amount: "37 IU (0.9 mcg)"
     serving_size: "1 large egg"
     mic_references:
@@ -393,7 +390,7 @@ nutrient_interactions:
       preferred_term: calcium
       term:
         id: CHEBI:22984
-        label: calcium(2+)
+        label: calcium atom
     interaction_type: SYNERGISTIC
     description: |
       Vitamin D enhances intestinal calcium absorption and is essential for
@@ -408,7 +405,7 @@ nutrient_interactions:
       preferred_term: magnesium
       term:
         id: CHEBI:25107
-        label: magnesium(2+)
+        label: magnesium atom
     interaction_type: SYNERGISTIC
     description: |
       Magnesium is required for vitamin D metabolism. Low magnesium status

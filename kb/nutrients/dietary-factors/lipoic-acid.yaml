@@ -176,15 +176,15 @@ food_sources:
     food_term:
       preferred_term: spinach
       term:
-        id: FOODON:03306936
-        label: spinach
+        id: FOODON:00002269
+        label: spinach food product
     notes: One of the better vegetable sources
   - name: Broccoli
     food_term:
       preferred_term: broccoli
       term:
-        id: FOODON:00001240
-        label: broccoli
+        id: FOODON:00001666
+        label: broccoli food product
     notes: Contains modest amounts
 
 recommendations:

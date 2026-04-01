@@ -164,7 +164,7 @@ disease_associations:
       preferred_term: peripheral arterial disease
       term:
         id: MONDO:0005294
-        label: peripheral artery disease
+        label: peripheral vascular disease
     relationship_type: THERAPEUTIC
     description: |
       Propionyl-L-carnitine supplementation has been shown to improve walking
@@ -178,8 +178,8 @@ food_sources:
     food_term:
       preferred_term: beef steak
       term:
-        id: FOODON:00003029
-        label: beef steak
+        id: FOODON:00001041
+        label: cow food product
     amount: "81 mg"
     serving_size: "3 oz cooked"
     notes: One of the richest dietary sources
@@ -192,16 +192,16 @@ food_sources:
     food_term:
       preferred_term: whole milk
       term:
-        id: FOODON:00001175
-        label: whole milk food product
+        id: FOODON:00001771
+        label: cow milk based food product
     amount: "8 mg"
     serving_size: "1 cup"
   - name: Chicken breast
     food_term:
       preferred_term: chicken breast
       term:
-        id: FOODON:00003094
-        label: chicken breast meat
+        id: FOODON:00001040
+        label: chicken meat food product
     amount: "3 mg"
     serving_size: "3 oz cooked"
     notes: Much lower than red meat

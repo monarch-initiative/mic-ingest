@@ -174,7 +174,7 @@ disease_associations:
     disease_term:
       preferred_term: neural tube defect
       term:
-        id: MONDO:0005343
+        id: MONDO:0018075
         label: neural tube defect
     relationship_type: RISK_FACTOR
     direction: DECREASED
@@ -192,7 +192,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: RISK_FACTOR
     direction: DECREASED
     description: |

@@ -319,7 +319,7 @@ disease_associations:
     disease_term:
       preferred_term: iron deficiency anemia
       term:
-        id: MONDO:0004827
+        id: MONDO:0001356
         label: iron deficiency anemia
     relationship_type: DEFICIENCY_CAUSES
     population_context: Global public health concern
@@ -350,7 +350,7 @@ disease_associations:
     disease_term:
       preferred_term: hereditary hemochromatosis
       term:
-        id: MONDO:0019337
+        id: MONDO:0006507
         label: hereditary hemochromatosis
     relationship_type: MARKER
     population_context: Individuals with HFE gene mutations

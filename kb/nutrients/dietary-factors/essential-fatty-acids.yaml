@@ -183,14 +183,14 @@ food_sources:
     food_term:
       preferred_term: walnut
       term:
-        id: FOODON:00003534
-        label: walnut (whole)
+        id: FOODON:03301364
+        label: walnut
     notes: Good plant source of ALA
   - name: Safflower oil
     food_term:
       preferred_term: safflower oil
       term:
-        id: FOODON:03306867
+        id: FOODON:03302780
         label: safflower oil
     amount: "10.1 g LA"
     serving_size: "1 tablespoon"
@@ -202,7 +202,7 @@ disease_associations:
       preferred_term: cardiovascular disease
       term:
         id: MONDO:0004995
-        label: cardiovascular disease
+        label: cardiovascular disorder
     relationship_type: PROTECTIVE
     direction: DECREASED
     description: |
@@ -221,9 +221,6 @@ disease_associations:
   - name: Preterm Birth
     disease_term:
       preferred_term: preterm birth
-      term:
-        id: MONDO:0025530
-        label: premature birth
     relationship_type: PROTECTIVE
     direction: DECREASED
     description: |
