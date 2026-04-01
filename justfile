@@ -252,6 +252,8 @@ render-all:
 export-kgx:
     mkdir -p output/kgx
     uv run koza transform src/mic_ingest/export/kgx_export.py -o output/kgx -f jsonl kb/nutrients/*/*.yaml
+    mv output/kgx/kgx_export_nodes.jsonl output/kgx/mic_nodes.jsonl
+    mv output/kgx/kgx_export_edges.jsonl output/kgx/mic_edges.jsonl
 
 # Export to JSON for browser
 export-json:
