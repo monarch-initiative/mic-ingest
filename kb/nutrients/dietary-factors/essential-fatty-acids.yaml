@@ -215,7 +215,7 @@ disease_associations:
     evidence:
       - reference: PMID:22904344
         supports: SUPPORT
-        snippet: "Epidemiological studies on Greenland Inuits in the 1970s and subsequent human studies have established an inverse relationship between the ingestion of omega-3 fatty acids, blood levels of C(20-22) omega 3 PUFA, and mortality associated with cardiovascular disease (CVD)"
+        snippet: "Epidemiological studies on Greenland Inuits in the 1970s and subsequent human studies have established an inverse relationship between the ingestion of omega-3 fatty acids ... blood levels of C(20-22) ω 3 PUFA, and mortality associated with cardiovascular disease (CVD)"
         explanation: Confirms inverse relationship between omega-3 intake and CVD mortality
 
   - name: Preterm Birth

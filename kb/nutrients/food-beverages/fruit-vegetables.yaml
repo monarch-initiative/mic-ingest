@@ -41,7 +41,7 @@ disease_associations:
     evidence:
       - reference: PMID:28338764
         supports: SUPPORT
-        snippet: "For fruits and vegetables combined, the summary RR per 200 g/day was 0.92 [95% confidence interval (CI): 0.90-0.94, I 2  = 0%, n  = 15] for coronary heart disease, 0.84 (95% CI: 0.76-0.92, I 2  = 73%, n  = 10) for stroke, 0.92 (95% CI: 0.90-0.95, I 2  = 31%, n  = 13) for cardiovascular disease"
+        snippet: "For fruits and vegetables combined, the summary RR per 200 g/day was 0.92 ... for coronary heart disease, 0.84 (95% CI: 0.76-0.92, I 2  = 73%, n  = 10) for stroke, 0.92 (95% CI: 0.90-0.95, I 2  = 31%, n  = 13) for cardiovascular disease"
         explanation: Meta-analysis confirms dose-response reduction in CVD risk with increased fruit and vegetable intake
 
   - name: Fruit and Vegetables and Stroke
@@ -86,7 +86,7 @@ disease_associations:
     evidence:
       - reference: PMID:22474042
         supports: SUPPORT
-        snippet: "A greater quantity of combined F&V intake was associated with 21% lower hazard of T2D (HR 0.79 [95% CI 0.62-1.00]) comparing extreme tertiles, in adjusted analyses including variety"
+        snippet: "A greater quantity of combined F&V intake was associated with 21% lower hazard of T2D (HR 0.79 ... comparing extreme tertiles, in adjusted analyses including variety"
         explanation: Prospective study shows inverse association between fruit and vegetable intake and type 2 diabetes incidence
       - reference: PMID:28424256
         supports: SUPPORT
@@ -140,7 +140,7 @@ disease_associations:
     evidence:
       - reference: PMID:27061845
         supports: SUPPORT
-        snippet: "Intake of ≤1 serving/day of fruit and vegetables combined was associated with 39% higher hip fracture risk (pooled adjusted HR, 1.39; 95% confidence interval [CI], 1.20 to 1.58) in comparison with moderate intake (>3 and ≤5 servings/day)"
+        snippet: "Intake of ≤1 serving/day of fruit and vegetables combined was associated with 39% higher hip fracture risk (pooled adjusted HR, 1.39; 95% confidence interval ... 1.20 to 1.58) in comparison with moderate intake (>3 and ≤5 servings/day)"
         explanation: Pooled analysis from multiple cohorts shows low fruit and vegetable intake associated with increased hip fracture risk
 
 recommendations:
