@@ -73,6 +73,14 @@ functions:
         supports: SUPPORT
         snippet: "osteocalcin (OC), matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis, facilitate bone mineralization"
         explanation: Confirms vitamin K-dependent proteins support bone mineralization
+      - reference: PMID:22516722
+        supports: SUPPORT
+        snippet: "The presence of 3 vitamin K-dependent γ carboxyglutamic acid residues is critical for osteocalcin's structure, which appears to regulate the maturation of bone mineral"
+        explanation: Establishes that vitamin K-dependent carboxylation of osteocalcin is critical for bone mineral maturation
+      - reference: PMID:18469278
+        supports: SUPPORT
+        snippet: "Vitamin K(1) intake was associated with markers of bone health, but no interaction was observed with APOE alleles on BMD or markers of bone turnover"
+        explanation: Observational evidence that vitamin K1 intake is positively associated with bone health markers including higher BMD
 
   - name: Prevention of Vascular Calcification
     description: |
@@ -93,6 +101,14 @@ functions:
         supports: SUPPORT
         snippet: "matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis, facilitate bone mineralization, inhibit vessel wall calcification"
         explanation: Confirms MGP inhibits vessel calcification
+      - reference: PMID:23375872
+        supports: SUPPORT
+        snippet: "The discovery that the vitamin K-dependent matrix Gla-protein (MGP) is a strong inhibitor of vascular calcification has propelled our mechanistic understanding of this process and opened novel avenues for diagnosis and treatment"
+        explanation: Confirms MGP as a strong inhibitor of vascular calcification and its dependence on vitamin K
+      - reference: PMID:18722618
+        supports: SUPPORT
+        snippet: "Menaquinone intake was associated with decreased coronary calcification with an RR of 0.80 (95%-CI: 0.65-0.98; p(trend)=0.03)"
+        explanation: Dietary menaquinone (K2) intake specifically associated with reduced coronary calcification
 
 deficiency:
   name: Vitamin K Deficiency
@@ -156,6 +172,11 @@ deficiency:
         - 35
         - 36
         - 37
+      evidence:
+        - reference: PMID:24842255
+          supports: SUPPORT
+          snippet: "Supplementation of vitamin K at birth for all newborns prevents major hemorrhagic complications, such as intracranial bleeding, due to vitamin K deficiency"
+          explanation: Confirms that vitamin K prophylaxis at birth prevents life-threatening hemorrhagic complications in newborns
 
     - name: Individuals with Fat Malabsorption
       description: |
@@ -206,6 +227,15 @@ disease_associations:
       - 49
       - 50
       - 51
+    evidence:
+      - reference: PMID:22516722
+        supports: SUPPORT
+        snippet: "Observational studies using percent ucOC have led to the conclusion that vitamin K insufficiency leads to age-related bone loss"
+        explanation: Supports association between vitamin K insufficiency and age-related bone loss based on undercarboxylated osteocalcin
+      - reference: PMID:18469278
+        supports: SUPPORT
+        snippet: "women in the lowest quartile (mean: 59 microg/d) had lower BMD (analysis of variance; FN, Q1: 0.831 +/- 0.122 g/cm(2); Q3: 0.850 +/- 0.126 g/cm(2); P < 0.001"
+        explanation: Low vitamin K1 intake associated with significantly lower bone mineral density at the femoral neck in postmenopausal women
 
   - name: Vascular Calcification Risk
     disease_term:
@@ -220,6 +250,19 @@ disease_associations:
     mic_references:
       - 3
       - 48
+    evidence:
+      - reference: PMID:19436645
+        supports: SUPPORT
+        snippet: "The presence of calcification in any arterial wall is associated with a 3-4-fold higher risk for mortality and cardiovascular events"
+        explanation: Meta-analysis establishing vascular calcification as a strong risk factor for cardiovascular mortality and events
+      - reference: PMID:33684212
+        supports: SUPPORT
+        snippet: "MGP functions as a vascular calcification inhibitor-but only when it is carboxylated, which requires vitamin K"
+        explanation: Confirms that MGP requires vitamin K-dependent carboxylation to function as a vascular calcification inhibitor
+      - reference: PMID:15514282
+        supports: SUPPORT
+        snippet: "Intake of menaquinone was also inversely related to all-cause mortality [RR = 0.91 (0.75, 1.09) and 0.74 (0.59, 0.92), respectively] and severe aortic calcification [odds ratio of 0.71 (0.50, 1.00) and 0.48 (0.32, 0.71), respectively]"
+        explanation: Rotterdam Study showing higher menaquinone intake associated with reduced aortic calcification and lower all-cause mortality
 
 toxicity:
   name: Vitamin K Toxicity
@@ -348,6 +391,10 @@ nutrient_interactions:
         supports: SUPPORT
         snippet: "This review updates vitamin D and K skeletal and cardiovascular benefits and evidence for their synergy of action"
         explanation: Supports synergy between vitamin D and K
+      - reference: PMID:23590754
+        supports: SUPPORT
+        snippet: "Dietary intake of menaquinones accounts for up to 25% of total vitamin K intake and contributes to the biological functions of vitamin K"
+        explanation: Menaquinones contribute meaningfully to total vitamin K intake and biological functions, relevant to synergy with vitamin D
 
   - name: Vitamin E and Vitamin K
     nutrient_term:

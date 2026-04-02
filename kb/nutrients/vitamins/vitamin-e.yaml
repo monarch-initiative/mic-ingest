@@ -212,6 +212,136 @@ disease_associations:
         snippet: "vitamin E supplementation has been shown to be associated with both enhanced resistance to influenza infection in aged mice and reduced risk of acquiring upper respiratory infections in elderly human subjects"
         explanation: Review summarizing clinical evidence that vitamin E supplementation reduces infection risk in the elderly
 
+  - name: Prostate Cancer (SELECT Trial)
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: RISK_FACTOR
+    description: |
+      The Selenium and Vitamin E Cancer Prevention Trial (SELECT) found that dietary
+      supplementation with vitamin E (400 IU/day of all-rac-alpha-tocopheryl acetate)
+      significantly increased the risk of prostate cancer by 17% among healthy men
+      compared to placebo over a median of seven years of follow-up.
+    mic_references:
+      - 64
+      - 65
+      - 66
+    evidence:
+      - reference: PMID:21990298
+        supports: SUPPORT
+        snippet: "Dietary supplementation with vitamin E significantly increased the risk of prostate cancer among healthy men"
+        explanation: SELECT trial showed a statistically significant 17% increase in prostate cancer risk with vitamin E supplementation (HR 1.17, 99% CI 1.004-1.36)
+
+  - name: Cardiovascular Disease (HOPE and GISSI Trials)
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    description: |
+      Large randomized controlled trials, including the HOPE-TOO trial and the
+      GISSI-Prevenzione trial, found no benefit of long-term vitamin E
+      supplementation in preventing major cardiovascular events. The HOPE trial
+      additionally found that vitamin E may increase the risk of heart failure,
+      and the GISSI trial confirmed an increased heart failure risk in patients
+      with left ventricular dysfunction.
+    mic_references:
+      - 47
+      - 48
+      - 57
+      - 58
+    evidence:
+      - reference: PMID:15769967
+        supports: SUPPORT
+        snippet: "In patients with vascular disease or diabetes mellitus, long-term vitamin E supplementation does not prevent cancer or major cardiovascular events and may increase the risk for heart failure"
+        explanation: HOPE-TOO trial with 7-year follow-up showed no CVD prevention benefit and a possible increased risk of heart failure with vitamin E
+      - reference: PMID:16645413
+        supports: SUPPORT
+        snippet: "Vitamin E treatment, however, was associated with a significant 50% increase (95% confidence intervals 1.03-2.20, P = 0.034) of CHF in patients with left ventricular dysfunction (ejection fraction < 50%)"
+        explanation: GISSI-Prevenzione trial found vitamin E significantly increased heart failure risk in post-MI patients with left ventricular dysfunction
+
+  - name: Nonalcoholic Steatohepatitis (PIVENS Trial)
+    disease_term:
+      preferred_term: nonalcoholic steatohepatitis
+      term:
+        id: MONDO:0007027
+        label: metabolic dysfunction-associated steatohepatitis
+    relationship_type: THERAPEUTIC
+    description: |
+      In the PIVENS trial, vitamin E supplementation (800 IU/day) was superior
+      to placebo for the treatment of nonalcoholic steatohepatitis (NASH) in
+      adults without diabetes, significantly improving histological features
+      including steatosis and lobular inflammation but not fibrosis.
+    mic_references:
+      - 97
+      - 98
+    evidence:
+      - reference: PMID:20427778
+        supports: SUPPORT
+        snippet: "Vitamin E was superior to placebo for the treatment of nonalcoholic steatohepatitis in adults without diabetes"
+        explanation: PIVENS trial demonstrated significant histological improvement with vitamin E (43% vs 19% improvement rate, P=0.001) in non-diabetic NASH patients
+
+  - name: Alzheimer's Disease and Cognitive Decline
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    description: |
+      Vitamin E supplementation at high doses (2,000 IU/day) slowed functional
+      decline in patients with mild to moderate Alzheimer's disease in the TEAM-AD
+      trial. However, the PREADViSE prevention trial found that vitamin E did not
+      prevent dementia in cognitively healthy older men. Patients with Alzheimer's
+      disease consistently show lower plasma vitamin E levels compared to
+      cognitively intact controls.
+    mic_references:
+      - 103
+      - 104
+      - 105
+      - 111
+      - 113
+    evidence:
+      - reference: PMID:24381967
+        supports: SUPPORT
+        snippet: "Among patients with mild to moderate AD, 2000 IU/d of alpha tocopherol compared with placebo resulted in slower functional decline"
+        explanation: TEAM-AD trial showed vitamin E delayed clinical progression by 19% per year compared to placebo in mild-to-moderate Alzheimer's patients
+      - reference: PMID:28319243
+        supports: NO_EVIDENCE
+        snippet: "Neither supplement prevented dementia. To our knowledge, this is the first study to investigate the long-term association of antioxidant supplement use and dementia incidence among asymptomatic men"
+        explanation: PREADViSE trial found no effect of vitamin E supplementation on dementia prevention in cognitively healthy older men
+      - reference: PMID:29439339
+        supports: SUPPORT
+        snippet: "Patients with AD had significantly lower plasma levels of α-carotene, β-carotene, lycopene, lutein, vitamin A, C, and E, and uric acid"
+        explanation: Meta-analysis of case-control studies confirming lower plasma vitamin E levels in Alzheimer's patients compared to cognitively intact elderly
+
+  - name: Age-Related Cataract
+    disease_term:
+      preferred_term: cataract
+      term:
+        id: MONDO:0005129
+        label: cataract
+    relationship_type: RISK_FACTOR
+    description: |
+      Meta-analysis evidence suggests dietary vitamin E intake and higher serum
+      tocopherol levels are associated with reduced risk of age-related cataract,
+      but supplemental vitamin E alone has not been shown to reduce cataract risk
+      in intervention trials.
+    mic_references:
+      - 70
+      - 74
+      - 76
+      - 77
+      - 78
+    evidence:
+      - reference: PMID:25591715
+        supports: PARTIAL
+        snippet: "Dietary vitamin E intake, dietary and supplemental vitamin E intake, and high serum tocopherol levels were significantly associated with decreased risk of ARC, the pooled relative risk was 0.73 (95% CI 0.58, 0.92), 0.86 (95% CI 0.75, 0.99) and 0.77 (95% CI 0.66, 0.91), respectively. Supplemental vitamin E intake was non-significantly associated with ARC risk (relative risk=0.92; 95% CI 0.78, 1.07)"
+        explanation: Meta-analysis shows dietary vitamin E and serum levels are associated with reduced cataract risk, but supplemental vitamin E alone does not show significant benefit
+
 toxicity:
   name: Vitamin E Toxicity
   description: |

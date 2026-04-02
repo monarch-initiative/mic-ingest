@@ -47,6 +47,10 @@ functions:
         supports: SUPPORT
         snippet: "Vitamin D3 is made in the skin from 7-dehydrocholesterol under the influence of UV light"
         explanation: Describes vitamin D synthesis and metabolism pathway
+      - reference: PMID:14985208
+        supports: SUPPORT
+        snippet: "Vitamin D deficiency is prevalent in infants who are solely breastfed and who do not receive vitamin D supplementation and in adults of all ages who have increased skin pigmentation or who always wear sun protection or limit their outdoor activities"
+        explanation: Holick review describing widespread vitamin D deficiency and risk factors affecting calcium and phosphorus homeostasis
 
   - name: Bone Mineralization
     description: |
@@ -246,6 +250,11 @@ disease_associations:
     mic_references:
       - 21
       - 24
+    evidence:
+      - reference: PMID:22762317
+        supports: SUPPORT
+        snippet: "By quartiles of actual intake, reduction in the risk of fracture was shown only at the highest intake level (median, 800 IU daily; range, 792 to 2000), with a 30% reduction in the risk of hip fracture (hazard ratio, 0.70; 95% CI, 0.58 to 0.86) and a 14% reduction in the risk of any nonvertebral fracture (hazard ratio, 0.86; 95% CI, 0.76 to 0.96)"
+        explanation: Pooled analysis of 31,022 persons showing high-dose vitamin D supplementation reduces hip and nonvertebral fracture risk
 
   - name: Autoimmune Disease Susceptibility
     disease_term:
@@ -267,6 +276,155 @@ disease_associations:
         supports: SUPPORT
         snippet: "Deficiency in vitamin D is associated with increased autoimmunity and an increased susceptibility to infection"
         explanation: Directly links vitamin D deficiency with increased autoimmunity
+      - reference: PMID:11705562
+        supports: SUPPORT
+        snippet: "Dietary vitamin D supplementation is associated with reduced risk of type 1 diabetes. Ensuring adequate vitamin D supplementation for infants could help to reverse the increasing trend in the incidence of type 1 diabetes"
+        explanation: Birth-cohort study of over 10,000 Finnish children showing vitamin D supplementation in infancy reduces type 1 diabetes risk
+      - reference: PMID:26305103
+        supports: SUPPORT
+        snippet: "A genetically lowered 25OHD level is strongly associated with increased susceptibility to MS"
+        explanation: Mendelian randomization study providing causal evidence that genetically lowered vitamin D increases multiple sclerosis risk
+
+  - name: Multiple Sclerosis Risk
+    disease_term:
+      preferred_term: multiple sclerosis
+      term:
+        id: MONDO:0005301
+        label: multiple sclerosis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Multiple prospective studies and Mendelian randomization analyses support an
+      inverse association between vitamin D status and risk of multiple sclerosis.
+      Higher serum 25-hydroxyvitamin D levels are associated with lower MS risk,
+      particularly when measured before age 20.
+    mic_references:
+      - 145
+      - 149
+      - 150
+    evidence:
+      - reference: PMID:17179460
+        supports: SUPPORT
+        snippet: "The results of our study suggest that high circulating levels of vitamin D are associated with a lower risk of multiple sclerosis"
+        explanation: Prospective nested case-control study among over 7 million US military personnel showing higher serum 25(OH)D associated with lower MS risk
+
+  - name: Colorectal Cancer Risk
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Multiple meta-analyses of prospective studies have found an inverse association
+      between vitamin D intake, blood 25(OH)D levels, and the risk of colorectal cancer.
+      Higher circulating 25(OH)D levels are associated with a significant reduction in
+      colorectal cancer risk.
+    mic_references:
+      - 97
+      - 98
+      - 99
+      - 100
+    evidence:
+      - reference: PMID:21876081
+        supports: SUPPORT
+        snippet: "The pooled RRs of colorectal cancer for the highest versus lowest categories of vitamin D intake and blood 25(OH)D levels were 0.88 (95% CI, 0.80 to 0.96) and 0.67 (95% CI, 0.54 to 0.80), respectively"
+        explanation: Systematic review of approximately 1,000,000 participants showing inverse association between vitamin D and colorectal cancer risk
+
+  - name: Cardiovascular Disease Risk
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Observational studies have found that vitamin D deficiency is associated with
+      increased risk of cardiovascular disease. Vitamin D receptors are expressed
+      on vascular smooth muscle, endothelium, and cardiomyocytes. However, Mendelian
+      randomization studies have not confirmed a causal relationship, and supplementation
+      trials have shown limited benefit.
+    mic_references:
+      - 191
+      - 200
+      - 201
+      - 206
+    evidence:
+      - reference: PMID:18180395
+        supports: SUPPORT
+        snippet: "Individuals with 25-OH D < 15 ng/mL had a multivariable-adjusted hazard ratio of 1.62 (95% confidence interval 1.11 to 2.36, P=0.01) for incident cardiovascular events compared with those with 25-OH D > or = 15 ng/mL"
+        explanation: Framingham Offspring Study showing vitamin D deficiency is prospectively associated with incident cardiovascular disease
+
+  - name: Breast Cancer Risk
+    disease_term:
+      preferred_term: breast cancer
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Meta-analyses of prospective studies suggest a weak inverse association between
+      vitamin D status and breast cancer incidence but a strong association between
+      higher 25(OH)D levels and better breast cancer survival.
+    mic_references:
+      - 111
+      - 112
+      - 113
+    evidence:
+      - reference: PMID:24714744
+        supports: SUPPORT
+        snippet: "Among breast cancer patients, high blood 25(OH)D levels were significantly associated with lower breast cancer mortality (pooled RR=0.58, 95% CI: 0.40-0.85) and overall mortality (pooled RR=0.61, 95% CI: 0.48-0.79)"
+        explanation: Meta-analysis of 30 prospective studies showing high vitamin D status is strongly associated with better breast cancer survival
+
+  - name: Acute Respiratory Tract Infection
+    disease_term:
+      preferred_term: acute respiratory tract infection
+      term:
+        id: MONDO:0004867
+        label: upper respiratory tract disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Vitamin D modulates innate immunity and enhances antimicrobial peptide production.
+      Meta-analyses of individual participant data from randomized controlled trials
+      demonstrate that vitamin D supplementation reduces the risk of acute respiratory
+      tract infections, particularly in those with baseline deficiency.
+    mic_references:
+      - 276
+      - 281
+    evidence:
+      - reference: PMID:28202713
+        supports: SUPPORT
+        snippet: "Vitamin D supplementation reduced the risk of acute respiratory tract infection among all participants (adjusted odds ratio 0.88, 95% confidence interval 0.81 to 0.96; P for heterogeneity <0.001)"
+        explanation: Systematic review and meta-analysis of individual participant data from 25 RCTs showing vitamin D supplementation protects against acute respiratory tract infections
+      - reference: PMID:19237723
+        supports: SUPPORT
+        snippet: "Serum 25(OH)D levels are inversely associated with recent URTI. This association may be stronger in those with respiratory tract diseases"
+        explanation: NHANES III analysis of 18,883 participants showing serum 25(OH)D levels are inversely associated with recent upper respiratory tract infection
+
+  - name: All-Cause Mortality
+    disease_term:
+      preferred_term: mortality
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Observational studies consistently show that low circulating 25-hydroxyvitamin D
+      levels are associated with increased all-cause mortality. Meta-analyses of
+      randomized controlled trials suggest that vitamin D3 supplementation may reduce
+      overall mortality, though the optimal dose and duration remain under investigation.
+    mic_references:
+      - 60
+      - 61
+      - 62
+      - 65
+    evidence:
+      - reference: PMID:24690623
+        supports: SUPPORT
+        snippet: "In randomised controlled trials, relative risks for all cause mortality were 0.89 (0.80 to 0.99) for vitamin D3 supplementation and 1.04 (0.97 to 1.11) for vitamin D2 supplementation"
+        explanation: Systematic review and meta-analysis of 73 cohort studies and 22 RCTs showing vitamin D3 supplementation significantly reduces overall mortality
 
 toxicity:
   name: Vitamin D Toxicity

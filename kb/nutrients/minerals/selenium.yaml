@@ -30,6 +30,11 @@ functions:
         term:
           id: GO:0006979
           label: response to oxidative stress
+    evidence:
+      - reference: PMID:19856162
+        supports: SUPPORT
+        snippet: "Selenium is essential for normal spermatogenesis of mammals and its critical role is mainly mediated by two selenoproteins, namely phospholipid hydroperoxide glutathione peroxidase (PHGPx/GPx4) and Selenoprotein P."
+        explanation: Confirms GPx4 is the major selenoprotein in germ cells and the pivotal link between selenium, sperm quality and male fertility.
     mic_references:
       - 6
       - 7
@@ -43,6 +48,11 @@ functions:
       enzymes and redox regulators in mammalian cells.
     biological_processes:
       - preferred_term: thioredoxin reduction
+    evidence:
+      - reference: PMID:19364476
+        supports: SUPPORT
+        snippet: "Mammalian thioredoxin reductases are selenium-containing flavoprotein oxidoreductases, dependent upon a selenocysteine residue for reduction of the active site disulfide in thioredoxins."
+        explanation: Confirms the three mammalian thioredoxin reductases (TXNRD1, TXNRD2, TXNRD3) are selenoproteins essential for thioredoxin system function and redox regulation.
     mic_references:
       - 8
       - 9
@@ -99,6 +109,11 @@ deficiency:
           label: Avascular necrosis of the capital femoral epiphysis
       frequency: OCCASIONAL
       context: Osteoarthropathy in selenium-deficient regions of Asia
+      evidence:
+        - reference: PMID:31548049
+          supports: SUPPORT
+          snippet: "Multivariate regression analysis suggested that etiology of the KBD was food-related factors such as fungal contamination of grains, selenium deficiency, imbalance of protein intake, etc."
+          explanation: Comprehensive epidemiological review confirms selenium deficiency as a key etiological factor in Kashin-Beck disease, with national incidence declining from 22.1% in 1990 to 0.18% in 2015 following preventive measures.
       mic_references:
         - 48
 
@@ -301,6 +316,14 @@ disease_associations:
         supports: PARTIAL
         snippet: "For the observational studies, we found lower cancer incidence (summary odds ratio (OR) 0.69, 95% confidence interval (CI) 0.53 to 0.91, N = 8) and cancer mortality (OR 0.60, 95% CI 0.39 to 0.93, N = 6) associated with higher selenium exposure."
         explanation: Cochrane systematic review found observational evidence for inverse association between selenium and cancer risk, but RCTs showed no clear benefit and raised concerns about potential harmful effects.
+      - reference: PMID:8971064
+        supports: SUPPORT
+        snippet: "results from secondary end-point analyses support the hypothesis that supplemental selenium may reduce the incidence of, and mortality from, carcinomas of several sites"
+        explanation: The Nutritional Prevention of Cancer (NPC) trial found selenium supplementation significantly reduced total cancer mortality by 50% and total cancer incidence by 37% in patients with prior skin carcinomas, though it did not prevent new skin cancers.
+      - reference: PMID:19066370
+        supports: REFUTE
+        snippet: "Selenium or vitamin E, alone or in combination at the doses and formulations used, did not prevent prostate cancer in this population of relatively healthy men."
+        explanation: The SELECT trial (35,533 men) found no benefit of selenium supplementation for prostate cancer prevention in selenium-replete men, contrasting with the earlier NPC trial results and highlighting that baseline selenium status may be critical.
     mic_references:
       - 66
       - 67
@@ -311,7 +334,10 @@ disease_associations:
     description: |
       Some evidence suggests high serum selenium concentrations may have adverse
       effects on glycemic control. Individuals with high selenium status or those
-      at risk for type 2 diabetes should avoid selenium supplements.
+      at risk for type 2 diabetes should avoid selenium supplements. Cross-sectional
+      studies show associations between high selenium biomarkers and T2DM, but this
+      may reflect upregulated hepatic selenoprotein-P biosynthesis in conditions of
+      hyperglycemia rather than a causal effect of selenium.
     disease_term:
       preferred_term: type 2 diabetes mellitus
       term:
@@ -320,8 +346,106 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Individuals with already high selenium status
+    evidence:
+      - reference: PMID:35144052
+        supports: PARTIAL
+        snippet: "Elevated selenium biomarkers that are often measured in T2DM patients are more likely to be a consequence, rather than a cause, of diabetes."
+        explanation: Comprehensive review proposes that the cross-sectional association between high selenium and T2DM may reflect upregulated hepatic selenoprotein-P biosynthesis in hyperglycemia, rather than selenium supplementation being a causal factor.
     mic_references:
       - 65
+
+  - name: Immune Function and Viral Infections
+    description: |
+      Selenium plays an important role in inflammation and immunity. Adequate selenium
+      is needed for initiating immunity but also for regulating excessive immune responses
+      and chronic inflammation. Selenium deficiency negatively impacts immune cell
+      activation, differentiation, and proliferation. In selenium-deficient hosts, benign
+      RNA viruses can mutate to virulent forms, as demonstrated with Coxsackie virus and
+      influenza. Selenium deficiency may also accelerate HIV disease progression.
+    disease_term:
+      preferred_term: viral infectious disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Selenium-deficient populations; relevant to HIV, influenza, Coxsackie virus
+    evidence:
+      - reference: PMID:21955027
+        supports: SUPPORT
+        snippet: "Se deficiency has long been recognized to negatively impact immune cells during activation, differentiation, and proliferation. This is related to increased oxidative stress, but additional functions such as protein folding and calcium flux may also be impaired in immune cells under Se deficient conditions."
+        explanation: Comprehensive review of selenium in inflammation and immunity confirms that selenium deficiency impairs immune cell function through multiple mechanisms beyond oxidative stress.
+      - reference: PMID:21318622
+        supports: SUPPORT
+        snippet: "When Se-deficient virus-infected hosts were supplemented with dietary Se, viral mutation rates diminished and immunocompetence improved."
+        explanation: Review demonstrates that selenium deficiency drives consistent mutations of benign RNA viruses to virulent forms, and that selenium supplementation diminishes viral mutation rates. Relevant to HIV/AIDS, influenza H5N1/H1N1, SARS, and Ebola.
+    mic_references:
+      - 57
+      - 104
+      - 105
+      - 110
+
+  - name: Cardiovascular Disease
+    description: |
+      Observational studies have reported inverse associations between selenium status
+      and risk of coronary heart disease and stroke. However, the selenium-cardiovascular
+      relationship appears nonlinear, and randomized controlled trials of selenium
+      supplementation alone have not demonstrated clear cardiovascular benefits.
+      Meta-analysis suggests that selenium may be important as part of antioxidant
+      mixtures for CVD mortality reduction.
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Evidence from meta-analyses of RCTs; strongest when selenium is part of antioxidant mixtures
+    evidence:
+      - reference: PMID:33053149
+        supports: PARTIAL
+        snippet: "a decreased risk with antioxidant mixtures was seen for CVD mortality when selenium was part of the mix (RR: 0.77; 95% CI: 0.62, 0.97; P = 0.02), with no association when selenium was absent"
+        explanation: Meta-analysis of 43 RCTs found no association of selenium alone with CVD mortality, but antioxidant mixtures containing selenium showed a 23% reduction in CVD mortality compared to no association when selenium was absent from the mix.
+    mic_references:
+      - 90
+      - 99
+      - 100
+      - 101
+
+  - name: Graves' Orbitopathy
+    description: |
+      A randomized, double-blind, placebo-controlled trial found that selenium
+      supplementation significantly improved quality of life, reduced ocular involvement,
+      and slowed progression of mild Graves' orbitopathy. Selenium's antioxidant
+      properties may counter the role of oxygen free radicals in the pathogenesis of
+      Graves' orbitopathy.
+    disease_term:
+      preferred_term: Graves orbitopathy
+    relationship_type: THERAPEUTIC
+    population_context: Patients with mild Graves' orbitopathy
+    evidence:
+      - reference: PMID:21591944
+        supports: SUPPORT
+        snippet: "Selenium administration significantly improved quality of life, reduced ocular involvement, and slowed progression of the disease in patients with mild Graves' orbitopathy."
+        explanation: Landmark NEJM randomized trial of 159 patients showed selenium (100 mcg twice daily for 6 months) significantly improved outcomes compared to placebo or pentoxifylline in mild Graves' orbitopathy.
+    mic_references:
+      - 133
+      - 134
+
+  - name: Autoimmune Thyroiditis (Hashimoto's)
+    description: |
+      Selenium supplementation in pregnant women positive for thyroid peroxidase
+      autoantibodies may reduce the incidence of postpartum thyroid dysfunction and
+      permanent hypothyroidism. Selenium may decrease thyroid inflammatory activity
+      in patients with autoimmune thyroiditis.
+    disease_term:
+      preferred_term: Hashimoto thyroiditis
+    relationship_type: THERAPEUTIC
+    population_context: Pregnant women with thyroid peroxidase autoantibodies
+    evidence:
+      - reference: PMID:17284630
+        supports: SUPPORT
+        snippet: "Se supplementation during pregnancy and in the postpartum period reduced thyroid inflammatory activity and the incidence of hypothyroidism."
+        explanation: Prospective RCT in 2143 pregnant women showed selenomethionine 200 mcg/d significantly reduced postpartum thyroid dysfunction (28.6% vs 48.6%) and permanent hypothyroidism (11.7% vs 20.3%) in TPOAb-positive women.
+    mic_references:
+      - 127
+      - 130
+      - 131
+      - 132
 
 recommendations:
   rda:
@@ -383,6 +507,61 @@ references:
     findings:
       - statement: Observational studies show inverse association between selenium and cancer but RCTs are inconclusive
         supporting_text: "For the observational studies, we found lower cancer incidence (summary odds ratio (OR) 0.69, 95% confidence interval (CI) 0.53 to 0.91, N = 8) and cancer mortality (OR 0.60, 95% CI 0.39 to 0.93, N = 6) associated with higher selenium exposure."
+  - reference: PMID:19856162
+    title: "Selenium, a key element in spermatogenesis and male fertility"
+    findings:
+      - statement: GPx4 is the pivotal selenoprotein linking selenium to sperm quality and male fertility
+        supporting_text: "Selenium is essential for normal spermatogenesis of mammals and its critical role is mainly mediated by two selenoproteins, namely phospholipid hydroperoxide glutathione peroxidase (PHGPx/GPx4) and Selenoprotein P."
+  - reference: PMID:19364476
+    title: "Focus on mammalian thioredoxin reductases--important selenoproteins with versatile functions"
+    findings:
+      - statement: Mammalian thioredoxin reductases are selenocysteine-dependent enzymes with diverse cellular functions
+        supporting_text: "Mammalian thioredoxin reductases are selenium-containing flavoprotein oxidoreductases, dependent upon a selenocysteine residue for reduction of the active site disulfide in thioredoxins."
+  - reference: PMID:31548049
+    title: "Endemic Kashin-Beck disease: A food-sourced osteoarthropathy"
+    findings:
+      - statement: Kashin-Beck disease etiology is food-sourced including selenium deficiency
+        supporting_text: "Multivariate regression analysis suggested that etiology of the KBD was food-related factors such as fungal contamination of grains, selenium deficiency, imbalance of protein intake, etc."
+  - reference: PMID:8971064
+    title: "Effects of selenium supplementation for cancer prevention in patients with carcinoma of the skin (NPC trial)"
+    findings:
+      - statement: Selenium supplementation reduced total cancer mortality and incidence in the NPC trial
+        supporting_text: "results from secondary end-point analyses support the hypothesis that supplemental selenium may reduce the incidence of, and mortality from, carcinomas of several sites"
+  - reference: PMID:19066370
+    title: "Effect of selenium and vitamin E on risk of prostate cancer and other cancers: the SELECT trial"
+    findings:
+      - statement: SELECT trial found no benefit of selenium for prostate cancer prevention in selenium-replete men
+        supporting_text: "Selenium or vitamin E, alone or in combination at the doses and formulations used, did not prevent prostate cancer in this population of relatively healthy men."
+  - reference: PMID:35144052
+    title: "The role of selenium in type-2 diabetes mellitus and its metabolic comorbidities"
+    findings:
+      - statement: Elevated selenium biomarkers in T2DM are likely a consequence rather than cause of diabetes
+        supporting_text: "Elevated selenium biomarkers that are often measured in T2DM patients are more likely to be a consequence, rather than a cause, of diabetes."
+  - reference: PMID:21955027
+    title: "The role of selenium in inflammation and immunity: from molecular mechanisms to therapeutic opportunities"
+    findings:
+      - statement: Selenium deficiency impairs immune cell activation, differentiation, and proliferation
+        supporting_text: "Se deficiency has long been recognized to negatively impact immune cells during activation, differentiation, and proliferation."
+  - reference: PMID:21318622
+    title: "Review: micronutrient selenium deficiency influences evolution of some viral infectious diseases"
+    findings:
+      - statement: Selenium deficiency drives mutation of benign RNA viruses to virulent forms
+        supporting_text: "metabolic oxidative stress in hosts deficient in antioxidant selenium (<1 μMol Se/L of blood) induces both impaired human host immunocompetence and rapidly mutated benign variants of RNA viruses to virulence"
+  - reference: PMID:33053149
+    title: "Selenium, antioxidants, cardiovascular disease, and all-cause mortality: a systematic review and meta-analysis of RCTs"
+    findings:
+      - statement: Selenium in antioxidant mixtures is associated with reduced CVD mortality
+        supporting_text: "a decreased risk with antioxidant mixtures was seen for CVD mortality when selenium was part of the mix (RR: 0.77; 95% CI: 0.62, 0.97; P = 0.02), with no association when selenium was absent"
+  - reference: PMID:21591944
+    title: "Selenium and the course of mild Graves' orbitopathy"
+    findings:
+      - statement: Selenium supplementation significantly improved outcomes in mild Graves' orbitopathy
+        supporting_text: "Selenium administration significantly improved quality of life, reduced ocular involvement, and slowed progression of the disease in patients with mild Graves' orbitopathy."
+  - reference: PMID:17284630
+    title: "The influence of selenium supplementation on postpartum thyroid status in pregnant women with thyroid peroxidase autoantibodies"
+    findings:
+      - statement: Selenium supplementation reduced postpartum thyroid dysfunction and hypothyroidism in TPOAb-positive women
+        supporting_text: "Se supplementation during pregnancy and in the postpartum period reduced thyroid inflammatory activity and the incidence of hypothyroidism."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

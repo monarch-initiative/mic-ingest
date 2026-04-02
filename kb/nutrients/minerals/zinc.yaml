@@ -93,6 +93,15 @@ deficiency:
           label: Growth delay
       frequency: FREQUENT
       context: Common feature of mild zinc deficiency in children
+      evidence:
+        - reference: PMID:29558383
+          supports: SUPPORT
+          snippet: "Zinc supplementation after birth increased height (WMD = 0.23 cm, 95%CI: 0.09-0.38), weight (WMD = 0.14 kg, 95%CI: 0.07-0.21), and weight-for-age Z-score (WMD = 0.04, 95%CI: 0.001-0.087)"
+          explanation: Meta-analysis of 78 trials (34,352 children under 5) showing zinc supplementation after birth significantly increases height and weight, with stronger effects when supplementation starts at age 2 years or older.
+        - reference: PMID:21501440
+          supports: SUPPORT
+          snippet: "The final effect size after pooling all the data sets (zinc +/- iron etc) showed a significant positive effect of zinc supplementation on linear growth [Effect size: 0.13 (95% CI 0.04, 0.21), random model] in the developing countries"
+          explanation: Meta-analysis of 36 studies in developing countries showing zinc supplementation has a significant positive effect on linear growth, with greater effect when zinc is given without iron.
       mic_references:
         - 46
         - 47
@@ -128,6 +137,19 @@ deficiency:
           label: Recurrent infections
       frequency: FREQUENT
       context: Zinc-deficient individuals experience increased susceptibility to infections
+      evidence:
+        - reference: PMID:27021581
+          supports: SUPPORT
+          snippet: "Zinc deficiency affects immune cells, resulting in altered host defense, increased risk of inflammation, and even death"
+          explanation: Review confirming that zinc deficiency impairs both innate and adaptive immune cells, leading to increased susceptibility to infections.
+        - reference: PMID:9701160
+          supports: SUPPORT
+          snippet: "Zinc is crucial for normal development and function of cells mediating nonspecific immunity such as neutrophils and natural killer cells. Zinc deficiency also affects development of acquired immunity by preventing both the outgrowth and certain functions of T lymphocytes such as activation, Th1 cytokine production, and B lymphocyte help"
+          explanation: Comprehensive review establishing the biological basis for how zinc deficiency impairs both innate (neutrophils, NK cells) and adaptive (T and B lymphocytes) immunity.
+        - reference: PMID:26817502
+          supports: SUPPORT
+          snippet: "Zinc supplementation also significantly increased anti-CD3/CD28 and phytohemagglutinin-stimulated T cell proliferation, and the number of peripheral T cells (P < 0.05)"
+          explanation: RCT in zinc-deficient nursing home elderly showing that 30 mg/day zinc supplementation for 3 months significantly increased serum zinc, T cell numbers, and T cell proliferation.
       mic_references:
         - 63
         - 66
@@ -355,6 +377,14 @@ disease_associations:
         supports: SUPPORT
         snippet: "Zinc supplementation has been shown to have a positive effect on the incidence of diarrhea (18% reduction, 95% CI: 7-28%) and pneumonia (41% reduction, 95% CI: 17-59%), and might lead to a decrease in the incidence of malaria"
         explanation: Review of zinc supplementation trials showing significant reductions in childhood diarrhea and pneumonia incidence.
+      - reference: PMID:27996088
+        supports: SUPPORT
+        snippet: "In children older than six months of age, zinc supplementation may shorten the average duration of diarrhoea by around half a day (MD -11.46 hours, 95% CI -19.72 to -3.19; 2581 children, 9 trials, low certainty evidence), and probably reduces the number of children whose diarrhoea persists until day seven (RR 0.73, 95% CI 0.61 to 0.88; 3865 children, 6 trials, moderate certainty evidence)"
+        explanation: Cochrane systematic review of 33 trials (10,841 children) confirming zinc supplementation shortens diarrhea duration in children over 6 months, with greater effect in malnourished children.
+      - reference: PMID:27915460
+        supports: SUPPORT
+        snippet: "zinc supplementation reduced the incidence of pneumonia by 13% (fixed-effect risk ratio (RR) 0.87; 95% confidence interval (CI) 0.81 to 0.94, six studies, low-quality evidence) and prevalence of pneumonia by 41% (random-effects RR 0.59; 95% CI 0.35 to 0.99, one study, n = 609, low-quality evidence)"
+        explanation: Cochrane review of 6 studies (5,193 children) demonstrating that zinc supplementation reduces the incidence and prevalence of pneumonia in children aged 2-59 months.
     mic_references:
       - 66
       - 70
@@ -381,6 +411,10 @@ disease_associations:
         supports: SUPPORT
         snippet: "Zinc acts as an insulin mimetic, activating key molecules implicated in cell signaling to maintain glucose homeostasis in mouse and human skeletal muscle cells"
         explanation: Mechanistic evidence that zinc mimics insulin signaling, supporting the biological plausibility of zinc's role in glucose metabolism and T2D risk.
+      - reference: PMID:19171718
+        supports: SUPPORT
+        snippet: "After adjustment of lifestyle and dietary risk factors, the relative risks (RRs) (95% CI) of type 2 diabetes comparing the highest with the lowest quintiles were 0.90 (0.82-0.99) (P(trend) = 0.04) for total zinc intake and 0.92 (0.84-1.00) (P(trend) = 0.009) for dietary zinc intake from food sources, respectively"
+        explanation: Prospective study of 82,297 women from the Nurses' Health Study over 24 years showing that higher zinc intake is associated with modestly lower risk of type 2 diabetes.
     mic_references:
       - 15
       - 94
@@ -401,6 +435,15 @@ disease_associations:
         label: age-related macular degeneration
     relationship_type: THERAPEUTIC
     population_context: Individuals with intermediate AMD
+    evidence:
+      - reference: PMID:11594942
+        supports: SUPPORT
+        snippet: "Comparison with placebo demonstrated a statistically significant odds reduction for the development of advanced AMD with antioxidants plus zinc (odds ratio [OR], 0.72; 99% confidence interval [CI], 0.52-0.98). The ORs for zinc alone and antioxidants alone are 0.75 (99% CI, 0.55-1.03) and 0.80 (99% CI, 0.59-1.09), respectively"
+        explanation: Landmark AREDS trial (3,640 participants, 6.3 years follow-up) showing that zinc alone or combined with antioxidants reduced progression to advanced AMD in high-risk individuals.
+      - reference: PMID:28756618
+        supports: SUPPORT
+        snippet: "People taking zinc supplements may be less likely to progress to late AMD (OR 0.83, 95% CI 0.70 to 0.98; 3790 participants; 3 RCTs; low-certainty evidence), neovascular AMD (OR 0.76, 95% CI 0.62 to 0.93; 2442 participants; 1 RCT; moderate-certainty evidence)"
+        explanation: Cochrane review of 19 studies confirming that zinc supplementation reduces progression to late AMD and neovascular AMD.
     mic_references:
       - 1
 
@@ -416,6 +459,15 @@ disease_associations:
         label: common cold
     relationship_type: THERAPEUTIC
     population_context: General population with cold symptoms
+    evidence:
+      - reference: PMID:22566526
+        supports: SUPPORT
+        snippet: "Compared with patients given placebo, those receiving zinc had a shorter duration of cold symptoms (mean difference -1.65 days, 95% confidence interval [CI] -2.50 to -0.81)"
+        explanation: Systematic review and meta-analysis of 17 RCTs (2,121 participants) showing zinc shortens cold duration by about 1.65 days, though significant heterogeneity across studies.
+      - reference: PMID:28515951
+        supports: SUPPORT
+        snippet: "The mean common cold duration was 33% (95% CI 21% to 45%) shorter for the zinc groups of the seven included trials"
+        explanation: Meta-analysis of 7 RCTs with zinc lozenges at doses above 75 mg/day showing a 33% reduction in cold duration, with no significant difference between zinc acetate and zinc gluconate formulations.
     mic_references:
       - 1
 
@@ -482,7 +534,33 @@ references:
   - reference: PMID:15189121
     title: "Zinc and the risk for infectious disease"
   - reference: PMID:29373583
-    title: "Zinc and diabetes mellitus"
+    title: "Zinc stimulates glucose oxidation and glycemic control by modulating the insulin signaling pathway in human and mouse skeletal muscle cell lines"
+  - reference: PMID:16396512
+    title: "Counting the zinc-proteins encoded in the human genome"
+  - reference: PMID:27021581
+    title: "Zinc and immunity: An essential interrelation"
+  - reference: PMID:9701160
+    title: "Zinc and immune function: the biological basis of altered resistance to infection"
+  - reference: PMID:26817502
+    title: "Effect of zinc supplementation on serum zinc concentration and T cell proliferation in nursing home elderly: a randomized, double-blind, placebo-controlled trial"
+  - reference: PMID:29558383
+    title: "Effect of zinc supplementation on growth outcomes in children under 5 years of age"
+  - reference: PMID:21501440
+    title: "Effect of preventive zinc supplementation on linear growth in children under 5 years of age in developing countries: a meta-analysis of studies for input to the lives saved tool"
+  - reference: PMID:27996088
+    title: "Oral zinc for treating diarrhoea in children"
+  - reference: PMID:27915460
+    title: "Zinc supplementation for the prevention of pneumonia in children aged 2 months to 59 months"
+  - reference: PMID:22566526
+    title: "Zinc for the treatment of the common cold: a systematic review and meta-analysis of randomized controlled trials"
+  - reference: PMID:28515951
+    title: "Zinc lozenges and the common cold: a meta-analysis comparing zinc acetate and zinc gluconate, and the role of zinc dosage"
+  - reference: PMID:11594942
+    title: "A randomized, placebo-controlled, clinical trial of high-dose supplementation with vitamins C and E, beta carotene, and zinc for age-related macular degeneration and vision loss: AREDS report no. 8"
+  - reference: PMID:28756618
+    title: "Antioxidant vitamin and mineral supplements for slowing the progression of age-related macular degeneration"
+  - reference: PMID:19171718
+    title: "Prospective study of zinc intake and risk of type 2 diabetes in women"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient
