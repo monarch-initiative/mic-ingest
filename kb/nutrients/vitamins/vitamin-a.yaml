@@ -53,6 +53,15 @@ functions:
       - 7
       - 8
       - 9
+    evidence:
+      - reference: PMID:20140749
+        supports: SUPPORT
+        snippet: "Retinoic acid (RA) is the biologically active form of vitamin A and its signaling is mediated by the RA and retinoid X receptors."
+        explanation: Confirms that retinoic acid signals through RAR and RXR nuclear receptors
+      - reference: PMID:21366525
+        supports: SUPPORT
+        snippet: "Retinoic acid is the major physiologically active form of vitamin A regulating the expression of different genes. At present, hundreds of genes are known to be regulated by retinoic acid."
+        explanation: Confirms that retinoic acid is the major active form regulating gene expression, with hundreds of target genes
 
   - name: Immune Function
     description: |
@@ -64,6 +73,15 @@ functions:
       - 23
       - 24
       - 25
+    evidence:
+      - reference: PMID:24659788
+        supports: SUPPORT
+        snippet: "RA production by CD103(+) dendritic cells and alveolar macrophages functions with TGF-β to promote conversion of naive T cells into Foxp3(+) regulatory T cells and, thereby, maintain mucosal tolerance. Furthermore, RA inhibits the differentiation of naive T cells into Th17 cells."
+        explanation: Confirms that retinoic acid regulates T-lymphocyte differentiation and maintains mucosal immune homeostasis
+      - reference: PMID:36496428
+        supports: SUPPORT
+        snippet: "Vitamin A is an anti-oxidant which has been presumed to act as an anti-infective vitamin in many studies."
+        explanation: Confirms the historical characterization of vitamin A as an anti-infective vitamin
 
   - name: Prenatal and Postnatal Development
     description: |
@@ -73,6 +91,11 @@ functions:
     mic_references:
       - 6
       - 27
+    evidence:
+      - reference: PMID:25389900
+        supports: SUPPORT
+        snippet: "It is necessary for normal embryonic development and postnatal tissue homeostasis, and exerts important effects on cell proliferation, differentiation and apoptosis."
+        explanation: Confirms vitamin A is essential for normal embryonic development and postnatal tissue maintenance
 
 deficiency:
   name: Vitamin A Deficiency
@@ -145,6 +168,11 @@ deficiency:
       mic_references:
         - 2
 
+  evidence:
+    - reference: PMID:22326691
+      supports: SUPPORT
+      snippet: "Vitamin A deficiency (VAD) is an important public health problem worldwide that contributes significantly to the global burden of disease. Vitamin A deficiency disorders include xerophthalmia and increased risk of infectious diseases, both of which increase risk of mortality. Xerophthalmia is also a leading cause of preventable blindness."
+      explanation: Confirms vitamin A deficiency is a major public health problem causing xerophthalmia and preventable blindness worldwide
   mic_references:
     - 37
     - 38
@@ -164,6 +192,11 @@ disease_associations:
       WHO and UNICEF promote vitamin A supplementation to reduce child mortality.
     mic_references:
       - 43
+    evidence:
+      - reference: PMID:35294044
+        supports: SUPPORT
+        snippet: "At longest follow-up, there was a 12% observed reduction in the risk of all-cause mortality for VAS compared with control using a fixed-effect model (risk ratio (RR) 0.88, 95% confidence interval (CI) 0.83 to 0.93; high-certainty evidence). Nine trials reported mortality due to diarrhoea and showed a 12% overall reduction for VAS (RR 0.88, 95% CI 0.79 to 0.98; 1,098,538 children; high-certainty evidence)."
+        explanation: Large Cochrane meta-analysis of 47 studies confirms vitamin A supplementation reduces all-cause mortality by 12% and diarrhoea mortality by 12% in children aged 6 months to 5 years
 
   - name: Measles Complications
     disease_term:
@@ -176,6 +209,11 @@ disease_associations:
       immunodeficient, or at risk of measles complications.
     mic_references:
       - 43
+    evidence:
+      - reference: PMID:16235283
+        supports: SUPPORT
+        snippet: "Using two doses of vitamin A (200,000 IU) on consecutive days was associated with a reduction in the risk of mortality in children under the age of two years (RR 0.18; 95% CI 0.03 to 0.61) and a reduction in the risk of pneumonia-specific mortality (RR 0.33; 95% CI 0.08 to 0.92)."
+        explanation: Cochrane review confirms two-dose vitamin A therapy reduces mortality and pneumonia-specific mortality in measles-infected children under two years
 
   - name: Acute Promyelocytic Leukemia
     disease_term:
@@ -189,6 +227,53 @@ disease_associations:
       of acute promyelocytic leukemia, inducing differentiation of leukemic cells.
     mic_references:
       - 2
+    evidence:
+      - reference: PMID:23841729
+        supports: SUPPORT
+        snippet: "All-trans retinoic acid (ATRA) with chemotherapy is the standard of care for acute promyelocytic leukemia (APL), resulting in cure rates exceeding 80%."
+        explanation: Phase 3 trial in NEJM confirms ATRA is standard of care for APL with cure rates exceeding 80%
+
+  - name: Lung Cancer Risk in Smokers
+    disease_term:
+      preferred_term: lung cancer
+      term:
+        id: MONDO:0008903
+        label: lung cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Smokers and asbestos-exposed individuals taking beta-carotene and retinol supplements
+    description: |
+      The CARET trial found that daily supplementation with beta-carotene and
+      retinyl palmitate increased the incidence of lung cancer and overall
+      mortality in smokers and asbestos-exposed individuals, leading to early
+      termination of the trial.
+    mic_references:
+      - 82
+    evidence:
+      - reference: PMID:15572756
+        supports: SUPPORT
+        snippet: "CARET was stopped ahead of schedule in January 1996 because participants who were randomly assigned to receive the active intervention were found to have a 28% increase in incidence of lung cancer, a 17% increase in incidence of death and a higher rate of cardiovascular disease mortality compared with participants in the placebo group."
+        explanation: CARET trial demonstrated increased lung cancer risk in smokers/asbestos-exposed individuals receiving beta-carotene and retinol supplements
+
+  - name: Retinitis Pigmentosa
+    disease_term:
+      preferred_term: retinitis pigmentosa
+      term:
+        id: MONDO:0019200
+        label: retinitis pigmentosa
+    relationship_type: THERAPEUTIC
+    description: |
+      Findings from controlled trials indicate that nutritional interventions,
+      including vitamin A palmitate, may slow the progression of retinitis
+      pigmentosa in some patients.
+    mic_references:
+      - 94
+      - 97
+    evidence:
+      - reference: PMID:17113430
+        supports: SUPPORT
+        snippet: "Findings of controlled trials indicate that nutritional interventions, including vitamin A palmitate and omega-3-rich fish, slow progression of disease in many patients."
+        explanation: Lancet review confirms controlled trials show vitamin A palmitate slows progression of retinitis pigmentosa
 
 nutrient_interactions:
   - name: Iron Metabolism
@@ -202,6 +287,11 @@ nutrient_interactions:
     mic_references:
       - 28
       - 29
+    evidence:
+      - reference: PMID:11965502
+        supports: SUPPORT
+        snippet: "Vitamin A appears to be involved in the pathogenesis of anemia through diverse biological mechanisms, such as the enhancement of growth and differentiation of erythrocyte progenitor cells, potentiation of immunity to infection and reduction of the anemia of infection, and mobilization of iron stores from tissues."
+        explanation: Comprehensive review confirms vitamin A is involved in anemia through multiple mechanisms including iron mobilization from stores
 
   - name: Zinc Interaction
     description: |

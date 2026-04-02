@@ -64,6 +64,10 @@ functions:
         supports: SUPPORT
         snippet: "Folate plays a major role in the formation of S-adenosylmethionine, the universal methyl donor, as well as in the formation of purine and thymidine synthesis for DNA and RNA."
         explanation: Confirms folate's critical role in DNA/RNA synthesis and methylation
+      - reference: PMID:22332098
+        supports: SUPPORT
+        snippet: "DNA methylation is an epigenetic modification critical to normal genome regulation and development. The vitamin folate is a key source of the one carbon group used to methylate DNA."
+        explanation: Reviews the molecular mechanisms by which folate serves as the key source of one-carbon groups for DNA methylation
 
   - name: Amino Acid Metabolism
     description: |
@@ -86,6 +90,10 @@ functions:
         supports: SUPPORT
         snippet: "Folate functions in multiple coenzyme forms in acceptance, redox processing and transfer of one-carbon units, including nucleotides and certain amino acids."
         explanation: Supports folate's role in amino acid metabolism
+      - reference: PMID:16210710
+        supports: SUPPORT
+        snippet: "Daily doses of > or =0.8 mg folic acid are typically required to achieve the maximal reduction in plasma homocysteine concentrations produced by folic acid supplementation. Doses of 0.2 and 0.4 mg are associated with 60% and 90%, respectively, of this maximal effect."
+        explanation: Demonstrates dose-dependent effect of folic acid on homocysteine lowering, confirming folate's critical role in homocysteine-to-methionine conversion
 
 deficiency:
   name: Folate Deficiency
@@ -415,6 +423,18 @@ disease_associations:
         supports: SUPPORT
         snippet: "There were six cases of neural-tube defects in the group receiving the trace-element supplement, as compared with none in the vitamin-supplement group (P = 0.029)."
         explanation: Czeizel study showed periconceptional vitamin supplementation prevents first occurrence of NTDs
+      - reference: PMID:24284617
+        supports: SUPPORT
+        snippet: "The findings of the Hungarian intervention (randomized double-blind and cohort controlled) trials indicated that periconceptional folic acid (FA)-containing multivitamin supplementation prevented the major proportion (about 90%) of neural-tube defects (NTD) as well as a certain proportion (about 40%) of congenital heart defects."
+        explanation: Hungarian trials showed periconceptional folic acid supplementation prevented about 90% of NTDs
+      - reference: PMID:25590678
+        supports: SUPPORT
+        snippet: "The number of births occurring annually without NTDs that would otherwise have been affected is approximately 1,326 (95% confidence interval = 1,122-1,531). Mandatory folic acid fortification remains an effective public health intervention."
+        explanation: US folic acid fortification prevents approximately 1,326 NTD-affected births annually
+      - reference: PMID:36882610
+        supports: SUPPORT
+        snippet: "Maternal folate insufficiency before and during early pregnancy is the most common risk factor and is preventable. Folic acid (vitamin B9) is required for formation of the neural tube early in pregnancy, around 28 days after conception, when most women are unaware of their pregnancies."
+        explanation: Confirms maternal folate insufficiency as the most common preventable risk factor for NTDs
 
   - name: Cardiovascular Disease and Stroke
     description: |
@@ -444,6 +464,18 @@ disease_associations:
         supports: SUPPORT
         snippet: "Elevated plasma total homocysteine is an independent risk factor for atherosclerotic vascular disease. Risk rises continuously across the spectrum of homocysteine concentrations and may become appreciable at levels greater than 10 mumol/l."
         explanation: Confirms association between homocysteine and cardiovascular disease risk
+      - reference: PMID:12446535
+        supports: SUPPORT
+        snippet: "lowering homocysteine concentrations by 3 micromol/l from current levels (achievable by increasing folic acid intake) would reduce the risk of ischaemic heart disease by 16% (11% to 20%), deep vein thrombosis by 25% (8% to 38%), and stroke by 24% (15% to 33%)."
+        explanation: Mendelian randomization meta-analysis provides strong evidence that homocysteine-CVD association is causal and that folic acid could reduce stroke risk by 24%
+      - reference: PMID:27528407
+        supports: SUPPORT
+        snippet: "Our meta-analysis indicated a 10% lower risk of stroke and a 4% lower risk of overall CVD with folic acid supplementation. A greater benefit for CVD was observed among participants with lower plasma folate levels and without preexisting CVD and in studies with larger decreases in homocysteine levels."
+        explanation: Meta-analysis of 30 RCTs with 82,334 participants confirmed folic acid supplementation reduces stroke risk by 10% and overall CVD by 4%
+      - reference: PMID:20937919
+        supports: PARTIAL
+        snippet: "Dietary supplementation with folic acid to lower homocysteine levels had no significant effects within 5 years on cardiovascular events or on overall cancer or mortality in the populations studied."
+        explanation: Large meta-analysis of 8 RCTs found no significant effect of folic acid on major vascular events, though included primarily populations with preexisting CVD
 
   - name: Colorectal Cancer
     description: |
@@ -472,6 +504,14 @@ disease_associations:
         supports: SUPPORT
         snippet: "Collectively, the evidence from epidemiologic, animal and human studies strongly suggests that folate status modulates the risk of developing cancers in selected tissues, the most notable of which is the colorectum. Folate depletion appears to enhance carcinogenesis whereas folate supplementation above what is presently considered to be the basal requirement appears to convey a protective effect."
         explanation: Supports protective role of adequate folate status against colorectal cancer
+      - reference: PMID:20820900
+        supports: SUPPORT
+        snippet: "When analyzed as a continuous variable, a 2% risk reduction (95% CI 0-3%) was estimated for every 100 μg/day increase in total folate intake."
+        explanation: Pooled analysis of 13 prospective cohort studies with 725,134 participants showed modest inverse association between folate intake and colon cancer risk
+      - reference: PMID:9096386
+        supports: SUPPORT
+        snippet: "Folate deficiency causes massive incorporation of uracil into human DNA (4 million per cell) and chromosome breaks. The likely mechanism is the deficient methylation of dUMP to dTMP and subsequent incorporation of uracil into DNA by DNA polymerase."
+        explanation: Provides mechanistic basis for folate-cancer link through DNA damage from uracil misincorporation under folate deficiency
 
   - name: Cognitive Decline and Dementia
     description: |
@@ -495,6 +535,46 @@ disease_associations:
       - 174
       - 175
       - 176
+    evidence:
+      - reference: PMID:21784352
+        supports: SUPPORT
+        snippet: "The odds ratio for a 5 μmol/L increase in serum homocysteine was 1.35 (95% confidence interval, 1.02-1.79) or 1.50 (1.13-2.00) adjusted for regression dilution bias. The odds ratio for a 3 μmol/L decrease in serum homocysteine (the average reduction expected using folic acid and B12) was 0.78 (0.66-0.93)."
+        explanation: Meta-analysis of 8 cohort studies with 8,669 participants shows positive association between homocysteine and dementia, estimating 20% risk reduction from B vitamin treatment
+      - reference: PMID:20838622
+        supports: SUPPORT
+        snippet: "The mean rate of brain atrophy per year was 0.76% [95% CI, 0.63-0.90] in the active treatment group and 1.08% [0.94-1.22] in the placebo group (P = 0.001). The treatment response was related to baseline homocysteine levels: the rate of atrophy in participants with homocysteine >13 µmol/L was 53% lower in the active treatment group (P = 0.001)."
+        explanation: VITACOG RCT demonstrated that B vitamins including folic acid slowed brain atrophy by 30% overall and 53% in those with elevated homocysteine
+      - reference: PMID:29480200
+        supports: SUPPORT
+        snippet: "elevated plasma total homocysteine is a modifiable risk factor for development of cognitive decline, dementia, and Alzheimer's disease in older persons. In a variety of clinical studies, the relative risk of dementia in elderly people for moderately raised homocysteine (within the normal range) ranges from 1.15 to 2.5, and the Population Attributable risk ranges from 4.3 to 31%."
+        explanation: International consensus statement concluding that elevated homocysteine is a modifiable risk factor for dementia with population attributable risk up to 31%
+
+  - name: Breast Cancer
+    description: |
+      A meta-analysis of prospective and case-control studies found no clear overall
+      relationship between folate intake or blood folate levels and breast cancer risk.
+      However, adequate folate intake may reduce the increased risk of breast cancer
+      associated with moderate or high alcohol consumption. Several studies suggest that
+      folate may counteract the adverse effects of alcohol on one-carbon metabolism and
+      DNA methylation in breast tissue.
+    disease_term:
+      preferred_term: breast carcinoma
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: Primarily in women with moderate to high alcohol consumption; no clear overall association
+    mic_references:
+      - 143
+      - 144
+      - 145
+      - 146
+    evidence:
+      - reference: PMID:17202114
+        supports: PARTIAL
+        snippet: "Adequate folate intake may reduce the increased risk of breast cancer that has been associated with moderate or high alcohol consumption."
+        explanation: Meta-analysis found no clear overall association between folate and breast cancer, but suggests protective effect specifically among women with moderate or high alcohol intake
 
 recommendations:
   rda:
@@ -615,6 +695,76 @@ references:
     findings:
       - statement: Elevated homocysteine is an independent risk factor for atherosclerotic vascular disease
         supporting_text: "Elevated plasma total homocysteine is an independent risk factor for atherosclerotic vascular disease."
+  - reference: PMID:24284617
+    title: Folate deficiency and folic acid supplementation - the prevention of neural-tube defects and congenital heart defects
+    findings:
+      - statement: Periconceptional folic acid supplementation prevents about 90% of NTDs
+        supporting_text: "periconceptional folic acid (FA)-containing multivitamin supplementation prevented the major proportion (about 90%) of neural-tube defects (NTD) as well as a certain proportion (about 40%) of congenital heart defects."
+  - reference: PMID:25590678
+    title: Updated estimates of neural tube defects prevented by mandatory folic acid fortification - United States, 1995-2011
+    findings:
+      - statement: US folic acid fortification prevents approximately 1,326 NTD-affected births annually
+        supporting_text: "The number of births occurring annually without NTDs that would otherwise have been affected is approximately 1,326 (95% confidence interval = 1,122-1,531)."
+  - reference: PMID:36882610
+    title: Neural tube defects - a review of global prevalence, causes, and primary prevention
+    findings:
+      - statement: Maternal folate insufficiency is the most common preventable risk factor for NTDs
+        supporting_text: "Maternal folate insufficiency before and during early pregnancy is the most common risk factor and is preventable."
+  - reference: PMID:12446535
+    title: Homocysteine and cardiovascular disease - evidence on causality from a meta-analysis
+    findings:
+      - statement: Lowering homocysteine by 3 micromol/l could reduce stroke risk by 24%
+        supporting_text: "lowering homocysteine concentrations by 3 micromol/l from current levels (achievable by increasing folic acid intake) would reduce the risk of ischaemic heart disease by 16% (11% to 20%), deep vein thrombosis by 25% (8% to 38%), and stroke by 24% (15% to 33%)."
+  - reference: PMID:27528407
+    title: Folic acid supplementation and the risk of cardiovascular diseases - a meta-analysis of randomized controlled trials
+    findings:
+      - statement: Folic acid supplementation reduces stroke risk by 10% and overall CVD by 4%
+        supporting_text: "Our meta-analysis indicated a 10% lower risk of stroke and a 4% lower risk of overall CVD with folic acid supplementation."
+  - reference: PMID:20937919
+    title: Effects of lowering homocysteine levels with B vitamins on cardiovascular disease, cancer, and cause-specific mortality
+    findings:
+      - statement: Folic acid supplementation had no significant effects on cardiovascular events within 5 years
+        supporting_text: "Dietary supplementation with folic acid to lower homocysteine levels had no significant effects within 5 years on cardiovascular events or on overall cancer or mortality in the populations studied."
+  - reference: PMID:20820900
+    title: Pooled analyses of 13 prospective cohort studies on folate intake and colon cancer
+    findings:
+      - statement: Higher folate intake is modestly associated with reduced colon cancer risk
+        supporting_text: "a 2% risk reduction (95% CI 0-3%) was estimated for every 100 μg/day increase in total folate intake."
+  - reference: PMID:9096386
+    title: Folate deficiency causes uracil misincorporation into human DNA and chromosome breakage
+    findings:
+      - statement: Folate deficiency causes massive uracil misincorporation into DNA and chromosome breaks
+        supporting_text: "Folate deficiency causes massive incorporation of uracil into human DNA (4 million per cell) and chromosome breaks."
+  - reference: PMID:21784352
+    title: Serum homocysteine and dementia - meta-analysis of eight cohort studies
+    findings:
+      - statement: Elevated homocysteine is associated with increased dementia risk
+        supporting_text: "the odds ratio for a 5 μmol/L increase in serum homocysteine was 1.35 (95% confidence interval, 1.02-1.79)"
+  - reference: PMID:20838622
+    title: Homocysteine-lowering by B vitamins slows the rate of accelerated brain atrophy in mild cognitive impairment
+    findings:
+      - statement: B vitamins including folic acid slow brain atrophy in mild cognitive impairment
+        supporting_text: "The mean rate of brain atrophy per year was 0.76% in the active treatment group and 1.08% in the placebo group (P = 0.001)."
+  - reference: PMID:29480200
+    title: Homocysteine and Dementia - An International Consensus Statement
+    findings:
+      - statement: Elevated homocysteine is a modifiable risk factor for cognitive decline and dementia
+        supporting_text: "elevated plasma total homocysteine is a modifiable risk factor for development of cognitive decline, dementia, and Alzheimer's disease in older persons."
+  - reference: PMID:17202114
+    title: Folate and risk of breast cancer - a meta-analysis
+    findings:
+      - statement: No clear overall association between folate and breast cancer, but protective effect with alcohol
+        supporting_text: "Adequate folate intake may reduce the increased risk of breast cancer that has been associated with moderate or high alcohol consumption."
+  - reference: PMID:16210710
+    title: Dose-dependent effects of folic acid on blood concentrations of homocysteine
+    findings:
+      - statement: Folic acid dose-dependently lowers homocysteine with maximal effect at 0.8 mg or more
+        supporting_text: "Daily doses of > or =0.8 mg folic acid are typically required to achieve the maximal reduction in plasma homocysteine concentrations produced by folic acid supplementation."
+  - reference: PMID:22332098
+    title: Folate and DNA methylation - a review of molecular mechanisms and the evidence for folate's role
+    findings:
+      - statement: Folate is the key source of one-carbon groups used for DNA methylation
+        supporting_text: "DNA methylation is an epigenetic modification critical to normal genome regulation and development. The vitamin folate is a key source of the one carbon group used to methylate DNA."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

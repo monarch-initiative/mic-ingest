@@ -290,16 +290,30 @@ disease_associations:
     population_context: Patients with dyslipidemia or history of cardiovascular disease
     description: |
       Pharmacologic doses of nicotinic acid improve lipid profiles by increasing HDL
-      cholesterol and decreasing lipoprotein(a). However, recent large trials (AIM-HIGH,
-      HPS2-THRIVE) found that adding niacin to statin therapy did not reduce
-      cardiovascular events in patients already on statins. Current guidelines do not
-      recommend routine use of niacin for cardiovascular disease prevention.
+      cholesterol and decreasing lipoprotein(a). The Coronary Drug Project (CDP) showed
+      niacin reduced nonfatal myocardial infarction and total mortality at 15-year
+      follow-up. The HATS trial found simvastatin-niacin combination reduced cardiovascular
+      events by 90% versus placebo. However, recent large trials (AIM-HIGH, HPS2-THRIVE)
+      found that adding niacin to statin therapy did not reduce cardiovascular events in
+      patients already on statins. Current guidelines do not recommend routine use of
+      niacin for cardiovascular disease prevention.
     mic_references:
       - 80
+      - 87
+      - 88
       - 92
       - 95
       - 96
       - 97
+    evidence:
+      - reference: PMID:3782631
+        supports: SUPPORT
+        snippet: "Mortality in the niacin group was 11% lower than in the placebo group (52.0 versus 58.2%; p = 0.0004)"
+        explanation: Coronary Drug Project 15-year follow-up showed significant mortality reduction with niacin treatment in post-MI patients
+      - reference: PMID:11757504
+        supports: SUPPORT
+        snippet: "The frequency of the clinical end point was 24 percent with placebos; 3 percent with simvastatin-niacin alone"
+        explanation: HATS trial demonstrated marked clinical benefit of simvastatin-niacin combination in patients with coronary disease and low HDL
 
   - name: Genomic Stability and Cancer Risk
     disease_term:
@@ -314,12 +328,16 @@ disease_associations:
       Niacin deficiency has been linked to genomic instability, impaired DNA repair,
       chromosomal breakage, and increased cancer development in animal models.
       Observational studies suggest higher dietary niacin intake may be associated
-      with decreased risk of oral, pharyngeal, and esophageal cancers.
+      with decreased risk of oral, pharyngeal, and esophageal cancers. In rats,
+      niacin deficiency decreased bone marrow poly(ADP-ribose) and accelerated
+      leukemia development, while pharmacologic niacin doses were protective.
     mic_references:
       - 42
       - 43
       - 47
       - 48
+      - 51
+      - 52
       - 57
       - 58
       - 59
@@ -328,6 +346,118 @@ disease_associations:
         supports: SUPPORT
         snippet: "In various models, niacin deficiency has been found to cause impaired cell cycle arrest and apoptosis, delayed DNA excision repair, accumulation of single and double strand breaks, chromosomal breakage, telomere erosion and cancer development"
         explanation: Links niacin deficiency to genomic instability and cancer development
+      - reference: PMID:10728605
+        supports: SUPPORT
+        snippet: "ORs were 0.95 for retinol, 0.61 for carotene, 0.91 for lycopene, 0.83 for vitamin D, 0.74 for vitamin E, 0.63 for vitamin C, 0.82 for thiamine, 0.87 for riboflavin, 0.59 for vitamin B6, 0.61 for folic acid, 0.62 for niacin"
+        explanation: Case-control study showing niacin intake significantly inversely associated with oral and pharyngeal cancer risk (OR 0.62)
+      - reference: PMID:10797282
+        supports: SUPPORT
+        snippet: "Highly significant associations emerged for monounsaturated fatty acids [odds ratio (OR) in highest vs. lowest intake quintile = 0.5]; carotene (OR = 0.3); lutein + zeaxanthin (OR = 0.4); vitamin C (OR = 0.4); and niacin (OR = 0.5)"
+        explanation: Case-control study showing higher niacin intake associated with 50% reduced risk of esophageal squamous-cell carcinoma
+      - reference: PMID:11773516
+        supports: SUPPORT
+        snippet: "niacin deficiency caused an 80% decrease in bone marrow NAD(+). Basal poly(ADP-ribose) levels were dramatically reduced by niacin deficiency"
+        explanation: Niacin deficiency depletes bone marrow NAD and poly(ADP-ribose), increasing risk of nitrosourea-induced leukemia in rats
+      - reference: PMID:11773517
+        supports: SUPPORT
+        snippet: "supplementation of a niacin-adequate, high quality diet with pharmacologic levels of nicotinic acid or nicotinamide increases NAD(+) and poly(ADP-ribose) levels in bone marrow and may be protective against DNA damage"
+        explanation: Pharmacologic niacin supplementation increases bone marrow NAD and poly(ADP-ribose) and delays carcinogen-induced leukemia in rats
+
+  - name: Hartnup Disease
+    disease_term:
+      preferred_term: Hartnup disease
+      term:
+        id: MONDO:0009324
+        label: Hartnup disease
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    description: |
+      Hartnup disease is an autosomal recessive disorder caused by mutations in the
+      SLC6A19 gene encoding a sodium-dependent neutral amino acid transporter expressed
+      primarily in kidneys and intestine. The defective transporter impairs tryptophan
+      absorption, leading to signs of severe niacin deficiency including photosensitive
+      dermatitis, cerebellar ataxia, and psychiatric symptoms. Disease management
+      involves supplementation with nicotinic acid or nicotinamide.
+    mic_references:
+      - 74
+      - 75
+    evidence:
+      - reference: PMID:19967017
+        supports: SUPPORT
+        snippet: "this patient had neutral aminoaciduria which indicated a defective transport of neutral amino acid transporter in the kidneys and intestine resulting in failure of transport of tryptophan"
+        explanation: Case report demonstrating that Hartnup disease involves defective tryptophan transport leading to niacin deficiency symptoms
+      - reference: PMID:7955499
+        supports: SUPPORT
+        snippet: "Her symptoms resolved with oral nicotinamide"
+        explanation: Demonstrates that Hartnup disease is responsive to niacin supplementation
+
+  - name: Friedreich's Ataxia
+    disease_term:
+      preferred_term: Friedreich ataxia
+      term:
+        id: MONDO:0100339
+        label: Friedreich ataxia
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: Patients with Friedreich's ataxia carrying GAA-repeat expansions in the FXN gene
+    description: |
+      Friedreich's ataxia is caused by GAA-repeat expansions in the FXN gene that trigger
+      heterochromatinization and reduced frataxin expression. Nicotinamide (vitamin B3)
+      acts as a class III histone deacetylase inhibitor and can antagonize this
+      heterochromatinization, upregulating frataxin expression. In an open-label pilot
+      trial, repeated daily doses of 3.5-6 g nicotinamide led to sustained and significant
+      upregulation of frataxin expression in patients, though no neurological improvements
+      were observed during the 8-week treatment period.
+    mic_references:
+      - 99
+      - 100
+      - 101
+      - 102
+    evidence:
+      - reference: PMID:23474817
+        supports: SUPPORT
+        snippet: "this effect could be antagonized with the class III histone deactylase (HDAC) inhibitor vitamin B3 (nicotinamide) which activated the silenced FXN gene in several FRDA models"
+        explanation: Demonstrates nicotinamide can reverse epigenetic silencing of the FXN gene in Friedreich's ataxia cellular models
+      - reference: PMID:24794816
+        supports: SUPPORT
+        snippet: "daily dosing at 3.5-6 g resulted in a sustained and significant (p<0.0001) upregulation of frataxin expression, which was accompanied by a reduction in heterochromatin modifications at the FXN locus"
+        explanation: Open-label pilot trial demonstrating nicotinamide significantly upregulates frataxin protein in Friedreich's ataxia patients
+
+  - name: HIV/AIDS and Tryptophan Depletion
+    disease_term:
+      preferred_term: HIV infectious disease
+      term:
+        id: MONDO:0005109
+        label: HIV infectious disease
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: HIV-positive patients, particularly those with ART-associated dyslipidemia
+    description: |
+      HIV infection is characterized by chronic stimulation of indoleamine 2,3-dioxygenase
+      (IDO), leading to increased tryptophan catabolism and depletion. This disruption
+      of tryptophan metabolism contributes to intracellular niacin/NAD deficiency and
+      altered T-cell balance. Pharmacologic doses of nicotinic acid have been used to
+      treat HIV-associated dyslipidemia, with combination therapy of niacin and
+      fenofibrate effectively normalizing lipid parameters in ART-treated patients.
+    mic_references:
+      - 40
+      - 103
+      - 104
+      - 108
+      - 113
+    evidence:
+      - reference: PMID:14522263
+        supports: SUPPORT
+        snippet: "A chronic increase in inducible tryptophan oxidation is the basis of HIV-1-associated tryptophan depletion"
+        explanation: Review establishing the metabolic link between HIV infection, tryptophan depletion, and niacin deficiency
+      - reference: PMID:20484731
+        supports: SUPPORT
+        snippet: "progressive disease is associated with the loss of T(H)17 cells and a reciprocal increase in the fraction of the immunosuppressive T(reg) cells"
+        explanation: IDO-mediated tryptophan catabolism disrupts TH17/Treg balance in progressive HIV disease
+      - reference: PMID:21565796
+        supports: SUPPORT
+        snippet: "A combination of fenofibrate and niacin with low-saturated-fat D/E is effective and safe in increasing HDL-C, decreasing non-HDL-C and hypertriglyceridemia, and ameliorating hypoadiponectinemia in patients with HIV/ART-associated dyslipidemia"
+        explanation: Randomized trial demonstrating niacin-fenofibrate combination effectively treats HIV-associated dyslipidemia
 
 food_sources:
   - name: Chicken (light meat)

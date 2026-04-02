@@ -29,6 +29,11 @@ functions:
         term:
           id: GO:0015671
           label: oxygen transport
+    evidence:
+      - reference: PMID:24868988
+        supports: SUPPORT
+        snippet: "Because the major role of iron is in hemoglobin synthesis, this review will focus on iron, iron transport, and hematopoiesis."
+        explanation: Review of the molecular biology of human iron metabolism confirms that the major role of iron is in hemoglobin synthesis, supporting iron's essential function in oxygen transport.
     mic_references:
       - 1
       - 2
@@ -43,6 +48,11 @@ functions:
         term:
           id: GO:0022900
           label: electron transport chain
+    evidence:
+      - reference: PMID:11160590
+        supports: SUPPORT
+        snippet: "This review focuses on the biological processes that we believe are the basis for alterations in the immune system, neural systems, and energy metabolism and exercise"
+        explanation: Review of iron biology confirms iron's essential role in energy metabolism, supporting the function of cytochromes and iron-sulfur clusters in cellular respiration.
     mic_references:
       - 3
       - 4
@@ -57,6 +67,11 @@ functions:
         term:
           id: GO:0006260
           label: DNA replication
+    evidence:
+      - reference: PMID:25000876
+        supports: SUPPORT
+        snippet: "Eukaryotic cells contain numerous iron-requiring proteins such as iron-sulfur (Fe-S) cluster proteins, hemoproteins and ribonucleotide reductases (RNRs). These proteins utilize iron as a cofactor and perform key roles in DNA replication, DNA repair, metabolic catalysis, iron regulation and cell cycle progression."
+        explanation: Review confirms that ribonucleotide reductases and other iron-requiring proteins perform key roles in DNA replication, DNA repair, and cell cycle control.
     mic_references:
       - 5
 
@@ -77,6 +92,11 @@ deficiency:
           label: Iron deficiency anemia
       frequency: FREQUENT
       context: Microcytic hypochromic anemia from severe iron deficiency
+      evidence:
+        - reference: PMID:26926814
+          supports: SUPPORT
+          snippet: "Microcytic anemia due to iron deficiency is the most common type of anemia in children"
+          explanation: Review confirms that microcytic anemia from iron deficiency is the most common type of anemia in children, supporting the frequent occurrence of this phenotype.
       mic_references:
         - 14
 
@@ -99,6 +119,11 @@ deficiency:
           label: Cognitive impairment
       frequency: OCCASIONAL
       context: Especially affects children's development
+      evidence:
+        - reference: PMID:25419131
+          supports: SUPPORT
+          snippet: "Among the cognitive impairments caused by iron deficiency, those referring to attention span, intelligence, and sensory perception functions are mainly cited, as well as those associated with emotions and behavior, often directly related to the presence of iron deficiency anemia"
+          explanation: Review confirms that iron deficiency causes cognitive impairments in attention span, intelligence, and sensory perception, supporting the link between iron deficiency and cognitive impairment.
       mic_references:
         - 38
 
@@ -328,6 +353,10 @@ disease_associations:
         supports: SUPPORT
         snippet: "iron-deficiency anemia and iron deficiency without anemia during infancy and childhood can have long-lasting detrimental effects on neurodevelopment"
         explanation: AAP clinical report confirms that iron deficiency anemia has significant health consequences, supporting the causal relationship between iron deficiency and anemia.
+      - reference: PMID:26926814
+        supports: SUPPORT
+        snippet: "Iron deficiency anemia, which can be associated with cognitive issues, is prevented and treated with iron supplements or increased intake of dietary iron"
+        explanation: Review confirms iron deficiency anemia can be associated with cognitive issues and is treatable with iron supplements, supporting the causal link between iron deficiency and this anemia.
     mic_references:
       - 14
       - 15
@@ -348,6 +377,14 @@ disease_associations:
         supports: SUPPORT
         snippet: "iron-deficiency anemia and iron deficiency without anemia during infancy and childhood can have long-lasting detrimental effects on neurodevelopment"
         explanation: AAP clinical report confirms that iron deficiency during infancy and childhood has lasting detrimental effects on neurodevelopment.
+      - reference: PMID:25512881
+        supports: SUPPORT
+        snippet: "Prenatal and early postnatal iron deficiency (ID) is associated with long-term neurobiological alterations and disruptions in cognitive, social, and behavioral development. Early life ID is particularly detrimental as this is a period of rapid neurodevelopment."
+        explanation: Review confirms that early life iron deficiency causes long-term neurobiological alterations and disruptions in cognitive and behavioral development during rapid neurodevelopment.
+      - reference: PMID:25419131
+        supports: SUPPORT
+        snippet: "iron deficiency without anemia may cause cognitive disturbances"
+        explanation: Confirms that iron deficiency even without anemia can impair cognitive function, supporting the broad impact of iron deficiency on children's cognitive development.
     mic_references:
       - 38
       - 39
@@ -364,9 +401,93 @@ disease_associations:
         label: hereditary hemochromatosis
     relationship_type: MARKER
     population_context: Individuals with HFE gene mutations
+    evidence:
+      - reference: PMID:26975792
+        supports: SUPPORT
+        snippet: "Haemochromatosis is now known to be an iron-storage disease with genetic heterogeneity but with a final common metabolic pathway resulting in inappropriately low production of the hormone hepcidin. This leads to increase in intestinal absorption and deposition of excessive amounts of iron in parenchymal cells which in turn results in eventual tissue damage and organ failure."
+        explanation: Lancet review confirms hemochromatosis is an iron-storage disease caused by low hepcidin production, leading to excessive intestinal iron absorption, tissue iron deposition, and organ failure.
     mic_references:
       - 62
       - 63
+
+  - name: Colorectal Cancer and Heme Iron
+    description: |
+      High intake of heme iron from red and processed meat has been associated
+      with increased risk of colorectal cancer. Mechanisms may involve catalytic
+      formation of N-nitroso compounds and cytotoxic aldehydes from lipoperoxidation.
+    disease_term:
+      preferred_term: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Populations with high red/processed meat intake
+    evidence:
+      - reference: PMID:21209396
+        supports: SUPPORT
+        snippet: "The relative risk of colon cancer was 1.18 (95% CI: 1.06-1.32) for subjects in the highest category of heme iron intake compared with those in the lowest category"
+        explanation: Meta-analysis of prospective cohort studies found a statistically significant 18% increased risk of colon cancer with high heme iron intake.
+      - reference: PMID:24243555
+        supports: SUPPORT
+        snippet: "a higher intake of heme iron has shown a tendency toward a positive association with cancer risk"
+        explanation: Systematic review and meta-analysis confirms the positive association between heme iron intake and cancer risk, particularly for colorectal cancer.
+    mic_references:
+      - 96
+      - 97
+
+  - name: Coronary Heart Disease
+    description: |
+      The relationship between iron and coronary heart disease is complex.
+      Heme iron intake is positively associated with CHD incidence, while
+      total iron intake and serum iron markers show inverse associations.
+    disease_term:
+      preferred_term: coronary heart disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: General population; heme iron specific
+    evidence:
+      - reference: PMID:24401818
+        supports: SUPPORT
+        snippet: "Heme iron was found to be positively associated with CHD incidence (RR: 1.57; 95% CI: 1.28, 1.94), whereas total iron was inversely associated (RR: 0.85; 95% CI: 0.73, 0.999)"
+        explanation: Meta-analysis of 21 prospective cohort studies found heme iron positively associated with 57% increased CHD incidence, while total iron was inversely associated.
+    mic_references:
+      - 103
+
+  - name: Type 2 Diabetes
+    description: |
+      Elevated body iron stores, as measured by serum ferritin and transferrin
+      saturation, are associated with increased risk of type 2 diabetes. Iron
+      may impair insulin signaling and beta cell function through oxidative stress.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: General population
+    evidence:
+      - reference: PMID:24327370
+        supports: SUPPORT
+        snippet: "Ferritin and clinically elevated transferrin saturation were strongly associated with an increased risk of T2D, overall and in prospective studies"
+        explanation: Meta-analysis of 46 observational studies found strong association between elevated ferritin and transferrin saturation with increased type 2 diabetes risk.
+    mic_references:
+      - 105
+      - 106
+
+  - name: Pregnancy Anemia
+    description: |
+      Iron supplementation during pregnancy reduces the risk of maternal
+      anaemia and iron deficiency at term. Iron and folic acid supplementation
+      is standard antenatal care to support expanded blood volume and fetal
+      development.
+    disease_term:
+      preferred_term: anemia of pregnancy
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Pregnant women
+    evidence:
+      - reference: PMID:26198451
+        supports: SUPPORT
+        snippet: "Preventive iron supplementation reduced maternal anaemia at term by 70% (risk ratio (RR) 0.30; 95% confidence interval (CI) 0.19 to 0.46, 14 trials, 2199 women, low quality evidence), iron-deficiency anaemia at term (RR 0.33; 95% CI 0.16 to 0.69, six trials, 1088 women)"
+        explanation: Cochrane review of 61 trials found iron supplementation reduced maternal anemia at term by 70% and iron-deficiency anemia at term by 67%, confirming iron deficiency as a major cause of pregnancy anemia.
+    mic_references:
+      - 64
+      - 66
 
 recommendations:
   rda:
@@ -431,6 +552,30 @@ bioavailability:
 references:
   - reference: PMID:20923825
     title: "Diagnosis and prevention of iron deficiency and iron-deficiency anemia in infants and young children (0-3 years of age)"
+  - reference: PMID:24868988
+    title: "The molecular biology of human iron metabolism"
+  - reference: PMID:25000876
+    title: "Essential functions of iron-requiring proteins in DNA replication, repair and cell cycle control"
+  - reference: PMID:26926814
+    title: "Iron Deficiency and Other Types of Anemia in Infants and Children"
+  - reference: PMID:25419131
+    title: "Iron deficiency and cognitive functions"
+  - reference: PMID:25512881
+    title: "Striking while the iron is hot: Understanding the biological and neurodevelopmental effects of iron deficiency to optimize intervention in early childhood"
+  - reference: PMID:26198451
+    title: "Daily oral iron supplementation during pregnancy"
+  - reference: PMID:21209396
+    title: "Heme iron from meat and risk of colorectal cancer: a meta-analysis and a review of the mechanisms involved"
+  - reference: PMID:24401818
+    title: "Dietary iron intake and body iron stores are associated with risk of coronary heart disease in a meta-analysis of prospective cohort studies"
+  - reference: PMID:24327370
+    title: "Association of iron indices and type 2 diabetes: a meta-analysis of observational studies"
+  - reference: PMID:26975792
+    title: "Haemochromatosis"
+  - reference: PMID:11160590
+    title: "Iron biology in immune function, muscle metabolism and neuronal functioning"
+  - reference: PMID:24243555
+    title: "Iron and cancer risk--a systematic review and meta-analysis of the epidemiological evidence"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

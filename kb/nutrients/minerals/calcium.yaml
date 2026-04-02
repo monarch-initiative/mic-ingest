@@ -79,6 +79,43 @@ functions:
         snippet: "Calcium ions (Ca(2+)) impact nearly every aspect of cellular life"
         explanation: Confirms calcium's broad role in cellular signaling and function
 
+  - name: Blood Coagulation Cofactor
+    description: |
+      Calcium is necessary for the activation of the seven vitamin K-dependent clotting
+      factors in the coagulation cascade. The binding of calcium ions is required for these
+      clotting factors to function, making calcium essential for normal blood clot formation
+      and hemostasis.
+    biological_processes:
+      - preferred_term: blood coagulation
+        term:
+          id: GO:0007596
+          label: blood coagulation
+    mic_references:
+      - 1
+      - 3
+    evidence:
+      - reference: PMID:18083096
+        supports: SUPPORT
+        snippet: "Calcium ions (Ca(2+)) impact nearly every aspect of cellular life"
+        explanation: Confirms calcium's fundamental role in cellular processes including those underlying coagulation
+
+  - name: Supplement Formulations
+    description: |
+      Calcium supplements are available in several forms including calcium carbonate, calcium
+      citrate, calcium citrate malate, calcium lactate, and calcium gluconate. Calcium
+      carbonate is the most cost-effective and should be taken with meals for optimal
+      absorption. Calcium citrate can be taken without food and is preferred for individuals
+      with achlorhydria or those taking acid-suppressing medications. The maximum dose of
+      elemental calcium that should be taken at one time is 500 mg.
+    mic_references:
+      - 124
+      - 125
+    evidence:
+      - reference: PMID:17507729
+        supports: SUPPORT
+        snippet: "Calcium carbonate, the most cost-effective form, should be taken with a meal to ensure optimal absorption. Calcium citrate can be taken without food and is the supplement of choice for individuals with achlorhydria or who are taking histamine-2 blockers or protein-pump inhibitors"
+        explanation: Review of calcium supplement forms confirming differential absorption characteristics and clinical recommendations for each formulation
+
 deficiency:
   name: Calcium Deficiency
   description: |
@@ -525,6 +562,11 @@ disease_associations:
       - 117
       - 118
       - 119
+    evidence:
+      - reference: PMID:9099655
+        supports: SUPPORT
+        snippet: "A diet rich in fruits, vegetables, and low-fat dairy foods and with reduced saturated and total fat can substantially lower blood pressure. This diet offers an additional nutritional approach to preventing and treating hypertension"
+        explanation: The DASH trial showed that a calcium-rich dietary pattern with low-fat dairy substantially lowers blood pressure
 
   - name: Lead Toxicity
     description: |
@@ -541,6 +583,102 @@ disease_associations:
       - 83
       - 84
       - 85
+    evidence:
+      - reference: PMID:19165383
+        supports: SUPPORT
+        snippet: "Calcium supplementation was associated with modest reductions in blood lead when administered during pregnancy and may constitute an important secondary prevention effort to reduce circulating maternal lead and, consequently, fetal exposure"
+        explanation: RCT demonstrating calcium supplementation reduces blood lead levels during pregnancy
+      - reference: PMID:12606887
+        supports: SUPPORT
+        snippet: "Among lactating women with relatively high lead burden, calcium supplementation was associated with a modest reduction in blood lead levels"
+        explanation: RCT showing calcium supplements lower blood lead in lactating women with high bone lead stores
+
+  - name: Prostate Cancer Risk
+    description: |
+      Several observational studies have raised concern that high dairy and calcium intakes
+      are associated with modestly increased risk of prostate cancer. A meta-analysis of 32
+      prospective cohort studies found that high intakes of total dairy products, milk, cheese,
+      and dietary calcium were associated with modest increases in total prostate cancer risk.
+      However, nondairy calcium and supplemental calcium were not associated with increased risk.
+      A randomized clinical trial of calcium supplementation (1,200 mg/day for 4 years) found no
+      increase in prostate cancer risk during 10.3 years of follow-up, and some suggestion of
+      a protective effect in the first 6 years.
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Men with high dairy calcium intakes; not seen with supplemental calcium
+    mic_references:
+      - 136
+      - 137
+      - 138
+      - 139
+      - 140
+      - 141
+      - 142
+      - 150
+      - 151
+      - 152
+    evidence:
+      - reference: PMID:25527754
+        supports: PARTIAL
+        snippet: "High intakes of dairy products, milk, low-fat milk, cheese, and total, dietary, and dairy calcium, but not supplemental or nondairy calcium, may increase total prostate cancer risk. The diverging results for types of dairy products and sources of calcium suggest that other components of dairy rather than fat and calcium may increase prostate cancer risk"
+        explanation: Meta-analysis of 32 cohort studies shows dairy calcium modestly increases prostate cancer risk, but supplemental calcium does not, suggesting non-calcium dairy components may be responsible
+      - reference: PMID:15767334
+        supports: REFUTE
+        snippet: "In this randomized controlled clinical trial, there was no increase in prostate cancer risk associated with calcium supplementation and some suggestion of a protective effect"
+        explanation: RCT of 1,200 mg/day calcium for 4 years found no increased prostate cancer risk and possible protection during the treatment period
+
+  - name: Cardiovascular Disease Risk from Supplements
+    description: |
+      Whether calcium supplements increase cardiovascular disease (CVD) risk has been
+      debated. The Auckland Calcium Study found calcium supplementation in postmenopausal
+      women was associated with increased myocardial infarction risk. A re-analysis of the
+      WHI trial also suggested increased cardiovascular risk. However, larger meta-analyses
+      including the Lewis collaborative meta-analysis of 63,563 postmenopausal women found
+      no increased risk for coronary heart disease or all-cause mortality. The National
+      Osteoporosis Foundation and American Society for Preventive Cardiology concluded that
+      calcium intake within tolerable upper limits is safe from a cardiovascular standpoint.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    population_context: Generally healthy adults taking calcium supplements within tolerable upper intake levels
+    mic_references:
+      - 153
+      - 154
+      - 155
+      - 156
+      - 157
+      - 158
+      - 160
+      - 161
+      - 162
+      - 169
+      - 170
+      - 171
+    evidence:
+      - reference: PMID:18198394
+        supports: SUPPORT
+        snippet: "Calcium supplementation in healthy postmenopausal women is associated with upward trends in cardiovascular event rates. This potentially detrimental effect should be balanced against the likely benefits of calcium on bone"
+        explanation: Auckland study found calcium supplementation associated with increased myocardial infarction risk in postmenopausal women
+      - reference: PMID:21505219
+        supports: SUPPORT
+        snippet: "Calcium supplements with or without vitamin D modestly increase the risk of cardiovascular events, especially myocardial infarction, a finding obscured in the WHI CaD Study by the widespread use of personal calcium supplements"
+        explanation: WHI re-analysis and meta-analysis found calcium supplements modestly increase MI and stroke risk
+      - reference: PMID:25042841
+        supports: REFUTE
+        snippet: "current evidence does not support the hypothesis that calcium supplementation with or without vitamin D increases coronary heart disease or all-cause mortality risk in elderly women"
+        explanation: Collaborative meta-analysis of 18 RCTs with 63,563 participants found no increased CHD or mortality risk
+      - reference: PMID:27776363
+        supports: REFUTE
+        snippet: "Calcium intake within tolerable upper intake levels (2000 to 2500 mg/d) is not associated with CVD risk in generally healthy adults"
+        explanation: Updated systematic review and meta-analysis found no association between calcium intake within UL and CVD risk
 
 recommendations:
   rda:
@@ -631,6 +769,56 @@ references:
     findings:
       - statement: Calcium supplementation is effective for PMS treatment
         supporting_text: "By the third treatment cycle calcium effectively resulted in an overall 48% reduction in total symptom scores"
+  - reference: PMID:25527754
+    title: Dairy products, calcium, and prostate cancer risk - a systematic review and meta-analysis of cohort studies
+    findings:
+      - statement: High dairy calcium but not supplemental calcium associated with increased prostate cancer risk
+        supporting_text: "High intakes of dairy products, milk, low-fat milk, cheese, and total, dietary, and dairy calcium, but not supplemental or nondairy calcium, may increase total prostate cancer risk"
+  - reference: PMID:15767334
+    title: Risk of prostate cancer in a randomized clinical trial of calcium supplementation
+    findings:
+      - statement: Calcium supplementation did not increase prostate cancer risk in RCT
+        supporting_text: "In this randomized controlled clinical trial, there was no increase in prostate cancer risk associated with calcium supplementation and some suggestion of a protective effect"
+  - reference: PMID:18198394
+    title: Vascular events in healthy older women receiving calcium supplementation
+    findings:
+      - statement: Auckland study found calcium supplements associated with increased cardiovascular events
+        supporting_text: "Calcium supplementation in healthy postmenopausal women is associated with upward trends in cardiovascular event rates"
+  - reference: PMID:21505219
+    title: Calcium supplements with or without vitamin D and risk of cardiovascular events - reanalysis of the WHI
+    findings:
+      - statement: WHI re-analysis suggests calcium supplements increase cardiovascular events
+        supporting_text: "Calcium supplements with or without vitamin D modestly increase the risk of cardiovascular events, especially myocardial infarction"
+  - reference: PMID:25042841
+    title: The effects of calcium supplementation on verified coronary heart disease hospitalization and death in postmenopausal women
+    findings:
+      - statement: Meta-analysis of 18 RCTs found no increased CHD or mortality risk from calcium supplements
+        supporting_text: "current evidence does not support the hypothesis that calcium supplementation with or without vitamin D increases coronary heart disease or all-cause mortality risk in elderly women"
+  - reference: PMID:27776363
+    title: Calcium Intake and Cardiovascular Disease Risk - An Updated Systematic Review and Meta-analysis
+    findings:
+      - statement: Calcium within tolerable upper intake levels not associated with CVD risk
+        supporting_text: "Calcium intake within tolerable upper intake levels (2000 to 2500 mg/d) is not associated with CVD risk in generally healthy adults"
+  - reference: PMID:17507729
+    title: Calcium supplementation in clinical practice - a review of forms, doses, and indications
+    findings:
+      - statement: Calcium carbonate and citrate are the most common supplement forms with different absorption characteristics
+        supporting_text: "Calcium carbonate, the most cost-effective form, should be taken with a meal to ensure optimal absorption. Calcium citrate can be taken without food and is the supplement of choice for individuals with achlorhydria"
+  - reference: PMID:19165383
+    title: Effect of calcium supplementation on blood lead levels in pregnancy
+    findings:
+      - statement: Calcium supplementation during pregnancy reduces maternal blood lead levels
+        supporting_text: "Calcium supplementation was associated with modest reductions in blood lead when administered during pregnancy and may constitute an important secondary prevention effort to reduce circulating maternal lead"
+  - reference: PMID:12606887
+    title: Dietary calcium supplements to lower blood lead levels in lactating women
+    findings:
+      - statement: Calcium supplements reduce blood lead in lactating women with high lead burden
+        supporting_text: "Among lactating women with relatively high lead burden, calcium supplementation was associated with a modest reduction in blood lead levels"
+  - reference: PMID:9099655
+    title: A clinical trial of the effects of dietary patterns on blood pressure (DASH trial)
+    findings:
+      - statement: DASH diet rich in low-fat dairy substantially lowers blood pressure
+        supporting_text: "A diet rich in fruits, vegetables, and low-fat dairy foods and with reduced saturated and total fat can substantially lower blood pressure"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

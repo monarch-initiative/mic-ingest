@@ -33,6 +33,10 @@ functions:
         supports: SUPPORT
         snippet: "Vitamin B12 (B12; also known as cobalamin) is a B vitamin that has an important role in cellular metabolism, especially in DNA synthesis, methylation and mitochondrial metabolism"
         explanation: Confirms vitamin B12's role in DNA synthesis and methylation
+      - reference: PMID:22093367
+        supports: SUPPORT
+        snippet: "This activity is compromised when vitamin B12 concentration is low because methionine synthase activity is reduced, lowering the concentration of S-adenosyl methionine (SAM) which in turn may diminish DNA methylation and cause folate to become unavailable for the conversion of dUMP to dTMP"
+        explanation: Demonstrates that low vitamin B12 impairs methionine synthase activity, reducing SAM and disrupting folate-dependent DNA synthesis
 
   - name: Methylmalonyl-CoA Mutase Cofactor
     description: |
@@ -43,6 +47,11 @@ functions:
     mic_references:
       - 3
       - 5
+    evidence:
+      - reference: PMID:28660890
+        supports: SUPPORT
+        snippet: "Vitamin B12 (B12; also known as cobalamin) is a B vitamin that has an important role in cellular metabolism, especially in DNA synthesis, methylation and mitochondrial metabolism"
+        explanation: Confirms vitamin B12's role in mitochondrial metabolism, which includes the methylmalonyl-CoA mutase pathway
 
 deficiency:
   name: Vitamin B12 Deficiency
@@ -65,6 +74,11 @@ deficiency:
       mic_references:
         - 3
         - 20
+      evidence:
+        - reference: PMID:28660890
+          supports: SUPPORT
+          snippet: "Clinical B12 deficiency with classic haematological and neurological manifestations is relatively uncommon. However, subclinical deficiency affects between 2.5% and 26% of the general population depending on the definition used"
+          explanation: Confirms that classic hematological manifestations (including megaloblastic anemia) are the recognized clinical presentation of B12 deficiency
 
     - name: Peripheral Neuropathy
       phenotype_term:
@@ -77,6 +91,11 @@ deficiency:
       mic_references:
         - 13
         - 21
+      evidence:
+        - reference: PMID:19394404
+          supports: SUPPORT
+          snippet: "Glial cells, myelin and the interstitium are the structures of the mammalian central nervous system (CNS) mainly affected by vitamin B(12) (cobalamin, Cbl) deficiency"
+          explanation: Confirms that vitamin B12 deficiency directly damages myelin and neural structures, consistent with peripheral neuropathy presentation
 
     - name: Ataxia
       phenotype_term:
@@ -100,6 +119,11 @@ deficiency:
       mic_references:
         - 13
         - 21
+      evidence:
+        - reference: PMID:27431367
+          supports: SUPPORT
+          snippet: "Moderately elevated plasma total homocysteine (tHcy) is a strong modifiable risk factor for vascular dementia and Alzheimer's disease. Prospectively, elevated tHcy is associated with cognitive decline, white matter damage, brain atrophy, neurofibrillary tangles, and dementia"
+          explanation: Establishes elevated homocysteine (a consequence of B12 deficiency) as a strong risk factor for cognitive decline and dementia
 
     - name: Glossitis
       phenotype_term:
@@ -121,6 +145,11 @@ deficiency:
       mic_references:
         - 7
         - 21
+      evidence:
+        - reference: PMID:23178706
+          supports: SUPPORT
+          snippet: "Whereas malabsorption of vitamin B12 is most commonly seen in the elderly, selective pediatric, nondietary-induced B12 deficiency is generally due to inherited disorders including the Imerslund-Grasbeck syndrome and the much rarer intrinsic factor deficiency"
+          explanation: Confirms that vitamin B12 malabsorption is most commonly seen in the elderly population
 
     - name: Strict Vegetarians and Vegans
       description: |
@@ -131,6 +160,11 @@ deficiency:
         - 125
         - 127
         - 128
+      evidence:
+        - reference: PMID:23356638
+          supports: SUPPORT
+          snippet: "The main finding of this review is that vegetarians develop B12 depletion or deficiency regardless of demographic characteristics, place of residency, age, or type of vegetarian diet. Vegetarians should thus take preventive measures to ensure adequate intake of this vitamin, including regular consumption of supplements containing B12"
+          explanation: Systematic review confirming that vegetarians develop B12 deficiency regardless of demographics, supporting the recommendation for supplementation
 
     - name: Individuals with Pernicious Anemia
       description: |
@@ -169,6 +203,15 @@ disease_associations:
     mic_references:
       - 10
       - 21
+    evidence:
+      - reference: PMID:21296191
+        supports: SUPPORT
+        snippet: "Pernicious anemia (PA) is a complex, autoimmune, multi-factorial disease"
+        explanation: Confirms the autoimmune nature of pernicious anemia
+      - reference: PMID:23178706
+        supports: SUPPORT
+        snippet: "Under physiological conditions, vitamin B12 bound to the gastric intrinsic factor is internalized in the ileum by a highly specific receptor complex composed by Cubilin (Cubn) and Amnionless (Amn)"
+        explanation: Describes the intrinsic factor-dependent absorption mechanism that is disrupted in pernicious anemia
 
   - name: Neural Tube Defects
     disease_term:
@@ -186,6 +229,15 @@ disease_associations:
     mic_references:
       - 41
       - 42
+    evidence:
+      - reference: PMID:33851436
+        supports: SUPPORT
+        snippet: "The available data showed that vitamin B12 levels were decreased in mothers and infants in NTD groups compared with control groups. Holo-transcobalamin, the active form of vitamin B12, was also found in lower levels in mothers with NTD-affected infants"
+        explanation: Systematic review confirming that vitamin B12 levels are lower in mothers and infants in NTD groups compared with controls
+      - reference: PMID:29377209
+        supports: SUPPORT
+        snippet: "There is a strong biological premise for including vitamin B12 with folic acid in strategies to prevent neural tube defects (NTDs), due to the closely interlinked metabolism of these two vitamins"
+        explanation: Provides biological rationale for vitamin B12's role in NTD prevention through its metabolic interaction with folate
 
   - name: Cardiovascular Disease (Homocysteine)
     disease_term:
@@ -204,6 +256,46 @@ disease_associations:
       - 24
       - 25
       - 26
+    evidence:
+      - reference: PMID:29979619
+        supports: PARTIAL
+        snippet: "Hyperhomocysteinemia has been considered as a risk factor for systemic atherosclerosis, cardiovascular disease (CVD) and stroke and many epidemiologic and case-controlled studies have demonstrated its association with these complications. In addition, treatment of hyperhomocysteinemia with folic acid +/- B vitamins prevents the development of atherosclerosis, CVD and strokes. However, subsequent prospective, randomized, placebo-controlled trials have not shown an association of high homocysteine levels or their lowering with treatment with the incidence of atherosclerosis, CVD or strokes"
+        explanation: Highlights the controversy - epidemiological studies show homocysteine as a CVD risk factor, but randomized trials have not confirmed that lowering homocysteine reduces CVD events
+      - reference: PMID:28816346
+        supports: PARTIAL
+        snippet: "Compared with placebo, there were no differences in effects of homocysteine-lowering interventions on myocardial infarction (homocysteine-lowering = 7.1% versus placebo = 6.0%; RR 1.02, 95% confidence interval (CI) 0.95 to 1.10, I2 = 0%, 12 trials; N = 46,699; Bayes factor 1.04, high-quality evidence)"
+        explanation: Cochrane review of 15 RCTs found no effect of B-vitamin homocysteine-lowering on myocardial infarction, though a small reduction in stroke risk was observed
+
+  - name: Alzheimer's Disease and Cognitive Decline
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Elderly individuals
+    description: |
+      Vitamin B12 deficiency is associated with elevated homocysteine, which is
+      a recognized risk factor for cognitive decline, brain atrophy, and
+      Alzheimer's disease. Low vitamin B12 status has been associated with
+      increased rate of brain volume loss in the elderly. B-vitamin
+      supplementation slows brain atrophy in subjects with mild cognitive
+      impairment, though direct evidence for prevention of dementia is limited.
+    mic_references:
+      - 66
+      - 87
+      - 91
+      - 92
+    evidence:
+      - reference: PMID:27431367
+        supports: SUPPORT
+        snippet: "Moderately elevated plasma total homocysteine (tHcy) is a strong modifiable risk factor for vascular dementia and Alzheimer's disease. Prospectively, elevated tHcy is associated with cognitive decline, white matter damage, brain atrophy, neurofibrillary tangles, and dementia"
+        explanation: Review establishing elevated homocysteine as a strong modifiable risk factor for Alzheimer's disease and cognitive decline
+      - reference: PMID:18779510
+        supports: SUPPORT
+        snippet: "The decrease in brain volume was greater among those with lower vitamin B(12) and holoTC levels and higher plasma tHcy and MMA levels at baseline"
+        explanation: Prospective study showing that low vitamin B12 status is directly associated with greater brain volume loss over 5 years in community-dwelling elderly
 
 food_sources:
   - name: Clams (steamed)

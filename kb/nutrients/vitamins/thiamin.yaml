@@ -61,6 +61,11 @@ functions:
       - 4
       - 5
       - 6
+    evidence:
+      - reference: PMID:12592403
+        supports: SUPPORT
+        snippet: "the lipid-soluble thiamine derivative benfotiamine can inhibit these three pathways, as well as hyperglycemia-associated NF-kappaB activation, by activating the pentose phosphate pathway enzyme transketolase, which converts glyceraldehyde-3-phosphate and fructose-6-phosphate into pentose-5-phosphates and other sugars"
+        explanation: Confirms that transketolase is a thiamine-dependent pentose phosphate pathway enzyme that converts glycolytic metabolites into pentose-5-phosphates
 
 deficiency:
   name: Beriberi
@@ -71,6 +76,15 @@ deficiency:
     gastrointestinal forms depending on the systems affected. Thiamin deficiency
     can result from inadequate intake, increased requirements, excessive loss,
     or consumption of anti-thiamin factors in food.
+  evidence:
+    - reference: PMID:30644592
+      supports: SUPPORT
+      snippet: "In adults, thiamin deficiency presents as encephalopathy, dry beriberi (with neurological signs and symptoms), or wet beriberi (with cardiovascular signs and symptoms)"
+      explanation: Confirms the clinical presentation of thiamin deficiency as dry beriberi (neurological) and wet beriberi (cardiovascular)
+    - reference: PMID:30151974
+      supports: SUPPORT
+      snippet: "Many populations worldwide may be at risk of clinical or subclinical thiamine deficiencies, due to famine, reliance on staple crops with low thiamine content, or food preparation practices, such as milling grains and washing milled rice"
+      explanation: Supports that thiamin deficiency can result from inadequate dietary intake patterns including reliance on low-thiamin staple crops
   phenotypes:
     - name: Peripheral Neuropathy (Dry Beriberi)
       phenotype_term:
@@ -129,6 +143,11 @@ deficiency:
         - 11
         - 132
         - 133
+      evidence:
+        - reference: PMID:20448146
+          supports: SUPPORT
+          snippet: "chronic alcohol feeding to rats led to a significant inhibition in carrier-mediated thiamin transport across both the jejunal brush-border membrane and basolateral membrane domains. This was associated with a significant reduction in level of expression of thiamin transporter-1 (THTR-1), but not THTR-2, at the protein and mRNA levels"
+          explanation: Demonstrates the molecular mechanism by which chronic alcohol consumption inhibits intestinal thiamin absorption through reduced expression of thiamin transporters
 
     - name: Individuals with Malabsorption
       description: |
@@ -213,10 +232,18 @@ disease_associations:
       - 12
       - 13
     evidence:
-      - reference: PMID:30151974
+      - reference: PMID:30281514
         supports: SUPPORT
-        snippet: "Clinical manifestations of thiamine deficiency are variable"
-        explanation: Supports that thiamin deficiency causes variable clinical manifestations including neurological complications
+        snippet: "Wernicke encephalopathy (WE) and Korsakoff psychosis (KP), together termed Wernicke-Korsakoff syndrome (WKS), are distinct yet overlapping neuropsychiatric disorders associated with thiamine deficiency. Thiamine pyrophosphate, the biologically active form of thiamine, is essential for multiple biochemical pathways involved in carbohydrate utilization"
+        explanation: Confirms WE and KP are neuropsychiatric disorders caused by thiamine deficiency and establishes them as overlapping conditions
+      - reference: PMID:23333339
+        supports: SUPPORT
+        snippet: "Thiamine (vitamin B1) deficiency, the underlying cause of Wernicke-Korsakoff syndrome, is associated with the development of focal neuronal loss in vulnerable areas of the brain"
+        explanation: Confirms thiamine deficiency as the underlying cause of WKS and links it to focal neuronal loss
+      - reference: PMID:30281514
+        supports: SUPPORT
+        snippet: "Both genetic susceptibilities and acquired deficiencies as a result of alcoholic and non-alcoholic factors are associated with thiamine deficiency or its impaired utilization. WKS is underdiagnosed because of the inconsistent clinical presentation and overlapping of symptoms with other neurological conditions"
+        explanation: Supports that WKS occurs in both alcoholic and non-alcoholic contexts and is often underdiagnosed
 
   - name: Congestive Heart Failure
     disease_term:
@@ -239,6 +266,15 @@ disease_associations:
       - 80
       - 82
       - 83
+    evidence:
+      - reference: PMID:16412860
+        supports: SUPPORT
+        snippet: "Thiamin deficiency was more prevalent in CHF patients (33%) compared to control subjects (12%) (p = 0.007). Thiamin deficiency was related to urine thiamin loss (p = 0.03), non-use of thiamin-containing supplements (p = 0.06), and preserved renal function (p = 0.05)"
+        explanation: Demonstrates that one-third of hospitalized CHF patients were thiamin deficient, and increased urinary losses contribute to deficiency
+      - reference: PMID:26497757
+        supports: SUPPORT
+        snippet: "TD is more common in HF patients than control subjects (odds ratio 2.53, 95% confidence interval 1.65-3.87). Diuretic use, changes in dietary habits, and altered thiamine absorption and metabolism were identified as possible mechanisms of TD in HF patients"
+        explanation: Meta-analysis confirming 2.5-fold higher risk of thiamin deficiency in heart failure patients, consistent with the YAML description
 
   - name: Alzheimer's Disease
     disease_term:
@@ -263,6 +299,52 @@ disease_associations:
       - 71
       - 72
       - 73
+    evidence:
+      - reference: PMID:22982063
+        supports: SUPPORT
+        snippet: "Thiamine-dependent processes are critical in glucose metabolism and are diminished in brains of AD patients at autopsy. Further, the reductions in thiamine-dependent processes are highly correlated to the decline in clinical dementia rating scales"
+        explanation: Establishes that thiamine-dependent enzyme activity is reduced in AD brains and correlates with cognitive decline severity
+      - reference: PMID:26971083
+        supports: SUPPORT
+        snippet: "In preclinical models, reduced thiamine can drive AD-like abnormalities, including memory deficits, neuritic plaques, and hyperphosphorylation of tau. Furthermore, excess thiamine diminishes AD-like pathologies"
+        explanation: Shows that thiamine deficiency exacerbates AD-like pathology in animal models while thiamine supplementation reduces it
+      - reference: PMID:33074237
+        supports: PARTIAL
+        snippet: "The increase in ADAS-Cog was 43% lower in the benfotiamine group than in the placebo group, indicating less cognitive decline, and this effect was nearly statistically significant (p = 0.125). Worsening in CDR was 77% lower (p = 0.034) in the benfotiamine group compared to the placebo group"
+        explanation: Phase IIa RCT showed benfotiamine slowed clinical decline on CDR but the primary cognitive endpoint did not reach statistical significance, supporting the description that evidence is limited
+
+  - name: Diabetes Mellitus and Vascular Complications
+    disease_term:
+      preferred_term: diabetes mellitus
+      term:
+        id: MONDO:0005015
+        label: diabetes mellitus
+    relationship_type: THERAPEUTIC
+    population_context: Type 1 and type 2 diabetic patients with vascular complications
+    description: |
+      Patients with type 1 and type 2 diabetes have markedly reduced plasma
+      thiamin concentrations due to increased renal clearance. Thiamin deficiency
+      may contribute to vascular complications of diabetes. In animal models,
+      benfotiamine blocks major pathways of hyperglycemic damage. A pilot RCT
+      showed high-dose thiamin reduced microalbuminuria in type 2 diabetic
+      patients.
+    mic_references:
+      - 40
+      - 42
+      - 45
+      - 46
+      - 87
+      - 88
+      - 89
+    evidence:
+      - reference: PMID:17676306
+        supports: SUPPORT
+        snippet: "Plasma thiamine concentration was decreased 76% in type 1 diabetic patients and 75% in type 2 diabetic patients"
+        explanation: Demonstrates the high prevalence of low plasma thiamine in both type 1 and type 2 diabetes
+      - reference: PMID:19057893
+        supports: SUPPORT
+        snippet: "In this pilot study, high-dose thiamine therapy produced a regression of UAE in type 2 diabetic patients with microalbuminuria. Thiamine supplements at high dose may provide improved therapy for early-stage diabetic nephropathy"
+        explanation: Pilot RCT showing that high-dose thiamine can reduce urinary albumin excretion in type 2 diabetic patients with microalbuminuria
 
 food_sources:
   - name: Pork (lean, roasted)
