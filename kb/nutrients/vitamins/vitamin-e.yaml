@@ -53,6 +53,11 @@ functions:
           label: lipoprotein metabolic process
     mic_references:
       - 4
+    evidence:
+      - reference: PMID:25537066
+        supports: SUPPORT
+        snippet: "Oxidized low-density lipoprotein (OxLDL) plays an important role in atherogenesis by promoting an inflammatory environment and lipid deposition in the arterial wall"
+        explanation: Confirms that oxidized LDL promotes atherosclerosis, supporting the importance of alpha-tocopherol's role in protecting LDL from oxidation
 
   - name: Cell-Mediated Immunity
     description: |
@@ -72,6 +77,10 @@ functions:
         supports: SUPPORT
         snippet: "Our results indicate that a level of vitamin E greater than currently recommended enhances certain clinically relevant in vivo indexes of T-cell-mediated function in healthy elderly persons"
         explanation: Clinical trial demonstrating vitamin E enhancement of T cell immunity
+      - reference: PMID:17237392
+        supports: SUPPORT
+        snippet: "Vitamin E increased the percentage of old CD4(+) T cells capable of forming an effective immune synapse"
+        explanation: Demonstrates molecular mechanism by which vitamin E restores age-related decline in T cell immune synapse formation
 
 deficiency:
   name: Vitamin E Deficiency
@@ -198,6 +207,10 @@ disease_associations:
         supports: SUPPORT
         snippet: "Subjects consuming 200 mg/d of vitamin E had a 65% increase in DTH and a 6-fold increase in antibody titer to hepatitis B compared with placebo"
         explanation: Shows improved immune response with vitamin E supplementation in elderly
+      - reference: PMID:25244230
+        supports: SUPPORT
+        snippet: "vitamin E supplementation has been shown to be associated with both enhanced resistance to influenza infection in aged mice and reduced risk of acquiring upper respiratory infections in elderly human subjects"
+        explanation: Review summarizing clinical evidence that vitamin E supplementation reduces infection risk in the elderly
 
 toxicity:
   name: Vitamin E Toxicity

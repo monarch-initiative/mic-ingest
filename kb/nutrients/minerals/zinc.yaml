@@ -26,6 +26,11 @@ functions:
       (stabilizing the structure of catalytic enzymes).
     biological_processes:
       - preferred_term: enzyme activity
+    evidence:
+      - reference: PMID:16396512
+        supports: SUPPORT
+        snippet: "it can be proposed that ca. 2800 human proteins are potentially zinc-binding in vivo, corresponding to 10% of the human proteome, with an uncertainty of 400 sequences"
+        explanation: Bioinformatic analysis confirming that approximately 2800 human proteins (10% of the proteome) are zinc-binding, underscoring zinc's vast catalytic and structural importance.
     mic_references:
       - 7
       - 8

@@ -356,6 +356,18 @@ disease_associations:
         supports: SUPPORT
         snippet: "Compared with the lowest magnesium consumption group in the population, the risk of T2D was reduced by 17% across all the studies; 19% in women and 16% in men"
         explanation: Meta-analysis of 25 prospective cohort studies confirms 17% reduction in T2D risk with highest vs lowest magnesium intake
+      - reference: PMID:21205110
+        supports: SUPPORT
+        snippet: "Mg supplementation resulted in a significant improvement of fasting plasma glucose and some insulin sensitivity indices (ISIs) compared to placebo"
+        explanation: Double-blind RCT showing oral magnesium supplementation improves insulin sensitivity even in normomagnesemic overweight non-diabetic subjects
+      - reference: PMID:21241290
+        supports: SUPPORT
+        snippet: "MgCl(2) 2.5 g daily improves the ability of beta-cells to compensate for variations in insulin sensitivity in non-diabetic individuals with significant hypomagnesaemia"
+        explanation: Randomized double-blind clinical trial demonstrating magnesium chloride supplementation improves pancreatic beta-cell function in hypomagnesemic individuals
+      - reference: PMID:34836329
+        supports: SUPPORT
+        snippet: "Mg supplementation may improve insulin-sensitivity parameters in those at high risk of diabetes"
+        explanation: Systematic review and meta-analysis of double-blind RCTs confirming magnesium supplementation improves glucose parameters in people with diabetes and insulin sensitivity in those at high risk
 
   - name: Hypertension
     description: |

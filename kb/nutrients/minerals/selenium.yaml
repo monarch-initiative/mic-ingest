@@ -58,6 +58,11 @@ functions:
         term:
           id: GO:0006590
           label: thyroid hormone generation
+    evidence:
+      - reference: PMID:22009156
+        supports: SUPPORT
+        snippet: "Among the well-characterized selenoproteins are the iodothyronine deiodinases, glutathione peroxidases and thioredoxin reductases, enzymes involved in thyroid hormone metabolism, regulation of redox state and protection from oxidative damage."
+        explanation: Review confirms iodothyronine deiodinases are well-characterized selenoproteins involved in thyroid hormone metabolism.
     mic_references:
       - 10
       - 11

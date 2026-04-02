@@ -40,6 +40,14 @@ functions:
         supports: SUPPORT
         snippet: "Along with coagulation factors (II, VII, IX, X, and prothrombin), protein C and protein S, osteocalcin (OC), matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis"
         explanation: Describes vitamin K-dependent clotting factors
+      - reference: PMID:23918929
+        supports: SUPPORT
+        snippet: "The vitamin K oxidoreductase (VKORC1) recycles vitamin K to support the activation of vitamin K-dependent (VKD) proteins, which have diverse functions that include hemostasis and calcification. VKD proteins are activated by Glu carboxylation, which depends upon the oxygenation of vitamin K hydroquinone (KH2)."
+        explanation: Confirms the vitamin K recycling cycle that enables carboxylation of coagulation factors
+      - reference: PMID:21239697
+        supports: SUPPORT
+        snippet: "the primary function of VKOR is the reduction of KO to vitamin K"
+        explanation: Establishes the vitamin K epoxide reductase function in the vitamin K cycle essential for coagulation
 
   - name: Bone Metabolism
     description: |
