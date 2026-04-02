@@ -30,6 +30,11 @@ disease_associations:
       disease and ischemic stroke. This may be partly due to effects on HDL cholesterol,
       fibrinolysis, and platelet aggregation.
     population_context: adults with moderate consumption
+    evidence:
+      - reference: PMID:21343207
+        supports: SUPPORT
+        snippet: "Light to moderate alcohol consumption is associated with a reduced risk of multiple cardiovascular outcomes."
+        explanation: Systematic review and meta-analysis of 84 studies found pooled adjusted RR of 0.75 for cardiovascular disease mortality and 0.71 for incident coronary heart disease among alcohol drinkers vs non-drinkers.
     mic_references:
       - 16
       - 17
@@ -74,6 +79,11 @@ disease_associations:
       Even moderate alcohol consumption may increase the risk of female breast cancer.
       Risk increases with higher levels of consumption.
     population_context: women
+    evidence:
+      - reference: PMID:9480365
+        supports: SUPPORT
+        snippet: "Alcohol consumption is associated with a linear increase in breast cancer incidence in women over the range of consumption reported by most women."
+        explanation: Pooled analysis of 6 prospective cohort studies with 322,647 women found a multivariate-adjusted RR of 1.41 for alcohol intakes of 30-60 g/d vs nondrinkers, demonstrating a dose-response relationship between alcohol and breast cancer.
     mic_references:
       - 41
       - 42
@@ -130,6 +140,12 @@ recommendations:
     sure they also consume adequate folate by taking a daily multivitamin that provides
     400 μg of folic acid. Anyone planning to drive, operate heavy machinery, or perform
     other potentially hazardous activities should not consume alcohol.
+
+references:
+  - reference: PMID:21343207
+    title: "Association of alcohol consumption with selected cardiovascular disease outcomes: a systematic review and meta-analysis"
+  - reference: PMID:9480365
+    title: "Alcohol and breast cancer in women: a pooled analysis of cohort studies"
 
 notes: |
   There is no recommendation to start drinking alcohol for health benefits if one does

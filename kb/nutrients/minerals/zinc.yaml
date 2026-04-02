@@ -345,6 +345,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Children with zinc deficiency, especially in developing countries
+    evidence:
+      - reference: PMID:15189121
+        supports: SUPPORT
+        snippet: "Zinc supplementation has been shown to have a positive effect on the incidence of diarrhea (18% reduction, 95% CI: 7-28%) and pneumonia (41% reduction, 95% CI: 17-59%), and might lead to a decrease in the incidence of malaria"
+        explanation: Review of zinc supplementation trials showing significant reductions in childhood diarrhea and pneumonia incidence.
     mic_references:
       - 66
       - 70
@@ -366,6 +371,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: General population; evidence mixed across studies
+    evidence:
+      - reference: PMID:29373583
+        supports: SUPPORT
+        snippet: "Zinc acts as an insulin mimetic, activating key molecules implicated in cell signaling to maintain glucose homeostasis in mouse and human skeletal muscle cells"
+        explanation: Mechanistic evidence that zinc mimics insulin signaling, supporting the biological plausibility of zinc's role in glucose metabolism and T2D risk.
     mic_references:
       - 15
       - 94
@@ -463,7 +473,11 @@ bioavailability:
   mic_references:
     - 174
 
-references: []
+references:
+  - reference: PMID:15189121
+    title: "Zinc and the risk for infectious disease"
+  - reference: PMID:29373583
+    title: "Zinc and diabetes mellitus"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

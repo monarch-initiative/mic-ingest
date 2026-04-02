@@ -298,6 +298,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: General population
+    evidence:
+      - reference: PMID:23558164
+        supports: SUPPORT
+        snippet: "Higher potassium intake was associated with a 24% lower risk of stroke (moderate quality evidence)."
+        explanation: WHO-commissioned systematic review and meta-analysis of 11 cohort studies demonstrating significant inverse association between potassium intake and stroke risk.
     mic_references:
       - 12
       - 16
@@ -318,6 +323,11 @@ disease_associations:
         label: essential hypertension
     relationship_type: THERAPEUTIC
     population_context: General population, especially those with hypertension
+    evidence:
+      - reference: PMID:23558164
+        supports: SUPPORT
+        snippet: "Increased potassium intake reduced systolic blood pressure by 3.49 (95% confidence interval 1.82 to 5.15) mm Hg and diastolic blood pressure by 1.96 (0.86 to 3.06) mm Hg in adults, an effect seen in people with hypertension but not in those without hypertension."
+        explanation: WHO-commissioned systematic review and meta-analysis of 22 RCTs showing potassium intake significantly reduces blood pressure in hypertensive adults.
     mic_references:
       - 33
       - 34
@@ -418,7 +428,12 @@ bioavailability:
   mic_references:
     - 9
 
-references: []
+references:
+  - reference: PMID:23558164
+    title: "Effect of increased potassium intake on cardiovascular risk factors and disease: systematic review and meta-analyses"
+    findings:
+      - statement: Increased potassium intake reduces blood pressure and stroke risk
+        supporting_text: "Higher potassium intake was associated with a 24% lower risk of stroke (moderate quality evidence)."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

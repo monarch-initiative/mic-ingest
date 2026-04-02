@@ -239,6 +239,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: General population, especially salt-sensitive individuals
+    evidence:
+      - reference: PMID:20226955
+        supports: SUPPORT
+        snippet: "There is overwhelming evidence that dietary salt is the major cause of raised blood pressure and that a reduction in salt intake lowers blood pressure, thereby, reducing blood pressure-related diseases"
+        explanation: Comprehensive review confirming causal relationship between dietary salt and hypertension.
     mic_references:
       - 27
       - 28
@@ -262,6 +267,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Those with excess sodium intake or salt sensitivity
+    evidence:
+      - reference: PMID:26298426
+        supports: SUPPORT
+        snippet: "Mild hyponatremia even within the normal sodium range and hypernatremia are both associated with increased total mortality and major CVD events in older men without CVD which is not explained by known adverse CV risk factors"
+        explanation: Prospective cohort study demonstrating a U-shaped relationship between serum sodium and cardiovascular events.
     mic_references:
       - 16
       - 38
@@ -365,7 +375,11 @@ bioavailability:
     - 21
     - 22
 
-references: []
+references:
+  - reference: PMID:20226955
+    title: "Reducing population salt intake worldwide: from evidence to implementation"
+  - reference: PMID:26298426
+    title: "Mild hyponatremia, hypernatremia and incident cardiovascular disease and mortality in older men"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

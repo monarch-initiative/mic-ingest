@@ -96,6 +96,11 @@ disease_associations:
       Meta-analyses indicate garlic supplementation produces modest reductions
       in blood pressure: approximately 9 mm Hg systolic and 4-6 mm Hg diastolic
       in hypertensive patients.
+    evidence:
+      - reference: PMID:25239480
+        supports: SUPPORT
+        snippet: "Systolic BP and diastolic BP (SBP and DBP) were more effectively reduced in individuals treated with garlic preparations than in individuals treated with placebo"
+        explanation: Meta-analysis of 9 RCTs in hypertensive patients confirms garlic lowers blood pressure vs placebo.
     mic_references:
       - 102
       - 106
@@ -123,6 +128,11 @@ disease_associations:
       A major randomized trial found aged garlic extract supplementation did
       not reduce the prevalence of precancerous gastric lesions or incidence
       of gastric cancer.
+    evidence:
+      - reference: PMID:16849680
+        supports: REFUTE
+        snippet: "No statistically significant favorable effects were seen for garlic or vitamin supplements"
+        explanation: Large randomized trial (3365 subjects, 7.3 years) found garlic supplementation did not reduce precancerous gastric lesions or gastric cancer incidence.
     mic_references:
       - 85
     notes: "Current evidence does not support garlic for cancer prevention"
@@ -161,6 +171,12 @@ recommendations:
     healthcare providers before using garlic supplements. Crushing garlic
     and allowing it to stand for 10 minutes prior to cooking preserves
     some bioactive compounds.
+
+references:
+  - reference: PMID:25239480
+    title: "A systematic review and metaanalysis on the effects of garlic preparations on blood pressure in individuals with hypertension"
+  - reference: PMID:16849680
+    title: "Randomized double-blind factorial trial of three treatments to reduce the prevalence of precancerous gastric lesions"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

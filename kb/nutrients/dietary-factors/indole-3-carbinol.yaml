@@ -84,6 +84,11 @@ disease_associations:
       Preliminary trials suggest I3C may help cervical intraepithelial neoplasia
       (CIN) and recurrent respiratory papillomatosis, though results remain
       inconclusive.
+    evidence:
+      - reference: PMID:10926790
+        supports: SUPPORT
+        snippet: "There was a statistically significant regression of CIN in patients treated with I-3-C orally compared with placebo"
+        explanation: Placebo-controlled trial showed complete CIN regression in 4/8 patients at 200 mg/day and 4/9 at 400 mg/day vs 0/10 placebo.
     mic_references:
       - 75
       - 87
@@ -105,6 +110,10 @@ recommendations:
     safety and potential tumor-promoting effects under certain conditions, experts
     caution against widespread I3C supplementation. Consuming cruciferous vegetables
     as part of a balanced diet is the safest approach.
+
+references:
+  - reference: PMID:10926790
+    title: "Placebo-controlled trial of indole-3-carbinol in the treatment of CIN"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

@@ -104,6 +104,11 @@ disease_associations:
       effect of isothiocyanates against cancer in humans is scarce. High
       cruciferous vegetable intake shows associations with lower cancer
       risk in some observational studies, but causation remains unclear.
+    evidence:
+      - reference: PMID:26951845
+        supports: PARTIAL
+        snippet: "Overall, the NNK metabolic activation ratio was reduced by 7.7% with PEITC treatment (P = 0.023)"
+        explanation: Clinical trial showed PEITC modestly inhibited metabolic activation of a tobacco-specific lung carcinogen in smokers, providing limited human evidence for cancer-preventive potential.
     mic_references:
       - 59
       - 60
@@ -116,6 +121,10 @@ recommendations:
     Chopping, chewing, or lightly cooking vegetables allows myrosinase to
     convert glucosinolates to isothiocyanates. Broccoli sprouts are a
     particularly rich source of glucoraphanin/sulforaphane.
+
+references:
+  - reference: PMID:26951845
+    title: "Clinical Trial of 2-Phenethyl Isothiocyanate as an Inhibitor of Metabolic Activation of a Tobacco-Specific Lung Carcinogen in Cigarette Smokers"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

@@ -162,6 +162,11 @@ disease_associations:
         label: dental caries
     relationship_type: PROTECTIVE
     population_context: All ages
+    evidence:
+      - reference: PMID:26092033
+        supports: SUPPORT
+        snippet: "The results from the caries severity data indicate that the initiation of water fluoridation results in reductions in dmft of 1.81 (95% CI 1.31 to 2.31; 9 studies at high risk of bias, 44,268 participants) and in DMFT of 1.16 (95% CI 0.72 to 1.61; 10 studies at high risk of bias, 78,764 participants)."
+        explanation: Cochrane systematic review of 155 studies demonstrating that water fluoridation reduces dental caries severity by 26-35% in deciduous and permanent dentition.
     mic_references:
       - 6
       - 7
@@ -247,7 +252,12 @@ bioavailability:
     - 2
     - 3
 
-references: []
+references:
+  - reference: PMID:26092033
+    title: "Water fluoridation for the prevention of dental caries"
+    findings:
+      - statement: Water fluoridation reduces dental caries in children
+        supporting_text: "The results from the caries severity data indicate that the initiation of water fluoridation results in reductions in dmft of 1.81 (95% CI 1.31 to 2.31; 9 studies at high risk of bias, 44,268 participants) and in DMFT of 1.16 (95% CI 0.72 to 1.61; 10 studies at high risk of bias, 78,764 participants)."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

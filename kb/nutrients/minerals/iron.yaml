@@ -323,6 +323,11 @@ disease_associations:
         label: iron deficiency anemia
     relationship_type: DEFICIENCY_CAUSES
     population_context: Global public health concern
+    evidence:
+      - reference: PMID:20923825
+        supports: SUPPORT
+        snippet: "iron-deficiency anemia and iron deficiency without anemia during infancy and childhood can have long-lasting detrimental effects on neurodevelopment"
+        explanation: AAP clinical report confirms that iron deficiency anemia has significant health consequences, supporting the causal relationship between iron deficiency and anemia.
     mic_references:
       - 14
       - 15
@@ -338,6 +343,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Children, especially during first years of life
+    evidence:
+      - reference: PMID:20923825
+        supports: SUPPORT
+        snippet: "iron-deficiency anemia and iron deficiency without anemia during infancy and childhood can have long-lasting detrimental effects on neurodevelopment"
+        explanation: AAP clinical report confirms that iron deficiency during infancy and childhood has lasting detrimental effects on neurodevelopment.
     mic_references:
       - 38
       - 39
@@ -418,7 +428,9 @@ bioavailability:
     - 49
     - 50
 
-references: []
+references:
+  - reference: PMID:20923825
+    title: "Diagnosis and prevention of iron deficiency and iron-deficiency anemia in infants and young children (0-3 years of age)"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

@@ -124,6 +124,11 @@ disease_associations:
       with dose-dependent responses up to 12.4% reduction at 3.3 g/day.
       However, the effect of long-term use on cardiovascular events
       has not been established in clinical endpoint trials.
+    evidence:
+      - reference: PMID:10357732
+        supports: SUPPORT
+        snippet: "LDL-cholesterol concentrations on day 30 had decreased by 8.9% (P < 0.01) and 24.4% (P < 0.001) with the control and phytosterol-enriched diets, respectively"
+        explanation: Controlled trial in hypercholesterolemic men showed phytosterol-enriched diet reduced LDL-cholesterol significantly more than control diet.
     mic_references:
       - 22
       - 23
@@ -138,6 +143,11 @@ disease_associations:
       Clinical trials suggest β-sitosterol supplementation at 60-130 mg/day
       can improve urinary tract symptoms related to BPH, including peak
       urinary flow and post-void residual urine volume.
+    evidence:
+      - reference: PMID:7540705
+        supports: SUPPORT
+        snippet: "Significant improvement in symptoms and urinary flow parameters show the effectiveness of beta-sitosterol in the treatment of benign prostatic hyperplasia"
+        explanation: Randomized placebo-controlled trial of 200 BPH patients showed beta-sitosterol significantly improved symptom scores and urinary flow.
     mic_references:
       - 58
       - 59
@@ -174,6 +184,12 @@ recommendations:
     low-saturated-fat diet. The European Committee recommends intake not
     exceed 3 g/day. Phytosterol-enriched foods are not recommended for
     pregnant or breastfeeding women due to lack of safety data.
+
+references:
+  - reference: PMID:10357732
+    title: "Cholesterol-lowering efficacy of a sitostanol-containing phytosterol mixture with a prudent diet in hyperlipidemic men"
+  - reference: PMID:7540705
+    title: "Randomised, placebo-controlled, double-blind clinical trial of beta-sitosterol in patients with benign prostatic hyperplasia"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

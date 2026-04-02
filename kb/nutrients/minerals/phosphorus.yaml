@@ -311,6 +311,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: Both general population and those with kidney disease
+    evidence:
+      - reference: PMID:17502528
+        supports: SUPPORT
+        snippet: "Higher serum phosphorus levels are associated with an increased CVD risk in individuals free of CKD and CVD in the community."
+        explanation: Prospective Framingham Offspring study of 3,368 participants showing that higher serum phosphorus is associated with 1.55-fold increased cardiovascular disease risk in the highest quartile, even in individuals without CKD.
     mic_references:
       - 16
       - 17
@@ -332,6 +337,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: INCREASED
     population_context: General population; accelerated progression in those with CKD
+    evidence:
+      - reference: PMID:23719553
+        supports: SUPPORT
+        snippet: "large epidemiologic studies suggest that mild elevations of serum phosphate within the normal range are associated with cardiovascular disease (CVD) risk in healthy populations without evidence of kidney disease."
+        explanation: Review demonstrating that excess dietary phosphorus disrupts hormonal regulation of phosphate and calcium, contributing to vascular calcification, impaired kidney function, and bone loss.
     mic_references:
       - 9
       - 15
@@ -412,7 +422,17 @@ bioavailability:
     - 7
     - 8
 
-references: []
+references:
+  - reference: PMID:17502528
+    title: "Relations of serum phosphorus and calcium levels to the incidence of cardiovascular disease in the community"
+    findings:
+      - statement: Higher serum phosphorus is associated with increased cardiovascular disease risk
+        supporting_text: "Higher serum phosphorus levels are associated with an increased CVD risk in individuals free of CKD and CVD in the community."
+  - reference: PMID:23719553
+    title: "Public health impact of dietary phosphorus excess on bone and cardiovascular health in the general population"
+    findings:
+      - statement: Excess dietary phosphorus is associated with vascular calcification and kidney dysfunction
+        supporting_text: "large epidemiologic studies suggest that mild elevations of serum phosphate within the normal range are associated with cardiovascular disease (CVD) risk in healthy populations without evidence of kidney disease."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

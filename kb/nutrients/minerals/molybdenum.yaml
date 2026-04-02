@@ -232,6 +232,11 @@ disease_associations:
       preferred_term: molybdenum cofactor deficiency
     relationship_type: DEFICIENCY_CAUSES
     population_context: Inherited autosomal recessive disorder
+    evidence:
+      - reference: PMID:21031595
+        supports: SUPPORT
+        snippet: "Mutations in the genes encoding the biosynthetic MoCo pathway enzymes abrogate the activities of all molybdoenzymes and result in the \"combined\" form of MoCo deficiency, which is clinically very similar to isolated sulfite oxidase deficiency, caused by mutations in the gene for the corresponding apoenzyme."
+        explanation: Comprehensive review of MoCo deficiency mutations in MOCS1 (type A) and MOCS2 (type B) genes, confirming that these defects result in progressive neurological damage and early childhood death.
     mic_references:
       - 28
       - 30
@@ -255,6 +260,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: Populations in molybdenum-deficient soil regions; evidence mixed
+    evidence:
+      - reference: PMID:18588371
+        supports: SUPPORT
+        snippet: "Both molybdenum and Zinc were significantly (P<0.01) lower in the Sari control group (molybdenum: 0.472 ppm, zinc: 173.0 ppm) compared with the Tehran control group (molybdenum: 0.740 ppm, zinc: 251.5 ppm)."
+        explanation: Case-control study showing significantly lower nail molybdenum content in a moderate-risk esophageal cancer region compared to a low-risk region, and even lower levels in cancer patients.
     mic_references:
       - 50
       - 51
@@ -311,7 +321,17 @@ bioavailability:
     - 51
     - 57
 
-references: []
+references:
+  - reference: PMID:21031595
+    title: "Molybdenum cofactor deficiency: Mutations in GPHN, MOCS1, and MOCS2"
+    findings:
+      - statement: MoCo deficiency mutations cause progressive neurological damage
+        supporting_text: "Mutations in the genes encoding the biosynthetic MoCo pathway enzymes abrogate the activities of all molybdoenzymes and result in the \"combined\" form of MoCo deficiency"
+  - reference: PMID:18588371
+    title: "Nail molybdenum and zinc contents in populations with low and moderate incidence of esophageal cancer"
+    findings:
+      - statement: Lower molybdenum levels found in populations at higher risk for esophageal cancer
+        supporting_text: "Both molybdenum and Zinc were significantly (P<0.01) lower in the Sari control group (molybdenum: 0.472 ppm, zinc: 173.0 ppm) compared with the Tehran control group (molybdenum: 0.740 ppm, zinc: 251.5 ppm)."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

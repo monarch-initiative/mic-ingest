@@ -34,6 +34,11 @@ disease_associations:
       and anti-hypertensive properties, which might be beneficial in the prevention
       of CVD.
     population_context: general adult population
+    evidence:
+      - reference: PMID:22198621
+        supports: SUPPORT
+        snippet: "Black tea consumed within a normal diet contributes to a decrease of independent cardiovascular risk factors and improves the overall antioxidant status in humans."
+        explanation: Randomized controlled trial found 12 weeks of black tea consumption (3 cups/day) significantly decreased fasting glucose by 18.4%, triglycerides by 35.8%, and LDL/HDL ratio by 16.6% in a normal population.
     mic_references:
       - 37
       - 38
@@ -54,6 +59,11 @@ disease_associations:
       compounds in the regulation of energy balance, lipid and glucose metabolism,
       insulin sensitivity, body composition, and/or body temperature.
     population_context: general adult population
+    evidence:
+      - reference: PMID:24331002
+        supports: SUPPORT
+        snippet: "Our findings suggest that tea consumption could be linearly inversely associated with T2D risk."
+        explanation: Dose-response meta-analysis of 16 cohort studies (545,517 participants, 37,445 diabetes cases) found each 2 cups/day increase in tea consumption associated with 4.6% reduced risk of type 2 diabetes.
     mic_references:
       - 53
       - 54
@@ -95,6 +105,12 @@ drug_interactions:
     clinical_significance: MODERATE
     mic_references:
       - 107
+
+references:
+  - reference: PMID:22198621
+    title: "The effect of black tea on risk factors of cardiovascular disease in a normal population"
+  - reference: PMID:24331002
+    title: "Tea consumption and risk of type 2 diabetes: a dose-response meta-analysis of cohort studies"
 
 notes: |
   Despite promising results from animal studies, current evidence does not support a role

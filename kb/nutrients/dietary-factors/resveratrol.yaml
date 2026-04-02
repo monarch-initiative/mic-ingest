@@ -111,6 +111,11 @@ disease_associations:
       containing 8 mg/day resveratrol improved inflammatory and atherogenic
       status. However, there is no evidence that resveratrol in red wine
       confers additional cardiovascular risk reduction beyond alcohol content.
+    evidence:
+      - reference: PMID:18291361
+        supports: PARTIAL
+        snippet: "resveratrol blocked platelet aggregation and platelet P-selectin expression induced by U46619 in a concentration-dependent manner"
+        explanation: Demonstrates resveratrol's antiplatelet mechanism, supporting the cardiovascular protection hypothesis, though this is an in vitro study.
     mic_references:
       - 55
       - 56
@@ -124,6 +129,11 @@ disease_associations:
       Short-term supplementation (250-1,000 mg/day for 29-45 days)
       significantly reduced fasting glucose, improved HbA1c levels,
       and enhanced insulin sensitivity in diabetic patients.
+    evidence:
+      - reference: PMID:22901562
+        supports: SUPPORT
+        snippet: "supplementation of resveratrol for 3 months significantly improves the mean hemoglobin A(1c)"
+        explanation: Randomized controlled trial in 62 T2DM patients showed 250 mg/day resveratrol improved HbA1c and systolic blood pressure.
     mic_references:
       - 62
       - 63
@@ -176,6 +186,12 @@ recommendations:
     concentrations up to 100 times greater than achievable plasma
     concentrations. Pregnant women should avoid resveratrol supplements
     due to unknown safety profile.
+
+references:
+  - reference: PMID:22901562
+    title: "Resveratrol supplementation improves glycemic control in type 2 diabetes mellitus"
+  - reference: PMID:18291361
+    title: "Resveratrol attenuates thromboxane A2 receptor agonist-induced platelet activation by reducing phospholipase C activity"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

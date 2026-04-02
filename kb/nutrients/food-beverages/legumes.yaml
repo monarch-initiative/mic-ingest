@@ -30,6 +30,11 @@ disease_associations:
       for foods high in saturated fats or refined carbohydrates is likely to lower the
       risk of cardiovascular disease.
     population_context: general adult population
+    evidence:
+      - reference: PMID:24871476
+        supports: SUPPORT
+        snippet: "Intervention and prospective research suggests that diets that include beans reduce low-density lipoprotein cholesterol, favorably affect risk factors for metabolic syndrome, and reduce risk of ischemic heart disease and diabetes."
+        explanation: Review of dried bean nutritional benefits found beans are rich in soluble fiber, resistant starch, and polyphenols that contribute to reduced LDL cholesterol and cardiovascular disease risk factors.
     mic_references:
       - 10
       - 11
@@ -49,6 +54,11 @@ disease_associations:
       Substituting legumes for higher glycemic index foods may reduce risk of type 2
       diabetes mellitus.
     population_context: general adult population
+    evidence:
+      - reference: PMID:19526214
+        supports: SUPPORT
+        snippet: "Pooled analyses demonstrated that pulses, alone or in low-GI or high-fibre diets, improve markers of longer term glycaemic control in humans"
+        explanation: Systematic review and meta-analysis of 41 randomized controlled trials found pulses lowered fasting blood glucose and insulin, and improved glycosylated blood proteins when part of low-GI diets.
     mic_references:
       - 5
       - 6
@@ -98,6 +108,12 @@ recommendations:
     - population: Adults (2,000 calorie diet)
       amount: 1½-3 cup-equivalents/week
       source: Dietary Guidelines for Americans
+
+references:
+  - reference: PMID:24871476
+    title: "Nutritional and health benefits of dried beans"
+  - reference: PMID:19526214
+    title: "Effect of non-oil-seed pulses on glycaemic control: a systematic review and meta-analysis of randomised controlled experimental trials in people with and without diabetes"
 
 notes: |
   Short-term clinical trials have reported pulse consumption increases satiety; however,

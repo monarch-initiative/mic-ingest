@@ -351,6 +351,11 @@ disease_associations:
       - 74
       - 76
       - 78
+    evidence:
+      - reference: PMID:27869762
+        supports: SUPPORT
+        snippet: "Compared with the lowest magnesium consumption group in the population, the risk of T2D was reduced by 17% across all the studies; 19% in women and 16% in men"
+        explanation: Meta-analysis of 25 prospective cohort studies confirms 17% reduction in T2D risk with highest vs lowest magnesium intake
 
   - name: Hypertension
     description: |
@@ -372,6 +377,11 @@ disease_associations:
       - 28
       - 29
       - 30
+    evidence:
+      - reference: PMID:28476161
+        supports: SUPPORT
+        snippet: "A 100 mg/day increment in magnesium intake was associated with a 5% reduction in the risk of hypertension"
+        explanation: Dose-response meta-analysis of prospective cohort studies confirms inverse relationship between dietary magnesium and hypertension risk
 
   - name: Osteoporosis
     description: |
@@ -394,6 +404,11 @@ disease_associations:
       - 91
       - 92
       - 94
+    evidence:
+      - reference: PMID:23912329
+        supports: SUPPORT
+        snippet: "Magnesium deficiency contributes to osteoporosis directly by acting on crystal formation and on bone cells and indirectly by impacting on the secretion and the activity of parathyroid hormone and by promoting low grade inflammation"
+        explanation: Review confirms mechanisms by which magnesium deficiency contributes to osteoporosis
 
   - name: Preeclampsia and Eclampsia
     description: |
@@ -478,7 +493,13 @@ bioavailability:
   mic_references:
     - 2
 
-references: []
+references:
+  - reference: PMID:27869762
+    title: "Dose-Response Relationship between Dietary Magnesium Intake and Risk of Type 2 Diabetes Mellitus"
+  - reference: PMID:28476161
+    title: "Dose-response relationship between dietary magnesium intake, serum magnesium concentration and risk of hypertension"
+  - reference: PMID:23912329
+    title: "Magnesium and osteoporosis: current state of knowledge and future research directions"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

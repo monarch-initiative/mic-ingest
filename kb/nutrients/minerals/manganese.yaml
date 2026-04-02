@@ -301,6 +301,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: Observational data; mechanism unclear
+    evidence:
+      - reference: PMID:29971528
+        supports: SUPPORT
+        snippet: "Dietary Mn was inversely associated with type 2 diabetes incidence and HbAlc concentration in both cohorts (ptrend < 0.01 and <0.01 for type 2 diabetes, and ptrend < 0.01 and =0.02 for HbAlc, respectively, in each cohort) independent of TAC"
+        explanation: Two prospective cohort studies in Chinese adults (3,350 and 7,133 participants) demonstrating inverse association between dietary manganese and type 2 diabetes incidence, mediated by reduced oxidative stress.
     mic_references:
       - 30
       - 31
@@ -317,6 +322,11 @@ disease_associations:
       preferred_term: manganese overload
     relationship_type: MARKER
     population_context: Inherited disorders of manganese metabolism
+    evidence:
+      - reference: PMID:22341971
+        supports: SUPPORT
+        snippet: "SLC30A10 mutations cause a treatable recessive disease with pleomorphic phenotype, and provide compelling evidence that SLC30A10 plays a pivotal role in manganese transport."
+        explanation: Identification of SLC30A10 mutations as the cause of a manganese overload syndrome with juvenile-onset dystonia, adult-onset parkinsonism, hypermanganesemia, and chronic liver disease.
     mic_references:
       - 56
       - 57
@@ -391,7 +401,17 @@ bioavailability:
     - 4
     - 18
 
-references: []
+references:
+  - reference: PMID:29971528
+    title: "Dietary manganese and type 2 diabetes mellitus: two prospective cohort studies in China"
+    findings:
+      - statement: Dietary manganese inversely associated with type 2 diabetes incidence
+        supporting_text: "Dietary Mn was inversely associated with type 2 diabetes incidence and HbAlc concentration in both cohorts (ptrend < 0.01 and <0.01 for type 2 diabetes, and ptrend < 0.01 and =0.02 for HbAlc, respectively, in each cohort) independent of TAC"
+  - reference: PMID:22341971
+    title: "Mutations in SLC30A10 cause parkinsonism and dystonia with hypermanganesemia, polycythemia, and chronic liver disease"
+    findings:
+      - statement: SLC30A10 mutations cause manganese overload syndrome
+        supporting_text: "SLC30A10 mutations cause a treatable recessive disease with pleomorphic phenotype, and provide compelling evidence that SLC30A10 plays a pivotal role in manganese transport."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

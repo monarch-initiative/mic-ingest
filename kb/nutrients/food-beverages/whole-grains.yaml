@@ -29,6 +29,11 @@ disease_associations:
       suggest a dose-response relationship with significant risk reductions at
       higher intake levels.
     population_context: general adult population
+    evidence:
+      - reference: PMID:24158434
+        supports: SUPPORT
+        snippet: "Our meta-analysis suggests that a high whole grain intake, but not refined grains, is associated with reduced type 2 diabetes risk."
+        explanation: Systematic review and dose-response meta-analysis of 16 cohort studies found summary RR of 0.68 per 3 servings/day of whole grains, with results supporting at least 2 servings per day to reduce type 2 diabetes risk.
     mic_references:
       - 7
       - 8
@@ -47,6 +52,11 @@ disease_associations:
       disease. Whole grains may improve cardiometabolic markers including blood
       lipids, blood pressure, and markers of inflammation.
     population_context: general adult population
+    evidence:
+      - reference: PMID:24598599
+        supports: SUPPORT
+        snippet: "A twelve week whole-grain cereal-based diet, compared to refined cereals, reduced postprandial insulin and triglycerides responses. This finding may have implications for type 2 diabetes risk and cardiovascular disease."
+        explanation: Randomized parallel-group trial in 61 individuals with metabolic syndrome found 12-week whole-grain diet reduced postprandial insulin response by 29% and triglyceride response by 43% compared to refined cereals.
     mic_references:
       - 16
       - 17
@@ -89,6 +99,12 @@ recommendations:
     - population: Adults (2,000 calorie diet)
       amount: ≥3 ounce-equivalents/day
       source: Dietary Guidelines for Americans
+
+references:
+  - reference: PMID:24158434
+    title: "Whole grain and refined grain consumption and the risk of type 2 diabetes: a systematic review and dose-response meta-analysis of cohort studies"
+  - reference: PMID:24598599
+    title: "A whole-grain cereal-based diet lowers postprandial plasma insulin and triglyceride levels in individuals with metabolic syndrome"
 
 notes: |
   Whole grains provide fiber, vitamins (especially B vitamins), minerals (including

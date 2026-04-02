@@ -83,6 +83,11 @@ disease_associations:
       Evidence is mixed. A meta-analysis of postmenopausal women suggested
       a 15% reduction in risk of breast cancer with high lignan intake,
       though overall associations remain inconsistent across studies.
+    evidence:
+      - reference: PMID:20463043
+        supports: PARTIAL
+        snippet: "in postmenopausal women, high lignan intake was associated with a significant reduced risk of breast cancer (13 studies; RE: 0.86; 95% CI: 0.78, 0.94; P for heterogeneity = 0.32)"
+        explanation: Meta-analysis of 21 studies found a 14% risk reduction in postmenopausal women, though no overall association was found across all women.
     mic_references:
       - 39
       - 44
@@ -99,6 +104,11 @@ disease_associations:
       correlated with 49% lower risk of incident cardiovascular disease.
       However, isolated lignan supplementation showed minimal
       cholesterol-lowering effects.
+    evidence:
+      - reference: PMID:24552647
+        supports: SUPPORT
+        snippet: "lignans (HR = 0.51; CI 0.30-0.86; P-trend = 0.007)"
+        explanation: PREDIMED study found that highest lignan intake was associated with a 49% reduction in cardiovascular events over 4.3 years of follow-up.
     mic_references:
       - 17
       - 36
@@ -111,6 +121,12 @@ recommendations:
     flaxseed and other lignan-rich foods as part of a balanced diet
     is the safest approach. Lignan supplements should be avoided
     during pregnancy and lactation due to lack of safety data.
+
+references:
+  - reference: PMID:20463043
+    title: "Meta-analyses of lignans and enterolignans in relation to breast cancer risk"
+  - reference: PMID:24552647
+    title: "Inverse association between habitual polyphenol intake and incidence of cardiovascular events in the PREDIMED study"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

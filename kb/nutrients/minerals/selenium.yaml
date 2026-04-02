@@ -263,6 +263,11 @@ disease_associations:
       preferred_term: Keshan disease
     relationship_type: DEFICIENCY_CAUSES
     population_context: Selenium-deficient regions of China
+    evidence:
+      - reference: PMID:29627894
+        supports: SUPPORT
+        snippet: "Giving selenium supplements to the residents of KD endemic areas significantly reduced the incidence of KD. Selenium deficiency is therefore a cause of KD by the criterion of causation in modern epidemiology."
+        explanation: Systematic review and meta-analysis of 17 articles (41 studies, 1,983,238 subjects) demonstrating selenium supplementation reduces Keshan disease incidence with protection rates over 80%.
     mic_references:
       - 52
       - 54
@@ -286,6 +291,11 @@ disease_associations:
     relationship_type: RISK_FACTOR
     direction: DECREASED
     population_context: Evidence mixed; stronger in selenium-deficient populations
+    evidence:
+      - reference: PMID:24683040
+        supports: PARTIAL
+        snippet: "For the observational studies, we found lower cancer incidence (summary odds ratio (OR) 0.69, 95% confidence interval (CI) 0.53 to 0.91, N = 8) and cancer mortality (OR 0.60, 95% CI 0.39 to 0.93, N = 6) associated with higher selenium exposure."
+        explanation: Cochrane systematic review found observational evidence for inverse association between selenium and cancer risk, but RCTs showed no clear benefit and raised concerns about potential harmful effects.
     mic_references:
       - 66
       - 67
@@ -357,7 +367,17 @@ bioavailability:
     - 137
     - 138
 
-references: []
+references:
+  - reference: PMID:29627894
+    title: "Prevention of Keshan Disease by Selenium Supplementation: a Systematic Review and Meta-analysis"
+    findings:
+      - statement: Selenium supplementation significantly reduces Keshan disease incidence
+        supporting_text: "Giving selenium supplements to the residents of KD endemic areas significantly reduced the incidence of KD."
+  - reference: PMID:24683040
+    title: "Selenium for preventing cancer"
+    findings:
+      - statement: Observational studies show inverse association between selenium and cancer but RCTs are inconclusive
+        supporting_text: "For the observational studies, we found lower cancer incidence (summary odds ratio (OR) 0.69, 95% confidence interval (CI) 0.53 to 0.91, N = 8) and cancer mortality (OR 0.60, 95% CI 0.39 to 0.93, N = 6) associated with higher selenium exposure."
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

@@ -27,6 +27,11 @@ disease_associations:
       is strong evidence from randomized controlled trials that nut consumption lowers
       blood cholesterol concentrations.
     population_context: general adult population
+    evidence:
+      - reference: PMID:25047173
+        supports: SUPPORT
+        snippet: "Pooled results suggested that highest nut consumption amount versus lowest amount was significantly associated with the risk of CAD [summary relative risk (RR)=0.660, 95%CI=0.581-0.748, I(2)=39.6%]."
+        explanation: Dose-response meta-analysis of 13 prospective studies (347,477 participants, 6,127 CAD cases) found a linear protective association, with 5% reduced CAD risk per 1 serving/week increase.
     mic_references:
       - 3
       - 4
@@ -41,6 +46,11 @@ disease_associations:
       Meta-analyses of prospective cohort studies show that nut consumption is associated
       with a reduced risk of all-cause mortality and mortality due to chronic conditions.
     population_context: general adult population
+    evidence:
+      - reference: PMID:27916000
+        supports: SUPPORT
+        snippet: "Higher nut intake is associated with reduced risk of cardiovascular disease, total cancer and all-cause mortality, and mortality from respiratory disease, diabetes, and infections."
+        explanation: Systematic review and dose-response meta-analysis of 20 prospective studies found RR of 0.78 for all-cause mortality per 28 g/day increase in nut intake.
     mic_references:
       - 32
       - 33
@@ -68,6 +78,12 @@ recommendations:
     - population: Adults
       amount: ≥5 ounces/week
       source: MIC recommendation for cardiovascular benefits
+
+references:
+  - reference: PMID:25047173
+    title: "Nut consumption and the risk of coronary artery disease: a dose-response meta-analysis of 13 prospective studies"
+  - reference: PMID:27916000
+    title: "Nut consumption and risk of cardiovascular disease, total cancer, all-cause and cause-specific mortality: a systematic review and dose-response meta-analysis of prospective studies"
 
 notes: |
   There is little evidence to support an association between regular nut consumption

@@ -32,6 +32,11 @@ disease_associations:
       be an effective method to improve glycemic control in individuals with type 2
       diabetes mellitus.
     population_context: general adult population
+    evidence:
+      - reference: PMID:24787496
+        supports: SUPPORT
+        snippet: "The updated analyses from our 3 cohorts and meta-analyses provide further evidence that higher dietary GI and GL are associated with increased risk of T2D."
+        explanation: Pooled analysis of 3 large US cohorts (205,157 participants, 15,027 T2D cases) and updated meta-analysis found RR of 1.33 for highest vs lowest GI quintile and summary RR of 1.19 for GI and 1.13 for GL.
     mic_references:
       - 12
       - 13
@@ -50,6 +55,11 @@ disease_associations:
       a higher risk of cardiovascular disease. Low-GI/GL diets result in beneficial
       effects on metabolic markers associated with CVD risk.
     population_context: general adult population
+    evidence:
+      - reference: PMID:23284926
+        supports: SUPPORT
+        snippet: "High dietary glycemic load is associated with a higher risk of CHD and stroke, and there is a linear dose-response relationship between glycemic load and CHD risk."
+        explanation: Systematic review and meta-analysis of 15 prospective studies (438,073 participants) found high glycemic load associated with increased CHD risk in women (RR=1.49) and overweight/obese subjects (RR=1.49).
     mic_references:
       - 18
       - 19
@@ -61,6 +71,12 @@ recommendations:
     and high-GI foods like potatoes, white rice, white bread, and sugary foods.
     Several dietary intervention studies found that low-GI/GL diets were as effective
     as conventional, low-fat diets in reducing body weight.
+
+references:
+  - reference: PMID:24787496
+    title: "Glycemic index, glycemic load, and risk of type 2 diabetes: results from 3 large US cohorts and an updated meta-analysis"
+  - reference: PMID:23284926
+    title: "Dietary glycemic index, glycemic load, and risk of coronary heart disease, stroke, and stroke mortality: a systematic review with meta-analysis"
 
 notes: |
   Consumption of high-GI foods causes a sharp increase in postprandial blood glucose
