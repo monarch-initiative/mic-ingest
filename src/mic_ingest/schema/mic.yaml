@@ -428,12 +428,6 @@ slots:
     inlined_as_list: true
 
   # Deficiency slots
-  phenotypes:
-    description: Phenotypes/symptoms
-    multivalued: true
-    range: Phenotype
-    inlined_as_list: true
-
   at_risk_groups:
     description: Groups at risk
     multivalued: true
@@ -726,12 +720,26 @@ classes:
     slots:
       - name
       - description
-      - phenotypes
       - at_risk_groups
       - causes
       - mic_references
       - evidence
       - notes
+    attributes:
+      phenotype_term:
+        description: HP/uPheno term for the deficiency state (e.g., Decreased circulating biotin concentration)
+        range: PhenotypeDescriptor
+        inlined: true
+        recommended: true
+      disease_term:
+        description: MONDO term for the deficiency disease when one exists (e.g., nutritional biotin deficiency)
+        range: DiseaseDescriptor
+        inlined: true
+      sequelae:
+        description: Consequence phenotypes caused by the deficiency state
+        multivalued: true
+        range: Phenotype
+        inlined_as_list: true
 
   Phenotype:
     description: A phenotype or symptom
@@ -776,11 +784,19 @@ classes:
     slots:
       - name
       - description
-      - phenotypes
       - mic_references
       - evidence
       - notes
     attributes:
+      phenotype_term:
+        description: HP/uPheno term for the toxicity state (e.g., increased circulating X concentration)
+        range: PhenotypeDescriptor
+        inlined: true
+      sequelae:
+        description: Consequence phenotypes caused by the toxicity state
+        multivalued: true
+        range: Phenotype
+        inlined_as_list: true
       adverse_effects:
         description: Adverse effects of excess intake
         multivalued: true

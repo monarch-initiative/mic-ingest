@@ -84,7 +84,7 @@ deficiency:
     an estimated 2 billion people worldwide, primarily in developing countries due to
     phytate-rich diets lacking animal-source foods. Even milder zinc deficiency contributes
     to impaired growth and development and increased susceptibility to infections.
-  phenotypes:
+  sequelae:
     - name: Growth retardation
       phenotype_term:
         preferred_term: growth retardation

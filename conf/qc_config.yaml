@@ -35,8 +35,17 @@ paths:
     weight: 3.0
     min_compliance: 85.0
 
-  # Deficiency phenotypes - clinical relevance
-  "deficiency.phenotypes[].phenotype_term.term":
+  # Deficiency state and disease terms
+  "deficiency.phenotype_term.term":
+    weight: 3.0
+    min_compliance: 85.0
+
+  "deficiency.disease_term.term":
+    weight: 2.0
+    min_compliance: 75.0
+
+  # Deficiency sequelae phenotypes - clinical relevance
+  "deficiency.sequelae[].phenotype_term.term":
     weight: 3.0
     min_compliance: 85.0
 

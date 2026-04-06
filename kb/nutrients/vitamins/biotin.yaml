@@ -115,6 +115,16 @@ functions:
 
 deficiency:
   name: Biotin Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating biotin concentration
+    term:
+      id: HP:0034599
+      label: Decreased circulating biotin concentration
+  disease_term:
+    preferred_term: nutritional biotin deficiency
+    term:
+      id: MONDO:0000461
+      label: nutritional biotin deficiency
   description: |
     Overt biotin deficiency is rare in healthy individuals consuming a normal diet.
     Signs of deficiency include hair loss (alopecia), scaly red rash around the eyes,
@@ -122,7 +132,7 @@ deficiency:
     hereditary disorders of biotin metabolism often have similar physical findings,
     impaired immune function, and increased susceptibility to bacterial and fungal
     infections.
-  phenotypes:
+  sequelae:
     - name: Alopecia
       phenotype_term:
         preferred_term: alopecia

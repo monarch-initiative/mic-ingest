@@ -90,7 +90,7 @@ deficiency:
     alcoholism, and older age. Severe deficiency causes hypocalcemia despite adequate
     calcium intake, hypokalemia, sodium retention, neurological and muscular symptoms
     (tremor, muscle spasms, tetany), loss of appetite, nausea, and personality changes.
-  phenotypes:
+  sequelae:
     - name: Hypocalcemia
       phenotype_term:
         preferred_term: hypocalcemia

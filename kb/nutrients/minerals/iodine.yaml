@@ -43,7 +43,7 @@ deficiency:
     insufficient iodine intake. Iodine deficiency is the most common cause of
     preventable brain damage. Maternal iodine deficiency during pregnancy can result
     in miscarriage, preterm birth, and neurological impairments in offspring.
-  phenotypes:
+  sequelae:
     - name: Goiter
       phenotype_term:
         preferred_term: goiter

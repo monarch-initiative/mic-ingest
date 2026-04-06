@@ -17,14 +17,18 @@ from biolink_model.datamodel.pydanticmodel_v2 import (
     Association,
     BiologicalProcess,
     CellularComponent,
+    ChemicalAffectsBiologicalEntityAssociation,
     ChemicalEntity,
     ChemicalOrDrugOrTreatmentToDiseaseOrPhenotypicFeatureAssociation,
+    DirectionQualifierEnum,
     Disease,
     Food,
     Gene,
+    GeneOrGeneProductOrChemicalEntityAspectEnum,
     KnowledgeLevelEnum,
     NamedThing,
     PhenotypicFeature,
+    PhenotypicFeatureToPhenotypicFeatureAssociation,
 )
 
 
@@ -323,47 +327,92 @@ _DISEASE_CONVERTERS = {
 
 
 # =============================================================================
-# Deficiency phenotype edge converter
+# Deficiency edge converters (two-hop causal chain)
 # =============================================================================
 
 
-def deficiency_phenotype_to_edge(
-    nutrient_id: str, phenotype: dict[str, Any]
-) -> Association | None:
+def deficiency_state_to_edge(
+    nutrient_id: str, deficiency: dict[str, Any]
+) -> ChemicalAffectsBiologicalEntityAssociation | None:
     """
-    Convert a deficiency phenotype to a KGX edge.
+    Convert a deficiency state to a KGX edge: Chemical → deficiency phenotype.
 
-    Nutrient → Phenotype using has_phenotype with context:deficiency qualifier.
-    Includes frequency qualifier when present.
+    Uses ChemicalAffectsBiologicalEntityAssociation with qualifier slots:
+    - predicate: affects
+    - qualified_predicate: causes
+    - subject_aspect_qualifier: abundance
+    - subject_direction_qualifier: decreased
 
     Args:
         nutrient_id: The nutrient CHEBI term ID
-        phenotype: A phenotype dict from deficiency.phenotypes[]
+        deficiency: The deficiency dict containing phenotype_term
 
     Returns:
-        Association or None
+        ChemicalAffectsBiologicalEntityAssociation or None
     """
-    term_id = _get_term_id(phenotype, ["phenotype_term", "term", "id"])
+    deficiency_pheno_id = _get_term_id(deficiency, ["phenotype_term", "term", "id"])
+    if not deficiency_pheno_id:
+        return None
+
+    publications, supporting_text = _format_evidence(deficiency.get("evidence"))
+
+    return ChemicalAffectsBiologicalEntityAssociation(
+        id=_make_edge_id(),
+        subject=nutrient_id,
+        predicate="biolink:affects",
+        qualified_predicate="biolink:causes",
+        object=deficiency_pheno_id,
+        subject_category="biolink:ChemicalEntity",
+        object_category="biolink:PhenotypicFeature",
+        subject_aspect_qualifier=GeneOrGeneProductOrChemicalEntityAspectEnum.abundance,
+        subject_direction_qualifier=DirectionQualifierEnum.decreased,
+        publications=publications if publications else None,
+        supporting_text=supporting_text if supporting_text else None,
+        primary_knowledge_source=KNOWLEDGE_SOURCE,
+        knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
+        agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
+    )
+
+
+def deficiency_sequela_to_edge(
+    deficiency_phenotype_id: str,
+    sequela: dict[str, Any],
+    disease_context: str | None = None,
+) -> PhenotypicFeatureToPhenotypicFeatureAssociation | None:
+    """
+    Convert a deficiency sequela to a KGX edge: deficiency phenotype → consequence phenotype.
+
+    Uses PhenotypicFeatureToPhenotypicFeatureAssociation with:
+    - predicate: causes
+    - disease_context_qualifier: MONDO term (when available)
+    - frequency_qualifier: HP frequency term (when available)
+
+    Args:
+        deficiency_phenotype_id: The deficiency phenotype HP term ID
+        sequela: A phenotype dict from deficiency.sequelae[]
+        disease_context: Optional MONDO term for disease context qualifier
+
+    Returns:
+        PhenotypicFeatureToPhenotypicFeatureAssociation or None
+    """
+    term_id = _get_term_id(sequela, ["phenotype_term", "term", "id"])
     if not term_id:
         return None
 
-    frequency = phenotype.get("frequency")
+    frequency = sequela.get("frequency")
     frequency_hp = FREQUENCY_TO_HP.get(frequency) if frequency else None
 
-    publications, supporting_text = _format_evidence(phenotype.get("evidence"))
+    publications, supporting_text = _format_evidence(sequela.get("evidence"))
 
-    qualifiers = ["context:deficiency"]
-    if frequency_hp:
-        qualifiers.append(f"frequency:{frequency_hp}")
-
-    return Association(
+    return PhenotypicFeatureToPhenotypicFeatureAssociation(
         id=_make_edge_id(),
-        subject=nutrient_id,
-        predicate="biolink:has_phenotype",
+        subject=deficiency_phenotype_id,
+        predicate="biolink:causes",
         object=term_id,
-        subject_category="biolink:ChemicalEntity",
+        subject_category="biolink:PhenotypicFeature",
         object_category="biolink:PhenotypicFeature",
-        qualifiers=qualifiers,
+        disease_context_qualifier=disease_context,
+        frequency_qualifier=frequency_hp,
         publications=publications if publications else None,
         supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
@@ -373,41 +422,82 @@ def deficiency_phenotype_to_edge(
 
 
 # =============================================================================
-# Toxicity phenotype edge converter
+# Toxicity edge converters (two-hop causal chain)
 # =============================================================================
 
 
-def toxicity_phenotype_to_edge(
-    nutrient_id: str, phenotype: dict[str, Any]
-) -> Association | None:
+def toxicity_state_to_edge(
+    nutrient_id: str, toxicity: dict[str, Any]
+) -> ChemicalAffectsBiologicalEntityAssociation | None:
     """
-    Convert a toxicity phenotype to a KGX edge.
+    Convert a toxicity state to a KGX edge: Chemical → toxicity phenotype.
 
-    Nutrient → Phenotype using has_phenotype with context:toxicity qualifier.
+    Same pattern as deficiency_state_to_edge but with subject_direction_qualifier: increased.
 
     Args:
         nutrient_id: The nutrient CHEBI term ID
-        phenotype: A phenotype dict from toxicity.phenotypes[]
+        toxicity: The toxicity dict containing phenotype_term
 
     Returns:
-        Association or None
+        ChemicalAffectsBiologicalEntityAssociation or None
     """
-    term_id = _get_term_id(phenotype, ["phenotype_term", "term", "id"])
+    toxicity_pheno_id = _get_term_id(toxicity, ["phenotype_term", "term", "id"])
+    if not toxicity_pheno_id:
+        return None
+
+    publications, supporting_text = _format_evidence(toxicity.get("evidence"))
+
+    return ChemicalAffectsBiologicalEntityAssociation(
+        id=_make_edge_id(),
+        subject=nutrient_id,
+        predicate="biolink:affects",
+        qualified_predicate="biolink:causes",
+        object=toxicity_pheno_id,
+        subject_category="biolink:ChemicalEntity",
+        object_category="biolink:PhenotypicFeature",
+        subject_aspect_qualifier=GeneOrGeneProductOrChemicalEntityAspectEnum.abundance,
+        subject_direction_qualifier=DirectionQualifierEnum.increased,
+        publications=publications if publications else None,
+        supporting_text=supporting_text if supporting_text else None,
+        primary_knowledge_source=KNOWLEDGE_SOURCE,
+        knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
+        agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
+    )
+
+
+def toxicity_sequela_to_edge(
+    toxicity_phenotype_id: str,
+    sequela: dict[str, Any],
+) -> PhenotypicFeatureToPhenotypicFeatureAssociation | None:
+    """
+    Convert a toxicity sequela to a KGX edge: toxicity phenotype → consequence phenotype.
+
+    Args:
+        toxicity_phenotype_id: The toxicity phenotype HP term ID
+        sequela: A phenotype dict from toxicity.sequelae[]
+
+    Returns:
+        PhenotypicFeatureToPhenotypicFeatureAssociation or None
+    """
+    term_id = _get_term_id(sequela, ["phenotype_term", "term", "id"])
     if not term_id:
         return None
 
-    publications, supporting_text = _format_evidence(phenotype.get("evidence"))
+    frequency = sequela.get("frequency")
+    frequency_hp = FREQUENCY_TO_HP.get(frequency) if frequency else None
 
-    return Association(
+    publications, supporting_text = _format_evidence(sequela.get("evidence"))
+
+    return PhenotypicFeatureToPhenotypicFeatureAssociation(
         id=_make_edge_id(),
-        subject=nutrient_id,
-        predicate="biolink:has_phenotype",
+        subject=toxicity_phenotype_id,
+        predicate="biolink:causes",
         object=term_id,
-        subject_category="biolink:ChemicalEntity",
+        subject_category="biolink:PhenotypicFeature",
         object_category="biolink:PhenotypicFeature",
-        qualifiers=["context:toxicity"],
+        frequency_qualifier=frequency_hp,
         publications=publications if publications else None,
-
+        supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -761,21 +851,39 @@ def extract_nodes(record: dict[str, Any]) -> Iterator[NamedThing]:
         if node:
             yield node
 
-    # Deficiency phenotype nodes
+    # Deficiency state + disease + sequelae nodes
     deficiency = record.get("deficiency") or {}
-    for phenotype in deficiency.get("phenotypes") or []:
-        term_id = _get_term_id(phenotype, ["phenotype_term", "term", "id"])
-        label = _get_term_id(phenotype, ["phenotype_term", "term", "label"])
-        node = _emit(term_id, phenotype.get("name") or label, "biolink:PhenotypicFeature")
+    def_pheno_id = _get_term_id(deficiency, ["phenotype_term", "term", "id"])
+    def_pheno_label = _get_term_id(deficiency, ["phenotype_term", "term", "label"])
+    node = _emit(def_pheno_id, def_pheno_label, "biolink:PhenotypicFeature")
+    if node:
+        yield node
+
+    def_disease_id = _get_term_id(deficiency, ["disease_term", "term", "id"])
+    def_disease_label = _get_term_id(deficiency, ["disease_term", "term", "label"])
+    node = _emit(def_disease_id, def_disease_label, "biolink:Disease")
+    if node:
+        yield node
+
+    for sequela in deficiency.get("sequelae") or []:
+        term_id = _get_term_id(sequela, ["phenotype_term", "term", "id"])
+        label = _get_term_id(sequela, ["phenotype_term", "term", "label"])
+        node = _emit(term_id, sequela.get("name") or label, "biolink:PhenotypicFeature")
         if node:
             yield node
 
-    # Toxicity phenotype nodes
+    # Toxicity state + sequelae nodes
     toxicity = record.get("toxicity") or {}
-    for phenotype in toxicity.get("phenotypes") or []:
-        term_id = _get_term_id(phenotype, ["phenotype_term", "term", "id"])
-        label = _get_term_id(phenotype, ["phenotype_term", "term", "label"])
-        node = _emit(term_id, phenotype.get("name") or label, "biolink:PhenotypicFeature")
+    tox_pheno_id = _get_term_id(toxicity, ["phenotype_term", "term", "id"])
+    tox_pheno_label = _get_term_id(toxicity, ["phenotype_term", "term", "label"])
+    node = _emit(tox_pheno_id, tox_pheno_label, "biolink:PhenotypicFeature")
+    if node:
+        yield node
+
+    for sequela in toxicity.get("sequelae") or []:
+        term_id = _get_term_id(sequela, ["phenotype_term", "term", "id"])
+        label = _get_term_id(sequela, ["phenotype_term", "term", "label"])
+        node = _emit(term_id, sequela.get("name") or label, "biolink:PhenotypicFeature")
         if node:
             yield node
 
@@ -866,19 +974,32 @@ def transform(record: dict[str, Any]) -> Iterator[Association]:
             if edge:
                 yield edge
 
-    # Deficiency phenotypes
+    # Deficiency: state edge + sequelae edges
     deficiency = record.get("deficiency") or {}
-    for phenotype in deficiency.get("phenotypes") or []:
-        edge = deficiency_phenotype_to_edge(nutrient_id, phenotype)
+    deficiency_pheno_id = _get_term_id(deficiency, ["phenotype_term", "term", "id"])
+    if deficiency_pheno_id:
+        edge = deficiency_state_to_edge(nutrient_id, deficiency)
         if edge:
             yield edge
 
-    # Toxicity phenotypes
+        disease_context = _get_term_id(deficiency, ["disease_term", "term", "id"])
+        for sequela in deficiency.get("sequelae") or []:
+            edge = deficiency_sequela_to_edge(deficiency_pheno_id, sequela, disease_context)
+            if edge:
+                yield edge
+
+    # Toxicity: state edge + sequelae edges
     toxicity = record.get("toxicity") or {}
-    for phenotype in toxicity.get("phenotypes") or []:
-        edge = toxicity_phenotype_to_edge(nutrient_id, phenotype)
+    toxicity_pheno_id = _get_term_id(toxicity, ["phenotype_term", "term", "id"])
+    if toxicity_pheno_id:
+        edge = toxicity_state_to_edge(nutrient_id, toxicity)
         if edge:
             yield edge
+
+        for sequela in toxicity.get("sequelae") or []:
+            edge = toxicity_sequela_to_edge(toxicity_pheno_id, sequela)
+            if edge:
+                yield edge
 
     # Function sub-entities (children inherit evidence from parent function)
     for func in record.get("functions") or []:

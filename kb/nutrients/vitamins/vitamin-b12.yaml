@@ -62,7 +62,7 @@ deficiency:
     pernicious anemia, and food-bound malabsorption syndrome. Normal digestive
     function required for absorption is commonly impaired in individuals over
     60 years of age.
-  phenotypes:
+  sequelae:
     - name: Megaloblastic Anemia
       phenotype_term:
         preferred_term: megaloblastic anemia

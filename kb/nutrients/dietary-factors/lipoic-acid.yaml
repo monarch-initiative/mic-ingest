@@ -80,7 +80,7 @@ deficiency:
     biosynthesis genes (LIAS, LIPT1, LIPT2). These genetic defects cause severe
     mitochondrial dysfunction and cannot be remedied by supplementation alone.
     Healthy individuals synthesize adequate amounts endogenously.
-  phenotypes:
+  sequelae:
     - name: Epileptic encephalopathy
       phenotype_term:
         preferred_term: epileptic encephalopathy

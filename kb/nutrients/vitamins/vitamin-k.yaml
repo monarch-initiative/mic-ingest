@@ -118,7 +118,7 @@ deficiency:
     or stool, or heavy menstrual bleeding. In infants, vitamin K deficiency can cause
     life-threatening intracranial hemorrhage. Deficiency is uncommon in healthy adults
     because vitamin K is widespread in foods and the vitamin K cycle conserves it.
-  phenotypes:
+  sequelae:
     - name: Hemorrhage
       phenotype_term:
         preferred_term: abnormal bleeding

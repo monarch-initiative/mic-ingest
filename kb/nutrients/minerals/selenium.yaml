@@ -88,7 +88,7 @@ deficiency:
     Kashin-Beck disease (osteoarthropathy), which occur in selenium-deficient regions
     of Asia. Selenium supplementation can prevent Keshan disease but cannot reverse
     heart damage once it has occurred.
-  phenotypes:
+  sequelae:
     - name: Cardiomyopathy (Keshan disease)
       phenotype_term:
         preferred_term: dilated cardiomyopathy

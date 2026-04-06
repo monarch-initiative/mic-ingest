@@ -129,7 +129,7 @@ deficiency:
     Pellagra may result from inadequate dietary intake of NAD precursors, malabsorptive
     disorders, carcinoid syndrome, chronic alcoholism, and prolonged treatment with
     certain drugs including isoniazid.
-  phenotypes:
+  sequelae:
     - name: Photosensitive Dermatitis
       phenotype_term:
         preferred_term: dermatitis

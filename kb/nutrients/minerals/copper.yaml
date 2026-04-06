@@ -133,7 +133,7 @@ deficiency:
     by copper supplementation. Copper deficiency may also lead to neutropenia, increasing
     susceptibility to infection. Other features include osteoporosis and other bone
     abnormalities, impaired growth, depigmentation, and neurological pathologies.
-  phenotypes:
+  sequelae:
     - name: Anemia
       phenotype_term:
         preferred_term: anemia

@@ -125,7 +125,7 @@ deficiency:
     Chronically low calcium intakes in growing individuals may prevent optimal peak bone mass
     attainment. Inadequate calcium intake may contribute to accelerated bone loss and
     development of osteoporosis.
-  phenotypes:
+  sequelae:
     - name: Hypocalcemia
       phenotype_term:
         preferred_term: hypocalcemia

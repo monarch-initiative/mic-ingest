@@ -159,7 +159,7 @@ deficiency:
     cell division is reduced, resulting in fewer but larger red blood cells.
     Individuals in the early stages of folate deficiency may not show obvious
     symptoms, but blood concentrations of homocysteine may increase.
-  phenotypes:
+  sequelae:
   - name: Megaloblastic anemia
     phenotype_term:
       preferred_term: Megaloblastic anemia

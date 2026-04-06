@@ -54,7 +54,7 @@ deficiency:
     suggested that chromium might produce biological effects only at pharmacological doses,
     not nutritional ones. The absence of animal models for chromium deficiency makes it
     difficult to study biochemical abnormalities associated with inadequate intakes.
-  phenotypes:
+  sequelae:
     - name: Impaired glucose tolerance
       phenotype_term:
         preferred_term: impaired glucose tolerance

@@ -65,7 +65,7 @@ deficiency:
     transporter OCTN2) causes severe symptoms. Secondary deficiency can occur
     with certain metabolic disorders, chronic kidney disease requiring dialysis,
     and some medications.
-  phenotypes:
+  sequelae:
     - name: Cardiomyopathy
       phenotype_term:
         preferred_term: cardiomyopathy

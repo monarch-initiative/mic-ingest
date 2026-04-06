@@ -83,7 +83,7 @@ deficiency:
     storage iron depletion, early functional iron deficiency (reduced transferrin
     saturation), and iron deficiency anemia (microcytic hypochromic anemia). Symptoms
     include fatigue, weakness, decreased work capacity, and impaired cognitive function.
-  phenotypes:
+  sequelae:
     - name: Iron deficiency anemia
       phenotype_term:
         preferred_term: iron deficiency anemia

@@ -146,7 +146,7 @@ deficiency:
     countries because it can be prevented by as little as 10 mg of vitamin C daily.
     However, cases have occurred in children, critically ill patients, and older adults
     on very restricted diets.
-  phenotypes:
+  sequelae:
     - name: Poor wound healing
       phenotype_term:
         preferred_term: Poor wound healing

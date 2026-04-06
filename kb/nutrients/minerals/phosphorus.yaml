@@ -97,7 +97,7 @@ deficiency:
     (in adults), increased susceptibility to infection, numbness and tingling of
     extremities, difficulty walking, and respiratory failure. Severe hypophosphatemia
     may be life threatening.
-  phenotypes:
+  sequelae:
     - name: Muscle weakness
       phenotype_term:
         preferred_term: muscle weakness

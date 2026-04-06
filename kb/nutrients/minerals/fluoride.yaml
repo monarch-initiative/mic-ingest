@@ -50,7 +50,7 @@ deficiency:
     introduction of fluoride-containing toothpastes, studies demonstrated that the
     prevalence of dental caries was 40% to 60% lower in communities with optimal
     water fluoride concentrations than in communities with low water fluoride.
-  phenotypes:
+  sequelae:
     - name: Dental Caries
       phenotype_term:
         preferred_term: dental caries

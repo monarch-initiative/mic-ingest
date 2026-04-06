@@ -101,7 +101,7 @@ deficiency:
     postmenopausal women developed organ dysfunction when consuming choline-deficient
     diets, while only 44% of premenopausal women were affected, likely due to
     estrogen-induced upregulation of PEMT.
-  phenotypes:
+  sequelae:
     - name: Hepatic steatosis
       phenotype_term:
         preferred_term: fatty liver

@@ -108,7 +108,7 @@ deficiency:
     in patients receiving fat-free parenteral nutrition, those with severe fat
     malabsorption, or in cases of malnutrition. A plasma triene:tetraene ratio
     (eicosatrienoic acid to arachidonic acid) greater than 0.2 indicates deficiency.
-  phenotypes:
+  sequelae:
     - name: Dermatitis
       phenotype_term:
         preferred_term: eczematoid dermatitis

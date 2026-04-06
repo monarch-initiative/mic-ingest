@@ -85,7 +85,7 @@ deficiency:
       supports: SUPPORT
       snippet: "Many populations worldwide may be at risk of clinical or subclinical thiamine deficiencies, due to famine, reliance on staple crops with low thiamine content, or food preparation practices, such as milling grains and washing milled rice"
       explanation: Supports that thiamin deficiency can result from inadequate dietary intake patterns including reliance on low-thiamin staple crops
-  phenotypes:
+  sequelae:
     - name: Peripheral Neuropathy (Dry Beriberi)
       phenotype_term:
         preferred_term: peripheral neuropathy

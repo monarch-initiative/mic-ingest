@@ -97,7 +97,7 @@ deficiency:
     water-soluble vitamins. Subclinical deficiency (low status) without clinical signs
     may be widespread, including in high-income countries, but usually goes undetected
     because riboflavin biomarkers are rarely measured in human studies.
-  phenotypes:
+  sequelae:
     - name: Angular Stomatitis
       phenotype_term:
         preferred_term: angular cheilitis

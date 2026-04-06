@@ -105,7 +105,7 @@ deficiency:
     women of reproductive age in developing countries. Vitamin A deficiency is
     the leading preventable cause of blindness in low- and middle-income nations,
     with an estimated 250,000 to 500,000 children becoming blind annually.
-  phenotypes:
+  sequelae:
     - name: Night Blindness (Nyctalopia)
       phenotype_term:
         preferred_term: night blindness

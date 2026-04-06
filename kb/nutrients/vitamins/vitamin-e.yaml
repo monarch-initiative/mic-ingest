@@ -91,7 +91,7 @@ deficiency:
     children with severe deficiency at birth can experience irreversible neurological
     damage if not treated promptly. Adults with gastrointestinal disorders affecting
     absorption may not develop symptoms for 10-20 years.
-  phenotypes:
+  sequelae:
     - name: Spinocerebellar Ataxia
       phenotype_term:
         preferred_term: ataxia

@@ -86,7 +86,7 @@ deficiency:
     supplementation. Inherited molybdenum cofactor deficiency (MocoD) is a rare genetic
     disorder causing severe neurological dysfunction including cerebral atrophy, mental
     retardation, intractable seizures, and dislocation of ocular lenses.
-  phenotypes:
+  sequelae:
     - name: Seizures
       phenotype_term:
         preferred_term: seizures

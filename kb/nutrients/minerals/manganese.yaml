@@ -92,7 +92,7 @@ deficiency:
     by manganese supplementation. Young men fed a low-manganese diet developed decreased
     serum cholesterol and transient skin rash. Young women fed a manganese-poor diet
     developed mildly abnormal glucose tolerance.
-  phenotypes:
+  sequelae:
     - name: Impaired glucose tolerance
       phenotype_term:
         preferred_term: impaired glucose tolerance

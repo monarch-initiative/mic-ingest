@@ -70,7 +70,7 @@ deficiency:
     mutations in genes involved in CoQ10 biosynthesis. Secondary deficiency may
     occur with aging, statin therapy (which inhibits the mevalonate pathway used
     in CoQ10 synthesis), and certain mitochondrial disorders.
-  phenotypes:
+  sequelae:
     - name: Cerebellar ataxia
       phenotype_term:
         preferred_term: ataxia

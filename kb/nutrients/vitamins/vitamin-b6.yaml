@@ -94,7 +94,7 @@ deficiency:
     Other symptoms include inflammation of the tongue, mouth sores, and skin
     ulcers at the corners of the mouth. Plasma PLP concentrations below 30 nmol/L
     are considered inadequate, and below 20 nmol/L is considered deficient.
-  phenotypes:
+  sequelae:
     - name: Peripheral Neuropathy
       phenotype_term:
         preferred_term: peripheral neuropathy

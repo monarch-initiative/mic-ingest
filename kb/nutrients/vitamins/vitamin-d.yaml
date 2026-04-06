@@ -126,7 +126,7 @@ deficiency:
     and increased fracture risk). Muscle weakness and pain are also prominent symptoms.
     Risk factors include limited sun exposure, dark skin pigmentation, obesity, older age,
     malabsorption disorders, and certain medications.
-  phenotypes:
+  sequelae:
     - name: Rickets
       phenotype_term:
         preferred_term: rickets

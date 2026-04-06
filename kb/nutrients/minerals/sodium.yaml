@@ -68,7 +68,7 @@ deficiency:
     hyponatremia can cause brain edema, seizures, coma, and death. Mild chronic
     hyponatremia has been associated with attention deficits, gait instability, falls,
     bone loss, fractures, and increased cardiovascular mortality.
-  phenotypes:
+  sequelae:
     - name: Cerebral edema
       phenotype_term:
         preferred_term: cerebral edema

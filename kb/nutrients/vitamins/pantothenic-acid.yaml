@@ -131,7 +131,7 @@ deficiency:
     painful burning and tingling in feet that was relieved by pantothenic acid supplementation.
     Experimentally induced deficiency causes headache, fatigue, insomnia, intestinal
     disturbances, and numbness and tingling of hands and feet.
-  phenotypes:
+  sequelae:
     - name: Paresthesia
       phenotype_term:
         preferred_term: paresthesia

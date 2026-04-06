@@ -60,7 +60,7 @@ deficiency:
     pain. Severe hypokalemia may result in muscular paralysis or abnormal heart rhythms
     (cardiac arrhythmias) that can be fatal. Low dietary potassium alone does not generally
     result in hypokalemia but can precipitate it in patients at risk.
-  phenotypes:
+  sequelae:
     - name: Muscle weakness
       phenotype_term:
         preferred_term: muscle weakness
