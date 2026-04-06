@@ -425,6 +425,44 @@ disease_associations:
         supports: SUPPORT
         snippet: "In randomised controlled trials, relative risks for all cause mortality were 0.89 (0.80 to 0.99) for vitamin D3 supplementation and 1.04 (0.97 to 1.11) for vitamin D2 supplementation"
         explanation: Systematic review and meta-analysis of 73 cohort studies and 22 RCTs showing vitamin D3 supplementation significantly reduces overall mortality
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Vitamin D deficiency is associated with increased risk of Alzheimer's
+      disease. A 7-year follow-up study found higher vitamin D dietary intake
+      was associated with 77% lower risk of AD in elderly women. Meta-analyses
+      confirm that vitamin D deficiency (25(OH)D <50 nmol/L) increases AD risk
+      by ~21%. A Mendelian randomization study provides evidence supporting a
+      causal relationship, with a 1-SD decrease in 25OHD increasing AD risk by
+      25%. Intervention trials are limited and inconclusive.
+    population_context: Older adults; vitamin D deficiency prevalent in 70-90% of elderly
+    mic_references:
+      - 217
+      - 218
+      - 220
+      - 226
+      - 229
+      - 232
+      - 235
+    evidence:
+      - reference: PMID:22503994
+        supports: SUPPORT
+        snippet: "Higher vitamin D dietary intake was associated with a lower risk of developing AD among older women."
+        explanation: 7-year prospective study of 498 elderly women showing 77% lower risk of Alzheimer's disease in the highest quintile of vitamin D dietary intake
+      - reference: PMID:26231781
+        supports: SUPPORT
+        snippet: "subjects with deficient vitamin D status (25(OH)D level < 50 nmol/L) were at increased risk of developing AD by 21% compared with those possessing 25(OH)D level > 50 nmol/L"
+        explanation: Meta-analysis of 10 study populations showing vitamin D deficiency increases Alzheimer's disease risk by 21%
+      - reference: PMID:27856775
+        supports: SUPPORT
+        snippet: "MR analyses demonstrated that a 1-SD decrease in natural log-transformed 25OHD increased AD risk by 25% (odds ratio 1.25, 95% confidence interval 1.03-1.51, p = 0.021)"
+        explanation: Mendelian randomization study providing evidence for a causal relationship between genetically decreased vitamin D and increased Alzheimer disease risk
 
 toxicity:
   name: Vitamin D Toxicity

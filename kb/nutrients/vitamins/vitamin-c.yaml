@@ -465,6 +465,45 @@ disease_associations:
         supports: SUPPORT
         snippet: "A strong inverse association was found between plasma vitamin C level and diabetes risk. The odds ratio of diabetes in the top quintile of plasma vitamin C was 0.38 (95% confidence interval, 0.28-0.52)"
         explanation: EPIC-Norfolk study shows 62% lower diabetes risk in highest plasma vitamin C quintile
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Meta-analyses show significantly lower plasma vitamin C concentrations in
+      Alzheimer's disease patients compared to healthy controls. Vitamin C is
+      actively concentrated in the brain, and a higher CSF-to-plasma vitamin C
+      ratio predicts slower cognitive decline in AD. However, intervention trials
+      combining vitamin C with other antioxidants in AD patients have reduced
+      CSF oxidative stress biomarkers but have not demonstrated clinical benefit
+      and may even accelerate cognitive decline.
+    population_context: Observational evidence; supplementation trials in AD patients show no clinical benefit
+    mic_references:
+      - 113
+      - 114
+      - 115
+      - 117
+      - 119
+      - 121
+      - 122
+      - 123
+    evidence:
+      - reference: PMID:36158537
+        supports: SUPPORT
+        snippet: "The results show that there is a significant decrease in the plasma vitamin C levels of AD patients as compared to healthy controls (pooled SMD with random-effect model: -1.164, with 95%CI: -1.720 to -0.608, Z = -4.102, p = 0.00)"
+        explanation: Meta-analysis of 12 studies (n=1,100) confirming significantly lower plasma vitamin C in AD patients versus healthy controls
+      - reference: PMID:19158425
+        supports: SUPPORT
+        snippet: "CSF: plasma AA ratio predicts rate of decline in AD. This relationship may indicate that the CSF: plasma AA ratio is an index of AA availability to the brain or may be an artifact of a relationship between blood-brain barrier impairment and neurodegeneration"
+        explanation: Longitudinal study showing higher CSF-to-plasma vitamin C ratio at baseline predicted slower cognitive decline at one year in AD patients
+      - reference: PMID:22431837
+        supports: REFUTE
+        snippet: "accelerated decline in Mini-Mental State Examination scores occurred in the E/C/ALA group, a potential safety concern"
+        explanation: RCT of vitamin C plus vitamin E plus alpha-lipoic acid in mild-to-moderate AD found reduced CSF oxidative stress but faster cognitive decline, raising a safety concern about antioxidant supplementation in AD
 
 recommendations:
   rda:

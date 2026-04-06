@@ -120,6 +120,68 @@ disease_associations:
     mic_references:
       - 68
       - 69
+  - name: Moderate Alcohol and Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses report that light-to-moderate alcohol consumption in older
+      adults is associated with a decreased risk of dementia and Alzheimer's
+      disease compared to abstention. A comprehensive meta-analysis of 143
+      studies found the average risk ratio for dementia associated with moderate
+      social drinking was 0.77. A meta-analysis of 15 prospective studies found
+      light-to-moderate drinkers had a 28% reduced risk of AD (RR 0.72).
+    population_context: Light-to-moderate social drinkers aged 55+ years
+    mic_references:
+      - 93
+      - 96
+      - 97
+      - 99
+    evidence:
+      - reference: PMID:21857787
+        supports: SUPPORT
+        snippet: "the average ratio of risk for cognitive risk (dementia or cognitive impairment/decline) associated with moderate \"social\" (not alcoholic) drinking of alcohol is 0.77, with nondrinkers as the reference group. The benefit of moderate drinking applied to all forms of dementia (dementia unspecified, Alzheimer's disease, and vascular dementia)"
+        explanation: Comprehensive review and meta-analysis of 143 studies showing moderate social drinking associated with 23% reduced risk of dementia including Alzheimer's disease
+      - reference: PMID:19546653
+        supports: SUPPORT
+        snippet: "The pooled relative risks (RRs) of AD, VaD, and Any dementia for light to moderate drinkers compared with nondrinkers were 0.72 (95% CI = 0.61-0.86), 0.75 (95% CI = 0.57-0.98), and 0.74 (95% CI = 0.61-0.91), respectively"
+        explanation: Meta-analysis of 15 prospective studies showing 28% reduced risk of Alzheimer's disease in light-to-moderate drinkers compared to nondrinkers
+  - name: Heavy Alcohol and Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption (>3-4 drinks/day) and alcoholism are known
+      to increase the risk of cognitive impairment and dementia. A meta-analysis
+      found widespread and sustained cognitive deficits across 11 domains in
+      alcoholism, with significant impairment persisting for up to one year
+      after detoxification. MRI studies show brain atrophy, a characteristic
+      of both Alzheimer's and alcoholic dementia, is greater in alcohol
+      consumers.
+    population_context: Heavy drinkers and those with alcohol dependence
+    mic_references:
+      - 93
+      - 94
+      - 95
+      - 100
+      - 102
+    evidence:
+      - reference: PMID:22264351
+        supports: SUPPORT
+        snippet: "Findings revealed moderate impairment across 11 cognitive domains during short-term abstinence, with moderate impairment across 10 domains during intermediate term abstinence"
+        explanation: Meta-analysis of 62 studies showing widespread and sustained cognitive deficits across 11 domains in alcoholism, persisting for up to one year of abstinence
+      - reference: PMID:21857787
+        supports: SUPPORT
+        snippet: "heavy drinking was associated with nonsignificantly higher cognitive risk for dementia and cognitive impairment"
+        explanation: Comprehensive review confirming heavy drinking is associated with increased cognitive risk, in contrast to the protective effect of moderate consumption
 
 toxicity:
   name: Alcohol Safety Concerns

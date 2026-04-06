@@ -192,7 +192,7 @@ def protective_to_edge(
         object_category="biolink:Disease",
         qualifiers=qualifiers if qualifiers else None,
         publications=publications if publications else None,
-
+        supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -236,7 +236,7 @@ def risk_factor_to_edge(
         object_category="biolink:Disease",
         qualifiers=qualifiers if qualifiers else None,
         publications=publications if publications else None,
-
+        supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -272,7 +272,7 @@ def marker_to_edge(
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Disease",
         publications=publications if publications else None,
-
+        supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -309,7 +309,7 @@ def deficiency_causes_to_edge(
         object_category="biolink:Disease",
         qualifiers=["context:deficiency"],
         publications=publications if publications else None,
-
+        supporting_text=supporting_text if supporting_text else None,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,

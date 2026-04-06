@@ -239,6 +239,35 @@ disease_associations:
         supports: SUPPORT
         snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver"
         explanation: Demonstrates causal relationship between choline deficiency and fatty liver
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    description: |
+      Acetylcholine deficits and abnormal phospholipid metabolism are
+      hallmarks of Alzheimer's disease. While cholinesterase inhibitors show
+      modest benefit, trials of lecithin (phosphatidylcholine) supplementation
+      have not demonstrated benefit over placebo for AD or cognitive impairment.
+      Limited data on citicoline (CDP-choline) suggest possible cognitive
+      improvement but study quality is poor.
+    population_context: Patients with Alzheimer disease or dementia
+    mic_references:
+      - 12
+      - 82
+      - 83
+      - 84
+    evidence:
+      - reference: PMID:12917896
+        supports: REFUTE
+        snippet: "No trials reported any clear clinical benefit of lecithin for Alzheimer's disease or Parkinsonian dementia"
+        explanation: Cochrane review of 12 randomized trials (265 AD patients) found no clinical benefit of lecithin supplementation for Alzheimer's disease
+      - reference: PMID:36678257
+        supports: PARTIAL
+        snippet: "Overall, citicoline improved cognitive status, with pooled standardized mean differences ranging from 0.56 (95% CI: 0.37-0.75) to 1.57 (95% CI: 0.77-2.37) in different sensitivity analyses. The overall quality of the studies was poor"
+        explanation: Systematic review and meta-analysis found citicoline improved cognitive function in patients with MCI, AD, or post-stroke dementia, but study quality was generally poor with significant risk of bias
 
 nutrient_interactions:
   - name: Folate and Choline Interrelationship

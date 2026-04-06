@@ -488,6 +488,42 @@ disease_associations:
     mic_references:
       - 64
       - 66
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Dysregulation of iron homeostasis and abnormal brain iron accumulation are
+      observed in Alzheimer's disease. This accumulation does not appear to
+      result from increased dietary iron but from disrupted cellular iron
+      regulation, involving proteins such as amyloid precursor protein (APP) and
+      tau. Excess brain iron promotes oxidative damage. A meta-analysis found
+      significantly lower serum iron levels in AD patients, suggesting altered
+      peripheral-to-brain iron distribution rather than systemic iron excess.
+    population_context: Brain iron accumulation in neurodegeneration; not related to dietary iron intake
+    mic_references:
+      - 11
+      - 12
+      - 115
+      - 116
+      - 117
+    evidence:
+      - reference: PMID:26545340
+        supports: SUPPORT
+        snippet: "Dysregulation of iron metabolism associated with cellular damage and oxidative stress is reported as a common event in several neurodegenerative disorders such as Alzheimer's, Parkinson's, and Huntington's diseases"
+        explanation: Review establishing that iron metabolism dysregulation and associated oxidative stress is a common event in Alzheimer's and other neurodegenerative diseases
+      - reference: PMID:24795635
+        supports: SUPPORT
+        snippet: "proteins directly implicated in the most prevalent neurodegenerative diseases, such as amyloid-β precursor protein, tau, α-synuclein, prion protein and huntingtin, have been connected to neuronal iron homeostatic control"
+        explanation: Review showing that key AD-related proteins (APP, tau) are involved in neuronal iron homeostasis, and their disruption may contribute to iron-mediated neurodegeneration
+      - reference: PMID:28966592
+        supports: SUPPORT
+        snippet: "Serum iron levels were significantly lower in AD patients than in healthy controls after excluded two studies [MD = -13.01, 95% CI (-20.75, -5.27); p = 0.001]"
+        explanation: Meta-analysis showing significantly lower serum iron in AD patients, consistent with altered iron distribution rather than systemic iron excess
 
 recommendations:
   rda:

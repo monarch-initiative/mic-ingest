@@ -163,6 +163,37 @@ disease_associations:
       - 66
       - 67
     notes: "Preliminary evidence; local effects may be key"
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    description: |
+      Curcumin has anti-amyloid and anti-inflammatory properties relevant to
+      Alzheimer's disease pathology. However, clinical trials of oral curcumin in
+      AD patients have not demonstrated cognitive benefit, likely due to poor
+      systemic bioavailability. A 24-week RCT of curcumin (2-4 g/day) in
+      mild-to-moderate AD found no differences in clinical or biomarker efficacy
+      measures. New formulations with improved bioavailability and trials
+      targeting pre-clinical stages are under investigation.
+    population_context: Patients with mild-to-moderate Alzheimer disease; limited by poor oral bioavailability
+    mic_references:
+      - 6
+      - 53
+      - 57
+      - 97
+      - 98
+    evidence:
+      - reference: PMID:23107780
+        supports: NO_EVIDENCE
+        snippet: "We were unable to demonstrate clinical or biochemical evidence of efficacy of Curcumin C3 Complex(®) in AD in this 24-week placebo-controlled trial although preliminary data suggest limited bioavailability of this compound"
+        explanation: 24-week RCT of curcumin (2-4 g/day) in 36 mild-to-moderate AD patients found no clinical or biomarker efficacy, with very low plasma curcumin levels
+      - reference: PMID:26652155
+        supports: PARTIAL
+        snippet: "clinical studies of curcumin have revealed limited effects to date, most likely because of curcumin's relatively low solubility and bioavailability, and because of selection of cohorts with diagnosed AD, in whom there is already major neuropathology"
+        explanation: Review concluding that curcumin has neuroprotective properties in preclinical models but clinical benefit is limited by poor bioavailability; new formulations and targeting earlier disease stages may improve outcomes
 
 drug_interactions:
   - name: Anticoagulants

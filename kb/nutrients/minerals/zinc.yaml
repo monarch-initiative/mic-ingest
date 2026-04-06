@@ -470,6 +470,40 @@ disease_associations:
         explanation: Meta-analysis of 7 RCTs with zinc lozenges at doses above 75 mg/day showing a 33% reduction in cold duration, with no significant difference between zinc acetate and zinc gluconate formulations.
     mic_references:
       - 1
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    description: |
+      Abnormal zinc homeostasis has been reported in Alzheimer's disease, with
+      meta-analyses showing lower serum zinc in AD patients compared to healthy
+      controls. A randomized, placebo-controlled trial of slow-release zinc
+      acetate (150 mg/day for six months) in mild-to-moderate AD patients
+      corrected low zinc status and decreased serum free copper; post hoc
+      analysis of participants over 70 showed zinc supplementation prevented
+      deterioration of cognition scores.
+    population_context: Patients with mild-to-moderate Alzheimer disease
+    mic_references:
+      - 158
+      - 159
+      - 160
+      - 161
+    evidence:
+      - reference: PMID:28966592
+        supports: SUPPORT
+        snippet: "the serum zinc levels were significantly lower in AD patients than in healthy controls [MD = -6.12, 95% CI (-9.55, -2.69); p = 0.0005]"
+        explanation: Meta-analysis of case-control studies demonstrating significantly lower serum zinc levels in Alzheimer's disease patients
+      - reference: PMID:25697706
+        supports: SUPPORT
+        snippet: "Our meta-analysis indicated that serum zinc appears significantly decreased in AD patients compared with healthy controls, and this result is confirmed when serum and plasma studies were analyzed together"
+        explanation: Meta-analysis of 27 studies confirming significantly decreased serum zinc in AD patients
+      - reference: PMID:22438177
+        supports: SUPPORT
+        snippet: "In a small blinded study we carried out, post hoc analysis revealed that 6 months of zinc therapy resulted in significant benefit relative to placebo controls in two cognitive measuring systems"
+        explanation: Blinded trial showing zinc therapy provided cognitive benefit in AD patients, possibly by lowering copper toxicity or direct neuronal benefit
 
 recommendations:
   rda:

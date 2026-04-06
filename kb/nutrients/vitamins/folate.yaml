@@ -937,9 +937,46 @@ disease_associations:
     snippet: "Folic acid supplementation improved Full Scale IQ (p = .031; effect
       size d = 0.168), Digit Span (p = .009; d = 0.176), and Block Design (p = .036;
       effect size d = 0.146) scores at 6 months in comparison to the control."
-    explanation: Chinese RCT showing folic acid supplementation (400 mcg/day) 
-      improved cognitive function in older adults with MCI in a 
+    explanation: Chinese RCT showing folic acid supplementation (400 mcg/day)
+      improved cognitive function in older adults with MCI in a
       non-fortification setting
+
+- name: Alzheimer Disease
+  description: |
+    The MIC page includes a dedicated section on Alzheimer's disease within
+    cognitive impairment. Folate intake at or above the RDA was associated with
+    a 55% reduced risk of AD in the Baltimore Longitudinal Study of Aging.
+    Hyperhomocysteinemia, which results from folate deficiency, is associated
+    with a 2.5-fold increased risk of AD in prospective studies. B-vitamin
+    treatment including folate reduces gray matter atrophy in AD-vulnerable
+    brain regions by up to sevenfold in patients with elevated homocysteine.
+  disease_term:
+    preferred_term: Alzheimer disease
+    term:
+      id: MONDO:0004975
+      label: Alzheimer disease
+  relationship_type: RISK_FACTOR
+  direction: DECREASED
+  population_context: Older adults; benefits strongest in those with elevated
+    homocysteine
+  mic_references:
+    - 160
+    - 162
+    - 163
+    - 178
+  evidence:
+    - reference: PMID:19595811
+      supports: SUPPORT
+      snippet: "total intake of folate at or above the RDA (RR, 0.45; 95% CI, 0.21 to 0.97) was associated with a significant decreased risk of AD"
+      explanation: Baltimore Longitudinal Study of Aging showing folate intake at or above the RDA associated with 55% reduced risk of Alzheimer's disease over 9.3 years of follow-up
+    - reference: PMID:18479766
+      supports: SUPPORT
+      snippet: "Analysis of prospective cohort studies (2569 subjects) revealed a pooled relative risk for AD in HHcy of 2.5 (1.38-4.56, p<0.01)"
+      explanation: Systematic review finding that hyperhomocysteinemia confers a 2.5-fold increased risk of Alzheimer's disease in prospective studies, with lower folate levels in AD patients
+    - reference: PMID:23690582
+      supports: SUPPORT
+      snippet: "B-vitamin treatment reduces, by as much as seven fold, the cerebral atrophy in those gray matter (GM) regions specifically vulnerable to the AD process, including the medial temporal lobe."
+      explanation: VITACOG secondary analysis showing B vitamins including folate dramatically reduced atrophy of AD-vulnerable gray matter regions
 
 - name: Breast Cancer
   description: |

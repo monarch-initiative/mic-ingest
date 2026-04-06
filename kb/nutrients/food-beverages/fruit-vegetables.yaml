@@ -142,6 +142,39 @@ disease_associations:
         supports: SUPPORT
         snippet: "Intake of ≤1 serving/day of fruit and vegetables combined was associated with 39% higher hip fracture risk (pooled adjusted HR, 1.39; 95% confidence interval ... 1.20 to 1.58) in comparison with moderate intake (>3 and ≤5 servings/day)"
         explanation: Pooled analysis from multiple cohorts shows low fruit and vegetable intake associated with increased hip fracture risk
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: PROTECTIVE
+    direction: INCREASED
+    description: |
+      Prospective cohort studies consistently report inverse associations
+      between fruit and vegetable consumption and risk of developing dementia,
+      including Alzheimer's disease. The Kame Project found that drinking fruit
+      and vegetable juices at least 3 times per week was associated with a 76%
+      lower risk of probable AD. Mediterranean diets rich in fruits, vegetables,
+      nuts, and olive oil have been shown in a randomized trial to prevent
+      cognitive deterioration over 4 years.
+    population_context: Older adults; benefits seen across multiple prospective cohorts
+    mic_references:
+      - 87
+      - 88
+      - 90
+      - 91
+      - 95
+      - 96
+    evidence:
+      - reference: PMID:16945610
+        supports: SUPPORT
+        snippet: "Fruit and vegetable juices may play an important role in delaying the onset of Alzheimer's disease, particularly among those who are at high risk for the disease."
+        explanation: Kame Project prospective cohort of 1,836 Japanese Americans showing 76% reduced risk of probable Alzheimer's disease with frequent fruit and vegetable juice consumption
+      - reference: PMID:25961184
+        supports: SUPPORT
+        snippet: "In an older population, a Mediterranean diet supplemented with olive oil or nuts is associated with improved cognitive function"
+        explanation: Randomized clinical trial of 447 older adults showing Mediterranean diet supplemented with olive oil or nuts prevented cognitive deterioration over a median 4.1-year follow-up
 
 recommendations:
   notes: |
