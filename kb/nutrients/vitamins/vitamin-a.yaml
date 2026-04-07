@@ -99,6 +99,11 @@ functions:
 
 deficiency:
   name: Vitamin A Deficiency
+  phenotype_term:
+    preferred_term: Reduced circulating vitamin A concentration
+    term:
+      id: HP:0004905
+      label: Reduced circulating vitamin A concentration
   description: |
     Vitamin A deficiency usually results from inadequate intakes of vitamin A from
     animal products and fruits/vegetables. It predominantly affects children and
@@ -117,6 +122,11 @@ deficiency:
       mic_references:
         - 39
         - 40
+      evidence:
+        - reference: PMID:35294044
+          supports: SUPPORT
+          snippet: "VAS reduced the incidence of diarrhoea (RR 0.85, 95% CI 0.82 to 0.87; 15 studies, 77,946 children; low-certainty evidence), measles (RR 0.45, 95% CI 0.30 to 0.69; 2 studies, 1,982 children; low-certainty evidence), Bitot's spots (RR 0.42, 95% CI 0.33 to 0.53; 5 studies, 1,063,278 children; moderate-certainty evidence), night blindness (RR 0.32, 95% CI 0.21 to 0.50; 2 studies, 22,972 children; moderate-certainty evidence)"
+          explanation: Cochrane meta-analysis demonstrating that vitamin A supplementation significantly reduces the incidence of night blindness in children, confirming vitamin A deficiency causes night blindness
 
     - name: Xerophthalmia
       phenotype_term:
@@ -129,6 +139,11 @@ deficiency:
       mic_references:
         - 39
         - 40
+      evidence:
+        - reference: PMID:22326691
+          supports: SUPPORT
+          snippet: "Vitamin A deficiency disorders include xerophthalmia and increased risk of infectious diseases, both of which increase risk of mortality. Xerophthalmia is also a leading cause of preventable blindness."
+          explanation: Epidemiological review confirming that xerophthalmia is a vitamin A deficiency disorder and a leading cause of preventable blindness
 
     - name: Bitot's Spots
       phenotype_term:
@@ -140,6 +155,11 @@ deficiency:
       context: Abnormal changes in the conjunctiva indicating moderate vitamin A deficiency
       mic_references:
         - 40
+      evidence:
+        - reference: PMID:35294044
+          supports: SUPPORT
+          snippet: "Bitot's spots (RR 0.42, 95% CI 0.33 to 0.53; 5 studies, 1,063,278 children; moderate-certainty evidence)"
+          explanation: Cochrane meta-analysis showing vitamin A supplementation significantly reduces incidence of Bitot's spots in over 1 million children, confirming Bitot's spots are caused by vitamin A deficiency
 
   at_risk_groups:
     - name: Children in Developing Countries

@@ -84,6 +84,11 @@ functions:
 
 deficiency:
   name: Vitamin E Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin E concentration
+    term:
+      id: HP:0100513
+      label: Decreased circulating vitamin E concentration
   description: |
     Vitamin E deficiency can be caused by fat malabsorption disorders or by genetic
     abnormalities affecting vitamin E transport. Severe deficiency results mainly in
@@ -119,6 +124,11 @@ deficiency:
       context: Injury to sensory nerves
       mic_references:
         - 24
+      evidence:
+        - reference: PMID:7958507
+          supports: SUPPORT
+          snippet: "A six-year-old Japanese boy had ataxia, mental retardation, peripheral neuropathy, proximal myopathy, hearing loss, retinitis pigmentosa and deficiencies in apolipoprotein AI, B, CII and CIII"
+          explanation: Case report describing peripheral neuropathy as a clinical feature in a patient whose neurological manifestations were compatible with vitamin E deficiency due to lipoprotein-related vitamin E malabsorption
 
     - name: Muscle Weakness
       phenotype_term:
@@ -130,6 +140,11 @@ deficiency:
       context: Myopathy associated with deficiency
       mic_references:
         - 24
+      evidence:
+        - reference: PMID:7958507
+          supports: SUPPORT
+          snippet: "A six-year-old Japanese boy had ataxia, mental retardation, peripheral neuropathy, proximal myopathy, hearing loss, retinitis pigmentosa and deficiencies in apolipoprotein AI, B, CII and CIII"
+          explanation: Case report describing proximal myopathy (muscle weakness) as a clinical feature compatible with vitamin E deficiency in a patient with lipoprotein-related vitamin E malabsorption
 
     - name: Retinopathy
       phenotype_term:
@@ -141,6 +156,11 @@ deficiency:
       context: Damage to retina of the eye
       mic_references:
         - 24
+      evidence:
+        - reference: PMID:7958507
+          supports: SUPPORT
+          snippet: "A six-year-old Japanese boy had ataxia, mental retardation, peripheral neuropathy, proximal myopathy, hearing loss, retinitis pigmentosa and deficiencies in apolipoprotein AI, B, CII and CIII"
+          explanation: Case report documenting retinitis pigmentosa (a form of retinopathy) as a clinical feature in a patient with neurological manifestations compatible with vitamin E deficiency
 
   at_risk_groups:
     - name: Individuals with Fat Malabsorption
@@ -173,21 +193,6 @@ deficiency:
     - 26
 
 disease_associations:
-  - name: Ataxia with Vitamin E Deficiency (AVED)
-    disease_term:
-      preferred_term: ataxia with vitamin E deficiency
-      term:
-        id: MONDO:0010188
-        label: familial isolated deficiency of vitamin E
-    relationship_type: DEFICIENCY_CAUSES
-    description: |
-      AVED is caused by autosomal recessive mutations in the TTPA gene encoding
-      alpha-TTP. Symptoms usually manifest in childhood (ages 5-15 years).
-      Lifelong high-dose vitamin E supplementation is required to prevent
-      neurological deterioration.
-    mic_references:
-      - 26
-
   - name: Immune Function in Elderly
     disease_term:
       preferred_term: impaired immunity

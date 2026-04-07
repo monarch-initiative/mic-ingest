@@ -144,6 +144,11 @@ deficiency:
         - 1
         - 9
         - 10
+      evidence:
+        - reference: PMID:3196050
+          supports: SUPPORT
+          snippet: "Clinical findings at presentation varied with dermatological signs (dermatitis and alopecia), neurological abnormalities (fits, hypotonia, and ataxia), and recurrent infections being the most common features"
+          explanation: Case series of 10 biotinidase deficiency patients identifies alopecia as a common dermatological presentation of biotin deficiency.
 
     - name: Dermatitis
       phenotype_term:
@@ -155,6 +160,11 @@ deficiency:
       context: Scaly red rash around eyes, nose, mouth, and genital area; termed "biotin deficient facies"
       mic_references:
         - 1
+      evidence:
+        - reference: PMID:3196050
+          supports: SUPPORT
+          snippet: "Clinical findings at presentation varied with dermatological signs (dermatitis and alopecia), neurological abnormalities (fits, hypotonia, and ataxia), and recurrent infections being the most common features"
+          explanation: Case series of 10 biotinidase deficiency patients identifies dermatitis as a common dermatological presentation of biotin deficiency.
 
     - name: Depression
       phenotype_term:
@@ -177,6 +187,11 @@ deficiency:
       context: Neurologic symptom in adults
       mic_references:
         - 1
+      evidence:
+        - reference: PMID:3196050
+          supports: SUPPORT
+          snippet: "Clinical findings at presentation varied with dermatological signs (dermatitis and alopecia), neurological abnormalities (fits, hypotonia, and ataxia), and recurrent infections being the most common features"
+          explanation: Case series of 10 biotinidase deficiency patients identifies ataxia among the common neurological abnormalities of biotin deficiency.
 
     - name: Seizures
       phenotype_term:
@@ -188,6 +203,11 @@ deficiency:
       context: Neurologic symptom in severe deficiency
       mic_references:
         - 1
+      evidence:
+        - reference: PMID:3196050
+          supports: SUPPORT
+          snippet: "Clinical findings at presentation varied with dermatological signs (dermatitis and alopecia), neurological abnormalities (fits, hypotonia, and ataxia), and recurrent infections being the most common features"
+          explanation: Case series of 10 biotinidase deficiency patients identifies fits (seizures) among the common neurological abnormalities of biotin deficiency.
 
   at_risk_groups:
     - name: Pregnant women
@@ -585,6 +605,11 @@ references:
     findings:
       - statement: Substantial proportion of pregnant women are marginally biotin deficient
         supporting_text: "In a recent pilot study, activity of PCC in peripheral blood lymphocytes was decreased in 18 of 22 pregnant women"
+  - reference: PMID:3196050
+    title: "Biotinidase deficiency: a survey of 10 cases"
+    findings:
+      - statement: Biotinidase deficiency presents with dermatological signs (dermatitis and alopecia) and neurological abnormalities (fits, hypotonia, ataxia)
+        supporting_text: "Clinical findings at presentation varied with dermatological signs (dermatitis and alopecia), neurological abnormalities (fits, hypotonia, and ataxia), and recurrent infections being the most common features"
 
 notes: |
   This nutrient file was extracted from the Linus Pauling Institute Micronutrient

@@ -95,6 +95,11 @@ functions:
 
 deficiency:
   name: Choline Deficiency
+  disease_term:
+    preferred_term: choline deficiency
+    term:
+      id: MONDO:0004575
+      label: choline deficiency disease
   description: |
     Choline deficiency leads to nonalcoholic fatty liver disease (NAFLD) and
     signs of liver damage. In controlled studies, 77% of men and 80% of
@@ -220,25 +225,6 @@ disease_associations:
         snippet: "High intake and plasma level of choline in the mother seems to afford reduced risk of neural tube defects"
         explanation: Meta-analysis supports reduced NTD risk with higher maternal choline
 
-  - name: Nonalcoholic Fatty Liver Disease
-    disease_term:
-      preferred_term: fatty liver disease
-      term:
-        id: MONDO:0004790
-        label: fatty liver disease
-    relationship_type: DEFICIENCY_CAUSES
-    direction: DECREASED
-    description: |
-      Higher dietary choline intake is associated with reduced risk of
-      fatty liver disease, particularly in normal-weight women. Choline
-      deficiency directly causes fatty liver due to impaired VLDL secretion.
-    mic_references:
-      - 13
-    evidence:
-      - reference: PMID:17490963
-        supports: SUPPORT
-        snippet: "When deprived of dietary choline, 77% of men and 80% of postmenopausal women developed fatty liver"
-        explanation: Demonstrates causal relationship between choline deficiency and fatty liver
   - name: Alzheimer Disease
     disease_term:
       preferred_term: Alzheimer disease

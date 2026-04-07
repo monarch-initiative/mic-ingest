@@ -90,6 +90,11 @@ functions:
 
 deficiency:
   name: Riboflavin Deficiency (Ariboflavinosis)
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin B2 concentration
+    term:
+      id: HP:0100504
+      label: Decreased circulating vitamin B2 concentration
   description: |
     Ariboflavinosis is the medical name for clinical riboflavin deficiency, which occurs
     commonly in low- and middle-income countries. Riboflavin deficiency is rarely found
@@ -109,6 +114,11 @@ deficiency:
       mic_references:
         - 1
         - 3
+      evidence:
+        - reference: PMID:37603429
+          supports: SUPPORT
+          snippet: "Severe riboflavin deficiency, largely confined to low-income countries, clinically manifests as cheilosis, angular stomatitis, glossitis, seborrheic dermatitis, and severe anemia with erythroid hypoplasia"
+          explanation: Annual Reviews summary of riboflavin deficiency identifies angular stomatitis as one of the cardinal clinical manifestations of severe riboflavin deficiency.
 
     - name: Cheilosis
       phenotype_term:
@@ -121,6 +131,11 @@ deficiency:
       mic_references:
         - 1
         - 3
+      evidence:
+        - reference: PMID:37603429
+          supports: SUPPORT
+          snippet: "Severe riboflavin deficiency, largely confined to low-income countries, clinically manifests as cheilosis, angular stomatitis, glossitis, seborrheic dermatitis, and severe anemia with erythroid hypoplasia"
+          explanation: Annual Reviews summary of riboflavin deficiency identifies cheilosis as one of the cardinal clinical manifestations of severe riboflavin deficiency.
 
     - name: Glossitis
       phenotype_term:
@@ -133,6 +148,11 @@ deficiency:
       mic_references:
         - 1
         - 3
+      evidence:
+        - reference: PMID:37603429
+          supports: SUPPORT
+          snippet: "Severe riboflavin deficiency, largely confined to low-income countries, clinically manifests as cheilosis, angular stomatitis, glossitis, seborrheic dermatitis, and severe anemia with erythroid hypoplasia"
+          explanation: Annual Reviews summary of riboflavin deficiency identifies glossitis as one of the cardinal clinical manifestations of severe riboflavin deficiency.
 
     - name: Seborrheic Dermatitis
       phenotype_term:
@@ -145,6 +165,11 @@ deficiency:
       mic_references:
         - 1
         - 3
+      evidence:
+        - reference: PMID:37603429
+          supports: SUPPORT
+          snippet: "Severe riboflavin deficiency, largely confined to low-income countries, clinically manifests as cheilosis, angular stomatitis, glossitis, seborrheic dermatitis, and severe anemia with erythroid hypoplasia"
+          explanation: Annual Reviews summary of riboflavin deficiency identifies seborrheic dermatitis as one of the cardinal clinical manifestations of severe riboflavin deficiency.
 
     - name: Corneal Neovascularization
       phenotype_term:
@@ -169,6 +194,11 @@ deficiency:
       mic_references:
         - 1
         - 3
+      evidence:
+        - reference: PMID:37603429
+          supports: SUPPORT
+          snippet: "Severe riboflavin deficiency, largely confined to low-income countries, clinically manifests as cheilosis, angular stomatitis, glossitis, seborrheic dermatitis, and severe anemia with erythroid hypoplasia"
+          explanation: Annual Reviews summary of riboflavin deficiency identifies severe anemia (with erythroid hypoplasia) as one of the cardinal clinical manifestations of severe riboflavin deficiency.
 
   at_risk_groups:
     - name: Pregnant women

@@ -77,6 +77,11 @@ functions:
 
 deficiency:
   name: Iron Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating iron concentration
+    term:
+      id: HP:0040303
+      label: Decreased circulating iron concentration
   description: |
     Iron deficiency is the most common nutritional deficiency worldwide. It results
     from inadequate iron intake, poor absorption, or increased losses. Stages include
@@ -335,32 +340,6 @@ nutrient_interactions:
       - 55
 
 disease_associations:
-  - name: Iron Deficiency Anemia
-    description: |
-      Iron deficiency anemia is the most common form of anemia worldwide.
-      It is characterized by small, pale red blood cells (microcytic hypochromic
-      anemia) and reduced hemoglobin. Treatment involves iron supplementation
-      and addressing underlying causes of iron loss.
-    disease_term:
-      preferred_term: iron deficiency anemia
-      term:
-        id: MONDO:0001356
-        label: iron deficiency anemia
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Global public health concern
-    evidence:
-      - reference: PMID:20923825
-        supports: SUPPORT
-        snippet: "iron-deficiency anemia and iron deficiency without anemia during infancy and childhood can have long-lasting detrimental effects on neurodevelopment"
-        explanation: AAP clinical report confirms that iron deficiency anemia has significant health consequences, supporting the causal relationship between iron deficiency and anemia.
-      - reference: PMID:26926814
-        supports: SUPPORT
-        snippet: "Iron deficiency anemia, which can be associated with cognitive issues, is prevented and treated with iron supplements or increased intake of dietary iron"
-        explanation: Review confirms iron deficiency anemia can be associated with cognitive issues and is treatable with iron supplements, supporting the causal link between iron deficiency and this anemia.
-    mic_references:
-      - 14
-      - 15
-
   - name: Cognitive Development in Children
     description: |
       Iron deficiency, with or without anemia, in children has been associated
@@ -478,7 +457,7 @@ disease_associations:
       development.
     disease_term:
       preferred_term: anemia of pregnancy
-    relationship_type: DEFICIENCY_CAUSES
+    relationship_type: RISK_FACTOR
     population_context: Pregnant women
     evidence:
       - reference: PMID:26198451

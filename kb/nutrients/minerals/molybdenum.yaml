@@ -97,6 +97,11 @@ deficiency:
       context: Intractable seizures in inherited molybdenum cofactor deficiency
       mic_references:
         - 28
+      evidence:
+        - reference: PMID:34870926
+          supports: SUPPORT
+          snippet: "Individuals with early-onset MoCD typically present in the first days of life with severe encephalopathy, including refractory seizures"
+          explanation: GeneReviews entry on molybdenum cofactor deficiency confirms that refractory seizures are a hallmark feature of the early-onset form
 
     - name: Intellectual disability
       phenotype_term:
@@ -108,6 +113,11 @@ deficiency:
       context: Mental retardation in inherited molybdenum cofactor deficiency
       mic_references:
         - 28
+      evidence:
+        - reference: PMID:34870926
+          supports: SUPPORT
+          snippet: "Standard treatment for seizures, developmental delay / intellectual disability, spasticity/dystonia, and ectopia lentis"
+          explanation: GeneReviews entry on molybdenum cofactor deficiency identifies developmental delay/intellectual disability as a clinical feature requiring management
 
     - name: Lens dislocation
       phenotype_term:
@@ -119,6 +129,11 @@ deficiency:
       context: Dislocation of ocular lenses in MocoD and ISOD
       mic_references:
         - 28
+      evidence:
+        - reference: PMID:34870926
+          supports: SUPPORT
+          snippet: "Standard treatment for seizures, developmental delay / intellectual disability, spasticity/dystonia, and ectopia lentis"
+          explanation: GeneReviews entry on molybdenum cofactor deficiency identifies ectopia lentis (lens dislocation) as a clinical feature requiring management
 
   at_risk_groups:
     - name: Patients on total parenteral nutrition
@@ -220,31 +235,6 @@ nutrient_interactions:
       - 15
 
 disease_associations:
-  - name: Molybdenum Cofactor Deficiency
-    description: |
-      Molybdenum cofactor deficiency (MocoD) is a rare inherited disorder caused by
-      mutations in genes required for Moco biosynthesis. Type A (MOCS1 mutations) and
-      Type B (MOCS2 mutations) result in loss of sulfite oxidase activity and severe
-      neurological dysfunction. A replacement therapy (fosdenopterin) is now available
-      for Type A deficiency. The incidence is estimated at 1 in 100,000 to 200,000
-      live births.
-    disease_term:
-      preferred_term: molybdenum cofactor deficiency
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Inherited autosomal recessive disorder
-    evidence:
-      - reference: PMID:21031595
-        supports: SUPPORT
-        snippet: "Mutations in the genes encoding the biosynthetic MoCo pathway enzymes abrogate the activities of all molybdoenzymes and result in the \"combined\" form of MoCo deficiency, which is clinically very similar to isolated sulfite oxidase deficiency, caused by mutations in the gene for the corresponding apoenzyme."
-        explanation: Comprehensive review of MoCo deficiency mutations in MOCS1 (type A) and MOCS2 (type B) genes, confirming that these defects result in progressive neurological damage and early childhood death.
-    mic_references:
-      - 28
-      - 30
-      - 31
-      - 32
-      - 42
-      - 45
-
   - name: Esophageal Cancer
     description: |
       The soil in regions with high esophageal cancer incidence (e.g., Linxian, China)

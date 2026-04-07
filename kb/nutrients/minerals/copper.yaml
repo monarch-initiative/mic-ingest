@@ -126,6 +126,11 @@ functions:
 
 deficiency:
   name: Copper Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating copper concentration
+    term:
+      id: HP:0011967
+      label: Decreased circulating copper concentration
   description: |
     Clinically evident dietary copper deficiency is relatively uncommon. Serum copper and
     ceruloplasmin levels may fall to 30% of normal in severe deficiency. One of the most
@@ -145,6 +150,11 @@ deficiency:
       mic_references:
         - 4
         - 33
+      evidence:
+        - reference: PMID:9587135
+          supports: SUPPORT
+          snippet: "The most frequent clinical manifestations of copper deficiency are anemia, neutropenia, and bone abnormalities."
+          explanation: Authoritative review identifies anemia as one of the most frequent clinical manifestations of copper deficiency.
 
     - name: Neutropenia
       phenotype_term:
@@ -157,6 +167,11 @@ deficiency:
       mic_references:
         - 37
         - 38
+      evidence:
+        - reference: PMID:9587135
+          supports: SUPPORT
+          snippet: "The most frequent clinical manifestations of copper deficiency are anemia, neutropenia, and bone abnormalities."
+          explanation: Authoritative review identifies neutropenia as one of the most frequent clinical manifestations of copper deficiency.
 
     - name: Osteoporosis
       phenotype_term:
@@ -169,6 +184,11 @@ deficiency:
       mic_references:
         - 2
         - 8
+      evidence:
+        - reference: PMID:9587135
+          supports: SUPPORT
+          snippet: "The most frequent clinical manifestations of copper deficiency are anemia, neutropenia, and bone abnormalities."
+          explanation: Authoritative review identifies bone abnormalities (which include osteoporosis) as a frequent clinical manifestation of copper deficiency.
 
   at_risk_groups:
     - name: Infants with Menkes disease
@@ -377,23 +397,6 @@ disease_associations:
         snippet: "There are more than eighty anatomical, chemical and physiological similarities between animals deficient in Cu and individuals with IHD"
         explanation: Provides extensive evidence linking copper deficiency to ischemic heart disease through multiple physiological parallels
 
-  - name: Osteoporosis
-    description: |
-      Copper is required for lysyl oxidase activity, which is essential for collagen
-      and elastin cross-linking in bone. Copper deficiency may contribute to bone
-      demineralization and osteoporosis.
-    disease_term:
-      preferred_term: osteoporosis
-      term:
-        id: MONDO:0005298
-        label: osteoporosis
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Copper deficiency may increase risk
-    mic_references:
-      - 100
-      - 101
-      - 102
-
   - name: Wilson Disease
     description: |
       Wilson disease is an autosomal recessive disorder caused by mutations in the
@@ -420,28 +423,6 @@ disease_associations:
         supports: SUPPORT
         snippet: "This disease is caused by copper overload caused by reduced copper excretion secondary to genetic mutations in the ATP7B gene"
         explanation: Confirms Wilson disease mechanism of copper overload from impaired excretion due to ATP7B mutations
-
-  - name: Menkes Disease
-    description: |
-      Menkes disease is an X-linked recessive disorder caused by mutations in the
-      ATP7A gene, leading to severe systemic copper deficiency. The disorder is
-      characterized by developmental delay, hypotonia, seizures, and kinky hair.
-    disease_term:
-      preferred_term: Menkes disease
-      term:
-        id: MONDO:0010651
-        label: Menkes disease
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Inherited disorder of copper metabolism
-    mic_references:
-      - 50
-      - 51
-      - 52
-    evidence:
-      - reference: PMID:23281160
-        supports: SUPPORT
-        snippet: "Menkes disease (MD) is a lethal multisystemic disorder of copper metabolism. Progressive neurodegeneration and connective tissue disturbances, together with the peculiar \"kinky\" hair, are the main manifestations"
-        explanation: Comprehensive review confirming Menkes disease features including neurodegeneration, connective tissue defects, and characteristic hair abnormalities
 
   - name: Alzheimer Disease
     description: |

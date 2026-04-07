@@ -75,6 +75,11 @@ functions:
 
 deficiency:
   name: Zinc Deficiency
+  phenotype_term:
+    preferred_term: Decreased serum zinc
+    term:
+      id: HP:0031831
+      label: Decreased serum zinc
   description: |
     Severe zinc deficiency was first characterized through the study of individuals with
     acrodermatitis enteropathica, a genetic disorder of impaired zinc uptake and transport.
@@ -116,6 +121,11 @@ deficiency:
       context: Characteristic feature of severe zinc deficiency
       mic_references:
         - 33
+      evidence:
+        - reference: PMID:29558383
+          supports: SUPPORT
+          snippet: "Clinical zinc deficiency in preterm neonates has been well documented, characterized by growth impairment and dermatitis"
+          explanation: Review notes that dermatitis is a documented feature of clinical zinc deficiency.
 
     - name: Diarrhea
       phenotype_term:
@@ -128,6 +138,15 @@ deficiency:
       mic_references:
         - 33
         - 66
+      evidence:
+        - reference: PMID:15189121
+          supports: SUPPORT
+          snippet: "Zinc supplementation has been shown to have a positive effect on the incidence of diarrhea (18% reduction, 95% CI: 7-28%)"
+          explanation: Meta-analytic evidence shows zinc supplementation reduces diarrhea incidence, indirectly supporting that zinc deficiency contributes to diarrhea.
+        - reference: PMID:15189121
+          supports: SUPPORT
+          snippet: "Zinc has also proven to decrease the duration of diarrhea by 15% (95% CI: 5-24%)."
+          explanation: Zinc supplementation also reduces diarrhea duration, supporting the causal role of zinc deficiency in diarrheal illness.
 
     - name: Immune dysfunction
       phenotype_term:

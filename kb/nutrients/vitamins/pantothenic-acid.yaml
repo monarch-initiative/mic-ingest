@@ -125,6 +125,11 @@ functions:
 
 deficiency:
   name: Pantothenic Acid Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin B5 concentration
+    term:
+      id: HP:0100505
+      label: Decreased circulating vitamin B5 concentration
   description: |
     Naturally occurring pantothenic acid deficiency in humans is very rare and has been
     observed only in cases of severe malnutrition. WWII prisoners experienced numbness and
@@ -323,32 +328,6 @@ nutrient_interactions:
 drug_interactions: []
 
 disease_associations:
-  - name: Pantothenate Kinase-Associated Neurodegeneration (PKAN)
-    description: |
-      Autosomal recessive mutations in the PANK2 gene result in impaired synthesis of
-      4'-phosphopantetheine and coenzyme A. This rare disorder is associated with iron
-      accumulation in the brain and characterized by visual and intellectual impairments,
-      dystonia, speech abnormalities, behavioral difficulties, and personality disorders.
-      Two forms exist: classic PKAN with onset before age 10, and atypical PKAN with
-      onset after age 10.
-    disease_term:
-      preferred_term: pantothenate kinase-associated neurodegeneration
-      term:
-        id: MONDO:0009319
-        label: pantothenate kinase-associated neurodegeneration
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Individuals with PANK2 mutations
-    mic_references:
-      - 16
-      - 17
-      - 18
-      - 19
-    evidence:
-      - reference: PMID:24209433
-        supports: SUPPORT
-        snippet: "PKAN and PLAN are autosomal recessive NBIA disorders due to mutations in PANK2 and PLA2G6, respectively"
-        explanation: Confirms PKAN is caused by PANK2 mutations
-
   - name: Wound Healing
     description: |
       Calcium D-pantothenate and pantothenol may accelerate wound healing. In vitro studies

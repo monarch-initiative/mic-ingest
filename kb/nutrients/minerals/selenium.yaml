@@ -79,6 +79,11 @@ functions:
 
 deficiency:
   name: Selenium Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating selenium concentration
+    term:
+      id: HP:0033192
+      label: Decreased circulating selenium concentration
   description: |
     Insufficient selenium intake may negatively affect the activity of several
     selenium-responsive enzymes. Even when severe, isolated selenium deficiency does not
@@ -100,6 +105,11 @@ deficiency:
       mic_references:
         - 52
         - 54
+      evidence:
+        - reference: PMID:29627894
+          supports: SUPPORT
+          snippet: "Giving selenium supplements to the residents of KD endemic areas significantly reduced the incidence of KD. Selenium deficiency is therefore a cause of KD by the criterion of causation in modern epidemiology."
+          explanation: Systematic review and meta-analysis establishes selenium deficiency as a causal factor for Keshan disease (a fatal dilated cardiomyopathy) by formal epidemiologic criteria.
 
     - name: Kashin-Beck disease
       phenotype_term:
@@ -271,30 +281,6 @@ nutrient_interactions:
       - 45
 
 disease_associations:
-  - name: Keshan Disease
-    description: |
-      A fatal form of dilated cardiomyopathy first described in a selenium-deficient
-      region in China. The incidence is closely associated with very low dietary
-      selenium intakes and poor selenium status. Selenium supplementation can prevent
-      the disease but cannot reverse heart damage. Coxsackie virus B3 may be an
-      additional factor, with selenium deficiency potentially increasing viral
-      virulence.
-    disease_term:
-      preferred_term: Keshan disease
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Selenium-deficient regions of China
-    evidence:
-      - reference: PMID:29627894
-        supports: SUPPORT
-        snippet: "Giving selenium supplements to the residents of KD endemic areas significantly reduced the incidence of KD. Selenium deficiency is therefore a cause of KD by the criterion of causation in modern epidemiology."
-        explanation: Systematic review and meta-analysis of 17 articles (41 studies, 1,983,238 subjects) demonstrating selenium supplementation reduces Keshan disease incidence with protection rates over 80%.
-    mic_references:
-      - 52
-      - 54
-      - 55
-      - 56
-      - 57
-
   - name: Cancer
     description: |
       Animal studies show selenium supplementation significantly reduces tumor incidence

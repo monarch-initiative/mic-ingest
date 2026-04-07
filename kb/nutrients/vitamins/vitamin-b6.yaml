@@ -88,6 +88,11 @@ functions:
 
 deficiency:
   name: Vitamin B6 Deficiency
+  phenotype_term:
+    preferred_term: Reduced circulating vitamin B6 circulating
+    term:
+      id: HP:0008326
+      label: Reduced circulating vitamin B6 circulating
   description: |
     Severe vitamin B6 deficiency is uncommon. Symptoms include neurological
     manifestations such as irritability, depression, confusion, and seizures.
@@ -116,6 +121,11 @@ deficiency:
       context: Observed in infants with severe deficiency; also seen with pyridoxine-dependent epilepsy
       mic_references:
         - 7
+      evidence:
+        - reference: PMID:16763894
+          supports: SUPPORT
+          snippet: "Inadequate levels of pyridoxal phosphate in the brain cause neurological dysfunction, particularly epilepsy."
+          explanation: Establishes that inadequate pyridoxal phosphate (the active form of vitamin B6) in the brain causes neurological dysfunction, particularly epilepsy/seizures
 
     - name: Depression
       phenotype_term:
@@ -127,6 +137,11 @@ deficiency:
       context: Neurological symptom in severe deficiency
       mic_references:
         - 12
+      evidence:
+        - reference: PMID:33912967
+          supports: SUPPORT
+          snippet: "the intake of dietary vitamin B1, B2, B6, and B12 may be inversely associated with the risk of depression; the inverse associations observed between depression and intake of dietary vitamin B2, B6, and B12 were significant in females, but not in males."
+          explanation: Systematic review and meta-analysis of observational studies showing that dietary vitamin B6 intake is inversely associated with depression risk, supporting the link between vitamin B6 deficiency and depression
 
     - name: Glossitis
       phenotype_term:

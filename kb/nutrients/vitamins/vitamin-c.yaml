@@ -139,6 +139,11 @@ functions:
 
 deficiency:
   name: Scurvy
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin C concentration
+    term:
+      id: HP:0100510
+      label: Decreased circulating vitamin C concentration
   description: |
     Severe vitamin C deficiency has been known for many centuries as the potentially
     fatal disease, scurvy. By the late 1700s, the British navy was aware that scurvy

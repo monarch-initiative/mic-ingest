@@ -150,6 +150,11 @@ functions:
 
 deficiency:
   name: Folate Deficiency
+  phenotype_term:
+    preferred_term: Reduced blood folate concentration
+    term:
+      id: HP:0100507
+      label: Reduced blood folate concentration
   description: |
     Clinical folate deficiency leads to megaloblastic anemia, which is reversible
     with folic acid treatment. Rapidly dividing cells like those derived from bone

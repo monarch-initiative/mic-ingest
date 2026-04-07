@@ -52,6 +52,11 @@ functions:
 
 deficiency:
   name: Potassium Deficiency (Hypokalemia)
+  phenotype_term:
+    preferred_term: Hypokalemia
+    term:
+      id: HP:0002900
+      label: Hypokalemia
   description: |
     Abnormally low plasma potassium concentration (hypokalemia) is most commonly a result
     of excessive loss of potassium from prolonged vomiting or diarrhea, use of diuretics,
@@ -72,6 +77,11 @@ deficiency:
       mic_references:
         - 1
         - 6
+      evidence:
+        - reference: PMID:29494072
+          supports: SUPPORT
+          snippet: "Symptoms of hypokalemia vary depending on the severity and underlying cause but may include muscle weakness, fatigue, cramping, palpitations, and constipation"
+          explanation: StatPearls clinical review establishes muscle weakness as a hallmark symptom of hypokalemia (low potassium)
 
     - name: Cardiac arrhythmia
       phenotype_term:
@@ -84,6 +94,11 @@ deficiency:
       mic_references:
         - 1
         - 6
+      evidence:
+        - reference: PMID:29494072
+          supports: SUPPORT
+          snippet: "Severe hypokalemia can lead to life-threatening complications, such as fatal arrhythmias or respiratory muscle paralysis"
+          explanation: StatPearls clinical review establishes that severe hypokalemia causes potentially fatal cardiac arrhythmias
 
     - name: Constipation
       phenotype_term:
@@ -95,6 +110,11 @@ deficiency:
       context: Intestinal paralysis from hypokalemia
       mic_references:
         - 1
+      evidence:
+        - reference: PMID:29494072
+          supports: SUPPORT
+          snippet: "Symptoms of hypokalemia vary depending on the severity and underlying cause but may include muscle weakness, fatigue, cramping, palpitations, and constipation"
+          explanation: StatPearls clinical review identifies constipation as a recognized symptom of hypokalemia
 
   at_risk_groups:
     - name: Users of potassium-wasting diuretics

@@ -82,6 +82,11 @@ deficiency:
       mic_references:
         - 26
         - 28
+      evidence:
+        - reference: PMID:20629161
+          supports: SUPPORT
+          snippet: "We assessed the clinical outcome after coenzyme Q(10) (CoQ(10)) therapy in 14 patients presenting ataxia classified into two groups according to CoQ(10) values in muscle (deficient or not)"
+          explanation: Prospective study of CoQ10-responsive ataxia confirming the link between CoQ10 deficiency and ataxia
     - name: Myopathy
       phenotype_term:
         preferred_term: myopathy
@@ -92,6 +97,11 @@ deficiency:
       context: In primary CoQ10 deficiency
       mic_references:
         - 27
+      evidence:
+        - reference: PMID:17412732
+          supports: SUPPORT
+          snippet: "All patients presented with exercise intolerance, fatigue, proximal myopathy and high serum CK"
+          explanation: Confirms myopathy as a clinical manifestation of CoQ10 deficiency in patients with the myopathic form
     - name: Nephrotic syndrome
       phenotype_term:
         preferred_term: nephrotic syndrome

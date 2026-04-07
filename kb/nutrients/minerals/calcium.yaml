@@ -118,6 +118,11 @@ functions:
 
 deficiency:
   name: Calcium Deficiency
+  phenotype_term:
+    preferred_term: Hypocalcemia
+    term:
+      id: HP:0002901
+      label: Hypocalcemia
   description: |
     Low blood calcium (hypocalcemia) usually implies abnormal parathyroid function since the
     skeleton provides a large calcium reserve for maintaining normal blood levels. Other causes
@@ -147,6 +152,15 @@ deficiency:
       context: Long-term consequence of chronically inadequate calcium intake
       mic_references:
         - 1
+      evidence:
+        - reference: PMID:22609892
+          supports: SUPPORT
+          snippet: "Calcium also plays a role in preventing bone loss and osteoporotic fractures in later life."
+          explanation: Review establishes that adequate calcium intake helps prevent osteoporosis and that inadequate intake is implicated in bone loss and osteoporotic fractures.
+        - reference: PMID:22609892
+          supports: SUPPORT
+          snippet: "Adequate calcium intake throughout lifetime is important for bone health and the prevention of osteoporosis and related fractures."
+          explanation: Authoritative review concludes that lifetime calcium adequacy is required to prevent osteoporosis, supporting that calcium deficiency contributes to osteoporosis.
 
   at_risk_groups:
     - name: Postmenopausal women

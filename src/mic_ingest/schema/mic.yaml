@@ -98,8 +98,6 @@ enums:
         description: Supplementation may treat condition
       MARKER:
         description: Nutrient level indicates disease state
-      DEFICIENCY_CAUSES:
-        description: Deficiency of nutrient causes the condition
 
   InteractionTypeEnum:
     description: Type of drug-nutrient or nutrient-nutrient interaction

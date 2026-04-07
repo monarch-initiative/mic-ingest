@@ -62,6 +62,11 @@ deficiency:
       mic_references:
         - 5
         - 6
+      evidence:
+        - reference: PMID:26092033
+          supports: SUPPORT
+          snippet: "the initiation of water fluoridation results in reductions in dmft of 1.81"
+          explanation: Cochrane systematic review showing inadequate fluoride exposure (absence of water fluoridation) is associated with significantly higher dental caries (dmft), supporting the link between fluoride deficiency and dental caries
 
   at_risk_groups:
     - name: People in non-fluoridated water areas
