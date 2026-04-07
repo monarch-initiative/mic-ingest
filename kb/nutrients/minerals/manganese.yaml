@@ -83,6 +83,11 @@ functions:
 
 deficiency:
   name: Manganese Deficiency
+  phenotype_term:
+    preferred_term: Hypomanganesemia
+    term:
+      id: HP:0032098
+      label: Hypomanganesemia
   description: |
     Manganese deficiency is quite rare in humans. Signs of manganese deficiency vary
     among animal species and may include impaired growth, impaired reproductive function,
@@ -103,6 +108,11 @@ deficiency:
       context: Observed in young women fed manganese-poor diet
       mic_references:
         - 19
+      evidence:
+        - reference: PMID:6379130
+          supports: SUPPORT
+          snippet: "dietary Mn deficiency can result in impaired insulin secretion producing impaired carbohydrate metabolism"
+          explanation: Rat study demonstrating that dietary manganese deficiency causes impaired insulin secretion and impaired glucose tolerance, supporting the mechanistic link between manganese deficiency and glucose intolerance
 
     - name: Skeletal abnormalities
       phenotype_term:

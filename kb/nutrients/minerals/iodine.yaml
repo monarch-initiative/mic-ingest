@@ -65,6 +65,11 @@ deficiency:
       context: Result of impaired thyroid hormone synthesis
       mic_references:
         - 4
+      evidence:
+        - reference: PMID:22742605
+          supports: SUPPORT
+          snippet: "Iodine deficiency during pregnancy can cause maternal and fetal hypothyroidism and impair neurological development of the fetus."
+          explanation: Authoritative review establishes iodine deficiency as a cause of hypothyroidism.
 
     - name: Intellectual disability
       phenotype_term:
@@ -77,6 +82,15 @@ deficiency:
       mic_references:
         - 4
         - 11
+      evidence:
+        - reference: PMID:22742605
+          supports: SUPPORT
+          snippet: "The consequences depend upon the timing and severity of the hypothyroidism; the most severe manifestation is cretinism."
+          explanation: Authoritative review identifies cretinism (a syndrome including intellectual disability) as the most severe manifestation of iodine deficiency-related hypothyroidism during development.
+        - reference: PMID:22742605
+          supports: SUPPORT
+          snippet: "Two meta-analyses have estimated that iodine-deficient populations experience a mean reduction in IQ of 12-13.5 points."
+          explanation: Meta-analytic evidence demonstrates iodine deficiency causes substantial reductions in IQ at the population level.
 
   at_risk_groups:
     - name: Pregnant women
@@ -232,26 +246,6 @@ nutrient_interactions:
       - 52
 
 disease_associations:
-  - name: Iodine Deficiency Disorders
-    description: |
-      Iodine deficiency causes a spectrum of disorders including goiter,
-      hypothyroidism, developmental abnormalities, and cretinism. Nearly 30% of
-      the world's population has insufficient iodine intake. Universal salt
-      iodization has dramatically reduced these disorders globally.
-    disease_term:
-      preferred_term: iodine deficiency disorder
-    relationship_type: DEFICIENCY_CAUSES
-    population_context: Global public health concern, especially in developing countries
-    evidence:
-      - reference: PMID:22378324
-        supports: SUPPORT
-        snippet: "globally, 29.8% (95% CI = 29.4, 30.1) of SAC (241 million) are estimated to have insufficient iodine intakes."
-        explanation: WHO data compilation showing that nearly one-third of the global school-age child population has insufficient iodine intake despite progress in salt iodization programs.
-    mic_references:
-      - 4
-      - 5
-      - 6
-
   - name: Thyroid Cancer Prevention
     description: |
       Thyroid accumulation of radioactive iodine (I-131) increases thyroid cancer

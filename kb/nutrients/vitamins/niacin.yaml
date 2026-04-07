@@ -140,6 +140,15 @@ deficiency:
       context: Thick, scaly, darkly pigmented rash develops symmetrically in sun-exposed areas
       mic_references:
         - 5
+      evidence:
+        - reference: PMID:14693013
+          supports: SUPPORT
+          snippet: "Pellagra defines systemic disease as resulting from a marked cellular deficiency of niacin. It is characterized by 4 \"D's\": diarrhea, dermatitis, dementia, and death"
+          explanation: Pellagra review establishes dermatitis as one of the cardinal features of niacin deficiency.
+        - reference: PMID:14693013
+          supports: SUPPORT
+          snippet: "The dermatitis begins as an erythema. Acute pellagra resembles sunburn in its first stages, but tanning occurs more slowly than typically in sunburn. Exacerbation follows re-exposure to sunlight"
+          explanation: Confirms photosensitive nature of pellagra dermatitis (sun-exposed rash that worsens with sunlight re-exposure).
 
     - name: Diarrhea
       phenotype_term:
@@ -151,6 +160,11 @@ deficiency:
       context: Part of gastrointestinal symptoms including inflammation of mouth and tongue, vomiting, and abdominal pain
       mic_references:
         - 5
+      evidence:
+        - reference: PMID:14693013
+          supports: SUPPORT
+          snippet: "Pellagra defines systemic disease as resulting from a marked cellular deficiency of niacin. It is characterized by 4 \"D's\": diarrhea, dermatitis, dementia, and death"
+          explanation: Pellagra review establishes diarrhea as one of the cardinal features of niacin deficiency.
 
     - name: Dementia
       phenotype_term:
@@ -163,6 +177,11 @@ deficiency:
       mic_references:
         - 5
         - 38
+      evidence:
+        - reference: PMID:14693013
+          supports: SUPPORT
+          snippet: "Pellagra defines systemic disease as resulting from a marked cellular deficiency of niacin. It is characterized by 4 \"D's\": diarrhea, dermatitis, dementia, and death"
+          explanation: Pellagra review establishes dementia as one of the cardinal features of niacin deficiency.
 
   at_risk_groups:
     - name: Chronic Alcoholics

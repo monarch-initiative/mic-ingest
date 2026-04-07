@@ -91,6 +91,11 @@ deficiency:
       context: In inherited lipoic acid biosynthesis defects
       mic_references:
         - 5
+      evidence:
+        - reference: PMID:24777537
+          supports: SUPPORT
+          snippet: "Mutations in LIAS have been identified that result in a variant form of nonketotic hyperglycinemia with early-onset convulsions combined with a defect in mitochondrial energy metabolism with encephalopathy and cardiomyopathy"
+          explanation: Review of lipoic acid biosynthesis defects confirming early-onset convulsions and encephalopathy as the predominant clinical presentation of LIAS mutations
     - name: Metabolic acidosis
       phenotype_term:
         preferred_term: metabolic acidosis

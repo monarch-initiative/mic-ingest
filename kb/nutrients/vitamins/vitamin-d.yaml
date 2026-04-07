@@ -119,6 +119,11 @@ functions:
 
 deficiency:
   name: Vitamin D Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin D concentration
+    term:
+      id: HP:0100512
+      label: Decreased circulating vitamin D concentration
   description: |
     Vitamin D deficiency results from inadequate sun exposure, insufficient dietary intake,
     or impaired metabolism. Severe deficiency causes rickets in children (failure of bone

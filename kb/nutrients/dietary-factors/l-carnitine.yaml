@@ -58,6 +58,11 @@ functions:
 
 deficiency:
   name: L-Carnitine Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating carnitine concentration
+    term:
+      id: HP:0003234
+      label: Decreased circulating carnitine concentration
   description: |
     Nutritional carnitine deficiency is rare in healthy individuals because of
     efficient endogenous synthesis and renal reabsorption. However, primary
@@ -76,6 +81,11 @@ deficiency:
       context: In primary systemic carnitine deficiency
       mic_references:
         - 34
+      evidence:
+        - reference: PMID:22989098
+          supports: SUPPORT
+          snippet: "skeletal myopathy, elevated creatine kinase (CK), and cardiomyopathy in childhood; or cardiomyopathy, arrhythmias, or fatigability in adulthood"
+          explanation: Comprehensive review of systemic primary carnitine deficiency confirming cardiomyopathy as a typical clinical manifestation
     - name: Skeletal myopathy
       phenotype_term:
         preferred_term: myopathy
@@ -86,6 +96,11 @@ deficiency:
       context: In primary systemic carnitine deficiency
       mic_references:
         - 34
+      evidence:
+        - reference: PMID:22989098
+          supports: SUPPORT
+          snippet: "skeletal myopathy, elevated creatine kinase (CK), and cardiomyopathy in childhood"
+          explanation: Comprehensive review of systemic primary carnitine deficiency confirming skeletal myopathy as a clinical manifestation in childhood
     - name: Hypoketotic hypoglycemia
       phenotype_term:
         preferred_term: hypoketotic hypoglycemia
@@ -96,6 +111,11 @@ deficiency:
       context: In primary systemic carnitine deficiency
       mic_references:
         - 34
+      evidence:
+        - reference: PMID:22989098
+          supports: SUPPORT
+          snippet: "are typically characterized by episodes of hypoketotic hypoglycemia, hepatomegaly, elevated transaminases, and hyperammonemia in infants"
+          explanation: Comprehensive review confirming hypoketotic hypoglycemia as a typical infant manifestation of primary carnitine deficiency
     - name: Hepatomegaly
       phenotype_term:
         preferred_term: hepatomegaly
@@ -106,6 +126,11 @@ deficiency:
       context: In primary systemic carnitine deficiency
       mic_references:
         - 34
+      evidence:
+        - reference: PMID:22989098
+          supports: SUPPORT
+          snippet: "are typically characterized by episodes of hypoketotic hypoglycemia, hepatomegaly, elevated transaminases, and hyperammonemia in infants"
+          explanation: Comprehensive review confirming hepatomegaly as a typical infant manifestation of primary carnitine deficiency
   at_risk_groups:
     - name: Primary systemic carnitine deficiency
       description: |

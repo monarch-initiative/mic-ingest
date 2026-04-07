@@ -88,6 +88,11 @@ functions:
 
 deficiency:
   name: Phosphorus Deficiency
+  phenotype_term:
+    preferred_term: Hypophosphatemia
+    term:
+      id: HP:0002148
+      label: Hypophosphatemia
   description: |
     Inadequate phosphorus intake rarely results in abnormally low serum phosphorus
     levels (hypophosphatemia) because renal reabsorption of phosphorus increases to
@@ -108,6 +113,11 @@ deficiency:
       context: Moderate to severe hypophosphatemia
       mic_references:
         - 4
+      evidence:
+        - reference: PMID:20515645
+          supports: SUPPORT
+          snippet: "muscle weakness noted in rachitic patients is the result of the hypophosphatemia of vitamin D deficiency"
+          explanation: Experimental study in vitamin D-deficient rats showing that muscle weakness is caused specifically by hypophosphatemia, not vitamin D or calcium deficiency, and is corrected within 2 days of restoring serum phosphorus
 
     - name: Rickets
       phenotype_term:
@@ -119,6 +129,11 @@ deficiency:
       context: In children with phosphorus deficiency
       mic_references:
         - 4
+      evidence:
+        - reference: PMID:20515645
+          supports: SUPPORT
+          snippet: "A deficiency of vitamin D results in muscle weakness as well as rickets in children and osteomalacia in the adult"
+          explanation: Establishes that the hypophosphatemia accompanying vitamin D deficiency manifests as rickets in children, supporting phosphorus deficiency as a cause of rickets
 
     - name: Osteomalacia
       phenotype_term:
@@ -130,6 +145,11 @@ deficiency:
       context: In adults with phosphorus deficiency
       mic_references:
         - 4
+      evidence:
+        - reference: PMID:20515645
+          supports: SUPPORT
+          snippet: "A deficiency of vitamin D results in muscle weakness as well as rickets in children and osteomalacia in the adult"
+          explanation: Establishes that the hypophosphatemia accompanying vitamin D deficiency manifests as osteomalacia in adults, supporting phosphorus deficiency as a cause of osteomalacia
 
   at_risk_groups:
     - name: Patients with near-total starvation

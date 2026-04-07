@@ -59,6 +59,11 @@ functions:
 
 deficiency:
   name: Sodium Deficiency (Hyponatremia)
+  phenotype_term:
+    preferred_term: Hyponatremia
+    term:
+      id: HP:0002902
+      label: Hyponatremia
   description: |
     Hyponatremia (serum sodium <136 mmol/L) may result from increased fluid retention
     or increased sodium loss. Inadequate sodium intake alone rarely causes hyponatremia
@@ -79,6 +84,11 @@ deficiency:
       context: Severe and rapidly developing hyponatremia
       mic_references:
         - 13
+      evidence:
+        - reference: PMID:32097927
+          supports: SUPPORT
+          snippet: "In hypotonic hyponatremia, which is the most common form of hyponatremia, clinical manifestations are largely due to brain swelling caused by entry of water into the cells"
+          explanation: Review of hyponatremia morbidity and mortality establishing that brain swelling (cerebral edema) is the principal mechanism of clinical manifestations in hyponatremia.
 
     - name: Seizures
       phenotype_term:
@@ -90,6 +100,11 @@ deficiency:
       context: Severe hyponatremia
       mic_references:
         - 13
+      evidence:
+        - reference: PMID:32097927
+          supports: SUPPORT
+          snippet: "In acute and severe hyponatremia, dramatic symptoms, such as seizures, acute psychosis, permanent brain damage, brain-stem herniation, leading to coma and death may occur"
+          explanation: Review of hyponatremia morbidity establishing seizures as a dramatic symptom of acute severe hyponatremia.
 
     - name: Muscle cramps
       phenotype_term:
@@ -101,6 +116,11 @@ deficiency:
       context: Symptoms of hyponatremia
       mic_references:
         - 13
+      evidence:
+        - reference: PMID:32097927
+          supports: SUPPORT
+          snippet: "In chronic hyponatremia, symptoms are generally less dramatic and may include headache, nausea, vomiting, gait alterations, muscle cramps, restlessness, and disorientation"
+          explanation: Review of hyponatremia morbidity establishing muscle cramps as a recognized clinical symptom of chronic hyponatremia.
 
   at_risk_groups:
     - name: Older adults

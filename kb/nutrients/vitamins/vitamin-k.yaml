@@ -112,6 +112,11 @@ functions:
 
 deficiency:
   name: Vitamin K Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin K concentration
+    term:
+      id: HP:0011892
+      label: Decreased circulating vitamin K concentration
   description: |
     Overt vitamin K deficiency results in impaired blood clotting. Symptoms include easy
     bruising and bleeding that may manifest as nosebleeds, bleeding gums, blood in urine
@@ -144,6 +149,11 @@ deficiency:
       frequency: FREQUENT
       mic_references:
         - 8
+      evidence:
+        - reference: PMID:18478986
+          supports: SUPPORT
+          snippet: "We report the case of a 21-year-old male who was admitted to the hospital with spontaneous bruising, hematuria and abdominal pain secondary to a perinephric hematoma"
+          explanation: Case report demonstrating that acquired vitamin K-dependent clotting factor deficiency (from brodifacoum/superwarfarin ingestion) presents clinically with spontaneous bruising, supporting easy bruising as a manifestation of vitamin K deficiency
 
     - name: Intracranial Hemorrhage in Infants
       phenotype_term:

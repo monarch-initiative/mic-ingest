@@ -63,6 +63,11 @@ deficiency:
       mic_references:
         - 18
         - 19
+      evidence:
+        - reference: PMID:22423897
+          supports: SUPPORT
+          snippet: "chromium supplementation reversed glucose-intolerance in hospitalized patients receiving long-term total parenteral nutrition"
+          explanation: Historical case reports of glucose intolerance reversed by chromium supplementation in parenteral nutrition patients support the link between chromium deficiency and impaired glucose tolerance
 
   at_risk_groups:
     - name: Patients on parenteral nutrition

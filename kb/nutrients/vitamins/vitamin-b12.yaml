@@ -55,6 +55,11 @@ functions:
 
 deficiency:
   name: Vitamin B12 Deficiency
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin B12 concentration
+    term:
+      id: HP:0100502
+      label: Decreased circulating vitamin B12 concentration
   description: |
     Vitamin B12 deficiency causes impairment of both methionine synthase and
     methylmalonyl-CoA mutase, leading to elevated homocysteine and methylmalonic
@@ -107,6 +112,15 @@ deficiency:
       context: Difficulty walking (gait ataxia)
       mic_references:
         - 13
+      evidence:
+        - reference: PMID:19394404
+          supports: SUPPORT
+          snippet: "Glial cells, myelin and the interstitium are the structures of the mammalian central nervous system (CNS) mainly affected by vitamin B(12) (cobalamin, Cbl) deficiency"
+          explanation: Establishes that vitamin B12 deficiency damages myelin and CNS structures, providing the neuropathological basis for gait ataxia in B12 deficiency
+        - reference: PMID:28660890
+          supports: SUPPORT
+          snippet: "Clinical B12 deficiency with classic haematological and neurological manifestations is relatively uncommon"
+          explanation: Authoritative review confirming that classic neurological manifestations (which include ataxia) are recognized presentations of clinical vitamin B12 deficiency
 
     - name: Cognitive Impairment
       phenotype_term:
@@ -195,11 +209,12 @@ disease_associations:
       term:
         id: MONDO:0008228
         label: pernicious anemia
-    relationship_type: DEFICIENCY_CAUSES
+    relationship_type: MARKER
     description: |
-      Autoimmune vitamin B12 malabsorption syndrome caused by destruction of
-      gastric parietal cells and lack of intrinsic factor. Treatment requires
-      lifelong vitamin B12 supplementation, typically by injection.
+      Pernicious anemia is an autoimmune malabsorption syndrome that causes
+      vitamin B12 deficiency through destruction of gastric parietal cells and
+      lack of intrinsic factor. Treatment requires lifelong vitamin B12
+      supplementation, typically by injection.
     mic_references:
       - 10
       - 21

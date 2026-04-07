@@ -82,6 +82,11 @@ functions:
 
 deficiency:
   name: Magnesium Deficiency
+  phenotype_term:
+    preferred_term: Hypomagnesemia
+    term:
+      id: HP:0002917
+      label: Hypomagnesemia
   description: |
     Magnesium deficiency is rare in healthy individuals consuming a balanced diet,
     because magnesium is abundant in both plant and animal foods and kidneys can limit

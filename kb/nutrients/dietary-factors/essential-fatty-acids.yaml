@@ -132,6 +132,11 @@ deficiency:
       frequency: FREQUENT
       mic_references:
         - 36
+      evidence:
+        - reference: PMID:15301795
+          supports: SUPPORT
+          snippet: "Some PEM symptoms, notably skin changes, impaired resistance to infections, impaired growth rate and disturbed development may at least partly be explained by EFAD"
+          explanation: Review confirming growth impairment as a manifestation of essential fatty acid deficiency in protein-energy malnutrition
     - name: Poor wound healing
       phenotype_term:
         preferred_term: impaired wound healing
@@ -150,6 +155,11 @@ deficiency:
       frequency: FREQUENT
       mic_references:
         - 35
+      evidence:
+        - reference: PMID:15301795
+          supports: SUPPORT
+          snippet: "Some PEM symptoms, notably skin changes, impaired resistance to infections, impaired growth rate and disturbed development may at least partly be explained by EFAD"
+          explanation: Review confirming impaired resistance to infections as a manifestation of essential fatty acid deficiency in protein-energy malnutrition
   at_risk_groups:
     - name: Patients on parenteral nutrition
       description: |

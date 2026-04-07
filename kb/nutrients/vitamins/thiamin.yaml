@@ -69,6 +69,11 @@ functions:
 
 deficiency:
   name: Beriberi
+  phenotype_term:
+    preferred_term: Decreased circulating vitamin B1 concentration
+    term:
+      id: HP:0100503
+      label: Decreased circulating vitamin B1 concentration
   description: |
     Beriberi is the disease resulting from severe thiamin deficiency, affecting
     the cardiovascular, muscular, gastrointestinal, and central and peripheral
@@ -97,6 +102,11 @@ deficiency:
       mic_references:
         - 8
         - 9
+      evidence:
+        - reference: PMID:30644592
+          supports: SUPPORT
+          snippet: "In adults, thiamin deficiency presents as encephalopathy, dry beriberi (with neurological signs and symptoms), or wet beriberi (with cardiovascular signs and symptoms)"
+          explanation: Confirms that dry beriberi (with peripheral neurological signs and symptoms) is a primary clinical presentation of adult thiamin deficiency.
 
     - name: Ataxia
       phenotype_term:
@@ -109,6 +119,11 @@ deficiency:
       mic_references:
         - 11
         - 12
+      evidence:
+        - reference: PMID:26971083
+          supports: SUPPORT
+          snippet: "The acute stage, WE, refers to the classical clinical presentation of mental status changes, opthalmoplegia, and gait ataxia"
+          explanation: Identifies gait ataxia as one of the classical clinical features of Wernicke encephalopathy, the acute neurological manifestation of thiamine deficiency.
 
     - name: Cardiomegaly (Wet Beriberi)
       phenotype_term:
@@ -120,6 +135,11 @@ deficiency:
       context: Enlargement of the heart in wet (cardiac) beriberi
       mic_references:
         - 10
+      evidence:
+        - reference: PMID:30644592
+          supports: SUPPORT
+          snippet: "In adults, thiamin deficiency presents as encephalopathy, dry beriberi (with neurological signs and symptoms), or wet beriberi (with cardiovascular signs and symptoms)"
+          explanation: Confirms that wet beriberi with cardiovascular signs and symptoms (including cardiomegaly) is a clinical presentation of adult thiamin deficiency.
 
     - name: Congestive Heart Failure
       phenotype_term:
@@ -131,6 +151,11 @@ deficiency:
       context: Ultimate consequence of untreated wet beriberi
       mic_references:
         - 10
+      evidence:
+        - reference: PMID:30644592
+          supports: SUPPORT
+          snippet: "the prevalence of thiamin deficiency was found to be increased in patients with severe burns, major surgery, septic shock, end-stage renal disease, and heart failure"
+          explanation: Documents an established association between thiamin deficiency and heart failure, the cardiovascular consequence of untreated wet beriberi.
 
   at_risk_groups:
     - name: Chronic Alcoholics
@@ -214,37 +239,6 @@ deficiency:
     - 8
 
 disease_associations:
-  - name: Wernicke-Korsakoff Syndrome
-    disease_term:
-      preferred_term: Wernicke-Korsakoff syndrome
-      term:
-        id: MONDO:0010198
-        label: Wernicke-Korsakoff syndrome
-    relationship_type: DEFICIENCY_CAUSES
-    description: |
-      Thiamin deficiency affecting the central nervous system causes Wernicke's
-      encephalopathy (abnormal eye movements, ataxia, cognitive impairment) and
-      may progress to Korsakoff's psychosis (profound memory disorder with
-      amnesia). Most cases occur in alcoholics but can occur in other conditions
-      of severe malnutrition.
-    mic_references:
-      - 11
-      - 12
-      - 13
-    evidence:
-      - reference: PMID:30281514
-        supports: SUPPORT
-        snippet: "Wernicke encephalopathy (WE) and Korsakoff psychosis (KP), together termed Wernicke-Korsakoff syndrome (WKS), are distinct yet overlapping neuropsychiatric disorders associated with thiamine deficiency. Thiamine pyrophosphate, the biologically active form of thiamine, is essential for multiple biochemical pathways involved in carbohydrate utilization"
-        explanation: Confirms WE and KP are neuropsychiatric disorders caused by thiamine deficiency and establishes them as overlapping conditions
-      - reference: PMID:23333339
-        supports: SUPPORT
-        snippet: "Thiamine (vitamin B1) deficiency, the underlying cause of Wernicke-Korsakoff syndrome, is associated with the development of focal neuronal loss in vulnerable areas of the brain"
-        explanation: Confirms thiamine deficiency as the underlying cause of WKS and links it to focal neuronal loss
-      - reference: PMID:30281514
-        supports: SUPPORT
-        snippet: "Both genetic susceptibilities and acquired deficiencies as a result of alcoholic and non-alcoholic factors are associated with thiamine deficiency or its impaired utilization. WKS is underdiagnosed because of the inconsistent clinical presentation and overlapping of symptoms with other neurological conditions"
-        explanation: Supports that WKS occurs in both alcoholic and non-alcoholic contexts and is often underdiagnosed
-
   - name: Congestive Heart Failure
     disease_term:
       preferred_term: congestive heart failure
