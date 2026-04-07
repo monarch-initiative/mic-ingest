@@ -139,6 +139,8 @@ def therapeutic_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(disease_assoc.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return ChemicalOrDrugOrTreatmentToDiseaseOrPhenotypicFeatureAssociation(
         id=_make_edge_id(),
@@ -147,8 +149,8 @@ def therapeutic_to_edge(
         object=disease_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Disease",
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -176,6 +178,8 @@ def protective_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(disease_assoc.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     direction = disease_assoc.get("direction")
     dir_qual = MODIFIER_TO_DIRECTION.get(direction) if direction else None
@@ -191,8 +195,8 @@ def protective_to_edge(
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Disease",
         qualifiers=qualifiers if qualifiers else None,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -220,6 +224,8 @@ def risk_factor_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(disease_assoc.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     direction = disease_assoc.get("direction")
     dir_qual = MODIFIER_TO_DIRECTION.get(direction) if direction else None
@@ -235,8 +241,8 @@ def risk_factor_to_edge(
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Disease",
         qualifiers=qualifiers if qualifiers else None,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -263,6 +269,8 @@ def marker_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(disease_assoc.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -271,45 +279,8 @@ def marker_to_edge(
         object=disease_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Disease",
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
-        primary_knowledge_source=KNOWLEDGE_SOURCE,
-        knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
-        agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
-    )
-
-
-def deficiency_causes_to_edge(
-    nutrient_id: str, disease_assoc: dict[str, Any]
-) -> Association | None:
-    """
-    Convert a DEFICIENCY_CAUSES disease association to a KGX edge.
-
-    Nutrient → Disease using causes, with context:deficiency qualifier.
-
-    Args:
-        nutrient_id: The nutrient CHEBI term ID
-        disease_assoc: A disease association dict
-
-    Returns:
-        Association or None
-    """
-    disease_id = _get_term_id(disease_assoc, ["disease_term", "term", "id"])
-    if not disease_id:
-        return None
-
-    publications, supporting_text = _format_evidence(disease_assoc.get("evidence"))
-
-    return Association(
-        id=_make_edge_id(),
-        subject=nutrient_id,
-        predicate="biolink:causes",
-        object=disease_id,
-        subject_category="biolink:ChemicalEntity",
-        object_category="biolink:Disease",
-        qualifiers=["context:deficiency"],
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -322,7 +293,6 @@ _DISEASE_CONVERTERS = {
     "PROTECTIVE": protective_to_edge,
     "RISK_FACTOR": risk_factor_to_edge,
     "MARKER": marker_to_edge,
-    "DEFICIENCY_CAUSES": deficiency_causes_to_edge,
 }
 
 
@@ -355,6 +325,8 @@ def deficiency_state_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(deficiency.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return ChemicalAffectsBiologicalEntityAssociation(
         id=_make_edge_id(),
@@ -366,8 +338,8 @@ def deficiency_state_to_edge(
         object_category="biolink:PhenotypicFeature",
         subject_aspect_qualifier=GeneOrGeneProductOrChemicalEntityAspectEnum.abundance,
         subject_direction_qualifier=DirectionQualifierEnum.decreased,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -403,6 +375,8 @@ def deficiency_sequela_to_edge(
     frequency_hp = FREQUENCY_TO_HP.get(frequency) if frequency else None
 
     publications, supporting_text = _format_evidence(sequela.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return PhenotypicFeatureToPhenotypicFeatureAssociation(
         id=_make_edge_id(),
@@ -413,8 +387,8 @@ def deficiency_sequela_to_edge(
         object_category="biolink:PhenotypicFeature",
         disease_context_qualifier=disease_context,
         frequency_qualifier=frequency_hp,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -446,6 +420,8 @@ def toxicity_state_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(toxicity.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return ChemicalAffectsBiologicalEntityAssociation(
         id=_make_edge_id(),
@@ -457,8 +433,8 @@ def toxicity_state_to_edge(
         object_category="biolink:PhenotypicFeature",
         subject_aspect_qualifier=GeneOrGeneProductOrChemicalEntityAspectEnum.abundance,
         subject_direction_qualifier=DirectionQualifierEnum.increased,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -487,6 +463,8 @@ def toxicity_sequela_to_edge(
     frequency_hp = FREQUENCY_TO_HP.get(frequency) if frequency else None
 
     publications, supporting_text = _format_evidence(sequela.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return PhenotypicFeatureToPhenotypicFeatureAssociation(
         id=_make_edge_id(),
@@ -496,8 +474,8 @@ def toxicity_sequela_to_edge(
         subject_category="biolink:PhenotypicFeature",
         object_category="biolink:PhenotypicFeature",
         frequency_qualifier=frequency_hp,
-        publications=publications if publications else None,
-        supporting_text=supporting_text if supporting_text else None,
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -531,6 +509,8 @@ def biological_process_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(parent_evidence, indirect=True)
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -539,8 +519,8 @@ def biological_process_to_edge(
         object=term_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:BiologicalProcess",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -572,6 +552,8 @@ def gene_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(parent_evidence, indirect=True)
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -580,8 +562,8 @@ def gene_to_edge(
         object=term_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:Gene",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -610,6 +592,8 @@ def cellular_component_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(parent_evidence, indirect=True)
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -618,8 +602,8 @@ def cellular_component_to_edge(
         object=term_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:CellularComponent",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -648,6 +632,8 @@ def location_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(parent_evidence, indirect=True)
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -656,8 +642,8 @@ def location_to_edge(
         object=term_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:AnatomicalEntity",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -689,6 +675,8 @@ def food_source_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(food_source.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -697,8 +685,8 @@ def food_source_to_edge(
         object=nutrient_id,
         subject_category="biolink:Food",
         object_category="biolink:ChemicalEntity",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -730,6 +718,8 @@ def nutrient_interaction_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(interaction.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -738,8 +728,8 @@ def nutrient_interaction_to_edge(
         object=other_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:ChemicalEntity",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,
@@ -766,6 +756,8 @@ def drug_interaction_to_edge(
         return None
 
     publications, supporting_text = _format_evidence(interaction.get("evidence"))
+    if not publications or not supporting_text:
+        return None
 
     return Association(
         id=_make_edge_id(),
@@ -774,8 +766,8 @@ def drug_interaction_to_edge(
         object=drug_id,
         subject_category="biolink:ChemicalEntity",
         object_category="biolink:ChemicalEntity",
-        publications=publications if publications else None,
-
+        publications=publications,
+        supporting_text=supporting_text,
         primary_knowledge_source=KNOWLEDGE_SOURCE,
         knowledge_level=KnowledgeLevelEnum.knowledge_assertion,
         agent_type=AgentTypeEnum.manual_validation_of_automated_agent,

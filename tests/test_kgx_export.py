@@ -23,7 +23,6 @@ from mic_ingest.export.kgx_export import (
     KNOWLEDGE_SOURCE,
     biological_process_to_edge,
     cellular_component_to_edge,
-    deficiency_causes_to_edge,
     deficiency_sequela_to_edge,
     deficiency_state_to_edge,
     drug_interaction_to_edge,
@@ -45,6 +44,11 @@ from mic_ingest.export.kgx_export import (
 NUTRIENT_ID = "CHEBI:15956"  # biotin
 
 
+def _evidence(pmid: str = "PMID:12345678", snippet: str = "Test snippet."):
+    """Build a minimal evidence list with a PMID and snippet."""
+    return [{"reference": pmid, "supports": "SUPPORT", "snippet": snippet}]
+
+
 class TestTherapeuticToEdge:
     """Tests for therapeutic_to_edge function."""
 
@@ -57,6 +61,7 @@ class TestTherapeuticToEdge:
                 "term": {"id": "MONDO:0009665", "label": "biotinidase deficiency"},
             },
             "relationship_type": "THERAPEUTIC",
+            "evidence": _evidence(),
         }
         edge = therapeutic_to_edge(NUTRIENT_ID, da)
         assert isinstance(edge, ChemicalOrDrugOrTreatmentToDiseaseOrPhenotypicFeatureAssociation)
@@ -66,6 +71,16 @@ class TestTherapeuticToEdge:
         assert edge.subject_category == "biolink:ChemicalEntity"
         assert edge.object_category == "biolink:Disease"
         assert edge.primary_knowledge_source == KNOWLEDGE_SOURCE
+
+    def test_missing_evidence(self):
+        """Test that an edge without evidence is not produced."""
+        da = {
+            "disease_term": {
+                "term": {"id": "MONDO:0009665", "label": "biotinidase deficiency"},
+            },
+            "relationship_type": "THERAPEUTIC",
+        }
+        assert therapeutic_to_edge(NUTRIENT_ID, da) is None
 
     def test_missing_term_id(self):
         """Test with disease_term but no term.id."""
@@ -92,6 +107,7 @@ class TestProtectiveToEdge:
             },
             "relationship_type": "PROTECTIVE",
             "direction": "DECREASED",
+            "evidence": _evidence(),
         }
         edge = protective_to_edge(NUTRIENT_ID, da)
         assert isinstance(edge, ChemicalOrDrugOrTreatmentToDiseaseOrPhenotypicFeatureAssociation)
@@ -123,6 +139,7 @@ class TestRiskFactorToEdge:
             },
             "relationship_type": "RISK_FACTOR",
             "direction": "DECREASED",
+            "evidence": _evidence(),
         }
         edge = risk_factor_to_edge(NUTRIENT_ID, da)
         assert isinstance(edge, Association)
@@ -153,6 +170,7 @@ class TestMarkerToEdge:
                 "term": {"id": "MONDO:0000001", "label": "some disease"},
             },
             "relationship_type": "MARKER",
+            "evidence": _evidence(),
         }
         edge = marker_to_edge(NUTRIENT_ID, da)
         assert isinstance(edge, Association)
@@ -171,36 +189,6 @@ class TestMarkerToEdge:
         assert marker_to_edge(NUTRIENT_ID, {}) is None
 
 
-class TestDeficiencyCausesToEdge:
-    """Tests for deficiency_causes_to_edge function."""
-
-    def test_valid_deficiency_causes(self):
-        """Test with a complete DEFICIENCY_CAUSES disease association."""
-        da = {
-            "disease_term": {
-                "preferred_term": "scurvy",
-                "term": {"id": "MONDO:0006603", "label": "scurvy"},
-            },
-            "relationship_type": "DEFICIENCY_CAUSES",
-        }
-        edge = deficiency_causes_to_edge(NUTRIENT_ID, da)
-        assert isinstance(edge, Association)
-        assert edge.subject == NUTRIENT_ID
-        assert edge.predicate == "biolink:causes"
-        assert edge.object == "MONDO:0006603"
-        assert "context:deficiency" in edge.qualifiers
-        assert edge.primary_knowledge_source == KNOWLEDGE_SOURCE
-
-    def test_missing_term_id(self):
-        """Test with missing term.id."""
-        da = {"disease_term": {"preferred_term": "scurvy"}}
-        assert deficiency_causes_to_edge(NUTRIENT_ID, da) is None
-
-    def test_none_input(self):
-        """Test with no disease_term."""
-        assert deficiency_causes_to_edge(NUTRIENT_ID, {}) is None
-
-
 class TestDeficiencyStateToEdge:
     """Tests for deficiency_state_to_edge function."""
 
@@ -211,6 +199,7 @@ class TestDeficiencyStateToEdge:
                 "preferred_term": "Decreased circulating biotin concentration",
                 "term": {"id": "HP:0034599", "label": "Decreased circulating biotin concentration"},
             },
+            "evidence": _evidence(),
         }
         edge = deficiency_state_to_edge(NUTRIENT_ID, deficiency)
         assert isinstance(edge, ChemicalAffectsBiologicalEntityAssociation)
@@ -247,6 +236,7 @@ class TestDeficiencySequelaToEdge:
                 "term": {"id": "HP:0001596", "label": "Alopecia"},
             },
             "frequency": "FREQUENT",
+            "evidence": _evidence(),
         }
         edge = deficiency_sequela_to_edge("HP:0034599", sequela, "MONDO:0000461")
         assert isinstance(edge, PhenotypicFeatureToPhenotypicFeatureAssociation)
@@ -266,6 +256,7 @@ class TestDeficiencySequelaToEdge:
             "phenotype_term": {
                 "term": {"id": "HP:0001596", "label": "Alopecia"},
             },
+            "evidence": _evidence(),
         }
         edge = deficiency_sequela_to_edge("HP:0034599", sequela)
         assert isinstance(edge, PhenotypicFeatureToPhenotypicFeatureAssociation)
@@ -296,6 +287,7 @@ class TestToxicityStateToEdge:
                 "preferred_term": "Increased circulating selenium concentration",
                 "term": {"id": "HP:0032348", "label": "Increased circulating selenium concentration"},
             },
+            "evidence": _evidence(),
         }
         edge = toxicity_state_to_edge(NUTRIENT_ID, toxicity)
         assert isinstance(edge, ChemicalAffectsBiologicalEntityAssociation)
@@ -325,6 +317,7 @@ class TestToxicitySequelaToEdge:
                 "term": {"id": "HP:0002018", "label": "Nausea"},
             },
             "frequency": "FREQUENT",
+            "evidence": _evidence(),
         }
         edge = toxicity_sequela_to_edge("HP:0032348", sequela)
         assert isinstance(edge, PhenotypicFeatureToPhenotypicFeatureAssociation)
@@ -354,7 +347,7 @@ class TestBiologicalProcessToEdge:
             "preferred_term": "fatty acid biosynthetic process",
             "term": {"id": "GO:0006633", "label": "fatty acid biosynthetic process"},
         }
-        edge = biological_process_to_edge(NUTRIENT_ID, process)
+        edge = biological_process_to_edge(NUTRIENT_ID, process, _evidence())
         assert isinstance(edge, Association)
         assert edge.subject == NUTRIENT_ID
         assert edge.predicate == "biolink:participates_in"
@@ -378,7 +371,7 @@ class TestGeneToEdge:
             "preferred_term": "ACACA",
             "term": {"id": "HGNC:93", "label": "ACACA"},
         }
-        edge = gene_to_edge(NUTRIENT_ID, gene)
+        edge = gene_to_edge(NUTRIENT_ID, gene, _evidence())
         assert isinstance(edge, Association)
         assert edge.subject == NUTRIENT_ID
         assert edge.predicate == "biolink:affects"
@@ -406,7 +399,7 @@ class TestCellularComponentToEdge:
             "preferred_term": "mitochondrion",
             "term": {"id": "GO:0005739", "label": "mitochondrion"},
         }
-        edge = cellular_component_to_edge(NUTRIENT_ID, component)
+        edge = cellular_component_to_edge(NUTRIENT_ID, component, _evidence())
         assert isinstance(edge, Association)
         assert edge.subject == NUTRIENT_ID
         assert edge.predicate == "biolink:has_participant"
@@ -428,7 +421,7 @@ class TestLocationToEdge:
             "preferred_term": "liver",
             "term": {"id": "UBERON:0002107", "label": "liver"},
         }
-        edge = location_to_edge(NUTRIENT_ID, location)
+        edge = location_to_edge(NUTRIENT_ID, location, _evidence())
         assert isinstance(edge, Association)
         assert edge.subject == NUTRIENT_ID
         assert edge.predicate == "biolink:active_in"
@@ -452,6 +445,7 @@ class TestFoodSourceToEdge:
                 "preferred_term": "liver",
                 "term": {"id": "FOODON:03301296", "label": "cooked liver"},
             },
+            "evidence": _evidence(),
         }
         edge = food_source_to_edge(NUTRIENT_ID, food)
         assert isinstance(edge, Association)
@@ -488,6 +482,7 @@ class TestNutrientInteractionToEdge:
                 "preferred_term": "pantothenic acid",
                 "term": {"id": "CHEBI:7916", "label": "pantothenic acid"},
             },
+            "evidence": _evidence(),
         }
         edge = nutrient_interaction_to_edge(NUTRIENT_ID, interaction)
         assert isinstance(edge, Association)
@@ -520,6 +515,7 @@ class TestDrugInteractionToEdge:
                 "preferred_term": "anticonvulsant",
                 "term": {"id": "CHEBI:35623", "label": "anticonvulsant"},
             },
+            "evidence": _evidence(),
         }
         edge = drug_interaction_to_edge(NUTRIENT_ID, interaction)
         assert isinstance(edge, Association)
@@ -560,6 +556,7 @@ class TestTransform:
                         "term": {"id": "MONDO:0000001", "label": "Disease A"},
                     },
                     "relationship_type": "THERAPEUTIC",
+                    "evidence": _evidence(),
                 },
                 {
                     "name": "Disease B",
@@ -567,6 +564,7 @@ class TestTransform:
                         "term": {"id": "MONDO:0000002", "label": "Disease B"},
                     },
                     "relationship_type": "PROTECTIVE",
+                    "evidence": _evidence(),
                 },
                 {
                     "name": "Disease C",
@@ -575,6 +573,7 @@ class TestTransform:
                     },
                     "relationship_type": "RISK_FACTOR",
                     "direction": "DECREASED",
+                    "evidence": _evidence(),
                 },
                 {
                     "name": "Disease D",
@@ -582,13 +581,7 @@ class TestTransform:
                         "term": {"id": "MONDO:0000004", "label": "Disease D"},
                     },
                     "relationship_type": "MARKER",
-                },
-                {
-                    "name": "Disease E",
-                    "disease_term": {
-                        "term": {"id": "MONDO:0000005", "label": "Disease E"},
-                    },
-                    "relationship_type": "DEFICIENCY_CAUSES",
+                    "evidence": _evidence(),
                 },
             ],
             "deficiency": {
@@ -600,6 +593,7 @@ class TestTransform:
                     "preferred_term": "test deficiency",
                     "term": {"id": "MONDO:0099999", "label": "test deficiency"},
                 },
+                "evidence": _evidence(),
                 "sequelae": [
                     {
                         "name": "Phenotype A",
@@ -607,6 +601,7 @@ class TestTransform:
                             "term": {"id": "HP:0000001", "label": "Phenotype A"},
                         },
                         "frequency": "FREQUENT",
+                        "evidence": _evidence(),
                     },
                 ],
             },
@@ -615,18 +610,21 @@ class TestTransform:
                     "preferred_term": "Increased circulating test concentration",
                     "term": {"id": "HP:0088888", "label": "Increased circulating test concentration"},
                 },
+                "evidence": _evidence(),
                 "sequelae": [
                     {
                         "name": "Phenotype B",
                         "phenotype_term": {
                             "term": {"id": "HP:0000002", "label": "Phenotype B"},
                         },
+                        "evidence": _evidence(),
                     },
                 ],
             },
             "functions": [
                 {
                     "name": "Function A",
+                    "evidence": _evidence(),
                     "biological_processes": [
                         {"term": {"id": "GO:0000001", "label": "Process A"}},
                     ],
@@ -647,10 +645,12 @@ class TestTransform:
                     "food_term": {
                         "term": {"id": "FOODON:00001", "label": "Food A"},
                     },
+                    "evidence": _evidence(),
                 },
                 {
                     "name": "Food B (no FOODON)",
                     "food_term": {"preferred_term": "food b"},
+                    "evidence": _evidence(),
                 },
             ],
             "nutrient_interactions": [
@@ -659,6 +659,7 @@ class TestTransform:
                     "nutrient_term": {
                         "term": {"id": "CHEBI:00002", "label": "Other Nutrient"},
                     },
+                    "evidence": _evidence(),
                 },
             ],
             "drug_interactions": [
@@ -667,6 +668,7 @@ class TestTransform:
                     "drug_term": {
                         "term": {"id": "CHEBI:00003", "label": "Drug A"},
                     },
+                    "evidence": _evidence(),
                 },
             ],
         }
@@ -675,13 +677,13 @@ class TestTransform:
         """Test that transform extracts all edge types."""
         edges = list(transform(sample_nutrient))
 
-        # 5 disease assocs +
+        # 4 disease assocs +
         # 1 deficiency state + 1 deficiency sequela +
         # 1 toxicity state + 1 toxicity sequela +
         # 1 BP + 1 gene + 1 CC + 1 location +
         # 1 food source (second skipped, no FOODON ID) +
-        # 1 nutrient interaction + 1 drug interaction = 16
-        assert len(edges) == 16
+        # 1 nutrient interaction + 1 drug interaction = 15
+        assert len(edges) == 15
 
         # All edges should be Association instances (all biolink assocs inherit from it)
         for edge in edges:
@@ -692,8 +694,8 @@ class TestTransform:
         assert predicates.count("biolink:preventative_for_condition") == 1
         assert predicates.count("biolink:affects_likelihood_of") == 1
         assert predicates.count("biolink:biomarker_for") == 1
-        # 1 DEFICIENCY_CAUSES disease assoc + 1 deficiency sequela + 1 toxicity sequela = 3
-        assert predicates.count("biolink:causes") == 3
+        # 1 deficiency sequela + 1 toxicity sequela = 2
+        assert predicates.count("biolink:causes") == 2
         # 2 state edges (deficiency + toxicity) + 1 gene = 3
         assert predicates.count("biolink:affects") == 3
         assert predicates.count("biolink:participates_in") == 1
@@ -746,18 +748,21 @@ class TestTransform:
                 {
                     "disease_term": {"term": {"id": "MONDO:0000001"}},
                     "relationship_type": "THERAPEUTIC",
+                    "evidence": _evidence(),
                 },
                 {
                     "disease_term": {"preferred_term": "No ID"},
                     "relationship_type": "THERAPEUTIC",
+                    "evidence": _evidence(),
                 },
             ],
             "deficiency": {
                 "phenotype_term": {
                     "term": {"id": "HP:0099999"},
                 },
+                "evidence": _evidence(),
                 "sequelae": [
-                    {"phenotype_term": {"term": {"id": "HP:0000001"}}},
+                    {"phenotype_term": {"term": {"id": "HP:0000001"}}, "evidence": _evidence()},
                     {"name": "Incomplete"},
                 ],
             },
@@ -765,6 +770,27 @@ class TestTransform:
         edges = list(transform(record))
         # 1 disease + 1 deficiency state + 1 deficiency sequela = 3
         assert len(edges) == 3
+
+    def test_transform_skips_entries_without_evidence(self):
+        """Test that transform skips entries that have term IDs but no evidence."""
+        record = {
+            "name": "Test Nutrient",
+            "nutrient_term": {"term": {"id": "CHEBI:00001"}},
+            "disease_associations": [
+                {
+                    "disease_term": {"term": {"id": "MONDO:0000001"}},
+                    "relationship_type": "THERAPEUTIC",
+                },
+            ],
+            "deficiency": {
+                "phenotype_term": {"term": {"id": "HP:0099999"}},
+                "sequelae": [
+                    {"phenotype_term": {"term": {"id": "HP:0000001"}}},
+                ],
+            },
+        }
+        edges = list(transform(record))
+        assert len(edges) == 0
 
 
 class TestExtractNodes:
