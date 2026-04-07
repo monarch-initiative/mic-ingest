@@ -1,0 +1,701 @@
+name: Vitamin C
+nutrient_term:
+  preferred_term: L-ascorbic acid
+  term:
+    id: CHEBI:29073
+    label: L-ascorbic acid
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/vitamin-C
+alternate_names:
+  - Ascorbic acid
+  - L-ascorbate
+description: |
+  Vitamin C, also known as L-ascorbic acid, is a water-soluble vitamin. Unlike most
+  mammals and other animals, humans do not have the ability to synthesize vitamin C
+  and must obtain it from the diet. Vitamin C is an essential cofactor in numerous
+  enzymatic reactions, including biosynthesis of collagen, carnitine, and neuropeptides,
+  and in the regulation of gene expression. It is also a potent antioxidant, serving as
+  the primary water-soluble, non-enzymatic antioxidant in plasma and tissues.
+
+functions:
+  - name: Antioxidant Function
+    description: |
+      Vitamin C is the primary water-soluble, non-enzymatic antioxidant in plasma
+      and tissues. Even in small amounts, vitamin C can protect indispensable molecules
+      in the body, such as proteins, lipids, carbohydrates, and nucleic acids (DNA and RNA),
+      from damage by free radicals and reactive oxygen species (ROS) that are generated
+      during normal metabolism, by active immune cells, and through exposure to toxins
+      and pollutants. Vitamin C also participates in redox recycling of other important
+      antioxidants, such as regenerating vitamin E from its oxidized form.
+    biological_processes:
+      - preferred_term: cellular response to oxidative stress
+        term:
+          id: GO:0034599
+          label: cellular response to oxidative stress
+    mic_references:
+      - 1
+    evidence:
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "It is a potent antioxidant and a cofactor for a family of biosynthetic and gene regulatory enzymes."
+        explanation: Confirms vitamin C's role as a potent antioxidant
+
+  - name: Cofactor for Collagen Synthesis
+    description: |
+      Vitamin C serves as a cofactor for prolyl hydroxylases and lysyl hydroxylases,
+      enzymes required for collagen hydroxylation. This is essential for proper collagen
+      structure and function. Symptoms of vitamin C deficiency, such as poor wound healing,
+      likely result from impairment of these vitamin C-dependent enzymatic reactions
+      leading to insufficient synthesis of collagen.
+    biological_processes:
+      - preferred_term: collagen biosynthetic process
+        term:
+          id: GO:0032964
+          label: collagen biosynthetic process
+    mic_references:
+      - 1
+      - 2
+    evidence:
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "Vitamin C is an essential micronutrient for humans, with pleiotropic functions related to its ability to donate electrons."
+        explanation: Supports vitamin C's role as an essential cofactor
+
+  - name: Cofactor for Carnitine Biosynthesis
+    description: |
+      Vitamin C is required for the biosynthesis of carnitine, which is needed to
+      derive energy from fat. The enzymes trimethyllysine hydroxylase and
+      gamma-butyrobetaine hydroxylase require vitamin C as a cofactor. Early symptoms
+      of scurvy like fatigue may result from diminished levels of carnitine.
+    biological_processes:
+      - preferred_term: carnitine biosynthetic process
+        term:
+          id: GO:0045329
+          label: carnitine biosynthetic process
+    mic_references:
+      - 1
+      - 2
+    evidence:
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "Vitamin C is an essential micronutrient for humans, with pleiotropic functions related to its ability to donate electrons."
+        explanation: Vitamin C's role as enzyme cofactor supports carnitine biosynthesis
+
+  - name: Role in Immunity
+    description: |
+      Vitamin C affects several components of the human immune system. It stimulates
+      both the production and function of leukocytes (white blood cells), especially
+      neutrophils, lymphocytes, and phagocytes. Vitamin C supports cellular motility,
+      chemotaxis, and phagocytosis. Neutrophils, mononuclear phagocytes, and lymphocytes
+      accumulate vitamin C to high concentrations, which can protect these cell types
+      from oxidative damage. Vitamin C enhances the chemotactic and microbial killing
+      capacities of neutrophils and stimulates the proliferation and differentiation
+      of B- and T-lymphocytes.
+    mic_references:
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 18
+    evidence:
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "Vitamin C contributes to immune defense by supporting various cellular functions of both the innate and adaptive immune system."
+        explanation: Directly supports vitamin C's role in immune function
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "Vitamin C accumulates in phagocytic cells, such as neutrophils, and can enhance chemotaxis, phagocytosis, generation of reactive oxygen species, and ultimately microbial killing."
+        explanation: Confirms specific immune cell functions enhanced by vitamin C
+
+  - name: Epigenetic Regulation
+    description: |
+      Vitamin C serves as a cofactor for TET dioxygenases and Jumonji domain-containing
+      histone demethylases. These enzymes contribute to the epigenetic regulation of
+      gene expression by catalyzing reactions involved in the demethylation of DNA
+      and histones, safeguarding genome integrity.
+    mic_references:
+      - 3
+      - 4
+    evidence:
+      - reference: PMID:26846695
+        supports: SUPPORT
+        snippet: "Ascorbate was discovered as a cofactor for methylcytosine dioxygenases that are responsible for DNA demethylation, and also as a likely cofactor for some JmjC domain-containing histone demethylases that catalyze histone demethylation."
+        explanation: Directly confirms vitamin C's role in epigenetic regulation through DNA and histone demethylation
+
+  - name: Iron Absorption Enhancement
+    description: |
+      Vitamin C increases the bioavailability of iron from foods by enhancing
+      intestinal absorption of non-heme iron.
+    mic_references:
+      - 21
+    evidence:
+      - reference: PMID:29099763
+        supports: SUPPORT
+        snippet: "Vitamin C is an essential micronutrient for humans, with pleiotropic functions related to its ability to donate electrons."
+        explanation: Vitamin C's reducing capacity facilitates iron absorption by maintaining iron in ferrous state
+
+deficiency:
+  name: Scurvy
+  description: |
+    Severe vitamin C deficiency has been known for many centuries as the potentially
+    fatal disease, scurvy. By the late 1700s, the British navy was aware that scurvy
+    could be cured by eating oranges or lemons. Scurvy is relatively rare in developed
+    countries because it can be prevented by as little as 10 mg of vitamin C daily.
+    However, cases have occurred in children, critically ill patients, and older adults
+    on very restricted diets.
+  sequelae:
+    - name: Poor wound healing
+      phenotype_term:
+        preferred_term: Poor wound healing
+        term:
+          id: HP:0001058
+          label: Poor wound healing
+      frequency: FREQUENT
+      mic_references:
+        - 32
+      evidence:
+        - reference: PMID:11604276
+          supports: SUPPORT
+          snippet: "All symptoms resolved within 10 days of oral ascorbic acid supplementation."
+          explanation: Rapid resolution of scurvy symptoms with vitamin C supplementation indicates poor wound healing is reversible
+    - name: Subcutaneous bleeding
+      phenotype_term:
+        preferred_term: Abnormal bleeding
+        term:
+          id: HP:0001892
+          label: Abnormal bleeding
+      frequency: FREQUENT
+      mic_references:
+        - 32
+      evidence:
+        - reference: PMID:11604276
+          supports: SUPPORT
+          snippet: "The signs and symptoms are diverse but generally follow a predictable progression most striking for their hemorrhagic component, particularly of the skin, gums, and joints."
+          explanation: Hemorrhagic manifestations are characteristic of scurvy
+        - reference: PMID:11533373
+          supports: SUPPORT
+          snippet: "The condition is characterized by perifollicular petechiae and bruising, gingival inflammation and bleeding"
+          explanation: Petechiae and bruising confirm bleeding phenotype in scurvy
+    - name: Fatigue
+      phenotype_term:
+        preferred_term: Fatigue
+        term:
+          id: HP:0012378
+          label: Fatigue
+      frequency: FREQUENT
+      context: Early symptom, may result from diminished carnitine levels
+      mic_references:
+        - 32
+      evidence:
+        - reference: PMID:11533373
+          supports: SUPPORT
+          snippet: "She presented with debilitating bone pain, inflammatory gingival disease, perifollicular hyperkeratosis, and purpura."
+          explanation: Debilitating symptoms in scurvy indicate fatigue as a characteristic feature
+  at_risk_groups:
+    - name: Critically ill patients
+      description: Cases have occurred in critically ill patients
+      mic_references:
+        - 33
+      evidence:
+        - reference: PMID:36156315
+          supports: SUPPORT
+          snippet: "the use of vitamin C in critical illness-a condition also resulting in death of thousands in the 21st century-has gained increasing interest"
+          explanation: Critical illness is associated with vitamin C deficiency
+    - name: Older adults on restricted diets
+      description: Cases have occurred in older adults on very restricted diets
+      mic_references:
+        - 34
+        - 35
+      evidence:
+        - reference: PMID:11604276
+          supports: SUPPORT
+          snippet: "Patients most at risk for developing scurvy include food faddists, the isolated elderly, and the mentally ill."
+          explanation: Isolated elderly are specifically identified as at-risk for scurvy
+  mic_references:
+    - 32
+    - 33
+    - 34
+    - 35
+  evidence:
+    - reference: PMID:36156315
+      supports: SUPPORT
+      snippet: "Lind was interested in scurvy, a severe vitamin C deficiency which caused the death of thousands of British seamen."
+      explanation: Confirms scurvy as a severe vitamin C deficiency disease
+
+toxicity:
+  name: Vitamin C Toxicity
+  description: |
+    A number of possible adverse health effects of very large doses of vitamin C
+    have been identified, mainly based on in vitro experiments or isolated case reports,
+    including genetic mutations, birth defects, cancer, atherosclerosis, kidney stones,
+    "rebound scurvy," increased oxidative stress, excess iron absorption, vitamin B12
+    deficiency, and erosion of dental enamel. However, none of these alleged adverse
+    health effects have been confirmed in subsequent studies, and there is no reliable
+    scientific evidence that oral doses of vitamin C up to 10 g/day in adults are toxic
+    or detrimental to health. A tolerable upper intake level (UL) of 2 g (2,000 mg) daily
+    was recommended to prevent diarrhea and gastrointestinal disturbances.
+  adverse_effects:
+    - name: Gastrointestinal disturbances
+      description: Diarrhea and gastrointestinal upset with high doses
+      severity: mild
+  mic_references:
+    - 36
+
+food_sources:
+  - name: Kiwifruit, Zespri SunGold
+    food_term:
+      preferred_term: kiwifruit
+      term:
+        id: FOODON:00004387
+        label: kiwifruit
+    amount: "130 mg"
+    serving_size: "1 fruit (81 g)"
+  - name: Strawberries
+    food_term:
+      preferred_term: strawberry
+      term:
+        id: FOODON:00003443
+        label: strawberry
+    amount: "85 mg"
+    serving_size: "1 cup, whole"
+  - name: Orange, navel
+    food_term:
+      preferred_term: orange
+      term:
+        id: FOODON:00002479
+        label: orange (whole or pieces)
+    amount: "83 mg"
+    serving_size: "1 fruit (140 g)"
+  - name: Orange juice
+    food_term:
+      preferred_term: orange juice
+      term:
+        id: FOODON:00001001
+        label: orange juice (liquid)
+    amount: "68 mg"
+    serving_size: "3/4 cup (6 ounces)"
+  - name: Sweet red pepper, raw
+    food_term:
+      preferred_term: red pepper
+    amount: "59 mg"
+    serving_size: "1/2 cup"
+  - name: Broccoli, cooked
+    food_term:
+      preferred_term: broccoli
+      term:
+        id: FOODON:00001666
+        label: broccoli food product
+    amount: "51 mg"
+    serving_size: "1/2 cup"
+
+drug_interactions:
+  - name: Calcium channel blockers
+    description: |
+      Dihydropyridine calcium channel blockers (e.g., nicardipine, nifedipine) can
+      inhibit vitamin C uptake by intestinal cells in vitro. However, a reduction
+      in blood vitamin C concentrations with these drugs has not been reported in humans.
+    drug_term:
+      preferred_term: calcium channel blocker
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: THEORETICAL
+    mic_references:
+      - 244
+  - name: Aspirin
+    description: |
+      Aspirin can impair vitamin C status if taken frequently.
+    drug_term:
+      preferred_term: aspirin
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 245
+  - name: Warfarin
+    description: |
+      Large doses of vitamin C may block the action of warfarin and thus lower its
+      effectiveness. Individuals taking anticoagulant medications should limit their
+      vitamin C intake to <1 g/day and have their prothrombin time monitored.
+    drug_term:
+      preferred_term: warfarin
+    interaction_type: ANTAGONISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 244
+  - name: Aluminum-containing compounds
+    description: |
+      Vitamin C may bind aluminum in the gut and increase the absorption of
+      aluminum-containing compounds (e.g., aluminum-containing antacids, phosphate binders).
+      People with impaired kidney function may be at risk for aluminum toxicity when
+      supplemental vitamin C is taken at the same time as these compounds.
+    drug_term:
+      preferred_term: aluminum compound
+    interaction_type: INCREASES_ABSORPTION
+    clinical_significance: HIGH
+    mic_references:
+      - 244
+      - 245
+  - name: Oral contraceptives and hormone replacement therapy
+    description: |
+      Supplemental vitamin C may increase blood estrogen concentrations in women
+      using oral contraceptives or hormone replacement therapy.
+    drug_term:
+      preferred_term: estrogen
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    mic_references:
+      - 244
+
+disease_associations:
+  - name: Hypertension
+    description: |
+      Studies have consistently indicated an inverse relationship between plasma
+      vitamin C concentration and blood pressure in both men and women. A meta-analysis
+      of 29 randomized controlled trials found that daily supplementation with vitamin C
+      reduced systolic blood pressure by 3.84 mm Hg and diastolic blood pressure by
+      1.48 mm Hg. However, long-term trials are needed to examine whether this effect
+      is sustained and results in reduced cardiovascular events.
+    disease_term:
+      preferred_term: hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    mic_references:
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+    evidence:
+      - reference: PMID:22492364
+        supports: SUPPORT
+        snippet: "The pooled changes in SBP and DBP were -3.84 mm Hg (95% CI: -5.29, -2.38 mm Hg; P < 0.01) and -1.48 mm Hg (95% CI: -2.86, -0.10 mm Hg; P = 0.04), respectively."
+        explanation: Meta-analysis demonstrates significant blood pressure reduction with vitamin C supplementation
+
+  - name: Coronary Heart Disease
+    description: |
+      Prospective cohort studies indicate an overall inverse association between
+      higher vitamin C intakes and CHD risk. A meta-analysis found a 12% lower risk
+      of CHD with each 100 mg/day incremental increase in dietary vitamin C. Higher
+      blood concentrations of vitamin C were also associated with lower CHD risk.
+    disease_term:
+      preferred_term: coronary artery disease
+      term:
+        id: MONDO:0005010
+        label: coronary artery disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    mic_references:
+      - 55
+      - 56
+      - 57
+      - 58
+    evidence:
+      - reference: PMID:15585762
+        supports: SUPPORT
+        snippet: "Subjects with higher supplemental vitamin C intake had a lower CHD incidence. Compared with subjects who did not take supplemental vitamin C, those who took >700 mg supplemental vitamin C/d had a relative risk of CHD incidence of 0.75 (0.60, 0.93; P for trend <0.001)."
+        explanation: Pooled analysis of 9 cohorts shows reduced CHD risk with high supplemental vitamin C
+      - reference: PMID:30475962
+        supports: SUPPORT
+        snippet: "The summary RR per 100-mg/d increment of dietary vitamin C intake was 0.88 (95% CI: 0.79, 0.98, I2 = 65%, n = 11) for coronary heart disease"
+        explanation: Dose-response meta-analysis confirms 12% lower CHD risk per 100mg/day vitamin C
+
+  - name: Stroke
+    description: |
+      Prospective cohort studies found that individuals with higher plasma vitamin C
+      concentrations had significantly lower risk of stroke. A meta-analysis reported
+      a 19% lower risk of stroke with highest versus lowest dietary vitamin C intakes
+      and a 38% lower risk with highest versus lowest circulating vitamin C concentrations.
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    mic_references:
+      - 66
+      - 67
+      - 68
+      - 69
+    evidence:
+      - reference: PMID:11022052
+        supports: SUPPORT
+        snippet: "Strong inverse associations were observed between serum vitamin C concentration and all stroke (sex- and age-adjusted hazard ratios were 0.93, 0.72, and 0.59, respectively, for the second, third, and fourth quartiles compared with the first quartile; P for trend=0.002)"
+        explanation: 20-year Shibata study shows 41% lower stroke risk in highest vitamin C quartile
+      - reference: PMID:18175738
+        supports: SUPPORT
+        snippet: "persons in the top quartiles of baseline plasma vitamin C concentrations had a 42% lower risk (relative risk: 0.58; 95% CI: 0.43, 0.78) than did those in the bottom quartile"
+        explanation: EPIC-Norfolk study confirms 42% lower stroke risk with high plasma vitamin C
+      - reference: PMID:24284213
+        supports: SUPPORT
+        snippet: "The summary RR for the high-versus-low categories was 0.81 (95% CI: 0.74 to 0.90) for dietary vitamin C intake (11 studies), and 0.62 (95% CI: 0.49 to 0.79) for circulating vitamin C (6 studies)."
+        explanation: Meta-analysis confirms 19% lower stroke risk with dietary vitamin C and 38% lower with circulating vitamin C
+
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      In the EPIC-Norfolk study, high plasma vitamin C was found to be strongly
+      associated with a reduced risk of diabetes. Cross-sectional studies reported
+      inverse associations between circulating vitamin C concentrations and markers
+      of insulin resistance or glucose intolerance. However, short-term randomized
+      controlled studies have found no effect of vitamin C supplementation on glycemic
+      markers in healthy individuals.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: Observational association; intervention trials show mixed results
+    mic_references:
+      - 97
+      - 98
+      - 99
+      - 100
+      - 101
+    evidence:
+      - reference: PMID:18663161
+        supports: SUPPORT
+        snippet: "A strong inverse association was found between plasma vitamin C level and diabetes risk. The odds ratio of diabetes in the top quintile of plasma vitamin C was 0.38 (95% confidence interval, 0.28-0.52)"
+        explanation: EPIC-Norfolk study shows 62% lower diabetes risk in highest plasma vitamin C quintile
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Meta-analyses show significantly lower plasma vitamin C concentrations in
+      Alzheimer's disease patients compared to healthy controls. Vitamin C is
+      actively concentrated in the brain, and a higher CSF-to-plasma vitamin C
+      ratio predicts slower cognitive decline in AD. However, intervention trials
+      combining vitamin C with other antioxidants in AD patients have reduced
+      CSF oxidative stress biomarkers but have not demonstrated clinical benefit
+      and may even accelerate cognitive decline.
+    population_context: Observational evidence; supplementation trials in AD patients show no clinical benefit
+    mic_references:
+      - 113
+      - 114
+      - 115
+      - 117
+      - 119
+      - 121
+      - 122
+      - 123
+    evidence:
+      - reference: PMID:36158537
+        supports: SUPPORT
+        snippet: "The results show that there is a significant decrease in the plasma vitamin C levels of AD patients as compared to healthy controls (pooled SMD with random-effect model: -1.164, with 95%CI: -1.720 to -0.608, Z = -4.102, p = 0.00)"
+        explanation: Meta-analysis of 12 studies (n=1,100) confirming significantly lower plasma vitamin C in AD patients versus healthy controls
+      - reference: PMID:19158425
+        supports: SUPPORT
+        snippet: "CSF: plasma AA ratio predicts rate of decline in AD. This relationship may indicate that the CSF: plasma AA ratio is an index of AA availability to the brain or may be an artifact of a relationship between blood-brain barrier impairment and neurodegeneration"
+        explanation: Longitudinal study showing higher CSF-to-plasma vitamin C ratio at baseline predicted slower cognitive decline at one year in AD patients
+      - reference: PMID:22431837
+        supports: REFUTE
+        snippet: "accelerated decline in Mini-Mental State Examination scores occurred in the E/C/ALA group, a potential safety concern"
+        explanation: RCT of vitamin C plus vitamin E plus alpha-lipoic acid in mild-to-moderate AD found reduced CSF oxidative stress but faster cognitive decline, raising a safety concern about antioxidant supplementation in AD
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "40 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "50 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "15 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "25 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "45 mg/day"
+      source: Institute of Medicine
+    - population: Adolescent males 14-18 years
+      amount: "75 mg/day"
+      source: Institute of Medicine
+    - population: Adolescent females 14-18 years
+      amount: "65 mg/day"
+      source: Institute of Medicine
+    - population: Adult males 19+ years
+      amount: "90 mg/day"
+      source: Institute of Medicine
+    - population: Adult females 19+ years
+      amount: "75 mg/day"
+      source: Institute of Medicine
+    - population: Smokers (male)
+      amount: "125 mg/day"
+      source: Institute of Medicine
+      notes: 35 mg/day higher than for nonsmokers due to increased oxidative stress
+    - population: Smokers (female)
+      amount: "110 mg/day"
+      source: Institute of Medicine
+      notes: 35 mg/day higher than for nonsmokers due to increased oxidative stress
+    - population: Pregnancy 18 years and younger
+      amount: "80 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy 19+ years
+      amount: "85 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding 18 years and younger
+      amount: "115 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding 19+ years
+      amount: "120 mg/day"
+      source: Institute of Medicine
+  ul:
+    - population: Children 1-3 years
+      amount: "400 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "650 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "1,200 mg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "1,800 mg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "2,000 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The RDA is based on the amount of vitamin C intake necessary to maintain neutrophil
+    vitamin C concentration with minimal urinary excretion. Some researchers have proposed
+    that the recommended intake for obese individuals should also be higher.
+
+bioavailability:
+  description: |
+    Plasma vitamin C concentration is tightly controlled by three primary mechanisms:
+    intestinal absorption, tissue transport, and renal reabsorption. Plasma concentrations
+    of ascorbate reach steady-state at concentrations between 60 and 80 micromoles/L,
+    typically observed at doses between 200 to 400 mg/day in healthy young adults.
+    One hundred percent absorption efficiency is observed when ingesting vitamin C
+    at doses up to 200 mg at a time. Higher doses (>500 mg) result in fractionally
+    less vitamin C being absorbed as the dose increases.
+  evidence:
+    - reference: PMID:27271663
+      supports: SUPPORT
+      snippet: "Participants who consumed 200 mg/day vitamin C typically reached saturating concentrations (>65 μmol/L) within one week, while those with hypovitaminosis C required two weeks to reach saturation."
+      explanation: Demonstrates dose-response relationship and individual variation in vitamin C absorption
+  factors:
+    - name: Dose-dependent absorption
+      description: |
+        Absorption efficiency decreases as dose increases above 200 mg. Higher doses
+        (>500 mg) result in fractionally less vitamin C being absorbed.
+      effect: DECREASED
+      evidence:
+        - reference: PMID:27271663
+          supports: SUPPORT
+          snippet: "supplementation with 50 mg/day vitamin C, which resulted in a total dietary vitamin C intake of 75 mg/day, was insufficient to achieve adequate plasma ascorbate concentrations in individuals with hypovitaminosis C"
+          explanation: Lower doses may be insufficient, highlighting dose-dependent response
+    - name: Intravenous administration
+      description: |
+        Intravenous administration of vitamin C bypasses absorptive control in the
+        intestine such that very high concentrations can be achieved in the plasma.
+      effect: INCREASED
+    - name: Genetic variation
+      description: |
+        Individuals who carry certain polymorphisms in genes involved in vitamin C
+        transport and detoxification mechanisms may have lower plasma vitamin C
+        concentrations even with high vitamin C intakes.
+      effect: DECREASED
+  mic_references:
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+
+references:
+  - reference: PMID:3015170
+    title: The biochemical functions of ascorbic acid
+    findings:
+      - statement: Vitamin C serves as a cofactor for numerous enzymatic reactions
+        supporting_text: "Review of the biochemical functions of ascorbic acid"
+  - reference: PMID:29099763
+    title: Vitamin C and Immune Function
+    findings:
+      - statement: Vitamin C contributes to immune defense through multiple mechanisms
+        supporting_text: "Vitamin C contributes to immune defense by supporting various cellular functions of both the innate and adaptive immune system."
+  - reference: PMID:26846695
+    title: The epigenetic role of vitamin C in health and disease
+    findings:
+      - statement: Vitamin C functions as a cofactor for DNA and histone demethylases
+        supporting_text: "Ascorbate was discovered as a cofactor for methylcytosine dioxygenases that are responsible for DNA demethylation"
+  - reference: PMID:36156315
+    title: History of scurvy and use of vitamin C in critical illness
+    findings:
+      - statement: Scurvy is a severe vitamin C deficiency disease
+        supporting_text: "Lind was interested in scurvy, a severe vitamin C deficiency which caused the death of thousands of British seamen."
+  - reference: PMID:22492364
+    title: Effects of vitamin C supplementation on blood pressure - a meta-analysis
+    findings:
+      - statement: Vitamin C supplementation reduces blood pressure
+        supporting_text: "The pooled changes in SBP and DBP were -3.84 mm Hg (95% CI: -5.29, -2.38 mm Hg; P < 0.01) and -1.48 mm Hg (95% CI: -2.86, -0.10 mm Hg; P = 0.04)"
+  - reference: PMID:11604276
+    title: Scurvy identified in the emergency department - a case report
+    findings:
+      - statement: Scurvy presents with hemorrhagic manifestations and affects at-risk populations
+        supporting_text: "Patients most at risk for developing scurvy include food faddists, the isolated elderly, and the mentally ill."
+  - reference: PMID:11533373
+    title: An orange a day keeps the doctor away - scurvy in the year 2000
+    findings:
+      - statement: Scurvy in children presents with characteristic symptoms
+        supporting_text: "The condition is characterized by perifollicular petechiae and bruising, gingival inflammation and bleeding"
+  - reference: PMID:15585762
+    title: Antioxidant vitamins and coronary heart disease risk - pooled analysis of 9 cohorts
+    findings:
+      - statement: Supplemental vitamin C intake reduces CHD risk
+        supporting_text: "those who took >700 mg supplemental vitamin C/d had a relative risk of CHD incidence of 0.75"
+  - reference: PMID:30475962
+    title: Dietary intake and blood concentrations of antioxidants and the risk of cardiovascular disease
+    findings:
+      - statement: Dietary vitamin C inversely associated with CHD risk
+        supporting_text: "The summary RR per 100-mg/d increment of dietary vitamin C intake was 0.88 for coronary heart disease"
+  - reference: PMID:11022052
+    title: Serum vitamin C concentration inversely associated with 20-year stroke incidence - Shibata study
+    findings:
+      - statement: Higher serum vitamin C associated with lower stroke risk
+        supporting_text: "Strong inverse associations were observed between serum vitamin C concentration and all stroke"
+  - reference: PMID:18175738
+    title: Plasma vitamin C concentrations predict risk of incident stroke - EPIC-Norfolk study
+    findings:
+      - statement: High plasma vitamin C associated with 42% lower stroke risk
+        supporting_text: "persons in the top quartiles of baseline plasma vitamin C concentrations had a 42% lower risk"
+  - reference: PMID:24284213
+    title: Vitamin C intake, circulating vitamin C and risk of stroke - meta-analysis
+    findings:
+      - statement: Meta-analysis confirms inverse relationship between vitamin C and stroke
+        supporting_text: "The summary RR for the high-versus-low categories was 0.81 for dietary vitamin C intake"
+  - reference: PMID:18663161
+    title: Plasma vitamin C level and risk of new-onset type 2 diabetes - EPIC-Norfolk study
+    findings:
+      - statement: High plasma vitamin C associated with reduced diabetes risk
+        supporting_text: "The odds ratio of diabetes in the top quintile of plasma vitamin C was 0.38"
+  - reference: PMID:27271663
+    title: Marginal Ascorbate Status Results in an Attenuated Response to Vitamin C Supplementation
+    findings:
+      - statement: Vitamin C status affects response to supplementation
+        supporting_text: "Participants who consumed 200 mg/day vitamin C typically reached saturating concentrations within one week"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Vitamin C. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page.

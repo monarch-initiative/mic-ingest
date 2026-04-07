@@ -1,0 +1,632 @@
+name: Magnesium
+nutrient_term:
+  preferred_term: magnesium
+  term:
+    id: CHEBI:25107
+    label: magnesium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/magnesium
+alternate_names:
+  - Mg
+description: |
+  Magnesium is an essential mineral that serves as a cofactor for hundreds of enzymes.
+  It is needed for a wide range of physiologic pathways, including energy production,
+  nucleic acid and protein synthesis, ion transport, cell signaling, and has structural
+  functions in bone and cell membranes. Severe magnesium deficiency can disrupt vitamin D
+  and calcium homeostasis. Over half of US adults have inadequate dietary magnesium intake,
+  though the long-term consequences of this remain unclear.
+
+functions:
+  - name: Energy Production
+    description: |
+      The metabolism of carbohydrates and fats to produce energy requires numerous
+      magnesium-dependent chemical reactions. Magnesium is required for the ATP synthase
+      protein in mitochondria. ATP, the molecule that provides energy for almost all
+      metabolic processes, exists primarily as a complex with magnesium (MgATP).
+    biological_processes:
+      - preferred_term: ATP synthesis
+        term:
+          id: GO:0042776
+          label: proton motive force-driven mitochondrial ATP synthesis
+    mic_references:
+      - 3
+
+  - name: Essential Molecule Synthesis
+    description: |
+      Magnesium is required for a number of steps during synthesis of DNA, RNA, and
+      proteins. Several enzymes participating in the synthesis of carbohydrates and
+      lipids require magnesium for their activity. Glutathione, an important antioxidant,
+      requires magnesium for its synthesis.
+    biological_processes:
+      - preferred_term: nucleic acid synthesis
+        term:
+          id: GO:0090592
+          label: DNA synthesis involved in DNA replication
+    mic_references:
+      - 3
+
+  - name: Structural Roles
+    description: |
+      Magnesium plays a structural role in bone, cell membranes, and chromosomes.
+      Around 60% of total body magnesium is stored in the skeleton and is known to
+      influence both bone matrix and bone mineral metabolism.
+    mic_references:
+      - 3
+
+  - name: Ion Transport
+    description: |
+      Magnesium is required for the active transport of ions like potassium and calcium
+      across cell membranes. This function is necessary for nerve impulse conduction,
+      muscle contraction, and normal heart rhythm.
+    biological_processes:
+      - preferred_term: ion transport
+        term:
+          id: GO:0006811
+          label: monoatomic ion transport
+    mic_references:
+      - 3
+
+  - name: Cell Signaling
+    description: |
+      Cell signaling processes require MgATP for protein phosphorylation and the
+      formation of cyclic adenosine monophosphate (cAMP), an important cell-signaling
+      molecule involved in many physiological processes, including the secretion of
+      parathyroid hormone (PTH) from the parathyroid glands.
+    biological_processes:
+      - preferred_term: cell signaling
+        term:
+          id: GO:0007165
+          label: signal transduction
+    mic_references:
+      - 3
+
+deficiency:
+  name: Magnesium Deficiency
+  description: |
+    Magnesium deficiency is rare in healthy individuals consuming a balanced diet,
+    because magnesium is abundant in both plant and animal foods and kidneys can limit
+    urinary excretion when intake is low. However, certain conditions increase risk:
+    gastrointestinal disorders, renal disorders, endocrine/metabolic disorders,
+    alcoholism, and older age. Severe deficiency causes hypocalcemia despite adequate
+    calcium intake, hypokalemia, sodium retention, neurological and muscular symptoms
+    (tremor, muscle spasms, tetany), loss of appetite, nausea, and personality changes.
+  sequelae:
+    - name: Hypocalcemia
+      phenotype_term:
+        preferred_term: hypocalcemia
+        term:
+          id: HP:0002901
+          label: Hypocalcemia
+      frequency: FREQUENT
+      context: Serum calcium decreases as magnesium deficiency progresses
+      mic_references:
+        - 3
+
+    - name: Hypokalemia
+      phenotype_term:
+        preferred_term: hypokalemia
+        term:
+          id: HP:0002900
+          label: Hypokalemia
+      frequency: OCCASIONAL
+      context: Low serum potassium concentrations in severe deficiency
+      mic_references:
+        - 3
+
+    - name: Muscle spasm
+      phenotype_term:
+        preferred_term: muscle spasm
+        term:
+          id: HP:0003394
+          label: Muscle spasm
+      frequency: OCCASIONAL
+      context: Neurological and muscular symptoms in severe deficiency
+      mic_references:
+        - 3
+
+  at_risk_groups:
+    - name: Individuals with gastrointestinal disorders
+      description: |
+        Prolonged diarrhea, Crohn's disease, malabsorption syndromes, celiac disease,
+        surgical removal of parts of the small intestine, and radiation-induced
+        intestinal inflammation can lead to magnesium depletion.
+      mic_references:
+        - 7
+
+    - name: Individuals with renal disorders
+      description: |
+        Diabetes mellitus and long-term use of certain diuretics may result in
+        increased urinary loss of magnesium.
+      mic_references:
+        - 3
+
+    - name: Individuals with chronic alcoholism
+      description: |
+        Poor dietary intake, gastrointestinal problems, and increased urinary loss
+        of magnesium may all contribute to magnesium depletion.
+      mic_references:
+        - 7
+
+    - name: Older adults
+      description: |
+        Older individuals (>50 years) have relatively low dietary intakes of magnesium.
+        Intestinal absorption tends to decrease with age, and urinary excretion tends
+        to increase with age.
+      mic_references:
+        - 2
+        - 8
+        - 9
+
+  mic_references:
+    - 1
+    - 3
+    - 7
+
+toxicity:
+  name: Magnesium Toxicity
+  description: |
+    Adverse effects have not been identified from magnesium occurring naturally in food.
+    However, adverse effects from excessive supplemental magnesium have been observed.
+    The initial symptom of excess magnesium supplementation is diarrhea. Individuals with
+    impaired kidney function are at higher risk for adverse effects. Hypermagnesemia may
+    cause hypotension, lethargy, confusion, cardiac rhythm disturbances, muscle weakness,
+    difficulty breathing, and in severe cases cardiac arrest. The Tolerable Upper Intake
+    Level (UL) for supplemental magnesium is 350 mg/day for adults, based on risk of
+    diarrhea and GI disturbance.
+  adverse_effects:
+    - name: Diarrhea
+      description: |
+        Initial symptom of excess magnesium supplementation; well-known side effect
+        used therapeutically as a laxative
+      severity: mild
+    - name: Cardiac disturbances
+      description: |
+        Severe hypermagnesemia can cause disturbances in normal cardiac rhythm
+        and potentially cardiac arrest
+      severity: severe
+  mic_references:
+    - 2
+    - 3
+    - 6
+
+food_sources:
+  - name: Brazil nuts
+    food_term:
+      preferred_term: brazil nuts
+    amount: "107 mg"
+    serving_size: "1 ounce (6 kernels)"
+    mic_references:
+      - 2
+
+  - name: Oat bran cereal
+    food_term:
+      preferred_term: oat bran
+    amount: "96 mg"
+    serving_size: "1/2 cup dry"
+    mic_references:
+      - 2
+
+  - name: Cashews
+    food_term:
+      preferred_term: cashews
+    amount: "83 mg"
+    serving_size: "1 ounce (16 kernels)"
+    mic_references:
+      - 2
+
+  - name: Spinach, frozen, cooked
+    food_term:
+      preferred_term: spinach
+    amount: "78 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+  - name: Almonds
+    food_term:
+      preferred_term: almonds
+    amount: "77 mg"
+    serving_size: "1 ounce (23 kernels)"
+    mic_references:
+      - 2
+
+  - name: Swiss chard, cooked
+    food_term:
+      preferred_term: swiss chard
+    amount: "75 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 2
+
+drug_interactions:
+  - name: Bisphosphonates and Magnesium
+    description: |
+      Magnesium can inhibit the absorption of bisphosphonates used for osteoporosis.
+      Doses should be separated by at least two hours.
+    drug_term:
+      preferred_term: bisphosphonate
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Tetracycline Antibiotics and Magnesium
+    description: |
+      Magnesium has been found to reduce the efficacy of tetracycline class antibiotics.
+    drug_term:
+      preferred_term: tetracycline
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Quinolone Antibiotics and Magnesium
+    description: |
+      Magnesium has been found to reduce the efficacy of quinolone class antibiotics.
+    drug_term:
+      preferred_term: quinolone
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 212
+      - 213
+
+  - name: Proton-Pump Inhibitors and Magnesium
+    description: |
+      Long-term use (three months or longer) of proton-pump inhibitors may increase
+      the risk of hypomagnesemia.
+    drug_term:
+      preferred_term: proton pump inhibitor
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 214
+      - 215
+
+  - name: Loop and Thiazide Diuretics and Magnesium
+    description: |
+      High doses of furosemide (Lasix) and some thiazide diuretics, if taken for
+      extended periods, may interfere with magnesium reabsorption in the kidneys
+      and result in magnesium depletion.
+    drug_term:
+      preferred_term: diuretic
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: MODERATE
+    mic_references:
+      - 213
+
+nutrient_interactions:
+  - name: Zinc and Magnesium
+    description: |
+      High doses of supplemental zinc (142 mg/day, well above the UL of 40 mg/day)
+      may interfere with magnesium absorption and disrupt magnesium balance.
+    nutrient_term:
+      preferred_term: zinc
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 4
+
+  - name: Fiber and Magnesium
+    description: |
+      Large increases in dietary fiber intake have been found to decrease magnesium
+      utilization in experimental studies, though the extent of this effect in
+      individuals with varied diets is unclear.
+    nutrient_term:
+      preferred_term: dietary fiber
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 2
+      - 3
+
+  - name: Calcium and Magnesium
+    description: |
+      Magnesium is needed for calcium homeostasis. Severe magnesium deficiency can
+      disrupt vitamin D and calcium homeostasis, leading to hypocalcemia.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 3
+
+disease_associations:
+  - name: Type 2 Diabetes Mellitus
+    description: |
+      Higher magnesium intakes have been associated with lower risk of type 2 diabetes
+      mellitus in multiple large prospective cohort studies. Meta-analyses show a 17-22%
+      lower risk in those with highest versus lowest magnesium intakes, with 6-8% risk
+      reduction per 100 mg/day increment. Magnesium supplementation has been shown to
+      improve insulin sensitivity in individuals at risk for type 2 diabetes.
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults with inadequate dietary magnesium intake
+    mic_references:
+      - 52
+      - 74
+      - 76
+      - 78
+    evidence:
+      - reference: PMID:27869762
+        supports: SUPPORT
+        snippet: "Compared with the lowest magnesium consumption group in the population, the risk of T2D was reduced by 17% across all the studies; 19% in women and 16% in men"
+        explanation: Meta-analysis of 25 prospective cohort studies confirms 17% reduction in T2D risk with highest vs lowest magnesium intake
+      - reference: PMID:21205110
+        supports: SUPPORT
+        snippet: "Mg supplementation resulted in a significant improvement of fasting plasma glucose and some insulin sensitivity indices (ISIs) compared to placebo"
+        explanation: Double-blind RCT showing oral magnesium supplementation improves insulin sensitivity even in normomagnesemic overweight non-diabetic subjects
+      - reference: PMID:21241290
+        supports: SUPPORT
+        snippet: "MgCl(2) 2.5 g daily improves the ability of beta-cells to compensate for variations in insulin sensitivity in non-diabetic individuals with significant hypomagnesaemia"
+        explanation: Randomized double-blind clinical trial demonstrating magnesium chloride supplementation improves pancreatic beta-cell function in hypomagnesemic individuals
+      - reference: PMID:34836329
+        supports: SUPPORT
+        snippet: "Mg supplementation may improve insulin-sensitivity parameters in those at high risk of diabetes"
+        explanation: Systematic review and meta-analysis of double-blind RCTs confirming magnesium supplementation improves glucose parameters in people with diabetes and insulin sensitivity in those at high risk
+
+  - name: Hypertension
+    description: |
+      Large prospective cohort studies have found that higher dietary magnesium intakes
+      are associated with an 8% lower risk of hypertension. Higher urinary magnesium
+      has been associated with 25% reduction in hypertension risk. Improving diet
+      quality or using magnesium supplements may play a role in prevention.
+    disease_term:
+      preferred_term: hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults with inadequate dietary magnesium intake
+    mic_references:
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+    evidence:
+      - reference: PMID:28476161
+        supports: SUPPORT
+        snippet: "A 100 mg/day increment in magnesium intake was associated with a 5% reduction in the risk of hypertension"
+        explanation: Dose-response meta-analysis of prospective cohort studies confirms inverse relationship between dietary magnesium and hypertension risk
+      - reference: PMID:33435187
+        supports: SUPPORT
+        snippet: "oral magnesium (≥240 mg/day) safely lowers BP in Uncontrolled Hypertensive patients taking antihypertensive medications, while >600 mg/day magnesium is required to safely lower BP in Untreated Hypertensives"
+        explanation: Categorized systematic review of 49 clinical trials showing that oral magnesium supplementation effectively lowers blood pressure in uncontrolled hypertensives at doses of 240 mg/day or more
+
+  - name: Osteoporosis
+    description: |
+      Around 60% of total body magnesium is stored in the skeleton and influences
+      bone matrix and mineral metabolism. Higher dietary magnesium intakes have been
+      associated with increased bone mineral density in observational studies. However,
+      evidence is not yet sufficient to suggest supplemental magnesium in excess of
+      the RDA is effective for osteoporosis prevention.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Postmenopausal women and older adults
+    mic_references:
+      - 85
+      - 86
+      - 91
+      - 92
+      - 94
+    evidence:
+      - reference: PMID:23912329
+        supports: SUPPORT
+        snippet: "Magnesium deficiency contributes to osteoporosis directly by acting on crystal formation and on bone cells and indirectly by impacting on the secretion and the activity of parathyroid hormone and by promoting low grade inflammation"
+        explanation: Review confirms mechanisms by which magnesium deficiency contributes to osteoporosis
+      - reference: PMID:24500155
+        supports: SUPPORT
+        snippet: "Baseline hip BMD was 3% higher (P < 0.001), and whole-body BMD was 2% higher (P < 0.001), in women who consumed >422.5 compared with <206.5 mg Mg/d"
+        explanation: Women's Health Initiative Observational Study of 73,684 postmenopausal women showing higher magnesium intake is associated with significantly higher hip and whole-body bone mineral density
+
+  - name: Preeclampsia and Eclampsia
+    description: |
+      Intravenous magnesium sulfate is commonly used in obstetric care for the prevention
+      of seizures in pregnant people with preeclampsia or eclampsia and to protect the
+      brains of premature infants. The landmark Magpie Trial demonstrated that magnesium
+      sulfate halves the risk of eclampsia in women with preeclampsia.
+    disease_term:
+      preferred_term: preeclampsia
+    relationship_type: THERAPEUTIC
+    population_context: Pregnant women with preeclampsia or eclampsia
+    mic_references:
+      - 2
+      - 118
+    evidence:
+      - reference: PMID:12057549
+        supports: SUPPORT
+        snippet: "Women allocated magnesium sulphate had a 58% lower risk of eclampsia (95% CI 40-71) than those allocated placebo (40, 0.8%, vs 96, 1.9%; 11 fewer women with eclampsia per 1000 women)"
+        explanation: The Magpie Trial, a landmark randomized placebo-controlled trial of 10,141 women with preeclampsia in 33 countries, demonstrated that magnesium sulfate halves the risk of eclampsia
+
+  - name: Cardiovascular Disease
+    description: |
+      Higher dietary magnesium intakes have been associated with reduced risk of
+      coronary heart disease, cardiovascular events, and coronary artery calcification
+      in large prospective cohort studies. A meta-analysis of 16 prospective studies
+      reported a 22% lower risk of ischemic heart disease per 200 mg/day increment
+      in dietary magnesium and a 30% lower risk of cardiovascular disease per 0.2 mmol/L
+      increment in circulating magnesium. Cross-sectional analyses from the Framingham
+      Heart Study found significantly lower odds of coronary artery calcification with
+      higher magnesium intake.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults in prospective cohort studies
+    mic_references:
+      - 47
+      - 48
+      - 42
+      - 53
+    evidence:
+      - reference: PMID:23719551
+        supports: SUPPORT
+        snippet: "Dietary magnesium (per 200-mg/d increment) was not significantly associated with CVD (RR: 0.89; 95% CI: 0.75, 1.05) but was associated with a 22% lower risk of IHD (RR: 0.78; 95% CI: 0.67, 0.92)"
+        explanation: Systematic review and meta-analysis of 16 prospective studies with 313,041 individuals showing dietary magnesium is inversely associated with ischemic heart disease risk
+      - reference: PMID:24290571
+        supports: SUPPORT
+        snippet: "the odds of having any CAC were 58% lower (p trend: <0.001) and any AAC were 34% lower (p trend: 0.01), in those with the highest compared to those with the lowest magnesium intake"
+        explanation: Framingham Heart Study cross-sectional analysis of 2,695 participants showing magnesium intake is inversely associated with coronary artery and abdominal aortic calcification
+
+  - name: Stroke
+    description: |
+      Multiple meta-analyses of prospective cohort studies have found that higher
+      dietary magnesium intakes are associated with reduced risk of stroke. Pooled
+      analyses show an 11% lower risk of total stroke and a 12% lower risk of ischemic
+      stroke with higher versus lower magnesium intakes.
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Adults in prospective cohort studies
+    mic_references:
+      - 50
+      - 51
+      - 52
+    evidence:
+      - reference: PMID:32198298
+        supports: SUPPORT
+        snippet: "The magnitude of the risk was significantly reduced by 22% for T2D (RR 0.78 (95% CI 0.75 to 0.81); p<0.001; AR reduction 0.120%), 11% for total stroke (RR 0.89 (95% CI 0.83 to 0.94); p<0.001; AR reduction 0.281%) and 12% for ischaemic stroke (RR 0.88 (95% CI 0.81 to 0.95); p=0.001; AR reduction 0.246%) when comparing the highest magnesium intake to the lowest"
+        explanation: Updated systematic review and meta-analysis of 41 prospective cohort studies confirming a significant 11% reduction in total stroke risk with higher magnesium intake
+
+  - name: Migraine Headaches
+    description: |
+      Lower intracellular magnesium concentrations have been reported in individuals
+      who suffer from recurrent migraine headaches. Oral magnesium supplementation
+      at 600 mg/day has demonstrated modest decreases in migraine frequency in
+      placebo-controlled trials. Magnesium oxide at 500 mg/day has shown comparable
+      efficacy to sodium valproate for reducing migraine frequency and duration.
+    disease_term:
+      preferred_term: migraine disorder
+      term:
+        id: MONDO:0005277
+        label: migraine disorder
+    relationship_type: THERAPEUTIC
+    population_context: Individuals with recurrent migraine headaches
+    mic_references:
+      - 189
+      - 191
+      - 192
+      - 194
+    evidence:
+      - reference: PMID:8792038
+        supports: SUPPORT
+        snippet: "In weeks 9-12 the attack frequency was reduced by 41.6% in the magnesium group and by 15.8% in the placebo group compared to the baseline (p < 0.05)"
+        explanation: Prospective multi-center placebo-controlled double-blind RCT of 81 migraine patients showing 600 mg/day oral magnesium significantly reduced migraine attack frequency by 41.6%
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "30 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "75 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "80 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "130 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "240 mg/day"
+      source: Institute of Medicine
+    - population: Males 14-18 years
+      amount: "410 mg/day"
+      source: Institute of Medicine
+    - population: Females 14-18 years
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Males 19-30 years
+      amount: "400 mg/day"
+      source: Institute of Medicine
+    - population: Females 19-30 years
+      amount: "310 mg/day"
+      source: Institute of Medicine
+    - population: Males 31+ years
+      amount: "420 mg/day"
+      source: Institute of Medicine
+    - population: Females 31+ years
+      amount: "320 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (18 and younger)
+      amount: "400 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (19-30 years)
+      amount: "350 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy (31+ years)
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (18 and younger)
+      amount: "360 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (19-30 years)
+      amount: "310 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding (31+ years)
+      amount: "320 mg/day"
+      source: Institute of Medicine
+  notes: |
+    The Tolerable Upper Intake Level (UL) for supplemental magnesium is 350 mg/day
+    for adults and adolescents 9 years and older. This UL applies specifically to
+    supplemental magnesium, not magnesium from food. National surveys indicate that
+    over half of US adults have inadequate dietary magnesium intake. Good dietary
+    sources include green leafy vegetables, unrefined grains, legumes, beans, and nuts.
+
+bioavailability:
+  description: |
+    Magnesium is absorbed primarily in the small intestine. Absorption efficiency can
+    vary based on magnesium status and dietary factors. The kidneys can limit urinary
+    excretion when intake is low. Around 60% of total body magnesium is stored in the
+    skeleton and is available for dynamic exchange with blood.
+  mic_references:
+    - 2
+
+references:
+  - reference: PMID:27869762
+    title: "Dose-Response Relationship between Dietary Magnesium Intake and Risk of Type 2 Diabetes Mellitus"
+  - reference: PMID:28476161
+    title: "Dose-response relationship between dietary magnesium intake, serum magnesium concentration and risk of hypertension"
+  - reference: PMID:23912329
+    title: "Magnesium and osteoporosis: current state of knowledge and future research directions"
+  - reference: PMID:33435187
+    title: "Effectively Prescribing Oral Magnesium Therapy for Hypertension: A Categorized Systematic Review of 49 Clinical Trials"
+  - reference: PMID:24500155
+    title: "Magnesium intake, bone mineral density, and fractures: results from the Women's Health Initiative Observational Study"
+  - reference: PMID:12057549
+    title: "Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial"
+  - reference: PMID:23719551
+    title: "Circulating and dietary magnesium and risk of cardiovascular disease: a systematic review and meta-analysis of prospective studies"
+  - reference: PMID:24290571
+    title: "Magnesium intake is inversely associated with coronary artery calcification: the Framingham Heart Study"
+  - reference: PMID:32198298
+    title: "Association of magnesium intake with type 2 diabetes and total stroke: an updated systematic review and meta-analysis"
+  - reference: PMID:8792038
+    title: "Prophylaxis of migraine with oral magnesium: results from a prospective, multi-center, placebo-controlled and double-blind randomized study"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Magnesium. Magnesium is involved in more than 300
+  essential metabolic reactions. The MIC reference numbers (mic_references) correspond
+  to the numbered citations on the source page. The page contains approximately
+  215 references.

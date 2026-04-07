@@ -145,3 +145,51 @@ logs/
 # LLM Cache
 .litellm_cache/
 
+# =============================================================================
+# MIC-INGEST SPECIFIC
+# =============================================================================
+
+# Derived caches (regenerated from mic-pages HTML)
+cache/sections/
+cache/references/
+cache/refs/
+cache/mic-refs/
+cache/ontology/
+
+# Temporary output files
+output.json
+output.jsonl
+output.tsv
+output.yaml
+edges.tsv
+nodes.tsv
+
+# Data archives
+*.tar.gz
+
+# Work-in-progress / scratch files (root level only)
+/folate*.yaml
+/folate.json
+/vitamin-c.html
+
+# Reports and dashboard (regenerated)
+dashboard/
+reports/
+
+# Editor/IDE
+.vscode/
+
+# Pages output (regenerated from kb)
+pages/
+
+# Output directories
+output-*/
+
+# Old OntoGPT artifacts (pre-refactor, root level only)
+/mic.yaml
+/mic_grounded_associations_with_evidence.tsv
+/mic_pages.txt
+
+# Backup files
+*~
+

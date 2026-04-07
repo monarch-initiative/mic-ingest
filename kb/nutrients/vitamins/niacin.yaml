@@ -1,0 +1,657 @@
+name: Niacin
+nutrient_term:
+  preferred_term: vitamin B3
+  term:
+    id: CHEBI:176839
+    label: vitamin B3
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/niacin
+alternate_names:
+  - Vitamin B3
+  - Nicotinic acid
+  - Nicotinamide
+  - Niacinamide
+  - Nicotinamide riboside
+description: |
+  Niacin, also known as vitamin B3, encompasses several dietary precursors of
+  nicotinamide adenine dinucleotide (NAD), including nicotinic acid, nicotinamide,
+  and nicotinamide riboside. The essential amino acid tryptophan can also be
+  converted to NAD via the kynurenine pathway. NAD functions in oxidation-reduction
+  reactions and as a substrate for NAD-consuming enzymes including poly ADP-ribose
+  polymerases (PARPs) and sirtuins. Severe niacin deficiency causes pellagra,
+  characterized by dermatitis, diarrhea, and dementia.
+
+functions:
+  - name: NAD Coenzyme in Electron Transfer Reactions
+    description: |
+      Over 400 enzymes require the niacin coenzymes NAD and NADP to accept or donate
+      electrons for redox reactions. NAD functions most often in energy-producing
+      reactions involving the degradation of carbohydrates, fats, proteins, and
+      alcohol. NADP generally serves in biosynthetic (anabolic) reactions, such as
+      in the synthesis of fatty acids, steroids, and building blocks of other
+      macromolecules. The cell maintains NAD in a largely oxidized state (NAD+) to
+      serve as an oxidizing agent for catabolic reactions, while NADP is kept largely
+      in a reduced state (NADPH) to readily donate electrons for reductive processes.
+    biological_processes:
+      - preferred_term: generation of precursor metabolites and energy
+        term:
+          id: GO:0006091
+          label: generation of precursor metabolites and energy
+    mic_references:
+      - 4
+      - 5
+      - 6
+    evidence:
+      - reference: PMID:25837229
+        supports: SUPPORT
+        snippet: "NAD is synthesized from vitamin B3 precursors, most prominently from nicotinamide, which is the degradation product of all NAD-dependent signaling reactions"
+        explanation: Confirms NAD synthesis from vitamin B3 precursors and its role in signaling reactions
+
+  - name: Substrate for Poly ADP-Ribose Polymerases (PARPs)
+    description: |
+      NAD is the substrate for ADP-ribosyltransferases including poly ADP-ribose
+      polymerases (PARPs). At least 18 ADP-ribosyltransferases have been identified
+      in humans. PARPs are intracellular enzymes involved in DNA repair and stress
+      responses, cell signaling, transcription regulation, apoptosis, cell
+      differentiation, maintenance of genomic integrity, and antiviral defense.
+      After DNA damage, PARPs are activated and poly ADP-ribosylation of signaling
+      and structural molecules facilitates DNA repair.
+    biological_processes:
+      - preferred_term: DNA repair
+        term:
+          id: GO:0006281
+          label: DNA repair
+    genes:
+      - preferred_term: PARP1
+        description: Poly ADP-ribose polymerase 1
+        term:
+          id: HGNC:270
+          label: PARP1
+    mic_references:
+      - 7
+      - 8
+      - 44
+    evidence:
+      - reference: PMID:22138132
+        supports: SUPPORT
+        snippet: "Niacin deficiency has been linked to genomic instability largely through impaired function of the poly ADP-ribose polymerase (PARP) family of enzymes"
+        explanation: Directly links niacin/NAD to PARP function and genomic stability
+
+  - name: Substrate for Sirtuins (NAD-Dependent Deacetylases)
+    description: |
+      Seven sirtuins (SIRT1-7) have been identified in humans. Sirtuins are a class
+      of NAD-dependent deacetylase enzymes that remove acetyl groups from acetylated
+      lysine residues of target proteins. During deacetylation, the acetyl group is
+      transferred onto the ADP-ribose moiety cleaved from NAD. Sirtuins are
+      energy-sensing regulators involved in signaling pathways that could play
+      important roles in delaying the onset of age-related diseases. Their biological
+      functions include gene silencing, DNA damage repair, cell cycle regulation,
+      and cell differentiation.
+    genes:
+      - preferred_term: SIRT1
+        description: Sirtuin 1, NAD-dependent deacetylase
+        term:
+          id: HGNC:14929
+          label: SIRT1
+    mic_references:
+      - 9
+      - 10
+    evidence:
+      - reference: PMID:23104101
+        supports: SUPPORT
+        snippet: "Sirtuins are a class of NAD(+)-dependent deacetylases having beneficial health effects"
+        explanation: Confirms sirtuins as NAD-dependent deacetylases with health benefits
+      - reference: PMID:25837229
+        supports: SUPPORT
+        snippet: "nicotinamide is cleaved from NAD(+) and the remaining ADP-ribosyl moiety used to modify proteins (deacetylation by sirtuins or ADP-ribosylation)"
+        explanation: Confirms NAD as substrate for sirtuin-mediated deacetylation
+
+  - name: Lipid-Lowering Effects (Pharmacologic Doses)
+    description: |
+      At pharmacologic doses (1-3 g/day), nicotinic acid is a well-known lipid-lowering
+      agent. It markedly increases high-density lipoprotein (HDL) cholesterol
+      concentrations, decreases serum lipoprotein(a) concentrations, and shifts small,
+      dense LDL particles to large, buoyant LDL particles. These effects are mediated
+      in part through binding to the G protein-coupled receptor GPR109A (hydroxycarboxylic
+      acid receptor 2) on adipocytes, leading to inhibition of lipolysis.
+    mic_references:
+      - 17
+      - 18
+      - 19
+      - 20
+
+deficiency:
+  name: Pellagra (Severe Niacin Deficiency)
+  description: |
+    The late stage of severe niacin deficiency is known as pellagra. The symptoms
+    of pellagra are commonly referred to as the three "Ds": sun-sensitive dermatitis,
+    diarrhea, and dementia. A fourth "D," death, occurs if pellagra is left untreated.
+    Pellagra may result from inadequate dietary intake of NAD precursors, malabsorptive
+    disorders, carcinoid syndrome, chronic alcoholism, and prolonged treatment with
+    certain drugs including isoniazid.
+  sequelae:
+    - name: Photosensitive Dermatitis
+      phenotype_term:
+        preferred_term: dermatitis
+        term:
+          id: HP:0000964
+          label: Eczematoid dermatitis
+      frequency: OBLIGATE
+      context: Thick, scaly, darkly pigmented rash develops symmetrically in sun-exposed areas
+      mic_references:
+        - 5
+
+    - name: Diarrhea
+      phenotype_term:
+        preferred_term: diarrhea
+        term:
+          id: HP:0002014
+          label: Diarrhea
+      frequency: FREQUENT
+      context: Part of gastrointestinal symptoms including inflammation of mouth and tongue, vomiting, and abdominal pain
+      mic_references:
+        - 5
+
+    - name: Dementia
+      phenotype_term:
+        preferred_term: dementia
+        term:
+          id: HP:0000726
+          label: Dementia
+      frequency: FREQUENT
+      context: Neurologic symptoms include headache, apathy, fatigue, depression, disorientation, and memory loss
+      mic_references:
+        - 5
+        - 38
+
+  at_risk_groups:
+    - name: Chronic Alcoholics
+      description: |
+        Chronic alcohol intake can lead to severe niacin deficiency through reduced
+        dietary niacin intake and interference with the tryptophan-to-NAD conversion.
+        Alcoholic pellagra encephalopathy may present as alcohol withdrawal delirium.
+      mic_references:
+        - 30
+        - 38
+      evidence:
+        - reference: PMID:24627570
+          supports: SUPPORT
+          snippet: "Alcohol dependence can induce or aggravate pellagra by inducing malnutrition, gastrointestinal disturbances and B vitamin deficiencies, inhibiting the conversion of Trp to niacin"
+          explanation: Directly supports alcohol as cause of pellagra through multiple mechanisms
+
+    - name: Individuals with Malabsorptive Disorders
+      description: |
+        Malabsorptive disorders including Crohn's disease and megaduodenum can lead
+        to pellagra due to impaired nutrient absorption.
+      mic_references:
+        - 32
+        - 33
+
+    - name: Patients on Certain Medications
+      description: |
+        Prolonged treatment with isoniazid (anti-tuberculosis drug), azathioprine,
+        6-mercaptopurine, 5-fluorouracil, and levodopa/carbidopa can increase reliance
+        on dietary niacin by interfering with the tryptophan-kynurenine-niacin pathway.
+      mic_references:
+        - 34
+        - 35
+
+    - name: HIV-Positive Individuals
+      description: |
+        Elevated tryptophan breakdown in the kynurenine pathway has been reported in
+        HIV-positive people, potentially contributing to niacin deficiency.
+      mic_references:
+        - 40
+
+  causes:
+    - name: Inadequate Dietary Intake
+      description: Inadequate dietary intake of NAD precursors including tryptophan
+      mic_references:
+        - 26
+        - 27
+        - 28
+        - 29
+
+    - name: Poor Bioavailability from Corn
+      description: |
+        Niacin in mature corn is bound in a form that is not nutritionally available.
+        Traditional lime treatment (nixtamalization) releases bound niacin and increases
+        bioavailability.
+      mic_references:
+        - 24
+        - 25
+
+disease_associations:
+  - name: Nonmelanoma Skin Cancer Prevention
+    disease_term:
+      preferred_term: skin cancer
+      term:
+        id: MONDO:0002898
+        label: skin cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: High-risk individuals with history of nonmelanoma skin cancers
+    description: |
+      In a phase III randomized controlled trial, nicotinamide (500 mg twice daily)
+      reduced the rate of new nonmelanoma skin cancers by 23% and actinic keratoses
+      by 11-20% in high-risk patients. NAD-dependent enzymes (PARPs and sirtuins)
+      play important roles in DNA repair and the cellular response to UV-induced
+      photodamage.
+    mic_references:
+      - 65
+      - 66
+      - 67
+    evidence:
+      - reference: PMID:26488693
+        supports: SUPPORT
+        snippet: "the rate of new nonmelanoma skin cancers was lower by 23%"
+        explanation: Phase III trial demonstrating nicotinamide reduces nonmelanoma skin cancer rates
+      - reference: PMID:26488693
+        supports: SUPPORT
+        snippet: "Oral nicotinamide was safe and effective in reducing the rates of new nonmelanoma skin cancers and actinic keratoses in high-risk patients"
+        explanation: Concludes nicotinamide is effective for skin cancer chemoprevention
+
+  - name: Type 1 Diabetes Prevention
+    disease_term:
+      preferred_term: type 1 diabetes mellitus
+      term:
+        id: MONDO:0005147
+        label: type 1 diabetes mellitus
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: High-risk relatives of type 1 diabetic patients
+    description: |
+      Despite promising results in animal models where nicotinamide protects beta-cells
+      from damage, pharmacologic doses of nicotinamide (up to 3 g/day) have not been
+      found effective in delaying or preventing the onset of type 1 diabetes in at-risk
+      human subjects in large randomized controlled trials.
+    mic_references:
+      - 70
+      - 71
+      - 72
+    evidence:
+      - reference: PMID:15043959
+        supports: REFUTE
+        snippet: "nicotinamide was ineffective at the dose we used"
+        explanation: Large ENDIT trial found nicotinamide did not prevent type 1 diabetes onset
+      - reference: PMID:15043959
+        supports: REFUTE
+        snippet: "There was no difference in the development of diabetes between the treatment groups"
+        explanation: No significant difference between nicotinamide and placebo groups
+
+  - name: Cardiovascular Disease and Lipid Profiles
+    disease_term:
+      preferred_term: atherosclerotic cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: Patients with dyslipidemia or history of cardiovascular disease
+    description: |
+      Pharmacologic doses of nicotinic acid improve lipid profiles by increasing HDL
+      cholesterol and decreasing lipoprotein(a). The Coronary Drug Project (CDP) showed
+      niacin reduced nonfatal myocardial infarction and total mortality at 15-year
+      follow-up. The HATS trial found simvastatin-niacin combination reduced cardiovascular
+      events by 90% versus placebo. However, recent large trials (AIM-HIGH, HPS2-THRIVE)
+      found that adding niacin to statin therapy did not reduce cardiovascular events in
+      patients already on statins. Current guidelines do not recommend routine use of
+      niacin for cardiovascular disease prevention.
+    mic_references:
+      - 80
+      - 87
+      - 88
+      - 92
+      - 95
+      - 96
+      - 97
+    evidence:
+      - reference: PMID:3782631
+        supports: SUPPORT
+        snippet: "Mortality in the niacin group was 11% lower than in the placebo group (52.0 versus 58.2%; p = 0.0004)"
+        explanation: Coronary Drug Project 15-year follow-up showed significant mortality reduction with niacin treatment in post-MI patients
+      - reference: PMID:11757504
+        supports: SUPPORT
+        snippet: "The frequency of the clinical end point was 24 percent with placebos; 3 percent with simvastatin-niacin alone"
+        explanation: HATS trial demonstrated marked clinical benefit of simvastatin-niacin combination in patients with coronary disease and low HDL
+
+  - name: Genomic Stability and Cancer Risk
+    disease_term:
+      preferred_term: cancer
+      term:
+        id: MONDO:0004992
+        label: cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      NAD is the sole substrate for PARP enzymes and sirtuins involved in DNA repair.
+      Niacin deficiency has been linked to genomic instability, impaired DNA repair,
+      chromosomal breakage, and increased cancer development in animal models.
+      Observational studies suggest higher dietary niacin intake may be associated
+      with decreased risk of oral, pharyngeal, and esophageal cancers. In rats,
+      niacin deficiency decreased bone marrow poly(ADP-ribose) and accelerated
+      leukemia development, while pharmacologic niacin doses were protective.
+    mic_references:
+      - 42
+      - 43
+      - 47
+      - 48
+      - 51
+      - 52
+      - 57
+      - 58
+      - 59
+    evidence:
+      - reference: PMID:22138132
+        supports: SUPPORT
+        snippet: "In various models, niacin deficiency has been found to cause impaired cell cycle arrest and apoptosis, delayed DNA excision repair, accumulation of single and double strand breaks, chromosomal breakage, telomere erosion and cancer development"
+        explanation: Links niacin deficiency to genomic instability and cancer development
+      - reference: PMID:10728605
+        supports: SUPPORT
+        snippet: "ORs were 0.95 for retinol, 0.61 for carotene, 0.91 for lycopene, 0.83 for vitamin D, 0.74 for vitamin E, 0.63 for vitamin C, 0.82 for thiamine, 0.87 for riboflavin, 0.59 for vitamin B6, 0.61 for folic acid, 0.62 for niacin"
+        explanation: Case-control study showing niacin intake significantly inversely associated with oral and pharyngeal cancer risk (OR 0.62)
+      - reference: PMID:10797282
+        supports: SUPPORT
+        snippet: "Highly significant associations emerged for monounsaturated fatty acids [odds ratio (OR) in highest vs. lowest intake quintile = 0.5]; carotene (OR = 0.3); lutein + zeaxanthin (OR = 0.4); vitamin C (OR = 0.4); and niacin (OR = 0.5)"
+        explanation: Case-control study showing higher niacin intake associated with 50% reduced risk of esophageal squamous-cell carcinoma
+      - reference: PMID:11773516
+        supports: SUPPORT
+        snippet: "niacin deficiency caused an 80% decrease in bone marrow NAD(+). Basal poly(ADP-ribose) levels were dramatically reduced by niacin deficiency"
+        explanation: Niacin deficiency depletes bone marrow NAD and poly(ADP-ribose), increasing risk of nitrosourea-induced leukemia in rats
+      - reference: PMID:11773517
+        supports: SUPPORT
+        snippet: "supplementation of a niacin-adequate, high quality diet with pharmacologic levels of nicotinic acid or nicotinamide increases NAD(+) and poly(ADP-ribose) levels in bone marrow and may be protective against DNA damage"
+        explanation: Pharmacologic niacin supplementation increases bone marrow NAD and poly(ADP-ribose) and delays carcinogen-induced leukemia in rats
+
+  - name: Hartnup Disease
+    disease_term:
+      preferred_term: Hartnup disease
+      term:
+        id: MONDO:0009324
+        label: Hartnup disease
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    description: |
+      Hartnup disease is an autosomal recessive disorder caused by mutations in the
+      SLC6A19 gene encoding a sodium-dependent neutral amino acid transporter expressed
+      primarily in kidneys and intestine. The defective transporter impairs tryptophan
+      absorption, leading to signs of severe niacin deficiency including photosensitive
+      dermatitis, cerebellar ataxia, and psychiatric symptoms. Disease management
+      involves supplementation with nicotinic acid or nicotinamide.
+    mic_references:
+      - 74
+      - 75
+    evidence:
+      - reference: PMID:19967017
+        supports: SUPPORT
+        snippet: "this patient had neutral aminoaciduria which indicated a defective transport of neutral amino acid transporter in the kidneys and intestine resulting in failure of transport of tryptophan"
+        explanation: Case report demonstrating that Hartnup disease involves defective tryptophan transport leading to niacin deficiency symptoms
+      - reference: PMID:7955499
+        supports: SUPPORT
+        snippet: "Her symptoms resolved with oral nicotinamide"
+        explanation: Demonstrates that Hartnup disease is responsive to niacin supplementation
+
+  - name: Friedreich's Ataxia
+    disease_term:
+      preferred_term: Friedreich ataxia
+      term:
+        id: MONDO:0100339
+        label: Friedreich ataxia
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: Patients with Friedreich's ataxia carrying GAA-repeat expansions in the FXN gene
+    description: |
+      Friedreich's ataxia is caused by GAA-repeat expansions in the FXN gene that trigger
+      heterochromatinization and reduced frataxin expression. Nicotinamide (vitamin B3)
+      acts as a class III histone deacetylase inhibitor and can antagonize this
+      heterochromatinization, upregulating frataxin expression. In an open-label pilot
+      trial, repeated daily doses of 3.5-6 g nicotinamide led to sustained and significant
+      upregulation of frataxin expression in patients, though no neurological improvements
+      were observed during the 8-week treatment period.
+    mic_references:
+      - 99
+      - 100
+      - 101
+      - 102
+    evidence:
+      - reference: PMID:23474817
+        supports: SUPPORT
+        snippet: "this effect could be antagonized with the class III histone deactylase (HDAC) inhibitor vitamin B3 (nicotinamide) which activated the silenced FXN gene in several FRDA models"
+        explanation: Demonstrates nicotinamide can reverse epigenetic silencing of the FXN gene in Friedreich's ataxia cellular models
+      - reference: PMID:24794816
+        supports: SUPPORT
+        snippet: "daily dosing at 3.5-6 g resulted in a sustained and significant (p<0.0001) upregulation of frataxin expression, which was accompanied by a reduction in heterochromatin modifications at the FXN locus"
+        explanation: Open-label pilot trial demonstrating nicotinamide significantly upregulates frataxin protein in Friedreich's ataxia patients
+
+  - name: HIV/AIDS and Tryptophan Depletion
+    disease_term:
+      preferred_term: HIV infectious disease
+      term:
+        id: MONDO:0005109
+        label: HIV infectious disease
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    population_context: HIV-positive patients, particularly those with ART-associated dyslipidemia
+    description: |
+      HIV infection is characterized by chronic stimulation of indoleamine 2,3-dioxygenase
+      (IDO), leading to increased tryptophan catabolism and depletion. This disruption
+      of tryptophan metabolism contributes to intracellular niacin/NAD deficiency and
+      altered T-cell balance. Pharmacologic doses of nicotinic acid have been used to
+      treat HIV-associated dyslipidemia, with combination therapy of niacin and
+      fenofibrate effectively normalizing lipid parameters in ART-treated patients.
+    mic_references:
+      - 40
+      - 103
+      - 104
+      - 108
+      - 113
+    evidence:
+      - reference: PMID:14522263
+        supports: SUPPORT
+        snippet: "A chronic increase in inducible tryptophan oxidation is the basis of HIV-1-associated tryptophan depletion"
+        explanation: Review establishing the metabolic link between HIV infection, tryptophan depletion, and niacin deficiency
+      - reference: PMID:20484731
+        supports: SUPPORT
+        snippet: "progressive disease is associated with the loss of T(H)17 cells and a reciprocal increase in the fraction of the immunosuppressive T(reg) cells"
+        explanation: IDO-mediated tryptophan catabolism disrupts TH17/Treg balance in progressive HIV disease
+      - reference: PMID:21565796
+        supports: SUPPORT
+        snippet: "A combination of fenofibrate and niacin with low-saturated-fat D/E is effective and safe in increasing HDL-C, decreasing non-HDL-C and hypertriglyceridemia, and ameliorating hypoadiponectinemia in patients with HIV/ART-associated dyslipidemia"
+        explanation: Randomized trial demonstrating niacin-fenofibrate combination effectively treats HIV-associated dyslipidemia
+
+food_sources:
+  - name: Chicken (light meat)
+    food_term:
+      preferred_term: chicken meat
+      term:
+        id: FOODON:00001040
+        label: chicken meat food product
+    amount: "8.9 mg"
+    serving_size: "3 ounces, cooked without skin"
+    mic_references:
+      - 125
+
+  - name: Tuna (light, canned)
+    food_term:
+      preferred_term: tuna
+      term:
+        id: FOODON:00002320
+        label: tuna food product
+    amount: "8.6 mg"
+    serving_size: "3 ounces, packed in water"
+    mic_references:
+      - 125
+
+  - name: Turkey (light meat)
+    food_term:
+      preferred_term: turkey meat
+    amount: "9.9 mg"
+    serving_size: "3 ounces, cooked without skin"
+    mic_references:
+      - 125
+
+  - name: Salmon (chinook)
+    food_term:
+      preferred_term: salmon
+    amount: "8.5 mg"
+    serving_size: "3 ounces, cooked"
+    mic_references:
+      - 125
+
+  - name: Fortified Cereal
+    food_term:
+      preferred_term: fortified cereal
+    amount: "20-27 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 125
+
+  - name: Peanuts (dry-roasted)
+    food_term:
+      preferred_term: peanuts
+    amount: "4.1 mg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 125
+
+drug_interactions:
+  - name: Statins and Rhabdomyolysis Risk
+    drug_term:
+      preferred_term: HMG-CoA reductase inhibitors
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    description: |
+      Co-administration of nicotinic acid with statins enhances the risk of
+      rhabdomyolysis, a condition in which muscle cells are broken down, releasing
+      enzymes and electrolytes into the blood, sometimes resulting in kidney failure.
+    mic_references:
+      - 131
+      - 132
+      - 134
+
+  - name: Antioxidant Vitamins
+    drug_term:
+      preferred_term: antioxidant vitamins
+    interaction_type: ANTAGONISTIC
+    clinical_significance: MODERATE
+    description: |
+      Concurrent therapy with antioxidants (vitamin C, vitamin E, selenium, beta-carotene)
+      may diminish the protective effects of simvastatin-nicotinic acid combination
+      therapy on cardiovascular outcomes.
+    mic_references:
+      - 136
+      - 137
+
+  - name: Bile Acid Sequestrants
+    drug_term:
+      preferred_term: bile acid sequestrants
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      The risk of myopathy may be increased in those taking nicotinic acid along with
+      bile acid sequestrants (cholestyramine, colestipol) or gemfibrozil.
+    mic_references:
+      - 35
+
+toxicity:
+  name: Niacin Toxicity
+  description: |
+    Adverse effects of niacin are primarily associated with pharmacologic doses of
+    nicotinic acid. The most common side effect is flushing of the skin (primarily
+    face, arms, and chest), which may occur at doses as low as 30 mg/day. Other
+    effects include pruritus, skin rashes, gastrointestinal disturbances,
+    hepatotoxicity, impaired glucose tolerance, and elevated uric acid levels.
+    Nicotinamide is generally better tolerated and does not cause flushing.
+  adverse_effects:
+    - name: Skin Flushing
+      description: |
+        Flushing primarily on face, arms, and chest is the most common side effect
+        of nicotinic acid. Can occur at doses as low as 30 mg/day. Mediated by
+        prostaglandin release.
+      mic_references:
+        - 41
+        - 127
+
+    - name: Hepatotoxicity
+      description: |
+        Liver cell damage including elevated liver enzymes and jaundice has been
+        observed at intakes as low as 750 mg/day. Extended-release formulations
+        may be more hepatotoxic at equivalent doses.
+      mic_references:
+        - 41
+        - 126
+        - 128
+
+    - name: Impaired Glucose Tolerance
+      description: |
+        Large doses of nicotinic acid can impair glucose tolerance, likely due to
+        decreased insulin sensitivity. May result in elevated blood glucose in
+        susceptible (pre-diabetic) individuals.
+      mic_references:
+        - 95
+
+    - name: Hyperuricemia
+      description: |
+        Elevated blood uric acid concentrations, occasionally resulting in gout
+        attacks in susceptible individuals.
+      mic_references:
+        - 126
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "2 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "4 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "6 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "8 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "12 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 14+ years
+      amount: "16 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 14-18 years
+      amount: "14 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 19+ years
+      amount: "14 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy
+      amount: "18 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation
+      amount: "17 mg NE/day"
+      source: Food and Nutrition Board, Institute of Medicine
+  ul:
+    - population: Children 1-3 years
+      amount: "10 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "15 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "20 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "30 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adults 19+ years
+      amount: "35 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Based on preventing flushing; does not apply to therapeutic use under medical supervision
+
+notes: |
+  Niacin equivalents (NE) are used because niacin can be synthesized from tryptophan:
+  1 mg NE = 1 mg niacin = 60 mg tryptophan. The tolerable upper intake level (UL)
+  applies to nicotinic acid and nicotinamide from supplements and fortified foods,
+  not to niacin naturally occurring in foods. Pharmacologic doses of nicotinic acid
+  (1-3 g/day) used for lipid modification are distinct from nutritional requirements.

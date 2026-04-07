@@ -1,0 +1,389 @@
+name: Sodium
+nutrient_term:
+  preferred_term: sodium
+  term:
+    id: CHEBI:26708
+    label: sodium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/sodium
+alternate_names:
+  - Na
+  - Salt (as sodium chloride)
+description: |
+  Sodium and chloride are the principal ions in the extracellular fluid and work together
+  to control extracellular volume and blood pressure. Sodium is a nutrient of public
+  health concern for overconsumption in the US, as excess dietary sodium is a major
+  contributor to hypertension, which is a leading preventable risk factor for cardiovascular
+  disease. Most sodium in the diet comes from processed foods rather than added at the
+  table. The National Academy of Medicine established a chronic disease risk reduction
+  intake (CDRR) of 2.3 g/day for adults.
+
+functions:
+  - name: Membrane Potential Maintenance
+    description: |
+      Sodium is the principal cation in extracellular fluid, while potassium is the
+      principal cation inside cells. The concentration differences create an electrochemical
+      gradient known as the membrane potential, maintained by Na+/K+ ATPase pumps. This
+      activity accounts for 20-40% of resting energy expenditure and is critical for
+      nerve impulse transmission, muscle contraction, and cardiac function.
+    biological_processes:
+      - preferred_term: ion transport
+        term:
+          id: GO:0006811
+          label: monoatomic ion transport
+    mic_references:
+      - 2
+      - 3
+      - 4
+
+  - name: Blood Volume and Pressure Maintenance
+    description: |
+      Sodium and chloride work together to control extracellular volume and blood pressure.
+      Various mechanisms act on the kidney to ensure that the amount of sodium excreted
+      compensates for the amount consumed, thereby maintaining sodium homeostasis.
+    biological_processes:
+      - preferred_term: blood pressure regulation
+        term:
+          id: GO:0008217
+          label: regulation of blood pressure
+    mic_references:
+      - 1
+
+  - name: Nutrient Absorption and Transport
+    description: |
+      Sodium is involved in the absorption of chloride, amino acids, glucose, and water.
+      Similar mechanisms are involved in the reabsorption of these nutrients after
+      filtration from blood by the kidneys.
+    mic_references:
+      - 1
+
+deficiency:
+  name: Sodium Deficiency (Hyponatremia)
+  description: |
+    Hyponatremia (serum sodium <136 mmol/L) may result from increased fluid retention
+    or increased sodium loss. Inadequate sodium intake alone rarely causes hyponatremia
+    because kidneys increase water excretion to maintain electrolyte balance. Hyponatremia
+    is common among older adults and in those with hypertension, kidney disease, and
+    heart disease. Up to 30% of hospitalized patients have hyponatremia. Acute severe
+    hyponatremia can cause brain edema, seizures, coma, and death. Mild chronic
+    hyponatremia has been associated with attention deficits, gait instability, falls,
+    bone loss, fractures, and increased cardiovascular mortality.
+  sequelae:
+    - name: Cerebral edema
+      phenotype_term:
+        preferred_term: cerebral edema
+        term:
+          id: HP:0002181
+          label: Cerebral edema
+      frequency: OCCASIONAL
+      context: Severe and rapidly developing hyponatremia
+      mic_references:
+        - 13
+
+    - name: Seizures
+      phenotype_term:
+        preferred_term: seizures
+        term:
+          id: HP:0001250
+          label: Seizure
+      frequency: OCCASIONAL
+      context: Severe hyponatremia
+      mic_references:
+        - 13
+
+    - name: Muscle cramps
+      phenotype_term:
+        preferred_term: muscle cramps
+        term:
+          id: HP:0003394
+          label: Muscle spasm
+      frequency: FREQUENT
+      context: Symptoms of hyponatremia
+      mic_references:
+        - 13
+
+  at_risk_groups:
+    - name: Older adults
+      description: |
+        Prevalence of hyponatremia is 3.1% in those aged 65-84 years
+      mic_references:
+        - 10
+
+    - name: Hospitalized patients
+      description: |
+        15-30% have mild hyponatremia, up to 7% have moderate-to-severe
+      mic_references:
+        - 11
+
+    - name: Individuals with chronic diseases
+      description: |
+        Higher prevalence in those with hypertension, diabetes, coronary heart disease,
+        stroke, COPD, cancer, and psychiatric disorders
+      mic_references:
+        - 10
+
+  mic_references:
+    - 10
+    - 11
+    - 13
+
+toxicity:
+  name: Sodium Toxicity (Hypernatremia)
+  description: |
+    Excessive sodium chloride intake leads to increased extracellular fluid volume as
+    water is pulled from cells. Normally functioning kidneys can excrete excess sodium.
+    Hypernatremia (serum sodium >145 mmol/L) is much less common than hyponatremia and
+    is rarely caused by excessive sodium intake, but rather by excess water loss or
+    reduced water intake. Symptoms include dizziness, low blood pressure, diminished
+    urine production. Severe hypernatremia may cause altered mental status, seizures,
+    and coma. No Tolerable Upper Intake Level (UL) has been established due to
+    insufficient evidence of toxicological adverse effects.
+  adverse_effects:
+    - name: Hypertension
+      description: |
+        Excess dietary sodium is a major contributor to hypertension, affecting about
+        one-third of US adults
+      severity: moderate
+    - name: Hypernatremia symptoms
+      description: |
+        Severe hypernatremia (>158 mmol/L) may cause altered mental status, seizures,
+        coma, and intracranial hemorrhage
+      severity: severe
+  mic_references:
+    - 25
+    - 26
+
+food_sources:
+  - name: Processed foods
+    food_term:
+      preferred_term: processed food
+    amount: "variable"
+    serving_size: "varies"
+    notes: 75% of sodium intake comes from food processing/manufacturing
+    mic_references:
+      - 21
+      - 22
+
+  - name: Ham, minced
+    food_term:
+      preferred_term: ham
+    amount: "1,059 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 21
+
+  - name: Macaroni and cheese, box
+    food_term:
+      preferred_term: macaroni and cheese
+    amount: "869 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 21
+
+  - name: Chicken noodle soup, canned
+    food_term:
+      preferred_term: chicken noodle soup
+    amount: "789 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 21
+
+  - name: Tomato juice, canned, with salt
+    food_term:
+      preferred_term: tomato juice
+    amount: "615 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 21
+
+drug_interactions: []
+
+nutrient_interactions:
+  - name: Potassium and Sodium
+    description: |
+      Sodium and potassium have opposing effects on blood pressure. Modern diets high
+      in sodium and low in potassium contribute to the high prevalence of hypertension.
+      Increasing potassium intake while reducing sodium intake can help lower blood
+      pressure.
+    nutrient_term:
+      preferred_term: potassium
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 1
+
+  - name: Calcium and Sodium
+    description: |
+      High sodium intake increases urinary calcium excretion. Elevated sodium intake
+      may be detrimental to bone health through increased calcium losses.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: INCREASES_EXCRETION
+    mic_references:
+      - 1
+
+disease_associations:
+  - name: Hypertension
+    description: |
+      About one-third of US adults have hypertension (blood pressure ≥140/90 mm Hg).
+      Salt intake has been significantly correlated with left ventricular hypertrophy.
+      Observational studies like INTERSALT have associated excess sodium intake with
+      progressive increase in blood pressure with age. Clinical trials (TONE, TOHP,
+      DASH-sodium) have demonstrated that dietary sodium reduction can effectively
+      prevent or improve hypertension. About 26% of normotensive and 51% of hypertensive
+      individuals are salt sensitive.
+    disease_term:
+      preferred_term: hypertension
+      term:
+        id: MONDO:0001134
+        label: essential hypertension
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: General population, especially salt-sensitive individuals
+    evidence:
+      - reference: PMID:20226955
+        supports: SUPPORT
+        snippet: "There is overwhelming evidence that dietary salt is the major cause of raised blood pressure and that a reduction in salt intake lowers blood pressure, thereby, reducing blood pressure-related diseases"
+        explanation: Comprehensive review confirming causal relationship between dietary salt and hypertension.
+    mic_references:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 35
+
+  - name: Cardiovascular Disease
+    description: |
+      Chronic hypertension damages the heart, blood vessels, and kidneys, increasing
+      the risk of heart disease, stroke, and hypertensive kidney disease. Salt
+      sensitivity is an independent risk factor for cardiovascular disease. Mild
+      chronic hyponatremia has been associated with increased cardiovascular morbidity
+      and mortality.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Those with excess sodium intake or salt sensitivity
+    evidence:
+      - reference: PMID:26298426
+        supports: SUPPORT
+        snippet: "Mild hyponatremia even within the normal sodium range and hypernatremia are both associated with increased total mortality and major CVD events in older men without CVD which is not explained by known adverse CV risk factors"
+        explanation: Prospective cohort study demonstrating a U-shaped relationship between serum sodium and cardiovascular events.
+    mic_references:
+      - 16
+      - 38
+
+  - name: Gastric Cancer
+    description: |
+      Excessive sodium intake has been linked to increased risk of gastric cancer.
+    disease_term:
+      preferred_term: gastric cancer
+      term:
+        id: MONDO:0001056
+        label: gastric cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Populations with high salt intake
+    mic_references:
+      - 1
+
+  - name: Osteoporosis
+    description: |
+      High sodium intake increases urinary calcium excretion, which may be detrimental
+      to bone health.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Through increased calcium losses
+    mic_references:
+      - 1
+
+  - name: Kidney Stones
+    description: |
+      High sodium intake has been linked to increased risk of kidney stone formation.
+    disease_term:
+      preferred_term: kidney stones
+      term:
+        id: MONDO:0008171
+        label: nephrolithiasis
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Through increased urinary calcium excretion
+    mic_references:
+      - 1
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "110 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "370 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "800 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI); CDRR is 1,200 mg/day
+    - population: Children 4-8 years
+      amount: "1,000 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI); CDRR is 1,500 mg/day
+    - population: Children 9-13 years
+      amount: "1,200 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI); CDRR is 1,800 mg/day
+    - population: Adolescents 14-18 years
+      amount: "1,500 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI); CDRR is 2,300 mg/day
+    - population: Adults 19+ years
+      amount: "1,500 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI); CDRR is 2,300 mg/day
+    - population: Pregnancy
+      amount: "1,500 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding
+      amount: "1,500 mg/day"
+      source: National Academy of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    The AI for sodium is 1.5 g/day for adults, equivalent to 3.8 g/day of sodium chloride
+    (salt). The Chronic Disease Risk Reduction Intake (CDRR) is 2.3 g/day for adults,
+    meaning intakes should be reduced to at least this level to lower chronic disease risk.
+    No Tolerable Upper Intake Level (UL) was established. Current US adult intakes average
+    3.8 g/day for men and 3.1 g/day for women, well above the CDRR. Sodium is identified
+    as a nutrient of public health concern for overconsumption.
+
+bioavailability:
+  description: |
+    Sodium is efficiently absorbed from the gastrointestinal tract. About 75% of dietary
+    sodium comes from salt added during food processing, rather than salt added at the
+    table or during cooking. The kidneys regulate sodium balance by adjusting urinary
+    excretion based on intake.
+  mic_references:
+    - 21
+    - 22
+
+references:
+  - reference: PMID:20226955
+    title: "Reducing population salt intake worldwide: from evidence to implementation"
+  - reference: PMID:26298426
+    title: "Mild hyponatremia, hypernatremia and incident cardiovascular disease and mortality in older men"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Sodium. Sodium is a nutrient of public health concern
+  due to overconsumption and its role in hypertension and cardiovascular disease.
+  The MIC reference numbers (mic_references) correspond to the numbered citations
+  on the source page. The page contains approximately 95 references.

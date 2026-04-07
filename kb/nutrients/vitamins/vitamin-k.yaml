@@ -1,0 +1,463 @@
+name: Vitamin K
+nutrient_term:
+  preferred_term: vitamin K
+  term:
+    id: CHEBI:28384
+    label: vitamin K
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/vitamin-K
+alternate_names:
+  - Phylloquinone
+  - Vitamin K1
+  - Menaquinone
+  - Vitamin K2
+description: |
+  Vitamin K is a fat-soluble vitamin that exists in two natural forms: phylloquinone (vitamin K1)
+  found in green leafy vegetables and plant oils, and menaquinones (vitamin K2) found in
+  fermented foods and some animal products. Vitamin K is the essential cofactor for the
+  carboxylation of glutamic acid residues in vitamin K-dependent proteins (VKDPs) involved
+  in blood coagulation, bone metabolism, and prevention of vascular calcification. The body
+  recycles vitamin K through an oxidation-reduction cycle to reuse it multiple times.
+
+functions:
+  - name: Blood Coagulation
+    description: |
+      Vitamin K is essential for the synthesis of several proteins required for blood clotting.
+      Vitamin K-dependent gamma-carboxylation of specific glutamic acid residues in clotting
+      factors (II, VII, IX, X) enables them to bind calcium, which is required for their
+      activation. Proteins C, S, and Z are vitamin K-dependent anticoagulant proteins that
+      provide control and balance in the coagulation cascade.
+    biological_processes:
+      - preferred_term: blood coagulation
+        term:
+          id: GO:0007596
+          label: blood coagulation
+    mic_references:
+      - 8
+      - 9
+    evidence:
+      - reference: PMID:21155624
+        supports: SUPPORT
+        snippet: "Along with coagulation factors (II, VII, IX, X, and prothrombin), protein C and protein S, osteocalcin (OC), matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis"
+        explanation: Describes vitamin K-dependent clotting factors
+      - reference: PMID:23918929
+        supports: SUPPORT
+        snippet: "The vitamin K oxidoreductase (VKORC1) recycles vitamin K to support the activation of vitamin K-dependent (VKD) proteins, which have diverse functions that include hemostasis and calcification. VKD proteins are activated by Glu carboxylation, which depends upon the oxygenation of vitamin K hydroquinone (KH2)."
+        explanation: Confirms the vitamin K recycling cycle that enables carboxylation of coagulation factors
+      - reference: PMID:21239697
+        supports: SUPPORT
+        snippet: "the primary function of VKOR is the reduction of KO to vitamin K"
+        explanation: Establishes the vitamin K epoxide reductase function in the vitamin K cycle essential for coagulation
+
+  - name: Bone Metabolism
+    description: |
+      Vitamin K is required for the carboxylation of osteocalcin, a bone protein involved
+      in bone mineralization. Undercarboxylated osteocalcin may impair bone formation and
+      increase fracture risk.
+    biological_processes:
+      - preferred_term: bone mineralization
+        term:
+          id: GO:0030282
+          label: bone mineralization
+    genes:
+      - preferred_term: BGLAP
+        description: Osteocalcin (bone gamma-carboxyglutamate protein)
+        term:
+          id: HGNC:1043
+          label: BGLAP
+    mic_references:
+      - 3
+      - 11
+    evidence:
+      - reference: PMID:21155624
+        supports: SUPPORT
+        snippet: "osteocalcin (OC), matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis, facilitate bone mineralization"
+        explanation: Confirms vitamin K-dependent proteins support bone mineralization
+      - reference: PMID:22516722
+        supports: SUPPORT
+        snippet: "The presence of 3 vitamin K-dependent γ carboxyglutamic acid residues is critical for osteocalcin's structure, which appears to regulate the maturation of bone mineral"
+        explanation: Establishes that vitamin K-dependent carboxylation of osteocalcin is critical for bone mineral maturation
+      - reference: PMID:18469278
+        supports: SUPPORT
+        snippet: "Vitamin K(1) intake was associated with markers of bone health, but no interaction was observed with APOE alleles on BMD or markers of bone turnover"
+        explanation: Observational evidence that vitamin K1 intake is positively associated with bone health markers including higher BMD
+
+  - name: Prevention of Vascular Calcification
+    description: |
+      Matrix Gla protein (MGP) is a vitamin K-dependent protein that inhibits calcification
+      of blood vessel walls. Inadequate vitamin K status may lead to undercarboxylated MGP,
+      reducing its ability to prevent arterial calcification.
+    biological_processes:
+      - preferred_term: negative regulation of calcification
+        term:
+          id: GO:0140928
+          label: inhibition of non-skeletal tissue mineralization
+    mic_references:
+      - 3
+      - 17
+      - 18
+    evidence:
+      - reference: PMID:21155624
+        supports: SUPPORT
+        snippet: "matrix Gla protein (MGP), periostin, Gas6, and other vitamin K-dependent (VKD) proteins support calcium homeostasis, facilitate bone mineralization, inhibit vessel wall calcification"
+        explanation: Confirms MGP inhibits vessel calcification
+      - reference: PMID:23375872
+        supports: SUPPORT
+        snippet: "The discovery that the vitamin K-dependent matrix Gla-protein (MGP) is a strong inhibitor of vascular calcification has propelled our mechanistic understanding of this process and opened novel avenues for diagnosis and treatment"
+        explanation: Confirms MGP as a strong inhibitor of vascular calcification and its dependence on vitamin K
+      - reference: PMID:18722618
+        supports: SUPPORT
+        snippet: "Menaquinone intake was associated with decreased coronary calcification with an RR of 0.80 (95%-CI: 0.65-0.98; p(trend)=0.03)"
+        explanation: Dietary menaquinone (K2) intake specifically associated with reduced coronary calcification
+
+deficiency:
+  name: Vitamin K Deficiency
+  description: |
+    Overt vitamin K deficiency results in impaired blood clotting. Symptoms include easy
+    bruising and bleeding that may manifest as nosebleeds, bleeding gums, blood in urine
+    or stool, or heavy menstrual bleeding. In infants, vitamin K deficiency can cause
+    life-threatening intracranial hemorrhage. Deficiency is uncommon in healthy adults
+    because vitamin K is widespread in foods and the vitamin K cycle conserves it.
+  sequelae:
+    - name: Hemorrhage
+      phenotype_term:
+        preferred_term: abnormal bleeding
+        term:
+          id: HP:0001892
+          label: Abnormal bleeding
+      frequency: FREQUENT
+      context: Impaired blood clotting due to deficiency
+      mic_references:
+        - 8
+      evidence:
+        - reference: PMID:18804903
+          supports: SUPPORT
+          snippet: "Vitamin K deficiency bleeding (VKDB) is a rare and potentially life-threatening bleeding disorder of early infancy"
+          explanation: Establishes bleeding as consequence of vitamin K deficiency
+
+    - name: Easy Bruising
+      phenotype_term:
+        preferred_term: easy bruising
+        term:
+          id: HP:0000978
+          label: Bruising susceptibility
+      frequency: FREQUENT
+      mic_references:
+        - 8
+
+    - name: Intracranial Hemorrhage in Infants
+      phenotype_term:
+        preferred_term: intracranial hemorrhage
+        term:
+          id: HP:0002170
+          label: Intracranial hemorrhage
+      frequency: OCCASIONAL
+      context: Life-threatening complication in vitamin K-deficient infants
+      mic_references:
+        - 35
+        - 36
+      evidence:
+        - reference: PMID:18804903
+          supports: SUPPORT
+          snippet: "Late VKDB peaks at 3-8 weeks, typically presents with intracranial haemorrhage"
+          explanation: Confirms intracranial hemorrhage as presentation of late vitamin K deficiency bleeding
+
+  at_risk_groups:
+    - name: Newborn Infants
+      description: |
+        Newborns have low vitamin K stores and breast milk is low in vitamin K.
+        An injection of vitamin K at birth is recommended to prevent vitamin K
+        deficiency bleeding (VKDB).
+      mic_references:
+        - 35
+        - 36
+        - 37
+      evidence:
+        - reference: PMID:24842255
+          supports: SUPPORT
+          snippet: "Supplementation of vitamin K at birth for all newborns prevents major hemorrhagic complications, such as intracranial bleeding, due to vitamin K deficiency"
+          explanation: Confirms that vitamin K prophylaxis at birth prevents life-threatening hemorrhagic complications in newborns
+
+    - name: Individuals with Fat Malabsorption
+      description: |
+        People with conditions affecting fat absorption, such as inflammatory
+        bowel disease or cystic fibrosis, may be at increased risk.
+      mic_references:
+        - 31
+        - 32
+        - 33
+        - 34
+
+    - name: Individuals Taking Vitamin K Antagonists
+      description: |
+        Patients taking warfarin or other vitamin K antagonists have impaired
+        vitamin K cycling and are at risk for deficiency effects.
+      mic_references:
+        - 8
+        - 9
+
+    - name: Individuals with Liver Disease
+      description: |
+        Vitamin K-dependent clotting factors are synthesized in the liver.
+        Severe liver disease results in lower levels of these factors.
+      mic_references:
+        - 8
+
+  mic_references:
+    - 8
+    - 30
+    - 31
+    - 32
+
+disease_associations:
+  - name: Osteoporosis Risk
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Vitamin K deficiency may impair the activity of vitamin K-dependent proteins
+      like osteocalcin and increase the risk of osteoporosis and fractures. Some
+      observational studies have found lower vitamin K status associated with lower
+      bone mineral density and higher fracture incidence.
+    mic_references:
+      - 49
+      - 50
+      - 51
+    evidence:
+      - reference: PMID:22516722
+        supports: SUPPORT
+        snippet: "Observational studies using percent ucOC have led to the conclusion that vitamin K insufficiency leads to age-related bone loss"
+        explanation: Supports association between vitamin K insufficiency and age-related bone loss based on undercarboxylated osteocalcin
+      - reference: PMID:18469278
+        supports: SUPPORT
+        snippet: "women in the lowest quartile (mean: 59 microg/d) had lower BMD (analysis of variance; FN, Q1: 0.831 +/- 0.122 g/cm(2); Q3: 0.850 +/- 0.126 g/cm(2); P < 0.001"
+        explanation: Low vitamin K1 intake associated with significantly lower bone mineral density at the femoral neck in postmenopausal women
+
+  - name: Vascular Calcification Risk
+    disease_term:
+      preferred_term: arterial calcification
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Vitamin K inadequacy may inactivate matrix Gla protein (MGP) and other
+      vitamin K-dependent proteins that inhibit vascular calcification.
+      Abnormal mineralization of blood vessels increases with age and is a
+      major risk factor for cardiovascular disease.
+    mic_references:
+      - 3
+      - 48
+    evidence:
+      - reference: PMID:19436645
+        supports: SUPPORT
+        snippet: "The presence of calcification in any arterial wall is associated with a 3-4-fold higher risk for mortality and cardiovascular events"
+        explanation: Meta-analysis establishing vascular calcification as a strong risk factor for cardiovascular mortality and events
+      - reference: PMID:33684212
+        supports: SUPPORT
+        snippet: "MGP functions as a vascular calcification inhibitor-but only when it is carboxylated, which requires vitamin K"
+        explanation: Confirms that MGP requires vitamin K-dependent carboxylation to function as a vascular calcification inhibitor
+      - reference: PMID:15514282
+        supports: SUPPORT
+        snippet: "Intake of menaquinone was also inversely related to all-cause mortality [RR = 0.91 (0.75, 1.09) and 0.74 (0.59, 0.92), respectively] and severe aortic calcification [odds ratio of 0.71 (0.50, 1.00) and 0.48 (0.32, 0.71), respectively]"
+        explanation: Rotterdam Study showing higher menaquinone intake associated with reduced aortic calcification and lower all-cause mortality
+
+toxicity:
+  name: Vitamin K Toxicity
+  description: |
+    There is no known toxicity associated with high doses of phylloquinone (vitamin K1)
+    or menaquinones (vitamin K2) from dietary or supplemental sources. No tolerable upper
+    intake level (UL) has been established for vitamin K. However, menadione (synthetic
+    vitamin K3) can interfere with glutathione function, causing oxidative damage, and
+    has induced liver toxicity and hemolytic anemia in infants. Menadione is no longer
+    used for treating vitamin K deficiency.
+  mic_references:
+    - 5
+    - 47
+
+food_sources:
+  - name: Kale (frozen, boiled)
+    food_term:
+      preferred_term: kale
+      term:
+        id: FOODON:00001981
+        label: kale food product
+    amount: "493 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 2
+
+  - name: Swiss chard (raw)
+    food_term:
+      preferred_term: chard
+    amount: "299 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 2
+
+  - name: Parsley (raw)
+    food_term:
+      preferred_term: parsley
+    amount: "246 mcg"
+    serving_size: "1/4 cup"
+    mic_references:
+      - 2
+
+  - name: Broccoli (cooked)
+    food_term:
+      preferred_term: broccoli
+      term:
+        id: FOODON:00001666
+        label: broccoli food product
+    amount: "220 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 2
+
+  - name: Spinach (raw)
+    food_term:
+      preferred_term: spinach
+      term:
+        id: FOODON:00002269
+        label: spinach food product
+    amount: "121 mcg"
+    serving_size: "1 cup"
+    mic_references:
+      - 2
+
+  - name: Natto (fermented soybeans)
+    food_term:
+      preferred_term: natto
+    amount: "998 mcg (MK-7)"
+    serving_size: "100 g"
+    mic_references:
+      - 2
+      - 124
+      - 125
+
+drug_interactions:
+  - name: Warfarin and Vitamin K
+    drug_term:
+      preferred_term: warfarin
+    interaction_type: ANTAGONISTIC
+    clinical_significance: HIGH
+    description: |
+      The anticoagulant effect of warfarin and other vitamin K antagonists may be
+      compromised by high dietary or supplemental vitamin K intake. Patients on
+      warfarin should maintain consistent vitamin K intake and avoid large fluctuations.
+    mic_references:
+      - 9
+      - 10
+      - 132
+      - 133
+
+  - name: Cholestyramine and Vitamin K
+    drug_term:
+      preferred_term: cholestyramine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: Cholestyramine and other fat-binding medications may interfere with vitamin K absorption
+    mic_references:
+      - 137
+
+  - name: Anticonvulsants and Vitamin K
+    drug_term:
+      preferred_term: anticonvulsant
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      Anticonvulsants like phenytoin may affect vitamin K status and increase
+      risk of deficiency in pregnant/breastfeeding women and their infants
+    mic_references:
+      - 134
+
+nutrient_interactions:
+  - name: Vitamin D and Vitamin K
+    nutrient_term:
+      preferred_term: vitamin D
+      term:
+        id: CHEBI:27300
+        label: vitamin D
+    interaction_type: SYNERGISTIC
+    description: |
+      Vitamins D and K have overlapping roles in bone and cardiovascular health.
+      Both are required for optimal calcium homeostasis and bone mineralization.
+    mic_references:
+      - 3
+    evidence:
+      - reference: PMID:21155624
+        supports: SUPPORT
+        snippet: "This review updates vitamin D and K skeletal and cardiovascular benefits and evidence for their synergy of action"
+        explanation: Supports synergy between vitamin D and K
+      - reference: PMID:23590754
+        supports: SUPPORT
+        snippet: "Dietary intake of menaquinones accounts for up to 25% of total vitamin K intake and contributes to the biological functions of vitamin K"
+        explanation: Menaquinones contribute meaningfully to total vitamin K intake and biological functions, relevant to synergy with vitamin D
+
+  - name: Vitamin E and Vitamin K
+    nutrient_term:
+      preferred_term: vitamin E
+      term:
+        id: CHEBI:33234
+        label: vitamin E
+    interaction_type: ANTAGONISTIC
+    description: |
+      High doses of vitamin E may antagonize vitamin K and increase bleeding risk,
+      particularly in individuals with low vitamin K status or taking anticoagulants.
+    mic_references:
+      - 137
+
+recommendations:
+  ai:
+    - population: Infants 0-6 months
+      amount: "2.0 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Infants 7-12 months
+      amount: "2.5 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 1-3 years
+      amount: "30 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "55 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "60 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "75 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adult males 19+ years
+      amount: "120 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adult females 19+ years
+      amount: "90 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy (18 years and younger)
+      amount: "75 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy (19+ years)
+      amount: "90 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation (18 years and younger)
+      amount: "75 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation (19+ years)
+      amount: "90 mcg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+  notes: |
+    The Linus Pauling Institute recommends that adults take a multivitamin/mineral
+    supplement and eat at least one cup of dark green leafy vegetables daily.
+    Regular consumption of green leafy vegetables should supply adequate vitamin K
+    (see Food sources). No tolerable upper intake level (UL) has been established
+    for vitamin K.
+
+notes: |
+  All newborn infants should receive an intramuscular injection of vitamin K (1 mg)
+  at birth to prevent vitamin K deficiency bleeding (VKDB). Breast milk is low in
+  vitamin K, and infants who do not receive prophylaxis are at risk for potentially
+  fatal intracranial hemorrhage. Individuals taking warfarin or other vitamin K
+  antagonists should maintain consistent vitamin K intake rather than avoiding
+  vitamin K-rich foods.

@@ -1,0 +1,99 @@
+# QC Configuration for MIC Knowledge Base
+# Defines field weights and compliance thresholds
+
+# Default settings for unconfigured fields
+default_weight: 1.0
+default_min_compliance: null
+
+# Per-slot configuration (applies everywhere that slot appears)
+slots:
+  term:
+    weight: 2.0
+    min_compliance: 75.0
+
+  evidence:
+    weight: 2.0
+    min_compliance: 70.0
+
+  description:
+    weight: 0.5
+    min_compliance: null  # No minimum required
+
+  notes:
+    weight: 0.2
+    min_compliance: null
+
+# Per-path configuration (overrides slot config for specific locations)
+paths:
+  # Core nutrient identity - highest priority
+  "nutrient_term.term":
+    weight: 5.0
+    min_compliance: 95.0
+
+  # Disease associations - high value for KG
+  "disease_associations[].disease_term.term":
+    weight: 3.0
+    min_compliance: 85.0
+
+  # Deficiency state and disease terms
+  "deficiency.phenotype_term.term":
+    weight: 3.0
+    min_compliance: 85.0
+
+  "deficiency.disease_term.term":
+    weight: 2.0
+    min_compliance: 75.0
+
+  # Deficiency sequelae phenotypes - clinical relevance
+  "deficiency.sequelae[].phenotype_term.term":
+    weight: 3.0
+    min_compliance: 85.0
+
+  # Biological processes - mechanistic understanding
+  "functions[].biological_processes[].term":
+    weight: 2.5
+    min_compliance: 80.0
+
+  # Gene annotations
+  "functions[].genes[].term":
+    weight: 2.5
+    min_compliance: 75.0
+
+  # Food sources - dietary guidance
+  "food_sources[].food_term.term":
+    weight: 2.0
+    min_compliance: 75.0
+
+  # Drug interactions - safety
+  "drug_interactions[].drug_term.term":
+    weight: 2.0
+    min_compliance: 70.0
+
+  # Nutrient interactions
+  "nutrient_interactions[].nutrient_term.term":
+    weight: 2.0
+    min_compliance: 70.0
+
+  # Evidence at key locations
+  "functions[].evidence":
+    weight: 2.0
+    min_compliance: 75.0
+
+  "disease_associations[].evidence":
+    weight: 2.5
+    min_compliance: 80.0
+
+  "deficiency.evidence":
+    weight: 2.0
+    min_compliance: 75.0
+
+# Reporting settings
+reporting:
+  # Show top N priority curation targets
+  priority_targets: 10
+
+  # Minimum weighted compliance to pass QC
+  pass_threshold: 70.0
+
+  # Generate detailed field-level report
+  detailed_report: true

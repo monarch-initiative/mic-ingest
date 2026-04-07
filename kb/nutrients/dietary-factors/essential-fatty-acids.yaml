@@ -1,0 +1,438 @@
+name: Essential Fatty Acids
+nutrient_term:
+  preferred_term: essential fatty acid
+  term:
+    id: CHEBI:59549
+    label: essential fatty acid
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/other-nutrients/essential-fatty-acids
+alternate_names:
+  - EFAs
+  - Polyunsaturated fatty acids
+  - PUFAs
+description: |
+  Essential fatty acids are polyunsaturated fatty acids that cannot be synthesized
+  de novo by humans and must be obtained from the diet. The two essential fatty acids
+  are linoleic acid (LA, an omega-6 fatty acid) and alpha-linolenic acid (ALA, an
+  omega-3 fatty acid). These serve as precursors for longer-chain polyunsaturated
+  fatty acids including arachidonic acid (AA), eicosapentaenoic acid (EPA), and
+  docosahexaenoic acid (DHA), which have important roles in inflammation,
+  cell membrane structure, and neural function.
+
+functions:
+  - name: Cell Membrane Structure
+    description: |
+      Essential fatty acids and their long-chain derivatives are important structural
+      components of cell membranes. DHA is particularly concentrated in retinal and
+      brain tissue, where it affects membrane fluidity and function.
+    mic_references:
+      - 15
+      - 20
+      - 21
+
+  - name: Eicosanoid Precursors
+    description: |
+      Omega-6 and omega-3 fatty acids serve as precursors for eicosanoids, which
+      are bioactive lipid mediators including prostaglandins, thromboxanes, and
+      leukotrienes. These regulate inflammation, blood clotting, and immune responses.
+    biological_processes:
+      - preferred_term: inflammatory response
+        term:
+          id: GO:0006954
+          label: inflammatory response
+    mic_references:
+      - 16
+      - 17
+    evidence:
+      - reference: PMID:23668691
+        supports: SUPPORT
+        snippet: "Fatty acid-induced modifications in membrane order and in the availability of substrates for eicosanoid synthesis are long-standing mechanisms that are considered important in explaining the effects observed"
+        explanation: Confirms role of fatty acids as eicosanoid precursors
+
+  - name: Resolution of Inflammation
+    description: |
+      EPA and DHA serve as precursors for specialized pro-resolving lipid mediators
+      (SPMs) including resolvins and protectins, which actively promote the resolution
+      of inflammation.
+    biological_processes:
+      - preferred_term: resolution of inflammation
+        term:
+          id: GO:0050727
+          label: regulation of inflammatory response
+    mic_references:
+      - 28
+      - 29
+    evidence:
+      - reference: PMID:23668691
+        supports: SUPPORT
+        snippet: "the description of an entirely new family of lipid mediators, resolvins and protectins that have anti-inflammatory actions and are critical to the resolution of inflammation"
+        explanation: Confirms EPA and DHA as precursors for pro-resolving mediators
+
+  - name: Neural Development and Function
+    description: |
+      DHA is essential for normal brain and retinal development. It accumulates
+      in the brain during fetal development and early infancy and is critical for
+      neurodevelopment and visual function.
+    biological_processes:
+      - preferred_term: neuron development
+        term:
+          id: GO:0048666
+          label: neuron development
+    mic_references:
+      - 22
+      - 24
+    evidence:
+      - reference: PMID:18789910
+        supports: SUPPORT
+        snippet: "Inadequate intakes of omega-3 fatty acids decrease DHA and increase omega-6 fatty acids in the brain. Decreased DHA in the developing brain leads to deficits in neurogenesis, neurotransmitter metabolism, and altered learning and visual function in animals."
+        explanation: Confirms that DHA is critical for brain development and that inadequate omega-3 intake impairs neurogenesis and neural function
+      - reference: PMID:20478353
+        supports: SUPPORT
+        snippet: "The accretion of docosahexaenoic acid (DHA) in membranes of the central nervous system is required for the optimum development of retina and brain functions."
+        explanation: Confirms DHA accretion in CNS membranes is required for optimal retinal and brain development
+
+  - name: Gene Expression Regulation
+    description: |
+      Omega-3 fatty acids regulate gene expression through effects on transcription
+      factors, including sterol regulatory element binding proteins (SREBPs) and
+      peroxisome proliferator-activated receptors (PPARs).
+    mic_references:
+      - 14
+      - 31
+      - 33
+
+deficiency:
+  name: Essential Fatty Acid Deficiency
+  description: |
+    Essential fatty acid deficiency is rare in healthy individuals but can occur
+    in patients receiving fat-free parenteral nutrition, those with severe fat
+    malabsorption, or in cases of malnutrition. A plasma triene:tetraene ratio
+    (eicosatrienoic acid to arachidonic acid) greater than 0.2 indicates deficiency.
+  sequelae:
+    - name: Dermatitis
+      phenotype_term:
+        preferred_term: eczematoid dermatitis
+        term:
+          id: HP:0000964
+          label: Eczematoid dermatitis
+      frequency: VERY_FREQUENT
+      mic_references:
+        - 35
+      evidence:
+        - reference: PMID:9665106
+          supports: SUPPORT
+          snippet: "Home parenteral nutrition (HPN), initiated in patients with severe malabsorption or decreased oral intake, may exhaust stores of essential fatty acids and cause clinical manifestations, mainly dermatitis"
+          explanation: Confirms dermatitis as primary clinical manifestation of EFA deficiency
+    - name: Growth retardation
+      phenotype_term:
+        preferred_term: growth retardation
+        term:
+          id: HP:0001510
+          label: Growth delay
+      frequency: FREQUENT
+      mic_references:
+        - 36
+    - name: Poor wound healing
+      phenotype_term:
+        preferred_term: impaired wound healing
+        term:
+          id: HP:0001058
+          label: Poor wound healing
+      frequency: FREQUENT
+      mic_references:
+        - 35
+    - name: Increased susceptibility to infection
+      phenotype_term:
+        preferred_term: recurrent infections
+        term:
+          id: HP:0002719
+          label: Recurrent infections
+      frequency: FREQUENT
+      mic_references:
+        - 35
+  at_risk_groups:
+    - name: Patients on parenteral nutrition
+      description: |
+        Patients receiving long-term fat-free parenteral nutrition are at high
+        risk for EFA deficiency.
+      mic_references:
+        - 35
+        - 37
+    - name: Patients with fat malabsorption
+      description: |
+        Conditions causing fat malabsorption (cystic fibrosis, short bowel syndrome,
+        cholestatic liver disease) increase risk of EFA deficiency.
+      mic_references:
+        - 39
+        - 40
+    - name: Infants and children with malnutrition
+      description: |
+        Severely malnourished infants and children may develop EFA deficiency.
+      mic_references:
+        - 36
+
+food_sources:
+  - name: Salmon
+    food_term:
+      preferred_term: salmon
+      term:
+        id: FOODON:00002075
+        label: pacific salmon food product
+    notes: Rich source of EPA and DHA
+  - name: Flaxseed oil
+    food_term:
+      preferred_term: flaxseed oil
+      term:
+        id: FOODON:00001088
+        label: flaxseed oil
+    amount: "7.3 g ALA"
+    serving_size: "1 tablespoon"
+    notes: Richest source of alpha-linolenic acid
+  - name: Walnuts
+    food_term:
+      preferred_term: walnut
+      term:
+        id: FOODON:03301364
+        label: walnut
+    notes: Good plant source of ALA
+  - name: Safflower oil
+    food_term:
+      preferred_term: safflower oil
+      term:
+        id: FOODON:03302780
+        label: safflower oil
+    amount: "10.1 g LA"
+    serving_size: "1 tablespoon"
+    notes: Rich source of linoleic acid
+
+disease_associations:
+  - name: Cardiovascular Disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Epidemiological studies have established an inverse relationship between
+      omega-3 fatty acid intake and cardiovascular disease mortality. EPA and DHA
+      have anti-inflammatory, anti-arrhythmic, and hypolipidemic properties that
+      may confer cardioprotection.
+    mic_references:
+      - 5
+      - 95
+      - 109
+    evidence:
+      - reference: PMID:22904344
+        supports: SUPPORT
+        snippet: "Epidemiological studies on Greenland Inuits in the 1970s and subsequent human studies have established an inverse relationship between the ingestion of omega-3 fatty acids ... blood levels of C(20-22) ω 3 PUFA, and mortality associated with cardiovascular disease (CVD)"
+        explanation: Confirms inverse relationship between omega-3 intake and CVD mortality
+      - reference: PMID:22051327
+        supports: SUPPORT
+        snippet: "In prospective observational studies and adequately powered randomized clinical trials, benefits of n-3 PUFA seem most consistent for coronary heart disease mortality and sudden cardiac death."
+        explanation: Comprehensive review finding strongest evidence for omega-3 benefits on CHD mortality and sudden cardiac death
+      - reference: PMID:29773586
+        supports: SUPPORT
+        snippet: "We conclude that 1 to 2 seafood meals per week be included to reduce the risk of congestive heart failure, coronary heart disease, ischemic stroke, and sudden cardiac death, especially when seafood replaces the intake of less healthy foods."
+        explanation: AHA science advisory recommending seafood consumption for cardiovascular disease risk reduction
+
+  - name: Preterm Birth
+    disease_term:
+      preferred_term: preterm birth
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      DHA supplementation during pregnancy may reduce the risk of early preterm
+      birth (before 34 weeks gestation) and very low birth weight.
+    population_context: pregnant women
+    mic_references:
+      - 58
+      - 59
+    evidence:
+      - reference: PMID:26773247
+        supports: SUPPORT
+        snippet: "The risk of early preterm delivery was reduced by 58% (RR 0.42; 95% CI 0.27-0.66; I(2)=0%; p=0.0002) and any preterm delivery by 17% (RR 0.83; 95% CI 0.70-0.98; I(2)=0%; p=0.03) with the intervention."
+        explanation: Meta-analysis of 9 RCTs showing omega-3 fatty acids significantly reduce early and any preterm delivery
+      - reference: PMID:30392575
+        supports: SUPPORT
+        snippet: "A Bayesian bivariate mixture-model associated capsule intake with simultaneous lower probability of ePTB, low birth weight (LBW, <2500 g) and VLBW (p = 0.0327)."
+        explanation: Dose-response analysis showing DHA intake during pregnancy associated with lower rates of early preterm birth and low birth weight
+
+  - name: Major Depressive Disorder
+    disease_term:
+      preferred_term: major depressive disorder
+      term:
+        id: MONDO:0002009
+        label: major depressive disorder
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    description: |
+      Meta-analyses of randomized controlled trials suggest that omega-3 fatty acid
+      supplementation, particularly EPA-predominant formulations, has a modest
+      beneficial effect on depressive symptoms. EPA appears more effective than DHA
+      for depression, and omega-3 PUFAs are more effective as adjuvant therapy
+      alongside antidepressants than as monotherapy.
+    mic_references:
+      - 194
+      - 195
+    evidence:
+      - reference: PMID:24805797
+        supports: SUPPORT
+        snippet: "Meta-analysis of 11 and 8 trials conducted respectively on patients with a DSM-defined diagnosis of major depressive disorder (MDD) and patients with depressive symptomatology but no diagnosis of MDD demonstrated significant clinical benefit of omega-3 PUFA treatment compared to placebo"
+        explanation: Comprehensive meta-analysis confirming omega-3 PUFA supplementation is effective for treating depressive disorders
+
+  - name: Rheumatoid Arthritis
+    disease_term:
+      preferred_term: rheumatoid arthritis
+      term:
+        id: MONDO:0008383
+        label: rheumatoid arthritis
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    description: |
+      Omega-3 PUFA supplementation in patients with rheumatoid arthritis has been
+      shown to improve disease activity markers and reduce the inflammatory
+      mediator leukotriene B4. Fish oil supplementation may also reduce the need
+      for anti-inflammatory medications.
+    mic_references:
+      - 156
+      - 158
+    evidence:
+      - reference: PMID:28965775
+        supports: SUPPORT
+        snippet: "consumption of ω-3 fatty acids was found to significantly improve eight disease-activity-related markers"
+        explanation: Meta-analysis of 20 RCTs confirming omega-3 PUFA intake improves disease activity markers in rheumatoid arthritis patients
+
+  - name: Stroke
+    disease_term:
+      preferred_term: stroke
+      term:
+        id: MONDO:0005098
+        label: stroke disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses of prospective cohort studies indicate that fish consumption
+      is associated with a reduced risk of stroke, particularly hemorrhagic stroke.
+      A dose-response relationship has been observed with increasing fish intake.
+    mic_references:
+      - 97
+      - 101
+    evidence:
+      - reference: PMID:30470619
+        supports: SUPPORT
+        snippet: "Based on current evidence from prospective cohort studies, we concluded that fish consumption was associated with a decreased risk of stroke."
+        explanation: Meta-analysis of 33 prospective cohort studies confirming fish consumption is inversely associated with stroke risk
+
+  - name: Dementia and Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher fish consumption and DHA intake are associated with lower risk of
+      cognitive impairment, dementia, and Alzheimer disease in observational studies.
+      DHA is the predominant omega-3 PUFA in the brain and appears important for
+      maintaining cognitive function in aging.
+    mic_references:
+      - 135
+      - 138
+    evidence:
+      - reference: PMID:26718417
+        supports: SUPPORT
+        snippet: "A 1-serving/wk increment of dietary fish was associated with lower risks of dementia (RR: 0.95; 95% CI: 0.90, 0.99; P = 0.042, I(2) = 63.4%) and AD (RR: 0.93; 95% CI: 0.90, 0.95; P = 0.003, I(2) = 74.8%)."
+        explanation: Dose-response meta-analysis of 21 cohort studies showing fish consumption associated with lower risk of dementia and Alzheimer disease
+
+  - name: Coronary Heart Disease (Linoleic Acid)
+    disease_term:
+      preferred_term: coronary heart disease
+      term:
+        id: MONDO:0005010
+        label: coronary artery disorder
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher dietary intake of linoleic acid, the predominant omega-6 fatty acid,
+      is inversely associated with risk of coronary heart disease events and deaths.
+      Replacing saturated fat with linoleic acid is associated with reduced CHD risk.
+    mic_references:
+      - 79
+      - 86
+    evidence:
+      - reference: PMID:25161045
+        supports: SUPPORT
+        snippet: "dietary LA was associated with a 15% lower risk of CHD events (pooled RR, 0.85; 95% confidence intervals, 0.78-0.92; I(2)=35.5%) and a 21% lower risk of CHD deaths (pooled RR, 0.79; 95% confidence intervals, 0.71-0.89; I(2)=0.0%)"
+        explanation: Systematic review and meta-analysis of 13 prospective cohort studies showing dietary linoleic acid inversely associated with CHD risk
+
+nutrient_interactions:
+  - name: Omega-6 to Omega-3 Ratio
+    nutrient_term:
+      preferred_term: linoleic acid
+      term:
+        id: CHEBI:17351
+        label: linoleic acid
+    interaction_type: COMPETES_FOR_TRANSPORT
+    description: |
+      Omega-6 and omega-3 fatty acids compete for the same desaturase and elongase
+      enzymes. High omega-6 intake can reduce conversion of ALA to EPA and DHA.
+      The typical Western diet has a high omega-6 to omega-3 ratio.
+    mic_references:
+      - 4
+      - 10
+    evidence:
+      - reference: PMID:15075703
+        supports: SUPPORT
+        snippet: "Conversion of alpha-linolenic acid to eicosapentaenoic acid is limited in men and further transformation to docosahexaenoic acid is very low."
+        explanation: Confirms limited conversion of ALA to EPA and DHA in humans, supporting the importance of the omega-6/omega-3 competition for desaturase enzymes
+
+recommendations:
+  ai:
+    - population: adult men
+      amount: "17 g/day linoleic acid"
+    - population: adult women
+      amount: "12 g/day linoleic acid"
+    - population: adult men
+      amount: "1.6 g/day alpha-linolenic acid"
+    - population: adult women
+      amount: "1.1 g/day alpha-linolenic acid"
+  notes: |
+    No specific dietary reference intakes have been established for EPA and DHA.
+    However, 200-250 mg/day DHA is commonly recommended for pregnant and lactating
+    women. The American Heart Association recommends eating fatty fish at least
+    twice per week for cardiovascular benefits.
+
+references:
+  - reference: PMID:22904344
+    title: "Omega-3 fatty acid supplementation and cardiovascular disease"
+  - reference: PMID:23668691
+    title: "n-3 fatty acids, inflammation and immunity: new mechanisms to explain old actions"
+  - reference: PMID:9665106
+    title: "Essential fatty acid deficiency in patients receiving home parenteral nutrition"
+  - reference: PMID:22051327
+    title: "Omega-3 fatty acids and cardiovascular disease: effects on risk factors, molecular pathways, and clinical events"
+  - reference: PMID:29773586
+    title: "Seafood Long-Chain n-3 Polyunsaturated Fatty Acids and Cardiovascular Disease: A Science Advisory From the American Heart Association"
+  - reference: PMID:26773247
+    title: "Effects of omega-3 fatty acids in prevention of early preterm delivery: a systematic review and meta-analysis of randomized studies"
+  - reference: PMID:30392575
+    title: "Dose-response relationship between docosahexaenoic acid (DHA) intake and lower rates of early preterm birth, low birth weight and very low birth weight"
+  - reference: PMID:24805797
+    title: "Role of omega-3 fatty acids in the treatment of depressive disorders: a comprehensive meta-analysis of randomized clinical trials"
+  - reference: PMID:28965775
+    title: "Intake of omega-3 polyunsaturated fatty acids in patients with rheumatoid arthritis: A systematic review and meta-analysis"
+  - reference: PMID:30470619
+    title: "Fish Consumption and Stroke Risk: A Meta-Analysis of Prospective Cohort Studies"
+  - reference: PMID:26718417
+    title: "Intakes of fish and polyunsaturated fatty acids and mild-to-severe cognitive impairment risks: a dose-response meta-analysis of 21 cohort studies"
+  - reference: PMID:25161045
+    title: "Dietary linoleic acid and risk of coronary heart disease: a systematic review and meta-analysis of prospective cohort studies"
+  - reference: PMID:18789910
+    title: "Dietary omega 3 fatty acids and the developing brain"
+  - reference: PMID:20478353
+    title: "Docosahexaenoic acid (DHA) and the developing central nervous system (CNS) - Implications for dietary recommendations"
+  - reference: PMID:15075703
+    title: "Alpha-linolenic acid metabolism in men and women: nutritional and biological implications"

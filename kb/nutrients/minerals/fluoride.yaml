@@ -1,0 +1,271 @@
+name: Fluoride
+nutrient_term:
+  preferred_term: fluoride
+  term:
+    id: CHEBI:17051
+    label: fluoride
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/fluoride
+alternate_names:
+  - F-
+  - Fluorine
+description: |
+  Fluoride is the ionic form of the naturally occurring element fluorine. The anion
+  increases the structural stability of teeth and bones through interactions with
+  calcium phosphates. Fluoride is best known for its role in preventing dental caries
+  (tooth decay) by promoting tooth mineralization and re-mineralization. The major
+  sources of fluoride are drinking water, foods and beverages made with fluoridated
+  water, and fluoride-containing oral care products.
+
+functions:
+  - name: Tooth Mineralization
+    description: |
+      Fluoride increases the structural stability of tooth enamel by promoting the
+      formation of fluorapatite crystals, which are more resistant to acid dissolution
+      than hydroxyapatite. Fluoride also promotes re-mineralization of enamel that
+      has been demineralized by bacterial acids.
+    biological_processes:
+      - preferred_term: biomineralization
+        term:
+          id: GO:0034505
+          label: tooth mineralization
+    mic_references:
+      - 1
+      - 2
+
+  - name: Bone Structure
+    description: |
+      Fluoride is incorporated into the mineral structure of bone, where it may
+      increase bone density. However, the effects of fluoride on bone health and
+      fracture risk are complex and dose-dependent.
+    mic_references:
+      - 3
+      - 4
+
+deficiency:
+  name: Fluoride Deficiency
+  description: |
+    In humans, the only clear effect of inadequate fluoride intake is an increased
+    risk of dental caries (tooth decay) for individuals of all ages. Prior to the
+    introduction of fluoride-containing toothpastes, studies demonstrated that the
+    prevalence of dental caries was 40% to 60% lower in communities with optimal
+    water fluoride concentrations than in communities with low water fluoride.
+  sequelae:
+    - name: Dental Caries
+      phenotype_term:
+        preferred_term: dental caries
+        term:
+          id: HP:0000670
+          label: Carious teeth
+      frequency: FREQUENT
+      context: Increased risk with inadequate fluoride intake
+      mic_references:
+        - 5
+        - 6
+
+  at_risk_groups:
+    - name: People in non-fluoridated water areas
+      description: |
+        Communities without water fluoridation have higher rates of dental caries
+        unless other sources of fluoride are available
+      mic_references:
+        - 5
+        - 6
+
+  mic_references:
+    - 5
+    - 6
+
+toxicity:
+  name: Fluoride Toxicity
+  description: |
+    Excess fluoride intake can cause dental fluorosis (mottling of tooth enamel) if
+    consumed during tooth development (first 8 years of life). More severe toxicity
+    includes skeletal fluorosis, which can occur with very high fluoride intakes over
+    many years. Acute fluoride toxicity causes nausea, abdominal pain, and vomiting.
+    The lowest dose that could trigger adverse symptoms is 5 mg/kg body weight. The
+    US EPA maximum allowable level of fluoride in drinking water is 4 mg/L, with a
+    non-enforceable guideline of 2 mg/L to prevent dental fluorosis. The Tolerable
+    Upper Intake Level (UL) for adults is 10 mg/day.
+  adverse_effects:
+    - name: Dental Fluorosis
+      description: |
+        Mottling or white speckling of tooth enamel caused by excess fluoride intake
+        during tooth development. Mild forms are cosmetic; severe forms cause pitting.
+      severity: mild
+    - name: Skeletal Fluorosis
+      description: |
+        Changes in bone structure from long-term excessive fluoride intake. May cause
+        increased bone mass, joint pain, stiffness, and in severe cases calcification
+        of ligaments and neurological problems.
+      severity: moderate
+  mic_references:
+    - 6
+    - 77
+    - 86
+    - 87
+    - 93
+
+food_sources:
+  - name: Fluoridated water
+    food_term:
+      preferred_term: drinking water
+    amount: "0.7 mg/L"
+    serving_size: "1 liter"
+    notes: Recommended concentration in community water systems
+    mic_references:
+      - 5
+
+  - name: Tea
+    food_term:
+      preferred_term: tea
+    amount: "1-6 mg"
+    serving_size: "8 fl. ounces"
+    notes: Variable depending on tea type and brewing
+    mic_references:
+      - 58
+
+drug_interactions:
+  - name: Calcium-Containing Antacids and Fluoride
+    description: |
+      Calcium-containing antacids may reduce fluoride absorption. Fluoride supplements
+      should not be taken at the same time as calcium-containing antacids.
+    drug_term:
+      preferred_term: calcium antacid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 75
+
+nutrient_interactions:
+  - name: Calcium and Fluoride
+    description: |
+      High calcium intake may reduce fluoride absorption. Fluoride supplements should
+      be taken on an empty stomach, separate from calcium-rich foods or supplements.
+    nutrient_term:
+      preferred_term: calcium
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 75
+
+disease_associations:
+  - name: Dental Caries Prevention
+    description: |
+      Fluoride is well-established for preventing dental caries through multiple
+      mechanisms: inhibiting demineralization of enamel, enhancing remineralization,
+      and inhibiting bacterial metabolism. Community water fluoridation and fluoridated
+      toothpaste have contributed to dramatic reductions in dental caries.
+    disease_term:
+      preferred_term: dental caries
+      term:
+        id: MONDO:0005276
+        label: dental caries
+    relationship_type: PROTECTIVE
+    population_context: All ages
+    evidence:
+      - reference: PMID:26092033
+        supports: SUPPORT
+        snippet: "The results from the caries severity data indicate that the initiation of water fluoridation results in reductions in dmft of 1.81 (95% CI 1.31 to 2.31; 9 studies at high risk of bias, 44,268 participants) and in DMFT of 1.16 (95% CI 0.72 to 1.61; 10 studies at high risk of bias, 78,764 participants)."
+        explanation: Cochrane systematic review of 155 studies demonstrating that water fluoridation reduces dental caries severity by 26-35% in deciduous and permanent dentition.
+    mic_references:
+      - 6
+      - 7
+      - 8
+      - 9
+
+  - name: Osteoporosis Treatment
+    description: |
+      High-dose fluoride has been investigated for treating osteoporosis due to its
+      ability to stimulate bone formation. However, therapeutic trials have shown
+      dose-dependent effects on fracture risk, with some studies showing increased
+      fracture risk despite increased bone density. The occurrence of side effects
+      limits therapeutic use.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: THERAPEUTIC
+    population_context: Evidence is mixed; not currently recommended as first-line therapy
+    mic_references:
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.01 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.5 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "0.7 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 4-8 years
+      amount: "1.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 9-13 years
+      amount: "2.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Adolescents 14-18 years
+      amount: "3.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Adult men 19+ years
+      amount: "4.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Adult women 19+ years
+      amount: "3.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy
+      amount: "3.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding
+      amount: "3.0 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    Fluoride recommendations are expressed as Adequate Intake (AI) rather than RDA
+    because data were insufficient to establish an EAR. AI levels are based on estimated
+    intakes that have been shown to reduce dental caries most effectively without causing
+    dental fluorosis. The recommended community water fluoride concentration is 0.7 mg/L.
+
+bioavailability:
+  description: |
+    Fluoride is rapidly and almost completely absorbed from the gastrointestinal tract.
+    Absorption may be reduced by calcium-containing foods and antacids. Approximately
+    99% of body fluoride is found in bones and teeth. Excess fluoride is excreted
+    primarily in urine.
+  mic_references:
+    - 2
+    - 3
+
+references:
+  - reference: PMID:26092033
+    title: "Water fluoridation for the prevention of dental caries"
+    findings:
+      - statement: Water fluoridation reduces dental caries in children
+        supporting_text: "The results from the caries severity data indicate that the initiation of water fluoridation results in reductions in dmft of 1.81 (95% CI 1.31 to 2.31; 9 studies at high risk of bias, 44,268 participants) and in DMFT of 1.16 (95% CI 0.72 to 1.61; 10 studies at high risk of bias, 78,764 participants)."
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Fluoride. Fluoride is unique among minerals in that its
+  primary benefit is topical (on tooth surfaces) rather than systemic. The MIC reference
+  numbers (mic_references) correspond to the numbered citations on the source page.
+  The page contains approximately 98 references.
+
+  Note: The essentiality of fluoride as a nutrient is debated, as it has no known
+  essential metabolic function. Its classification as a mineral is based on its
+  beneficial effects on dental health rather than a physiological requirement.

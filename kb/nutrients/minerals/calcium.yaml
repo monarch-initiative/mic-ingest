@@ -1,0 +1,832 @@
+name: Calcium
+nutrient_term:
+  preferred_term: calcium
+  term:
+    id: CHEBI:22984
+    label: calcium atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/calcium
+alternate_names:
+  - Ca
+description: |
+  Calcium is the most abundant mineral in the body, with over 99% found in bones and teeth
+  where it provides structural support. The remaining calcium is critical for vascular
+  contraction and vasodilation, muscle function, nerve transmission, intracellular signaling,
+  and hormonal secretion. Blood calcium levels are tightly regulated by parathyroid hormone
+  (PTH) and vitamin D, with the skeleton serving as a calcium reservoir. Adequate calcium
+  intake throughout life is essential for maintaining bone health and preventing osteoporosis.
+
+functions:
+  - name: Structural Component of Bone and Teeth
+    description: |
+      Calcium is a major structural element in bones and teeth. The mineral component of bone
+      consists mainly of hydroxyapatite crystals [Ca10(PO4)6(OH)2], which contain large amounts
+      of calcium, phosphorus, and oxygen. Bone is a dynamic tissue that is remodeled throughout
+      life. Osteoclasts begin the process of remodeling by dissolving or resorbing bone, then
+      osteoblasts synthesize new bone to replace the bone that was resorbed.
+    biological_processes:
+      - preferred_term: bone mineralization
+        term:
+          id: GO:0030282
+          label: bone mineralization
+    mic_references:
+      - 1
+    evidence:
+      - reference: PMID:22609892
+        supports: SUPPORT
+        snippet: "Calcium intake influences skeletal calcium retention during growth and thus affects peak bone mass achieved in early adulthood"
+        explanation: Confirms calcium's role in bone structure and development
+
+  - name: Calcium Homeostasis
+    description: |
+      Calcium concentrations in blood and extracellular fluid are tightly controlled to preserve
+      normal physiological function. A drop in blood calcium is sensed by the parathyroid glands,
+      resulting in increased PTH secretion. PTH stimulates vitamin D activation in kidneys,
+      decreases urinary calcium excretion, and stimulates bone resorption to release calcium.
+      When calcium rises, calcitonin inhibits PTH and bone resorption while increasing urinary
+      calcium excretion.
+    biological_processes:
+      - preferred_term: calcium ion homeostasis
+        term:
+          id: GO:0055074
+          label: calcium ion homeostasis
+    mic_references:
+      - 1
+      - 2
+
+  - name: Cell Signaling
+    description: |
+      Calcium plays a role in mediating vasoconstriction and vasodilation, nerve impulse
+      transmission, muscle contraction, and hormonal secretion. Excitable cells contain
+      voltage-dependent calcium channels that allow rapid changes in calcium concentrations.
+      The binding of calcium to proteins like troponin-c initiates muscle contraction, while
+      calcium binding to calmodulin activates enzymes that provide energy for contraction.
+    biological_processes:
+      - preferred_term: signal transduction
+        term:
+          id: GO:0007165
+          label: signal transduction
+      - preferred_term: muscle contraction
+        term:
+          id: GO:0006936
+          label: muscle contraction
+    mic_references:
+      - 1
+      - 3
+    evidence:
+      - reference: PMID:18083096
+        supports: SUPPORT
+        snippet: "Calcium ions (Ca(2+)) impact nearly every aspect of cellular life"
+        explanation: Confirms calcium's broad role in cellular signaling and function
+
+  - name: Blood Coagulation Cofactor
+    description: |
+      Calcium is necessary for the activation of the seven vitamin K-dependent clotting
+      factors in the coagulation cascade. The binding of calcium ions is required for these
+      clotting factors to function, making calcium essential for normal blood clot formation
+      and hemostasis.
+    biological_processes:
+      - preferred_term: blood coagulation
+        term:
+          id: GO:0007596
+          label: blood coagulation
+    mic_references:
+      - 1
+      - 3
+    evidence:
+      - reference: PMID:18083096
+        supports: SUPPORT
+        snippet: "Calcium ions (Ca(2+)) impact nearly every aspect of cellular life"
+        explanation: Confirms calcium's fundamental role in cellular processes including those underlying coagulation
+
+  - name: Supplement Formulations
+    description: |
+      Calcium supplements are available in several forms including calcium carbonate, calcium
+      citrate, calcium citrate malate, calcium lactate, and calcium gluconate. Calcium
+      carbonate is the most cost-effective and should be taken with meals for optimal
+      absorption. Calcium citrate can be taken without food and is preferred for individuals
+      with achlorhydria or those taking acid-suppressing medications. The maximum dose of
+      elemental calcium that should be taken at one time is 500 mg.
+    mic_references:
+      - 124
+      - 125
+    evidence:
+      - reference: PMID:17507729
+        supports: SUPPORT
+        snippet: "Calcium carbonate, the most cost-effective form, should be taken with a meal to ensure optimal absorption. Calcium citrate can be taken without food and is the supplement of choice for individuals with achlorhydria or who are taking histamine-2 blockers or protein-pump inhibitors"
+        explanation: Review of calcium supplement forms confirming differential absorption characteristics and clinical recommendations for each formulation
+
+deficiency:
+  name: Calcium Deficiency
+  description: |
+    Low blood calcium (hypocalcemia) usually implies abnormal parathyroid function since the
+    skeleton provides a large calcium reserve for maintaining normal blood levels. Other causes
+    include chronic kidney failure, vitamin D deficiency, and low blood magnesium levels.
+    Chronically low calcium intakes in growing individuals may prevent optimal peak bone mass
+    attainment. Inadequate calcium intake may contribute to accelerated bone loss and
+    development of osteoporosis.
+  sequelae:
+    - name: Hypocalcemia
+      phenotype_term:
+        preferred_term: hypocalcemia
+        term:
+          id: HP:0002901
+          label: Hypocalcemia
+      frequency: FREQUENT
+      context: Usually due to abnormal parathyroid function rather than dietary deficiency
+      mic_references:
+        - 1
+
+    - name: Osteoporosis
+      phenotype_term:
+        preferred_term: osteoporosis
+        term:
+          id: HP:0000939
+          label: Osteoporosis
+      frequency: FREQUENT
+      context: Long-term consequence of chronically inadequate calcium intake
+      mic_references:
+        - 1
+
+  at_risk_groups:
+    - name: Postmenopausal women
+      description: |
+        Estrogen withdrawal significantly impairs intestinal absorption and renal reabsorption
+        of calcium, increasing calcium requirements
+      mic_references:
+        - 28
+
+    - name: Individuals with vitamin D deficiency
+      description: Vitamin D is essential for calcium absorption
+      mic_references:
+        - 1
+
+    - name: People with lactose intolerance
+      description: May avoid dairy products which are primary dietary calcium sources
+      mic_references:
+        - 121
+
+    - name: Adolescents
+      description: |
+        Tend to replace milk with soft drinks during the critical period for peak bone mass
+        development
+      mic_references:
+        - 122
+
+  mic_references:
+    - 1
+
+toxicity:
+  name: Calcium Toxicity
+  description: |
+    Hypercalcemia is usually due to malignancy or primary hyperparathyroidism, not excessive
+    dietary intake. However, consumption of large quantities of calcium supplements with
+    antacids can cause calcium-alkali syndrome (formerly milk-alkali syndrome). Those at
+    greater risk include postmenopausal women, pregnant women, transplant recipients, and
+    patients on dialysis. Calcium supplementation (0.6-2 g/day) has been associated with
+    gastrointestinal side effects like constipation, cramping, bloating, and diarrhea.
+
+    Tolerable Upper Intake Level (UL): 2,500 mg/day for adults 19-50 years; 2,000 mg/day
+    for adults 51+ years.
+  adverse_effects:
+    - name: Calcium-alkali syndrome
+      description: |
+        Hypercalcemia associated with consumption of large amounts of calcium supplements
+        and absorbable alkali. May result in loss of appetite, nausea, vomiting, constipation,
+        abdominal pain, fatigue, frequent urination, and hypertension. Severe cases can
+        result in confusion, delirium, coma, and death if untreated.
+      severity: severe
+  mic_references:
+    - 9
+    - 132
+    - 133
+    - 134
+
+food_sources:
+  - name: Tofu prepared with calcium sulfate
+    food_term:
+      preferred_term: tofu
+    amount: "434 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 121
+
+  - name: Yogurt, plain, low-fat
+    food_term:
+      preferred_term: yogurt
+    amount: "415 mg"
+    serving_size: "8 ounces"
+    mic_references:
+      - 121
+
+  - name: Sardines, canned
+    food_term:
+      preferred_term: sardines
+    amount: "351 mg"
+    serving_size: "3.75 ounces (1 can)"
+    mic_references:
+      - 121
+
+  - name: Cheddar cheese
+    food_term:
+      preferred_term: cheddar cheese
+    amount: "303 mg"
+    serving_size: "1.5 ounces"
+    mic_references:
+      - 121
+
+  - name: Milk
+    food_term:
+      preferred_term: milk
+      term:
+        id: FOODON:00001257
+        label: milk or milk based food product
+    amount: "300 mg"
+    serving_size: "8 ounces"
+    mic_references:
+      - 121
+
+  - name: Kale, cooked
+    food_term:
+      preferred_term: kale
+    amount: "47 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 121
+
+  - name: Broccoli, cooked
+    food_term:
+      preferred_term: broccoli
+    amount: "31 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 121
+
+drug_interactions:
+  - name: Thiazide Diuretics and Calcium
+    description: |
+      Taking calcium supplements with thiazide diuretics increases the risk of developing
+      hypercalcemia due to increased reabsorption of calcium in the kidneys.
+    drug_term:
+      preferred_term: thiazide diuretic
+    interaction_type: REDUCES_EXCRETION
+    clinical_significance: HIGH
+    mic_references:
+      - 172
+
+  - name: Digoxin and Calcium
+    description: |
+      High doses of supplemental calcium could increase the likelihood of abnormal heart
+      rhythms in people taking digoxin for heart failure.
+    drug_term:
+      preferred_term: digoxin
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    mic_references:
+      - 172
+
+  - name: Tetracycline and Calcium
+    description: |
+      Calcium may decrease the absorption of tetracycline antibiotics. Doses should be
+      separated by two hours before calcium or four-to-six hours after calcium.
+    drug_term:
+      preferred_term: tetracycline
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 175
+
+  - name: Bisphosphonates and Calcium
+    description: |
+      Calcium may decrease the absorption of bisphosphonates. Doses should be separated
+      by two hours before calcium or four-to-six hours after calcium.
+    drug_term:
+      preferred_term: bisphosphonate
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 175
+
+  - name: Levothyroxine and Calcium
+    description: |
+      Calcium may decrease the absorption of levothyroxine. Doses should be separated
+      by two hours before calcium or four-to-six hours after calcium.
+    drug_term:
+      preferred_term: levothyroxine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 175
+
+  - name: Proton Pump Inhibitors and Calcium
+    description: |
+      H2 blockers and proton-pump inhibitors may decrease the absorption of calcium
+      carbonate and calcium phosphate.
+    drug_term:
+      preferred_term: proton pump inhibitor
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 176
+      - 177
+
+nutrient_interactions:
+  - name: Vitamin D and Calcium
+    description: |
+      The active form of vitamin D (1,25-dihydroxyvitamin D) stimulates calcium absorption
+      by promoting the synthesis of calcium-binding proteins in the intestine. Vitamin D
+      insufficiency can lead to secondary hyperparathyroidism and increased osteoporosis risk.
+    nutrient_term:
+      preferred_term: vitamin D
+    interaction_type: INCREASES_ABSORPTION
+    mic_references:
+      - 9
+      - 36
+      - 37
+
+  - name: Sodium and Calcium
+    description: |
+      High sodium intake increases urinary calcium excretion. Each 2.3 g increment of sodium
+      excreted by the kidneys draws about 24-40 mg of calcium into the urine. This may
+      contribute to bone loss over time.
+    nutrient_term:
+      preferred_term: sodium
+    interaction_type: INCREASES_EXCRETION
+    mic_references:
+      - 4
+      - 5
+      - 6
+
+  - name: Protein and Calcium
+    description: |
+      Higher protein diets are associated with increased urinary calcium. However, high
+      protein intake also increases intestinal calcium absorption, and meta-analyses suggest
+      dietary protein may have a modest benefit for bone health.
+    nutrient_term:
+      preferred_term: protein
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+
+  - name: Phosphorus and Calcium
+    description: |
+      Low calcium:phosphorus dietary ratios may adversely affect calcium metabolism and
+      bone health. Low calcium intake combined with high phosphorus intake can increase
+      serum PTH concentrations.
+    nutrient_term:
+      preferred_term: phosphorus
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 15
+      - 16
+      - 17
+      - 18
+
+  - name: Oxalate and Calcium
+    description: |
+      Oxalic acid is a potent inhibitor of calcium absorption and is found at high
+      concentrations in spinach and rhubarb. However, adequate calcium intake reduces
+      absorption of dietary oxalate, potentially lowering kidney stone risk.
+    nutrient_term:
+      preferred_term: oxalate
+    interaction_type: REDUCES_ABSORPTION
+    mic_references:
+      - 51
+      - 52
+      - 123
+
+  - name: Magnesium and Calcium
+    description: |
+      Magnesium deficiency can impair PTH secretion and lower the responsiveness of
+      osteoclasts to PTH. Magnesium supplementation may be required to correct hypocalcemia
+      in people with low serum magnesium concentrations.
+    nutrient_term:
+      preferred_term: magnesium
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 1
+
+disease_associations:
+  - name: Osteoporosis Prevention
+    description: |
+      Osteoporosis is a skeletal disorder in which bone mass and strength are compromised,
+      resulting in increased fracture risk. Calcium and vitamin D supplementation can reduce
+      bone loss and fracture risk, particularly in institutionalized older adults. The
+      National Osteoporosis Foundation advises adequate intake of calcium (1,000-1,200 mg/day)
+      and vitamin D (800-1,000 IU/day) for middle-aged and older adults.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Postmenopausal women and men over 50
+    mic_references:
+      - 23
+      - 24
+      - 25
+      - 26
+      - 31
+      - 32
+      - 34
+      - 35
+    evidence:
+      - reference: PMID:22609892
+        supports: SUPPORT
+        snippet: "Meta-analyses report that calcium supplementation reduce bone loss by 0.5-1.2% and the risk of fracture of all types by at least 10% in older people"
+        explanation: Supports calcium's role in reducing bone loss and fracture risk
+
+  - name: Kidney Stones Prevention
+    description: |
+      Paradoxically, higher dietary calcium intake is associated with reduced kidney stone
+      risk. Adequate calcium intake reduces absorption of dietary oxalate, thereby reducing
+      urinary oxalate and calcium oxalate stone formation. However, calcium supplements
+      taken separately from meals may increase stone risk.
+    disease_term:
+      preferred_term: nephrolithiasis
+      term:
+        id: MONDO:0008171
+        label: nephrolithiasis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population consuming adequate dietary calcium with meals
+    mic_references:
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+
+  - name: Preeclampsia Prevention
+    description: |
+      Calcium supplementation during pregnancy significantly reduces the risk of preeclampsia,
+      particularly in women with low dietary calcium intake. The WHO recommends 1.5-2 g/day
+      of calcium from the 20th week of pregnancy for women in areas of low calcium intake.
+      Calcium supplementation also reduces risk of preterm birth.
+    disease_term:
+      preferred_term: preeclampsia
+      term:
+        id: MONDO:0005081
+        label: preeclampsia
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Pregnant women, especially those with low calcium intake
+    mic_references:
+      - 60
+      - 61
+      - 62
+      - 65
+      - 66
+    evidence:
+      - reference: PMID:24960615
+        supports: SUPPORT
+        snippet: "There was also a significant reduction in the risk of pre-eclampsia associated with calcium supplementation (13 trials, 15,730 women: RR 0.45, 95% CI 0.31 to 0.65)"
+        explanation: Cochrane review confirming calcium reduces preeclampsia risk by 55%
+
+  - name: Colorectal Cancer Prevention
+    description: |
+      Prospective cohort studies consistently report an inverse association between higher
+      calcium intakes and colorectal cancer risk. The EPIC study found that the highest
+      versus lowest quintile of dairy calcium intake was associated with a 25% lower CRC
+      risk. However, randomized trials have not shown significant effects of calcium
+      supplementation on CRC incidence.
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: General population; observational evidence is stronger than trial evidence
+    mic_references:
+      - 71
+      - 72
+      - 73
+      - 74
+      - 75
+      - 76
+      - 77
+      - 78
+    evidence:
+      - reference: PMID:24023767
+        supports: SUPPORT
+        snippet: "Dietary calcium was inversely associated with colorectal cancer risk (HR per 200 mg/day 0.95, 95% CI: 0.91-0.99)"
+        explanation: EPIC study shows inverse association between calcium and CRC risk
+
+  - name: Premenstrual Syndrome Treatment
+    description: |
+      Calcium supplementation (1,200 mg/day) is an effective treatment for premenstrual
+      syndrome. A multicenter trial showed a 48% reduction in total symptom scores with
+      calcium compared to 30% with placebo. All four symptom factors (negative affect,
+      water retention, food cravings, and pain) were significantly reduced.
+    disease_term:
+      preferred_term: premenstrual syndrome
+    relationship_type: THERAPEUTIC
+    population_context: Women with moderate-to-severe premenstrual symptoms
+    mic_references:
+      - 100
+      - 101
+      - 102
+      - 103
+      - 104
+      - 105
+      - 111
+    evidence:
+      - reference: PMID:9731851
+        supports: SUPPORT
+        snippet: "By the third treatment cycle calcium effectively resulted in an overall 48% reduction in total symptom scores from baseline compared with a 30% reduction in placebo"
+        explanation: Large RCT demonstrating calcium's efficacy for PMS
+
+  - name: Hypertension
+    description: |
+      The DASH diet, which is rich in low-fat dairy products (calcium) and fruits and
+      vegetables (potassium), significantly lowers blood pressure. Meta-analyses of
+      randomized trials suggest calcium supplementation may produce modest reductions
+      in blood pressure, though effects are small.
+    disease_term:
+      preferred_term: hypertension
+    relationship_type: THERAPEUTIC
+    population_context: Individuals with elevated blood pressure
+    mic_references:
+      - 113
+      - 114
+      - 115
+      - 116
+      - 117
+      - 118
+      - 119
+    evidence:
+      - reference: PMID:9099655
+        supports: SUPPORT
+        snippet: "A diet rich in fruits, vegetables, and low-fat dairy foods and with reduced saturated and total fat can substantially lower blood pressure. This diet offers an additional nutritional approach to preventing and treating hypertension"
+        explanation: The DASH trial showed that a calcium-rich dietary pattern with low-fat dairy substantially lowers blood pressure
+
+  - name: Lead Toxicity
+    description: |
+      Adequate calcium intake may reduce lead absorption and toxicity. Calcium supplementation
+      during pregnancy and lactation has been shown to reduce blood lead levels and lead in
+      breast milk, protecting both mother and infant.
+    disease_term:
+      preferred_term: lead poisoning
+    relationship_type: PROTECTIVE
+    population_context: Pregnant and lactating women at risk of lead exposure
+    mic_references:
+      - 81
+      - 82
+      - 83
+      - 84
+      - 85
+    evidence:
+      - reference: PMID:19165383
+        supports: SUPPORT
+        snippet: "Calcium supplementation was associated with modest reductions in blood lead when administered during pregnancy and may constitute an important secondary prevention effort to reduce circulating maternal lead and, consequently, fetal exposure"
+        explanation: RCT demonstrating calcium supplementation reduces blood lead levels during pregnancy
+      - reference: PMID:12606887
+        supports: SUPPORT
+        snippet: "Among lactating women with relatively high lead burden, calcium supplementation was associated with a modest reduction in blood lead levels"
+        explanation: RCT showing calcium supplements lower blood lead in lactating women with high bone lead stores
+
+  - name: Prostate Cancer Risk
+    description: |
+      Several observational studies have raised concern that high dairy and calcium intakes
+      are associated with modestly increased risk of prostate cancer. A meta-analysis of 32
+      prospective cohort studies found that high intakes of total dairy products, milk, cheese,
+      and dietary calcium were associated with modest increases in total prostate cancer risk.
+      However, nondairy calcium and supplemental calcium were not associated with increased risk.
+      A randomized clinical trial of calcium supplementation (1,200 mg/day for 4 years) found no
+      increase in prostate cancer risk during 10.3 years of follow-up, and some suggestion of
+      a protective effect in the first 6 years.
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Men with high dairy calcium intakes; not seen with supplemental calcium
+    mic_references:
+      - 136
+      - 137
+      - 138
+      - 139
+      - 140
+      - 141
+      - 142
+      - 150
+      - 151
+      - 152
+    evidence:
+      - reference: PMID:25527754
+        supports: PARTIAL
+        snippet: "High intakes of dairy products, milk, low-fat milk, cheese, and total, dietary, and dairy calcium, but not supplemental or nondairy calcium, may increase total prostate cancer risk. The diverging results for types of dairy products and sources of calcium suggest that other components of dairy rather than fat and calcium may increase prostate cancer risk"
+        explanation: Meta-analysis of 32 cohort studies shows dairy calcium modestly increases prostate cancer risk, but supplemental calcium does not, suggesting non-calcium dairy components may be responsible
+      - reference: PMID:15767334
+        supports: REFUTE
+        snippet: "In this randomized controlled clinical trial, there was no increase in prostate cancer risk associated with calcium supplementation and some suggestion of a protective effect"
+        explanation: RCT of 1,200 mg/day calcium for 4 years found no increased prostate cancer risk and possible protection during the treatment period
+
+  - name: Cardiovascular Disease Risk from Supplements
+    description: |
+      Whether calcium supplements increase cardiovascular disease (CVD) risk has been
+      debated. The Auckland Calcium Study found calcium supplementation in postmenopausal
+      women was associated with increased myocardial infarction risk. A re-analysis of the
+      WHI trial also suggested increased cardiovascular risk. However, larger meta-analyses
+      including the Lewis collaborative meta-analysis of 63,563 postmenopausal women found
+      no increased risk for coronary heart disease or all-cause mortality. The National
+      Osteoporosis Foundation and American Society for Preventive Cardiology concluded that
+      calcium intake within tolerable upper limits is safe from a cardiovascular standpoint.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    population_context: Generally healthy adults taking calcium supplements within tolerable upper intake levels
+    mic_references:
+      - 153
+      - 154
+      - 155
+      - 156
+      - 157
+      - 158
+      - 160
+      - 161
+      - 162
+      - 169
+      - 170
+      - 171
+    evidence:
+      - reference: PMID:18198394
+        supports: SUPPORT
+        snippet: "Calcium supplementation in healthy postmenopausal women is associated with upward trends in cardiovascular event rates. This potentially detrimental effect should be balanced against the likely benefits of calcium on bone"
+        explanation: Auckland study found calcium supplementation associated with increased myocardial infarction risk in postmenopausal women
+      - reference: PMID:21505219
+        supports: SUPPORT
+        snippet: "Calcium supplements with or without vitamin D modestly increase the risk of cardiovascular events, especially myocardial infarction, a finding obscured in the WHI CaD Study by the widespread use of personal calcium supplements"
+        explanation: WHI re-analysis and meta-analysis found calcium supplements modestly increase MI and stroke risk
+      - reference: PMID:25042841
+        supports: REFUTE
+        snippet: "current evidence does not support the hypothesis that calcium supplementation with or without vitamin D increases coronary heart disease or all-cause mortality risk in elderly women"
+        explanation: Collaborative meta-analysis of 18 RCTs with 63,563 participants found no increased CHD or mortality risk
+      - reference: PMID:27776363
+        supports: REFUTE
+        snippet: "Calcium intake within tolerable upper intake levels (2000 to 2500 mg/d) is not associated with CVD risk in generally healthy adults"
+        explanation: Updated systematic review and meta-analysis found no association between calcium intake within UL and CVD risk
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "200 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 6-12 months
+      amount: "260 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "700 mg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "1,000 mg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "1,300 mg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "1,300 mg/day"
+      source: Institute of Medicine
+    - population: Adults 19-50 years
+      amount: "1,000 mg/day"
+      source: Institute of Medicine
+    - population: Men 51-70 years
+      amount: "1,000 mg/day"
+      source: Institute of Medicine
+    - population: Women 51-70 years
+      amount: "1,200 mg/day"
+      source: Institute of Medicine
+    - population: Adults 70+ years
+      amount: "1,200 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy 14-18 years
+      amount: "1,300 mg/day"
+      source: Institute of Medicine
+    - population: Pregnancy 19-50 years
+      amount: "1,000 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding 14-18 years
+      amount: "1,300 mg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding 19-50 years
+      amount: "1,000 mg/day"
+      source: Institute of Medicine
+  notes: |
+    Updated recommendations released by the Food and Nutrition Board (FNB) of the Institute
+    of Medicine in 2011 are based on the optimization of bone health. Dairy products provide
+    75% of the calcium in the American diet. Calcium-rich vegetables in the kale family
+    (broccoli, bok choy, cabbage) have bioavailability comparable to dairy, while spinach
+    and rhubarb have poor calcium bioavailability due to high oxalate content.
+
+bioavailability:
+  description: |
+    Dairy products represent rich and absorbable sources of calcium. The calcium in
+    kale-family vegetables (broccoli, bok choy, cabbage, mustard, turnip greens) is as
+    bioavailable as that in milk. However, oxalic acid in spinach and rhubarb and phytic
+    acid in wheat bran and dried beans inhibit calcium absorption. Fermentation (as in
+    bread making) can reduce phytate content.
+  mic_references:
+    - 123
+
+references:
+  - reference: PMID:18083096
+    title: Calcium signaling
+    findings:
+      - statement: Calcium ions impact nearly every aspect of cellular life
+        supporting_text: "Calcium ions (Ca(2+)) impact nearly every aspect of cellular life"
+  - reference: PMID:22609892
+    title: Calcium and bone
+    findings:
+      - statement: Calcium supplementation reduces bone loss and fracture risk
+        supporting_text: "Meta-analyses report that calcium supplementation reduce bone loss by 0.5-1.2% and the risk of fracture of all types by at least 10% in older people"
+  - reference: PMID:24960615
+    title: Calcium supplementation during pregnancy for preventing hypertensive disorders
+    findings:
+      - statement: Calcium supplementation significantly reduces preeclampsia risk
+        supporting_text: "There was also a significant reduction in the risk of pre-eclampsia associated with calcium supplementation"
+  - reference: PMID:24023767
+    title: Consumption of dairy products and colorectal cancer in EPIC
+    findings:
+      - statement: Dietary calcium inversely associated with colorectal cancer risk
+        supporting_text: "Dietary calcium was inversely associated with colorectal cancer risk (HR per 200 mg/day 0.95, 95% CI: 0.91-0.99)"
+  - reference: PMID:9731851
+    title: Calcium carbonate and premenstrual syndrome
+    findings:
+      - statement: Calcium supplementation is effective for PMS treatment
+        supporting_text: "By the third treatment cycle calcium effectively resulted in an overall 48% reduction in total symptom scores"
+  - reference: PMID:25527754
+    title: Dairy products, calcium, and prostate cancer risk - a systematic review and meta-analysis of cohort studies
+    findings:
+      - statement: High dairy calcium but not supplemental calcium associated with increased prostate cancer risk
+        supporting_text: "High intakes of dairy products, milk, low-fat milk, cheese, and total, dietary, and dairy calcium, but not supplemental or nondairy calcium, may increase total prostate cancer risk"
+  - reference: PMID:15767334
+    title: Risk of prostate cancer in a randomized clinical trial of calcium supplementation
+    findings:
+      - statement: Calcium supplementation did not increase prostate cancer risk in RCT
+        supporting_text: "In this randomized controlled clinical trial, there was no increase in prostate cancer risk associated with calcium supplementation and some suggestion of a protective effect"
+  - reference: PMID:18198394
+    title: Vascular events in healthy older women receiving calcium supplementation
+    findings:
+      - statement: Auckland study found calcium supplements associated with increased cardiovascular events
+        supporting_text: "Calcium supplementation in healthy postmenopausal women is associated with upward trends in cardiovascular event rates"
+  - reference: PMID:21505219
+    title: Calcium supplements with or without vitamin D and risk of cardiovascular events - reanalysis of the WHI
+    findings:
+      - statement: WHI re-analysis suggests calcium supplements increase cardiovascular events
+        supporting_text: "Calcium supplements with or without vitamin D modestly increase the risk of cardiovascular events, especially myocardial infarction"
+  - reference: PMID:25042841
+    title: The effects of calcium supplementation on verified coronary heart disease hospitalization and death in postmenopausal women
+    findings:
+      - statement: Meta-analysis of 18 RCTs found no increased CHD or mortality risk from calcium supplements
+        supporting_text: "current evidence does not support the hypothesis that calcium supplementation with or without vitamin D increases coronary heart disease or all-cause mortality risk in elderly women"
+  - reference: PMID:27776363
+    title: Calcium Intake and Cardiovascular Disease Risk - An Updated Systematic Review and Meta-analysis
+    findings:
+      - statement: Calcium within tolerable upper intake levels not associated with CVD risk
+        supporting_text: "Calcium intake within tolerable upper intake levels (2000 to 2500 mg/d) is not associated with CVD risk in generally healthy adults"
+  - reference: PMID:17507729
+    title: Calcium supplementation in clinical practice - a review of forms, doses, and indications
+    findings:
+      - statement: Calcium carbonate and citrate are the most common supplement forms with different absorption characteristics
+        supporting_text: "Calcium carbonate, the most cost-effective form, should be taken with a meal to ensure optimal absorption. Calcium citrate can be taken without food and is the supplement of choice for individuals with achlorhydria"
+  - reference: PMID:19165383
+    title: Effect of calcium supplementation on blood lead levels in pregnancy
+    findings:
+      - statement: Calcium supplementation during pregnancy reduces maternal blood lead levels
+        supporting_text: "Calcium supplementation was associated with modest reductions in blood lead when administered during pregnancy and may constitute an important secondary prevention effort to reduce circulating maternal lead"
+  - reference: PMID:12606887
+    title: Dietary calcium supplements to lower blood lead levels in lactating women
+    findings:
+      - statement: Calcium supplements reduce blood lead in lactating women with high lead burden
+        supporting_text: "Among lactating women with relatively high lead burden, calcium supplementation was associated with a modest reduction in blood lead levels"
+  - reference: PMID:9099655
+    title: A clinical trial of the effects of dietary patterns on blood pressure (DASH trial)
+    findings:
+      - statement: DASH diet rich in low-fat dairy substantially lowers blood pressure
+        supporting_text: "A diet rich in fruits, vegetables, and low-fat dairy foods and with reduced saturated and total fat can substantially lower blood pressure"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Calcium. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains 177 references.
+
+  Potential safety concerns: High calcium intake from supplements (not food) has been
+  associated in some studies with increased risk of cardiovascular events and prostate
+  cancer, though evidence is mixed and current recommendations remain at 1,000-1,200 mg/day
+  from all sources combined.

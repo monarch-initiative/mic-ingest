@@ -1,0 +1,208 @@
+name: Chlorophyll and Metallo-Chlorophyll Derivatives
+nutrient_term:
+  preferred_term: chlorophyll
+  term:
+    id: CHEBI:28966
+    label: chlorophyll
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/chlorophyll-metallo-chlorophyll-derivatives
+alternate_names:
+  - Chlorophyll a
+  - Chlorophyll b
+  - Sodium copper chlorophyllin
+  - Chlorophyllin
+  - SCC
+description: |
+  Chlorophyll is the pigment that gives plants and algae their green color. Plants use
+  chlorophyll to trap light needed for photosynthesis. The basic structure of chlorophyll
+  is a porphyrin ring similar to heme in hemoglobin, with magnesium as the central atom.
+  Chlorophyll a and chlorophyll b represent about 99% of the chlorophyll species found
+  in edible plants. Sodium copper chlorophyllin (SCC) is a semi-synthetic mixture of
+  water-soluble sodium copper salts derived from chlorophyll, which has been used
+  clinically as an internal deodorant and in wound healing for over 50 years.
+
+functions:
+  - name: Complex formation with carcinogens
+    description: |
+      Chlorophyll and sodium copper chlorophyllin can form tight molecular complexes
+      with certain chemicals known or suspected to cause cancer, including polyaromatic
+      hydrocarbons found in tobacco smoke, some heterocyclic amines found in cooked
+      meat, and aflatoxin-B1. This binding may interfere with gastrointestinal
+      absorption of potential carcinogens.
+    mic_references:
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    evidence:
+      - reference: PMID:19952359
+        supports: SUPPORT
+        snippet: "Chla and CHL treatment each significantly impeded AFB(1) absorption and reduced Cmax and AUCs (plasma and urine) in one or more subjects"
+        explanation: Demonstrates that chlorophyll and chlorophyllin reduce aflatoxin absorption in humans
+
+  - name: Antioxidant activity
+    description: |
+      Sodium copper chlorophyllin can neutralize several physically relevant oxidants
+      in vitro. Chlorophyllin has been shown to scavenge reactive oxygen species
+      including hydroxyl radicals, singlet oxygen, and hydrogen peroxide. The
+      relevance of these findings to humans is not fully established.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 13
+      - 14
+      - 15
+      - 19
+    evidence:
+      - reference: PMID:11767414
+        supports: SUPPORT
+        snippet: "CHL has potent antioxidant ability involving scavenging of various physiologically important ROS"
+        explanation: Demonstrates chlorophyllin's ability to scavenge reactive oxygen species
+
+  - name: Modification of carcinogen metabolism
+    description: |
+      Chlorophyllin may modulate the metabolism of carcinogens by inhibiting
+      cytochrome P450 enzymes involved in pro-carcinogen activation, though
+      this has primarily been demonstrated in cell culture studies.
+    mic_references:
+      - 20
+      - 21
+
+deficiency:
+  name: Chlorophyll deficiency
+  description: |
+    Chlorophyll is not considered an essential nutrient, and no deficiency
+    syndrome has been identified. Dietary chlorophyll intake depends on
+    consumption of green vegetables.
+  notes: |
+    Chlorophyll is not an essential nutrient for humans. The health benefits
+    associated with chlorophyll consumption are likely related to its
+    biological activities rather than prevention of deficiency.
+
+toxicity:
+  name: Chlorophyll toxicity
+  description: |
+    Natural chlorophylls are not known to be toxic, and no toxic effects have been
+    attributed to chlorophyllin despite more than 50 years of clinical use in humans.
+    Minor side effects may include green discoloration of urine or feces, yellow or
+    black discoloration of the tongue, and occasional diarrhea. Safety has not been
+    tested in pregnant or lactating women.
+  mic_references:
+    - 11
+    - 33
+    - 39
+    - 55
+    - 56
+    - 57
+
+food_sources:
+  - name: Spinach
+    food_term:
+      preferred_term: spinach
+      term:
+        id: FOODON:00002269
+        label: spinach food product
+    amount: "23.7 mg"
+    serving_size: "1 cup raw"
+    mic_references:
+      - 49
+
+  - name: Parsley
+    food_term:
+      preferred_term: parsley
+    amount: "19.0 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 49
+
+  - name: Garden cress
+    food_term:
+      preferred_term: garden cress
+    amount: "15.6 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 49
+
+  - name: Green beans
+    food_term:
+      preferred_term: green beans
+    amount: "8.3 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 49
+
+disease_associations:
+  - name: Aflatoxin-associated hepatocellular carcinoma
+    disease_term:
+      preferred_term: hepatocellular carcinoma
+      term:
+        id: MONDO:0007256
+        label: hepatocellular carcinoma
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    population_context: populations with high dietary aflatoxin exposure
+    description: |
+      In a randomized, placebo-controlled trial in a high-risk Chinese population,
+      supplementation with 100 mg SCC three times daily before meals reduced urinary
+      levels of AFB1-N7-guanine (a biomarker of aflatoxin-induced DNA damage) by 55%
+      after 16 weeks. Animal studies have shown that chlorophyllin inhibits
+      aflatoxin-induced liver cancer in trout and rats.
+    mic_references:
+      - 26
+      - 27
+      - 28
+      - 29
+      - 32
+    evidence:
+      - reference: PMID:19952359
+        supports: SUPPORT
+        snippet: "CHL reduced excretion of aflatoxin B(1) (AFB(1))-DNA repair products in Chinese unavoidably exposed to dietary AFB(1)"
+        explanation: Human evidence showing chlorophyllin reduces aflatoxin biomarker damage
+    notes: |
+      It is not yet known whether chlorophyll or chlorophyllin will be useful in
+      cancer prevention for people not exposed to significant levels of dietary
+      aflatoxin (such as most people in the US).
+
+nutrient_interactions:
+  - name: Metal absorption
+    nutrient_term:
+      preferred_term: minerals
+    interaction_type: AFFECTS_METABOLISM
+    description: |
+      Some concern exists that chlorophyllin may bind essential dietary minerals
+      such as iron and reduce their absorption. One human study with sodium iron
+      chlorophyllin found no negative effects on iron status, but more research
+      is needed on potential effects of long-term chlorophyllin supplementation
+      on mineral absorption.
+    mic_references:
+      - 23
+      - 24
+      - 25
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for chlorophyll. Chlorophyllin supplements
+    (100-300 mg/day) have been used in clinical studies. Consuming green vegetables
+    provides natural chlorophyll along with other beneficial nutrients.
+
+references:
+  - reference: PMID:19952359
+    title: Effects of chlorophyll and chlorophyllin on low-dose aflatoxin B(1) pharmacokinetics in human volunteers
+    findings:
+      - statement: Chlorophyll and chlorophyllin reduce aflatoxin absorption in humans
+        supporting_text: "Chla and CHL treatment each significantly impeded AFB(1) absorption and reduced Cmax and AUCs"
+  - reference: PMID:11767414
+    title: Scavenging of reactive oxygen species by chlorophyllin
+    findings:
+      - statement: Chlorophyllin scavenges various reactive oxygen species
+        supporting_text: "CHL has potent antioxidant ability involving scavenging of various physiologically important ROS"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Chlorophyll and Metallo-Chlorophyll Derivatives.
+  The MIC page focuses particularly on sodium copper chlorophyllin (SCC) and its
+  potential role in cancer prevention through binding dietary carcinogens.

@@ -1,0 +1,215 @@
+name: Alcoholic Beverages
+nutrient_term:
+  preferred_term: alcoholic beverages
+  description: Beverages containing ethanol, including beer, wine, and spirits
+category: food_beverage
+source_url: https://lpi.oregonstate.edu/mic/food-beverages/alcoholic-beverages
+alternate_names:
+  - Alcohol
+  - Wine
+  - Beer
+  - Spirits
+description: |
+  Alcoholic beverages contain ethanol and include beer, wine, and distilled spirits.
+  Moderate alcohol consumption is defined as no more than two alcoholic drinks per day
+  for men and no more than one alcoholic drink per day for women. Heavy alcohol consumption
+  is defined as more than four drinks on any day or 14 drinks per week for men, and more
+  than three drinks on any day or seven drinks per week for women.
+
+disease_associations:
+  - name: Moderate Alcohol and Cardiovascular Disease
+    disease_term:
+      preferred_term: coronary heart disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Moderate alcohol consumption is associated with lowered risks of coronary heart
+      disease and ischemic stroke. This may be partly due to effects on HDL cholesterol,
+      fibrinolysis, and platelet aggregation.
+    population_context: adults with moderate consumption
+    evidence:
+      - reference: PMID:21343207
+        supports: SUPPORT
+        snippet: "Light to moderate alcohol consumption is associated with a reduced risk of multiple cardiovascular outcomes."
+        explanation: Systematic review and meta-analysis of 84 studies found pooled adjusted RR of 0.75 for cardiovascular disease mortality and 0.71 for incident coronary heart disease among alcohol drinkers vs non-drinkers.
+    mic_references:
+      - 16
+      - 17
+
+  - name: Moderate Alcohol and All-Cause Mortality
+    disease_term:
+      preferred_term: mortality
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Observational studies have consistently found that moderate alcohol consumption
+      is associated with a decreased risk of cardiovascular and all-cause mortality.
+    population_context: adults with moderate consumption
+    mic_references:
+      - 8
+      - 9
+
+  - name: Moderate Alcohol and Type 2 Diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Evidence from observational studies suggests that moderate alcohol intake may
+      be associated with reduced risk of type 2 diabetes.
+    population_context: adults with moderate consumption
+    mic_references:
+      - 32
+
+  - name: Heavy Alcohol and Breast Cancer
+    disease_term:
+      preferred_term: breast cancer
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Even moderate alcohol consumption may increase the risk of female breast cancer.
+      Risk increases with higher levels of consumption.
+    population_context: women
+    evidence:
+      - reference: PMID:9480365
+        supports: SUPPORT
+        snippet: "Alcohol consumption is associated with a linear increase in breast cancer incidence in women over the range of consumption reported by most women."
+        explanation: Pooled analysis of 6 prospective cohort studies with 322,647 women found a multivariate-adjusted RR of 1.41 for alcohol intakes of 30-60 g/d vs nondrinkers, demonstrating a dose-response relationship between alcohol and breast cancer.
+    mic_references:
+      - 41
+      - 42
+
+  - name: Heavy Alcohol and Liver Disease
+    disease_term:
+      preferred_term: alcoholic liver disease
+      term:
+        id: MONDO:0043693
+        label: alcoholic liver diseases
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption causes damage to the liver and can lead to alcoholic
+      liver disease, including fatty liver, alcoholic hepatitis, and cirrhosis.
+    population_context: heavy drinkers
+    mic_references:
+      - 65
+      - 66
+
+  - name: Heavy Alcohol and Oral Cancers
+    disease_term:
+      preferred_term: oral cavity cancer
+      term:
+        id: MONDO:0005515
+        label: oral cavity cancer
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption is associated with increased risk of many cancers,
+      including cancers of the mouth, pharynx, larynx, and esophagus. The combined
+      use of alcohol and tobacco greatly increases the risk.
+    population_context: heavy drinkers
+    mic_references:
+      - 68
+      - 69
+  - name: Moderate Alcohol and Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Meta-analyses report that light-to-moderate alcohol consumption in older
+      adults is associated with a decreased risk of dementia and Alzheimer's
+      disease compared to abstention. A comprehensive meta-analysis of 143
+      studies found the average risk ratio for dementia associated with moderate
+      social drinking was 0.77. A meta-analysis of 15 prospective studies found
+      light-to-moderate drinkers had a 28% reduced risk of AD (RR 0.72).
+    population_context: Light-to-moderate social drinkers aged 55+ years
+    mic_references:
+      - 93
+      - 96
+      - 97
+      - 99
+    evidence:
+      - reference: PMID:21857787
+        supports: SUPPORT
+        snippet: "the average ratio of risk for cognitive risk (dementia or cognitive impairment/decline) associated with moderate \"social\" (not alcoholic) drinking of alcohol is 0.77, with nondrinkers as the reference group. The benefit of moderate drinking applied to all forms of dementia (dementia unspecified, Alzheimer's disease, and vascular dementia)"
+        explanation: Comprehensive review and meta-analysis of 143 studies showing moderate social drinking associated with 23% reduced risk of dementia including Alzheimer's disease
+      - reference: PMID:19546653
+        supports: SUPPORT
+        snippet: "The pooled relative risks (RRs) of AD, VaD, and Any dementia for light to moderate drinkers compared with nondrinkers were 0.72 (95% CI = 0.61-0.86), 0.75 (95% CI = 0.57-0.98), and 0.74 (95% CI = 0.61-0.91), respectively"
+        explanation: Meta-analysis of 15 prospective studies showing 28% reduced risk of Alzheimer's disease in light-to-moderate drinkers compared to nondrinkers
+  - name: Heavy Alcohol and Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    description: |
+      Heavy alcohol consumption (>3-4 drinks/day) and alcoholism are known
+      to increase the risk of cognitive impairment and dementia. A meta-analysis
+      found widespread and sustained cognitive deficits across 11 domains in
+      alcoholism, with significant impairment persisting for up to one year
+      after detoxification. MRI studies show brain atrophy, a characteristic
+      of both Alzheimer's and alcoholic dementia, is greater in alcohol
+      consumers.
+    population_context: Heavy drinkers and those with alcohol dependence
+    mic_references:
+      - 93
+      - 94
+      - 95
+      - 100
+      - 102
+    evidence:
+      - reference: PMID:22264351
+        supports: SUPPORT
+        snippet: "Findings revealed moderate impairment across 11 cognitive domains during short-term abstinence, with moderate impairment across 10 domains during intermediate term abstinence"
+        explanation: Meta-analysis of 62 studies showing widespread and sustained cognitive deficits across 11 domains in alcoholism, persisting for up to one year of abstinence
+      - reference: PMID:21857787
+        supports: SUPPORT
+        snippet: "heavy drinking was associated with nonsignificantly higher cognitive risk for dementia and cognitive impairment"
+        explanation: Comprehensive review confirming heavy drinking is associated with increased cognitive risk, in contrast to the protective effect of moderate consumption
+
+toxicity:
+  name: Alcohol Safety Concerns
+  description: |
+    Heavy alcohol consumption is associated with increased risks of hypertension,
+    stroke, heart rhythm disturbances, dementia, accidents, injury, violence, and
+    damage to the heart, liver, and pancreas. People who should abstain include:
+    pregnant women, children/adolescents, those with alcoholism or alcohol-related
+    disease, and anyone taking medications with potential adverse interactions.
+  mic_references:
+    - 1
+    - 2
+
+recommendations:
+  notes: |
+    The health risks of moderate alcohol consumption outweigh the health benefits for
+    some people. Those who consume more than minimal amounts of alcohol should make
+    sure they also consume adequate folate by taking a daily multivitamin that provides
+    400 μg of folic acid. Anyone planning to drive, operate heavy machinery, or perform
+    other potentially hazardous activities should not consume alcohol.
+
+references:
+  - reference: PMID:21343207
+    title: "Association of alcohol consumption with selected cardiovascular disease outcomes: a systematic review and meta-analysis"
+  - reference: PMID:9480365
+    title: "Alcohol and breast cancer in women: a pooled analysis of cohort studies"
+
+notes: |
+  There is no recommendation to start drinking alcohol for health benefits if one does
+  not already drink. The potential cardiovascular benefits must be weighed against the
+  risks of alcohol dependence, liver disease, and certain cancers.

@@ -1,0 +1,260 @@
+name: Curcumin
+nutrient_term:
+  preferred_term: curcumin
+  term:
+    id: CHEBI:3962
+    label: curcumin
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/curcumin
+alternate_names:
+  - Diferuloylmethane
+  - Demethoxycurcumin
+  - Bisdemethoxycurcumin
+description: |
+  Curcumin is a biologically active polyphenolic compound found in turmeric, a
+  spice derived from the rhizomes of the plant Curcuma longa Linn. The bright
+  yellow-orange color of turmeric comes mainly from curcuminoids, with curcumin
+  being the principal and most active constituent (approximately 77% of
+  curcuminoids). Turmeric has been used in India for medicinal purposes for
+  centuries. Preclinical studies show curcumin has antioxidant, anti-inflammatory,
+  anticancer, and neuroprotective activities, though human bioavailability is poor.
+
+functions:
+  - name: Antioxidant activity
+    description: |
+      Curcumin can scavenge reactive oxygen and nitrogen species in vitro. It can
+      also induce expression of phase II antioxidant enzymes through activation of
+      the Nrf2 pathway, enhancing cellular glutathione synthesis and adaptation
+      to stress.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 18
+      - 19
+      - 20
+    evidence:
+      - reference: PMID:8720307
+        supports: SUPPORT
+        snippet: "curcumin is the most potent scavenger of superoxide radicals followed by demethoxycurcumin and bisdemethoxycurcumin"
+        explanation: Demonstrates curcumin's free radical scavenging activity
+      - reference: PMID:15451055
+        supports: SUPPORT
+        snippet: "Sustained increases in GSH content are controlled primarily through induction of two genes, Gclc and Gclm, leading to the synthesis of the rate-limiting enzyme for GSH synthesis"
+        explanation: Supports the Nrf2-mediated induction of glutathione synthesis
+
+  - name: Anti-inflammatory activity
+    description: |
+      Curcumin inhibits multiple inflammatory mediators including cytokines,
+      chemokines, and enzymes like cyclooxygenase (COX) and inducible nitric
+      oxide synthase (iNOS). The anti-inflammatory effects result primarily
+      from inhibition of the NF-kB pathway, plus MAPK and JAK/STAT pathways.
+    mic_references:
+      - 28
+      - 29
+      - 30
+
+  - name: Anticancer activity
+    description: |
+      Curcumin exhibits anticancer effects through multiple mechanisms: modulation
+      of biotransformation enzymes that affect procarcinogen activation, induction
+      of cell-cycle arrest and apoptosis, and suppression of tumor invasion and
+      angiogenesis by blocking epithelial-mesenchymal transition.
+    mic_references:
+      - 33
+      - 34
+      - 35
+
+deficiency:
+  name: Curcumin deficiency
+  description: |
+    Curcumin is not considered an essential nutrient, and no deficiency
+    syndrome has been identified. Dietary curcumin intake depends on
+    consumption of turmeric-containing foods.
+  notes: |
+    Curcumin is not essential for human health. Benefits are related to
+    its biological activities rather than prevention of deficiency.
+
+toxicity:
+  name: Curcumin toxicity
+  description: |
+    Turmeric is generally recognized as safe (GRAS) by the FDA. Clinical trials
+    show curcumin supplementation ranging from 0.45 to 3.6 g/day for four months
+    is generally well tolerated. Single doses up to 12 g have been administered
+    safely. Rare adverse effects include gallbladder contractions, diarrhea,
+    and headaches, which are generally not dose-related.
+  mic_references:
+    - 9
+    - 12
+
+food_sources:
+  - name: Turmeric
+    food_term:
+      preferred_term: turmeric
+      term:
+        id: FOODON:00002323
+        label: turmeric food product
+    amount: "2-9% curcuminoids by weight"
+    serving_size: "variable"
+    notes: "Curcumin comprises approximately 77% of curcuminoids in turmeric; curry powders contain variable amounts"
+
+disease_associations:
+  - name: Colorectal cancer
+    disease_term:
+      preferred_term: colorectal cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Phase IIa clinical trials have shown promise for curcumin in colorectal
+      cancer prevention. The local effects in the gastrointestinal tract may
+      be more relevant than systemic effects given curcumin's poor bioavailability.
+    mic_references:
+      - 46
+      - 47
+    notes: "Evidence is preliminary; larger trials needed"
+
+  - name: Type 2 diabetes mellitus
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+      term:
+        id: MONDO:0005148
+        label: type 2 diabetes mellitus
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      One nine-month randomized controlled trial in prediabetic individuals
+      found curcumin prevented progression to type 2 diabetes. Results from
+      other supplement trials have been mixed.
+    mic_references:
+      - 49
+      - 50
+    notes: "Evidence is preliminary; more research needed"
+
+  - name: Rheumatoid arthritis
+    disease_term:
+      preferred_term: rheumatoid arthritis
+      term:
+        id: MONDO:0008383
+        label: rheumatoid arthritis
+    relationship_type: THERAPEUTIC
+    description: |
+      Small clinical trials have suggested curcumin may have anti-inflammatory
+      effects comparable to NSAIDs in rheumatoid arthritis. Larger randomized
+      controlled trials are needed to establish efficacy.
+    mic_references:
+      - 62
+      - 63
+    notes: "Preliminary evidence; larger trials needed"
+
+  - name: Ulcerative colitis
+    disease_term:
+      preferred_term: ulcerative colitis
+      term:
+        id: MONDO:0005101
+        label: ulcerative colitis
+    relationship_type: THERAPEUTIC
+    description: |
+      Curcumin enema formulation has been shown to reduce relapse rates in
+      ulcerative colitis patients. The local gastrointestinal effects may
+      be particularly relevant given curcumin's poor systemic bioavailability.
+    mic_references:
+      - 66
+      - 67
+    notes: "Preliminary evidence; local effects may be key"
+  - name: Alzheimer Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: THERAPEUTIC
+    description: |
+      Curcumin has anti-amyloid and anti-inflammatory properties relevant to
+      Alzheimer's disease pathology. However, clinical trials of oral curcumin in
+      AD patients have not demonstrated cognitive benefit, likely due to poor
+      systemic bioavailability. A 24-week RCT of curcumin (2-4 g/day) in
+      mild-to-moderate AD found no differences in clinical or biomarker efficacy
+      measures. New formulations with improved bioavailability and trials
+      targeting pre-clinical stages are under investigation.
+    population_context: Patients with mild-to-moderate Alzheimer disease; limited by poor oral bioavailability
+    mic_references:
+      - 6
+      - 53
+      - 57
+      - 97
+      - 98
+    evidence:
+      - reference: PMID:23107780
+        supports: NO_EVIDENCE
+        snippet: "We were unable to demonstrate clinical or biochemical evidence of efficacy of Curcumin C3 Complex(®) in AD in this 24-week placebo-controlled trial although preliminary data suggest limited bioavailability of this compound"
+        explanation: 24-week RCT of curcumin (2-4 g/day) in 36 mild-to-moderate AD patients found no clinical or biomarker efficacy, with very low plasma curcumin levels
+      - reference: PMID:26652155
+        supports: PARTIAL
+        snippet: "clinical studies of curcumin have revealed limited effects to date, most likely because of curcumin's relatively low solubility and bioavailability, and because of selection of cohorts with diagnosed AD, in whom there is already major neuropathology"
+        explanation: Review concluding that curcumin has neuroprotective properties in preclinical models but clinical benefit is limited by poor bioavailability; new formulations and targeting earlier disease stages may improve outcomes
+
+drug_interactions:
+  - name: Anticoagulants
+    drug_term:
+      preferred_term: anticoagulant
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Curcumin may increase the risk of bleeding when taken with anticoagulant
+      or antiplatelet medications due to its effects on platelet function.
+    mic_references:
+      - 95
+      - 96
+
+  - name: Chemotherapy agents
+    drug_term:
+      preferred_term: chemotherapy agent
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: HIGH
+    description: |
+      Curcumin may affect the efficacy of certain chemotherapy drugs. Patients
+      undergoing cancer treatment should consult their oncologist before using
+      curcumin supplements.
+    mic_references:
+      - 97
+      - 98
+
+bioavailability:
+  description: |
+    Curcumin taken orally is poorly absorbed and rapidly metabolized and
+    eliminated. Low oral bioavailability is a major limitation for therapeutic
+    applications. Various formulations (nanoparticles, liposomes, phospholipid
+    complexes) have been developed to enhance bioavailability.
+  mic_references:
+    - 4
+    - 13
+    - 14
+    - 17
+
+recommendations:
+  notes: |
+    No recommended dietary allowance exists for curcumin. Supplemental doses
+    used in clinical trials range from 0.45 to 12 g/day. The poor bioavailability
+    of curcumin limits its therapeutic potential, and enhanced formulations
+    may be necessary for systemic effects. Curcumin supplements may interact
+    with various medications.
+
+references:
+  - reference: PMID:8720307
+    title: Free radical scavenging activity of curcuminoids
+    findings:
+      - statement: Curcumin is the most potent scavenger of superoxide radicals among curcuminoids
+        supporting_text: "curcumin is the most potent scavenger of superoxide radicals followed by demethoxycurcumin and bisdemethoxycurcumin"
+  - reference: PMID:15451055
+    title: Human glutamate cysteine ligase gene regulation through the electrophile response element
+    findings:
+      - statement: GSH synthesis is regulated through Nrf2-mediated gene induction
+        supporting_text: "Sustained increases in GSH content are controlled primarily through induction of two genes, Gclc and Gclm"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Curcumin. The poor oral bioavailability of curcumin
+  is a key limitation for therapeutic applications. Evidence for disease prevention
+  and treatment benefits remains preliminary and requires larger clinical trials.

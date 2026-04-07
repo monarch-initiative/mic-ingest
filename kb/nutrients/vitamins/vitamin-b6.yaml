@@ -1,0 +1,496 @@
+name: Vitamin B6
+nutrient_term:
+  preferred_term: vitamin B6
+  term:
+    id: CHEBI:27306
+    label: vitamin B6
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/vitamin-B6
+alternate_names:
+  - Pyridoxine
+  - Pyridoxal
+  - Pyridoxamine
+description: |
+  Vitamin B6 is a water-soluble vitamin that exists in three major forms:
+  pyridoxine, pyridoxal, and pyridoxamine. The active coenzyme form, pyridoxal
+  5'-phosphate (PLP), is essential to over 100 enzymes mostly involved in protein
+  metabolism. PLP-dependent enzymes are involved in amino acid biosynthesis,
+  hemoglobin synthesis, neurotransmitter production, and glucose metabolism.
+  Vitamin B6 must be obtained from the diet as humans cannot synthesize it.
+
+functions:
+  - name: Coenzyme for Over 100 Enzymes
+    description: |
+      PLP plays a vital role in the function of over 100 enzymes that catalyze
+      essential chemical reactions in the human body. PLP-dependent enzymes
+      have been classified into five structural classes (Fold Types I-V) and
+      are involved in amino acid metabolism, hemoglobin biosynthesis, and
+      fatty acid metabolism.
+    mic_references:
+      - 4
+      - 5
+    evidence:
+      - reference: PMID:15189147
+        supports: SUPPORT
+        snippet: "Pyridoxal phosphate (PLP)-dependent enzymes are unrivaled in the diversity of reactions that they catalyze"
+        explanation: Confirms the diverse roles of PLP-dependent enzymes
+
+  - name: Amino Acid Metabolism
+    description: |
+      PLP is required for transamination reactions that enable amino acid
+      synthesis and interconversion. It is also essential for gluconeogenesis,
+      the generation of glucose from amino acids.
+    mic_references:
+      - 4
+      - 6
+
+  - name: Hemoglobin Synthesis
+    description: |
+      PLP is required for the synthesis of heme, the iron-containing component
+      of hemoglobin. The enzyme delta-aminolevulinic acid synthase, which
+      catalyzes the first step of heme synthesis, requires PLP as a cofactor.
+    mic_references:
+      - 1
+      - 8
+    evidence:
+      - reference: PMID:6296088
+        supports: SUPPORT
+        snippet: "hemoglobins have been prepared which are substituted with pyridoxal 5'-phosphate or pyridoxal 5'-deoxymethylenephosphonate at both NH2-terminal amino groups of either the alpha or the beta chains."
+        explanation: Demonstrates the specific binding sites for PLP at the hemoglobin alpha and beta chain terminals, confirming the direct interaction of PLP with hemoglobin
+
+  - name: Neurotransmitter Synthesis
+    description: |
+      PLP is a cofactor for enzymes involved in the synthesis of neurotransmitters
+      including serotonin, dopamine, norepinephrine, and gamma-aminobutyric acid
+      (GABA). This explains the neurological symptoms of vitamin B6 deficiency.
+    mic_references:
+      - 1
+      - 7
+    evidence:
+      - reference: PMID:16763894
+        supports: SUPPORT
+        snippet: "Pyridoxal phosphate is the cofactor for over 100 enzyme-catalysed reactions in the body, including many involved in the synthesis or catabolism of neurotransmitters. Inadequate levels of pyridoxal phosphate in the brain cause neurological dysfunction, particularly epilepsy."
+        explanation: Confirms PLP role in neurotransmitter synthesis and catabolism and links inadequate PLP levels to neurological dysfunction
+
+  - name: Tryptophan Metabolism
+    description: |
+      PLP is required for the conversion of tryptophan to niacin (via the
+      kynurenine pathway). Vitamin B6 deficiency can impair this conversion
+      and affect NAD synthesis.
+    mic_references:
+      - 9
+      - 10
+    evidence:
+      - reference: PMID:23902960
+        supports: SUPPORT
+        snippet: "Vitamin B-6 deficiency is associated with impaired tryptophan metabolism because of the coenzyme role of pyridoxal 5'-phosphate (PLP) for kynureninase and kynurenine aminotransferase."
+        explanation: Confirms the role of PLP in the kynurenine pathway of tryptophan metabolism and that B6 deficiency impairs this pathway
+
+deficiency:
+  name: Vitamin B6 Deficiency
+  description: |
+    Severe vitamin B6 deficiency is uncommon. Symptoms include neurological
+    manifestations such as irritability, depression, confusion, and seizures.
+    Other symptoms include inflammation of the tongue, mouth sores, and skin
+    ulcers at the corners of the mouth. Plasma PLP concentrations below 30 nmol/L
+    are considered inadequate, and below 20 nmol/L is considered deficient.
+  sequelae:
+    - name: Peripheral Neuropathy
+      phenotype_term:
+        preferred_term: peripheral neuropathy
+        term:
+          id: HP:0009830
+          label: Peripheral neuropathy
+      frequency: OCCASIONAL
+      context: Neurological symptom of deficiency
+      mic_references:
+        - 12
+
+    - name: Seizures
+      phenotype_term:
+        preferred_term: seizures
+        term:
+          id: HP:0001250
+          label: Seizure
+      frequency: OCCASIONAL
+      context: Observed in infants with severe deficiency; also seen with pyridoxine-dependent epilepsy
+      mic_references:
+        - 7
+
+    - name: Depression
+      phenotype_term:
+        preferred_term: depression
+        term:
+          id: HP:0000716
+          label: Depression
+      frequency: OCCASIONAL
+      context: Neurological symptom in severe deficiency
+      mic_references:
+        - 12
+
+    - name: Glossitis
+      phenotype_term:
+        preferred_term: glossitis
+        term:
+          id: HP:0000206
+          label: Glossitis
+      frequency: OCCASIONAL
+      context: Inflammation of the tongue
+      mic_references:
+        - 12
+
+  at_risk_groups:
+    - name: Chronic Alcoholics
+      description: |
+        Alcoholics are most at risk of vitamin B6 deficiency due to low dietary
+        intakes and impaired metabolism of the vitamin.
+      mic_references:
+        - 7
+
+    - name: Elderly Adults
+      description: |
+        Older adults may have lower vitamin B6 status due to decreased absorption
+        or increased requirements. The RDA is higher for adults over 50 years.
+      mic_references:
+        - 16
+
+    - name: Users of Oral Contraceptives
+      description: |
+        Women using oral contraceptives may have lower plasma PLP levels, suggesting
+        that estrogen may interfere with vitamin B6 metabolism.
+      mic_references:
+        - 121
+
+  evidence:
+    - reference: PMID:2021134
+      supports: SUPPORT
+      snippet: "Vitamin B-6 depletion significantly decreased percentage and total number of lymphocytes, mitogenic responses of peripheral blood lymphocytes to T- and B-cell mitogens, and interleukin 2 production."
+      explanation: Demonstrates that vitamin B6 deficiency impairs cell-mediated immunity in healthy elderly adults, consistent with the immune-related consequences of deficiency
+  mic_references:
+    - 7
+    - 12
+    - 13
+    - 14
+
+disease_associations:
+  - name: Cardiovascular Disease (Homocysteine)
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      High circulating homocysteine levels are associated with increased
+      cardiovascular disease risk. B vitamin supplementation effectively
+      reduces homocysteine, but trials have not shown consistent reduction
+      in cardiovascular events.
+    mic_references:
+      - 20
+      - 21
+    evidence:
+      - reference: PMID:9459468
+        supports: SUPPORT
+        snippet: "These results suggest that intake of folate and vitamin B6 above the current recommended dietary allowance may be important in the primary prevention of CHD among women."
+        explanation: Large prospective cohort study of 80,082 women showing that higher vitamin B6 intake is associated with significantly lower coronary heart disease risk
+      - reference: PMID:7586248
+        supports: SUPPORT
+        snippet: "Low pyridoxal 5'-phosphate (< 20 nmol/L) was seen in 10% of patients but in only 2% of control subjects (P < .01), yielding an odds ratio of coronary disease adjusted for all risk factors, including high homocysteine, of 4.3 (P < .05)."
+        explanation: Demonstrates that low PLP is an independent risk factor for coronary artery disease, beyond its association with homocysteine
+
+  - name: Morning Sickness in Pregnancy
+    disease_term:
+      preferred_term: nausea and vomiting of pregnancy
+    relationship_type: THERAPEUTIC
+    population_context: Pregnant women with morning sickness
+    description: |
+      Randomized controlled trials support the use of vitamin B6 to treat
+      nausea and vomiting during pregnancy. The American College of Obstetricians
+      and Gynecologists recommends vitamin B6 as first-line treatment.
+    mic_references:
+      - 88
+      - 89
+      - 90
+    evidence:
+      - reference: PMID:2047064
+        supports: SUPPORT
+        snippet: "At the completion of 3 days of therapy, only eight of 31 patients in the vitamin B6 group had any vomiting, compared with 15 of 28 patients in the placebo group (P less than .05)."
+        explanation: Randomized double-blind placebo-controlled trial demonstrating that vitamin B6 (pyridoxine 25 mg every 8 hours) significantly reduces vomiting in pregnancy
+
+  - name: Pyridoxine-Dependent Epilepsy
+    disease_term:
+      preferred_term: pyridoxine-dependent epilepsy
+      term:
+        id: MONDO:0009945
+        label: pyridoxine-dependent epilepsy
+    relationship_type: THERAPEUTIC
+    population_context: Infants with rare inborn errors of vitamin B6 metabolism
+    description: |
+      Pharmacologic doses of vitamin B6 are used to treat seizures in rare
+      inborn errors of vitamin B6 metabolism, including pyridoxine-dependent
+      epilepsy and pyridoxamine 5'-phosphate oxidase deficiency.
+    mic_references:
+      - 7
+      - 85
+      - 86
+
+  - name: Cognitive Decline and Alzheimer's Disease
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Elevated homocysteine is a recognized modifiable risk factor for cognitive
+      decline and Alzheimer's disease in older adults. B-vitamin supplementation
+      (folic acid, B6, B12) can slow brain atrophy in high-risk individuals,
+      although large-scale trials have not established clear cognitive benefits.
+    mic_references:
+      - 60
+      - 70
+    evidence:
+      - reference: PMID:23690582
+        supports: SUPPORT
+        snippet: "B-vitamin treatment reduces, by as much as seven fold, the cerebral atrophy in those gray matter (GM) regions specifically vulnerable to the AD process, including the medial temporal lobe."
+        explanation: Randomized controlled trial showing B-vitamin supplementation (including vitamin B6) slows gray matter atrophy in brain regions vulnerable to Alzheimer's disease
+
+  - name: Colorectal Cancer
+    disease_term:
+      preferred_term: colorectal cancer
+      term:
+        id: MONDO:0005575
+        label: colorectal cancer
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Observational studies consistently show that higher vitamin B6 intake and
+      higher blood PLP levels are associated with lower risk of colorectal cancer.
+      However, randomized controlled trials of B-vitamin supplementation have not
+      confirmed a protective effect.
+    mic_references:
+      - 79
+      - 80
+      - 81
+    evidence:
+      - reference: PMID:20233826
+        supports: SUPPORT
+        snippet: "The pooled RRs of colorectal cancer for the highest vs lowest category of vitamin B(6) intake and blood PLP levels were 0.90 (95% CI, 0.75-1.07) and 0.52 (95% CI, 0.38-0.71), respectively."
+        explanation: Meta-analysis showing blood PLP levels are inversely associated with colorectal cancer risk, with a 49% reduction per 100-pmol/mL increase in PLP
+      - reference: PMID:28376200
+        supports: SUPPORT
+        snippet: "Epidemiological evidence supports the potential of vitamin B6 as a cancer risk reduction agent and the role of PLP as a cancer screening biomarker, especially for gastrointestinal tumors."
+        explanation: Comprehensive meta-analysis of 121 observational studies confirming the inverse association between dietary vitamin B6 and cancer risk, especially gastrointestinal cancers
+
+  - name: Kidney Stones
+    disease_term:
+      preferred_term: nephrolithiasis
+      term:
+        id: MONDO:0008171
+        label: nephrolithiasis
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Women with no prior history of kidney stones
+    description: |
+      A large prospective study in women found that high vitamin B6 intake was
+      associated with reduced risk of kidney stone formation. However, studies in
+      men have not found a similar association, and no randomized controlled trials
+      have been conducted.
+    mic_references:
+      - 89
+      - 90
+      - 91
+    evidence:
+      - reference: PMID:10203369
+        supports: SUPPORT
+        snippet: "A high intake of vitamin B6 was inversely associated with risk of stone formation. After adjusting for other dietary factors, the relative risk of incident stone formation for women in the highest category of B6 intake (> or =40 mg/d) compared with the lowest category (<3 mg/d) was 0.66 (95% confidence interval, 0.44 to 0.98)."
+        explanation: Prospective study of 85,557 women showing that high vitamin B6 intake is associated with a 34% lower risk of kidney stone formation
+
+  - name: Depression
+    disease_term:
+      preferred_term: depressive disorder
+      term:
+        id: MONDO:0002050
+        label: depressive disorder
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    description: |
+      Cross-sectional and prospective studies have linked low vitamin B6 status
+      and low dietary intake with increased risk of depression, particularly in
+      women. Meta-analyses of observational studies support an inverse association
+      between dietary vitamin B6 intake and depression risk.
+    mic_references:
+      - 73
+      - 76
+    evidence:
+      - reference: PMID:33912967
+        supports: SUPPORT
+        snippet: "the intake of dietary vitamin B1, B2, B6, and B12 may be inversely associated with the risk of depression; the inverse associations observed between depression and intake of dietary vitamin B2, B6, and B12 were significant in females, but not in males."
+        explanation: Systematic review and meta-analysis of observational studies showing that higher dietary vitamin B6 intake is associated with a 19% lower risk of depression, particularly in women
+
+food_sources:
+  - name: Fortified Breakfast Cereal
+    food_term:
+      preferred_term: fortified cereal
+    amount: "0.5-2.5 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 117
+
+  - name: Turkey (light meat, cooked)
+    food_term:
+      preferred_term: turkey
+    amount: "0.70-0.81 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 117
+
+  - name: Salmon (wild, cooked)
+    food_term:
+      preferred_term: salmon
+    amount: "0.47-0.80 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 117
+
+  - name: Potato (baked with skin)
+    food_term:
+      preferred_term: potato
+    amount: "0.61 mg"
+    serving_size: "1 medium"
+    mic_references:
+      - 117
+
+  - name: Chicken (light meat, cooked)
+    food_term:
+      preferred_term: chicken
+    amount: "0.51 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 117
+
+  - name: Banana
+    food_term:
+      preferred_term: banana
+    amount: "0.43 mg"
+    serving_size: "1 medium"
+    mic_references:
+      - 117
+
+drug_interactions:
+  - name: Isoniazid (Anti-TB Drug)
+    drug_term:
+      preferred_term: isoniazid
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: MODERATE
+    description: |
+      Isoniazid and other anti-tuberculosis medications can form complexes
+      with vitamin B6 and limit its bioavailability, creating functional
+      deficiency.
+    mic_references:
+      - 7
+
+  - name: Oral Contraceptives
+    drug_term:
+      preferred_term: oral contraceptive
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: LOW
+    description: |
+      The estrogen content of oral contraceptives may interfere with vitamin B6
+      metabolism, leading to lower plasma PLP levels.
+    mic_references:
+      - 121
+
+  - name: Levodopa
+    drug_term:
+      preferred_term: levodopa
+    interaction_type: ANTAGONISTIC
+    clinical_significance: MODERATE
+    description: |
+      Anti-parkinsonian drugs like Levodopa can form complexes with vitamin B6.
+      Conversely, high doses of vitamin B6 can decrease the efficacy of L-Dopa.
+    mic_references:
+      - 6
+      - 125
+
+  - name: NSAIDs
+    drug_term:
+      preferred_term: celecoxib
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: LOW
+    description: |
+      Long-term use of nonsteroidal anti-inflammatory drugs may impair
+      vitamin B6 metabolism.
+    mic_references:
+      - 127
+
+toxicity:
+  name: Vitamin B6 Toxicity (Sensory Neuropathy)
+  description: |
+    Long-term supplementation with very high doses of pyridoxine (typically
+    over 1,000 mg/day) may result in painful sensory ataxic neuropathy, which
+    can be irreversible. Symptoms include pain and numbness of extremities
+    and difficulty walking. The tolerable upper intake level (UL) for adults
+    is 100 mg/day.
+  adverse_effects:
+    - name: Sensory Ataxic Neuropathy
+      description: |
+        Painful neurological symptoms including numbness and tingling of
+        extremities, typically from doses exceeding 1,000 mg/day over
+        extended periods.
+      severity: moderate
+  mic_references:
+    - 122
+    - 123
+    - 124
+    - 125
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "0.1 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "0.3 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "0.5 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 4-8 years
+      amount: "0.6 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Children 9-13 years
+      amount: "1.0 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 14-18 years
+      amount: "1.3 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 14-18 years
+      amount: "1.2 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Adults 19-50 years
+      amount: "1.3 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Males 51+ years
+      amount: "1.7 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Females 51+ years
+      amount: "1.5 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Pregnancy
+      amount: "1.9 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+    - population: Lactation
+      amount: "2.0 mg/day"
+      source: Food and Nutrition Board, Institute of Medicine
+
+notes: |
+  Vitamin B6 is found in a variety of foods including fish, poultry, nuts,
+  legumes, potatoes, and bananas. Many plant foods contain pyridoxine glucoside,
+  which is only about half as bioavailable as other forms. In the US, average
+  dietary intakes are 2.6 mg/day for adult males and 1.7 mg/day for adult
+  females, which are above the RDA.

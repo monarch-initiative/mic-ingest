@@ -1,0 +1,601 @@
+name: Copper
+nutrient_term:
+  preferred_term: copper
+  term:
+    id: CHEBI:28694
+    label: copper atom
+category: mineral
+source_url: https://lpi.oregonstate.edu/mic/minerals/copper
+alternate_names:
+  - Cu
+description: |
+  Copper is an essential cofactor for oxidase enzymes that catalyze oxidation-reduction
+  reactions in various metabolic pathways. These copper-dependent enzymes (cuproenzymes)
+  participate in energy (ATP) production, iron metabolism, connective tissue formation,
+  melanin biosynthesis, and neurotransmission. Dietary copper insufficiency is relatively
+  uncommon, but copper depletion may occur due to intestinal defects, high supplemental
+  zinc intake, or in genetic conditions such as Menkes disease. Copper imbalance increases
+  risks of bone demineralization, fatty liver disease, and cardiovascular and neurodegenerative
+  diseases.
+
+functions:
+  - name: Energy Production
+    description: |
+      Copper is a required cofactor for cytochrome c oxidase, the terminal enzyme in the
+      mitochondrial electron transport chain. This enzyme catalyzes the reduction of
+      molecular oxygen to water, generating an electrical gradient used to synthesize ATP.
+    biological_processes:
+      - preferred_term: oxidative phosphorylation
+        term:
+          id: GO:0006119
+          label: oxidative phosphorylation
+    mic_references:
+      - 1
+      - 8
+
+  - name: Iron Metabolism
+    description: |
+      Several cuproenzymes, including ceruloplasmin and hephaestin, are required for iron
+      metabolism. Ceruloplasmin (ferroxidase I) oxidizes ferrous iron (Fe2+) to ferric iron
+      (Fe3+), allowing iron to bind to transferrin for transport. Copper deficiency can
+      lead to secondary iron deficiency and anemia.
+    biological_processes:
+      - preferred_term: iron ion homeostasis
+        term:
+          id: GO:0006879
+          label: intracellular iron ion homeostasis
+    mic_references:
+      - 4
+      - 9
+      - 10
+    evidence:
+      - reference: PMID:22332037
+        supports: SUPPORT
+        snippet: "Limitation in available copper appears to limit function of the MCO group exhibited as impaired iron flux due to the copper requirement of MCO for their ferroxidase activity"
+        explanation: Demonstrates that copper limitation impairs ferroxidase activity of multicopper oxidases, leading to impaired iron flux
+      - reference: PMID:23807651
+        supports: SUPPORT
+        snippet: "Each of these enzymes has a high specificity towards iron with the resulting ferroxidase activity being associated with ferroportin, the only known iron exporter protein in humans"
+        explanation: Confirms that copper-dependent multicopper oxidases have ferroxidase activity essential for iron export via ferroportin
+
+  - name: Connective Tissue Formation
+    description: |
+      Lysyl oxidase is a copper-dependent enzyme required for the cross-linking of collagen
+      and elastin, which are essential for the formation and maintenance of connective tissue.
+      Copper deficiency leads to defective connective tissue and bone abnormalities.
+    biological_processes:
+      - preferred_term: collagen fibril organization
+        term:
+          id: GO:0030199
+          label: collagen fibril organization
+    mic_references:
+      - 2
+      - 8
+    evidence:
+      - reference: PMID:34112357
+        supports: SUPPORT
+        snippet: "Disruption of copper homeostasis may underlie the development of ischemic heart disease, and connective tissue and neurodegenerative disorders"
+        explanation: Review confirms that copper homeostasis disruption contributes to connective tissue disorders
+
+  - name: Central Nervous System Function
+    description: |
+      Copper is required for the function of enzymes involved in neurotransmitter synthesis.
+      Dopamine beta-hydroxylase catalyzes the conversion of dopamine to norepinephrine, and
+      peptidylglycine alpha-amidating monooxygenase is essential for processing neuropeptides.
+    biological_processes:
+      - preferred_term: neurotransmitter metabolic process
+    mic_references:
+      - 1
+      - 2
+
+  - name: Melanin Biosynthesis
+    description: |
+      Tyrosinase is a copper-containing enzyme that catalyzes the first step in the
+      formation of melanin, the pigment responsible for the color of hair, skin, and eyes.
+      Copper deficiency can lead to depigmentation.
+    biological_processes:
+      - preferred_term: melanin biosynthetic process
+        term:
+          id: GO:0042438
+          label: melanin biosynthetic process
+    mic_references:
+      - 1
+      - 2
+
+  - name: Antioxidant Function
+    description: |
+      Copper/zinc superoxide dismutase (SOD1) is one of the body's primary antioxidant
+      enzymes. It catalyzes the conversion of superoxide radicals to hydrogen peroxide,
+      which can then be reduced to water by other antioxidant enzymes.
+    biological_processes:
+      - preferred_term: response to oxidative stress
+        term:
+          id: GO:0006979
+          label: response to oxidative stress
+    mic_references:
+      - 16
+    evidence:
+      - reference: PMID:8615367
+        supports: SUPPORT
+        snippet: "Its potential toxicology is also addressed"
+        explanation: Discusses copper's role in enzymes including antioxidant functions
+      - reference: PMID:22389498
+        supports: SUPPORT
+        snippet: "copper is also potentially toxic due in part to its ability to generate reactive oxygen species"
+        explanation: Confirms that copper participates in oxidative chemistry, supporting the need for copper-dependent antioxidant enzymes like SOD1
+
+deficiency:
+  name: Copper Deficiency
+  description: |
+    Clinically evident dietary copper deficiency is relatively uncommon. Serum copper and
+    ceruloplasmin levels may fall to 30% of normal in severe deficiency. One of the most
+    common clinical signs is an anemia that is unresponsive to iron therapy but is corrected
+    by copper supplementation. Copper deficiency may also lead to neutropenia, increasing
+    susceptibility to infection. Other features include osteoporosis and other bone
+    abnormalities, impaired growth, depigmentation, and neurological pathologies.
+  sequelae:
+    - name: Anemia
+      phenotype_term:
+        preferred_term: anemia
+        term:
+          id: HP:0001903
+          label: Anemia
+      frequency: FREQUENT
+      context: Unresponsive to iron therapy; corrected by copper supplementation
+      mic_references:
+        - 4
+        - 33
+
+    - name: Neutropenia
+      phenotype_term:
+        preferred_term: neutropenia
+        term:
+          id: HP:0001875
+          label: Decreased total neutrophil count
+      frequency: FREQUENT
+      context: Increases susceptibility to infection
+      mic_references:
+        - 37
+        - 38
+
+    - name: Osteoporosis
+      phenotype_term:
+        preferred_term: osteoporosis
+        term:
+          id: HP:0000939
+          label: Osteoporosis
+      frequency: OCCASIONAL
+      context: Especially in low-birth-weight infants and young children
+      mic_references:
+        - 2
+        - 8
+
+  at_risk_groups:
+    - name: Infants with Menkes disease
+      description: |
+        Genetic disorder with severely impaired intestinal copper absorption
+        leading to systemic copper deficiency
+      mic_references:
+        - 50
+        - 51
+
+    - name: People taking high-dose zinc supplements
+      description: |
+        High zinc intake can interfere with copper absorption by inducing
+        metallothionein in intestinal cells
+      mic_references:
+        - 61
+        - 62
+
+    - name: Patients with gastrointestinal surgery
+      description: |
+        Gastric bypass surgery and other GI procedures may impair copper absorption
+      mic_references:
+        - 44
+
+  mic_references:
+    - 2
+    - 8
+    - 33
+
+  evidence:
+    - reference: PMID:9587135
+      supports: SUPPORT
+      snippet: "The most frequent clinical manifestations of copper deficiency are anemia, neutropenia, and bone abnormalities"
+      explanation: Confirms key symptoms of copper deficiency
+    - reference: PMID:31209935
+      supports: SUPPORT
+      snippet: "Clinical manifestations are nonspecific but affect all organs and systems, particularly the hematologic (anemia) and the neurologic (myeloneuropathy) systems"
+      explanation: Comprehensive review confirming copper deficiency affects hematologic and neurologic systems
+    - reference: PMID:22332037
+      supports: SUPPORT
+      snippet: "incidence of new cases of secondary copper deficiency is rising due to complications of gastric bypass surgery and high zinc exposure"
+      explanation: Confirms that secondary copper deficiency is increasingly recognized, particularly from gastric bypass and zinc exposure
+
+toxicity:
+  name: Copper Toxicity
+  description: |
+    Copper toxicity is rare in the general population. Acute copper poisoning can occur
+    from storing beverages in copper-containing containers or from contaminated water.
+    Symptoms include abdominal pain, nausea, vomiting, and diarrhea. Severe cases can
+    cause liver damage, kidney failure, coma, and death. Chronic exposure to lower doses
+    generally does not cause liver damage at intakes up to 10 mg/day in healthy adults.
+    The Tolerable Upper Intake Level (UL) for adults is 10 mg/day. Individuals with
+    Wilson disease or other genetic disorders of copper metabolism may experience
+    toxicity at significantly lower intake levels.
+  adverse_effects:
+    - name: Liver damage
+      description: |
+        Severe copper toxicity can cause liver damage. Wilson disease causes toxic
+        copper accumulation initially in the liver.
+      severity: severe
+  mic_references:
+    - 24
+    - 171
+    - 172
+    - 173
+    - 174
+
+food_sources:
+  - name: Beef liver
+    food_term:
+      preferred_term: beef liver
+    amount: "4,133 mcg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 166
+
+  - name: Oysters
+    food_term:
+      preferred_term: oysters
+    amount: "2,400 mcg"
+    serving_size: "6 medium sized"
+    mic_references:
+      - 166
+
+  - name: Alaska king crab meat
+    food_term:
+      preferred_term: crab
+    amount: "1,000 mcg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 166
+
+  - name: Cashews
+    food_term:
+      preferred_term: cashews
+    amount: "624 mcg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 166
+
+  - name: Sunflower seed kernels
+    food_term:
+      preferred_term: sunflower seeds
+    amount: "519 mcg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 166
+
+  - name: Hazelnuts
+    food_term:
+      preferred_term: hazelnuts
+    amount: "496 mcg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 166
+
+drug_interactions:
+  - name: Penicillamine and Copper
+    description: |
+      Penicillamine is a copper chelator used to treat Wilson disease by promoting
+      urinary copper excretion. It may cause copper deficiency in non-Wilson disease
+      patients if used long-term.
+    drug_term:
+      preferred_term: penicillamine
+    interaction_type: INCREASES_EXCRETION
+    clinical_significance: HIGH
+    mic_references:
+      - 167
+
+  - name: Antacids and Copper
+    description: |
+      Antacids may reduce copper absorption by raising gastric pH or by containing
+      aluminum or magnesium that may bind copper.
+    drug_term:
+      preferred_term: antacid
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    mic_references:
+      - 168
+
+nutrient_interactions:
+  - name: Zinc and Copper
+    description: |
+      High zinc intake can interfere with copper absorption by inducing the synthesis
+      of metallothionein in intestinal cells. Metallothionein binds copper with high
+      affinity and prevents its systemic absorption. Supplemental zinc at 50 mg/day
+      or more may lead to copper deficiency over time.
+    nutrient_term:
+      preferred_term: zinc
+    interaction_type: ANTAGONISTIC
+    mic_references:
+      - 61
+      - 62
+      - 63
+
+  - name: Iron and Copper
+    description: |
+      Copper and iron interact in iron metabolism. Ceruloplasmin, a copper-containing
+      enzyme, is required for iron transport. Copper deficiency can lead to secondary
+      iron deficiency.
+    nutrient_term:
+      preferred_term: iron
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 4
+      - 9
+
+  - name: Vitamin C and Copper
+    description: |
+      High-dose vitamin C supplementation has been reported to decrease ceruloplasmin
+      oxidase activity. However, whether this significantly impacts copper status or
+      function is uncertain.
+    nutrient_term:
+      preferred_term: vitamin C
+    interaction_type: AFFECTS_METABOLISM
+    mic_references:
+      - 64
+      - 65
+
+disease_associations:
+  - name: Cardiovascular Disease
+    description: |
+      Both copper deficiency and excess have been linked to cardiovascular disease risk.
+      Copper is required for antioxidant enzyme function and proper lipid metabolism.
+      Low copper status may impair these functions and contribute to atherogenesis.
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:0004995
+        label: cardiovascular disorder
+    relationship_type: RISK_FACTOR
+    direction: INCREASED
+    population_context: Both deficiency and excess may increase risk
+    mic_references:
+      - 67
+      - 68
+      - 69
+      - 70
+    evidence:
+      - reference: PMID:9451822
+        supports: SUPPORT
+        snippet: "Copper is an essential trace element and has profound influence on cardiac myopathy and heart metabolism"
+        explanation: Demonstrates copper's essential role in cardiac metabolism, with deficiency causing cardiomyopathy
+      - reference: PMID:27350652
+        supports: SUPPORT
+        snippet: "There are more than eighty anatomical, chemical and physiological similarities between animals deficient in Cu and individuals with IHD"
+        explanation: Provides extensive evidence linking copper deficiency to ischemic heart disease through multiple physiological parallels
+
+  - name: Osteoporosis
+    description: |
+      Copper is required for lysyl oxidase activity, which is essential for collagen
+      and elastin cross-linking in bone. Copper deficiency may contribute to bone
+      demineralization and osteoporosis.
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Copper deficiency may increase risk
+    mic_references:
+      - 100
+      - 101
+      - 102
+
+  - name: Wilson Disease
+    description: |
+      Wilson disease is an autosomal recessive disorder caused by mutations in the
+      ATP7B gene, leading to toxic copper accumulation initially in the liver and
+      subsequently in the brain and other tissues. Treatment involves copper chelation
+      therapy and zinc supplementation to reduce copper absorption.
+    disease_term:
+      preferred_term: Wilson disease
+      term:
+        id: MONDO:0010200
+        label: Wilson disease
+    relationship_type: MARKER
+    population_context: Inherited disorder of copper metabolism
+    mic_references:
+      - 82
+      - 83
+      - 84
+    evidence:
+      - reference: PMID:18568852
+        supports: SUPPORT
+        snippet: "Wilson's disease is an autosomal recessive disorder of copper metabolism. The culprit gene is ATP7B"
+        explanation: Comprehensive diagnostic review confirming Wilson disease genetics and copper metabolism basis
+      - reference: PMID:32279718
+        supports: SUPPORT
+        snippet: "This disease is caused by copper overload caused by reduced copper excretion secondary to genetic mutations in the ATP7B gene"
+        explanation: Confirms Wilson disease mechanism of copper overload from impaired excretion due to ATP7B mutations
+
+  - name: Menkes Disease
+    description: |
+      Menkes disease is an X-linked recessive disorder caused by mutations in the
+      ATP7A gene, leading to severe systemic copper deficiency. The disorder is
+      characterized by developmental delay, hypotonia, seizures, and kinky hair.
+    disease_term:
+      preferred_term: Menkes disease
+      term:
+        id: MONDO:0010651
+        label: Menkes disease
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Inherited disorder of copper metabolism
+    mic_references:
+      - 50
+      - 51
+      - 52
+    evidence:
+      - reference: PMID:23281160
+        supports: SUPPORT
+        snippet: "Menkes disease (MD) is a lethal multisystemic disorder of copper metabolism. Progressive neurodegeneration and connective tissue disturbances, together with the peculiar \"kinky\" hair, are the main manifestations"
+        explanation: Comprehensive review confirming Menkes disease features including neurodegeneration, connective tissue defects, and characteristic hair abnormalities
+
+  - name: Alzheimer Disease
+    description: |
+      Copper dyshomeostasis has been implicated in Alzheimer disease pathogenesis.
+      Both elevated and decreased copper levels have been reported in AD patients.
+      Copper may interact with amyloid-beta peptides and contribute to oxidative stress.
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    population_context: Role is complex; both deficiency and excess may be relevant
+    mic_references:
+      - 110
+      - 111
+      - 112
+      - 113
+    evidence:
+      - reference: PMID:34219710
+        supports: SUPPORT
+        snippet: "Cu imbalance is strongly associated with neurodegeneration in dementia"
+        explanation: Comprehensive review establishing the association between copper imbalance and neurodegeneration in Alzheimer disease
+      - reference: PMID:12920183
+        supports: SUPPORT
+        snippet: "the addition of trace amounts of copper (0.12 ppm) to water given to cholesterol-fed rabbits can induce beta-amyloid (Abeta) accumulation, including senile plaque-like structures in the hippocampus and temporal lobe"
+        explanation: Experimental evidence that trace copper exposure combined with high cholesterol induces amyloid-beta accumulation in an animal model
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "200 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "220 mcg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "340 mcg/day"
+      source: Institute of Medicine
+    - population: Children 4-8 years
+      amount: "440 mcg/day"
+      source: Institute of Medicine
+    - population: Children 9-13 years
+      amount: "700 mcg/day"
+      source: Institute of Medicine
+    - population: Adolescents 14-18 years
+      amount: "890 mcg/day"
+      source: Institute of Medicine
+    - population: Adults 19+ years
+      amount: "900 mcg/day"
+      source: Institute of Medicine
+    - population: Pregnancy
+      amount: "1,000 mcg/day"
+      source: Institute of Medicine
+    - population: Breastfeeding
+      amount: "1,300 mcg/day"
+      source: Institute of Medicine
+  notes: |
+    Mean dietary copper intakes in the US are 1.1 mg/day for adult women and 1.3 mg/day
+    for adult men, which exceed the RDA of 900 mcg/day. Tolerable Upper Intake Level (UL)
+    for adults is 10 mg/day (10,000 mcg/day). Individuals with genetic disorders of copper
+    metabolism may be at risk for adverse effects at significantly lower intake levels.
+
+bioavailability:
+  description: |
+    Copper absorption occurs primarily in the small intestine. The efficiency of absorption
+    can vary based on copper status and dietary factors. High zinc intake interferes with
+    copper absorption by inducing metallothionein. Accurately assessing dietary copper
+    intake is difficult since copper content of many foods has not been firmly established.
+  mic_references:
+    - 2
+    - 61
+
+references:
+  - reference: PMID:8615367
+    title: Copper biochemistry and molecular biology
+    findings:
+      - statement: Copper is vital for many enzymes and metabolic processes
+        supporting_text: "The metabolism of copper and its importance for the functions of a roster of vital enzymes is detailed"
+  - reference: PMID:9587135
+    title: Essentiality of copper in humans
+    findings:
+      - statement: Copper deficiency causes anemia, neutropenia, and bone abnormalities
+        supporting_text: "The most frequent clinical manifestations of copper deficiency are anemia, neutropenia, and bone abnormalities"
+  - reference: PMID:22332037
+    title: Impact of copper limitation on expression and function of multicopper oxidases (ferroxidases)
+    findings:
+      - statement: Copper limitation impairs ferroxidase activity and iron flux
+        supporting_text: "Limitation in available copper appears to limit function of the MCO group exhibited as impaired iron flux due to the copper requirement of MCO for their ferroxidase activity"
+  - reference: PMID:23807651
+    title: Multi-copper oxidases and human iron metabolism
+    findings:
+      - statement: Multi-copper oxidases have ferroxidase activity associated with ferroportin for iron export
+        supporting_text: "Each of these enzymes has a high specificity towards iron with the resulting ferroxidase activity being associated with ferroportin, the only known iron exporter protein in humans"
+  - reference: PMID:34112357
+    title: Copper nutrition and biochemistry and human (patho)physiology
+    findings:
+      - statement: Copper homeostasis disruption may underlie connective tissue and neurodegenerative disorders
+        supporting_text: "Disruption of copper homeostasis may underlie the development of ischemic heart disease, and connective tissue and neurodegenerative disorders"
+  - reference: PMID:22389498
+    title: Copper homeostasis at the host-pathogen interface
+    findings:
+      - statement: Macrophage phagosomes accumulate copper during bacterial infection as a killing mechanism
+        supporting_text: "Recent studies suggest that the macrophage phagosome accumulates copper during bacterial infection, which may constitute an important mechanism of killing"
+  - reference: PMID:9451822
+    title: Copper deficiency and heart disease - molecular basis, recent advances and current concepts
+    findings:
+      - statement: Copper has profound influence on cardiac function and deficiency causes cardiomyopathy
+        supporting_text: "Copper is an essential trace element and has profound influence on cardiac myopathy and heart metabolism"
+  - reference: PMID:27350652
+    title: IHD from copper deficiency - a unified theory
+    findings:
+      - statement: Extensive parallels exist between copper-deficient animals and individuals with IHD
+        supporting_text: "There are more than eighty anatomical, chemical and physiological similarities between animals deficient in Cu and individuals with IHD"
+  - reference: PMID:23281160
+    title: An overview and update of ATP7A mutations leading to Menkes disease and occipital horn syndrome
+    findings:
+      - statement: Menkes disease is a lethal multisystemic copper metabolism disorder
+        supporting_text: "Menkes disease (MD) is a lethal multisystemic disorder of copper metabolism. Progressive neurodegeneration and connective tissue disturbances, together with the peculiar \"kinky\" hair, are the main manifestations"
+  - reference: PMID:18568852
+    title: Diagnosis of Wilson's disease - a comprehensive review
+    findings:
+      - statement: Wilson disease is an autosomal recessive disorder with ATP7B as the causative gene
+        supporting_text: "Wilson's disease is an autosomal recessive disorder of copper metabolism. The culprit gene is ATP7B"
+  - reference: PMID:32279718
+    title: Wilson Disease - An Overview and Approach to Management
+    findings:
+      - statement: Wilson disease results from copper overload due to reduced excretion from ATP7B mutations
+        supporting_text: "This disease is caused by copper overload caused by reduced copper excretion secondary to genetic mutations in the ATP7B gene"
+  - reference: PMID:34219710
+    title: Copper imbalance in Alzheimer's disease and its link with the amyloid hypothesis
+    findings:
+      - statement: Copper imbalance is strongly associated with neurodegeneration in dementia
+        supporting_text: "Cu imbalance is strongly associated with neurodegeneration in dementia"
+  - reference: PMID:12920183
+    title: Trace amounts of copper in water induce beta-amyloid plaques and learning deficits in a rabbit model
+    findings:
+      - statement: Trace copper in water induces amyloid-beta accumulation in cholesterol-fed rabbits
+        supporting_text: "the addition of trace amounts of copper (0.12 ppm) to water given to cholesterol-fed rabbits can induce beta-amyloid (Abeta) accumulation, including senile plaque-like structures in the hippocampus and temporal lobe"
+  - reference: PMID:31209935
+    title: Copper Deficiency - Causes, Manifestations, and Treatment
+    findings:
+      - statement: Copper deficiency affects hematologic and neurologic systems
+        supporting_text: "Clinical manifestations are nonspecific but affect all organs and systems, particularly the hematologic (anemia) and the neurologic (myeloneuropathy) systems"
+  - reference: PMID:27049134
+    title: Dietary copper and human health - Current evidence and unresolved issues
+    findings:
+      - statement: Limited evidence exists for impaired immune function with very low copper intake
+        supporting_text: "limited evidence exists for impaired immune function in healthy subjects with a very low (0.38 mg/day) Cu intake"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Copper. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains 174 references.

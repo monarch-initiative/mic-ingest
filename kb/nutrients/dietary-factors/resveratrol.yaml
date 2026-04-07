@@ -1,0 +1,199 @@
+name: Resveratrol
+nutrient_term:
+  preferred_term: resveratrol
+  term:
+    id: CHEBI:27881
+    label: resveratrol
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/resveratrol
+alternate_names:
+  - trans-Resveratrol
+  - 3,4',5-trihydroxystilbene
+description: |
+  Resveratrol is a polyphenolic compound naturally found in peanuts, grapes,
+  red wine, and some berries. It exists in trans and cis forms, with trans-
+  resveratrol being the biologically active form. Despite extensive preclinical
+  research showing potential health benefits, bioavailability is low due to
+  rapid metabolism and elimination, limiting translation to human outcomes.
+
+functions:
+  - name: Antioxidant activity
+    description: |
+      Resveratrol effectively scavenges free radicals and other oxidants
+      in vitro, though evidence for meaningful antioxidant effects in
+      living organisms remains limited.
+    mic_references:
+      - 11
+      - 12
+
+  - name: Estrogenic and anti-estrogenic activity
+    description: |
+      Resveratrol exhibits dual activity, functioning as either estrogen
+      agonist or antagonist depending on cell type, estrogen receptor
+      subtype, and presence of endogenous estrogens.
+    mic_references:
+      - 14
+      - 15
+
+  - name: Anticancer mechanisms
+    description: |
+      Laboratory studies show resveratrol inhibits cancer cell proliferation
+      through cell cycle arrest, apoptosis induction, matrix metalloproteinase
+      inhibition, and angiogenesis suppression. However, it is not known
+      whether resveratrol can prevent or treat cancer in humans.
+    mic_references:
+      - 17
+      - 18
+      - 19
+      - 20
+
+  - name: Cardiovascular protection
+    description: |
+      Mechanisms include platelet aggregation inhibition, endothelial nitric
+      oxide synthase stimulation, and vascular smooth muscle cell proliferation
+      reduction.
+    mic_references:
+      - 23
+      - 24
+
+deficiency:
+  name: Resveratrol deficiency
+  description: |
+    Resveratrol is not an essential nutrient, and no deficiency syndrome
+    has been identified.
+  notes: Dietary intake varies widely based on consumption of grapes, wine, and peanuts.
+
+toxicity:
+  name: Resveratrol toxicity
+  description: |
+    Mild-to-moderate gastrointestinal side effects including nausea,
+    abdominal pain, flatulence, and diarrhea have occurred at doses
+    exceeding 1,000 mg/day for extended periods. Women with estrogen-
+    sensitive cancers should avoid supplements pending further research.
+  mic_references:
+    - 96
+    - 97
+
+food_sources:
+  - name: Red wine
+    food_term:
+      preferred_term: red wine
+    amount: "0.2-0.5 mg"
+    serving_size: "5 oz glass"
+    notes: "Other polyphenols present at considerably higher concentrations"
+    mic_references:
+      - 1
+
+  - name: Red grapes
+    food_term:
+      preferred_term: grape
+    amount: "0.24-1.25 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 1
+
+  - name: Peanuts (boiled)
+    food_term:
+      preferred_term: peanut
+    amount: "0.32-1.28 mg"
+    serving_size: "1 cup"
+    mic_references:
+      - 1
+
+disease_associations:
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Randomized trials showed one-year consumption of a grape supplement
+      containing 8 mg/day resveratrol improved inflammatory and atherogenic
+      status. However, there is no evidence that resveratrol in red wine
+      confers additional cardiovascular risk reduction beyond alcohol content.
+    evidence:
+      - reference: PMID:18291361
+        supports: PARTIAL
+        snippet: "resveratrol blocked platelet aggregation and platelet P-selectin expression induced by U46619 in a concentration-dependent manner"
+        explanation: Demonstrates resveratrol's antiplatelet mechanism, supporting the cardiovascular protection hypothesis, though this is an in vitro study.
+    mic_references:
+      - 55
+      - 56
+    notes: "Benefits may be due to grape polyphenols rather than resveratrol alone"
+
+  - name: Type 2 diabetes
+    disease_term:
+      preferred_term: type 2 diabetes mellitus
+    relationship_type: THERAPEUTIC
+    description: |
+      Short-term supplementation (250-1,000 mg/day for 29-45 days)
+      significantly reduced fasting glucose, improved HbA1c levels,
+      and enhanced insulin sensitivity in diabetic patients.
+    evidence:
+      - reference: PMID:22901562
+        supports: SUPPORT
+        snippet: "supplementation of resveratrol for 3 months significantly improves the mean hemoglobin A(1c)"
+        explanation: Randomized controlled trial in 62 T2DM patients showed 250 mg/day resveratrol improved HbA1c and systolic blood pressure.
+    mic_references:
+      - 62
+      - 63
+      - 64
+
+  - name: Cognitive decline
+    disease_term:
+      preferred_term: cognitive decline
+    relationship_type: PROTECTIVE
+    description: |
+      Animal studies show neuroprotective benefits and β-amyloid clearance
+      relevant to Alzheimer's disease, but human clinical evidence
+      remains very limited.
+    mic_references:
+      - 72
+      - 73
+    notes: "Preclinical evidence promising; human data limited"
+
+drug_interactions:
+  - name: Anticoagulants and antiplatelet drugs
+    drug_term:
+      preferred_term: warfarin
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      High resveratrol intake could theoretically increase bruising
+      and bleeding risk when combined with warfarin, heparin, clopidogrel,
+      or aspirin due to antiplatelet effects.
+    mic_references:
+      - 100
+
+  - name: CYP3A4 substrates
+    drug_term:
+      preferred_term: CYP3A4 substrate
+    interaction_type: AFFECTS_METABOLISM
+    clinical_significance: HIGH
+    description: |
+      Resveratrol inhibits CYP3A4 enzyme activity, potentially increasing
+      bioavailability and toxicity of drugs metabolized by this pathway,
+      including statins, calcium channel blockers, HIV protease inhibitors,
+      immunosuppressants, and sildenafil.
+    mic_references:
+      - 101
+      - 102
+
+recommendations:
+  notes: |
+    There is no known safe and effective dosage for chronic disease
+    prevention in humans. Most laboratory studies used resveratrol
+    concentrations up to 100 times greater than achievable plasma
+    concentrations. Pregnant women should avoid resveratrol supplements
+    due to unknown safety profile.
+
+references:
+  - reference: PMID:22901562
+    title: "Resveratrol supplementation improves glycemic control in type 2 diabetes mellitus"
+  - reference: PMID:18291361
+    title: "Resveratrol attenuates thromboxane A2 receptor agonist-induced platelet activation by reducing phospholipase C activity"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Resveratrol. The substantial gap between preclinical
+  evidence and human efficacy reflects fundamental bioavailability challenges.

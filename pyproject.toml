@@ -1,41 +1,56 @@
-[tool.poetry]
+[project]
 name = "mic_ingest"
 version = "0.0.0"
-description = "Ingest for Micronutrient Information Center using OntoGPT"
-authors = ["Corey Cox <corey@tislab.org>"]
-license = "BSD-3"
+description = "Micronutrient Information Center Knowledge Base - LinkML-based nutrient knowledge extraction"
+authors = [{name = "Corey Cox", email = "corey@tislab.org"}]
+license = {text = "BSD-3"}
 readme = "README.md"
+requires-python = ">=3.10,<3.13"
 
-[tool.poetry.dependencies]
-python = ">=3.10,<3.13"
-importlib-metadata = ">=4.8.0"
-koza = ">=0.6.0"
-kghub-downloader = ">=0.3.8"
-kgx = ">=2.4.0"
-biolink-model = "^4.2.0"
-duckdb = ">=0.10.2"
-loguru = "*"
-beautifulsoup4 = "^4.13.3"
-ontogpt = "^1.0.11"
+dependencies = [
+    # LinkML ecosystem
+    "linkml>=1.9.3",
+    "linkml-runtime>=1.9.4",
+    "linkml-dataops",
+    # Ontology access
+    "oaklib>=0.6.0",
+    # LLM / Anthropic
+    "anthropic>=0.39.0",
+    # Web/parsing
+    "beautifulsoup4>=4.13.3",
+    "requests>=2.31.0",
+    "lxml",
+    # Data handling
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    # Rendering
+    "jinja2>=3.0",
+    # KG Integration (existing)
+    "koza>=2.2.0",
+    "kgx>=2.4.0",
+    "biolink-model>=4.3.7",
+    # Utilities
+    "loguru",
+    "importlib-metadata>=4.8.0",
+    "markdownify>=1.2.2",
+    # Validation (mandatory)
+    "linkml-data-qc",
+    "linkml-term-validator",
+    "linkml-reference-validator",
+]
 
-[tool.poetry.group.dev]
-optional = true
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "mkdocs>=1.4",
+    "mkdocs-material>=9.5",
+    "mkdocs-macros-plugin",
+    "black",
+    "ruff",
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = ">=8.1.1"
-mkdocs = ">=1.4"
-mkdocs-material = ">=9.5"
-mkdocs-macros-plugin = "*"
-black = "*"
-ruff = "*"
-
-[tool.poetry.scripts]
+[project.scripts]
 ingest = "mic_ingest.cli:app"
-
-[tool.poetry-dynamic-versioning]
-enable = true
-vcs = "git"
-style = "pep440"
 
 [tool.black]
 line-length = 120
@@ -54,9 +69,7 @@ ignore = [
     "F541", # f-strings with no placeholders
     "S101", # Use of assert detected
 ]
-# Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
-# Select or ignore from https://beta.ruff.rs/docs/rules/
 select = [
     "B", # bugbear
     "D", # pydocstyle
@@ -73,8 +86,7 @@ target-version = "py310"
 skip = "*.po,*.ts,.git,pyproject.toml"
 count = ""
 quiet-level = 3
-# ignore-words-list = ""
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

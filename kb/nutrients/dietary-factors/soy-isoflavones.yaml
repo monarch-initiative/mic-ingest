@@ -1,0 +1,265 @@
+name: Soy Isoflavones
+nutrient_term:
+  preferred_term: isoflavones
+  term:
+    id: CHEBI:38757
+    label: isoflavones
+category: dietary_factor
+source_url: https://lpi.oregonstate.edu/mic/dietary-factors/phytochemicals/soy-isoflavones
+alternate_names:
+  - Genistein
+  - Daidzein
+  - Glycitein
+  - Phytoestrogens
+description: |
+  Soy isoflavones are phytoestrogens—plant compounds structurally similar to
+  estrogen. They exist as glycosides in raw soybeans and convert to aglycones
+  (genistein, daidzein, glycitein) during digestion. These compounds have dual
+  activity: they can mimic estrogen in some tissues while blocking it in others,
+  depending on which estrogen receptor they activate.
+
+functions:
+  - name: Estrogenic and anti-estrogenic activity
+    description: |
+      Soy isoflavones preferentially bind estrogen receptor beta (ERβ),
+      producing tissue-selective effects. They can act as estrogen agonists
+      in some tissues and antagonists in others, depending on receptor
+      distribution and endogenous estrogen levels.
+    mic_references:
+      - 8
+      - 9
+
+  - name: Equol production
+    description: |
+      The intestinal bacteria of some individuals convert daidzein to equol,
+      a metabolite with greater estrogenic activity. Approximately 25-30%
+      of Western adults produce equol versus 50-60% in Asian populations.
+    mic_references:
+      - 16
+      - 17
+
+deficiency:
+  name: Soy isoflavone deficiency
+  description: |
+    Soy isoflavones are not essential nutrients, and no deficiency syndrome
+    has been identified.
+  notes: Average intake in Asia is 25-50 mg/day versus under 1 mg/day in Western countries.
+
+toxicity:
+  name: Soy isoflavone toxicity
+  description: |
+    Moderate consumption of whole soy foods appears safe. Soy-based infant
+    formula shows no convincing evidence of adverse effects compared to
+    cow's milk formula. Current evidence suggests breast cancer survivors
+    should not be discouraged from consuming soy foods in moderation.
+  mic_references:
+    - 104
+    - 105
+
+food_sources:
+  - name: Soybeans (mature, boiled)
+    food_term:
+      preferred_term: soybean
+      term:
+        id: FOODON:03301415
+        label: soybean
+    amount: "56 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 1
+
+  - name: Tofu
+    food_term:
+      preferred_term: tofu
+      term:
+        id: FOODON:00004697
+        label: tofu
+    amount: "20-40 mg"
+    serving_size: "1/2 cup"
+    notes: "Content varies by preparation method"
+    mic_references:
+      - 1
+
+  - name: Tempeh
+    food_term:
+      preferred_term: tempeh
+      term:
+        id: FOODON:03304999
+        label: tempeh
+    amount: "51.5 mg"
+    serving_size: "3 ounces"
+    notes: "Traditional fermented soy food"
+    mic_references:
+      - 1
+
+  - name: Miso
+    food_term:
+      preferred_term: miso
+      term:
+        id: FOODON:00003208
+        label: miso
+    amount: "57 mg"
+    serving_size: "1/2 cup"
+    notes: "Fermented soybean paste"
+    mic_references:
+      - 1
+
+disease_associations:
+  - name: Breast cancer
+    disease_term:
+      preferred_term: breast cancer
+      term:
+        id: MONDO:0007254
+        label: breast cancer
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Higher childhood soy consumption shows associations with reduced
+      adult breast cancer risk in Asian populations. Breast cancer
+      survivors consuming ≥10 mg/day showed 25% reduced recurrence risk.
+      However, there is little evidence that soy isoflavone supplements
+      decrease breast cancer risk.
+    mic_references:
+      - 43
+      - 44
+      - 59
+    evidence:
+      - reference: PMID:18182974
+        supports: SUPPORT
+        snippet: "Meta-analysis of the 8 (1 cohort, 7 case-control) studies conducted in high-soy-consuming Asians show a significant trend of decreasing risk with increasing soy food intake"
+        explanation: Meta-analysis demonstrating dose-response relationship between soy intake and breast cancer risk in Asian populations
+    notes: "Whole soy foods may be more beneficial than isolated supplements"
+
+  - name: Prostate cancer
+    disease_term:
+      preferred_term: prostate cancer
+      term:
+        id: MONDO:0008315
+        label: prostate cancer
+    relationship_type: PROTECTIVE
+    description: |
+      Evidence remains inconclusive. Some trials suggest supplementation
+      may slow PSA increases in men with prostate cancer, while others
+      show no effect. Larger, longer trials are needed.
+    mic_references:
+      - 65
+      - 66
+    notes: "Evidence inconclusive; further research needed"
+
+  - name: Cardiovascular disease
+    disease_term:
+      preferred_term: cardiovascular disease
+      term:
+        id: MONDO:1060134
+        label: atherosclerotic cardiovascular disease
+    relationship_type: PROTECTIVE
+    direction: DECREASED
+    description: |
+      Whole soy components (rather than isolated isoflavones) appear
+      beneficial for lipid profiles. Meta-analyses show modest improvements
+      in vascular function, particularly in postmenopausal women.
+    mic_references:
+      - 73
+      - 74
+
+  - name: Osteoporosis
+    disease_term:
+      preferred_term: osteoporosis
+      term:
+        id: MONDO:0005298
+        label: osteoporosis
+    relationship_type: PROTECTIVE
+    description: |
+      Meta-analyses show weak positive effects on bone mineral density
+      in postmenopausal women, though benefits remain uncertain and
+      clinical fracture prevention is not established.
+    mic_references:
+      - 81
+      - 82
+    notes: "Modest effects on BMD; fracture prevention unclear"
+
+  - name: Menopausal hot flashes
+    disease_term:
+      preferred_term: hot flashes
+    relationship_type: THERAPEUTIC
+    direction: DECREASED
+    description: |
+      Genistein-containing supplements consistently reduce hot flash
+      frequency, though requiring 48 weeks of treatment versus 12 weeks
+      for estradiol to achieve 80% effectiveness.
+    mic_references:
+      - 86
+      - 87
+    evidence:
+      - reference: PMID:22433977
+        supports: SUPPORT
+        snippet: "Meta-analysis revealed that ingestion of soy isoflavones (median, 54 mg; aglycone equivalents) for 6 weeks to 12 months significantly reduced the frequency (combined fixed-effect and random effects model) of hot flashes by 20.6%"
+        explanation: Meta-analysis demonstrating efficacy of soy isoflavones for reducing hot flash frequency and severity
+
+drug_interactions:
+  - name: Warfarin
+    drug_term:
+      preferred_term: warfarin
+    interaction_type: ANTAGONISTIC
+    clinical_significance: MODERATE
+    description: |
+      High soy consumption may reduce anticoagulant effectiveness
+      of warfarin.
+    mic_references:
+      - 116
+
+  - name: Levothyroxine
+    drug_term:
+      preferred_term: levothyroxine
+    interaction_type: REDUCES_ABSORPTION
+    clinical_significance: MODERATE
+    description: |
+      Soy may reduce levothyroxine absorption, potentially increasing
+      required dosage for thyroid hormone replacement.
+    mic_references:
+      - 117
+
+  - name: Tamoxifen
+    drug_term:
+      preferred_term: tamoxifen
+    interaction_type: SYNERGISTIC
+    clinical_significance: MODERATE
+    description: |
+      Evidence is conflicting; some data suggest soy may enhance
+      rather than interfere with tamoxifen efficacy.
+    mic_references:
+      - 118
+    notes: "Evidence conflicting; consult healthcare provider"
+
+  - name: MAO inhibitors
+    drug_term:
+      preferred_term: MAO inhibitor
+    interaction_type: SYNERGISTIC
+    clinical_significance: HIGH
+    description: |
+      Fermented soy products containing tyramine should be avoided
+      by individuals taking MAO inhibitors due to hypertensive crisis risk.
+    mic_references:
+      - 119
+
+recommendations:
+  notes: |
+    Moderate consumption of whole soy foods appears safe and potentially
+    beneficial. Isolated isoflavone supplements show limited evidence for
+    disease prevention. Genistein supplements may help manage menopausal
+    hot flashes. Individuals on medications should consult healthcare
+    providers before substantially increasing soy intake.
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Soy Isoflavones. Whole soy foods appear more
+  beneficial than isolated supplements, and equol-producer status may influence
+  individual responses.
+
+references:
+  - reference: PMID:18182974
+    title: "Epidemiology of soy exposures and breast cancer risk"
+  - reference: PMID:22433977
+    title: "Extracted or synthesized soybean isoflavones reduce menopausal hot flash frequency and severity"
+  - reference: PMID:16965235
+    title: "Estimated Asian adult soy protein and isoflavone intakes"

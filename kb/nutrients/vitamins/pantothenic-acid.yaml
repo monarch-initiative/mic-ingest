@@ -1,0 +1,513 @@
+name: Pantothenic Acid
+nutrient_term:
+  preferred_term: pantothenic acid
+  term:
+    id: CHEBI:7916
+    label: pantothenic acid
+category: vitamin
+source_url: https://lpi.oregonstate.edu/mic/vitamins/pantothenic-acid
+alternate_names:
+  - Vitamin B5
+  - Calcium pantothenate
+  - Pantothenate
+description: |
+  Pantothenic acid, also known as vitamin B5, is a water-soluble B vitamin essential to all
+  forms of life. It is a precursor in the biosynthesis of coenzyme A (CoA), which is an
+  essential coenzyme in a variety of biochemical reactions that sustain life, including
+  energy production from fats, carbohydrates, and proteins. The 4'-phosphopantetheinyl
+  moiety of coenzyme A is also required for the biological activity of several proteins,
+  including acyl-carrier protein involved in fatty acid synthesis. Pantothenic acid is
+  ubiquitously found in foods of plant and animal origin, and dietary deficiency is very rare.
+
+functions:
+  - name: Coenzyme A Biosynthesis
+    description: |
+      Pantothenic acid is a precursor in the biosynthesis of coenzyme A (CoA). Pantothenic
+      acid kinase 2 (PANK2) catalyzes the initial step of phosphorylation of pantothenic
+      acid to 4'-phosphopantothenic acid. The subsequent reactions produce the intermediate
+      4'-phosphopantetheine and ultimately coenzyme A.
+    biological_processes:
+      - preferred_term: coenzyme A biosynthetic process
+        term:
+          id: GO:0015937
+          label: coenzyme A biosynthetic process
+    genes:
+      - preferred_term: PANK2
+        description: Pantothenate kinase 2, catalyzes rate-limiting step in CoA biosynthesis
+        term:
+          id: hgnc:15894
+          label: PANK2
+    mic_references:
+      - 2
+      - 4
+    evidence:
+      - reference: PMID:25110011
+        supports: SUPPORT
+        snippet: "The biosynthesis of CoA requires pantothenic acid, cysteine and ATP, and involves five enzymatic steps that are highly conserved from prokaryotes to eukaryotes"
+        explanation: Confirms pantothenic acid is required for CoA biosynthesis
+
+  - name: Energy Metabolism via Coenzyme A
+    description: |
+      Coenzyme A reacts with acyl groups, giving rise to thioester derivatives such as
+      acetyl-CoA, succinyl-CoA, malonyl-CoA, and HMG-CoA. These derivatives are required
+      for reactions that generate energy from the degradation of dietary fat, carbohydrates,
+      and proteins. Acetyl-CoA and succinyl-CoA are involved in the citric acid cycle.
+    biological_processes:
+      - preferred_term: fatty acid metabolic process
+        term:
+          id: GO:0006631
+          label: fatty acid metabolic process
+      - preferred_term: tricarboxylic acid cycle
+        term:
+          id: GO:0006099
+          label: tricarboxylic acid cycle
+    mic_references:
+      - 5
+    evidence:
+      - reference: PMID:25110011
+        supports: SUPPORT
+        snippet: "CoA (coenzyme A) is an essential cofactor in all living organisms"
+        explanation: Confirms CoA is essential for life and metabolism
+
+  - name: Protein Acetylation
+    description: |
+      Coenzyme A, in the form of acetyl-CoA, provides acetyl groups for protein acetylation.
+      Protein acetylation alters protein structure and function, regulating the activity of
+      peptide hormones, signaling molecules, transcription factors, and enzymes. Histone
+      acetylation plays a key role in regulating gene expression by facilitating transcription.
+    biological_processes:
+      - preferred_term: protein acetylation
+        term:
+          id: GO:0006473
+          label: protein acetylation
+    mic_references:
+      - 6
+      - 7
+    evidence:
+      - reference: PMID:25053359
+        supports: SUPPORT
+        snippet: "Lysine acetylation is a conserved protein post-translational modification that links acetyl-coenzyme A metabolism and cellular signalling"
+        explanation: Confirms acetyl-CoA provides acetyl groups for protein acetylation
+
+  - name: 4'-Phosphopantetheinylation
+    description: |
+      The 4'-phosphopantetheinyl moiety of coenzyme A can be transferred to enzymes in which
+      4'-phosphopantetheine is an essential cofactor for their biological activities. In
+      mammals, this transfer is catalyzed by a unique phosphopantetheinyl transferase. This
+      modification is necessary for converting apo-enzymes into fully active holo-enzymes.
+    mic_references:
+      - 8
+    evidence:
+      - reference: PMID:24292120
+        supports: SUPPORT
+        snippet: "PPTases garnered wide-spread attention being classified as a distinct enzyme superfamily"
+        explanation: Confirms phosphopantetheinyl transferases are a distinct enzyme class that install 4'-phosphopantetheine
+
+  - name: Fatty Acid Synthesis via Acyl-Carrier Protein
+    description: |
+      Within the fatty acid synthase (FAS) complex, the acyl-carrier protein (ACP) requires
+      pantothenic acid in the form of 4'-phosphopantetheine for its activity as a carrier
+      protein. During fatty acid synthesis, acyl groups are transferred to the sulfhydryl
+      group of the 4'-phosphopantetheinyl moiety of ACP.
+    biological_processes:
+      - preferred_term: fatty acid biosynthetic process
+        term:
+          id: GO:0006633
+          label: fatty acid biosynthetic process
+    mic_references:
+      - 4
+      - 9
+    evidence:
+      - reference: PMID:24292120
+        supports: SUPPORT
+        snippet: "this class of enzymes that post-translationally install a 4'-phosphopantetheine arm on various carrier proteins"
+        explanation: Confirms 4'-phosphopantetheine is installed on carrier proteins including ACP
+
+deficiency:
+  name: Pantothenic Acid Deficiency
+  description: |
+    Naturally occurring pantothenic acid deficiency in humans is very rare and has been
+    observed only in cases of severe malnutrition. WWII prisoners experienced numbness and
+    painful burning and tingling in feet that was relieved by pantothenic acid supplementation.
+    Experimentally induced deficiency causes headache, fatigue, insomnia, intestinal
+    disturbances, and numbness and tingling of hands and feet.
+  sequelae:
+    - name: Paresthesia
+      phenotype_term:
+        preferred_term: paresthesia
+        term:
+          id: HP:0003401
+          label: Paresthesia
+      frequency: FREQUENT
+      context: Numbness and tingling of hands and feet
+      mic_references:
+        - 5
+        - 13
+
+    - name: Fatigue
+      phenotype_term:
+        preferred_term: fatigue
+        term:
+          id: HP:0012378
+          label: Fatigue
+      frequency: FREQUENT
+      mic_references:
+        - 13
+        - 14
+
+    - name: Headache
+      phenotype_term:
+        preferred_term: headache
+        term:
+          id: HP:0002315
+          label: Headache
+      frequency: FREQUENT
+      mic_references:
+        - 13
+
+    - name: Insomnia
+      phenotype_term:
+        preferred_term: insomnia
+        term:
+          id: HP:0100785
+          label: Insomnia
+      frequency: OCCASIONAL
+      mic_references:
+        - 13
+
+  at_risk_groups:
+    - name: Individuals with severe malnutrition
+      description: Only observed in cases of severe malnutrition
+      mic_references:
+        - 5
+
+  mic_references:
+    - 5
+    - 13
+    - 14
+    - 15
+
+toxicity:
+  name: Pantothenic Acid Toxicity
+  description: |
+    Pantothenic acid is not known to be toxic in humans. The only adverse effect noted was
+    diarrhea resulting from very high intakes of 10 to 20 g/day of calcium D-pantothenate.
+    Due to the lack of reports of adverse effects, the Food and Nutrition Board did not
+    establish a tolerable upper intake level (UL) for pantothenic acid. Pantethine is
+    generally well tolerated in doses up to 1,200 mg/day, though gastrointestinal side
+    effects such as nausea and heartburn have been reported.
+  adverse_effects:
+    - name: Diarrhea
+      description: Reported with very high intakes of 10 to 20 g/day
+      severity: mild
+    - name: Eosinophilic pleuropericardial effusion
+      description: |
+        One case report of life-threatening effusion in an elderly woman who took 10 mg/day
+        of biotin and 300 mg/day of pantothenic acid for two months
+      severity: severe
+    - name: Allergic contact dermatitis
+      description: Reported with topical dexpanthenol-containing ointments
+      severity: mild
+  mic_references:
+    - 22
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+
+food_sources:
+  - name: Beef liver, pan fried
+    food_term:
+      preferred_term: beef liver
+      term:
+        id: FOODON:02020913
+        label: beef liver
+    amount: "5.9 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 38
+
+  - name: Mushrooms, shiitake, cooked
+    food_term:
+      preferred_term: mushroom
+      term:
+        id: FOODON:00002050
+        label: mushroom (whole or pieces)
+    amount: "2.6 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 38
+
+  - name: Sunflower seed kernels, dry-roasted
+    food_term:
+      preferred_term: sunflower seeds
+    amount: "2.0 mg"
+    serving_size: "1 ounce"
+    mic_references:
+      - 38
+
+  - name: Trout, cooked
+    food_term:
+      preferred_term: trout
+    amount: "1.9 mg"
+    serving_size: "3 ounces"
+    mic_references:
+      - 38
+
+  - name: Yogurt, plain, low-fat
+    food_term:
+      preferred_term: yogurt
+    amount: "1.3 mg"
+    serving_size: "8 ounces"
+    mic_references:
+      - 38
+
+  - name: Avocado, raw
+    food_term:
+      preferred_term: avocado
+      term:
+        id: FOODON:00003600
+        label: avocado
+    amount: "1.0 mg"
+    serving_size: "1/2 fruit"
+    mic_references:
+      - 38
+
+  - name: Sweet potato, baked
+    food_term:
+      preferred_term: sweet potato
+    amount: "1.0 mg"
+    serving_size: "1 medium"
+    mic_references:
+      - 38
+
+  - name: Egg, hard-boiled
+    food_term:
+      preferred_term: chicken egg
+      term:
+        id: FOODON:02020157
+        label: chicken egg yolk
+    amount: "0.70 mg"
+    serving_size: "1 large"
+    mic_references:
+      - 38
+
+  - name: Lentils, boiled
+    food_term:
+      preferred_term: lentils
+    amount: "0.63 mg"
+    serving_size: "1/2 cup"
+    mic_references:
+      - 38
+
+nutrient_interactions:
+  - name: Biotin Competition for Absorption
+    description: |
+      Biotin and pantothenic acid share the same intestinal transporter, the human
+      sodium-dependent multivitamin transporter (hSMVT), and may compete for absorption.
+    nutrient_term:
+      preferred_term: biotin
+      term:
+        id: CHEBI:15956
+        label: biotin
+    interaction_type: COMPETES_FOR_TRANSPORT
+    mic_references:
+      - 39
+      - 40
+      - 50
+
+drug_interactions: []
+
+disease_associations:
+  - name: Pantothenate Kinase-Associated Neurodegeneration (PKAN)
+    description: |
+      Autosomal recessive mutations in the PANK2 gene result in impaired synthesis of
+      4'-phosphopantetheine and coenzyme A. This rare disorder is associated with iron
+      accumulation in the brain and characterized by visual and intellectual impairments,
+      dystonia, speech abnormalities, behavioral difficulties, and personality disorders.
+      Two forms exist: classic PKAN with onset before age 10, and atypical PKAN with
+      onset after age 10.
+    disease_term:
+      preferred_term: pantothenate kinase-associated neurodegeneration
+      term:
+        id: MONDO:0009319
+        label: pantothenate kinase-associated neurodegeneration
+    relationship_type: DEFICIENCY_CAUSES
+    population_context: Individuals with PANK2 mutations
+    mic_references:
+      - 16
+      - 17
+      - 18
+      - 19
+    evidence:
+      - reference: PMID:24209433
+        supports: SUPPORT
+        snippet: "PKAN and PLAN are autosomal recessive NBIA disorders due to mutations in PANK2 and PLA2G6, respectively"
+        explanation: Confirms PKAN is caused by PANK2 mutations
+
+  - name: Wound Healing
+    description: |
+      Calcium D-pantothenate and pantothenol may accelerate wound healing. In vitro studies
+      show increased cell proliferation and migration in cultured skin fibroblasts. Topical
+      dexpanthenol has shown some benefit in wound healing, though evidence from human
+      studies is limited and inconclusive.
+    disease_term:
+      preferred_term: wound healing
+    relationship_type: THERAPEUTIC
+    population_context: Limited evidence from small studies
+    mic_references:
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+
+  - name: Hypercholesterolemia
+    description: |
+      Pantethine, a pantothenic acid derivative, has been shown to lower serum cholesterol
+      and lipid concentrations in randomized controlled trials. Treatment with 600-900 mg/day
+      of pantethine significantly lowered LDL cholesterol, total cholesterol, and
+      apolipoprotein B in individuals at low-to-moderate cardiovascular risk. Pantethine
+      is not a vitamin and medical supervision is recommended.
+    disease_term:
+      preferred_term: hypercholesterolemia
+    relationship_type: THERAPEUTIC
+    population_context: Individuals at low-to-moderate cardiovascular risk
+    mic_references:
+      - 30
+      - 31
+      - 32
+      - 33
+    evidence:
+      - reference: PMID:21925346
+        supports: SUPPORT
+        snippet: "pantethine demonstrated significant (P < .005) and sustained reductions (from baseline to week 16) in TC (6 mg/dL, 0.16 mmol/L, 3%), LDL-C (4 mg/dL, 0.10 mmol/L, 4%), and apolipoprotein B"
+        explanation: Confirms pantethine reduces cholesterol in clinical trial
+
+  - name: Alzheimer's Disease
+    description: |
+      Case-control studies have documented cerebral pantothenic acid deficiency in patients
+      with Alzheimer's disease, suggesting a potential link between pantothenic acid
+      metabolism and neurodegeneration.
+    disease_term:
+      preferred_term: Alzheimer disease
+      term:
+        id: MONDO:0004975
+        label: Alzheimer disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Observational evidence only
+    mic_references:
+      - 20
+
+  - name: Huntington's Disease
+    description: |
+      Case-control studies have documented cerebral pantothenic acid deficiency in patients
+      with Huntington's disease, suggesting pantothenic acid metabolism may be perturbed
+      in this neurodegenerative condition.
+    disease_term:
+      preferred_term: Huntington disease
+      term:
+        id: MONDO:0007739
+        label: Huntington disease
+    relationship_type: RISK_FACTOR
+    direction: DECREASED
+    population_context: Observational evidence only
+    mic_references:
+      - 21
+
+recommendations:
+  rda:
+    - population: Infants 0-6 months
+      amount: "1.7 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Infants 7-12 months
+      amount: "1.8 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 1-3 years
+      amount: "2 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 4-8 years
+      amount: "3 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Children 9-13 years
+      amount: "4 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Adolescents 14-18 years
+      amount: "5 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Adults 19+ years
+      amount: "5 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Pregnancy
+      amount: "6 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+    - population: Breastfeeding
+      amount: "7 mg/day"
+      source: Institute of Medicine
+      notes: Adequate Intake (AI)
+  notes: |
+    Pantothenic acid recommendations are expressed as Adequate Intake (AI) rather than RDA
+    because there was insufficient evidence to establish an Estimated Average Requirement.
+    The AI is based on observed dietary intakes in healthy population groups. No Tolerable
+    Upper Intake Level (UL) has been established due to lack of adverse event reports.
+
+bioavailability:
+  description: |
+    Pantothenic acid is available in foods usually as a component of coenzyme A and
+    4'-phosphopantetheine. Upon ingestion, dietary coenzyme A and phosphopantetheine
+    are hydrolyzed to pantothenic acid prior to intestinal absorption. Biotin and
+    pantothenic acid share the same intestinal transporter (hSMVT). Intestinal bacteria
+    can synthesize pantothenic acid, though the contribution to human requirements is unclear.
+  mic_references:
+    - 4
+    - 38
+    - 39
+    - 40
+
+references:
+  - reference: PMID:25110011
+    title: Coenzyme A biosynthetic machinery in mammalian cells
+    findings:
+      - statement: CoA biosynthesis requires pantothenic acid
+        supporting_text: "The biosynthesis of CoA requires pantothenic acid, cysteine and ATP, and involves five enzymatic steps"
+  - reference: PMID:25053359
+    title: The growing landscape of lysine acetylation links metabolism and cell signalling
+    findings:
+      - statement: Acetyl-CoA is required for protein acetylation
+        supporting_text: "Lysine acetylation is a conserved protein post-translational modification that links acetyl-coenzyme A metabolism and cellular signalling"
+  - reference: PMID:24292120
+    title: The phosphopantetheinyl transferases
+    findings:
+      - statement: PPTases install 4'-phosphopantetheine on carrier proteins
+        supporting_text: "this class of enzymes that post-translationally install a 4'-phosphopantetheine arm on various carrier proteins"
+  - reference: PMID:24209433
+    title: PKAN and PLAN review
+    findings:
+      - statement: PKAN is caused by PANK2 mutations
+        supporting_text: "PKAN and PLAN are autosomal recessive NBIA disorders due to mutations in PANK2 and PLA2G6, respectively"
+  - reference: PMID:21925346
+    title: Pantethine favorably alters LDL cholesterol metabolism
+    findings:
+      - statement: Pantethine supplementation lowers cholesterol
+        supporting_text: "pantethine demonstrated significant (P < .005) and sustained reductions (from baseline to week 16) in TC, LDL-C, and apolipoprotein B"
+
+notes: |
+  This nutrient file was extracted from the Linus Pauling Institute Micronutrient
+  Information Center page on Pantothenic Acid. Evidence items include exact quotes from
+  PubMed abstracts. The MIC reference numbers (mic_references) correspond to the
+  numbered citations on the source page. The page contains 50 references.
