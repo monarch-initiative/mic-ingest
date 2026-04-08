@@ -6,9 +6,9 @@ State University that provides expert, referenced summaries of the health effect
 food sources, deficiency states, and disease associations of vitamins, minerals, and
 other dietary factors.
 
-Unlike most Monarch ingests, MIC is not distributed as a downloadable flat file.
-The source of truth is the MIC website itself — prose articles with numbered
-reference lists. This repository therefore has two layers:
+MIC content is curated as human-readable articles on the website rather than
+as structured data. Each page is prose with an in-page numbered reference list
+linking to PubMed. This repository therefore has two layers:
 
 1. **An agentic, schema-driven knowledge base** in `kb/nutrients/**/*.yaml`,
    produced by Claude Code using project skills that read MIC pages, resolve
@@ -30,8 +30,8 @@ Data originates from the MIC website:
 - Organized by category: vitamins, minerals, dietary factors, food/beverages
 - Each article contains an in-page numbered reference list linking to PubMed
 
-Because the source is free-text HTML rather than a structured release, we rely on
-an agentic extraction pipeline to produce structured YAML records that can then be
+Because the content is written for human readers, we rely on an agentic
+extraction pipeline to produce structured YAML records that can then be
 validated and transformed by conventional tooling.
 
 ## Agentic Extraction Pipeline
