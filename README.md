@@ -53,16 +53,13 @@ original PubMed abstracts.
 
 ### Workflow
 
-For a given nutrient (e.g. `vitamins/biotin`):
+For each nutrient:
 
-1. **Fetch** the MIC page into `cache/mic-pages/` using
-   `just fetch-mic-page vitamins/biotin`.
-2. **Section** the HTML into manageable chunks with
-   `just extract-sections cache/mic-pages/biotin.html` so each section can be
-   processed without overflowing the model context.
+1. **Fetch** the MIC HTML page and cache it locally.
+2. **Section** the page into manageable chunks (function, deficiency, disease
+   associations, food sources, etc.) so each section fits in the model context.
 3. **Extract references**: build the mapping between MIC reference numbers and
-   PubMed IDs (`just extract-refs`, `just fetch-all-abstracts`). Abstracts are
-   cached under `cache/references/`.
+   PubMed IDs, and cache the abstracts of every cited paper.
 4. **Draft the YAML** conforming to the `Nutrient` class in
    `src/mic_ingest/schema/mic.yaml`. The schema models:
    - `nutrient_term` with a CHEBI binding
@@ -73,26 +70,19 @@ For a given nutrient (e.g. `vitamins/biotin`):
    - `disease_associations` classified as `THERAPEUTIC`, `PROTECTIVE`,
      `RISK_FACTOR`, or `MARKER`
    - `food_sources`, `nutrient_interactions`, `drug_interactions`
-5. **Ground terms** to ontologies via `mic-terms` / OAK; each descriptor carries
-   both a `preferred_term` string and a validated `term: {id, label}` binding.
+5. **Ground terms** to ontologies via the `mic-terms` skill (OAK); each
+   descriptor carries both a `preferred_term` string and a validated
+   `term: {id, label}` binding.
 6. **Attach evidence** to every claim as one or more items containing a
    `reference` (PMID), a `supports` status
    (`SUPPORT` / `REFUTE` / `PARTIAL` / `NO_EVIDENCE` / `WRONG_STATEMENT`), a
    verbatim `snippet` from the PubMed abstract, and an `explanation`.
-7. **Validate** the file end-to-end:
-
-   ```bash
-   just validate kb/nutrients/vitamins/biotin.yaml           # LinkML schema
-   just validate-terms-file kb/nutrients/vitamins/biotin.yaml # ontology terms exist
-   just validate-references kb/nutrients/vitamins/biotin.yaml # snippet ⊂ abstract
-   ```
-
-   `just qc` runs all three across the full KB.
+7. **Validate** the file end-to-end against the schema, the ontology terms, and
+   the cited PubMed abstracts.
 
 A pre-edit hook (`.claude/hooks/validate_nutrient_hook.py`) blocks edits to
 nutrient YAML files that would leave the file invalid, keeping the KB green as
-curation proceeds. Detailed instructions for curators are in [CLAUDE.md](CLAUDE.md)
-and [CONTRIBUTING.md](CONTRIBUTING.md).
+curation proceeds.
 
 ### Anti-Hallucination Guarantees
 
@@ -196,61 +186,6 @@ on the emitted edges:
 | `OCCASIONAL` | HP:0040283 |
 | `VERY_RARE` | HP:0040284 |
 
-## Installation
-
-```bash
-cd mic-ingest
-just install          # uv sync
-# or
-poetry install
-```
-
-## Usage
-
-Common tasks are exposed through `just`. Run `just --list` to see everything.
-
-### Knowledge base curation
-
-```bash
-just fetch-mic-page vitamins/biotin     # Fetch and cache an MIC page
-just extract-sections cache/mic-pages/biotin.html
-just validate kb/nutrients/vitamins/biotin.yaml
-just validate-terms-file kb/nutrients/vitamins/biotin.yaml
-just validate-references kb/nutrients/vitamins/biotin.yaml
-just qc                                  # schema + terms + references
-just compliance kb/nutrients/vitamins/biotin.yaml
-just gen-dashboard                       # HTML compliance dashboard
-```
-
-### KGX export
-
-```bash
-just export-kgx
-# Writes output/kgx/mic_nodes.jsonl and output/kgx/mic_edges.jsonl
-```
-
-The legacy Koza CLI wrappers are also available:
-
-```bash
-poetry run mic_ingest download   # kghub-downloader (legacy, for CI wiring)
-poetry run mic_ingest transform  # Koza transform runner
-```
-
-### Testing
-
-```bash
-just test     # pytest suite
-```
-
-## Requirements
-
-- Python >= 3.10
-- [uv](https://github.com/astral-sh/uv) or [Poetry](https://python-poetry.org/)
-- [just](https://github.com/casey/just)
-- [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) — only
-  required for running the agentic extraction skills to add or enhance nutrient
-  records. Consumers of the exported KGX do not need it.
-
 ## Repository Layout
 
 ```
@@ -266,14 +201,13 @@ conf/                      # OAK and QC configuration
 justfile                   # All user-facing tasks
 ```
 
-## GitHub Actions
+## Developer Documentation
 
-Workflows live in `.github/workflows`:
-
-- `test.yaml` — run the pytest suite
-- `create-release.yaml` — weekly or manual release
-- `deploy-docs.yaml` — deploy docs to GitHub Pages on push to `main`
-- `update-docs.yaml` — refresh node/edge reports after a release
+See [DEVELOPMENT.md](DEVELOPMENT.md) for installation, the full set of `just`
+commands, KGX export, and the local test workflow.
+[CONTRIBUTING.md](CONTRIBUTING.md) covers the contribution process, and
+[CLAUDE.md](CLAUDE.md) documents the conventions Claude Code follows when
+curating new nutrient files.
 
 ## Citation
 
@@ -283,12 +217,3 @@ Center. https://lpi.oregonstate.edu/mic
 ## License
 
 BSD-3-Clause
-
----
-
-> This project was generated using [monarch-initiative/cookiecutter-monarch-ingest](https://github.com/monarch-initiative/cookiecutter-monarch-ingest).
-> Keep it up to date with:
->
-> ```bash
-> cruft update
-> ```
