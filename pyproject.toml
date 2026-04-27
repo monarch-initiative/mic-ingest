@@ -29,6 +29,7 @@ dependencies = [
     "koza>=2.2.0",
     "kgx>=2.4.0",
     "biolink-model>=4.3.7",
+    "kghub-downloader",
     # Utilities
     "loguru",
     "importlib-metadata>=4.8.0",
