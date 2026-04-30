@@ -1,6 +1,5 @@
 ROOTDIR = $(shell pwd)
-RUN = poetry run
-VERSION = $(shell poetry -C src/mic_ingest version -s)
+RUN = uv run
 
 ### Help ###
 
@@ -19,7 +18,7 @@ define HELP
 │     clean               Clean up build artifacts          │
 │     clobber             Clean up generated files          │
 │                                                           │
-│     install             Poetry install package            │
+│     install             Install package with uv           │
 │     download            Download data                     │
 │     run                 Run the transform                 │
 │                                                           │
@@ -47,8 +46,8 @@ fresh: clean clobber all
 all: install test
 
 .PHONY: install
-install: 
-	poetry install --with dev
+install:
+	uv sync --extra dev
 
 
 ### Documentation ###
